@@ -67,12 +67,35 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
       case (Add(e1), Subber(e2)) => Sub(Add(e1) :: e2 :: Nil)
       case (Sub(e1), Adder(e2)) =>  Add(Sub(e1) :: e2 :: Nil)
       case (Sub(e1), Subber(e2)) => Sub(e1 :+ e2)
-      case (Func(a,b), right) if a.equals("<=") => Func(a,ArgList(b.args.drop(1) :+ transformSignedTerm(b.args.last, right)))
+//      case (Func(a,b), right) if a.equals("<=") => Func(a,ArgList(b.args.drop(1) :+ transformSignedTerm(b.args.last, right)))
       case (e1, Subber(e2)) => Sub(e1 :: e2 :: Nil)
       case (e1, Adder(e2)) => Add(e1 :: e2 :: Nil)
-      case (left, right) => Func("<=",ArgList(left :: right :: Nil))
+//      case (left, right) => Func("<=",ArgList(left :: right :: Nil))
 
     }
+  }
+
+  def addVar(variable : String, throwable : Boolean = true) = {
+    if(functions.contains(variable)){
+      if(throwable)
+        throw new Exception("Inconsistent type at "+variable)
+      else
+        functions -= variable
+    }
+
+    variables += variable
+  }
+
+  def addFunc(function : String, throwable : Boolean = true) = {
+    if(variables.contains(function)){
+      if(throwable)
+        throw new Exception("Inconsistent type at "+function)
+      else
+        variables -= function
+
+    }
+
+    functions += function
   }
 
   def applyFunctionsInOrder(exprs : List[Expression], funcs : List[(Expression,Expression)=>Expression]) : Expression = {
@@ -99,7 +122,11 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
   lazy val variable : PackratParser[String] = "\\w{1,4}\\b\\d{0,1}".r | "\\w+\\b(?=\\()(?!\\d+)(?=\\))".r
   lazy val number : Regex = """(\d+(\.\d+)?)""".r
   lazy val sum : PackratParser[String] = "SUM" | "Sum" | "sum" | "Product" | "product" | "PRODUCT" | "limit" | "Limit" | "lim"
-  lazy val comparison : PackratParser[String] = "~" | "<>" | "<=" | ">=" | "==" | ">" | "=" | "<" | "->" | ":=" | "=:"
+  lazy val comparison : PackratParser[(Expression,Expression) => Expression] =
+    ("~" | "<>" | "<=" | ">=" | "==" | ">" | "=" | "<" | "->" | ":=" | "=:") ^^{
+      x => {(left: Expression, right : Expression) => Equation(x, left, right)}
+  }
+
   lazy val plusminus: PackratParser[String] = "+" | "-"
   lazy val multdiv: PackratParser[(Expression,Expression) => Expression] = "*" ^^{
     _ => (x:Expression, y:Expression) => (x,y) match {
@@ -120,12 +147,21 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
 
   lazy val constant: PackratParser[String] = "Pi" | "pi" | "infinity" | "infty"
 
-  lazy val expression : PackratParser[Expression] = signed_term~rep(sum_op) ^^ {
+  lazy val expression : PackratParser[Expression] =
+    c_expression~rep(comparison~c_expression) ^^ {
+      case expr~listexpr if (listexpr.length !=0) => {
+        applyFunctionsInOrder( expr :: listexpr.map(_._2), listexpr.map(_._1) )
+      }
+      case expr~listexpr => expr
+    }
+
+  lazy val c_expression : PackratParser[Expression] = signed_term~rep(sum_op) ^^ {
     case (fctr : Expression)~(divs : List[Expression]) if divs.length !=0 => divs.foldLeft(fctr)(transformSignedTerm)
     case (fctr : Subber)~(divs) => Neg(fctr.expr)
     case (fctr : Adder)~(divs) => fctr.expr
     case (fctr)~(divs) => fctr
   }
+
 
   lazy val sum_op : PackratParser[Expression] =
     "?"~>sum_op_n ^^ {x => QVar(x)} |
@@ -137,11 +173,7 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
       case "-"~(fctr : Expression)~None => Subber(fctr)
       case "+"~(fctr : Expression)~Some("!") => Adder(Factorial(fctr))
       case "+"~(fctr : Expression)~None => Adder(fctr)
-    } |
-      comparison~>expression ^^ {
-        case a => a
-      }
-
+    }
 
   lazy val signed_term : PackratParser[Expression] =
     "?"~>signed_term_n ^^ {x => QVar(x)} |
@@ -174,22 +206,35 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
             case x : (((Expression,Expression)=>Expression)~Expression) => x._1
             case x => {
               (x: Expression, y: Expression) => (x, y) match {
+                case (x: Var, y: ArgList) => {
+                  addFunc(x.name)
+                  Func(x.name, y)
+                }
                 //In case there is var(var) consider the first var to be a function
                 case (x: Var, y: Var) =>{
-                  variables -= x.name
-                  functions += x.name
-                  Func(x.name, ArgList(List(y)))
+                  if(variables.contains(x.name))
+                    Mul(x :: y :: Nil)
+                  else {
+                    addFunc(x.name)
+                    Func(x.name, ArgList(List(y)))
+                  }
                 }
                 case (x: Var, y: Num) =>{
-                  variables -= x.name
-                  functions += x.name
+                  addFunc(x.name)
                   Func(x.name, ArgList(List(y)))
+                }
+                case (x: Var, y: Expression) =>{
+                  if(variables.contains(x.name))
+                    Mul(x :: y :: Nil)
+                  else
+                    Func(x.name, ArgList(List(y)))
                 }
                 case (x: Mul, y: Expression) => Mul(x.expr :+ y)
                 case (x: Expression, y: Expression) => Mul(List(x, y))
               }
             }
           }))
+        case (fctr : Var)~(divs) => addVar(fctr.name); fctr
         case (fctr : Expression)~(divs) => fctr
       }
 
@@ -198,7 +243,6 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
 
   lazy val lazy_multiply : PackratParser[Expression] =
     unsigned_factor ^^ {x => x}
-
 
   lazy val signed_factor : PackratParser[Expression] =
     "?"~>signed_factor_n ^^ {x=>QVar(x)} |
@@ -213,7 +257,6 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
     } |
       unsigned_factor ^^ {x=>x}
 
-
   lazy val unsigned_factor : PackratParser[Expression] =
     "?"~>unsigned_factor_n ^^ { x => QVar(x)} |
       unsigned_factor_n ^^ {x => x}
@@ -227,13 +270,12 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
   lazy val factor : PackratParser[Expression] =
     argument~opt("^"~signed_factor~opt(argument)) ^^ {
       case (a : Var)~Some("^"~(signed : Expression)~Some(arguments : ArgList)) =>{
-        variables -= a.name
-        functions += a.name
+        addFunc(a.name)
         Power(Func(a.name,arguments),signed)
       }
       case (a : ArgList)~Some("^"~(signed : Expression)~None) => Power(a.args.head, signed)
       case (a : Expression)~Some("^"~(signed : Expression)~None) => Power(a,signed)
-      case (a : ArgList)~None => a.args.head
+      case (a : ArgList)~None if(a.args.length == 1) => a.args.head
       case (a : Expression)~None => a
     }
 
@@ -245,8 +287,10 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
         if(variables.contains(a) && b.args.length == 1){
           Mul(List(Var(a), b.args.head))
         }else {
-          variables -= a
-          functions += a
+          if(b.args.length > 1){
+            addFunc(a)
+          }
+
           Func(a, b)
         }
       }
@@ -254,8 +298,6 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
         if(variables.contains(a)){
           Mul(Var(a)::b::Nil)
         }else {
-          variables -= a
-          functions += a
           Func(a, ArgList(b :: Nil))
         }
       }
@@ -304,12 +346,11 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
       value ^^ {case x : Expression => x}
 
   lazy val value : PackratParser[Expression] =
-    reference ^^ {x => SeqReference(x)}|
+      reference ^^ {x => SeqReference(x)}|
       constant ^^ {x => Constant(x)} |
       number ^^ {case x  => Num(x.toDouble)} |
       variable ^^ { case v : String =>{
-        if(!functions.contains(v))
-          variables += v;
+//        addVar(v, false)
         Var(v)
       }} |
       "..." ^^ {x => ExtraSymbol("...")}
@@ -318,7 +359,7 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
 
   private def initSet() : Unit = {
     variables = variables.empty
-    //    variables += "x"
+    //    variables += "x" //defined variables to be added here
     functions = functions.empty
   }
 
@@ -326,7 +367,6 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
     val (left, right) = equation.splitAt(equation.indexOf("="))
     initSet()
     parseOne(left) -> parseOne(right.substring(1))
-
   }
 
   private def parseOne(line : String): ParseResult[Expression] = {
@@ -355,8 +395,23 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
         case true => Some(postProcess(parsed.get))
       }
     }catch{
-      case ex : Throwable => None
+      case ex : Throwable => println(ex.toString); None
     }
   }
 
+
 }
+
+//object QueryParserRunner extends QueryParser{
+//
+//  def main(args : Array[String]): Unit = {
+//    val test = "1 + a(x+2) + a"
+//    println("input : "+ test)
+//
+//    println(parse(test))
+//    println(variables)
+//    println(functions)
+//
+//  }
+//
+//}

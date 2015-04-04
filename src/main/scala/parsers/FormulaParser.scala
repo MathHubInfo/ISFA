@@ -52,13 +52,38 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       case (Add(e1), Subber(e2)) => Sub(Add(e1) :: e2 :: Nil)
       case (Sub(e1), Adder(e2)) =>  Add(Sub(e1) :: e2 :: Nil)
       case (Sub(e1), Subber(e2)) => Sub(e1 :+ e2)
-      case (Func(a,b), right) if a.equals("<=") => Func(a,ArgList(b.args.drop(1) :+ transformSignedTerm(b.args.last, right)))
+//      case (Func(a,b), right) if a.equals("<=") => Func(a,ArgList(b.args.drop(1) :+ transformSignedTerm(b.args.last, right)))
       case (e1, Subber(e2)) => Sub(e1 :: e2 :: Nil)
       case (e1, Adder(e2)) => Add(e1 :: e2 :: Nil)
-      case (left, right) => Func("<=",ArgList(left :: right :: Nil))
+//      case (left, right) => Func("<=",ArgList(left :: right :: Nil))
 
     }
   }
+
+
+  def addVar(variable : String, throwable : Boolean = true) = {
+    if(functions.contains(variable)){
+      if(throwable)
+        throw new Exception("Inconsistent type at "+variable)
+      else
+        functions -= variable
+    }
+
+    variables += variable
+  }
+
+  def addFunc(function : String, throwable : Boolean = true) = {
+    if(variables.contains(function)){
+      if(throwable)
+        throw new Exception("Inconsistent type at "+function)
+      else
+        variables -= function
+
+    }
+
+    functions += function
+  }
+
 
   def applyFunctionsInOrder(exprs : List[Expression], funcs : List[(Expression,Expression)=>Expression]) : Expression = {
     (exprs, funcs) match{
@@ -67,6 +92,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       case _ => throw new Exception("Number of functions doesn't match!")
     }
   }
+
   //
   //  class Wrapper[E](div : List[E])
   //
@@ -158,22 +184,35 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
             case x : (((Expression,Expression)=>Expression)~Expression) => x._1
             case x => {
               (x: Expression, y: Expression) => (x, y) match {
+                case (x: Var, y: ArgList) => {
+                  addFunc(x.name)
+                  Func(x.name, y)
+                }
                 //In case there is var(var) consider the first var to be a function
                 case (x: Var, y: Var) =>{
-                  variables -= x.name
-                  functions += x.name
-                  Func(x.name, ArgList(List(y)))
+                  if(variables.contains(x.name))
+                    Mul(x :: y :: Nil)
+                  else {
+                    addFunc(x.name)
+                    Func(x.name, ArgList(List(y)))
+                  }
                 }
                 case (x: Var, y: Num) =>{
-                  variables -= x.name
-                  functions += x.name
+                  addFunc(x.name)
                   Func(x.name, ArgList(List(y)))
+                }
+                case (x: Var, y: Expression) =>{
+                  if(variables.contains(x.name))
+                    Mul(x :: y :: Nil)
+                  else
+                    Func(x.name, ArgList(List(y)))
                 }
                 case (x: Mul, y: Expression) => Mul(x.expr :+ y)
                 case (x: Expression, y: Expression) => Mul(List(x, y))
               }
             }
           }))
+        case (fctr : Var)~(divs) => addVar(fctr.name); fctr
         case (fctr : Expression)~(divs) => fctr
       }
 
@@ -200,15 +239,13 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
     }
 
   lazy val factor : PackratParser[Expression] =
-    argument~opt("^"~signed_factor~opt(argument)) ^^ {
+    argument~opt("^"~signed_factor~opt(argument)) ^? {
       case (a : Var)~Some("^"~(signed : Expression)~Some(arguments : ArgList)) =>{
-        variables -= a.name
-        functions += a.name
         Power(Func(a.name,arguments),signed)
       }
       case (a : ArgList)~Some("^"~(signed : Expression)~None) => Power(a.args.head, signed)
       case (a : Expression)~Some("^"~(signed : Expression)~None) => Power(a,signed)
-      case (a : ArgList)~None => a.args.head
+      case (a : ArgList)~None if(a.args.length == 1) => a.args.head
       case (a : Expression)~None => a
     }
 
@@ -220,8 +257,10 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
         if(variables.contains(a) && b.args.length == 1){
           Mul(List(Var(a), b.args.head))
         }else {
-          variables -= a
-          functions += a
+          if(b.args.length > 1){
+            addFunc(a)
+          }
+
           Func(a, b)
         }
       }
@@ -229,8 +268,6 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
         if(variables.contains(a)){
           Mul(Var(a)::b::Nil)
         }else {
-          variables -= a
-          functions += a
           Func(a, ArgList(b :: Nil))
         }
       }
@@ -283,8 +320,6 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       constant ^^ {x => Constant(x)} |
       number ^^ {case x  => Num(x.toDouble)} |
       variable ^^ { case v : String =>{
-        if(!functions.contains(v))
-          variables += v;
         Var(v)
       }} |
       "..." ^^ {x => ExtraSymbol("...")}
@@ -334,13 +369,17 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   }
 }
 
-object FormulaParserRunner extends  FormulaParser{
 
-  def main(args : Array[String]): Unit = {
-    val test = "T(A313404(k,a)) + sum_{x^2^2 = T(x^2+3) - T(A(x)) + A301340 + A123491(n,k)}^{A131655(y)}x+2*x+binomial(x,k)"
-    println("input : "+ test)
-    println(parseAll(expression, test))
+// TODO: You can probably check if the user is using * then you can immediately start adding functions as granted.
 
-  }
-
-}
+//
+//object FormulaParserRunner extends  FormulaParser{
+//
+//  def main(args : Array[String]): Unit = {
+//    val test = "1 + a(x+2, x+1) + a(x+1,x+1)"
+//    println("input : "+ test)
+//    println(parseAll(expression, test))
+//
+//  }
+//
+//}
