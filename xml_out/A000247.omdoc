@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000247.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000247">
+          <assertion class="***** TTTT *****">
+      <CMP> M2836 N1141</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,3,10,25,56,119,246,501,1012,2035,4082,8177,16368,32751,65518,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 131053,262124,524267,1048554,2097129,4194280,8388583,16777190,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 33554405,67108836,134217699,268435426,536870881,1073741792,2147483615</CMP>
+    </assertion><omtext class="name">
+      <CMP> 2^n-n-2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Ways of placing n+1 labeled balls into 2 indistinguishable boxes with at least 2 balls in each box.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 2^a(n) = integer values of the form 1/(2-sum(i=1,m, i/2^i)). - _Benoit Cloitre_, Oct 25 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of permutations avoiding 13-2 that contain the pattern 23-1 exactly twice.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Cost of ternary maximum height Huffman tree with N internal nodes (non-leaves) for minimizing absolutely ordered sequences of size n=2N+1. - Alex Vinokur (alexvn(AT)barak-online.net), Nov 02 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)=number of Dyck n-paths whose third upstep initiates the last long ascent, n&gt;=1. A long ascent is one consisting of 2 or more upsteps. For example, a(3)=3 counts UUDuUDDD, UDUDuUDD, UUDDuUDD (third upstep in small type). - _David Callan_, Dec 08 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A107907(a(n)) = A000225(n). - _Reinhard Zumkeller_, May 28 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Subsequence of A158581; A000120(a(n)) &gt; 1. - _Reinhard Zumkeller_, Apr 16 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Vertices of the tropical Grassmannian simplicial complex G(2,n), related to phylogenetic trees. - _Tom Copeland_, Oct 03 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (Conjecture) Let a(2)=0. For n&gt;2, let N=2*n+1. For each n, define the n X n tridiagonal unit-primitive matrix (see [Jeffery]) A_{N,1}=[0,1,0,...,0; 1,0,1,0,...,0; 0,1,0,1,0,...,0; ...; 0,...,0,1,0,1; 0,...,0,1,1] associated with N. Define the n-dimensional column vectors V_N=[v_1,v_2,...,v_n]^T=[A_{N,1}]^n*[1,1,...,1]^T, where [.]^T denotes matrix transpose and [1,...,1] is the n-dimensional unit vector. Let (v_k)_N denote the k-th element of V_N, k in {1,...,n}. Then a(n)=(v_(n-2))_N. - _L. Edson Jeffery_, Jan 20 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n&gt;0, (a(n)) is row 3 of the convolution array A213568. - _Clark Kimberling_, Jun 20 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Amer. Math. Monthly, Vol. 101 (No. 8, Oct 1994), p. 776.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 222.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. N. David and D. E. Barton, Combinatorial Chance. Hafner, NY, 1962, p. 296.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 76.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000247/b000247.txt&quot;&gt;Table of n, a(n) for n=2..300&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. E. Jeffery, &lt;a href=&quot;/wiki/User:L._Edson_Jeffery/Unit-Primitive_Matrices&quot;&gt;Unit-primitive matrices&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. Mansour, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0202219&quot;&gt;Restricted permutations by patterns of type 2-1&lt;/a&gt;, arXiv:math/0202219 [math.CO], 2002.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Mathoverflow, &lt;a href=&quot;http://mathoverflow.net/questions/76978/face-numbers-for-tropical-grassmannian-g-2-7-simplicial-complex&quot;&gt;Face numbers for tropical Grassmannian G'_2,7 simplicial complex?&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alex Vinokur, &lt;a href=&quot;http://arXiv.org/abs/cs/0411002&quot;&gt;Fibonacci-like polynomials produced by m-ary Huffman codes for absolutely ordered sequences&lt;/a&gt;, arXiv:cs/0411002</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_03&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (4,-5,2).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: (exp(x)-1-x)*(exp(x)-1). G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>3</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000247"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A000247"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000247"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000295"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000295"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Starting<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>10</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>25</OMI>
+    </OMOBJ>, 56,...) = binomial transform of<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>7</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>8</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>8</OMI>
+    </OMOBJ>, 8,...]. - _Gary W. Adamson_, Nov 07 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000247"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000247"/>
+      <OMI>3</OMI>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000247"/>
+      <OMI>4</OMI>
+    </OMA>
+      <OMI>10</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000247"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="a" cd="A000247"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="a" cd="A000247"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A000247"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Harvey P. Dale_, Aug 23 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000247"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="sum" cd="A000247"/>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMI>2</OMI>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, C(n+1,k)) + if(n odd,<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="C" cd="A000247"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMOBJ>, 0).
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(3) = 4!/(2!*2!*2!) = 3.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(combinat):a:=n-&gt;sum(sum(binomial(j,k), j=2..n),k=1..n): seq(a(n), n=1..30); # _Zerinvary Lajos_, May 10 2007</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000247:=(-3+2*z)/((2*z-1)*(z-1)**2); # _Simon Plouffe_ in his 1992 dissertation</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a[0]:=0:a[1]:=0:for n from 2 to 50 do a[n]:=n+2*a[n-1]+1 od: seq(a[n], n=1..30); # _Zerinvary Lajos_, Feb 22 2008</CMP>
+    </omtext><omtext class="maple">
+      <CMP> restart:with (combinat):a:=n-&gt;add(stirling2(j,2), j=3..n): seq(a(n), n=2..25); # _Zerinvary Lajos_, Jan 01 2009</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> lst={};s=1;Do[s+=(s-n);AppendTo[lst, Abs[s]], {n, 2, 5!}];lst (* _Vladimir Joseph Stephan Orlovsky_, Oct 10 2008 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Sum[Binomial[n, i - 1], {i, 3, n}], {n, 2, 41}] (* _Zerinvary Lajos_, Jul 10 2009 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> LinearRecurrence[{4,-5,2},{0,3,10},50] (* _Harvey P. Dale_, Aug 23 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [gaussian_binomial(n,1,2)-(n+1) for n in xrange(2,32)] # _Zerinvary Lajos_, May 29 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) A000247(n):=2^n-n-2$</CMP>
+    </omtext><omtext class="program">
+      <CMP> makelist(A000247(n),n,2,30); /* _Martin Ettl_, Nov 08 2012 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000478 (3 boxes), A058844 (4 boxes).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional comments from Michael Steyer (msteyer(AT)osram.de), Dec 02 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Larry Reeves (larryr(AT)acm.org), Dec 04 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> I recently changed the beginning of this sequence so the formulae etc. may need to be adjusted. - _N. J. A. Sloane_, Jan 24 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Formulas and comments adjusted for offset by _Franklin T. Adams-Watters_, Nov 10 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000577.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000577">
+          <assertion class="***** TTTT *****">
+      <CMP> M2374 N0941</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,3,4,12,24,66,160,448,1186,3334,9235,26166,73983,211297,604107,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1736328,5000593,14448984,41835738,121419260,353045291,1028452717,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3000800627,8769216722,25661961898,75195166667,220605519559,647943626796</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of triangular polyominoes (or polyiamonds) with n cells (turning over is allowed, holes are allowed, must be connected along edges).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If holes are not allowed, we get A070765. - Joseph S. Myers, Apr 20 2009</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary, Graphical enumeration problems; in Graph Theory and Theoretical Physics, ed. F. Harary, Academic Press, London, 1967, pp. 1-41.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. F. Lunnon, Counting hexagonal and triangular polyominoes, pp. 87-100 of R. C. Read, editor, Graph Theory and Computing. Academic Press, NY, 1972.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Ed Pegg, Jr., Polyform puzzles, in Tribute to a Mathemagician, Peters, 2005, pp. 119-125.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Jaime Rangel-Mondragon, Polyominoes and Related Families, The Mathematica Journal, 9:3 (2005), 609-640.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. J. Torbijn, Polyiamonds, J. Rec. Math., 2 (1969), 216-227.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ed Pegg, Jr., &lt;a href=&quot;http://demonstrations.wolfram.com/PolyformExplorer/&quot;&gt;Illustrations of polyforms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Clarke, &lt;a href=&quot;http://www.recmath.com/PolyPages/PolyPages/Polyiamonds.htm&quot;&gt;Polyiamonds&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. T. Coffin, &lt;a href=&quot;http://www.johnrausch.com/PuzzlingWorld/chap02b.htm&quot;&gt;The Puzzling World of Polyhedral Dissections&lt;/a&gt;, Chap 2, Table 1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. K. Guy, &lt;a href=&quot;http://www.g4g4.com/contentsmmpp.html&quot;&gt;O'Beirne's Hexiamond&lt;/a&gt;, in The Mathemagician and the Pied Puzzler - A Collection in Tribute to Martin Gardner, Ed. E. R. Berlekamp and T. Rogers, A. K. Peters, 1999, 85-96.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. and J. Hindriks, &lt;a href=&quot;http://www.dutdes.com/ddfree.html&quot;&gt;Dutchman Designs: Quilting Patterns&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Kadon Enterprises, &lt;a href=&quot;/A000577/a000577.gif&quot;&gt;The 66 polyominoes of order 8&lt;/a&gt; (from a puzzle)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Kadon Enterprises, &lt;a href=&quot;http://www.gamepuzzles.com/esspoly.htm#OR&quot;&gt;Home page&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Keller, &lt;a href=&quot;http://www.solitairelaboratory.com/polyenum.html&quot;&gt;Counting polyforms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Polyiamond.html&quot;&gt;Polyiamond&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000207, A006534, A030223, A030224, A001420, A096361, A070765.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,more,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _David W. Wilson_. a(19) from Achim Flammenkamp (achim(AT)uni-bielefeld.de) Feb 15 1999.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(20), a(21), a(22), a(23) and a(24) from Brendan Owen (brendan_owen(AT)yahoo.com), Jan 01 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(25) to a(28) from _Joseph Myers_, Sep 24 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Link updated by _William Rex Marshall_, Dec 16 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(29) and a(30) from _Joseph Myers_, Nov 21 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

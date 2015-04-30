@@ -1,0 +1,494 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000695.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000695">
+          <assertion class="***** TTTT *****">
+      <CMP> M3259 N1315</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,4,5,16,17,20,21,64,65,68,69,80,81,84,85,256,257,260,261,272,273,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 276,277,320,321,324,325,336,337,340,341,1024,1025,1028,1029,1040,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1041,1044,1045,1088,1089,1092,1093,1104,1105,1108,1109,1280,1281,1284,1285</CMP>
+    </assertion><omtext class="name">
+      <CMP> Moser-de Bruijn sequence: sums of distinct powers of 4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers whose set of base 4 digits is {0,1}. - _Ray Chandler_, Aug 03 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers n such that sum of base 2 digits of n = sum of base 4 digits of n. - _Clark Kimberling_</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers having the same representation in both binary and negabinary (A039724). - _Eric W. Weisstein_</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This sequence has many other interesting and useful properties. Every integer n corresponds to a unique pair i,j with n=a(i)+2a(j) (i=A059905(n), j=A059906(n)) - see A126684.. Every list of numbers L=[L1,L2,L3...] can be encoded uniquely by &quot;recursive binary interleaving&quot;, where f(L)=a(L1)+2*a(f([L2,L3...])) with f([])=0. Yet another description is &quot;Numbers whose base 4 representation consists of only 0's and 1's&quot;. - _Marc LeBrun_, Feb 07 2001</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This may be described concisely using the &quot;rebase&quot; notation b[n]q, which means &quot;replace b with q in the expansion of n&quot;, thus &quot;rebasing&quot; n from base b into base q. The present sequence is 2[n]4. Many interesting operations (e.g., 10[n](1/10) = digit reverse, shifted) are nicely expressible this way. Note that q[n]b is (roughly) inverse to b[n]q. It's also natural to generalize the idea of &quot;basis&quot; so as to cover the likes of F[n]2, the so-called &quot;fibbinary&quot; numbers (A003714) and provide standard ready-made images of entities obeying other arithmetics, say like GF2[n]2 (e.g., primes = A014580, squares = the present sequence, etc.). - _Marc LeBrun_, Mar 24 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is also equal to the product n X n formed using carryless binary multiplication (A059729, A063010). - _Henry Bottomley_, Jul 03 2001</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers n such that A004117(n) is odd. - _Pontus von Brömssen_, Nov 25 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Fixed point of the morphism : 0 -&gt; 01 ; 1 -&gt;45 ; 2 -&gt; 89 ; ...; n -&gt;(4n)(4n+1), starting from a(0)=0. - _Philippe Deléham_, Oct 22 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A182560(6*a(n)) = 0. - _Reinhard Zumkeller_, May 05 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If n is even and present, so is n+1. - _Robert G. Wilson v_, Oct 24 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000695/b000695.txt&quot;&gt;Table of n, a(n) for n = 0..1023&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J.-P. Allouche and J. Shallit, &lt;a href=&quot;http://dx.doi.org/10.1016/0304-3975(92)90001-V&quot;&gt;The ring of k-regular sequences&lt;/a&gt;, Theoretical Computer Sci., 98 (1992), 163-197.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J.-P. Allouche and J. Shallit, &lt;a href=&quot;http://www.cs.uwaterloo.ca/~shallit/Papers/as0.ps&quot;&gt;The ring of k-regular sequences&lt;/a&gt;, Theoretical Computer Sci., 98 (1992), 163-197.</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, Marc LeBrun and N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/carry1.pdf&quot;&gt;Carryless Arithmetic (I): The Mod 10 Version&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, Omar E. Pol and N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/tooth.pdf&quot;&gt;The Toothpick Sequence and Other Sequences from Cellular Automata&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joerg Arndt, &lt;a href=&quot;http://www.jjj.de/fxt/#fxtbook&quot;&gt;Matters Computational (The Fxtbook)&lt;/a&gt;, pp.59-60, pp.750-751</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. G. de Bruijn, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1964-0167447-9&quot;&gt;Some direct decompositions of the set of integers&lt;/a&gt;, Math. Comp., 18 (1964), 537-546.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eigen, S. J.; Ito, Y.; and Prasad, V. S., &lt;a href=&quot;http://faculty.uml.edu/vprasad/UnivBadJNT.pdf&quot;&gt;Universally bad integers and the 2-adics&lt;/a&gt;, J. Number Theory 107 (2004), 322-334.</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. Moser, &lt;a href=&quot;http://www.jstor.org/stable/2689100&quot;&gt;An application of generating series&lt;/a&gt;, Math. Mag., 35 (1962), 37-38.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/toothlist.html&quot;&gt;Catalog of Toothpick and Cellular Automata Sequences in the OEIS&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Stephan, &lt;a href=&quot;/somedcgf.html&quot;&gt;Some divide-and-conquer sequences ...&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Stephan, &lt;a href=&quot;/A079944/a079944.ps&quot;&gt;Table of generating functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Stephan, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0307027&quot;&gt;Divide-and-conquer generating functions. I. Elementary sequences&lt;/a&gt;, arXiv:math/0307027 [math.CO], 2003.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Moser-deBruijnSequence.html&quot;&gt;Moser-de Bruijn Sequence&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Negabinary.html&quot;&gt;Negabinary&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Morton_code&quot;&gt;Morton code&lt;/a&gt;  (also known as Z-order curve. Cf. Marc LeBrun's comments about binary interleaving.)</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.<OMOBJ>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA><OMV name="Sum"/><OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA></OMA>
+    </OMOBJ>, 4^k*x^2^k/(1+x^2^k)). - _Ralf Stephan_, Apr 27 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> such that the coefficient of<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> is &gt; 0 in prod<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>, 1+x^(4^k)). - _Benoit Cloitre_, Jul 29 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000695"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000695"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMV name="t"/>
+    </OMA><OMI>2</OMI>
+    </OMA><OMI>6</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMV name="t"/>
+    </OMOBJ> is such that 2^t||2n,or<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="t"/>
+      <OMA>
+      <OMR xref="A007814"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000695"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A145812"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Vladimir Shevelev_, Nov 07 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         To get<OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000695"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>, write<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> as Sum<OMOBJ>
+      <OMA><OMS name="times"/><OMV name="b_j"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="j"/>
+    </OMA></OMA>
+    </OMOBJ>, then a(n) = Sum<OMOBJ>
+      <OMA><OMS name="times"/><OMV name="b_j"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="j"/></OMA>
+    </OMA></OMA>
+    </OMOBJ>. The Diophantine equation<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000695"/>
+      <OMV name="k"/>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A000695"/>
+      <OMV name="l"/>
+    </OMA></OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> has the unique solution: k=Sum b_(2j)*2^j,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="l"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="Sum" cd="A000695"/>
+      <OMV name="b_"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="j"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="j"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Vladimir Shevelev_, Nov 10 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         If<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A000695"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A000695"/>
+      <OMV name="l"/>
+    </OMA></OMA>
+      <OMA>
+      <OMS name="a" cd="A000695"/>
+      <OMV name="m"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>, then k*l=m (inverse, generally speaking, is not true). - _Vladimir Shevelev_, Nov 21 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Let<OMOBJ>
+      <OMA>
+      <OMS name="F" cd="A000695"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> be the generating function, then<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="F" cd="A000695"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="F" cd="A000695"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Joerg Arndt_, May 12 2010
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n+1) = (a(n) + 1/3) &amp; -1/3, where &amp; is bitwise AND,<OMOBJ>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> is represented as the infinite dyadic<OMOBJ>
+      <OMA><OMS name="times"/><OMS name="..." cd="arithmetics"></OMS><OMI>10101</OMI><OMV name="just"/></OMA>
+    </OMOBJ> as<OMOBJ>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> is<OMOBJ>
+      <OMA><OMS name="times"/><OMS name="..." cd="arithmetics"></OMS><OMI>111111</OMI></OMA>
+    </OMOBJ> in two's complement) and<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>3</OMI>
+    </OMA>
+    </OMOBJ> is<OMOBJ>
+      <OMA><OMS name="times"/><OMS name="..." cd="arithmetics"></OMS><OMI>101011</OMI></OMA>
+    </OMOBJ>. - _Marc LeBrun_, Sep 30 2010
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n)=Sum_k&gt;=0 {A030308(n,k)*b(k)} with<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000695"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A000302"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Philippe Deléham_, Oct 18 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="W" cd="A000695"/>
+      <OMI>0</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="W" cd="A000695"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="k"/>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="W" cd="A000695"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> ; (continued fraction). - _Sergei N. Gladkovskii_, Jan 04 2014
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> If n=27, then b_0=1, b_1=1, b_2=0, b_3=1, b_4=1. Therefore a(27)=4^4+4^3+4+1=325; k=b_0+b_2*2+b_4*2^2=5, l=b_1+b_3*2=3, such that a(5)=17, a(3)=5 and 27=17+2*5. - _Vladimir Shevelev_, Nov 10 2008</CMP>
+    </assertion><omtext class="maple">
+      <CMP> a:= proc(n) local m, r, b; m, r, b:= n, 0, 1;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       while m&gt;0 do r:= r+b*irem(m, 2, 'm'); b:= b*4 od; r</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..100);  # _Alois P. Heinz_, Mar 16 2013</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[FromDigits[Riffle[IntegerDigits[n, 2], 0], 2], {n, 0, 51}] (* _Jacob A. Siehler_, Jun 30 2010 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[FromDigits[IntegerDigits[n, 2], 4], {n, 0, 51}] (* _IWABUCHI Yu(u)ki_, Apr 06 2013 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Union@ Flatten@ NestList[ Join[ 4#, 4# + 1] &amp;, {0}, 6] (* _Robert G. Wilson v_, Aug 30 2014 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[ Range[0, 1320], Total@ IntegerDigits[#, 2] == Total@ IntegerDigits[#, 4] &amp;] (* _Robert G. Wilson v_, Oct 24 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) d(n,k)=if(n&lt;=0,[ ],concat(d(n\k,k), n%k)); /* vector of digits of n in base k */ sd(n,k)=Set(d(n,k)) /* set of digits of n in base k */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) Vec(1/(1-x)*+O(x^99)) \\ _Charles R Greathouse IV_, Oct 12 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=0,100,l=if(!n,0,floor(log(n)/log(2))):print1(sum(k=0,l,binary(n)[k+1]*4^(l-k))&quot;,&quot;))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=n=binary(n);sum(i=1,#n,n[i]*4^(#n-i)) \\ _Charles R Greathouse IV_, Mar 04 2013</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000695 n = if n == 0 then 0 else 4 * a000695 n' + b</CMP>
+    </omtext><omtext class="program">
+      <CMP>             where (n',b) = divMod n 2</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Feb 21 2014, Dec 03 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> For generating functions Prod_{k&gt;=0} (1+a*x^(b^k)) for the following values of (a,b) see: (1,2) A000012 and A000027, (1,3) A039966 and A005836, (1,4) A151666 and A000695, (1,5) A151667 and A033042, (2,2) A001316, (2,3) A151668, (2,4) A151669, (2,5) A151670, (3,2) A048883, (3,3) A117940, (3,4) A151665, (3,5) A151671, (4,2) A102376, (4,3) A151672, (4,4) A151673, (4,5) A151674.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Diagonal of A048720, second column of A048723.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A059884, A059901, A059904, A059905, A059906, A005836, A007088, A033042-A033052, A126684.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A062880[n] = 2*a[n]; A001196[n] = 3*a[n].</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Row 4 of array A104257.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

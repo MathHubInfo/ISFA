@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000705.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000705">
+          <assertion class="***** TTTT *****">
+      <CMP> M0423 N0162</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,2,5,2,3,7,2,11,13,2,3,5,17,19,2,23,7,29,3,31,2,37,41,43,47,5,53,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 59,2,11,61,3,67,71,73,79,13,83,89,2,97,101,103,107,7,109,113,17,127,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 131,137,139,3,5,149,151,19,2,157,163,167,173,179,181,191,193,197,199</CMP>
+    </assertion><omtext class="name">
+      <CMP> n-th superior highly composite number A002201(n) is product of first n terms of this sequence.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Mathematica program uses the fact that the ratio of consecutive superior highly composite numbers is a prime, which was proved by Ramanujan. Ramanujan computed the first 50 terms of this sequence. Related sequences are A004490 and A073751, having to do with colossally abundant numbers.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Ramanujan, Collected Papers, Ed. G. H. Hardy et al., Cambridge 1927; Chelsea, NY, 1962, p. 115.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Ramanujan, Ramanujan's Papers, pp. 147-9, Ed. B. J. Venkatachala et al., Prism Books, Bangalore 2000.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000705/b000705.txt&quot;&gt;Table of n, a(n) for n=1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. C. Lagarias, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0008177&quot;&gt;An elementary problem equivalent to the Riemann hypothesis&lt;/a&gt;, Am. Math. Monthly 109 (#6, 2002), 534-543.</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Ramanujan, &lt;a href=&quot;http://www.imsc.res.in/~rao/ramanujan/CamUnivCpapers/Cpaper15/page38.htm&quot;&gt;First 50 primes whose products form successive superior highly composite numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/SuperiorHighlyCompositeNumber.html&quot;&gt;Superior Highly Composite Number&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> pFactor[f_List] := Module[{p = f[[1]], k = f[[2]]}, N[Log[(k + 2)/(k + 1)]/Log[p]]]; maxN = 100; f = {{2, 1}, {3, 0}}; primes = 1; lst = {2}; x = Table[pFactor[f[[i]]], {i, primes + 1}]; For[n = 2, n &lt;= maxN, n++, i = Position[x, Max[x]][[1, 1]]; AppendTo[lst, f[[i, 1]]]; f[[i, 2]]++; If[i &gt; primes, primes++; AppendTo[f, {Prime[i + 1], 0}]; AppendTo[x, pFactor[f[[ -1]]]]]; x[[i]] = pFactor[f[[i]]]]; lst (* _T. D. Noe_, Nov 01 2002 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A004490, A073751.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _T. D. Noe_, Nov 01 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

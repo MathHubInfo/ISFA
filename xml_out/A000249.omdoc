@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000249.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000249">
+          <assertion class="***** TTTT *****">
+      <CMP> M2859 N1150</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,0,0,1,3,10,42,193,966,5215,30170,186234,1222065,8496274,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 62395234,482700052,3923995651,33444263516,298233514595,2777192597789,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 26959282453367</CMP>
+    </assertion><omtext class="name">
+      <CMP> Nearest integer to modified Bessel function K_n(5).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 429.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., &lt;a href=&quot;http://www.nrbook.com/abramowitz_and_stegun/&quot;&gt;Handbook of Mathematical Functions&lt;/a&gt;, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy].</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Be#Bessel&quot;&gt;Index entries for sequences related to Bessel functions or polynomials&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> f := proc(n) round( evalf ( BesselK( n,5 ) )); end;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,10</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition improved by _Sean A. Irvine_, Mar 28 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

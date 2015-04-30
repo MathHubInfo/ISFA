@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000529.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000529">
+          <assertion class="***** TTTT *****">
+      <CMP> M5086 N2202</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 20,74,186,388,721,1236,1995,3072,4554,6542,9152,12516,16783,22120,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 28713,36768,46512,58194,72086,88484,107709,130108,156055,185952,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 220230,259350,303804,354116,410843,474576,545941,625600,714252,812634,921522,1041732,1174121,1319588,1479075,1653568,1844098,2051742,2277624,2522916,2788839,3076664,3387713,3723360,4085032,4474210</CMP>
+    </assertion><omtext class="name">
+      <CMP> Powers of rooted tree enumerator.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 150.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000529:=(z-2)*(3*z**3-12*z**2+18*z-10)/(z-1)**6; [Conjectured by _Simon Plouffe_ in his 1992 dissertation.]</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; (Matrix([[0,-3,0,3,4,4]]). Matrix(6, (i,j)-&gt; if (i=j-1) then 1 elif j=1 then [6,-15,20, -15,6,-1][i] else 0 fi)^n)[1,1]: seq(a(n), n=1..24); # _Alois P. Heinz_, Aug 26 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := ({0, -3, 0, 3, 4, 4}.MatrixPower[Table[If[i == j-1, 1, If[j == 1, {6, -15, 20, -15, 6, -1}[[i]], 0]], {i, 1, 6}, {j, 1, 6}], n])[[1]]; Table[a[n], {n, 1, 50}] (* _Jean-François Alcover_, Oct 14 2014, after _Alois P. Heinz_ *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Nov 14 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

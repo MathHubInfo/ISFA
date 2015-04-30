@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000729.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000729">
+          <assertion class="***** TTTT *****">
+      <CMP> M4076 N1691</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,6,9,10,30,0,11,42,0,70,18,54,49,90,0,22,60,0,110,0,81,180,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 78,0,130,198,0,182,30,90,121,84,0,0,210,0,252,102,270,170,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 69,330,0,38,420,0,190,390,0,108,0,0,0,300,99,442,210,0,418,294,0,0,510,378,540,138,0</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of Product (1 - x^k)^6, k=1..inf.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Ramanujan theta functions: f(q) (see A121373), phi(q) (A000122), psi(q) (A010054), chi(q) (A000700).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number 36 of the 74 eta-quotients listed in Table I of Martin 1996.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Dickson, v.2, p. 295 briefly states a result of Glaisher, 1883, pp 212-215. This result is that a(n) is the sum over all solutions of 16*n + 4 = x^2 + y^2 + z^2 + w^2 in non-negative odd integers of chi(x) and is also the sum over all solutions of 8*n + 2 = x^2 + y^2 in non-negative odd integers of chi(x) * chi(y) where chi(x) = x if x == 1 (mod 4) and -x if x == 3 (mod 4). [_Michael Somos_, Jun 18 2012]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Denoted by g_3(q) in Cynk and Hulek on page 8 as the unique weight 3 Hecke eigenform of level 16 with complex multiplication by i. - _Michael Somos_, Aug 24 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is a member of an infinite family of integer weight modular forms. g_1 = A008441, g_2 = A002171, g_3 = A000729, g_4 = A215601, g_5 = A215472. - _Michael Somos_, Aug 24 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Boylan, Exceptional congruences for the coefficients of certain eta-product newforms, J. Number Theory 98 (2003), no. 2, 377-389.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. E. Dickson, History of the Theory of Numbers. Carnegie Institute Public. 256, Washington, DC, Vol. 1, 1919; Vol. 2, 1920; Vol. 3, 1923, see vol. 2, p. 295, and vol. 3, p. 134.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. W. L. Glaisher, Note on  the Compositions of a Number as a Sum of Two and Four Uneven Squares, Quarterly Journal of Pure and Applied Mathematics, 19 (1883), 212-215.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. W. L. Glaisher, On the function chi(n), Quarterly Journal of Pure and Applied Mathematics, 20 (1884), 97-167.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Y. Martin, Multiplicative eta-quotients, Trans. Amer. Math. Soc. 348 (1996), no. 12, 4825-4856, see page 4852 Table I.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Newman, Morris; A table of the coefficients of the powers of $\eta(\tau)$. Nederl. Akad. Wetensch. Proc. Ser. A. 59 = Indag. Math. 18 (1956), 204-216.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Cynk and K. Hulek, &lt;a href=&quot;http://arXiv.org/abs/math/0509424&quot;&gt;Construction and examples of higher-dimensional modular Calabi-Yau manifolds&lt;/a&gt; (arXiv:math/0509424).</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Somos, &lt;a href=&quot;http://cis.csuohio.edu/~somos/multiq.pdf&quot;&gt;Introduction to Ramanujan theta functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/RamanujanThetaFunctions.html&quot;&gt;Ramanujan Theta Functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. R. Finch, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0701251&quot;&gt;Powers of Euler's q-Series&lt;/a&gt;, (arXiv:math.NT/0701251).</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Milne and V. Leininger, &lt;a href=&quot;http://www.intlpress.com/MAA/p/1999/6_2/MAA-6-2-225-248.pdf&quot;&gt;Some new infinite families of eta function identities&lt;/a&gt;, Methods and Applications of Analysis 6 (1999), 225--248. [From _Paul D. Hanna_, Mar 15 2010]</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Pro#1mxtok&quot;&gt;Index entries for expansions of Product_{k &gt;= 1} (1-x^k)^m&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Expansion of q^(-1/4)/16 * theta_2(q)^4 * theta_3(q) * theta_4(q) in powers of<OMOBJ>
+      <OMV name="q"/>
+    </OMOBJ>. [Dickson,<OMOBJ>
+      <OMV name="v"/>
+    </OMOBJ>.<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ>.<OMOBJ>
+      <OMI>134</OMI>
+    </OMOBJ> from Stieltjes footnote<OMOBJ>
+      <OMI>160</OMI>
+    </OMOBJ>. _Michael Somos_, Jun 18 2012]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Expansion of q^(-1/2)/4 * k * k' * (K / (pi/2))^3 in powers of<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMV name="k"/>
+    </OMOBJ>, k',<OMOBJ>
+      <OMV name="K"/>
+    </OMOBJ> are Jacobi elliptic functions. - _Michael Somos_, Jun 22 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+      <OMI>6</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Given g.f.<OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000729"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ>, then<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000729"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="f" cd="A000729"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+      <OMI>6</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="phi" cd="A000729"/>
+      <OMV name="q"/>
+    </OMA><OMA>
+      <OMS name="phi" cd="A000729"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="q"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="psi" cd="A000729"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> where phi(), psi(), f() are Ramanujan theta functions. - _Michael Somos_, Aug 23 2006
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000729"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="b" cd="A000729"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMA>
+      <OMS name="b" cd="A000729"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> is multiplicative with<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000729"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>0</OMI>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000729"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="e"/>
+    </OMA>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="mod" cd="A000729"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000729"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="b" cd="A000729"/>
+      <OMV name="p"/>
+    </OMA><OMA>
+      <OMS name="b" cd="A000729"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="e"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="b" cd="A000729"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="e"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="mod" cd="A000729"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000729"/>
+      <OMV name="p"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="y"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="y"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="y"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Michael Somos_, Aug 23 2006
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f. is<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> period<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ> Fourier series which satisfies f(-1 / (16 t)) = 64 (t/i)^3 f(t) where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMA>
+      <OMS name="exp" cd="A000729"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> pi i t). - _Michael Somos_, Aug 24 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A000729"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMV name="u"/>
+                  <OMV name="v"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="u"/><OMV name="u"/></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="v"/><OMV name="v"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="u"/><OMV name="u"/></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="v"/><OMV name="v"/></OMA>
+    </OMA>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS></OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMOBJ>. - _Michael Somos_, Jun 14 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.: eta(x)^6 = Sum_{n&gt;=0} (1+2n)^2*x^(n^2+n) + 2*Sum_{n&gt;=0,k&gt;=1} (1 + 4(n^2+n-k^2))*x^(n^2+n+k^2) - from the Milne and Leininger reference.<OMOBJ>
+      <OMV name="From"/>
+    </OMOBJ> _Paul D. Hanna_, Mar 15 2010]
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> 1 - 6*x + 9*x^2 + 10*x^3 - 30*x^4 + 11*x^6 + 42*x^7 - 70*x^9 + 18*x^10 + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> q - 6*q^5 + 9*q^9 + 10*q^13 - 30*q^17 + 11*q^25 + 42*q^29 - 70*q^37 + ...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ 1/16 EllipticTheta[ 4, 0, q] EllipticTheta[ 2, 0, q]^4 EllipticTheta[ 3, 0, q], {q, 0, 4 n + 1}] (* _Michael Somos_, Jun 18 2012 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := If[ n &lt; 0, 0, With[ {m = Sqrt[ 16 n + 4]}, SeriesCoefficient[ Sum[ Mod[k, 2] q^k^2, {k, m}]^3 Sum[ KroneckerSymbol[ -4, k] k q^k^2, {k, m}], {q, 0, 16 n + 4}]]] (* _Michael Somos_, Jun 12 2012 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := With[ {m = InverseEllipticNomeQ @ q}, SeriesCoefficient[ Sqrt[(1 - m) m ] (EllipticK[m] 2/Pi)^3 / (4 q^(1/2)), {q, 0, 2 n}]] (* _Michael Somos_, Jun 22 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A); if( n&lt;0, 0, A = x * O(x^n); polcoeff( eta(x + A)^6, n))}</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A, p, e, x, y, a0, a1); if( n&lt;0, 0, n = 4*n + 1; A = factor(n); prod( k=1, matsize(A)[1], if( p=A[k, 1], e=A[k, 2]; if( p==2, 0, if( p%4==3, if( e%2, 0, p^e), for( i=1, sqrtint(p\2), if( issquare( p - i^2, &amp;y), x=i; break)); a0=1; a1 = y = 2*(x^2 - y^2) * (-1)^y; for( i=2, e, x = y*a1 - p^2*a0; a0=a1; a1=x); a1)))))} /* _Michael Somos_, Aug 21 2006 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n)=local(tn=(sqrtint(8*n+1)+1)\2);polcoeff(sum(m=0,tn,(1+2*m)^2*x^(m^2+m)+x*O(x^n)) + 2*sum(m=0,tn,sum(k=1,tn,(1+4*(m^2+m-k^2))*x^(m^2+m+k^2)+x*O(x^n))),n)} [From _Paul D. Hanna_, Mar 15 2010]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

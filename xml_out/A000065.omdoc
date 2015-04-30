@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000065.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000065">
+          <assertion class="***** TTTT *****">
+      <CMP> M1012 N0379</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,2,4,6,10,14,21,29,41,55,76,100,134,175,230,296,384,489,626,791,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1001,1254,1574,1957,2435,3009,3717,4564,5603,6841,8348,10142,12309,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 14882,17976,21636,26014,31184,37337,44582,53173,63260,75174,89133,105557,124753</CMP>
+    </assertion><omtext class="name">
+      <CMP> -1 + number of partitions of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n+1) is the number of noncongruent n-dimensional integer-sided simplices with diameter n. - _Sascha Kurz_, Jul 26 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, the number of partitions of n into parts each less than n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, the number of distinct types of equation which can be derived from the equation [n,0,0] not including itself. (Ince)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, the number of rooted trees on n+1 nodes with height exactly 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, the number of partitions (of any positive integer) whose sum + length is &lt;= n. Example: a(5) = 6 counts 4, 3, 21, 2, 11, 1. Proof: Given a partition of n other than the all 1s partition, subtract 1 from each part and then drop the zeros. This is a bijection to the partitions with sum + length &lt;= n. - _David Callan_, Nov 29 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A026820(n,n-1) for n&gt;1. - _Reinhard Zumkeller_, Jan 21 2010</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. L. Ince, Ordinary Differential Equations, Dover Publications, New York, 1944, p. 498; MR0010757.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> V. Modrak, D. Marton, Development of Metrics and a Complexity Scale for the Topology of Assembly Supply Chains, Entropy 2013, 15, 4285-4299; doi:10.3390/e15104285</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, Enumeration of trees by height and diameter, IBM J. Res. Dev. 4 (1960), 473-478.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane and Vincenzo Librandi, &lt;a href=&quot;/A000065/b000065.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt; (first 199 terms from N. J. A. Sloane)</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="G" cd="A000065"/>
+      <OMI>0</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> where G(k) = <OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="G" cd="A000065"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>; (recursively defined continued fraction). - _Sergei N. Gladkovskii_, Jan 23 2013
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f. = x^2 + 2*x^3 + 4*x^4 + 6*x^5 + 10*x^6 + 14*x^7 + 21*x^8 + 29*x^9 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with (combstruct):ZL:=proc(m) local i; [T0,{seq(T.i=Prod(Z,Set(T.(i+1))),i=0..m-1), T.m=Z}, unlabeled] end:A:=n -&gt; count(ZL(2),size=n)-count(ZL(1),size=n): seq(A(n),n=1..46); # _Zerinvary Lajos_, Dec 05 2007</CMP>
+    </omtext><omtext class="maple">
+      <CMP> ZL :=[S, {S = Set(Cycle(Z),1 &lt; card)}, unlabelled]: seq(combstruct[count](ZL, size=n), n=0..45); # _Zerinvary Lajos_, Mar 25 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> nn=40;CoefficientList[Series[Product[1/(1-x^i),{i,1,nn}]-1/(1-x),{x,0,nn}],x]  (* _Geoffrey Critzer_, Oct 28 2012 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> PartitionsP[Range[0,50]]-1 (* _Harvey P. Dale_, Aug 24 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;0, 0, polcoeff( 1 / eta(x + x*O(x^n)), n) - 1)};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;0, 0, numbpart(n) - 1)};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [NumberOfPartitions(n)-1: n in [0..50]]; // _Vincenzo Librandi_, Aug 25 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A000041 - 1. A diagonal of A058716.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Column h=2 of A034781.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vincenzo Librandi_, Aug 25 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

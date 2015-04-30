@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000179.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000179">
+          <assertion class="***** TTTT *****">
+      <CMP> M2062 N0815</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,1,2,13,80,579,4738,43387,439792,4890741,59216642,775596313,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10927434464,164806435783,2649391469058,45226435601207,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 817056406224416,15574618910994665,312400218671253762,6577618644576902053,145051250421230224304,3343382818203784146955,80399425364623070680706,2013619745874493923699123</CMP>
+    </assertion><omtext class="name">
+      <CMP> Ménage numbers: number of permutations s of [0, ..., n-1] such that s(i) != i and s(i) != i+1 (mod n) for all i.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> According to rook theory, J. Riordan considered a(1) to be -1; see A102761. - _Vladimir Shevelev_, Apr 02 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Or, for n&gt;=3, the number of 3 X n Latin rectangles the second row of which is full cycle with a fixed order of its elements, e.g., the cycle (x_2,x_3,...,x_n,x_1) with x_1 &lt; x_2 &lt; ... &lt; x_n. - _Vladimir Shevelev_, Mar 22 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Muir (p. 112) gives essentially this recurrence (although without specifying any initial conditions). Compare A186638. - _N. J. A. Sloane_, Feb 24 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sequence discovered by Touchard in 1934. - _L. Edson Jeffery_, Nov 13 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Although these are also known as Touchard numbers, the problem was formulated by Lucas in 1891, who gave the recurrence formula shown below. See Cerasoli et al., 1988. - _Stanislav Sykora_, Mar 14 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. W. R. Ball and H. S. M. Coxeter, Mathematical Recreations and Essays, 13th Ed. Dover, p. 50.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Cerasoli, F. Eugeni and M. Protasi, Elementi di Matematica Discreta, Nicola Zanichelli Editore, Bologna 1988, Chapter 3, p. 78.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 185, mu(n).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Kaplansky, Irving and Riordan, John, The probleme des menages, Scripta Math. 12, (1946). 113-124.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. A. MacMahon, Combinatory Analysis. Cambridge Univ. Press, London and New York, Vol. 1, 1915 and Vol. 2, 1916; see vol. 1, p 256.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. Muir, A Treatise on the Theory of Determinants. Dover, NY, 1960, Sect. 132, p. 112. - _N. J. A. Sloane_, Feb 24 2011</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 197.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> V. S. Shevelev, Reduced Latin rectangles and square matrices with equal row and column sums, Diskr. Mat. (J. of the Akademy of Sciences of Russia) 4(1992), 91-110. - _Vladimir Shevelev_, Mar 22 2010</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. M. Taylor, A problem on arrangements, Mess. Math., 32 (1902), 60ff.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Touchard, Permutations discordant with two given permutations, Scripta Math., 19 (1953), 108-119.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000179/b000179.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Kenneth P. Bogart and Peter G. Doyle, &lt;a href=&quot;http://www.jstor.org/stable/2323022&quot;&gt;Nonsexist solution of the ménage problem&lt;/a&gt;, Amer. Math. Monthly 93 (1986), no. 7, 514-519.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. de Gennaro, &lt;a href=&quot;http://arxiv.org/abs/0711.0527&quot;&gt;How may latin rectangles are there?&lt;/a&gt;, arXiv:0711.0527 [math.CO] (2007), see p. 2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Flajolet and R. Sedgewick, &lt;a href=&quot;http://algo.inria.fr/flajolet/Publications/books.html&quot;&gt;Analytic Combinatorics&lt;/a&gt;, 2009; see page 372</CMP>
+    </omtext><omtext class="link">
+      <CMP> Nick Hobson, &lt;a href=&quot;/A000179/a000179.py.txt&quot;&gt;Python program for this sequence&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Irving Kaplansky, &lt;a href=&quot;http://projecteuclid.org/euclid.bams/1183505432&quot;&gt;Solution of the &quot;Problème des ménages&quot;&lt;/a&gt;, Bull. Amer. Math. Soc. 49, (1943). 784-785.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Irving Kaplansky, &lt;a href=&quot;http://projecteuclid.org/euclid.bams/1183506627&quot;&gt;Symbolic solution of certain problems in permutations&lt;/a&gt;, Bull. Amer. Math. Soc., 50 (1944), 906-914.</CMP>
+    </omtext><omtext class="link">
+      <CMP> V. Kotesovec, &lt;a href=&quot;http://web.telecom.cz/vaclav.kotesovec/math.htm&quot;&gt;Non-attacking chess pieces&lt;/a&gt;, 6ed, 2013, p. 221.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. R. Kräuter, &lt;a href=&quot;http://www.mat.univie.ac.at/~slc/opapers/s11kraeu.html&quot;&gt;Über die Permanente gewisser zirkulärer Matrizen...&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Lucas, &lt;a href=&quot;http://gallica.bnf.fr/ark:/12148/bpt6k29021h&quot;&gt;Th\'{e}orie des Nombres&lt;/a&gt;, Gauthier-Villars, Paris, 1891, Vol. 1, p. 495.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Touchard, &lt;a href=&quot;http://visualiseur.bnf.fr/ark:/12148/bpt6k31506&quot;&gt;Théorie des substitutions. Sur un problème de permutations&lt;/a&gt;, C. R. Acad. Sci. Paris 198 (1934), 631-633.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/MarriedCouplesProblem.html&quot;&gt;Married Couples Problem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/RooksProblem.html&quot;&gt;Rooks Problem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Wyman and L. Moser, &lt;a href=&quot;http://dx.doi.org/10.4153/CJM-1958-045-6&quot;&gt;On the problème des ménages&lt;/a&gt;, Canad. J. Math., 10 (1958), 468-480.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Zeilberger, &lt;a href=&quot;http://arxiv.org/abs/1401.1089&quot;&gt;Automatic Enumeration of Generalized Menage Numbers&lt;/a&gt;, arXiv preprint arXiv:1401.1089, 2014</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000179"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A000179"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="a" cd="A000179"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000179"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A059375"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = Sum<OMOBJ>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMV name="k"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="k"/>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMA>
+      <OMS name="binomial" cd="A000179"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+    </OMOBJ>, k)*(n-k)!/(2*n-k). - Touchard<OMOBJ>
+      <OMI>1934</OMI>
+    </OMOBJ>
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="n"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS></OMA>
+    </OMA>
+    </OMOBJ>. - _Vladeta Jovovic_, Jun 26 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000179"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="k"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>0</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="mod" cd="A000179"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMV name="k"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>; for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000179"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="mod" cd="A000179"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMV name="k"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Vladimir Shevelev_, Jan 14 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = round( 2*n*exp(-2)*BesselK(n,2) ) for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _Mark van Hoeij_, Oct 25 2011
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(0) = 1; () works. a(1) = 0; nothing works. a(2) = 0; nothing works. a(3) = 1; (201) works. a(4) = 2; (2301), (3012) work. a(5) = 13; (20413), (23401), (24013), (24103), (30412), (30421), (34012), (34021), (34102), (40123), (43012), (43021), (43102) work.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A000179 := n -&gt; add ((-1)^k*(2*n)*binomial(2*n-k,k)*(n-k)!/(2*n-k), k=0..n); # for n &gt;= 2</CMP>
+    </omtext><omtext class="maple">
+      <CMP> U := proc(n) local k; add( (2*n/(2*n-k))*binomial(2*n-k,k)*(n-k)!*(x-1)^k, k=0..n); end; W := proc(r,s) coeff( U(r),x,s ); end; A000179 := n-&gt;W(n,0); # valid for n &gt;= 2</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := 2*n*Sum[(-1)^k*Binomial[2*n - k, k]*(n - k)!/(2*n - k), {k, 0, n}]; a[0] = 1; a[1] = 0; Table[a[n], {n, 0, 21}] (* _Jean-François Alcover_, Dec 05 2012, from 2nd formula *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A); if( n&lt;3, n==0, A = vector(n); A[3] = 1; for(k=4, n, A[k] = (k * (k - 2) * A[k-1] + k * A[k-2] - 4 * (-1)^k) / (k-2)); A[n])} /* _Michael Somos_, Jan 22 2008 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n,round(2*n*exp(-2)*besselk(n,2)),1) \\ _Charles R Greathouse IV_, Nov 03 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.List (zipWith5)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000179 n = a000179_list !! n</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000179_list = 1 : 0 : 0 : 1 : zipWith5</CMP>
+    </omtext><omtext class="program">
+      <CMP>    (\v w x y z -&gt; (x * y + (v + 2) * z - w) `div` v) [2..] (cycle [4,-4])</CMP>
+    </omtext><omtext class="program">
+      <CMP>    (drop 4 a067998_list) (drop 3 a000179_list) (drop 2 a000179_list)</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Aug 26 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Diagonal of A058087. Also a diagonal of A008305.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> cf. A059375, A102761, A000186, A094047, A067998, A033999.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _James A. Sellers_, May 02 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional comments from _David W. Wilson_, Feb 18 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

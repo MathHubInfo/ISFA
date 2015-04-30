@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000161.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000161">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,0,1,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,1,0,0,0,0,2,1,0,0,1,0,0,1,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,0,1,1,0,0,1,1,0,0,0,1,0,0,0,1,2,0,1,1,0,0,0,0,1,0,0,1,0,0,1,2,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0,2,0,0,0,1,1,0,0,0,0,0,0,1,1,0,2,1,0,0,1,0,1,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n into 2 squares.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of ways of writing n as a sum of 2 (possibly zero) squares when order does not matter.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of similar sublattices of square lattice with index n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let Pk = the number of partitions of n into k nonzero squares. Then we have A000161 = P0 + P1 + P2, A002635 = P0 + P1 + P2 + P3 + P4, A010052 = P1, A025426 = P2, A025427 = P3, A025428 = P4. - _Charles R Greathouse IV_, Mar 08 2010, amended by _M. F. Hasler_, Jan 25 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(A022544(n))=0; a(A001481(n))&gt;0; a(A125022(n))=1; a(A118882(n))&gt;1. - _Reinhard Zumkeller_, Aug 16 2011</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. Grosswald, Representations of Integers as Sums of Squares. Springer-Verlag, NY, 1985, p. 84.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. V. Uspensky and M. A. Heaslet, Elementary Number Theory, McGraw-Hill, NY, 1939, p. 339</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000161/b000161.txt&quot;&gt;Table of n, a(n) for n = 0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Bottomley, &lt;a href=&quot;/A001481/a001481.gif&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. T. Bumby, &lt;a href=&quot;http://www.math.rutgers.edu/~bumby/squares1.pdf&quot;&gt;Sums of four squares&lt;/a&gt;, in Number theory (New York, 1991-1995), 1-8, Springer, New York, 1996.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. H. Conway, E. M. Rains and N. J. A. Sloane, On the existence of similar sublattices, Canad. J. Math. 51 (1999), 1300-1306 (&lt;a href=&quot;http://neilsloane.com/doc/sim.txt&quot;&gt;Abstract&lt;/a&gt;, &lt;a href=&quot;http://neilsloane.com/doc/sim.pdf&quot;&gt;pdf&lt;/a&gt;, &lt;a href=&quot;http://neilsloane.com/doc/sim.ps&quot;&gt;ps&lt;/a&gt;).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Michael Gilleland, &lt;a href=&quot;/selfsimilar.html&quot;&gt;Some Self-Similar Integer Sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. D. Hirschhorn, &lt;a href=&quot;http://dx.doi.org/10.1016/S0012-365X(99)00159-4&quot;&gt;Some formulae for partitions into squares&lt;/a&gt;, Discrete Math, 211 (2000), pp. 225-228. [From _Ant King_, Oct 05 2010]</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Su#sublatts&quot;&gt;Index entries for sequences related to sublattices&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Su#ssq&quot;&gt;Index entries for sequences related to sums of squares&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         a(n) = card { { a,b } c N | a^2+b^2 = n }. - _M. F. Hasler_, Nov 23 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Let f(n)= the number of divisors of<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> that are congruent to<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ> modulo<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ> minus the number of its divisors that are congruent to<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ> modulo<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ>, and define<OMOBJ>
+      <OMA>
+      <OMS name="delta" cd="A000161"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> to be<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ> if<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> is<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> perfect square and<OMOBJ>
+      <OMI>0</OMI>
+    </OMOBJ> otherwise. Then<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000161"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="f" cd="A000161"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="delta" cd="A000161"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="delta" cd="A000161"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMV name="n"/></OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Ant King_, Oct 05 2010
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> 25 = 3^2+4^2 = 5^2, so a(25) = 2.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A000161 := proc(n) local i,j,ans; ans := 0; for i from 0 to n do for j from i to n do if i^2+j^2=n then ans := ans+1 fi od od; RETURN(ans); end; [ seq(A000161(i), i=0..50) ];</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000161 := n -&gt; nops( numtheory[sum2sqr](n) ); # _M. F. Hasler_, Nov 23 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Length[PowersRepresentations[ #,2,2]] &amp;/@Range[0,150] (* _Ant King_, Oct 05 2010 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A000161(n)=sum(i=0,n,sum(j=0,i,if(i^2+j^2-n,0,1)))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A000161(n)=sum(i=0,sqrtint(n&gt;&gt;1),issquare(n-i^2)) \\ _M. F. Hasler_, Nov 23 2007</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=sum(k=sqrtint((n-1)\2)+1,sqrtint(n),issquare(n-k^2)) \\ _Charles R Greathouse IV_, Mar 21 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000161 n =</CMP>
+    </omtext><omtext class="program">
+      <CMP>    sum $ map (a010052 . (n -)) $ takeWhile (&lt;= n `div` 2) a000290_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000161_list = map a000161 [0..]</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Aug 16 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002654, A001481, A002635, A025427, A025428, A063725, A025426, A000290, A010052.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000925, A247367.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,core,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,26</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

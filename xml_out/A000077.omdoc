@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000077.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000077">
+          <assertion class="***** TTTT *****">
+      <CMP> M1095 N0417</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,4,8,13,24,42,76,140,257,483,907,1717,3272,6261,12027,23172,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 44769,86708,168245,327073,636849,1241720,2424290,4738450,9271396,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 18157630,35591729,69820804,137069245,269270791,529312776,1041093937,2048826229,4034062310</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of positive integers &lt;= 2^n of form x^2 + 6 y^2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Shanks and L. P. Schmid, Variations on a theorem of Landau. Part I, Math. Comp., 20 (1966), 551-569.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Qua#quadpop&quot;&gt;Index entries for sequences related to populations of quadratic forms&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(3)=4 since 2^3=8 and 1=1^2, 4=2^2, 6=6*1^2, 7=1^2+6*1^2.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;0,0,sum(k=1,2^n,0&lt;sum(y=0,sqrtint(k\6),issquare(k-6*y^2))))</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

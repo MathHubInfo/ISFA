@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000334.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000334">
+          <assertion class="***** TTTT *****">
+      <CMP> M3858 N1580</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,15,45,120,326,835,2145,5345,13220,32068,76965,181975,425490,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 982615,2245444,5077090,11371250,25235790,55536870,121250185,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 262769080,565502405,1209096875,2569270050,5427963902,11404408525</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 4-dimensional partitions of n.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. O. L. Atkin, P. Bratley, I. G. McDonald and J. K. S. McKay, Some computations for m-dimensional partitions, Proc. Camb. Phil. Soc., 63 (1967), 1097-1100.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. P. Naveen, On The Asymptotics of Some Counting Problems in Physics, Thesis, Bachelor of Technology, DEPARTMENT OF PHYSICS, INDIAN INSTITUTE OF TECHNOLOGY, MADRAS, May 2011; http://www.physics.iitm.ac.in/~suresh/theses/NaveenThesis.pdf</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Suresh Govindarajan, &lt;a href=&quot;/A000334/b000334.txt&quot;&gt;Table of n, a(n) for n = 1..40&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Balakrishnan, S. Govindarajan and N. S. Prabhakar, &lt;a href=&quot;http://arxiv.org/abs/1105.6231&quot;&gt;On the asymptotics of higher-dimensional partitions&lt;/a&gt;, arXiv:1105.6231</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000293, A000390.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Nov 14 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

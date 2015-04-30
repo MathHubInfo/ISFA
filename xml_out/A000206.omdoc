@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000206.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000206">
+          <assertion class="***** TTTT *****">
+      <CMP> M2372 N0940</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,4,12,22,71,181,618,1957,6966,24367,89010,324766,1204815,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4482400,16802826,63195016,238711285,904338163,3436380192,13089961012,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 49979421837,191221556269,733014218506,2814758323498,10825986453978,41700030726757,160842946895004</CMP>
+    </assertion><omtext class="name">
+      <CMP> Even sequences with period 2n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> &quot;Even&quot; orbits of binary necklaces of length 2n under group D_n X S_2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. N. Gilbert and J. Riordan, Symmetry types of periodic sequences, Illinois J. Math., 5 (1961), 657-665.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000206/b000206.txt&quot;&gt;Table of n, a(n) for n = 0..500&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000013/a000013.txt&quot;&gt;Maple code for this and related sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000206"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000206"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000011"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMR xref="A000011"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> even,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000206"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000011"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> odd. - Randall L. Rathbun, Jan 11 2002
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> with (numtheory):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> b:= proc(n) option remember;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       `if` (n=0, 1, 2^(floor(n/2)-1)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>            +add (phi(2*d) *2^(n/d), d=divisors(n))/(4*n))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; `if`(n=0, 1, `if`(irem(n, 2)=0,</CMP>
+    </omtext><omtext class="maple">
+      <CMP>          (b(2*n) +b(n) +4^(n/2-1) -2^(n/2-1))/2, b(2*n)/2)):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq (a(n), n=0..30);  # _Alois P. Heinz_, Mar 25 2012</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[0] = 1; a11[n_] := Fold[#1 + EulerPhi[2*#2]*(2^(n/#2)/(2*n)) &amp; , 2^Floor[n/2], Divisors[n]]/2; a[(n_)?EvenQ] := (a11[2*n] + a11[n] + 4^(n/2 - 1) - 2^(n/2 - 1))/2; a[(n_)?OddQ] := a11[2*n]/2; Table[a[n], {n, 0, 26}] (* _Jean-François Alcover_, Sep 01 2011, after PARI prog. *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {A000206(n)=if(n==0,1, if(n%2==0,(A000011(2*n)+A000011(n)+4^(n/2-1)-2^(n/2-1))/2, A000011(2*n)/2))} \\</CMP>
+    </omtext><omtext class="program">
+      <CMP> Randall L. Rathbun, Jan 11 2002</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000011, A000013, A000208.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Randall L. Rathbun, Jan 11 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000214.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000214">
+          <assertion class="***** TTTT *****">
+      <CMP> M2470 N0980</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,5,10,32,382,15768919,16224999167506438730294,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 84575066435667906978109556031081616704183639810103015118</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of equivalence classes of Boolean functions of n variables under action of AG(n,2).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. A. Harrison, On asymptotic estimates in switching and automata theory. J. Assoc. Comput. Mach. 13 1966, 151-157.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> V. Jovovic, The cycle indices polynomials of some classical groups, Belgrade, 1995, unpublished.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. J. Lechner, Harmonic Analysis of Switching Functions, in A. Mukhopadhyay, ed., Recent Developments in Switching Theory, Ac Press, 1971, pp. 121-254, esp. p. 186.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Fripertinger, &lt;a href=&quot;http://www-ang.kfunigraz.ac.at/~fripert/linaffproj.html&quot;&gt;Cycle indices of linear, affine and projective groups&lt;/a&gt;, Linear Algebra and Its Applications, 263, 133-156, 1997.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Fripertinger, &lt;a href=&quot;http://www-ang.kfunigraz.ac.at/~fripert/fga/k1zyklap.html&quot;&gt;Implementation of cycle index of linear group&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vladeta Jovovic, &lt;a href=&quot;/A062766/a062766.pdf&quot;&gt;Cycle indices&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Bo#Boolean&quot;&gt;Index entries for sequences related to Boolean functions&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000585.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

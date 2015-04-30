@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000270.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000270">
+          <assertion class="***** TTTT *****">
+      <CMP> M3019 N1221</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,0,3,16,95,672,5397,48704,487917,5373920,64547175,839703696,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 11762247419,176509466560,2825125339305,48040633506048,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 864932233294681,16436901752820288,328791893988472843,6905593482159150480,151941269284478380119,3495011687269591273312</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of discordant permutations.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Touchard, Permutations discordant with two given permutations, Scripta Math., 19 (1953), 109-119.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000270/b000270.txt&quot;&gt;Table of n, a(n) for n = 0..175&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="n"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS></OMA>
+    </OMA>
+    </OMOBJ>. - _Vladeta Jovovic_, Jun 29 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Recurrence: (n-3)*a(n) = (n-3)*n*a(n-1) + (n-3)*n*a(n-2) + n*a(n-3). - _Vaclav Kotesovec_, Mar 15 2014
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000270"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="exp" cd="A000270"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Vaclav Kotesovec_, Mar 15 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> a:= n-&gt; coeftayl(1+ (1-x)/(1+x) *add(k*k! *(x/ (1+x)^2)^k, k=0..n), x=0, n): seq(a(n), n=0..25); # _Alois P. Heinz_, Sep 24 2008</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000270 := proc(n) if n = 0 then 1 else n * add((-1)^(n-s)*s!*binomial(s+n-1, 2*s-1), s=1..n) fi end; seq(A000270(n), n=0..30);  # _Mark van Hoeij_, May 12 2013</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> max = 20; f[x_] := 1+(1-x)/(1+x)*Sum[ n*n!*(x/(1+x)^2)^n, {n, 0, max}]; CoefficientList[ Series[ f[x], {x, 0, max}], x] (* _Jean-François Alcover_, Dec 09 2011, after _Vladeta Jovovic_ *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := -(-1)^n*n^2*HypergeometricPFQ[{2, 1-n, 1+n}, {3/2}, 1/4]; a[0]=1; Table[a[n], {n, 0, 22}] (* _Jean-François Alcover_, May 13 2013, after _Mark van Hoeij_ *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Alois P. Heinz_, Sep 24 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

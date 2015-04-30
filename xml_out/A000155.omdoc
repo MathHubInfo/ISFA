@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000155.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000155">
+          <assertion class="***** TTTT *****">
+      <CMP> M1810 N0716</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,7,44,361,3654,44207,622552,10005041,180713290,3624270839,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 79914671748,1921576392793,50040900884366,1403066801155039,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 42142044935535536,1349948504738292193,45940391206037470098</CMP>
+    </assertion><omtext class="name">
+      <CMP> Nearest integer to modified Bessel function K_n(1).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 429.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000155/b000155.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., &lt;a href=&quot;http://www.nrbook.com/abramowitz_and_stegun/&quot;&gt;Handbook of Mathematical Functions&lt;/a&gt;, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy].</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Be#Bessel&quot;&gt;Index entries for sequences related to Bessel functions or polynomials&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Digits := 60: A000155 := proc(n) round( evalf ( BesselK( n, 1) )); end;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a := proc(n) options remember;if n&lt;3 then n elif n=3 then 7 else a(n-4)+2*(n-3)*a(n-3)+2*(n-1)*a(n-1) fi end: # _Mark van Hoeij_, Nov 21 2011</CMP>
+    </omtext><omtext class="maple">
+      <CMP> series(hypergeom([1,1],[],2*x/(1+x^2))*x/(1+x^2), x=0, 20); # _Mark van Hoeij_, Nov 21 2011</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Round[BesselK[n, 1]], {n, 0, 18}] (* _Ray Chandler _*)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Ray Chandler_, Nov 28 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More accurate definition by _Sean A. Irvine_, Mar 28 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

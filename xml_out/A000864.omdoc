@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000864.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000864">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 91,259,451,481,703,1729,2821,2981,3367,4141,4187,5461,6533,6541,6601,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7471,7777,8149,8401,8911,10001,11111,12403,13981,14701,14911,15211,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 15841,19201,21931,22321,24013,24661,27613,29341,34133</CMP>
+    </assertion><omtext class="name">
+      <CMP> Deceptive nonprimes: composite numbers n such that n divides the repunit R_{n-1}.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Francis and Ray call these numbers &quot;deceptive primes&quot;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Charles R Greathouse IV, &lt;a href=&quot;/A000864/b000864.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Francis and T. Ray, &lt;a href=&quot;http://www.math-cs.ucmo.edu/~mjms/2000.3/Ray.ps&quot;&gt;The deceptive primes to 2.10^7&lt;/a&gt;, Missouri J. Math. Sci. 12 (2000), no. 3, 145-158.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) p=5;forprime(q=7,1e5,forstep(n=p+2,q-2,2,if(n%5 &amp;&amp; Mod(10,9*n)^(n-1)==1,print1(n&quot;, &quot;)));p=q) \\ _Charles R Greathouse IV_, Jul 31 2011</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Tim Ray (C268SCM(AT)SEMOVM.SEMO.EDU)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

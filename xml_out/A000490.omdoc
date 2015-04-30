@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000490.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000490">
+          <assertion class="***** TTTT *****">
+      <CMP> M5027 N2169</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,16,1280,249856,90767360,52975108096,45344872202240,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 53515555843342336,83285910482761809920,165262072909347030040576,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 407227428060372417275494400,1219998300294918683087199010816</CMP>
+    </assertion><omtext class="name">
+      <CMP> Generalized Euler numbers c(4,n).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Shanks, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1967-0223295-5&quot;&gt;Generalized Euler and class numbers&lt;/a&gt;. Math. Comp. 21 (1967) 663-688.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Shanks, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1968-0227093-9&quot;&gt;Corrigenda to: &quot;Generalized Euler and class numbers&quot;&lt;/a&gt;, Math. Comp. 22 (1968), 699</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000490"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A000364"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>16</OMI>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> . - _Philippe Deléham_, Oct 27 2006
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A000187, A000436.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Kok Seng Chua (chuaks(AT)ihpc.nus.edu.sg), Jun 02 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

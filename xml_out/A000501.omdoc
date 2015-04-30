@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000501.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000501">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,10,27,74,201,548,1490,4051,11013,29937,81377,221206,601302,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1634508,4443055,12077476,32829984,89241150,242582597,659407867,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1792456423,4872401723,13244561064,36002449668,97864804714,266024120300,723128532145,1965667148572</CMP>
+    </assertion><omtext class="name">
+      <CMP> Floor( cosh(n) ).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000501/b000501.txt&quot;&gt;Table of n, a(n) for n = 0..250&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> f := n-&gt;floor(evalf(cosh(n)));</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Floor[Cosh[n]], {n, 0, 50}] (* _T. D. Noe_, Jun 20 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000471.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _Franklin T. Adams-Watters_, Apr 26 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

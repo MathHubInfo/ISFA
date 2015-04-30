@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000758.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000758">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,5,20,76,285,1066,3991,14976,56353</CMP>
+    </omtext><omtext class="name">
+      <CMP> Related to cumulative height of rooted plane trees.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Frederic Cazals, Path lengths in plane trees, preprint</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> Frederic Cazals [ cazals(AT)flamingo.Stanford.EDU ]</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

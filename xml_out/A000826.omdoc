@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000826.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000826">
+          <assertion class="***** TTTT *****">
+      <CMP> M4731 N2023</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 10,88,6616,91666432,76873231310808704,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 236307200075982899871259747594698752,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11487310440209940035256956508459148560969989043872580978940882909553754112,166267459448692920381622333807116147427859895760062485070882091322892520958706179582178218311954136674872641052328937320550635171107567787263574147072</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of switching networks (see Harrison reference for precise definition).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of equivalence classes with symmetric group of n variables operating on the domain and symmetric group of 2 variables operating on the range. - _Sean A. Irvine_, Jul 11 2011</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Sw#switching&quot;&gt;Index entries for sequences related to switching networks&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Jul 10 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

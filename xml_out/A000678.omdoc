@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000678.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000678">
+          <assertion class="***** TTTT *****">
+      <CMP> M1171 N0448</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,4,9,18,42,96,229,549,1347,3326,8330,21000,53407,136639,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 351757,909962,2365146,6172068,16166991,42488077,112004630,296080425,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 784688263,2084521232,5549613097,14804572332,39568107511,105938822149</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of carbon (rooted) trees with n carbon atoms = unordered 4-tuples of ternary trees.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Cayley, On the analytical forms called trees, with application to the theory of chemical combinations, Reports British Assoc. Advance. Sci. 45 (1875), 257-305 = Math. Papers, Vol. 9, 427-460 (see p. 454).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. L. Gross and J. Yellen, eds., Handbook of Graph Theory, CRC Press, 2004; p. 527.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Polya, Algebraische Berechnung der Anzahl der Isomeren einiger organischer Verbindungen, Zeit. f. Kristall., 93 (1936), 415-443; line 10 of Table I.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. C. Read, The Enumeration of Acyclic Chemical Compounds, pp. 25-61 of A. T. Balaban, ed., Chemical Applications of Graph Theory, Ac. Press, 1976; see g.f. called P(x) on p. 28, 37.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000678/b000678.txt&quot;&gt;Table of n, a(n) for n = 0..60&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jean-François Alcover, &lt;a href=&quot;/A000602/a000602_1.txt&quot;&gt;Mathematica program translated from N. J. A. Sloane's Maple program for A000022, A000200, A000598, A000602, A000678&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. M. Rains and N. J. A. Sloane, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;On Cayley's Enumeration of Alkanes (or 4-Valent Trees)&lt;/a&gt;, J. Integer Sequences, Vol. 2 (1999), Article 99.1.1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000602/a000602.txt&quot;&gt;Maple program and first 60 terms for A000022, A000200, A000598, A000602, A000678&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000678"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="cycle_index" cd="A000678"/>
+      <OMV name="S4"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>, B(x)), B(x) = g.f. for<OMOBJ>
+      <OMR xref="A000598"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> z+z^2+2*z^3+4*z^4+9*z^5+18*z^6+42*z^7+...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> Let T_i(z) = g.f. for ternary trees of height at most i.</CMP>
+    </omtext><omtext class="maple">
+      <CMP> N := 45; G000598 := 0: i := 0: while i&lt;(N+1) do G000598 := series(1+z*(G000598^3/6+subs(z=z^2,G000598)*G000598/2+subs(z=z^3,G000598)/3)+O(z^(N+1)),z,N+1): t[ i ] := G000598: i := i+1: od: # G000598 = g.f. for A000598</CMP>
+    </omtext><omtext class="maple">
+      <CMP> i := 0: while i&lt;N+1 do T := t[ i ]: G000678 := series(z*(T^4/24+subs(z=z^2, T)*T^2/4+subs(z=z^2, T)^2/8+T*subs(z=z^3, T)/3+subs(z=z^4, T)/4)+O(z^(N+1)),z,N+1): q[ i ] := G000678: i := i+1: od: A000678 := n-&gt;coeff(G000678,z,n); # G000678 = g.f. for A000678.</CMP>
+    </omtext><omtext class="maple">
+      <CMP> (this Maple program continues in A000022.)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, E. M. Rains (rains(AT)caltech.edu)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

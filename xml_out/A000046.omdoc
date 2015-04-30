@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000046.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000046">
+          <assertion class="***** TTTT *****">
+      <CMP> M0696 N0257</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,2,3,5,8,14,21,39,62,112,189,352,607,1144,2055,3885,7154,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 13602,25472,48670,92204,176770,337590,649341,1246840,2404872,4636389,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8964143,17334800,33587072,65107998,126387975,245492232,477349348</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of primitive n-bead necklaces (turning over is allowed) where complements are equivalent.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> B. Grünbaum and G. C. Shephard, The geometry of fabrics, pp. 77-98 of F. C. Holroyd and R. J. Wilson, editors, Geometrical Combinatorics. Pitman, Boston, 1984.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Christian G. Bower, &lt;a href=&quot;/A000046/b000046.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. N. Gilbert and J. Riordan, &lt;a href=&quot;http://projecteuclid.org/euclid.ijm/1255631587&quot;&gt;Symmetry types of periodic sequences&lt;/a&gt;, Illinois J. Math., 5 (1961), 657-665.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Karyn McLellan, &lt;a href=&quot;http://www.combinatorics.org/ojs/index.php/eljc/article/view/v20i4p32&quot;&gt;Periodic coefficients and random Fibonacci sequences&lt;/a&gt;, Electronic Journal of Combinatorics, 20(4), 2013, #P32.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ne#necklaces&quot;&gt;Index entries for sequences related to necklaces&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000046"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="Sum_" cd="A000046"/>
+      <OMV name="d"/>
+    </OMA>
+    </OMA>
+    </OMOBJ> divides n } mu(d)*A000011(n/d).
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> with(numtheory); A000046 := proc(n) local s,d; if n = 0 then RETURN(1); else s := 0; for d in divisors(n) do s := s+mobius(d)*A000011(n/d); od; RETURN(s); fi; end;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a11[0] = 1; a11[n_] := 2^Floor[n/2]/2 + Sum[EulerPhi[2*d]*2^(n/d), {d, Divisors[n]}]/n/4; a[0] = 1; a[n_] := Sum[MoebiusMu[d]*a11[n/d], {d, Divisors[n]}]; Table[a[n], {n, 0, 36}] (* _Jean-François Alcover_, Jul 10 2012, from formula *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Similar to A000011, but counts primitive necklaces.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A054199.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

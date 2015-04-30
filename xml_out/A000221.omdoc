@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000221.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000221">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,25,29,85,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,58,89,145,42,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 20,4,16,37,58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,58,89,145,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 42,20,4,16,37,58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,58,89,145</CMP>
+    </assertion><omtext class="name">
+      <CMP> Take sum of squares of digits of previous term.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Essentially the same as A080709. - _M. F. Hasler_, May 24 2009</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Honsberger, Ingenuity in Math., Random House, 1970, p. 83.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Porges, A set of eight numbers, Amer. Math. Monthly, 52 (1945), 379-382.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000221/b000221.txt&quot;&gt;Table of n, a(n) for n = 1..100&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Ultimately periodic with period<OMOBJ>
+      <OMI>8</OMI>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000221"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A080709"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>. - _M. F. Hasler_, May 24 2009
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000221"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A003132"/>
+      <OMA>
+      <OMS name="a" cd="A000221"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Reinhard Zumkeller_, Dec 19 2011
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> NestList[Plus @@ IntegerDigits[ # ]^2 &amp;, 5, 50]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A000221(n)=[5,25,29,85,89,145,42,20,4,16,37,58][n%8+(n%8&lt;5 &amp; n&gt;7)*8] \\ _M. F. Hasler_, May 24 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [5, 25, 29, 85] cat &amp;cat[[89, 145, 42, 20, 4, 16, 37, 58]: n in [0..17]]; // _Vincenzo Librandi_, Jan 29 2013</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000221 n = a000221_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000221_list = iterate a003132 5</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Mar 04 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A003132 (the iterated map), A003621, A039943, A099645, A031176, A007770, A000216 (starting with 2), A000218 (starting with 3), A080709 (starting with 4), A008460 (starting with 6), A008462 (starting with 8), A008463 (starting with 9), A139566 (starting with 15), A122065 (starting with 74169). - _M. F. Hasler_, May 24 2009</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,easy,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

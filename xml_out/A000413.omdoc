@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000413.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000413">
+          <assertion class="***** TTTT *****">
+      <CMP> M4367 N1833</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,7,19,57,81,251,437,691,739,1743,3695,6619,8217,9771,14771,15155,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16831,18805,26745,30551,41755,46297,54339,72359,86407,96969,131059,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 344859,395231,519963,607141,677397,741509,893019,917217,1288415,1406811</CMP>
+    </assertion><omtext class="name">
+      <CMP> Let A(n) = #{(i,j,k): i^2 + j^2 + k^2 &lt;= n}, V(n) = (4/3)Pi*n^(3/2), P(n) = A(n) - V(n); A000092 gives values of n where |P(n)| sets a new record; sequence gives A(A00092(n)).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. C. Mitchell, The number of lattice points in a k-dimensional hypersphere, Math. Comp., 20 (1966), 300-310.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000323, A000036, A000092, A000099, A000223.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Revised Jun 28 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

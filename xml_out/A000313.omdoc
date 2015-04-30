@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000313.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000313">
+          <assertion class="***** TTTT *****">
+      <CMP> M3633 N1477</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,4,30,220,1855,17304,177996,2002440,24474285,323060540,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4581585866,69487385604,1122488536715,19242660629360,348933579412440,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6673354706262864,134252194678935321,2834212998777523380,62651024183503148470,1447238658638922729580</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of permutations of length n with 3 consecutive ascending pairs.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Temporary remark: there may be some issues with respect to the offset of this sequence in the formula and program sections. - _Joerg Arndt_, Nov 16 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. N. David, M. G. Kendall and D. E. Barton, Symmetric Function and Allied Tables, Cambridge, 1966, p. 263.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Todd Silvestri, &lt;a href=&quot;/A000313/b000313.txt&quot;&gt;Table of n, a(n) for n = 1..450&lt;/a&gt; (first 100 terms by T. D. Noe)</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000313"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMI>6</OMI>
+    </OMA><OMV name="sum"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>, k=0..n).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000313"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A065087"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Zerinvary Lajos_, May 25 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: x^3/3!*exp(-x)/(1-x)^2. - _Vladeta Jovovic_, Jan 03 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000313"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="round" cd="A000313"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="exp" cd="A000313"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMV name="n"/></OMA><OMI>6</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Mark van Hoeij_, Oct 25 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="hypergeom" cd="A000313"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>, 4],[],x/(x+1))/(x+1)^4. - _Mark van Hoeij_, Nov 07 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000313"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>, a(n) = (n-2)*(n-1)*(!(n-2))/6 = (n-2)*(n-1)*A000166(n-2)/6, for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>. - _Todd Silvestri_, Nov 15 2014
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = hypergeom([4-n,2],[],1))*(-1)^n*A000292(n-3). - _Peter Luschny_, Nov 19 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> series(hypergeom([2,4],[],x/(x+1))/(x+1)^4, x=0, 30); # _Mark van Hoeij_, Nov 07 2011</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a := n -&gt; simplify(hypergeom([4-n,2],[],1))*(-1)^n*(n-1)*(n-2)*(n-3)/6: seq(a(n), n=1..23); # _Peter Luschny_, Nov 19 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[(n*(n + 1)!/6)*Sum[(-1)^k/k!, {k, 0, n}], {n, -1, 25}] (* _T. D. Noe_, Jun 19 2012 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[1]:=0; a[n_Integer/;n&gt;=2]:=(n-2) (n-1) Subfactorial[n-2]/6 (* _Todd Silvestri_, Nov 15 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a = lambda n: (n-2)*(n-1)*sloane.A000166(n-2)/6 if n&gt;2 else 0</CMP>
+    </omtext><omtext class="program">
+      <CMP> [a(n) for n in range(1,24)] # _Peter Luschny_, Nov 19 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A010027, A000255, A000166, A000274, A001260, A001261.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A diagonal in triangle A010027.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, Jan 03 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Formula added by _Sean A. Irvine_, Nov 11 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Name clarified and offset changed by _N. J. A. Sloane_, Apr 12 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

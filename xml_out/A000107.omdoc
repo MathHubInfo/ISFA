@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000107.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000107">
+          <assertion class="***** TTTT *****">
+      <CMP> M1442 N0570</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,5,13,35,95,262,727,2033,5714,16136,45733,130046,370803,1059838,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3035591,8710736,25036934,72069134,207727501,599461094,1731818878,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5008149658,14496034714,41993925955,121747732406,353221737526,1025471857282,2978995353959,8658997820084</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of rooted trees with n nodes and a single labeled node; pointed rooted trees; vertebrates.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Bergeron, G. Labelle and P. Leroux, Combinatorial Species and Tree-Like Structures, Camb. 1998, p. 61, 62 (2.1.8-2.1.10)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 134.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000107/b000107.txt&quot;&gt;Table of n, a(n) for n=0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=123&quot;&gt;Encyclopedia of Combinatorial Structures 123&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(numtheory): b:= proc(n) option remember; `if`(n&lt;2, n, add(add(d*b(d), d=divisors(j)) *b(n-j), j=1..n-1) /(n-1)) end: a:= proc(n) option remember; b(n) +add(a(n-i) *b(i), i=1..n-1) end: seq(a(n), n=0..26); # _Alois P. Heinz_, Jun 02 2009</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> b[0] = 0; b[1] = 1; b[n_] := b[n] = Sum[ Sum[ d*b[d], {d, Divisors[j]}]*b[n-j], {j, 1, n-1}]/(n-1); a[n_] := a[n] = b[n] + Sum[ a[n-i]*b[i], {i, 1, n-1}]; Table[ a[n], {n, 0, 26}](* _Jean-François Alcover_, Mar 07 2012, after _Alois P. Heinz_ *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> INVERT transform of A000081. Cf. A000243, A000269, A000312, A000444, A000485, A000524-A000526.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Better description from _Christian G. Bower_, Apr 15 1998</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

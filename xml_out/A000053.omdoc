@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000053.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000053">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 14,18,23,28,34,42,50,59,66,72,79,86,96,103,110,116,125,137,145,157,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 168,181,191,207,215,225,231,238,242</CMP>
+    </assertion><omtext class="name">
+      <CMP> Local stops on New York City Broadway line (IRT #1) subway.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These are the numbered stops for the #1 train, as of February 2000.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Volume 2, page 112, exercise 2, of John L. Casti's Reality Rules: Picturing the World in Mathematics (Wiley, 1992).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> James Gleick, Faster, Vintage Books, NY, 2000 (see pp. 259-261).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> &quot;The [Subway] Map,&quot; Metropolitan Transportation Authority, 2007</CMP>
+    </omtext><omtext class="link">
+      <CMP> James Gleick, &lt;a href=&quot;http://www.nytimes.com/1987/01/27/science/in-a-random-world-he-collects-patterns.html&quot;&gt;In a 'random world', he collects patterns&lt;/a&gt;, New York Times, Tuesday, January 27, 1987, front page of Science Tuesday section.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;http://www.mta.nyc.ny.us/nyct/service/oneline.htm&quot;&gt;Map, schedule, etc.&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000054, A001049, A007826.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,fini,full,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Line number corrected from #9 to IRT #1 by _Lee A. Newberg_, Sep 09 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

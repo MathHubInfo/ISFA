@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000637.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000637">
+          <assertion class="***** TTTT *****">
+      <CMP> M1730 N0685</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,2,7,8,37,40,200,258,1039,1501,7629,10109,54322,83975,527036,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 780193,5808293</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of fixed-point-free permutation groups of degree n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(1) = 0 since the trivial group of degree 1 has a fixed point. One could also argue that one should set a(1) = 1 by convention.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Butler and J. McKay, The transitive groups of degree up to eleven, Comm. Algebra, 11 (1983), 863-911.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Holt, Enumerating subgroups of the symmetric group. Computational Group Theory and the Theory of Groups, II, edited by L.-C. Kappe, A. Magidin and R. Morse. AMS Contemporary Mathematics book series, vol. 511, pp. 33-37. [From Alexander Hulpke. Jul 30 2010]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Hulpke, Konstruktion transitiver Permutationsgruppen, Dissertation, RWTH Aachen, 1996.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Hulpke, Constructing transitive permutation groups, J. Symbolic Comput. 39 (2005), 1-30.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Hulpke, Constructing Transitive Permutation Groups, in preparation</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. C. Lunn and J. K. Senior, Isomerism and Configuration, J. Physical Chem. 33 91929), 1027-1079.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. C. Sims, Computational methods in the study of permutation groups, pp. 169-183 of J. Leech, editor, Computational Problems in Abstract Algebra. Pergamon, Oxford, 1970.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Hulpke, &lt;a href=&quot;http://www.math.colostate.edu/~hulpke/smalldeg.html&quot;&gt;Transitive groups of small degree&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Gre#groups&quot;&gt;Index entries for sequences related to groups&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000637"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000638"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A000638"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Christian G. Bower_, Feb 23 2006
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMR xref="A005226"/>
+    </OMOBJ> is Euler transform of this sequence. - _Michael Somos_, Jul 30 2010
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A000001, A000019, A000638, A002106, A005432, A005226.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000019, A002106. Unlabeled version of A116693.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,more,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Alexander Hulpke (hulpke(AT)math.colostate.edu)</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(2) and a(10) corrected, a(11) and a(12) added by _Christian G. Bower_, Feb 23 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Terms a(13)-a(18) were computed by Derek Holt and contributed by Alexander Hulpke. Jul 30 2010, who comments that he has verified the terms up through a(16).</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _N. J. A. Sloane_, Jul 30 2010, at the suggestion of _Michael Somos_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

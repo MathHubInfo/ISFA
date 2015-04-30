@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000899.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000899">
+          <assertion class="***** TTTT *****">
+      <CMP> M4645 N1987</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,9,70,571,4820,44676,450824,4980274,59834748,778230060,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10896609768,163456629604,2615335902176,44460874280032,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 800296440705472,15205636325496568,304112744618157872,6386367741011250672</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of solutions to the rook problem on an n X n board having a certain symmetry group (see Robinson for details).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. C. Larson, The number of essentially different nonattacking rook arrangements, J. Recreat. Math., 7 (No. 3, 1974), circa pages 180-181.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. W. Robinson, Counting arrangements of bishops, pp. 198-214 of Combinatorial Mathematics IV (Adelaide 1975), Lect. Notes Math., 560 (1976).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000899/b000899.txt&quot;&gt;Table of n, a(n) for n = 1..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Lucas, &lt;a href=&quot;http://gallica.bnf.fr/ark:/12148/bpt6k29021h&quot;&gt;Th\'{e}orie des Nombres&lt;/a&gt;, Gauthier-Villars, Paris, 1891, Vol. 1, p. 222.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000899"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000142"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMR xref="A000085"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMR xref="A037223"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMR xref="A000898"/>
+      <OMA>
+      <OMS name="floor" cd="A000899"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMI>8</OMI>
+    </OMA><OMV name="all"/></OMA>
+    </OMA>
+    </OMOBJ> of which have explicit formulae).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For asymptotics see the Robinson paper.
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> For Maple program see A000903.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := ((n+1)! - (2*Floor[(n+1)/2])!! - 2*Sum[Binomial[n+1, 2*k]*(2*k-1)!!, {k, 0, (n+1)/2}] + 2*Sum[2^k*BellB[k]*StirlingS1[Floor[(n+1)/2], k], {k, 0, Floor[(n+1)/2]}])/8; Table[a[n], {n, 0, 20}] (* _Jean-François Alcover_, Dec 23 2013, from explicit formulae *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000900.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, May 09 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000976.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000976">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,1,1,1,6,6,18,18,18,54,54,378,1134,1134,9072,81648,81648,81648,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1714608,18860688,18860688,56582064,56582064,735566832,19860304464,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 139022131248,139022131248,417066393744,2085331968720,2085331968720,68815954967760</CMP>
+    </assertion><omtext class="name">
+      <CMP> Period of 1 / n! in base 10.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Formula and program of C. Ronaldo only works for n&lt;25, because they do not remove enough powers of 5 for n&gt;=25. - _Sean A. Irvine_, Sep 29 2011</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000976/b000976.txt&quot;&gt;Table of n, a(n) for n = 1..200&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000976"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMV name="k"/>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMV name="k"/>
+    </OMOBJ> is the smallest integer&gt;=1 such that<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>10</OMI>
+      <OMV name="k"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMR xref="A011371"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMA>
+      <OMS name="floor" cd="A000976"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMR xref="A011371"/>
+    </OMOBJ> is the highest power of<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ> dividing<OMOBJ>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>. - C. Ronaldo (aga_new_ac(AT)hotmail.com), Dec 16 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000976"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="order" cd="A000976"/>
+      <OMI>10</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, n!/(2^s*5^t)) where<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="s"/>
+    </OMA>
+    </OMOBJ> is largest power of<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ> dividing<OMOBJ>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMV name="t"/>
+    </OMA>
+    </OMOBJ> is largest power of<OMOBJ>
+      <OMI>5</OMI>
+    </OMOBJ> dividing n! - _Sean A. Irvine_, Sep 29 2011
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> with(numtheory): Digits:=100: A011371:= proc(n) options remember: if n=0 then RETURN(0) else RETURN(A011371(floor(n/2))+floor(n/2)) fi: end; A000976:= proc(n) RETURN(order(10,n!/(2^A011371(n)*5^floor(n/5)))): end; 0,0,seq(A000976(n),n=3..24); (C. Ronaldo)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Join[{0, 0}, Table[num = n!/(2^IntegerExponent[n!, 2] * 5^IntegerExponent[n!, 5]); MultiplicativeOrder[10, num], {n, 3, 30}]] (* _T. D. Noe_, Jun 21 2012 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Simon Plouffe_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> One more term from _Sean A. Irvine_, Sep 28 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

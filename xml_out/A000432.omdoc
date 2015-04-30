@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000432.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000432">
+          <assertion class="***** TTTT *****">
+      <CMP> M4538 N1926</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,52,288,1424,6648,29700,128800,545600,2269672,9303140,37672216,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 150998016,599988696,2366216164,9270987656,36116062832,139978757920,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 540069059028,2075217121688,7944690769952,30313624200640,115312027433188,437420730644304,1655047867097280,6247339311097296,23530440547115428,88447214709073696,331832490378209152,1242766581420901656,4646714574562484628,17347357264162110368,64668460220964604944,240747014238189337840,895102104022837748484,3323982608759454833032,12329573838525875316560,45684294664598118867184,169098457957523787786644</CMP>
+    </assertion><omtext class="name">
+      <CMP> Series-parallel numbers.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 142.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.: 4(2+S)(1+S)/(1-S)^5, where S = g.f. for<OMOBJ>
+      <OMR xref="A000084"/>
+    </OMOBJ>. - _Sean A. Irvine_, Nov 14 2010
+      </CMP>
+      </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Nov 14 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

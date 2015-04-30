@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000961.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000961">
+          <assertion class="***** TTTT *****">
+      <CMP> M0517 N0185</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,4,5,7,8,9,11,13,16,17,19,23,25,27,29,31,32,37,41,43,47,49,53,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 59,61,64,67,71,73,79,81,83,89,97,101,103,107,109,113,121,125,127,128,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 131,137,139,149,151,157,163,167,169,173,179,181,191,193,197,199,211,223,227</CMP>
+    </assertion><omtext class="name">
+      <CMP> Powers of primes. Alternatively, 1 and the prime powers (p^k, p prime, k &gt;= 1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Of course 1 = p^0 for any prime p, so 1 is definitely the power of a prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The term &quot;prime power&quot; is ambiguous. To a mathematician it means any number p^k, p prime, k &gt;= 0, including 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Any nonzero integer is a product of primes and units, where the units are +1 and -1. This is tied to the Fundamental Theorem of Arithmetic which proves that the factorizations are unique up to order and units. (So, since 1 = p^0 does not have a well defined prime base p, it is sometimes not regarded as a prime power. See A246655 for the sequence without 1.)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These numbers are (apart from 1) the numbers of elements in finite fields. - _Franz Vrabec_, Aug 11 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers whose divisors form a geometrical progression. The divisors of p^k are 1, p, p^2, p^3, ...p^k. - _Amarnath Murthy_, Jan 09 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A025473(n)^A025474(n). - _David Wasserman_, Feb 16 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A117331(A117333(n)). - _Reinhard Zumkeller_, Mar 08 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These are also precisely the orders of those finite affine planes that are known to exist as of today. (The order of a finite affine plane is the number of points in an arbitrarily chosen line of that plane. This number is unique for all lines comprise the same number of points.) - Peter C. Heinig (algorithms(AT)gmx.de), Aug 09 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Except for first term, the index of the second number divisible by n in A002378, if the index equals n. - _Mats Granvik_, Nov 18 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These are precisely the numbers such that lcm(1,...,m-1)&lt;lcm(1,...,m) (=A003418(m) for m&gt;0; here for m=1, the l.h.s. is taken to be 0). We have a(n+1)=a(n)+1 if a(n) is a Mersenne prime or a(n)+1 is a Fermat prime; the converse is true except for n=7 (from Catalan's conjecture) and n=1, since 2^1-1 and 2^0+1 are not considered as Mersenne resp. Fermat prime. - _M. F. Hasler_, Jan 18 2007, Apr 18 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence is A000015 without repetitions, or more formally, A000961=Union[A000015]. - _Zak Seidov_, Feb 06 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Except for a(1)=1, indices for which the cyclotomic polynomial Phi[k] yields a prime at x=1, cf. A020500. - _M. F. Hasler_, Apr 04 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, {A138929(k) ; k&gt;1} = {2*A000961(k) ; k&gt;1} = {4,6,8,10,14,16,18,22,26,32,34,38,46,50,54,58,62,64,74,82,86,94,98,...} are exactly the indices for which Phi[k](-1) is prime. - _M. F. Hasler_, Apr 04 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A143201(a(n)) = 1. - _Reinhard Zumkeller_, Aug 12 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of distinct primes dividing n=omega(n)&lt;2. - _Juri-Stepan Gerasimov_, Oct 30 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers n such that sum{p-1|p is prime and divisor of n}=product{p-1|p is prime and divisor of n}. A055631(n)=A173557(n-1). - _Juri-Stepan Gerasimov_, Dec 09 2009, Mar 10 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers n such that A028236(n) = 1. _Klaus Brockhaus_, Nov 06 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A188666(k) = a(k+1) for k: 2*a(k) &lt;= k &lt; 2*a(k+1), k &gt; 0; notably a(n+1) = A188666(2*a(n)). - _Reinhard Zumkeller_, Apr 25 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A003415(a(n)) = A192015(n); A068346(a(n)) = A192016(n); a(n)=A192134(n)+A192015(n). - _Reinhard Zumkeller_, Jun 26 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A089233(a(n)) = 0. - _Reinhard Zumkeller_, Sep 04 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The positive integers n such that every element of the symmetric group S_n which has order n is an n-cycle. - _W. Edwin Clark_, Aug 05 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 870.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Koecher and A. Krieg, Ebene Geometrie, Springer, 1993</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Lidl and H. Niederreiter, Introduction to Finite Fields and Their Applications, Cambridge 1986, Theorem 2.5, p. 45.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000961/b000961.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., &lt;a href=&quot;http://www.nrbook.com/abramowitz_and_stegun/&quot;&gt;Handbook of Mathematical Functions&lt;/a&gt;, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy].</CMP>
+    </omtext><omtext class="link">
+      <CMP> Laurentiu Panaitopol, &lt;a href=&quot;http://dx.doi.org/10.1216/rmjm/1021249445&quot;&gt;Some of the properties of the sequence of powers of prime numbers&lt;/a&gt;, Rocky Mountain Journal of Mathematics, Volume 31, Number 4, Winter 2001.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/PrimePower.html&quot;&gt;Prime Power&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/ProjectivePlane.html&quot;&gt;Projective Plane&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Panaitopol<OMOBJ>
+      <OMI>2001</OMI>
+    </OMOBJ> gives many properties, inequalities and asymptotics. - _N. J. A. Sloane_, Oct 31 2014
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="m"/>
+      <OMA>
+      <OMS name="a" cd="A000961"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ> for some n &lt;=&gt; lcm(1,...,m-1)&lt;lcm(1,...,m), where<OMOBJ>
+      <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="lcm" cd="A000961"/>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMS name="..." cd="arithmetics"></OMS><OMI>0</OMI></OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ> as to include<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000961"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>. a(n+1)=a(n)+1 &lt;=&gt; a(n+1)=A019434(k) or<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000961"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000668"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMOBJ> for some<OMOBJ>
+      <OMA>
+      <OMS name="k" cd="A000961"/>
+      <OMV name="by"/>
+    </OMA>
+    </OMOBJ> Catalan's conjecture), except for<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>7</OMI>
+    </OMA>
+    </OMOBJ>. - _M. F. Hasler_, Jan 18 2007, Apr 18 2010
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A001221"/>
+      <OMA>
+      <OMS name="a" cd="A000961"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>. - _Juri-Stepan Gerasimov_, Oct 30 2009
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> readlib(ifactors): for n from 1 to 250 do if nops(ifactors(n)[2])=1 then printf(`%d,`,n) fi: od:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000961 := proc(n)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     option remember;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     local k ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     if n = 1 then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         1;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     else</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         for k from procname(n-1)+1 do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             if nops(numtheory[factorset](k)) = 1 then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>                 return k ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         end do:</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> end proc: # _Alois P. Heinz_, Apr 08 2013</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[ Range[ 2, 250 ], Mod[ #, # - EulerPhi[ # ] ] == 0 &amp; ]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[ Range[ 2, 250 ], Length[FactorInteger[ # ] ] == 1 &amp; ]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> max = 0; a = {}; Do[m = FactorInteger[n]; w = Sum[m[[k]][[1]]^m[[k]][[2]], {k, 1, Length[m]}]; If[w &gt; max, AppendTo[a, n]; max = w], {n, 1, 1000}]; a (* Artur Jasinski *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [1] cat [ n : n in [2..250] | IsPrimePower(n) ]; // corrected by Arkadiusz Wesolowski, Jul 20 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A000961(n,l=-1,k=0)=until(n--&lt;1,until(l&lt;lcm(l,k++),); l=lcm(l,k));k print_A000961(lim=999,l=-1)=for(k=1,lim,l==lcm(l,k)&amp;next;l=lcm(l,k);print1(k,&quot;,&quot;)) \\ _M. F. Hasler_, Jan 18 2007</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) isA000961(n) = (omega(n) == 1 | n == 1) \\ _Michael B. Porter_, Sep 23 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) nextA000961(n) = {local(m,r,p);m=2*n;for(e=1,ceil(log(n+0.01)/log(2)),r=(n+0.01)^(1/e);p=prime(primepi(r)+1);m=min(m,p^e));m} \\ _Michael B. Porter_, Nov 02 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) is(n)=isprimepower(n) || n==1 \\ _Charles R Greathouse IV_, Nov 20 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) list(lim)=my(v=primes(primepi(lim)),u=List([1])); forprime(p=2,sqrtint(lim\1),for(e=2,log(lim+.5)\log(p),listput(u,p^e))); vecsort(concat(v,Vec(u))) \\ _Charles R Greathouse IV_, Nov 20 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.Set (singleton, deleteFindMin, insert)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000961 n = a000961_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000961_list = 1 : g (singleton 2) (tail a000040_list) where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    g s (p:ps) = m : g (insert (m * a020639 m) $ insert p s') ps</CMP>
+    </omtext><omtext class="program">
+      <CMP>      where (m, s') = deleteFindMin s</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, May 01 2012, Apr 25 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage)</CMP>
+    </omtext><omtext class="program">
+      <CMP> def A000961_list(n) :</CMP>
+    </omtext><omtext class="program">
+      <CMP>     R = [1]</CMP>
+    </omtext><omtext class="program">
+      <CMP>     for i in (2..n) :</CMP>
+    </omtext><omtext class="program">
+      <CMP>         if i.is_prime_power() : R.append(i)</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return R</CMP>
+    </omtext><omtext class="program">
+      <CMP> A000961_list(227) # _Peter Luschny_, Feb 07 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Python)</CMP>
+    </omtext><omtext class="program">
+      <CMP> from sympy import primerange</CMP>
+    </omtext><omtext class="program">
+      <CMP> A000961_list = [1]</CMP>
+    </omtext><omtext class="program">
+      <CMP> for p in primerange(1,m):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....pe = p</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....while pe &lt; m:</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........A000961_list.append(pe)</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........pe *= p</CMP>
+    </omtext><omtext class="program">
+      <CMP> A000961_list = sorted(A000961_list) # _Chai Wah Wu_, Sep 08 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A010055, A065515, A095874, A025473, A246655, A246547.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. indices of record values of A003418; A000668 and A019434 give a member of twin pairs a(n+1)=a(n)+1.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A138929(n) = 2*a(n).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000040, A001221, A001477. - _Juri-Stepan Gerasimov_, Dec 09 2009</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A028236 (if n = Product (p_j^k_j), a(n) = numerator of Sum 1/p_j^k_j). - _Klaus Brockhaus_, Nov 06 2010</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A000015(n) = Min{term : &gt;= n}; A031218(n) = Max{term : &lt;= n}.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,core,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected comment and formula referring to Catalan's conjecture _M. F. Hasler_, Apr 18 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Description modified by _Ralf Stephan_, Aug 29 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

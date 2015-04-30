@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000104.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000104">
+          <assertion class="***** TTTT *****">
+      <CMP> M1424 N0560</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,5,12,35,107,363,1248,4460,16094,58937,217117,805475,3001127,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 11230003,42161529,158781106,599563893,2269506062,8609442688,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 32725637373,124621833354,475368834568,1816103345752,6948228104703</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of n-celled polyominoes without holes.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. V. Konstantinova and M. V. Vidyuk, Discriminating tests of information and topological indices; animals and trees; J. Chem. Inf. Comput. Sci., 43 (2003), 1860-1871.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. S. Madachy, Pentominoes - Some Solved and Unsolved Problems, J. Rec. Math., 2 (1969), 181-188.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> George E. Martin, Polyominoes - A Guide to Puzzles and Problems in Tiling, The Mathematical Association of America, 1996</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. R. Parkin, L. J. Lander and D. R. Parkin, &quot;Polyomino enumeration results,&quot; SIAM Fall Meeting, Santa Barbara, California, 1967.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. C. Read, Contributions to the cell growth problem, Canad. J. Math., 14 (1962), 1-20.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tomás Oliveira e Silva, &lt;a href=&quot;http://sweet.ua.pt/tos/animals.html&quot;&gt;Enumeration of polyominoes&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000105, A006746, A056877, A006748, A056878, A006747, A006749, A006884, A006885, A006877, A006878, A033492, A054361.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,hard,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended to n=26 by Tomás Oliveira e Silva</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

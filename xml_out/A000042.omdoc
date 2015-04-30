@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000042.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000042">
+          <assertion class="***** TTTT *****">
+      <CMP> M4804</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 11111111111,111111111111,1111111111111,11111111111111,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 111111111111111,1111111111111111,11111111111111111,111111111111111111</CMP>
+    </assertion><omtext class="name">
+      <CMP> Unary representation of natural numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Or, numbers written in base 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If p is a prime &gt;5 then d_{a(p)} == 1 mod (p) where d_{a(p)} is a divisor of a(p). This also gives an alternate elementary proof of the infinitude of prime numbers by the fact that for every prime p there exists at least one prime of the form kp+1. - _Amarnath Murthy_, Oct 05 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 11=1*9+2; 111=12*9+3; 1111=123*9+4; 11111=1234*9+5; 111111=12345*9+6; 1111111=123456*9+7; 11111111=1234567*9+8; 111111111=12345678*9+9. - _Vincenzo Librandi_, Jul 18 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also numbers with no zeros in binary representation. - _Reinhard Zumkeller_, Mar 08 2015</CMP>
+    </omtext><omtext class="reference">
+      <CMP> K. G. Kroeber, Mathematik der Palindrome; p. 348; 2003; ISBN 3 499 615762; Rowohlt Verlag; Germany</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Amarnath Murthy and Charles Ashbacher, Generalized Partitions and Some New Ideas on Number Theory and Smarandache Sequences, Hexis, Phoenix; USA 2005. See Section 2.12.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Olivastro, Ancient Puzzles. Bantam Books, NY, 1993, p. 276.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Wasserman, &lt;a href=&quot;/A000042/b000042.txt&quot;&gt;Table of n, a(n) for n=1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Makoto Kamada, &lt;a href=&quot;http://mada.la.coocan.jp/nrr/repunit/&quot;&gt;Factorizations of 11...11 (Repunit)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Amarnath Murthy, &lt;a href=&quot;http://fs.gallup.unm.edu/SNJ11.pdf&quot;&gt;On the divisors of Smarandache Unary Sequence&lt;/a&gt;. Smarandache Notions Journal, Vol. 11, No. 1-2-3, Spring 2000, page 184</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_02&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (11,-10).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Di#divseq&quot;&gt;Index to divisibility sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000042"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>10</OMI>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMI>9</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>10</OMI><OMV name="x"/></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Binomial transform of<OMOBJ>
+      <OMR xref="A003952"/>
+    </OMOBJ>. - _Paul Barry_, Jan 29 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000042"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="a" cd="A000042"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000042"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMA>
+      <OMS name="Offset" cd="A000042"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>. a(n)=sum{k=0..n,<OMOBJ>
+      <OMA>
+      <OMS name="binomial" cd="A000042"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, k+1)9^k}.<OMOBJ>
+      <OMA>
+      <OMS name="Offset" cd="A000042"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _Paul Barry_, Aug 24 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000042"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="a"/><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="a"/><OMV name="n"/></OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000042"/>
+      <OMI>6</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A000042"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="a" cd="A000042"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>111111</OMI><OMI>222</OMI>
+    </OMA>
+      <OMI>110889</OMI>
+    </OMA>
+    </OMOBJ>. - _Amarnath Murthy_, Jul 21 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = binary representation of<OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="th"/>
+    </OMA>
+    </OMOBJ> Mersenne number<OMOBJ>
+      <OMR xref="A000225"/>
+    </OMOBJ>. - _Ross La Haye_, Sep 13 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         The Hankel transform of this sequence is<OMOBJ>
+      <OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME>
+    </OMOBJ>. - _Philippe Deléham_, Nov 21 2007
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> Table[(10^n - 1)/9, {n, 1, 18}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> FromDigits/@Table[PadLeft[{},n,1],{n,20}] (* _Harvey P. Dale_, Aug 21 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;0,0,(10^n-1)/9)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [gaussian_binomial(n,1,10) for n in xrange(1,19)] # [_Zerinvary Lajos_, May 28 2009]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell) A000042 n = (10^n-1) `div` 9 -- _James Spahlinger_, Oct 08 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Common Lisp) (defun a000042 (n) (truncate (expt 10 n) 9)) ; _James Spahlinger_, Oct 12 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002275, A007088, A007089, A007090, A007091, A007092, A007093, A007094, A007095.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,easy,nonn,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Paul Barry_, Jan 29 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000315.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000315">
+          <assertion class="***** TTTT *****">
+      <CMP> M3690 N1508</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,4,56,9408,16942080,535281401856,377597570964258816,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7580721483160132811489280,5363937773277371298119673540771840</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of reduced Latin squares of order n; also number of labeled loops (quasigroups with an identity element) with a fixed identity element.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A reduced Latin square of order n is a n X n matrix where each row and column is a permutation of 1..n and the first row and column are 1..n in increasing order. - _Michael Somos_, Mar 12 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Stones-Wanless (2010) paper shows among other things that a(n) is 0 mod n if n is composite and 1 mod n if n is prime.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. E. Bammel and J. Rothstein, The number of 9x9 Latin squares, Discrete Math., 11 (1975), 93-95.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Jeranfer Bermúdez, Richard García, Reynaldo López and Lourdes Morales, Some Properties of Latin Squares, http://ccom.uprrp.edu/~labemmy/Wordpress/wp-content/uploads/2010/11/4_Presentation_Some-Properties-of-Latin-Squares_March2009.pdf</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 183.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Denes, A. D. Keedwell, editors, Latin Squares: new developments in the theory and applications, Elsevier, 1991, pp. 1, 388.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. A. Fisher and F. Yates, Statistical Tables for Biological, Agricultural and Medical Research. 6th ed., Hafner, NY, 1963, p. 22.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Gilbert, E. N. Latin squares which contain no repeated digrams. SIAM Rev. 7 1965 189--198. MR0179095 (31 #3346). Mentions this sequence. - _N. J. A. Sloane_, Mar 15 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> B. D. McKay and I. M. Wanless, Latin squares of order eleven. Preprint 2004. http://cs.anu.edu.au/~bdm/papers/ls11.pdf</CMP>
+    </omtext><omtext class="reference">
+      <CMP> B. D. McKay and I. M. Wanless, On the number of Latin squares. Preprint 2004. http://cs.anu.edu.au/~bdm/papers/ls11.pdf</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. R. Rao, S. K. Mitra and A. Matthai, editors, Formulae and Tables for Statistical Work. Statistical Publishing Society, Calcutta, India, 1966, p. 193.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 210.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. J. Ryser, Combinatorial Mathematics. Mathematical Association of America, Carus Mathematical Monograph 14, 1963, pp. 37, 53.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. S. Stones, The many formulae for the number of Latin rectangles, Electron. J. Combin 17 (2010), A1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. S. Stones and I. M. Wanless, Divisors of the number of Latin rectangles, J. Combin. Theory Ser. A 117 (2010), 204-215.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. B. Wells, Elements of Combinatorial Computing. Pergamon, Oxford, 1971, p. 240.</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. Cherowitzo, &lt;a href=&quot;http://www-math.cudenver.edu/~wcherowi/courses/m6406/csln1.html#1&quot;&gt;Comb. Structures Lecture Notes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. D. McKay, A. Meynert and W. Myrvold, &lt;a href=&quot;http://dx.doi.org/10.1002/jcd.20105&quot;&gt;Small latin squares, quasigroups and loops&lt;/a&gt;, J. Combin. Designs, vol. 15, no. 2 (2007) pp 98-119.</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. D. McKay and E. Rogoyski, &lt;a href=&quot;http://www.combinatorics.org/Volume_2/volume2.html#N3&quot;&gt;Latin squares of order ten&lt;/a&gt;, Electron. J. Combinatorics, 2 (1995) #N3.</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. D. McKay and I. M. Wanless, &lt;a href=&quot;http://dx.doi.org/10.1007/s00026-005-0261-7&quot;&gt;On the number of Latin squares&lt;/a&gt;, Ann. Combinat. 9 (2005) 335-344.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/sg.txt&quot;&gt;My favorite integer sequences&lt;/a&gt;, in Sequences and their Applications (Proceedings of SETA '98).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/LatinSquare.html&quot;&gt;Latin Square.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/La#Latin&quot;&gt;Index entries for sequences related to Latin squares and rectangles&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Qua#quasigroups&quot;&gt;Index entries for sequences related to quasigroups&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000315"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A002860"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000479"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A000479, A002860, A003090, A040082, A057771, A057997.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,nice,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Added June 1995: the 10th term was probably first computed by Eric Rogoyski</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(11) (from the McKay-Wanless article) from Richard Bean (rwb(AT)eskimo.com), Feb 17 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

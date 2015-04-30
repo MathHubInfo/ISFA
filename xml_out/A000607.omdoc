@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000607.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000607">
+          <assertion class="***** TTTT *****">
+      <CMP> M0265 N0093</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,1,1,2,2,3,3,4,5,6,7,9,10,12,14,17,19,23,26,30,35,40,46,52,60,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 67,77,87,98,111,124,140,157,175,197,219,244,272,302,336,372,413,456,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 504,557,614,677,744,819,899,987,1083,1186,1298,1420,1552,1695,1850,2018,2198,2394,2605,2833,3079,3344</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n into prime parts.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) gives the number of values of k for which A001414(k) = n. - _Howard A. Landman_, Sep 25 2001</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Ayoub, An Introduction to the Analytic Theory of Numbers, Amer. Math. Soc., 1963; see p. 203.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Mohammad K. Azarian, A Generalization of the Climbing Stairs Problem, Mathematics and Computer Education, Vol. 31, No. 1, pp. 24-28, Winter 1997.  MathEduc Database (Zentralblatt MATH, 1997c.01891).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> B. C. Berndt and B. M. Wilson, Chapter 5 of Ramanujan's second notebook, pp. 49-78 of Analytic Number Theory (Philadelphia, 1980), Lect. Notes Math. 899, 1981, see Entry 29.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. M. Burton, Elementary Number Theory, 5th ed., McGraw-Hill, 2002.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. M. Chawla and S. A. Shad, On a trio-set of partition functions and their tables, J. Natural Sciences and Mathematics, 9 (1969), 87-96.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, Vaclav Kotesovec and H. Havermann, &lt;a href=&quot;/A000607/b000607.txt&quot;&gt;Table of n, a(n) for n = 0..50000&lt;/a&gt; (first 1000 terms from T. D. Noe, terms 1001-20000 from Vaclav Kotesovec, terms 20001-50000 extracted from files by H. Havermann)</CMP>
+    </omtext><omtext class="link">
+      <CMP> George E. Andrews, Arnold Knopfmacher, John Knopfmacher, &lt;a href=&quot;http://dx.doi.org/10.1006/jnth.1999.2453&quot;&gt;Engel expansions and the Rogers-Ramanujan identities&lt;/a&gt; J. Number Theory 80 (2000), 273-290. See Eq. 2.1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Mohammad K. Azarian, &lt;a href=&quot;http://www.math-cs.ucmo.edu/~mjms/2004.1/azar6.pdf&quot;&gt;A Generalization of the Climbing Stairs Problem II&lt;/a&gt;, Missouri Journal of Mathematical Sciences, Vol. 16, No. 1, Winter 2004, pp. 12-17. Zentralblatt MATH, Zbl 1071.05501.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Edward A. Bender, &lt;a href=&quot;http://www.jstor.org/stable/2028691&quot;&gt;Asymptotic methods in enumeration&lt;/a&gt;, SIAM Review 16 (1974), no. 4, p. 509.</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. M. Chawla and S. A. Shad, &lt;a href=&quot;http://www.jstor.org/stable/2004512&quot;&gt;On a trio-set of partition functions and their tables&lt;/a&gt;, Mathematics of Computation, Vol. 24, No. 110 (Apr., 1970), pp. 490-491.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Flajolet and R. Sedgewick, &lt;a href=&quot;http://algo.inria.fr/flajolet/Publications/books.html&quot;&gt;Analytic Combinatorics&lt;/a&gt;, 2009; see Section VIII.6, pp. 576ff.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Gupta, &lt;a href=&quot;http://www.dli.gov.in/rawdataupload/upload/insa/INSA_2/20005ad0_185.pdf&quot;&gt;Partitions into distinct primes&lt;/a&gt;, Proc. Nat. Acad. Sci. India, 21 (1955), 185-187.</CMP>
+    </omtext><omtext class="link">
+      <CMP> O. P. Gupta and S. Luthra, &lt;a href=&quot;http://www.new.dli.ernet.in/rawdataupload/upload/insa/INSA_2/20005ad0_181.pdf&quot;&gt;Partitions into primes&lt;/a&gt;, Proc. Nat. Inst. Sci. India. Part A. 21 (1955), 181-184.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. K. Guy, &lt;a href=&quot;/A000081/a000081.pdf&quot;&gt;Letter to N. J. A. Sloane, 1988-04-12&lt;/a&gt; (annotated scanned copy)</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. K. Guy, &lt;a href=&quot;http://www.jstor.org/stable/2322249&quot;&gt;The strong law of small numbers&lt;/a&gt;. Amer. Math. Monthly 95 (1988), no. 8, 697-712.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Havermann: &lt;a href=&quot;http://chesswanks.com/seq/sopfr/&quot;&gt;Tables of sum-of-prime-factors sequences (including sequence lengths, i.e. number of prime-parts partitions, for the first 50000).&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vaclav Kotesovec, &lt;a href=&quot;/A000607/a000607_2.jpg&quot;&gt;Graph - asymptotic ratio for log(a(n)), without minor asymptotic term&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vaclav Kotesovec, &lt;a href=&quot;http://mathoverflow.net/questions/180858/wrong-asymptotics-of-oeis-a000607&quot;&gt;Wrong asymptotics of OEIS A000607?&lt;/a&gt; (MathOverflow)</CMP>
+    </omtext><omtext class="link">
+      <CMP> John F. Loase (splurge(AT)aol.com), David Lansing, Cassie Hryczaniuk and Jamie Cahoon, &lt;a href=&quot;http://www.maa.org/programs/faculty-and-departments/classroom-capsules-and-notes/a-variant-of-the-partition-function&quot;&gt;A Variant of the Partition Function&lt;/a&gt;, College Mathematics Journal, Vol. 36, No. 4 (Sep 2005), pp. 320-321.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ljuben Mutafchiev, &lt;a href=&quot;http://arxiv.org/abs/1407.4688&quot;&gt;A Note on Goldbach Partitions of Large Even Integers&lt;/a&gt;, arXiv:1407.4688.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. C. Vaughan, &lt;a href=&quot;http://dx.doi.org/10.1007/s11139-007-9037-5&quot;&gt;On the number of partitions into primes&lt;/a&gt;, Ramanujan J. vol. 15, no. 1 (2008) 109-121.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/PrimePartition.html&quot;&gt;Prime Partition.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Roger Woodford, &lt;a href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL10/Woodford/woodford82.html&quot;&gt;Bounds for the Eventual Positivity of Difference Functions of Partitions&lt;/a&gt;, Journal of Integer Sequences, Vol. 10 (2007), Article 07.1.3.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Go#Goldbach&quot;&gt;Index entries for sequences related to Goldbach conjecture&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Asymptotically<OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000607"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="exp" cd="A000607"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> Pi sqrt(n/log n) / sqrt(3)) (Ayoub).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000607"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="n"/>
+    </OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMR xref="A008472"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A000607"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS></OMA>
+    </OMA>
+    </OMOBJ>. - _Vladeta Jovovic_, Aug 27 2002
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMS name="infty"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="prime" cd="A000607"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         See the partition arrays<OMOBJ>
+      <OMR xref="A116864"/>
+    </OMOBJ> and<OMOBJ>
+      <OMR xref="A116865"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         From _Vaclav Kotesovec_, Sep 15 2014: (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         It is surprising that the ratio of the formula for<OMOBJ>
+      <OMA>
+      <OMS name="log" cd="A000607"/>
+      <OMA>
+      <OMS name="a" cd="A000607"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ> to the approximation 2 * Pi * sqrt(n/(3*log(n))) exceeds<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>. For<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>20000</OMI>
+    </OMA>
+    </OMOBJ> the ratio is<OMOBJ>
+      <OMF dec="1.00953"/>
+    </OMOBJ>, and for n=50000 (using the value from Havermann's tables) the ratio is<OMOBJ>
+      <OMF dec="1.02458"/>
+    </OMOBJ>, so the ratio is increasing. See graph above.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMV name="A"/>
+    </OMOBJ> more refined asymptotic formula is proved by Vaughan in Ramanujan J.<OMOBJ>
+      <OMA><OMS name="times"/><OMI>15</OMI><OMI>2008</OMI></OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ>. 109-121: log(a(n)) = 2*Pi*sqrt(n/(3*log(n))) * (1 + log(log(n))/log(n) + O(1/log(n)))
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         (End)
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> n = 10 has a(10) = 5 partitions into prime parts: 10 = 2 + 2 + 2 + 2 + 2 = 2 + 2 + 3 + 3 = 2 + 3 + 5 = 3 + 7 = 5 + 5.</CMP>
+    </assertion><assertion class="example">
+      <CMP> n = 15 has a(15) = 12 partitions into prime parts: 15 = 2 + 2 + 2 + 2 + 2 + 2 + 3 = 2 + 2 + 2 + 3 + 3 + 3 = 2 + 2 + 2 + 2 + 2 + 5 = 2 + 2 + 2 + 2 + 7 = 2 + 2 + 3 + 3 + 5 = 2 + 3 + 5 + 5 = 2 + 3 + 3 + 7 = 2 + 2 + 11 = 2 + 13 = 3 + 3 + 3 + 3 + 3 = 3 + 5 + 7 = 5 + 5 + 5.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(gfun):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> t1:=mul(1/(1-q^ithprime(n)),n=1..51):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> t2:=series(t1,q,50):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> t3:=seriestolist(t2);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> CoefficientList[ Series[1/Product[1 - x^Prime[i], {i, 1, 50}], {x, 0, 50}], x]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[n_] := Length@ IntegerPartitions[n, All, Prime@ Range@ PrimePi@ n]; Array[f, 57] (* _Robert G. Wilson v_, Jul 23 2010 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Length[Select[IntegerPartitions[n],And@@PrimeQ/@#&amp;]],{n,0,60}] (* _Harvey P. Dale_, Apr 22 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) N=66;x='x+O('x^N); Vec(1/prod(k=1,N,1-x^prime(k))) \\ _Joerg Arndt_, Sep 04 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000607 = p a000040_list where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    p _      0 = 1</CMP>
+    </omtext><omtext class="program">
+      <CMP>    p ks'@(k:ks) m = if m &lt; k then 0 else p ks' (m - k) + p ks m</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Aug 05 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> G.f. = 1 / g.f. for A046675. See A046113 for the ordered (compositions) version.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A046676, A048165, A004526, A051034, A000040, A001414, A000586, A000041, A070214, A192541, A112021, A056768, A128515, A000586.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Row sums of array A116865.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Maple program fixed by _Vaclav Kotesovec_, Sep 14 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

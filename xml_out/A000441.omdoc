@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000441.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000441">
+          <assertion class="***** TTTT *****">
+      <CMP> M4613 N1968</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,9,34,95,210,406,740,1161,1920,2695,4116,5369,7868,9690,13640,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16116,22419,25365,34160,38640,50622,55154,73320,77225,100100,107730,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 135576,141085,182340,184760,233616,243408,297738,301420,385110,377511,467210,478842</CMP>
+    </assertion><omtext class="name">
+      <CMP> Related to the divisor function.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Touchard, On prime numbers and perfect numbers, Scripta Math., 129 (1953), 35-39.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         a(n) = sum(k=1..n-1, k * sigma(k) * sigma(n-k) ). Convolution of<OMOBJ>
+      <OMR xref="A000203"/>
+    </OMOBJ> with<OMOBJ>
+      <OMR xref="A064987"/>
+    </OMOBJ>. - _Sean A. Irvine_, Nov 14 2010
+      </CMP>
+      </omdoc:p><omtext class="program">
+      <CMP> (PARI) a(n) = sum(k=1, n-1, k*sigma(k)*sigma(n-k)); \\ _Michel Marcus_, Feb 02 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000441, A000499.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Nov 14 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(1)=0 prepended by _Michel Marcus_, Feb 02 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

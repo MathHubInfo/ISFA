@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000369.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000369">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,1,21,9,1,231,111,18,1,3465,1785,345,30,1,65835,35595,7650,825,45,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,1514205,848925,196245,24150,1680,63,1,40883535,23586255,5755050,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 775845,62790,3066,84,1,1267389585,748471185,190482705,27478710</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle of numbers related to triangle A049213; generalization of Stirling numbers of second kind A008277, Bessel triangle A001497.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n,m) := S2p(-3; n,m), a member of a sequence of triangles including S2p(-1; n,m) := A001497(n-1,m-1) (Bessel triangle) and ((-1)^(n-m))*S2p(1; n,m) := A008277(n,m) (Stirling 2nd kind). a(n,1)= A008545(n-1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n,m), n&gt;=m&gt;=1, enumerates unordered n-vertex m-forests composed of m increasing plane (aka ordered) trees, with one vertex of out-degree r=0 (leafs or a root) and each vertex with out-degree r&gt;=1 comes in r+2 types (like for an (r+2)-ary vertex). Proof from the e.g.f. of the first column Y(z):=1-(1-4*x)^(1/4) and the F. Bergeron et al. reference given in A001498, eq. (8), Y'(z)= phi(Y(z)), Y(0)=0, with out-degree o.g.f. phi(w)=1/(1-w)^3. - _Wolfdieter Lang_, Oct 12 2007.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Toufik Mansour, Matthias Schork and Mark Shattuck, The Generalized Stirling and Bell Numbers Revisited, Journal of Integer Sequences, Vol. 15 (2012), #12.8.3.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000369/b000369.txt&quot;&gt;Rows n = 1..50, flattened&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Blasiak, K. A. Penson and A. I. Solomon, &lt;a href=&quot;http://www.arXiv.org/abs/quant-ph/0402027&quot;&gt;The general boson normal ordering problem.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Lang, &lt;a href=&quot;http://www-itp.physik.uni-karlsruhe.de/~wl/EISpub/A000369.text&quot;&gt;First ten rows. &lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Lang, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;On generalizations of Stirling number triangles&lt;/a&gt;, J. Integer Seqs., Vol. 3 (2000), #00.2.4.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Be#Bessel&quot;&gt;Index entries for sequences related to Bessel functions or polynomials&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000369"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>, m) = n!*A049213(n, m)/(m!*4^(n-m));<OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000369"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, m) = (4*n-m)*a(n, m) + a(n, m-1),<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMV name="m"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000369"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>, m) := 0,<OMOBJ>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMV name="m"/>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000369"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>, 0) := 0,<OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000369"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>, 1)=1.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f. of<OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="m"/><OMV name="th"/>
+    </OMA>
+    </OMOBJ> column: ((1-(1-4*x)^(1/4))^m)/m!.
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> {1}; {3,1}; {21,9,1}; {231,111,18,1}; {3465,1785,345,30,1}; ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> Tree combinatorics for a(3,2)=9: there are three m=2 forests each with one tree a root (with out-degree r=0) and the other tree a root and a leaf coming in three versions (like for a 3-ary vertex). Each such forest can be labeled increasingly in three ways (like (1,(23)), (2,(13)) and (3,(12)) yielding 9 such forests. - _Wolfdieter Lang_, Oct 12 2007.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a[n_, m_] /; n &gt;= m &gt;= 1 := a[n, m] = (4(n-1) - m)*a[n-1, m] + a[n-1, m-1]; a[n_, m_] /; n &lt; m = 0; a[_, 0] = 0; a[1, 1] = 1; Flatten[Table[a[n, m], {n, 1, 9}, {m, 1, n}]] (* _Jean-François Alcover_, Jul 22 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Row sums give A016036. Cf. A004747.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Columns include A008545.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Alternating row sums A132163.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

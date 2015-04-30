@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000486.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000486">
+          <assertion class="***** TTTT *****">
+      <CMP> M5011 N2158</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 16,150,926,4788,22548,100530,433162,1825296,7577120,31130190,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 126969558,515183724,2082553132,8395437930,33776903714,135691891272,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 544517772984,2183315948550,8748985781230,35043081823140,140313684667076</CMP>
+    </assertion><omtext class="name">
+      <CMP> One half of the number of permutations of [n] such that the differences have 4 runs with the same signs.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 260, #13</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. N. David, M. G. Kendall and D. E. Barton, Symmetric Function and Allied Tables, Cambridge, 1966, p. 260.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000486/b000486.txt&quot;&gt;Table of n, a(n) for n = 5..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (13,-67,175,-244,172,-48).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="-&gt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMV name="a"/><OMV name="n"/></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> as<OMOBJ>
+      <OMA>
+      <OMS name="-&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMS name="infinity"/>
+    </OMA>
+    </OMOBJ> . - _Philippe Deléham_, Feb 22 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>24</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>29</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>8</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Colin Barker_, Dec 21 2012
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(5)=16 because the permutations of [5] with four sign runs are 13254, 14253, 14352, 15342, 15243, 21435, 21534, 23154, 24153, 25143, 31425, 31524, 32415, 32514, 41325, 42315 and their reversals.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> CoefficientList[Series[2 (24 x^2 - 29 x + 8)/((x - 1)^2 (2 x - 1)^2 (3 x - 1) (4 x - 1)), {x, 0, 40}], x] (* _Vincenzo Librandi_, Oct 13 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> a(n)=T(n, 4), where T(n, k) is the array defined in A008970.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Equals 1/2 * A060158(n).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 5,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Emeric Deutsch_, Feb 18 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

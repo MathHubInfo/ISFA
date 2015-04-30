@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000594.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000594">
+          <assertion class="***** TTTT *****">
+      <CMP> M5153 N2237</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,24,252,1472,4830,6048,16744,84480,113643,115920,534612,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 370944,577738,401856,1217160,987136,6905934,2727432,10661420,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7109760,4219488,12830688,18643272,21288960,25499225,13865712,73279080,24647168</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Ramanujan's tau function (or Ramanujan numbers, or tau numbers).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Coefficients of the cusp form of weight 12 for the full modular group.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is conjectured that tau(n) is never zero (this has been verified for n &lt; 816212624008487344127999, see the Derickx, van Hoeij, Zeng reference).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> M. J. Hopkins mentions that the only known primes p for which tau(p) == 1 mod p are 11, 23 and 691, that it is an open problem to decide if there are infinitely many such p and that no others are known below 35000. Simon Plouffe has now searched up to tau(314747) and found no other examples. - _N. J. A. Sloane_, Mar 25 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number 1 of the 74 eta-quotients listed in Table I of Martin 1996.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Everest, A. van der Poorten, I. Shparlinski and T. Ward, Recurrence Sequences, Amer. Math. Soc., 2003; see esp. p. 255.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Farkas and Kra, Theta constants, Riemann surfaces and the modular group, AMS 2001; see p. 298.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. Fine, Basic Hypergeometric Series and Applications, Amer. Math. Soc., 1988; p. 77, Eq. (32.2).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. J. Hopkins, Algebraic topology and modular forms, Proc. Internat. Congress Math., Beijing 2002, Vol. I, pp. 291-317.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Bruce Jordan and Blair Kelly (blair.kelly(AT)att.net), The vanishing of the Ramanujan tau function, preprint, 2001.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Kaneko and D. Zagier, Supersingular j-invariants, hypergeometric series and Atkin's orthogonal polynomials, pp. 97-126 of D. A. Buell and J. T. Teitelbaum, eds., Computational Perspectives on Number Theory, Amer. Math. Soc., 1998.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Yu. I. Manin, Mathematics and Physics, Birkhaeuser, Bosten, 1981.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Y. Martin, Multiplicative eta-quotients, Trans. Amer. Math. Soc. 348 (1996), no. 12, 4825-4856, see page 4852 Table I.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. McKean and V. Moll. Elliptic Curves, Camb. Univ. Press, p. 139.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Ram Murty, The Ramanujan tau-function, pp. 269-288 of G. E. Andrews et al., editors, Ramanujan Revisited. Academic Press, NY, 1988.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Ramanujan, On Certain Arithmetical Functions. Collected Papers of Srinivasa Ramanujan, p. 153, Ed. G. H. Hardy et al., AMS Chelsea 2000.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Ramanujan, On Certain Arithmetical Functions. Ramanujan's Papers, p. 196, Ed. B. J. Venkatachala et al., Prism Books, Bangalore 2000.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J.-P. Serre, A course in Arithmetic, Springer-Verlag, 1973, see p. 98.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J.-P. Serre, Sur la lacunarité des puissances de eta, Glasgow Math. Journal, 27 (1985), 203-221.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. H. Silverman, Advanced Topics in the Arithmetic of Elliptic Curves, Springer, see p. 482.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. P. F. Swinnerton-Dyer, On l-adic representations and congruences for coefficients of modular forms, pp. 1-55 of Modular Functions of One Variable III (Antwerp 1972), Lect. Notes Math., 350, 1973.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. P. F. Swinnerton-Dyer, Congruence properties of tau(n), pp. 289-311 of G. E. Andrews et al., editors, Ramanujan Revisited. Academic Press, NY, 1988.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> K. S. Williams, Historical remark on Ramanujan's tau function, Amer. Math. Mnthly, 122 (2015), 30-35.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Zagier, Introduction to Modular Forms, Chapter 4 in M. Waldschmidt et al., editors, From Number Theory to Physics, Springer-Verlag, 1992.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Zagier, Don. &quot;Elliptic modular forms and their applications.&quot; The 1-2-3 of modular forms. Springer Berlin Heidelberg, 2008. 1-103.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;/A000594/b000594.txt&quot;&gt;Table of n, a(n) for n = 1..16090&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. C. Berndt and K. Ono, &lt;a href=&quot;http://www.mat.univie.ac.at/~slc/wpapers/s42berndt.pdf&quot;&gt;Ramanujan's unpublished manuscript on the partition and tau functions with proofs and commentary&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. C. Berndt and K. Ono, &lt;a href=&quot;http://emis.dsd.sztaki.hu/journals/SLC/wpapers/s42berndt.html&quot;&gt;Ramanujan's unpublished manuscript...&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Boylan, &lt;a href=&quot;http://dx.doi.org/10.1016/S0022-314X(02)00037-9&quot;&gt;Exceptional congruences for the coefficients of certain eta-product newforms&lt;/a&gt;, J. Number Theory 98 (2003), no. 2, 377-389. MR1955423 (2003k:11071)</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Brunault, &lt;a href=&quot;http://www.institut.math.jussieu.fr/~brunault/FonctionTau.pdf&quot;&gt;La fonction Tau de Ramanujan&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. X. Charles, &lt;a href=&quot;http://www.cs.wisc.edu/~cdx/CompTau.pdf&quot;&gt;Computing The Ramanujan Tau Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. Cloitre, &lt;a href=&quot;http://bcmathematics.monsite-orange.fr/FractalOrderOfPrimes.pdf &quot;&gt;On the fractal behavior of primes&lt;/a&gt;, 2011.</CMP>
+    </omtext><omtext class="link">
+      <CMP> John Cremona, &lt;a href=&quot;http://www.maths.nott.ac.uk/personal/jec&quot;&gt;Home page&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Maarten Derickx, Mark van Hoeij, Jinxiang Zeng, &lt;a href=&quot;http://arxiv.org/abs/1312.6819&quot;&gt;Computing Galois representations and equations for modular curves X_H(l)&lt;/a&gt;, arXiv:1312.6819 [math.NT], (18-March-2014)</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. Edixhoven et al., &lt;a href=&quot;http://arXiv.org/abs/math.NT/0605244&quot;&gt;Computing the coefficients of a modular form&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. A. Ewell, &lt;a href=&quot;http://www.ams.org/journal-getitem?pii=S0002-9939-99-05289-2#Abstract&quot;&gt;Ramanujan's Tau Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. A. Ewell, &lt;a href=&quot;http://math.la.asu.edu/~rmmc/rmj/Vol28-2/EWE/EWE.html&quot;&gt;Ramanujan's Tau Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. R. Finch, &lt;a href=&quot;http://www.people.fas.harvard.edu/~sfinch/&quot;&gt;Modular forms on SL_2(Z)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Z. Garaev, V. C. Garcia and S. V. Konyagin, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0607169&quot;&gt;Waring problem with the Ramanujan tau function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. L. Hafner and J. Stopple, The Ramanujan Journal 4(2) 2000, &lt;a href=&quot;http://www.wkap.nl/oasis.htm/266553&quot;&gt;A Heat Kernel Associated to Ramanujan's Tau Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Yang-Hui He and John McKay, &lt;a href=&quot;http://arxiv.org/abs/1408.2083&quot;&gt;Moonshine and the Meaning of Life&lt;/a&gt;, arXiv:1408.2083 [math.NT], 2014.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jerry B. Keiper, &lt;a href=&quot;http://mathsource.wri.com/MathSource22/Enhancements/NumberTheory/0200-978/Documentation.txt&quot;&gt;Ramanujan's Tau-Dirichlet Series&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. H. Lehmer, &lt;a href=&quot;http://dx.doi.org/10.1215/S0012-7094-47-01436-1&quot;&gt;The Vanishing of Ramanujan's Function tau(n)&lt;/a&gt;, Duke Mathematical Journal, 1947, pp. 429-433.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. H. Lehmer, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-70-99853-4&quot;&gt;Tables of Ramanujan's function tau(n)&lt;/a&gt;, Math. Comp., 24 (1970), 495-496.</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Luca and I. E. Shparlinski, &lt;a href=&quot;http://www.arXiv.org/abs/math.NT/0607591&quot;&gt;Arithmetic properties of the Ramanujan function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. Matthews, &lt;a href=&quot;http://www.numbertheory.org/php/tau.html&quot;&gt;Computing Ramanujan's tau function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. C. Milne, &lt;a href=&quot;http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=26345&quot;&gt;New infinite families of exact sums of squares formulas, Jacobi elliptic functions and Ramanujan's tau function&lt;/a&gt;, Proc. Nat. Acad. Sci. USA, 93 (1996) 15004-15008.</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. C. Milne, &lt;a href=&quot;http://dx.doi.org/10.1023/A:1014865816981&quot;&gt;Infinite families of exact sums of squares formulas, Jacobi elliptic functions, continued fractions and Schur functions&lt;/a&gt;, Ramanujan J., 6 (2002), 7-149.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Louis J. Mordell, &lt;a href=&quot;http://www.archive.org/stream/proceedingsofcam1920191721camb#page/n133&quot;&gt;On Mr. Ramanujan's empirical expansions of modular functions&lt;/a&gt;, Proceedings of the Cambridge Philosophical Society 19 (1917), pp. 117-124.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Moree, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0201265&quot;&gt;On some claims in Ramanujan's 'unpublished' manuscript on the partition and tau functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. R. Murty, V. K. Murty and T. N. Shorey, &lt;a href=&quot;http://archive.numdam.org/article/BSMF_1987__115__391_0.pdf&quot;&gt;Odd values of the Ramanujan tau-function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Oklahoma State Mathematics Department, &lt;a href=&quot;http://www.math.okstate.edu/~loriw/degree2/degree2hm/level1/weight12/weight12.html&quot;&gt;Ramanujan tau L-Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Perry, &lt;a href=&quot;http://www.users.globalnet.co.uk/~perry/maths/ramanujantau/ramanujantau.htm&quot;&gt;Ramanujan's Tau Function&lt;/a&gt; (broken link?)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca:16080/~plouffe/OEIS/b000594.txt&quot;&gt;The first 225035 terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Ramanujan, Collected Papers, &lt;a href=&quot;http://www.imsc.res.in/~rao/ramanujan/CamUnivCpapers/Cpaper18/page18.htm&quot;&gt;Table of tau(n);n=1 to 30&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. P. Serre, &lt;a href=&quot;http://public.csusm.edu/public/FranzL/publ/serre.pdf&quot;&gt;An interpretation of some congruences concerning Ramanujan's tau function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. P. Serre, &lt;a href=&quot;http://citeseer.nj.nec.com/correct/477747&quot;&gt;An interpretation of some congruences concerning Ramanujan's Tau function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/sg.txt&quot;&gt;My favorite integer sequences&lt;/a&gt;, in Sequences and their Applications (Proceedings of SETA '98).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0207175&quot;&gt;My Favorite Integer Sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. A. Steffen, &lt;a href=&quot;http://www.maths.mq.edu.au/~steffen/old/ramanujan/ramanujan.pdf&quot;&gt;Les Coefficients de Fourier de la forme modulaire: La fonction de Ramanujan tau(n)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> William Stein, &lt;a href=&quot;http://modular.math.washington.edu/&quot;&gt;Database&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. N. Watson, &lt;a href=&quot;http://dx.doi.org/10.1112/plms/s2-51.1.1&quot;&gt;A table of Ramanujan's function tau(n)&lt;/a&gt;, Proc. London Math. Soc., 51 (1950), 1-13.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/TauFunction.html&quot;&gt;Tau Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Pro#1mxtok&quot;&gt;Index entries for expansions of Product_{k &gt;= 1} (1-x^k)^m&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+      <OMI>24</OMI>
+    </OMA></OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f. is<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> period<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ> Fourier series which satisfies f(-1 / t) = (t/i)^12 f(t) where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMA>
+      <OMS name="exp" cd="A000594"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> Pi i t). - _Michael Somos_, Jul 04 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         abs(a(n)) = O(n^(11/2 + epsilon)),<OMOBJ>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="abs" cd="A000594"/>
+      <OMA>
+      <OMS name="a" cd="A000594"/>
+      <OMV name="p"/>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>11</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ> is prime. These were conjectured by Ramanujan and proved by Deligne.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Zagier says: The proof of these formulae, if written out from scratch, has been estimated at<OMOBJ>
+      <OMI>2000</OMI>
+    </OMOBJ> pages; in his book Manin cites this as<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> probable record for the ratio: &quot;length of proof:length of statement&quot; in the whole of mathematics.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.<OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000594"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> satisfies<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMA>
+      <OMS name="f" cd="A000594"/>
+      <OMA>
+      <OMS name="A" cd="A000594"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000594"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, A(x^4)) where<OMOBJ>
+      <OMA>
+      <OMS name="f" cd="A000594"/>
+      <OMV name="u"/>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="v"/>
+    </OMOBJ>, w) = u*w * (u + 48*v + 4096*w) - v^3. - _Michael Somos_, Jul 19 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.<OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000594"/>
+      <OMV name="q"/>
+    </OMA>
+    </OMOBJ> satisfies<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="q"/><OMV name="d"/><OMA>
+      <OMS name="log" cd="A000594"/>
+      <OMA>
+      <OMS name="A" cd="A000594"/>
+      <OMV name="q"/>
+    </OMA>
+    </OMA></OMA><OMV name="dq"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A006352"/>
+      <OMV name="q"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Michael Somos_, Dec 09 2013
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f. = q - 24*q^2 + 252*q^3 - 1472*q^4 + 4830*q^5 - 6048*q^6 - 16744*q^7 + 84480*q^8 - 113643*q^9 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> M := 50; t1 := series(x*mul((1-x^k)^24,k=1..M),x,M); A000594 := n-&gt; coeff(t1,x,n);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> CoefficientList[ Take[ Expand[ Product[ (1 - x^k)^24, {k, 1, 30} ]], 30], x] (* Or *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (* first do *) Needs[&quot;NumberTheory`Ramanujan`&quot;] (* then *) Table[ RamanujanTau[n], {n, 30}] (* _Dean Hickerson_, Jan 03 2003 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> max = 28; g[k_] := -BernoulliB[k]/(2k) + Sum[ DivisorSigma[k - 1, n - 1]*q^(n - 1), {n, 2, max + 1}]; CoefficientList[ Series[ 8000*g[4]^3 - 147*g[6]^2, {q, 0, max}], q] // Rest (* _Jean-François Alcover_, Oct 10 2012, from modular forms *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RamanujanTau[Range[40]] (* The function RamanujanTau is now part of Mathematica's core language so there is no longer any need to load NumberTheory`Ramanujan` before using it *) (* _Harvey P. Dale_, Oct 12 2012 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ q QPochhammer[ q]^24, {q, 0, n}]; (* _Michael Somos_, May 27 2014 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := With[{t = Log[q] / (2 Pi I)}, SeriesCoefficient[ Series[ DedekindEta[t]^24, {q, 0, n}], {q, 0, n}]]; (* _Michael Somos_, May 27 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) M12:=ModularForms(Gamma0(1),12); t1:=Basis(M12)[2]; PowerSeries(t1[1],100); Coefficients($1);</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;1, 0, polcoeff( x * eta(x + x * O(x^n))^24, n))};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;1, 0, polcoeff( x * (sum( i=1, (sqrtint( 8*n - 7) + 1) \ 2,(-1)^i * (2*i - 1) * x^((i^2 - i)/2), O(x^n)))^8, n))};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) taup(p,e)={</CMP>
+    </omtext><omtext class="program">
+      <CMP>     if(e==1,</CMP>
+    </omtext><omtext class="program">
+      <CMP>         (65*sigma(p,11)+691*sigma(p,5)-691*252*sum(k=1,p-1,sigma(k,5)*sigma(p-k,5)))/756</CMP>
+    </omtext><omtext class="program">
+      <CMP>     ,</CMP>
+    </omtext><omtext class="program">
+      <CMP>         my(t=taup(p,1));</CMP>
+    </omtext><omtext class="program">
+      <CMP>         sum(j=0,e\2,</CMP>
+    </omtext><omtext class="program">
+      <CMP>             (-1)^j*binomial(e-j,e-2*j)*p^(11*j)*t^(e-2*j)</CMP>
+    </omtext><omtext class="program">
+      <CMP>         )</CMP>
+    </omtext><omtext class="program">
+      <CMP>     )</CMP>
+    </omtext><omtext class="program">
+      <CMP> };</CMP>
+    </omtext><omtext class="program">
+      <CMP> a(n)=my(f=factor(n));prod(i=1,#f[,1],taup(f[i,1],f[i,2]));</CMP>
+    </omtext><omtext class="program">
+      <CMP> \\ _Charles R Greathouse IV_, Apr 22 2013</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) CuspForms( Gamma1(1), 12, prec=100).0; # _Michael Somos_, May 28 2013</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) Basis( CuspForms( Gamma1(1), 12), 100)[1]; /* _Michael Somos_, May 27 2014 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A076847 (tau(p)), A037955, A027364, A037945, A037946, A037947, A008408 (Leech).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> For a(n) mod N for various values of N see A046694, A126811-...</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A006352.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,easy,core,mult,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

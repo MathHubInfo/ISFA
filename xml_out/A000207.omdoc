@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000207.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000207">
+          <assertion class="***** TTTT *****">
+      <CMP> M2375 N0942</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,3,4,12,27,82,228,733,2282,7528,24834,83898,285357,983244,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3412420,11944614,42080170,149197152,531883768,1905930975,6861221666,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 24806004996,90036148954,327989004892,1198854697588,4395801203290,16165198379984,59609171366326,220373278174641</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of inequivalent ways of dissecting a regular (n+2)-gon into n triangles by n-1 non-intersecting diagonals under rotations and reflections; also the number of planar 2-trees.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also a(n) is the number of hexaflexagons of order n+2. - Mike Godfrey (m.godfrey(AT)umist.ac.uk), Feb 25 2002 (see the Kosters paper).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of normally non-isomorphic realizations of the associahedron of type II with dimension n in Ceballos et al. - _Tom Copeland_, Oct 19 2011</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. W. Beineke and R. E. Pippert, Enumerating labeled k-dimensional trees and ball dissections, pp. 12-26 of Proceedings of Second Chapel Hill Conference on Combinatorial Mathematics and Its Applications, University of North Carolina, Chapel Hill, 1970. Reprinted in Math. Annalen, 191 (1971), 87-98.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Cameron, Peter J. Some treelike objects. Quart. J. Math. Oxford Ser. (2) 38 (1987), no. 150, 155--183. MR0891613 (89a:05009). See pp. 155, 163, but note that the formulas on p. 163, lines 5 and 6, contain typos. See the correct formulas given here. - _N. J. A. Sloane_, Apr 18 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> B. N. Cyvin, E. Brendsdal, J. Brunvoll and S. J. Cyvin, Isomers of polyenes attached to benzene, Croatica Chemica Acta, 68 (1995), 63-73.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, Enumeration of polyene hydrocarbons: a complete mathematical solution, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. F. Earl and L. J. March, Architectural applications of graph theory, pp. 327-355 of R. J. Wilson and L. W. Beineke, editors, Applications of Graph Theory. Academic Press, NY, 1979.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, &quot;Dissecting a polygon into triangles,&quot; Bull. Malayan Math. Soc., Vol. 5, pp. 57-60, 1958.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, On acyclic simplicial complexes. Mathematika 15 1968 115-122.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, p. 79, Table 3.5.1 (the entries for n=16 and n=21 appear to be incorrect).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary, E. M. Palmer and R. C. Read, On the cell-growth problem for arbitrary polygons, Discr. Math. 11 (1975), 371-389 (the entries for n=4 and n=30 appear to be incorrect).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Kosters, A theory of hexaflexagons, Nieuw Archief Wisk., 17 (1999), 349-362.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. W. Moon and L. Moser, Triangular dissections of n-gons, Canad. Math. Bull., 6 (1963), 175-178.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. S. Motzkin, Relations between hypersurface cross ratios and a combinatorial formula for partitions of a polygon, for permanent preponderance and for non-associative products, Bull. Amer. Math. Soc., 54 (1948), 352-360 (the entry for n=10 appears to be incorrect).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. O. Oakley and R. J. Wisner, Flexagons, Amer. Math. Monthly, 64 (1957), 143-154.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. K. Stockmeyer, The charm bracelet problem and its applications, pp. 339-349 of Graphs and Combinatorics (Washington, Jun 1973), Ed. by R. A. Bari and F. Harary. Lect. Notes Math., Vol. 406. Springer-Verlag, 1974.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000207/b000207.txt&quot;&gt;Table of n, a(n) for n=1..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Douglas Bowman and Alon Regev, &lt;a href=&quot;http://arxiv.org/abs/1209.6270&quot;&gt;Counting symmetry classes of dissections of a convex regular polygon&lt;/a&gt;, arXiv preprint arXiv:1209.6270, 2012.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Cameron, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;Sequences realized by oligomorphic permutation groups&lt;/a&gt;, J. Integ. Seqs. Vol. 3 (2000), #00.1.5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Cameron, &lt;a href=&quot;http://dx.doi.org/10.1093/qmath/38.2.155&quot;&gt;Some treelike objects&lt;/a&gt;, Quart. J. Math. Oxford, 38 (1987), 155-183. See p. 160.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Ceballos, F. Santos, and G. Ziegler, &lt;a href=&quot;http://arxiv.org/abs/1109.5544&quot;&gt;Many Non-equivalent Realizations of the Associahedron&lt;/a&gt;, p. 19 and 26</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. S. Conrad and D. K. Hartline, &lt;a href=&quot;http://theory.lcs.mit.edu/~edemaine/flexagons/Conrad-Hartline-1962/flexagon.html&quot;&gt;Flexagons&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Len Smiley, &lt;a href=&quot;/A000207/a000207.jpg&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000207"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="C" cd="A000207"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="C" cd="A000207"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="C" cd="A000207"/>
+      <OMV name="k"/>
+    </OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="C" cd="A000207"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="C" cd="A000207"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000108"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> is an integer,<OMOBJ>
+      <OMI>0</OMI>
+    </OMOBJ> otherwise and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> is odd,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> is even. Thus<OMOBJ>
+      <OMA>
+      <OMS name="C" cd="A000207"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="C" cd="A000207"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="C" cd="A000207"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="C" cd="A000207"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMS name="..." cd="arithmetics"></OMS>
+    </OMOBJ> are<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>5</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMS name="..." cd="arithmetics"></OMS>
+    </OMOBJ>
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.=[12(1+x-2x^2)+(1-4x)^(3/2)-3(3+2x)(1-4x^2)^(1/2)-4(1-4x^3)^(1/2)]/(24x^2). - _Emeric Deutsch_, Dec 19 2004, from the S. J. Cyvin et al. reference.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) ~ A000108(n)/(2*n+4) ~ 4^n / (2 sqrt(n Pi)*(n + 1)*(n + 2)). - _M. F. Hasler_, Apr 19 2009
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> E.g., a square (4-gon, n=2) could have either diagonal drawn, C(3)=2, but with essentially only one result. A pentagon (5-gon, n=3) gives C(4)=5, but they each have 2 diags emanating from 1 of the 5 vertices and are essentially the same. A hexagon can have a nuclear disarmament sign (6 ways), an N (3 ways and 3 reflexions) or a triangle (2 ways) of diagonals, 6 + 6 + 2 = 14 = C(5), but only 3 essentially different. - _R. K. Guy_, Mar 06 2004</CMP>
+    </assertion><assertion class="example">
+      <CMP> G.f. = x + x^2 + x^3 + 3*x^4 + 4*x^5 + 12*x^6 + 27*x^7 + 82*x^8 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A000108 := proc(n) if n &gt;= 0 then binomial(2*n,n)/(n+1) ; else 0; fi; end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000207 := proc(n) option remember: local k, it1, it2;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> if n mod 2 = 0 then k := n/2+2 else k := (n+3)/2 fi:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> if n mod 2 &lt;&gt; 0 then it1 := 0 else it1 := 1 fi:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> if (n+2) mod 3 &lt;&gt; 0 then it2 := 0 else it2 := 1 fi:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> RETURN(A000108(n)/(2*n+4) + it1*A000108(n/2)/4 + A000108(k-2)/2 + it2*A000108((n-1)/3)/3)</CMP>
+    </omtext><omtext class="maple">
+      <CMP> end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(A000207(n),n=1..30) ; # (Revised Maple program from _R. J. Mathar_, Apr 19 2009)</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000207 := proc(n) option remember: local k,it1,it2; if n mod 2 = 0 then k := n/2+1 else k := (n+1)/2 fi: if n mod 2 &lt;&gt; 0 then it1 := 0 else it1 := 1 fi: if n mod 3 &lt;&gt; 0 then it2 := 0 else it2 := 1 fi: RETURN(A000108(n-2)/(2*n) + it1*A000108(n/2+1-2)/4 + A000108(k-2)/2 + it2*A000108(n/3+1-2)/3) end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000207 := n-&gt;(A000108(n)/(n+2)+A000108(floor(n/2))*((1+(n+1 mod 2) /2)))/2+`if`(n mod 3=1,A000108(floor((n-1)/3))/3,0); # _Peter Luschny_, Apr 19 2009 and _M. F. Hasler_, Apr 19 2009</CMP>
+    </omtext><omtext class="maple">
+      <CMP> G:=(12*(1+x-2*x^2)+(1-4*x)^(3/2)-3*(3+2*x)*(1-4*x^2)^(1/2)-4*(1-4*x^3)^(1/2))/24/x^2: Gser:=series(G,x=0,35): seq(coeff(Gser,x^n),n=1..31); # _Emeric Deutsch_</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> p=3; Table[(Binomial[(p-1)n, n]/(((p-2)n+1)((p-2)n+2)) + If[OddQ[n], If[OddQ[p], Binomial[(p-1)n/2, (n-1)/2]/n, (p+1)Binomial[((p-1)n-1)/2, (n-1)/2]/((p-2)n+2)], 3Binomial[(p-1)n/2, n/2]/((p-2)n+2)]+Plus @@ Map[EulerPhi[ # ]Binomial[((p-1)n+1)/#, (n-1)/# ]/((p-1)n+1)&amp;, Complement[Divisors[GCD[p, n-1]], {1, 2}]])/2, {n, 1, 20}] (* _Robert A. Russell_, Dec 11 2004 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := (CatalanNumber[n]/(n+2) + CatalanNumber[ Quotient[n, 2]] *((1 + Mod[n-1, 2]/2)))/2 + If[Mod[n, 3] == 1, CatalanNumber[ Quotient[n-1, 3]]/3, 0] ; Table[a[n], {n, 1, 28}] (* _Jean-François Alcover_, Sep 08 2011, after PARI *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A000207(n)=(A000108(n)/(n+2)+A000108(n\2)*if(n%2,1,3/2))/2+if(n%3==1,A000108(n\3)/3) \\ _M. F. Hasler_, Apr 19 2009</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000577, A070765.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A row or column of the array in A169808.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _James A. Sellers_, Jul 10 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

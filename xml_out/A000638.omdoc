@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000638.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000638">
+          <assertion class="***** TTTT *****">
+      <CMP> M1244 N0477</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,4,11,19,56,96,296,554,1593,3094,10723,20832,75154,159129,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 686165,1466358,7274651</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of permutation groups of degree n; also number of conjugacy classes of subgroups of symmetric group S_n; also number of molecular species of degree n.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Bergeron, G. Labelle and P. Leroux, Combinatorial Species and Tree-Like Structures, Camb. 1998, p. 147.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. C. Lunn and J. K. Senior, Isomerism and Configuration, J. Physical Chem. 33 91929), 1027-1079.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Pfeiffer, Counting Transitive Relations, preprint 2004.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. C. Sims, Computational methods in the study of permutation groups, pp. 169-183 of J. Leech, editor, Computational Problems in Abstract Algebra. Pergamon, Oxford, 1970.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. Naughton and G. Pfeiffer, &lt;a href=&quot;http://arxiv.org/abs/1211.1911&quot;&gt;Integer Sequences Realized by the Subgroup Pattern of the Symmetric Group&lt;/a&gt;, arXiv preprint arXiv:1211.1911, 2012. - From _N. J. A. Sloane_, Jan 02 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Pfeiffer, &lt;a href=&quot;http://schmidt.nuigalway.ie/subgroups&quot;&gt;Subgroups&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Pfeiffer, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/&quot;&gt;Counting Transitive Relations&lt;/a&gt;, Journal of Integer Sequences, Vol. 7 (2004), Article 04.3.2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Xiao, &lt;a href=&quot;http://wims.unice.fr/~wims/en_tool~algebra~permgroup.en.html&quot;&gt;PermGroup&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Euler Transform of<OMOBJ>
+      <OMR xref="A005226"/>
+    </OMOBJ>. Define<OMOBJ>
+      <OMA>
+      <OMS name="b" cd="A000638"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>, c(n): b(1)=c(0)=0.<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000638"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A005227"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="c" cd="A000638"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="a" cd="A000638"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMA>
+      <OMR xref="A005226"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> is Dirichlet convolution of<OMOBJ>
+      <OMV name="b"/>
+    </OMOBJ> and<OMOBJ>
+      <OMV name="c"/>
+    </OMOBJ>. - Christian G. Bower, Feb 23 2006
+      </CMP>
+      </omdoc:p><omtext class="program">
+      <CMP> (MAGMA) n := 5; #SubgroupLattice(Sym(n));</CMP>
+    </omtext><omtext class="program">
+      <CMP> (GAP 4r2) Length(ConjugacyClassesSubgroups(SymmetricGroup(n)));</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Partial sums of A000637.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000001, A000019. Unlabeled version of A005432.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,more,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(11) corrected and a(12) added by Goetz Pfeiffer (goetz.pfeiffer(AT)nuigalway.ie), Jan 21 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended to a(18) using Derek Holt's data from A000637. - _N. J. A. Sloane_, Jul 31 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000824.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000824">
+          <assertion class="***** TTTT *****">
+      <CMP> M4917 N2110</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 13,237,356026,2932175712336,412646680050205587085305856,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16346619102569481158480824333166611354489546429742186496</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of switching networks (see Harrison reference for precise definition).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of equivalence classes with complementation of n variables on the domain and symmetric group of 3 variables operating on the range. - _Sean A. Irvine_, Jul 11 2011</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Sw#switching&quot;&gt;Index entries for sequences related to switching networks&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Let<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b_n" cd="A000824"/>
+      <OMV name="r"/><OMV name="s"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMV name="r"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMV name="s"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. Then,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000824"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="b_n" cd="A000824"/>
+      <OMI>3</OMI><OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMV name="b"/><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="b"/><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME></OMA>
+    </OMA><OMI>6</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Sean A. Irvine_, Jul 11 2011
+      </CMP>
+      </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Jul 10 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000621.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000621">
+          <assertion class="***** TTTT *****">
+      <CMP> M0697 N0258</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,3,5,8,14,23,39,65,110,184,310,520,876,1471,2475,4159,6996,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 11759,19775,33244,55902,93984,158030,265696,446746,751128,1262940,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2123444,3570318,6002983,10093259,16970431,28533590,47975381,80664329,135626284,228037752</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of monosubstituted alkanes C(n-1)H(2n-1)-X with n-1 carbon atoms that are not stereoisomers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also number of monosubstituted alkanes C(n)H(2n+1)-X of the form R-CH2-X (primary) that are not stereoisomers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let the entries in the nine columns of Blair and Henze's Table I (JACS 54 (1932), p. 1098) be denoted by Ps(n), Pn(n), Ss(n), Sn(n), Ts(n), Tn(n), As(n), An(n), T(n) respectively (here P = Primary, S = Secondary, T = Tertiary, s = stereoisomers, n = non-stereoisomers and the last column T(n) gives total).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Then Ps (and As) = A000620, Pn (and An, Sn) = this sequence, Ss = A000622, Ts = A000623, Tn = A000624, T = A000625. Recurrences generating these sequences are given in the Maple program in A000620.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. R. Finch, Mathematical Constants, Cambridge, 2003, p. 300.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Polya, Algebraische Berechnung der Anzahl der Isomeren einiger organischer Verbindungen, Zeit. f. Kristall., 93 (1936), 415-443; &quot;q&quot; on page 441.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vaclav Kotesovec, &lt;a href=&quot;/A000621/b000621.txt&quot;&gt;Table of n, a(n) for n = 1..3000&lt;/a&gt;. [This replaces an earlier b-file computed by Vincenzo Librandi (and corrected terms 64-1000).]</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. M. Blair and H. R. Henze, &lt;a href=&quot;http://dx.doi.org/10.1021/ja01342a036&quot;&gt;The number of stereoisomeric and non-stereoisomeric mono-substitution products of the paraffins&lt;/a&gt;, J. Amer. Chem. Soc., 54 (1932), 1098-1105.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Flajolet and R. Sedgewick, &lt;a href=&quot;http://algo.inria.fr/flajolet/Publications/books.html&quot;&gt;Analytic Combinatorics&lt;/a&gt;, 2009; see page 283</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Polya, &lt;a href=&quot;http://dx.doi.org/10.1007/BF02546665&quot;&gt;Kombinatorische Anzahlbestimmungen für Gruppen, Graphen und chemische Verbindungen&lt;/a&gt;, Acta Mathematica, vol.68, no.1, pp.145-254, (1937). (see pp.151-152).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000621"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> satisfies<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000621"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="A" cd="A000621"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, with offset<OMOBJ>
+      <OMI>0</OMI>
+    </OMOBJ>. - _Paul D. Hanna_, Aug 16 2002
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Given g.f.: A(x), then<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="B" cd="A000621"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A000621"/>
+      <OMV name="x"/>
+    </OMA><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMOBJ> satisfies<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMA>
+      <OMS name="f" cd="A000621"/>
+      <OMA>
+      <OMS name="B" cd="A000621"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="B" cd="A000621"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, B(x^4)) where<OMOBJ>
+      <OMA>
+      <OMS name="f" cd="A000621"/>
+      <OMV name="u"/>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="v"/>
+    </OMOBJ>, w) = (1 - u)^2 * w - u^2 * v * (v - 1). - _Michael Somos_, Sep 03 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Michael Somos_, Sep 03 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         From _Joerg Arndt_, Oct 15 2011: (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For offset<OMOBJ>
+      <OMA><OMS name="times"/><OMI>0</OMI><OMV name="as"/></OMA>
+    </OMOBJ> considered in the<OMOBJ>
+      <OMI>1937</OMI>
+    </OMOBJ> Polya reference) we have
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000621"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> and
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000621"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> satisfies A(x) = 1 + x*A(x)*A(x^2)) (equivalent to Hanna's functional equation).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         (End)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000621"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="c"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="beta"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>, where beta = 1.681367524441880255591... (see A239804),<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMA><OMS name="times"/><OMF dec="0.21453613913464856"/><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="see" cd="A000621"/>
+      <OMR xref="A239806"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. Asymptotic formula<OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000621"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="K"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="beta"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> from reference (Analytic Combinatorics,<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ>. 283), where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="K"/>
+      <OMF dec="0.3607140971"/>
+    </OMA>
+    </OMOBJ>, beta = 1.6813675244^n is for offset<OMOBJ>
+      <OMA><OMS name="times"/><OMI>0</OMI><OMV name="beta"/></OMA>
+    </OMOBJ> is same, but K = c * beta = 0.360714097160142828...). - _Vaclav Kotesovec_, Mar 27 2014
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000621"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="T" cd="A000621"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where T(n,m) = sum(i=1..n-m, binomial(i+m-1,i)*((1+(-1)^(n-m))/2)*T((n-m)/2,i)),<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMV name="m"/>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A000621"/>
+      <OMV name="n"/><OMV name="n"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>. - _Vladimir Kruchinin_, Mar 18 2015
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f.: = x + x^2 + x^3 + 2*x^4 + 3*x^5 + 5*x^6 + 8*x^7 + 14*x^8 + 23*x^9 + ...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> nmax=40; a=1-x; Do[a=1/(1-x (a/.x-&gt;x^2)),{Log[2,nmax]+2}]; CoefficientList[Series[a,{x,0,nmax-1}],x] (* _Jean-François Alcover_, Jun 16 2011, after M. Somos, fixed by _Vaclav Kotesovec_, Mar 28 2014 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> max = 40; cf = Fold[Function[1 - x^#2/#1], 1, 2^Reverse[Range[0, Floor[Log[2, max]]]]]; List @@ (1-Series[cf, {x, 0, 2*max}] // Normal) /. x -&gt; 1 (* _Jean-François Alcover_, Sep 24 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A, m); if( n&lt;1, 0, n--; m = 1; A = 1 + O(x); while( m&lt;=n, m *= 2; A = 1 / (1 - x * subst(A, x, x^2)) ); polcoeff( A, n )) }; /* _Michael Somos_, Sep 03 2007 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima)</CMP>
+    </omtext><omtext class="program">
+      <CMP> T(n,m):=if m=n then 1 else sum(binomial(i+m-1,i)*((1+(-1)^(n-m))/2)*T((n-m)/2,i),i,1,n-m);</CMP>
+    </omtext><omtext class="program">
+      <CMP> makelist(T(2*n-1,1),n,1,30); /* _Vladimir Kruchinin_, Mar 18 2015 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000620-A000625, A239804, A239806.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional comments from Bruce Corrigan, Nov 04 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Formulae edited by _N. J. A. Sloane_, Feb 27 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

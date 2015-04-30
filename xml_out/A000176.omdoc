@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000176.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000176">
+          <assertion class="***** TTTT *****">
+      <CMP> M2001 N0791</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,11,46,128,272,522,904,1408,2160,3154,4306,5888,7888,10012,12888,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16384,19680,24354,29866,34816,41888,49778,56744,66816,78000,87358,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 100602,115712,128112,145804,165712,180224,203040,228964,246932,276480</CMP>
+    </assertion><omtext class="name">
+      <CMP> Generalized tangent numbers d_(n,2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Consider the Dirichlet series L_a(s) = sum_{k&gt;=0)} (-a|2k+1) / (2k+1)^s, where (-a|2k+1) is the Jacobi symbol. Then the numbers d_(a,n) are defined by L_a(2n)= (Pi/(2a))^(2n)*sqrt(a)* d_(a,n)/ (2n-1)! for a&gt;1 and n=1,2,3...</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sean A. Irvine, &lt;a href=&quot;/A000176/b000176.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Shanks, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1967-0223295-5&quot;&gt;Generalized Euler and class numbers&lt;/a&gt;. Math. Comp. 21 1967 663-688.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Shanks, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1968-0227093-9&quot;&gt;Corrigenda to: &quot;Generalized Euler and class numbers&quot;&lt;/a&gt;, Math. Comp. 21 (1967), 689-694; 22 (1968), 699.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000061 for d_(n,1), A000488 for d_(n,3), A000518 for d_(n,4).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Kok Seng Chua (chuaks(AT)ihpc.nus.edu.sg), Jun 03 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

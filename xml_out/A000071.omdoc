@@ -1,0 +1,799 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000071.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000071">
+          <assertion class="***** TTTT *****">
+      <CMP> M1056 N0397</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,2,4,7,12,20,33,54,88,143,232,376,609,986,1596,2583,4180,6764,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10945,17710,28656,46367,75024,121392,196417,317810,514228,832039,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1346268,2178308,3524577,5702886,9227464,14930351,24157816,39088168</CMP>
+    </assertion><omtext class="name">
+      <CMP> Fibonacci numbers - 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the number of allowable transition rules for passing from one change to the next (on n-1 bells) in the English art of bell-ringing. This is also the number of involutions in the symmetric group S_{n-1} which can be represented as a product of transpositions of consecutive numbers from {1,2,...,n-1}. Thus for n=6 we have a(6) = from (12), (12)(34), (12)(45), (23), (23)(45), (34), (45), for instance. See my 1983 Math. Proc. Camb. Phil. Soc. paper. - Arthur T. White, letter to _N. J. A. Sloane_, Dec 18 1986</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of permutations p of {1,2,...,n-1} such that max|p(i)-i|=1. Example: a(4)=2 since only the permutations 132 and 213 of {1,2,3} satisfy the given condition. - _Emeric Deutsch_, Jun 04 2003</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of 001-avoiding binary words of length n-3.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, sum of first n Fibonacci numbers. - Giorgi Dalakishvili (mcnamara_gio(AT)yahoo.com), Apr 02 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)=number of partitions of {1,...,n-1} into two blocks in which only 1- or 2-strings of consecutive integers can appear in a block and there is at least one 2-string. E.g. a(6) = 7 because the enumerated partitions of {1,2,3,4,5} are 124/35,134/25, 14/235,13/245,1245/3,145/23,125/34. - _Augustine O. Munagi_, Apr 11 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers for which only one Fibonacci bit-representation is possible and for which the maximal and minimal Fibonacci bit-representations (A104326 and A014417) are equal. For example, a(12) = 10101 because 8+3+1 = 12. - _Casey Mongoven_, Mar 19 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Beginning with a(2), the 'Recamán transform' (see A005132) of the Fibonacci numbers (A000045). - Nick Hobson (nickh(AT)qbyte.org), Mar 01 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Starting with nonzero terms = row sums of triangle A158950. - _Gary W. Adamson_, Mar 31 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n+2) = minimum number of elements in an AVL tree of height n. - Lennert Buytenhek (buytenh(AT)wantstofly.org), May 31 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the number of branch nodes in the Fibonacci tree of order n-1. A Fibonacci tree of order n (n&gt;=2) is a complete binary tree whose left subtree is the Fibonacci tree of order n-1 and whose right subtree is the Fibonacci tree of order n-2; each of the Fibonacci trees of order 0 and 1 is defined as a single node (see the Knuth reference, p. 417). - _Emeric Deutsch_, Jun 14 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n+3) is the number of distinct three-strand positive braids of length n (cf. Burckel). - _Maxime Bourrigan_, Apr 04 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A000119(a(n)) = 1. - _Reinhard Zumkeller_, Dec 28 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n+1) is the number of compositions of n with maximal part 2. - _Joerg Arndt_, May 21 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A228074(n-1,2) for n &gt; 2. - _Reinhard Zumkeller_, Aug 15 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(0) = -1. For a(5) = 4 we have 2143, 1324, 2134 and 1243. - _Jon Perry_, Sep 14 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n+2) is the number of leafs of great-grandparent DAG (directed acyclic graph) of height n. A great-grandparent DAG of height n is a single node for n=1; for n&gt;1 each leaf of ggpDAG(n-1) has two child nodes where pairs of adjacent new nodes are merged into single node iff they have disjoint grandparents and same great-grandparent. Consequence: a(n) = 2*a(n-1) - a(n-3). - _Hermann Stamm-Wilbrandt_, Jul 06 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A083368(a(n+3)) = n. - _Reinhard Zumkeller_, Aug 10 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 2 and 7 are the only prime numbers in this sequence. - _Emmanuel Vantieghem_, Oct 01 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Russell Jay Hendel_, Mar 15 2015: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> We can settle _Gerald McGarvey_'s conjecture mentioned below in the Formula section, however we require n&gt;4. We need the following 4 prerequisites.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (1) a(n)=F(n)-1, with {F(n)}_{n&gt;=1} the Fibonacci numbers A000045. (2) (Binet Form) F(n) =(d^n-e^n)/sqrt(5) with d=phi and e=1-phi, de=-1 and d+e=1. It follows that a(n)=(d(n)-e(n))/sqrt(5)-1. (3) To prove floor(x)=y is equivalent to proving that x-y lies in the semi-open interval [0,1). (4) The series {s(n)=c1 x^n+c2}_{n&gt;=1}, with -1&lt;x&lt;0, and c1 and c2 positive constants, converges by oscillation with s(1)&lt;s(3)&lt;s(5) &lt; ... &lt; s(6)&lt;s(4)&lt;s(2). If follows that for any odd n, the open interval (s(n),s(n+1)) contains the subsequence {s(t)}_{t&gt;=n+2}. Using these prerequisites we can analyze the conjecture.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Using prerequisites (2) and (3) we see we must prove, for all n&gt;4, that d(d^(n-1)-e^(n-1))/sqrt(5)-1) - (d^n-e^n)/sqrt(5)+1+c lies in the interval [0,1). But de=-1, implying de^(n-1)=-e^(n-2). It follows that we must equivalently prove (for all n&gt;4) that E(n,c)=(e^(n-2)+e^n)/sqrt(5)+1-d + c = e^(n-2) (e^2+1)/sqrt(5)+e +c lies in [0,1). Clearly, for any particular n, E(n,c) has extrema (maxima, minima) when c=2(1-d) and c=(1+d)(1-d). Therefore, the proof is completed by using prerequistite (4). It suffices to verify E(5,2(1-d))=0, E(6,2(1-d))=0.236068, E(5,(1-d)(1+d))=0.618034, E(6,(1-d)(1+d))=0.854102, all lie in [0,1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (End)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Mohammad K. Azarian, The Generating Function for the Fibonacci Sequence, Missouri Journal of Mathematical Sciences, Vol. 2, No. 2, Spring 1990, pp. 78-79. Zentralblatt MATH, Zbl 1097.11516.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Mohammad K. Azarian, A Generalization of the Climbing Stairs Problem II, Missouri Journal of Mathematical Sciences, Vol. 16, No. 1, Winter 2004, pp. 12-17.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. T. Benjamin and J. J. Quinn, Proofs that really count: the art of combinatorial proof, M.A.A. 2003, id. 1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Kauers and P. Paule, The Concrete Tetrahedron, Springer 2011, p. 64.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, The Art of Computer Programming, Vol. 3, 2nd edition, Addison-Wesley, Reading, MA, 1998, p. 417. [From _Emeric Deutsch_, Jun 14 2010]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 155.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. L. Yucas, Counting special sets of binary Lyndon words, Ars Combin., 31 (1991), 21-29.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Christian G. Bower, &lt;a href=&quot;/A000071/b000071.txt&quot;&gt;Table of n, a(n) for n = 1..500&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J.-L. Baril, J.-M. Pallo, &lt;a href=&quot;http://jl.baril.u-bourgogne.fr/Motzkin.pdf&quot;&gt;Motzkin subposet and Motzkin geodesics in Tamari lattices&lt;/a&gt;, 2013.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. M. Baxter, L. K. Pudwell, &lt;a href=&quot;http://faculty.valpo.edu/lpudwell/papers/AvoidingPairs.pdf&quot;&gt;Ascent sequences avoiding pairs of patterns&lt;/a&gt;, 2014.</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Burckel, &lt;a href=&quot;http://dx.doi.org/10.1006/jsco.2000.0473&quot;&gt;Syntactical methods for braids of three strands&lt;/a&gt;, J. Symbolic Comput. 31 (2001), no. 5, 557-564.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Burstein and T. Mansour, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0204320&quot;&gt;Counting occurrences of some subword patterns&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Cameron, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL3/groups.html&quot;&gt;Sequences realized by oligomorphic permutation groups&lt;/a&gt;, J. Integ. Seqs. Vol. 3 (2000), #00.1.5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Fan Chung, Ron Graham, &lt;a href=&quot;http://www.jstor.org/stable/27642443&quot;&gt;Primitive juggling sequences&lt;/a&gt;, Am. Math. Monthly 115 (3) (2008) 185-194</CMP>
+    </omtext><omtext class="link">
+      <CMP> Dairyko, Michael; Tyner, Samantha; Pudwell, Lara; Wynn, Casey. &lt;a href=&quot;http://www.combinatorics.org/ojs/index.php/eljc/article/view/v19i3p22&quot;&gt;Non-contiguous pattern avoidance in binary trees&lt;/a&gt;. Electron. J. Combin. 19 (2012), no. 3, Paper 22, 21 pp. MR2967227. - From _N. J. A. Sloane_, Feb 01 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> Emeric Deutsch, &lt;a href=&quot;http://www.jstor.org/stable/2691040&quot;&gt;Problem Q915&lt;/a&gt;, Math. Magazine, vol. 74, No. 5, 2001, p. 404.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Fumio Hazama, &lt;a href=&quot;http://dx.doi.org/10.1016/j.disc.2011.06.008&quot;&gt;Spectra of graphs attached to the space of melodies&lt;/a&gt;, Discrete Math., 311 (2011), 2368-2383. See Table 2.1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Y. Horibe, &lt;a href=&quot;http://www.fq.math.ca/Scanned/20-2/horibe.pdf&quot;&gt;An entropy view of Fibonacci trees&lt;/a&gt;, Fibonacci Quarterly, 20, No. 2, 1982, 168-178. [From _Emeric Deutsch_, Jun 14 2010]</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=384&quot;&gt;Encyclopedia of Combinatorial Structures 384&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Lagrange, &lt;a href=&quot;http://archive.numdam.org/article/ASENS_1962_3_79_3_199_0.pdf&quot;&gt;Quelques résultats dans la métrique des permutations&lt;/a&gt;, Annales Scientifiques de l'Ecole Normale Supérieure, Paris, 79 (1962), 199-241.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. A. Lind, &lt;a href=&quot;http://www.fq.math.ca/Scanned/3-4/lind.pdf&quot;&gt;On a class of nonlinear binomial sums&lt;/a&gt;, Fib. Quart., 3 (1965), 292-298.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Rui Liu and Feng-Zhen Zhao, &lt;a href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL15/Liu/liu10.html&quot;&gt;On the Sums of Reciprocal Hyperfibonacci Numbers and Hyperlucas Numbers&lt;/a&gt;, Journal of Integer Sequences, Vol. 15 (2012), #12.4.5. - From _N. J. A. Sloane_, Oct 05 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. O. Munagi, &lt;a href=&quot;http://dx.doi.org/10.1155/IJMMS.2005.451&quot;&gt;Set Partitions with Successions and Separations&lt;/a&gt;,IJMMS 2005:3 (2005), 451-463.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sam Northshield, &lt;a href=&quot;http://www.jstor.org/stable/10.4169/amermathmont.117.7.581&quot;&gt;Stern's Diatomic Sequence 0,1,1,2,1,3,2,3,1,4,...&lt;/a&gt;, Amer. Math. Month., Vol. 117 (7), pp. 581-598, 2010.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. Pudwell, &lt;a href=&quot;http://faculty.valpo.edu/lpudwell/slides/notredame.pdf&quot;&gt;Pattern avoidance in trees&lt;/a&gt;, (slides from a talk, mentions many sequences), 2012. - From _N. J. A. Sloane_, Jan 03 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> Stacey Wagner, &lt;a href=&quot;http://via.library.depaul.edu/depaul-disc/vol2/iss1/2&quot;&gt;Enumerating Alternating Permutations with One Alternating Descent&lt;/a&gt;, DePaul Discoveries: Vol. 2: Iss. 1, Article 2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Arthur T. White, &lt;a href=&quot;http://dx.doi.org/10.1017/S0305004100061053&quot;&gt;Ringing the changes&lt;/a&gt;, Math. Proc. Cambridge Philos. Soc. 94 (1983), no. 2, 203-215.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Xu, &lt;a href=&quot;http://dx.doi.org/10.1016/0022-4049(92)90078-T&quot;&gt;Growth of positive braids semigroups&lt;/a&gt;, Journal of Pure and Applied Algebra, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Li-Na Zheng, Rui Liu, and Feng-Zhen Zhao, &lt;a href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL17/Zheng/zheng5.html&quot;&gt;On the Log-Concavity of the Hyperfibonacci Numbers and the Hyperlucas Numbers&lt;/a&gt;, Journal of Integer Sequences, Vol. 17 (2014), #14.1.4.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_03&quot;&gt;Index entries for sequences related to linear recurrences with constant coefficients&lt;/a&gt;, signature (2,0,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000045"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>; thereafter<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _R. H. Hardin_, Apr 02 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Partial sums of Fibonacci numbers. G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Wolfdieter Lang_
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <p></p><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="A"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="B"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMV name="C"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="D"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMI>10</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, with<OMOBJ>
+      <OMV name="A"/>
+    </OMOBJ>, C=5+-3*sqrt(5),<OMOBJ>
+      <OMV name="B"/>
+    </OMOBJ>, D=(1+-sqrt(5))/2. - _Ralf Stephan_, Mar 02 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMI>3</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>, then<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="ceiling" cd="A000071"/>
+      <OMA><OMS name="times"/><OMV name="phi"/><OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> where phi is the golden ratio<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A000071"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMOBJ>. - _Benoit Cloitre_, May 06 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Conjecture: for all<OMOBJ>
+      <OMV name="c"/>
+    </OMOBJ> such that<OMOBJ>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>2</OMI><OMV name="Phi"/>
+    </OMA></OMA>
+      <OMV name="c"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMV name="Phi"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>2</OMI><OMV name="Phi"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> we have<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="floor" cd="A000071"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="Phi"/><OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMV name="c"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>. - _Gerald McGarvey_, Jul 22 2004<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ> changed to<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>, _Russell Jay Hendel_, Mar 15 2015).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = sum{k=0..floor((n-2)/2),<OMOBJ>
+      <OMA>
+      <OMS name="binomial" cd="A000071"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, k+1)}. - _Paul Barry_, Sep 23 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n+3) = sum{k=0..floor(n/3),<OMOBJ>
+      <OMA>
+      <OMS name="binomial" cd="A000071"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, k)(-1)^k*2^(n-3k)}. - _Paul Barry_, Oct 20 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="Sum" cd="A000071"/>
+      <OMA>
+      <OMS name="binomial" cd="A000071"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="r"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, r)),<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="r"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMS name="..." cd="arithmetics"></OMS>
+    </OMOBJ> which is the case<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="t"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ> in the general case of t-strings and<OMOBJ>
+      <OMV name="k"/>
+    </OMOBJ> blocks: a(n+1,<OMOBJ>
+      <OMV name="k"/>
+    </OMOBJ>, t)=Sum(binomial(n-r*(t-1), r)*S2(n-r*(t-1)-1, k-1)),<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="r"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMS name="..." cd="arithmetics"></OMS><OMV name="_"/>
+    </OMA>
+    </OMOBJ>Augustine O. Munagi_, Apr 11 2005
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="Sum" cd="A000071"/>
+      <OMA><OMS name="times"/><OMV name="k"/><OMA>
+      <OMS name="Fibonacci" cd="A000071"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Ross La Haye_, May 31 2006
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = term<OMOBJ>
+      <OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME>
+    </OMOBJ> in the<OMOBJ>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="x3"/></OMA>
+    </OMOBJ> matrix<OMOBJ>
+      <OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME>
+    </OMOBJ>; 1,0,0; 1,0,1]^(n-1). - _Alois P. Heinz_, Jul 24 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="ceil" cd="A000071"/>
+      <OMA><OMS name="times"/><OMV name="phi"/><OMA>
+      <OMS name="a" cd="A000071"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where phi=Golden ratio. - _Vladimir Shevelev_, Jul 04 2010
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Closed-form without two leading zeros G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>5</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="sqrt" cd="A000071"/>
+      <OMI>5</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A000071"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>5</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="sqrt" cd="A000071"/>
+      <OMI>5</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A000071"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMI>5</OMI>
+    </OMA><OMI>5</OMI>
+    </OMA>
+    </OMOBJ>; closed-form with two leading zeros G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>5</OMI><OMA>
+      <OMS name="sqrt" cd="A000071"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A000071"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>5</OMI><OMA>
+      <OMS name="sqrt" cd="A000071"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A000071"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMI>10</OMI>
+    </OMA><OMI>10</OMI>
+    </OMA>
+    </OMOBJ>. - _Tim Monahan_, Jul 10 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="Q" cd="A000071"/>
+      <OMI>0</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Q" cd="A000071"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="k"/></OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="k"/></OMA><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="Q" cd="A000071"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>; (continued fraction). - _Sergei N. Gladkovskii_, Aug 30 2013
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> a[0]:=0:a[1]:=0:for n from 2 to 50 do a[n]:=a[n-1]+a[n-2]+1 od: seq(a[n],n=0..50); # Kristof</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000071 := proc(n) combinat[fibonacci](n)-1 ; end proc; # _R. J. Mathar_, Apr 07 2011</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000071:=1/(z-1)/(z^2+z-1); # _Simon Plouffe_ in his 1992 dissertation, dropping initial zeros</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; (Matrix([[1, 1, 0], [1, 0, 0], [1, 0, 1]])^(n-1))[3, 2]; seq(a(n), n=1..50); # _Alois P. Heinz_, Jul 24 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[f=Fibonacci[k];f-1,{k,1,40,1}] (* _Vladimir Joseph Stephan Orlovsky_, Jul 21 2008 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Fibonacci[Range[40]]-1 (* or *) LinearRecurrence[{2,0,-1},{0,0,1},40] (* _Harvey P. Dale_, Aug 23 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;1, 0, fibonacci(n)-1)};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Fibonacci(n)-1: n in [1..150]] // _Vincenzo Librandi_, Apr 04 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000071 n = a000071_list !! n</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000071_list = map (subtract 1) $ tail a000045_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, May 23 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000045, A054761, A119282, A001654, A005968, A005969, A098531, A098532, A098533, A128697, A001611, A157725, A001911, A157726, A006327, A157727, A157728, A157729, A167616, A158950, A105488, A105489.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Antidiagonal sums of array A004070.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Right-hand column 2 of triangle A011794.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> a(n) = A101220(1, 1, n-2), for n &gt; 1.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Related to sum of Fibonacci(kn) over n. Cf. A099919, A058038, A138134, A053606.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Subsequence of A226538.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice,hear,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _N. J. A. Sloane_, Apr 04 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000075.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000075">
+          <assertion class="***** TTTT *****">
+      <CMP> M1078 N0408</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,4,7,14,23,42,76,139,258,482,907,1717,3269,6257,12020,23171,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 44762,86683,168233,327053,636837,1241723,2424228,4738426,9271299,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 18157441,35591647,69820626,137068908,269270450,529312241,1041093048,2048825748,4034059456</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of positive integers &lt;= 2^n of form 2 x^2 + 3 y^2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Shanks and L. P. Schmid, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1966-0210678-1&quot;&gt;Variations on a theorem of Landau. Part I&lt;/a&gt;, Math. Comp., 20 (1966), 551-569.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Qua#quadpop&quot;&gt;Index entries for sequences related to populations of quadratic forms&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(3)=4 since 2^3=8 and 2=2*1^2, 3=3*1^2, 5=2*1^2+3*1^2, 8=2*2^2.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;0,0,sum(k=1,2^n,0&lt;sum(y=0,sqrtint(k\3),issquare((k-3*y^2)/2))))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Python)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import math</CMP>
+    </omtext><omtext class="program">
+      <CMP> def A000075(n):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....return len(set([2*x**2+3*y**2 for x in range(1+int(math.floor(2**((n-1)/2)))) for y in range(1+int(math.floor(math.sqrt((2**n-2*x**2)/3)))) if 0 &lt; 2*x**2+3*y**2 &lt;= 2**n]))</CMP>
+    </omtext><omtext class="program">
+      <CMP> # _Chai Wah Wu_, Aug 20 2014</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

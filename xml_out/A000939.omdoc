@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000939.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000939">
+          <assertion class="***** TTTT *****">
+      <CMP> M1280 N0491</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,14,54,332,2246,18264,164950,1664354,18423144,222406776,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2905943328,40865005494,615376173184,9880209206458,168483518571798,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3041127561315224,57926238289970076,1161157777643184900,24434798429947993054,538583682082245127336</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of inequivalent n-gons.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Here two n-gons are said to be equivalent if they differ in starting point, orientation, or by a rotation (but not by a reflection - for that see A000940)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. W. Golomb and L. R. Welch, On the enumeration of polygons, Amer. Math. Monthly, 67 (1960), 349-353.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000939/b000939.txt&quot;&gt;Table of n, a(n) for n=3..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Stoimenow, &lt;a href=&quot;http://www.math.toronto.edu/stoimeno/bound.ps.gz&quot;&gt;Enumeration of chord diagrams and an upper bound for Vassiliev invariants&lt;/a&gt;, J. Knot Theory Ramifications, 7 (1998), no. 1, 93-114.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         For formula see Maple lines.
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> with(numtheory); # for n odd: Ed:=proc(n) local t1,d; t1:=0; for d from 1 to n do if n mod d = 0 then t1:=t1+phi(n/d)^2*d!*(n/d)^d; fi; od: t1/(2*n^2); end;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # for n even: Ee:=proc(n) local t1,d; t1:=2^(n/2)*(n/2)*(n/2)!; for d from 1 to n do if n mod d = 0 then t1:=t1+phi(n/d)^2*d!*(n/d)^d; fi; od: t1/(2*n^2); end; A000939:=n-&gt; if n mod 2 = 0 then Ee(n) else Ed(n); fi;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := (t = If[OddQ[n], 0, 2^(n/2)*(n/2)*(n/2)!];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Do[If[Mod[n,d]==0 , t = t+EulerPhi[n/d]^2*d!*(n/d)^d], {d, 1, n}]; t/(2*n^2)); a /@ Range[3, 24]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (* _Jean-François Alcover_, May 19 2011, after Maple prog. *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000940. Bisections give A094154, A094155.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> For star polygons see A231091.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Pab Ter (pabrlos(AT)yahoo.com), May 05 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

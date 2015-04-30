@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000229.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000229">
+          <assertion class="***** TTTT *****">
+      <CMP> M2684 N1074</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,7,23,71,311,479,1559,5711,10559,18191,31391,422231,701399,366791,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3818929,9257329,22000801,36415991,48473881,175244281,120293879,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 427733329,131486759,3389934071,2929911599,7979490791,36504256799,23616331489,89206899239,121560956039</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) is the least number such that the n-th prime is the least quadratic nonresidue for a(n) (a(n) is always a prime).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n&gt;1, a(n) = prime(k), where k is the smallest number such that A053760(k) = prime(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> One could make a case for setting a(1)=2, but a(1)=3 seems more in keeping with the spirit of the sequence.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000229/b000229.txt&quot;&gt;Table of n, a(n) for n = 1..38&lt;/a&gt; (from the web page of Tomás Oliveira e Silva)</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. J. Godwin, &lt;a href=&quot;http://dx.doi.org/10.1017/S0305004100039025&quot;&gt;On the least quadratic non-residue&lt;/a&gt;, Proc. Camb. Phil. Soc., 61 (3) (1965), 671-672.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. J. Hanson, G. Ortiz, A. Sabry and Y.-T. Tai, &lt;a href=&quot;http://arxiv.org/abs/1305.3292&quot;&gt;Discrete Quantum Theories&lt;/a&gt;, arXiv preprint arXiv:1305.3292, 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. J. Hanson, G. Ortiz, A. Sabry, Y.-T. Tai, &lt;a href=&quot;http://www.cs.indiana.edu/~sabry/papers/saskatoon-talk.pdf&quot;&gt;Discrete quantum theories&lt;/a&gt;, (a different version). (To appear in J. Phys. A: Math. Theor., 2014). http://www.cs.indiana.edu/~sabry/papers/saskatoon-talk.pdf</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tomás Oliveira e Silva, &lt;a href=&quot;http://sweet.ua.pt/tos/p-roots.html&quot;&gt;Least primitive root of prime numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hans Salié, &lt;a href=&quot;http://dx.doi.org/10.1002/mana.19650290109&quot;&gt;Uber die kleinste Primzahl, die eine gegebene Primzahl als kleinsten positiven quadratischen Nichtrest hat&lt;/a&gt;, Math. Nachr. 29 (1965) 113-114.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(2)=7 because the second prime is 3 and 3 is the least quadratic nonresidue for 7, 14, 17, 31, 34, ... and 7 is the least of these.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A025021, A053760. For records see A133435.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Differs from A002223, A045535 at 12th term.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,hard,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition corrected by Melvin J. Knight (MELVIN.KNIGHT(AT)ITT.COM), Dec 08 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

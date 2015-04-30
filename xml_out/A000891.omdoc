@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000891.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000891">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,20,175,1764,19404,226512,2760615,34763300,449141836,5924217936,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 79483257308,1081724803600,14901311070000,207426250094400,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2913690606794775,41255439318353700,588272005095043500</CMP>
+    </assertion><omtext class="name">
+      <CMP> (2*n)!*(2*n+1)! / (n! * (n+1)!)^2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of parallelogram polyominoes having n+1 columns and n+1 rows. - _Emeric Deutsch_, May 21 2003</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of tilings of a &lt;n,2,n&gt; hexagon.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = number of non-crossing partitions of [2n+1] into n+1 blocks. For example, a[1] counts 13-2, 1-23, 12-3. - _David Callan_, Jul 25 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)=A001700(n)*A000108(n) =(1/2)*A000984(n+1)*A000108(n). - _Zerinvary Lajos_, Jun 06 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The number of returning walks of length 2n on the upper half of a square lattice, since a(n)=Sum_{k=0..2n}Binomial(2n,k)A126120(k)A126869(n-k). - _Andrew V. Sutherland_, Mar 24 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For sequences counting walks in the upper half-plane starting from the origin and finishing at the lattice points (0,m) see A145600 (m = 1), A145601 (m = 2), A145602 (m = 3) and A145603 (m = 4). - _Peter Bala_, Oct 14 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n&gt;0, A000891(n)/(n+2) = A000356 starting (1, 5, 35, 294,...). - _Gary W. Adamson_, Apr 08 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The number of proper mergings of two n-chains. - _Henri Mühle_, Aug 17 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A000894(n) / (n+1) = A248045(n+1) / A000142(n+1). - _Reinhard Zumkeller_, Sep 30 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. M. Borwein and P. B. Borwein, Pi and the AGM, Wiley, 1987, p. 8.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. R. Hansen, A Table of Series and Products, Prentice-Hall, Englewood Cliffs, NJ, 1975, p. 94.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000891/b000891.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Barcucci, A. Frosini and S. Rinaldi, &lt;a href=&quot;http://dx.doi.org/10.1016/j.disc.2005.01.006&quot;&gt;On directed-convex polyominoes in a rectangle&lt;/a&gt;, Discr. Math., 298 (2005). 62-78.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Paul Barry, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL9/Barry/barry91.html&quot;&gt;On Integer-Sequence-Based Constructions of Generalized Pascal Triangles&lt;/a&gt;, J. Integer Sequ., Vol. 9 (2006), Article 06.2.4.</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Y. C. Chen, S. X. M. Pang, E. X. Y. Qu and R. P Stanley, &lt;a href=&quot;http://arxiv.org/abs/0804.2930&quot;&gt;Pairs of Noncrossing Free Dyck Paths and Noncrossing Partitions&lt;/a&gt;, arXiv:0804.2930, Discrete Math., 309 (2009), 2834-2838.</CMP>
+    </omtext><omtext class="link">
+      <CMP> I. Marin and E. Wagner, &lt;a href=&quot;http://arxiv.org/abs/1203.5981&quot;&gt;A cubic defining algebra for the Links-Gould polynomial&lt;/a&gt;. arXiv preprint arXiv:1203.5981, 2012. - From _N. J. A. Sloane_, Sep 21 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Mühle, &lt;a href=&quot;http://arxiv.org/abs/1206.3922&quot;&gt;Counting Proper Mergings of Chains and Antichains&lt;/a&gt;, arXiv:1206.3922.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="E" cd="A000891"/>
+      <OMA><OMS name="times"/><OMI>16</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMS name="Pi"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMOBJ> where E() is the elliptic integral of the second kind.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="F2"/><OMI>1</OMI></OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMOBJ>; 2,2; 16*x)= (1 - 2F1(-1/2,<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>; 16*x)) / (4*x).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: Sum_{n&gt;=0} a(n)*x^(2*n)/(2*n)! = BesselI(0, 2*x) * BesselI(1, 2*x) / x. - _Michael Somos_, Jun 22 2005
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = A001263(2*n+1,n+1) = binomial(2*n+1,n+1)*binomial(2*n+1,n)/(2*n+1) (central members of odd numbered rows of Narayana triangle).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.: If G_N(x)=1+sum('((2*k)!*(2*k+1)!*x^k)/(((k!)*((k+1)!))^2)', 'k'=1..N),<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="G_N" cd="A000891"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>12</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="G" cd="A000891"/>
+      <OMI>0</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>12</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="G" cd="A000891"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>16</OMI><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="k"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>32</OMI><OMV name="x"/><OMV name="k"/></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="k"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="k"/></OMA><OMA><OMS name="times"/><OMI>12</OMI><OMV name="x"/></OMA><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>2</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="G" cd="A000891"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>; (continued fraction). - _Sergei N. Gladkovskii_, Nov 24 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMV name="a"/><OMV name="n"/></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMV name="a"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _R. J. Mathar_, Dec 03 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000891"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A005558"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Mark van Hoeij_, Aug 20 2014
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f. = 1 + 3*x + 20*x^2 + 175*x^3 + 1764*x^4 + 19404*x^5 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(combstruct): bin := {B=Union(Z,Prod(B,B))} :seq(1/2*binomial(2*i,i)*(count([B,bin,unlabeled],size=i)), i=1..18) ; # _Zerinvary Lajos_, Jun 06 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := If[ n == -1, 0, Binomial[2 n + 1, n]^2 / (2 n + 1)]; (* _Michael Somos_, May 28 2014 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ (1 - Hypergeometric2F1[ -1/2, 1/2, 1, 16 x]) / (4 x), {x, 0, n}]; (* _Michael Somos_, May 28 2014 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := If[ n &lt; 0, 0, (2 n)! SeriesCoefficient[ BesselI[0, 2 x] BesselI[1, 2 x] / x, {x, 0, 2 n}]]; (* _Michael Somos_, May 28 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = binomial(2*n+1, n)^2 / (2*n + 1)}; /* _Michael Somos_, Jun 22 2005 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Factorial(2*n)*Factorial(2*n+1) / (Factorial(n) * Factorial(n+1))^2: n in [0..20]]; // _Vincenzo Librandi_, Aug 15 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000891 n = a001263 (2 * n - 1) n  -- _Reinhard Zumkeller_, Oct 10 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A010370(n+1)=-4a(n).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A038535.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A145600, A145601, A145602, A145603. - _Peter Bala_, Oct 14 2008</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000356.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP>  Cf. A000142, A000894, A248045.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Andrew V. Sutherland_, Mar 24 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Legend for G.f. formula plus another hypergeometric variation from _Olivier Gérard_, Feb 16 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

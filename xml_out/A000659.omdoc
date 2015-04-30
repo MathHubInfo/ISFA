@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000659.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000659">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,2,5,34,17179869189</CMP>
+    </omtext><omtext class="name">
+      <CMP> a(n) = 2^a(n-1) + a(n-2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The next term has 5171655948 digits. [From _Franklin T. Adams-Watters_, Jul 03 2009]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Join[{a=0,b=0},Table[c=2^b+a;a=b;b=c,{n,5}]] (* _Vladimir Joseph Stephan Orlovsky_, Apr 13 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000643.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000241.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000241">
+          <assertion class="***** TTTT *****">
+      <CMP> M2772 N1115</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,1,3,9,18,36,60,100,150,225,315,441,588</CMP>
+    </omtext><omtext class="name">
+      <CMP> Crossing number of complete graph with n nodes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It was conjectured by A. Hill in 1958 (see Guy 1960 and Harary-Hill 1963) that a(n) = floor(n/2)*floor((n-1)/2)*floor((n-2)/2)*floor((n-3)/2)/4 (see A028723). This is also sometimes referred to as Guy's conjecture. - _N. J. A. Sloane_, Jan 21 2015</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Verified for n = 11, 12 by Shengjun Pan and R. Bruce Richter, in &quot;The Crossing Number of K_11 is 100&quot;, J. Graph Theory 56 (2) (2007) 128-134.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The values for n &gt;= 13 are only conjectural.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also the sum of the dimensions of the irreducible representations of su(3) that first occur in the (n-5)-th tensor power of the tautological representation. - James Dolan (jdolan(AT)math.ucr.edu), Jun 02 2003</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Paul Barry_, Oct 02 2008: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Another version of the conjecture is that a(n)=C(floor(n/2),2)*C(floor((n-1)/2),2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> We conjecture that this sequence is also given by one half of the third coefficient of the denominator polynomial of the n-th convergent to the g.f. of n!.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (End)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From the Lackenby reference: &quot;One of the most basic questions in knot theory remains unresolved: is crossing number additive under connected sum? In other words, does the equality c(K1#K2) = c(K1) + c(K2) always hold, where c(K) denotes the crossing number of a knot K and K1#K2 is the connected sum of two (oriented) knots K1 and K2? Theorem 1.1. Let K1, . . .,Kn be oriented knots in the 3-sphere. Then (c(K1) + . . . + c(Kn)) / 152 &lt;= c(K1# . . . #Kn) &lt;= c(K1) + . . . + c(Kn).&quot; - _Jonathan Vos Post_, Aug 26 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From the Pan and Richter reference: 0.8594 Z(n) &lt;= a(n) &lt;= Z(n), where Z(n) is the conjectured formula (Richter and Thomassen 1997, de Klerk et al. 2007). - _Danny Rorabaugh_, Mar 12 2015</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Ábrego, Bernardo M.; Aichholzer, Oswin; Fernández-Merchant, Silvia; Ramos, Pedro; Salazar, Gelasio. The 2-Page Crossing Number of K_n. Discrete Comput. Geom. 49 (2013), no. 4, 747-777. MR3068573</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. de Klerk, D. V. Pasechnik, and A. Schrijver, &quot;Reduction of Symmetric Semidefinite Programs Using the Regular *-Representation.&quot; Math Program. 109 (2007) 613-624.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Jean-Paul Delahaye, in Pour La Science, Feb. 2013, #424, Logique et Calcul. Le problème de la fabrique de briques. (The problem of the brick factory), in French.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, The crossing number of the complete graph, Bull. Malayan Math. Soc., Vol. 7, pp. 68-72, 1960.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Harary, Frank, and Anthony Hill. &quot;On the number of crossings in a complete graph.&quot; Proceedings of the Edinburgh Mathematical Society (Series 2) 13.04 (1963): 333-338.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. L. Saaty, The number of intersections in complete graphs, Engrg. Cybernetics 9 (1971), no. 6, 1102-1104 (1972).; translated from Izv. Akad. Nauk SSSR Tehn. Kibernet. 1971, no. 6, 151-154 (Russian). Math. Rev. 58 #21749.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. Thomassen, Embeddings and minors, pp. 301-349 of R. L. Graham et al., eds., Handbook of Combinatorics, MIT Press.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Balko, Martin, Radoslav Fulek, and Jan Kynčl. &lt;a href=&quot;http://arxiv.org/abs/1312.3679&quot;&gt;Crossing numbers and combinatorial characterization of monotone drawings of K_n&lt;/a&gt;, arXiv preprint arXiv:1312.3679 (2013).  Also Discrete Computat. Geom., 53 (2015), 107-143.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Drago Bokal, Gasper Fijavz and David R. Wood, &lt;a href=&quot;http://arXiv.org/abs/math/0609707&quot;&gt;The Minor Crossing Number of Graphs with an Excluded Minor&lt;/a&gt;, math.CO/0609707.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Dolan et al., &lt;a href=&quot;http://mathforum.org/epigone/sci.math.research/stroblequy&quot;&gt;su(3) and Zarankiewicz's conjecture&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Erdos and R. K. Guy, &lt;a href=&quot;http://www.jstor.org/stable/2319261&quot;&gt;Crossing Number Problems &lt;/a&gt;The American Mathematical Monthly, Vol. 80, No. 1. (1973), pp. 52-58.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Paul C. Kainen, &lt;a href=&quot;http://dx.doi.org/10.1016/S0021-9800(68)80013-4&quot;&gt;On a problem of P. Erdos&lt;/a&gt;, J. Combinatorial Theory 51968 374--377. MR0231744 (38 #72)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Marc Lackenby, &lt;a href=&quot;http://arxiv.org/abs/0805.4706&quot;&gt;The crossing number of composite knots&lt;/a&gt;, arXiv:0805.4706 [math.GT], 2009. [From _Jonathan Vos Post_, Aug 26 2009].</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. McQuillan and R. B. Richter, &lt;a href=&quot;http://www.jstor.org/stable/10.4169/000298910X480117&quot;&gt;A parity theorem for drawings of complete and bipartite graphs&lt;/a&gt;, Amer. Math. Monthly, 117 (2010), 267-273.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Owens, &lt;a href=&quot;http://dx.doi.org/10.1109/TCT.1971.1083266&quot;&gt;On the biplanar crossing number&lt;/a&gt;, IEEE Trans. Circuit Theory, 18 (1971), 277-280.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Shengjun Pan and R. Bruce Richter, &lt;a href=&quot;http://dx.doi.org/10.1002/jgt.20249&quot;&gt;The Crossing Number of K_11 is 100&lt;/a&gt;, J. Graph Theory 56 (2) (2007) 128-134.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. B. Richter and C. Thomassen, &lt;a href=&quot;http://www.jstor.org/stable/2974980&quot;&gt;Relations Between Crossing Numbers of Complete and Complete Bipartite Graphs&lt;/a&gt;, Amer. Math. Monthly 104 (1997) 131-137.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Thomas L. Saaty, &lt;a href=&quot;http://dx.doi.org/10.1016/0097-3165(71)90024-0&quot;&gt;On polynomials and crossing numbers of complete graphs&lt;/a&gt;, J. Combinatorial Theory Ser. A 10 (1971), 183--184. MR0291013 (45 #107)</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. L. Saaty, &lt;a href=&quot;http://www.pnas.org/cgi/reprint/52/3/688.pdf&quot;&gt;The Minimum Number Of Intersections In Complete Graphs&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/GraphCrossingNumber.html&quot;&gt;Graph Crossing Number.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/GuysConjecture.html&quot;&gt;Guy's Conjecture.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Weisstein, &lt;a href=&quot;http://mathworld.wolfram.com/ZarankiewiczsConjecture.html&quot;&gt;Zarankiewicz's Conjecture.html&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000241"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA><OMI>64</OMI>
+    </OMA><OMV name="Guy"/></OMA>
+    </OMA>
+    </OMOBJ>, Kainen).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Empirical g.f.: -x^5*(1+x+x^2)/(x+1)^3/(x-1)^5, which is the same as the conjectured formula of A. Hill. - _Simon Plouffe_, Feb 06 2013
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> a[n_] := 1/4*Floor[n/2]*Floor[(n-1)/2]*Floor[(n-2)/2]*Floor[(n-3)/2]; Table[a[n], {n, 0, 16}] (* _Jean-François Alcover_, Feb 06 2013, after Hill's conjectured formula *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> It is conjectured that A000241 and A028723 agree.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A007333, A014540, A030179, A121021, A191928.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Bokal et al. link from _Jonathan Vos Post_, Dec 08 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Entry revised by _N. J. A. Sloane_, Jan 21 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

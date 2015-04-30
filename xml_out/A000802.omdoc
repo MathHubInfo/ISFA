@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000802.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000802">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,7,11,19,34,50,82,146,274,529,785,1297,2321,4369,8465,16657,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 33041,65809,131344,196880,327952,590096,1114384,2162960,4260112,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8454416,16843024,33620240,67174672,134283536,268501264,536936720,1073807632,2147549456,4295033104</CMP>
+    </assertion><omtext class="name">
+      <CMP> Maximal number of states in deterministic finite automaton accepting a language consisting of some words of length n.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Champarnaud, J.-M.; Pin, J.-E.; A maxmin problem on finite automata. Discrete Appl. Math. 23 (1989), no. 1, 91-96.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000802"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="min" cd="A000802"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>. - _Sean A. Irvine_, Jun 24,<OMOBJ>
+      <OMI>2011</OMI>
+    </OMOBJ>
+      </CMP>
+      </omdoc:p><omtext class="program">
+      <CMP> (PARI) a(n) = sum(k=0, n, min(2^k,2^(2^(n-k))-1)) \\ (works while n&lt;29) _Michel Marcus_, May 25 2013</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jeffrey Shallit_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(34)-a(36) from _Sean A. Irvine_, Jun 23 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

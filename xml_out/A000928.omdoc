@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000928.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000928">
+          <assertion class="***** TTTT *****">
+      <CMP> M5260 N2292</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 37,59,67,101,103,131,149,157,233,257,263,271,283,293,307,311,347,353,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 379,389,401,409,421,433,461,463,467,491,523,541,547,557,577,587,593,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 607,613,617,619,631,647,653,659,673,677,683,691,727,751,757,761,773,797,809,811,821,827,839,877,881,887,929,953,971,1061</CMP>
+    </assertion><omtext class="name">
+      <CMP> Irregular primes: p is regular if and only if the numerators of the Bernoulli numbers B_2, B_4, ..., B_{p-3} (A000367) are not divisible by p.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A prime is irregular if and only if the integer Sum_{j=1..p-1} cot^(r)(j*Pi/p)*cot(j*Pi/p) is divisible by p for some even r &lt;= p-5. (See G. Almkvist 1994.) - _Peter Luschny_, Jun 24 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Jensen proved in 1915 that there are infinitely many irregular primes. It is not known if there are infinitely many regular primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> &quot;The pioneering mathematician Kummer, over the period 1847-1850, used his profound theory of cyclotomic fields to establish a certain class of primes called 'regular' primes. ... It is known that there exist an infinity of irregular primes; in fact it is a plausible conjecture that only an asymptotic fraction 1/Sqrt(e) ~ 0.6 of all primes are regular.&quot; [Ribenboim]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Almkvist, Wilf's conjecture and a generalization, In: The Rademacher legacy to mathematics, 211-233, Contemp. Math., 166, Amer. Math. Soc., Providence, RI, 1994.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Z. I. Borevich and I. R. Shafarevich, Number Theory. Academic Press, NY, 1966, pp. 377, 425-430 (but there are errors in the tables).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. E. Crandall, Mathematica for the Sciences, Addison-Wesley Publishing Co., Redwood City, CA, 1991, pp. 248-255.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J.-M. De Koninck, Ces nombres qui nous fascinent, Entry 59, p. 21, Ellipses, Paris 2008.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. M. Edwards, Fermat's Last Theorem, Springer, 1977, see p. 244.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Jensen, K. L. &quot;Om talteoretiske Egenskaber ved de Bernoulliske Tal.&quot; Nyt Tidskrift für Math. Afdeling B 28 (1915), pp. 73-83.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. Johnson, On the vanishing of the Iwasawa invariant {mu}_p for p &lt; 8000, Math. Comp., 27 (1973), 387-396 (points out that 1381, 1597, 1663, 1877 were omitted from earlier lists).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. Johnson, Irregular prime divisors of the Bernoulli numbers, Math. Comp. 28 (1974), 653-657.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. H. Lehmer et al., An application of high-speed computing to Fermat's last theorem, Proc. Nat. Acad. Sci. USA, 40 (1954), 25-33 (but there are errors).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Luca, A. Pizarro-Madariaga, C. Pomerance, On the counting function of irregular primes, https://math.dartmouth.edu/~carlp/irreg.pdf, 2014.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Mestrovic, On a Congruence Modulo n^3 Involving Two Consecutive Sums of Powers, Journal of Integer Sequences, Vol. 17 (2014), 14.8.4.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Neukirch, Algebraic Number Theory, Springer, 1999, p. 38.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. Ribenboim, The Book of Prime Number Records. Springer-Verlag, NY, 2nd ed., 1989, p. 257.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. C. Washington, Introduction to Cyclotomic Fields, Springer, p. 350.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000928/b000928.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Abiessu, &lt;a href=&quot;http://everything2.net/index.pl?node_id=1214159&amp;amp;displaytype=printable&amp;amp;lastnode_id=1214159&quot;&gt;Irregular prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Banderier, &lt;a href=&quot;http://algo.inria.fr/banderier/Recipro/node38.html&quot;&gt;Nombres premiers reguliers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. P. Buhler, R. E. Crandall, R. Ernvall et al., &lt;a href=&quot;http://dx.doi.org/10.1006/jsco.1999.1011&quot;&gt;Irregular primes and cyclotomic invariants to 12 Million&lt;/a&gt;,J. Symbolic Computation 31 (2001) 89-96.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. P. Buhler, R. E. Crandall and R. W. Sompolski, &lt;a href=&quot;http://links.jstor.org/sici?sici=0025-5718%28199210%2959%3A200%3C717%3AIPTOM%3E2.0.CO%3B2-Q&quot;&gt;Irregular primes to one million&lt;/a&gt;, Math. Comp. 59 no 200 (1992) 717-722.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joe P. Buhler and David Harvey, &lt;a href=&quot;http://www.cims.nyu.edu/~harvey/irregular/&quot;&gt;Irregular primes to 163 million&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joe P. Buhler and David Harvey, &lt;a href=&quot;http://arxiv.org/abs/0912.2121&quot;&gt;Irregular primes to 163 million&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, The Prime Glossary, &lt;a href=&quot;http://primes.utm.edu/glossary/page.php/Regular.html&quot;&gt;Regular prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, the top twenty, &lt;a href=&quot;http://primes.utm.edu/top20/page.php?id=26&quot;&gt;Irregular Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> V. A. Demyanenko, &lt;a href=&quot;http://eom.springer.de/I/i052670.htm&quot;&gt;Irregular prime number&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Everest, A. J. van der Poorten, Y. Puri and T. Ward, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;Integer Sequences and Periodic Points&lt;/a&gt;, Journal of Integer Sequences, Vol. 5 (2002), Article 02.2.3</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. C. Kellner, &lt;a href=&quot;http://www.ams.org/jourcgi/jrnl_toolbar_nav/mcom_all&quot;&gt;On Irregular Prime Power Divisors of the Bernoulli Numbers&lt;/a&gt;, Math. Comp. 75 (2006) PII S0025-5718(06)01887-4</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. H. Lehmer et al., &lt;a href=&quot;http://www.pnas.org/cgi/reprint/40/1/25.pdf&quot;&gt;An Application Of High-Speed Computing To Fermat's Last Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Lin and L. Zhipeng, &lt;a href=&quot;http://arXiv.org/abs/math.HO/0408082&quot;&gt;On Bernoulli numbers and its properties&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Peter Luschny, &lt;a href=&quot;http://www.luschny.de/math/primes/irregular.html&quot;&gt;The Computation of Irregular Primes.&lt;/a&gt; [From _Peter Luschny_, Apr 20 2009]</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. S. Vandiver, &lt;a href=&quot;http://www.pnas.org/cgi/reprint/18/9/594.pdf&quot;&gt;Note On The Divisors Of The Numerators Of Bernoulli's Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. S. Vandiver, &lt;a href=&quot;http://www.pnas.org/cgi/reprint/12/2/106.pdf&quot;&gt;Summary Of Results And Proofs Concerning Fermat's Last Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. S. Vandiver, &lt;a href=&quot;http://www.pnas.org/cgi/reprint/12/12/767.pdf&quot;&gt;Summary Of Results And Proofs Concerning Fermat's Last Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. S. Vandiver, &lt;a href=&quot;http://www.pnas.org/cgi/reprint/15/1/43.pdf&quot;&gt;Summary Of Results And Proofs Concerning Fermat's Last Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. S. Vandiver, &lt;a href=&quot;http://www.pnas.org/cgi/reprint/15/2/108.pdf&quot;&gt;Summary Of Results And Proofs On Fermat's Last Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. S. Vandiver, &lt;a href=&quot;http://www.pnas.org/cgi/reprint/16/4/298.pdf&quot;&gt;Summary Of Results And Proofs On Fermat's Last Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. S. Vandiver, &lt;a href=&quot;http://www.pnas.org/cgi/reprint/17/12/661.pdf&quot;&gt;Summary Of Results And Proofs On Fermat's Last Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. S. Vandiver, &lt;a href=&quot;http://www.pnas.org/cgi/reprint/40/8/732.pdf&quot;&gt;Examination Of Methods Of Attack On The Second Case Of Fermat's Last Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. S. Wagstaff, Jr, &lt;a href=&quot;http://links.jstor.org/sici?sici=0025-5718%28197804%2932%3A142%3C%3E1.0.CO%3B2-U&quot;&gt;The Irregular Primes to 125000&lt;/a&gt;, Math. Comp. 32 no 142 (1978) 583-592</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/IrregularPrime.html&quot;&gt;Irregular Prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/IntegerSequencePrimes.html&quot;&gt;Integer Sequence Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Be#Bernoulli&quot;&gt;Index entries for sequences related to Bernoulli numbers.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Be#Bernoulli&quot;&gt;Bernoulli numbers, irregularity index of primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000928_list := proc(len)</CMP>
+    </omtext><omtext class="maple">
+      <CMP> local ab, m, F, p, maxp; F := {};</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for m from 2 by 2 to len do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>    p := nextprime(m+1);</CMP>
+    </omtext><omtext class="maple">
+      <CMP>    ab := abs(bernoulli(m));</CMP>
+    </omtext><omtext class="maple">
+      <CMP>    maxp := min(ab, len);</CMP>
+    </omtext><omtext class="maple">
+      <CMP>    while p &lt;= maxp do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       if ab mod p = 0</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       then F := F union {p} fi;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       p := nextprime(p);</CMP>
+    </omtext><omtext class="maple">
+      <CMP>    od;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> od;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> sort(convert(F,list)) end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000928_list(1000); # _Peter Luschny_, Apr 25 2011</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> fQ[p_] := Block[{k = 1}, While[ 2k &lt;= p-3 &amp;&amp; Mod[ Numerator@ BernoulliB[ 2k], p] != 0, k++]; 2k &lt;= p-3]; Select[ Prime@ Range@ 137, fQ] (* _Robert G. Wilson v_, Jun 25 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=local(p);if(n&lt;1,0,p=a(n-1)+(n==1);while(p=nextprime(p+2), forstep(i=2,p-3,2,if(numerator(bernfrac(i))%p==0,break(2))));p) /* _Michael Somos_, Feb 04 2004 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007703, A061576.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A091887 (irregularity index of the n-th irregular prime).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Johnson (1973) gives a list up to 8000.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

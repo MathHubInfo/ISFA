@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000473.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000473">
+          <assertion class="***** TTTT *****">
+      <CMP> M4953 N2122</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 14,386,5868,65954,614404,5030004,37460376,259477218,1697186964,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10596579708,63663115880,370293754740,2095108370600,11574690111400,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 62629794691632,332742342741090,1739371969822260,8961709528660140,45576855706440520,229087231033907708,1139285054092356600,5611104308926917080,27390892247090716240,132623307003710514420,637333229992836181896,3041531242991820934488,14421693905846535650832,67972746771087135284136,318584265673384315590608,1485401635737983585270352,6891877654051649398771808,31829958366568330959866722,146372173012304760045034356,670368609014709308643509388,3058448075196556941693359112,13903120046858488772927497260</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of genus 0 rooted maps with 5 faces with n vertices</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. R. S. Walsh, Combinatorial Enumeration of Non-Planar Maps. Ph.D. Dissertation, Univ. of Toronto, 1971.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tutte, W. T.; &lt;a href=&quot;http://dx.doi.org/10.1090/S0002-9904-1968-11877-4&quot;&gt;On the enumeration of planar maps&lt;/a&gt;. Bull. Amer. Math. Soc. 74 1968 64-74.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. R. S. Walsh and A. B. Lehman, &lt;a href=&quot;http://dx.doi.org/10.1016/0095-8956(72)90056-1&quot;&gt;Counting rooted maps by genus&lt;/a&gt;, J. Comb. Thy B13 (1972), 122-141 and 192-218.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="x" cd="A000473"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A000473"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>17</OMI><OMA><OMS name="times"/><OMI>16</OMI><OMV name="x"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>10</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A000473"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>11</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Sean A. Irvine_, Nov 14 2010
+      </CMP>
+      </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 4,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Nov 14 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

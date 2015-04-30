@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000640.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000640">
+          <assertion class="***** TTTT *****">
+      <CMP> M3466 N1410</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,4,13,42,131,402,1218,3657,10899,32298,95257,279844,819390,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2392392,6967956,20250974,58744089,170118980,491913999,1420493862,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4096940530,11803172152,33970257473,97678027311,280624328431,805587723862</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of paraffins C_n H_{2n-1} XYZ with n carbon atoms.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Polya, Algebraische Berechnung der Anzahl der Isomeren einiger organischer Verbindungen, Zeit. f. Kristall., 93 (1936), 415-443.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000640/b000640.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Frederic Chyzak, &lt;a href=&quot;http://algo.inria.fr/libraries/autocomb/Polya-html/Polya.html&quot;&gt;Enumerating alcohols and other classes of chemical molecules&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000640"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMR xref="A000598"/>
+      <OMV name="x"/>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMR xref="A000642"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> The following Maple commands are taken from the Chyzak web site:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(combstruct);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> gramm_Alkyl:=Alkyl=Prod(Carbon,Set(Alkyl,card&lt;=3)),Carbon=Atom:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> specs_Alkyl:=[Alkyl,{gramm_Alkyl},unlabeled]:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> gramm_S1_Alkyl:=S1_Alkyl[X]=Union(Prod(Carbon,S1_Alkyl[X],Set(Alkyl,card&lt;=2)),Prod(Prod(Carbon,X),Set(Alkyl,card&lt;=2))),X=Epsilon:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> specs_S1_Alkyl:=[S1_Alkyl[X],{gramm_S1_Alkyl,gramm_Alkyl},unlabeled]:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> gramm_S2_Alkyl:=S2_Alkyl[X,Y]=Union(Prod(Carbon,S2_Alkyl[X,Y], Set(Alkyl,card&lt;=2)),Prod(Carbon,Union(S1_Alkyl[X],X),Union(S1_Alkyl[Y],Y),Set(Alkyl,card&lt;=1))):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> specs_S2_Alkyl:=[S2_Alkyl[X,Y],{gramm_S2_Alkyl,gramm_S1_Alkyl,op(subs(X=Y,[gramm_S1_Alkyl])),gramm_Alkyl},unlabeled]:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> [seq(count(specs_S2_Alkyl,size=i),i=0..50)];</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000598, A000642.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

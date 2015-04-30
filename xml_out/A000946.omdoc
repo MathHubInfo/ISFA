@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000946.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000946">
+          <assertion class="***** TTTT *****">
+      <CMP> M0864 N0330</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,7,43,139,50207,340999,2365347734339,4680225641471129,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1368845206580129,889340324577880670089824574922371,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 20766142440959799312827873190033784610984957267051218394040721</CMP>
+    </assertion><omtext class="name">
+      <CMP> Euclid-Mullin sequence: a(1) = 2, a(n+1) is largest prime factor of Product_{k=1..n} a(k) + 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Cox and van der Poorten show that 5, 11, 13, 17, ... are not members of this sequence. - _Charles R Greathouse IV_, Jul 02 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Booker's abstract claims: &quot;We consider the second of Mullin's sequences of prime numbers related to Euclid's proof that there are infinitely many primes. We show in particular that it omits infinitely many primes, confirming a conjecture of Cox and van der Poorten.&quot;</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy and R. Nowakowski, Discovering primes with Euclid, Delta (Waukesha), Vol. 5, pp. 49-63, 1975.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Des MacHale, Infinitely many proofs that there are infinitely many primes, Math. Gazette, 97 (No. 540, 2013), 495-498.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. Naur, Mullin's sequence of primes is not monotonic, Proc. Amer. Math. Soc., 90 (1984), 43-44.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Pollack, Paul; Treviño, Enrique. The Primes that Euclid Forgot. Amer. Math. Monthly 121 (2014), no. 5, 433--437. MR3193727</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. S. Wagstaff, Jr., Computing Euclid's primes, Bull. Institute Combin. Applications, 8 (1993), 23-32.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000946/b000946.txt&quot;&gt;Table of n, a(n) for n = 1..14&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Andrew R. Booker, &lt;a href=&quot;http://www.integers-ejcnt.org/vol12a.html&quot;&gt;On Mullin's second sequence of primes&lt;/a&gt;, Integers, 12A (2012), article A4.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Cobeli and A. Zaharescu, &lt;a href=&quot;http://rms.unibuc.ro/bulletin/pdf/56-1/PromenadePascalPart1.pdf&quot;&gt;Promenade around Pascal Triangle-Number Motives&lt;/a&gt;, Bull. Math. Soc. Sci. Math. Roumanie, Tome 56(104) No. 1, 2013, pp. 73-98.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. D. Cox and A. J. van der Poorten, &lt;a href=&quot;http://dx.doi.org/10.1017/S1446788700006236&quot;&gt;On a sequence of prime numbers&lt;/a&gt;, Journal of the Australian Mathematical Society 8 (1968), pp. 571-574.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Mersenne Forum, &lt;a href=&quot;http://mersenneforum.org/showthread.php?t=17884&quot;&gt;The second Euclid-Mullin sequence&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Mestrovic, &lt;a href=&quot;http://arxiv.org/abs/1202.3670&quot;&gt;Euclid's theorem on the infinitude of primes: a historical survey of its proofs (300 BC--2012) and another new proof&lt;/a&gt;, arXiv preprint arXiv:1202.3670, 2012 - From N. J. A. Sloane, Jun 13 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Pollack and E. Trevino, &lt;a href=&quot;http://www.math.uga.edu/~pollack/mullin.pdf&quot;&gt;The primes that Euclid forgot&lt;/a&gt;, 2013. - From _N. J. A. Sloane_, Feb 20 2013</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[1] = 2; f[n_] := f[n] = FactorInteger[Product[f[i], {i, 1, n - 1}] + 1][[-1, 1]]; Table[f[n], {n, 1, 10}] (* _Alonso del Arte_, Jun 25 2011 based on the program given for A000945 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000945, A005265, A005266.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Andrew R. Booker_, Mar 13 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

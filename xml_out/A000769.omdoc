@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000769.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000769">
+          <assertion class="***** TTTT *****">
+      <CMP> M3252 N1313</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,4,5,11,22,57,51,156,158,566,499,1366,3978,5900,7094,19204</CMP>
+    </omtext><omtext class="name">
+      <CMP> No-3-in-line problem: number of inequivalent ways of placing 2n points on an n X n grid so that no 3 are in a line.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This means no three points on any line, not just lines in the X or Y directions.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A000755 gives the total number of solutions (as opposed to the number of equivalence classes).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is conjectured that a(n)=0 for all sufficiently large n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Flammenkamp's web site reports that at least one solution is known for all n &lt;= 46 and n=48, 50, 52.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _R. K. Guy_, Oct 22 2004: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> &quot;I got the no-three-in-line problem from Heilbronn over 50 years ago. See Section F4 in UPINT.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> &quot;In Canad. Math. Bull. 11 (1968) 527-531, MR 39 #129, Guy &amp; Kelly conjecture that, for large n, at most (c + eps)n points can be selected, where 3c^3 = 2pi^2 i.e. c ~ 1.85.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> &quot;As recently as last March, Gabor Ellmann pointed out an error in our heuristic reasoning, which, when corrected, gives 3c^2 = pi^2, or c ~ 1.813799.&quot; (End)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. A. Adena, D. A. Holton and P. A. Kelly, Some thoughts on the no-three-in-line problem, pp. 6-17 of Combinatorial Mathematics (Proceedings 2nd Australian Conf.), Lect. Notes Math. 403, 1974.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. B. Anderson, Journal of Combinatorial Theory Series A, V.27/1979 pp. 365 - 366.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Craggs and R. Hughes-Jones, Journal of Combinatorial Theory Series A, V.20/1976 pp. 363 - 364</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. E. Dudeney, Amusements in Mathematics, Nelson, Edinburgh 1917, pp. 94, 222</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Flammenkamp, Progress in the no-three-in-line problem, J. Combinat. Theory A 60 (1992), 305-311.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Flammenkamp, Progress in the no-three-in-line problem. II. J. Combin. Theory Ser. A 81 (1998), no. 1, 108-113.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Gardner, Scientific American V236 / March 1977, pp. 139 - 140</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Gardner, Penrose Tiles to Trapdoor Ciphers. Freeman, NY, 1989, p. 69.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, Unsolved combinatorial problems, pp. 121-127 of D. J. A. Welsh, editor, Combinatorial Mathematics and Its Applications. Academic Press, NY, 1971.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, Unsolved Problems Number Theory, Section F4.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy and P. A. Kelly, The No-Three-Line Problem. Research Paper 33, Department of Mathematics, Univ. of Calgary, Calgary, Alberta, 1968. Condensed version in Canad. Math. Bull. Vol. 11, pp. 527-531, 1968.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. R. Hall, T. H. Jackson, A. Sudberry and K. Wild, Journal of Combinatorial Theory Series A, V.18/1975 pp. 336 - 341</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Harborth, P. Oertel and T. Prellberg, Discrete Math. V73/1988 pp. 89-90</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. Kløve, Journal of Combinatorial Theory Series A, V.24/1978 pp. 126 - 127</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. Kløve, Journal of Combinatorial Theory Series A, V.26/1979 pp. 82 - 83</CMP>
+    </omtext><omtext class="reference">
+      <CMP> K. F. Roth, Journal London Math. Society V.26 / 1951, pp. 204</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Benjamin Chaffin, &lt;a href=&quot;http://wso.williams.edu/~bchaffin/no_three_in_line/index.htm&quot;&gt;No-Three-In-Line Problem&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alec S. Cooper, Oleg Pikhurko, John R. Schmitt and Gregory S. Warrington, &lt;a href=&quot;http://arxiv.org/abs/1206.5350&quot;&gt;Martin Gardner's minimum no-3-in-a-line problem&lt;/a&gt;, arXiv:1206.5350 [math.CO]. Also Amer. Math. Monthly, 121 (2014), 213-221.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Flammenkamp, &lt;a href=&quot;http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html&quot;&gt;Progress in the no-three-in-line problem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Flammenkamp, &lt;a href=&quot;http://wwwhomes.uni-bielefeld.de/achim/no3in/table.txt&quot;&gt;Solutions of the no-three-in-line problem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/PointLattice.html&quot;&gt;Point Lattice.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/No-Three-in-a-Line-Problem.html&quot;&gt;No-Three-in-a-Line-Problem&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(3)=1:</CMP>
+    </assertion><assertion class="example">
+      <CMP> X X o</CMP>
+    </assertion><assertion class="example">
+      <CMP> X o X</CMP>
+    </assertion><assertion class="example">
+      <CMP> o X X</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000755, A037185, A037186, A037187, A037188, A037189, A047840, A212807.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> hard,nonn,nice,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(17) and a(18) from _Benjamin Chaffin_, Apr 05 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Minor edits from _N. J. A. Sloane_, May 25 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _N. J. A. Sloane_, Mar 19 2013 at the suggestion of Dominique Bernardi</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000807.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000807">
+          <assertion class="***** TTTT *****">
+      <CMP> M2071 N0819</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,14,182,3614,99302,3554894,159175382,8654995454,558786468422,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 42086200603694,3645412584724022,358877175474325214,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 39758874175808713382,4915216680878167372814,673139563824188490513302,101475126400695241802946494,16744618803625299734467026182</CMP>
+    </assertion><omtext class="name">
+      <CMP> Quadratic invariants.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Touchard, Nombres exponentiels et nombres de Bernoulli, Canad. J. Math., 8 (1956), 305-320.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000807/b000807.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: exp(exp(x)+exp(-x)-2).<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000807"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A000807"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>, k)*A000110(k)*A000110(n-k). - _Vladeta Jovovic_, Sep 08 2002
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> nn = 40; t = Range[0, nn]! CoefficientList[Series[Exp[Exp[x] + Exp[-x] - 2], {x, 0, nn}], x]; Take[t, {1, nn, 2}] (* _T. D. Noe_, Jun 20 2012 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, Sep 08 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000904.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000904">
+          <assertion class="***** TTTT *****">
+      <CMP> M2955 N1193</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,3,13,83,592,4821,43979,444613,4934720,59661255,780531033,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10987095719,165586966816,2660378564777,45392022568023,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 819716784789193,15620010933562688,313219935456042955,6593238655510464741</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = (n + 1) a(n - 1) + (n + 2) a(n - 2) + a(n - 3); a(1)=0, a(2)=3, a(3)=13.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Ménage numbers.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000904/b000904.txt&quot;&gt;Table of n, a(n) for n=1..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Lucas, &lt;a href=&quot;http://gallica.bnf.fr/ark:/12148/bpt6k29021h&quot;&gt;Th\'{e}orie des Nombres&lt;/a&gt;, Gauthier-Villars, Paris, 1891, Vol. 1, p. 495.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="n"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS></OMA>
+    </OMOBJ>. - _Vladeta Jovovic_, Jun 29 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="E" cd="A000904"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="E" cd="A000904"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMV name="k"/><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="E" cd="A000904"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> ; (continued fraction, Euler's<OMOBJ>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMV name="st"/></OMA>
+    </OMOBJ> kind, 1-step). - _Sergei N. Gladkovskii_, Sep 17 2012
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f. = 3 x^2 + 13 x^3 + 83 x^4 + 592 x^5 + 4821 x^6 + 43979 x^7 + 444613 x^8 + ...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> max = 19; f[x_] = 1/(x+x^2)^2 * Sum[ n!*(x/(1+x)^2)^n, {n, 0, max+2}]; Series[ f[x]+1/x-1/x^2, {x, 0, max}] // CoefficientList[#, x]&amp; // Rest (* _Jean-François Alcover_, May 16 2013, after Vladeta Jovovic *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000904_list = 0 : 3 : 13 : zipWith (+) a000904_list</CMP>
+    </omtext><omtext class="program">
+      <CMP>    (zipWith (+) (zipWith (*) [6..] $ drop 1 a000904_list)</CMP>
+    </omtext><omtext class="program">
+      <CMP>                 (zipWith (*) [5..] $ drop 2 a000904_list))</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Nov 22 2011</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Larry Reeves (larryr(AT)acm.org), Nov 27 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000022.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000022">
+          <assertion class="***** TTTT *****">
+      <CMP> M0358 N0135</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,0,1,1,2,2,6,9,20,37,86,181,422,943,2223,5225,12613,30513,74883,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 184484,458561,1145406,2879870,7274983,18471060,47089144,120528657,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 309576725,797790928,2062142876,5345531935,13893615154,36201693122</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of centered hydrocarbons with n atoms.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. G. Busacker and T. L. Saaty, Finite Graphs and Networks, McGraw-Hill, NY, 1965, p. 201 (they reproduce Cayley's mistakes).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Cayley, &quot;On the mathematical theory of isomers&quot;, Phil. Mag. vol. 67 (1874), 444-447.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Cayley, &quot;Über die analytischen Figuren, welche in der Mathematik Baeume genannt werden...&quot;, Chem. Ber. 8 (1875), 1056-1059.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. R. Henze and C. M. Blair, The number of structurally isomeric alcohols of the methanol series, J. Amer. Chem. Soc., 53 (1931), 3042-3046.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. R. Henze and C. M. Blair, The number of isomeric hydrocarbons of the methane series, J. Amer Chem Soc. 53 (1931) 3077-3085.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000022/b000022.txt&quot;&gt;Table of n, a(n) for n = 0..60&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jean-François Alcover, &lt;a href=&quot;/A000602/a000602_1.txt&quot;&gt;Mathematica program translated from N. J. A. Sloane's Maple program for A000022, A000200, A000598, A000602, A000678&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Bottomley, &lt;a href=&quot;/A000602/a000602.gif&quot;&gt;Illustration of initial terms of A000022, A000200, A000602&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. M. Rains and N. J. A. Sloane, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;On Cayley's Enumeration of Alkanes (or 4-Valent Trees).&lt;/a&gt;, J. Integer Sequences, Vol. 2 (1999), Article 99.1.1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/sg.txt&quot;&gt;My favorite integer sequences&lt;/a&gt;, in Sequences and their Applications (Proceedings of SETA '98).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000602/a000602.txt&quot;&gt;Maple program and first 60 terms for A000022, A000200, A000598, A000602, A000678&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # We continue from the Maple code in A000678: Unordered 4-tuples of ternary trees with one of height i and others of height at most i-1:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> N := 45: i := 1: while i&lt;(N+1) do Tb := t[ i ]-t[ i-1 ]: Ts := t[ i ]-1: Q2 := series(Tb*Ts+O(z^(N+1)),z,200): q2[ i ] := Q2: i := i+1; od: q2[ 0 ] := 0: q[ -1 ] := 0:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for i from 0 to N do c[ i ] := series(q[ i ]-q[ i-1 ]-q2[ i ]+O(z^(N+1)),z,200); od:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # erase height information: i := 'i': cent := series(sum(c[ i ],i=0..N),z,200); G000022 := cent; A000022 := n-&gt;coeff(G000022,z,n);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # continued in A000200.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A000022+A000200=A000602. Cf. A010372.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, E. M. Rains (rains(AT)caltech.edu)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

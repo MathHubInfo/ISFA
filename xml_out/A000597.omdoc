@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000597.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000597">
+          <assertion class="***** TTTT *****">
+      <CMP> M5255 N2287</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 36,820,7645,44473,191620,669188,1999370,5293970,12728936,28285400,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 58856655,115842675,217378200,391367064,679524340,1142659012</CMP>
+    </assertion><omtext class="name">
+      <CMP> Central factorial numbers.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, Combinatorial Identities, Wiley, 1968, p. 217.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Mircea Merca, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL15/Merca2/merca7.html&quot;&gt; A Special Case of the Generalized Girard-Waring Formula&lt;/a&gt; J. Integer Sequences, Vol. 15 (2012), Article 12.5.7.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Fa#factorial&quot;&gt;Index entries for sequences related to factorial numbers&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: x^4 * (x^5 + 75*x^4 + 603*x^3 + 1065*x^2 + 460*x + 36) / (1-x)^10.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000597"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="s" cd="A000597"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="s"/><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME><OMV name="s"/><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="s"/><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME><OMV name="s"/><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="s"/><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="s" cd="A000597"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMOBJ> are Stirling numbers of the first kind,<OMOBJ>
+      <OMR xref="A048994"/>
+    </OMOBJ>. - _Mircea Merca_, Apr 03 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Recurrence: (n-4)*(2*n-7)*(35*n^2 - 49*n + 18)*a(n) = n^2*(2*n-1)*(35*n^2 + 21*n + 4)*a(n-1). - _Vaclav Kotesovec_, Feb 23 2015
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000597"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>35</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>21</OMI><OMV name="n"/></OMA><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMI>45360</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Vaclav Kotesovec_, Feb 23 2015
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> 1/(-1+z)^10*(z^5+75*z^4+603*z^3+1065*z^2+460*z+36);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(stirling1(n,n-3)^2-2*stirling1(n,n-4)*stirling1(n,n-2)+2*stirling1(n,n-5)*stirling1(n,n-1)+2*stirling1(n,n-6),n=0..30) [From Mircea Merca, Apr 03 2012]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> CoefficientList[Series[(x^5 + 75*x^4 + 603*x^3 + 1065*x^2 + 460*x + 36)/(1-x)^10, {x, 0, 20}], x] * Range[0, 20]! (* _Vaclav Kotesovec_, Feb 23 2015 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[(2*n-5)*(2*n-3)*(2*n-1)*(35*n^2+21*n+4)*n!/45360,{n,4,20}] (* _Vaclav Kotesovec_, Feb 23 2015 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column 3 of triangle A008955.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 4,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

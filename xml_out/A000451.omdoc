@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000451.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000451">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,9,41,81,146,194,306,369,425,594,689,866,1109,1154,1154,1361,1634,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1781,1889,2141,2609,2609,3366,3366,3449,3449,3506,4241,4289,4826,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5066,5381,5561,5561,6254,7229,7829,8069,8069,8126,8609,8774,8774</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest number that is the sum of 3 squares in at least n ways.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000451/b000451.txt&quot;&gt;Table of n, a(n) for n = 1..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Su#ssq&quot;&gt;Index entries for sequences related to sums of squares&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> nn = 100; lim = nn^2; t = Table[0, {lim}]; Do[k = x^2 + y^2 + z^2; If[0 &lt; k &lt;= lim, t[[k]]++], {x, 0, nn}, {y, x, nn}, {z, y, nn}]; u = Union[t]; c = Complement[Range[u[[-1]]], u]; If[c == {}, mx = u[[-1]], mx = c[[1]] - 1]; Join[{0}, Flatten[Table[Position[t, _?(# &gt;= n &amp;), 1, 1], {n, 2, mx}]]] (* _T. D. Noe_, Jun 20 2012 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

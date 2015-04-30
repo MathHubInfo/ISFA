@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000523.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000523">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,2,2,2,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6</CMP>
+    </assertion><omtext class="name">
+      <CMP> Log_2(n) rounded down.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Or, n-1 appears 2^(n-1) times. - _Jon Perry_, Sep 21 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) + 1 = number of bits in binary expansion of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Largest power of 2 dividing LCM[1..n]: A007814[A003418(n)].</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Log_2(0) = -infinity.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also max(Omega(k): 1&lt;=k&lt;=n), where Omega(n)=A001222(n), number of prime factors with repetition; see A080613. - _Reinhard Zumkeller_, Feb 25 2003</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n+1) = number of digits of n-th number with no 0 in ternary representation = A081604(A032924(n)); A107680(n) = A003462(a(n+1)). - _Reinhard Zumkeller_, May 20 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A152487(n-1,0) = A152487(n,1). - _Reinhard Zumkeller_, Dec 06 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Paul Weisenhorn_, Sep 29 2010: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Arithmetic mean: m(1,c/(c-1))=(2c+1)/2c; harmonic mean: h(1,c/(c-1))=2c/(2c-1);</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the number of means to reach (n+1)/n from 2/1;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> with m for 0 and h for 1, the inverse binary expansion of n, without the leading 1, gives the sequence of means. (End)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> As function of the absolute value, defines the minimal Euclidean function v on Z\{0}. A ring R is Euclidean if for some function v : R\{0}-&gt;N a division by nonzero b can be defined with remainder r satisfying either r=0 or v(r)&lt;v(b). For the integers taking v(n)=|n| works, but v(n)=floor(log_2(|n|)) works as well; moreover it is the possibility with smallest possible values. For division by b&gt;0 one can always choose |r|&lt;=floor(b/2); this sequence satisfies a(1)=0 and recursively a(n)=1+max(a(1),...,a(floor(n/2))) for n&gt;1. - Marc A. A. van Leeuwen, Feb 16 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Maximum number of guesses required to find any k in a range of 1..n, with 'higher', 'lower' and 'correct' as answers. - _Jon Perry_, Nov 02 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = Max{A240857(n,k): k = 1..n}. - _Reinhard Zumkeller_, Apr 14 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Baumann, Computer-Knobelei, LOG IN Heft 159 (2009), 74-77 [From _Paul Weisenhorn_, Sep 29 2010]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. H. Hardy, Note on Dr. Vacca's series..., Quart. J. Pure Appl. Math. 43 (1912) 215-216.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, The Art of Computer Programming, Vol. 1: Fundamental Algorithms, p. 400.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, The Art of Computer Programming, vol. 4A, Combinatorial Algorithms, Section 7.1.3, Problem 41, p. 589. - From _N. J. A. Sloane_, Aug 03 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000523/b000523.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Guo-Niu Han, &lt;a href=&quot;http://www-irma.u-strasbg.fr/~guoniu/papers/p77puzzle.pdf&quot;&gt;Enumeration of Standard Puzzles&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Guo-Niu Han, &lt;a href=&quot;/A196265/a196265.pdf&quot;&gt;Enumeration of Standard Puzzles&lt;/a&gt; [Cached copy]</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Stephan, &lt;a href=&quot;/somedcgf.html&quot;&gt;Some divide-and-conquer sequences ...&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Stephan, &lt;a href=&quot;/A079944/a079944.ps&quot;&gt;Table of generating functions&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         a(n) = if<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> then<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000523"/>
+      <OMA>
+      <OMS name="floor" cd="A000523"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMOBJ> else<OMOBJ>
+      <OMI>0</OMI>
+    </OMOBJ>. - _Reinhard Zumkeller_, Oct 29 2001
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA><OMV name="Sum"/><OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA></OMA>
+    </OMOBJ>, x^2^k). - _Ralf Stephan_, Apr 13 2002
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000523"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMV name="k"/>
+    </OMA>
+    </OMOBJ> with<OMOBJ>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="k"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000523"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="floor" cd="A000523"/>
+      <OMA>
+      <OMS name="lb" cd="A000523"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Paul Weisenhorn_, Sep 29 2010
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(5)=2 because the binary expansion of 5 (=101) has three bits.</CMP>
+    </assertion><assertion class="example">
+      <CMP> n=20; inverse binary expansion without the leading 1: 0010 ---&gt; m m h m or m(1, m(1, h(1, m(1, 2)))) = 21/20; - _Paul Weisenhorn_, Sep 29 2010</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A000523 := n-&gt;floor(simplify(log(n)/log(2)));</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000523 := proc(n) local nn,i; if(0 = n) then RETURN(-infinity); fi; nn := n; for i from -1 to n do if(0 = nn) then RETURN(i); fi; nn := floor(nn/2); od; end;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for n from 1 to 1000 do a[n]:=floor(log[2](n)); end do; - _Paul Weisenhorn_, Sep 29 2010</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Floor[Log[2,Range[110]]] (* _Harvey P. Dale_, Jul 16 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Ilog2(n) : n in [1..130] ];</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;1, 0, floor(log(n) / log(2)))};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;1, 0, #binary(n) - 1)}; /* _Michael Somos_, May 28 2014 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000523 1 = 0</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000523 n = 1 + a000523 (div n 2)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000523_list = 0 : f [0] where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    f xs = ys ++ f ys where ys = map (+ 1) (xs ++ xs)</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Dec 31 2012, Feb 04 2012, Mar 18 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A029837. Partial sums: A061168.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000195, A000193, A004233.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> a(n) = A070939(n)-1 for n&gt;=1.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice,look</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Error in 4th term, pointed out by Joe Keane (jgk(AT)jgk.org), has been corrected.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Michael Somos_, Aug 02 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

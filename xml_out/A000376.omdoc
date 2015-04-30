@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000376.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000376">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,4,7,10,16,22,30,38,51,63,80,101,112,130,159,191,207,231</CMP>
+    </omtext><omtext class="name">
+      <CMP> Topswops (2): start by shuffling n cards labeled 1..n. If top card is m, reverse order of top m cards. Repeat until 1 gets to top, then stop. Suppose the whole deck is now sorted (if not, discard this case). a(n) is the maximal number of steps before 1 got to the top.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See also A000375, which is the main entry for this problem.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Comments from _Joshua Zucker_, Jan 24 2007: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For some n, there are some longest chains which end up sorted and some which don't, like n = 6, with the following four chains that end sorted and one that does not:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The examples below use 0 through n-1 instead of 1 through n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ((#(4 5 3 0 2 1) #(2 0 3 5 4 1) #(3 0 2 5 4 1) #(5 2 0 3 4 1) #(1 4 3 0 2 5) #(4 1 3 0 2 5) #(2 0 3 1 4 5) #(3 0 2 1 4 5) #(1 2 0 3 4 5) #(2 1 0 3 4 5) #(0 1 2 3 4 5))</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (#(3 4 5 1 0 2) #(1 5 4 3 0 2) #(5 1 4 3 0 2) #(2 0 3 4 1 5) #(3 0 2 4 1 5) #(4 2 0 3 1 5) #(1 3 0 2 4 5) #(3 1 0 2 4 5) #(2 0 1 3 4 5) #(1 0 2 3 4 5) #(0 1 2 3 4 5))</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (#(3 0 4 1 5 2) #(1 4 0 3 5 2) #(4 1 0 3 5 2) #(5 3 0 1 4 2) #(2 4 1 0 3 5) #(1 4 2 0 3 5) #(4 1 2 0 3 5) #(3 0 2 1 4 5) #(1 2 0 3 4 5) #(2 1 0 3 4 5) #(0 1 2 3 4 5))</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (#(2 5 4 0 3 1) #(4 5 2 0 3 1) #(3 0 2 5 4 1) #(5 2 0 3 4 1) #(1 4 3 0 2 5) #(4 1 3 0 2 5) #(2 0 3 1 4 5) #(3 0 2 1 4 5) #(1 2 0 3 4 5) #(2 1 0 3 4 5) #(0 1 2 3 4 5)))</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (#(3 0 5 4 1 2) #(4 5 0 3 1 2) #(1 3 0 5 4 2) #(3 1 0 5 4 2) #(5 0 1 3 4 2) #(2 4 3 1 0 5) #(3 4 2 1 0 5) #(1 2 4 3 0 5) #(2 1 4 3 0 5) #(4 1 2 3 0 5) #(0 3 2 1 4 5))</CMP>
+    </omtext><omtext class="comment">
+      <CMP> And for some n, e.g. n=12, none of the longest chains end up sorted (and hence A000375 and A000376 are different). I did an exhaustive search with n = 12 working backwards from sorted and found 63 as the longest chain beginning with one of these four:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> #(9 10 6 0 2 7 1 8 11 5 3 4)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> #(9 10 6 0 1 2 7 8 11 5 3 4)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> #(7 8 11 5 0 6 10 9 2 1 3 4)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> #(5 0 1 7 10 3 11 8 9 6 2 4)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> But 65 is attainable if you don't assume it ends up sorted. (End)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (6 14 9 2 15 8 1 3 4 12 18 5 10 13 16 17 11 7) is the only permutation of length 18 that takes 191 steps (also-called longest winded permutation) of &quot;topswopping moves&quot; before it goes to the identity permutation (i.e. in sorted order) [From Quan T. Nguyen, William Fahle (tuongquan.nguyen(AT)utdallas.edu), Oct 21 2010]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n=17, (2 10 15 11 7 14 5 16 6 4 17 13 1 3 8 9 12) is the only longest-winded permutation (or order of cards) that takes 159 steps of &quot;topswopping moves&quot; before it terminates in sorted order, i.e. (1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17) [From Quan T. Nguyen, William Fahle (tuongquan.nguyen(AT)utdallas.edu), Oct 21 2010]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> n=18 -&gt; 191</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   6 14 9 2 15 8 1 3 4 12 18 5 10 13 16 17 11 7</CMP>
+    </omtext><omtext class="comment">
+      <CMP> n=19 -&gt; 207</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   2 3 7 8 4 19 10 15 17 6 1 11 5 18 12 9 13 14 16</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   3 7 2 8 4 19 10 15 17 6 1 11 5 18 12 9 13 14 16</CMP>
+    </omtext><omtext class="comment">
+      <CMP> n=20 -&gt; 231</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   5 20 6 3 2 15 10 1 16 9 18 14 19 7 12 17 8 11 13 4</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   3 20 5 6 2 15 10 1 16 9 18 14 19 7 12 17 8 11 13 4</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   5 20 2 6 3 15 10 1 16 9 18 14 19 7 12 17 8 11 13 4</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, TAOCP, Section 7.2.1.2, Problems 107-109.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000375, A174498.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,nice,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Bill Blewett_, Mike Toepke [ mtoepke(AT)microsoft.com ]</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Two more terms from James Kilfiger (mapdn(AT)csv.warwick.ac.uk) 7/97.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 130 and 159 from _William Rex Marshall_, Mar 28 2001.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition clarified by _Franklin T. Adams-Watters_, Jan 24 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(18)=191 added by Quan T. Nguyen, William Fahle (tuongquan.nguyen(AT)utdallas.edu), Oct 21 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(1)=0 prepended by _Max Alekseyev_, Nov 18 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(19)=207 added by _Moritz Franckenstein_, Dec 14 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(20)=231 added by _Moritz Franckenstein_, Apr 16 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

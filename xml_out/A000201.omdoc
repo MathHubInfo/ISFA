@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000201.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000201">
+          <assertion class="***** TTTT *****">
+      <CMP> M2322 N0917</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,4,6,8,9,11,12,14,16,17,19,21,22,24,25,27,29,30,32,33,35,37,38,40,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 42,43,45,46,48,50,51,53,55,56,58,59,61,63,64,66,67,69,71,72,74,76,77,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 79,80,82,84,85,87,88,90,92,93,95,97,98,100,101,103,105,106,108,110</CMP>
+    </assertion><omtext class="name">
+      <CMP> Lower Wythoff sequence (a Beatty sequence): a(n) = floor(n*phi), where phi = (1+sqrt(5))/2 = A001622.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is the unique sequence a satisfying a'(n)=a(a(n))+1 for all n in the set N of natural numbers, where a' denotes the ordered complement (in N) of a. - _Clark Kimberling_, Feb 17 2003</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This sequence and A001950 may be defined as follows. Consider the maps a -&gt; ab, b -&gt; a, starting from a(1) = a; then A000201 gives the indices of a, A001950 gives the indices of b. The sequence of letters in the infinite word begins a, b, a, a, b, a, b, a, a, b, a, ... Setting a = 0, b = 1 gives A003849 (offset 0); setting a = 1, b = 0 gives A005614 (offset 0). - _Philippe Deléham_, Feb 20 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These are the numbers whose lazy Fibonacci representation (see A095791) includes 1; the complementary sequence (the upper Wythoff sequence, A001950) are the numbers whose lazy Fibonacci representation includes 2 but not 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the unique monotonic sequence satisfying a(1)=1 and the condition &quot;if n is in the sequence then n+(rank of n) is not in the sequence&quot; (e.g. a(4)=6 so 6+4=10 and 10 is not in the sequence) - _Benoit Cloitre_, Mar 31 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Write A for A000201 and B for A001950 (the upper Wythoff sequence, complement of A). Then the composite sequences AA, AB, BA, BB, AAA, AAB,...,BBB,... appear in many complementary equations having solution A000201 (or equivalently, A001950). Typical complementary equations: AB=A+B (=A003623), BB=A+2B (=A101864), BBB=3A+5B (=A134864). - _Clark Kimberling_, Nov 14 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Cumulative sum of A001468 terms. - _Eric Angelini_, Aug 19 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The lower Wythoff sequence also can be constructed by playing the so-called Mancala-game: n piles of total d(n) chips are standing in a row. The piles are numbered from left to right by 1, 2, 3, ... . The number of chips in a pile at the beginning of the game is equal to the number of the pile. One step of the game is described as follows: Distribute the pile on the very left one by one to the piles right of it. If chips are remaining, build piles out of one chip subsequently to the right. After f(n) steps the game ends in a constant row of piles. The lower Wythoff sequence is also given by n -&gt; f(n). - Roland Schroeder (florola(AT)gmx.de), Jun 19 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> With the exception of the first term, a(n) gives the number of iterations required to reverse the list {1,2,3,...,n} when using the mapping defined as follows: remove the first term of the list, z(1), and add 1 to each of the next z(1) terms (appending 1's if necessary) to get a new list. See A183110 where this mapping is used and other references given.  This appears to be essentially the Mancala-type game interpretation given by R. Schroeder above. - _John W. Layman_, Feb 03 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also row numbers of A213676 starting with an even number of zeros. - _Reinhard Zumkeller_, Mar 10 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Bunder and K. Tognetti, On the self matching properties of [j tau], Discrete Math., 241 (2001), 139-151.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Carlitz, R. Scoville and T. Vaughan, Some arithmetic functions related to Fibonacci numbers, Fib. Quart., 11 (1973), 337-386.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> I. G. Connell, Some properties of Beatty sequences I, Canad. Math. Bull., 2 (1959), 190-197.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. J. Downey and R. E. Griswold, On a family of nested recurrences, Fib. Quart., 22 (1984), 310-317.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. S. Fraenkel, The bracket function and complementary sets of integers, Canad. J. Math., 21 (1969), 6-27. [History, references, generalization]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. S. Fraenkel, How to beat your Wythoff games' opponent on three fronts, Amer. Math. Monthly, 89 (1982), 353-361 (the case a=1).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Gardner, Penrose Tiles to Trapdoor Ciphers, W. H. Freeman, 1989; see p. 107.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> David Garth and Adam Gouge, Affinely Self-Generating Sets and Morphisms, Journal of Integer Sequences, Vol. 10 (2007), Article 07.1.5.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. M. Gleason et al., The William Lowell Putnam Mathematical Competition: Problems and Solutions 1938-1964, Math. Assoc. America, 1980, pp. 513-514.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Griffiths, The Golden String, Zeckendorf Representations, and the Sum of a Series, Amer. Math. Monthly, 118 (2011), 497-507.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Grossman, A set containing all integers, Amer. Math. Monthly, 69 (1962), 532-533.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Clark Kimberling, Complementary equations and Wythoff sequences, Journal of Integer Sequences 11 (2008, Article 08.3.3) 1-8.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Clark Kimberling, Complementary Equations, Journal of Integer Sequences, 10 (2007), Article 07.1.4.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. J. Newman, Problem 5252, Amer. Math. Monthly, 72 (1965), 1144-1145. Problem 3117, Amer. Math. Monthly, 34 (1927), 158-159.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> K. B. Stolarsky, Beatty sequences, continued fractions and certain shift operators, Canad. Math. Bull., 19 (1976), 473-482.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> X. Sun, Wythoff's sequence ..., Discr. Math., 300 (2005), 180-195.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. C. Turner, The alpha and the omega of the Wythoff pairs, Fib. Q., 27 (1989), 76-86.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> I. M. Yaglom, Two games with matchsticks, pp. 1-7 of Qvant Selecta: Combinatorics I, Amer Math. Soc., 2001.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000201/b000201.txt&quot;&gt;The first 10000 terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J.-P. Allouche, J. Shallit and G. Skordev, &lt;a href=&quot;http://www.math.jussieu.fr/~allouche/kimb.ps&quot;&gt;Self-generating sets, integers with missing blocks and substitutions&lt;/a&gt;, Discrete Math. 292 (2005) 1-15.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joerg Arndt, &lt;a href=&quot;http://www.jjj.de/fxt/#fxtbook&quot;&gt;Matters Computational (The Fxtbook)&lt;/a&gt;, pp.756-757</CMP>
+    </omtext><omtext class="link">
+      <CMP> Shiri Artstein-Avidan, Aviezri S. Fraenkel and Vera T. Sos, &lt;a href=&quot;http://dx.doi.org/10.1016/j.disc.2007.08.070&quot;&gt;A two-parameter family of an extension of Beatty&lt;/a&gt;, Discr. Math. 308 (2008), 4578-4588.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Shiri Artstein-avidan, Aviezri S. Fraenkel and Vera T. Sos, &lt;a href=&quot;http://www.wisdom.weizmann.ac.il/~fraenkel/Papers/coatp8.pdf&quot;&gt;A two-parameter family of an extension of Beatty sequences&lt;/a&gt;, Discrete Math., 308 (2008), 4578-4588.</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. J. Barbeau, J. Chew and S. Tanny, &lt;a href=&quot;http://www.combinatorics.org/Volume_4/Abstracts/v4i1r16.html&quot;&gt;A matrix dynamics approach to Golomb's recursion&lt;/a&gt;, Electronic J. Combinatorics, #4.1 16 1997.</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. Cloitre, N. J. A. Sloane and M. J. Vandermast, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;Numerical analogues of Aronson's sequence&lt;/a&gt;, J. Integer Seqs., Vol. 6 (2003), #03.2.2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. Cloitre, N. J. A. Sloane and M. J. Vandermast, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0305308&quot;&gt;Numerical analogues of Aronson's sequence&lt;/a&gt; (math.NT/0305308)</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. Fox, &lt;a href=&quot;http://arxiv.org/abs/1407.2823&quot;&gt;On Aperiodic Subtraction Games with Bounded Nim Sequence&lt;/a&gt;, arXiv preprint arXiv:1407.2823, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. S. Fraenkel, &lt;a href=&quot;http://www.wisdom.weizmann.ac.il/~fraenkel/Papers/RationalGames3.pdf&quot;&gt;Ratwyt&lt;/a&gt;, December 28 2011.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Kimberling, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;A Self-Generating Set and the Golden Mean&lt;/a&gt;, J. Integer Sequences, 3 (2000), #00.2.8.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Kimberling, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;Matrix Transformations of Integer Sequences&lt;/a&gt;, J. Integer Seqs., Vol. 6, 2003.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincent Russo and Loren Schwiebert, &lt;a href=&quot;http://www.fq.math.ca/49-2.html&quot;&gt;Beatty Sequences, Fibonacci Numbers, and the Golden Ratio&lt;/a&gt;, The Fibonacci Quarterly, Vol 49, Number 2, May 2011.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/sg.txt&quot;&gt;My favorite integer sequences&lt;/a&gt;, in Sequences and their Applications (Proceedings of SETA '98).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/classic.html#WYTH&quot;&gt;Classic Sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Richard Southwell and Jianwei Huang, &lt;a href=&quot;http://arxiv.org/abs/1205.0596&quot;&gt;Complex Networks from Simple Rewrite Systems&lt;/a&gt;, arXiv preprint arXiv:1205.0596, 2012. - _N. J. A. Sloane_, Oct 13 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/BeattySequence.html&quot;&gt;Beatty Sequence&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/GoldenRatio.html&quot;&gt;Golden Ratio&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/RabbitConstant.html&quot;&gt;Rabbit Constant&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/WythoffsGame.html&quot;&gt;Wythoff's Game&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/WythoffArray.html&quot;&gt;Wythoff Array&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Be#Beatty&quot;&gt;Index entries for sequences related to Beatty sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Aa#aan&quot;&gt;Index entries for sequences of the a(a(n)) = 2n family&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Zeckendorf expansion of<OMOBJ>
+      <OMA>
+      <OMS name="n" cd="A000201"/>
+      <OMV name="cf"/>
+    </OMA>
+    </OMOBJ>. A035517) ends with an even number of 0's.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Other properties: a(1)=1; for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> is taken to be the smallest integer greater than<OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> which is consistent with the condition &quot;n is in the sequence if and only if<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMOBJ> is not in sequence&quot;.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>; for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> is not in sequence,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> is in sequence.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="floor" cd="A000201"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="phi"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A003622"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMOBJ> union<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="k"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ>, ...}. Hence<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>; for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Benoit Cloitre_, Mar 08,<OMOBJ>
+      <OMI>2003</OMI>
+    </OMOBJ>
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> is<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> solution to the recurrence<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMV name="see"/></OMA>
+    </OMA>
+    </OMOBJ> Barbeau et al.).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A001950"/>
+      <OMV name="n"/>
+    </OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>  - _Philippe Deléham_, May 02 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>; a(n) = n + max{ k : a(k) &lt; n}. - _Vladeta Jovovic_, Jun 11 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Fib" cd="A000201"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="r"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMV name="j"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Fib" cd="A000201"/>
+      <OMV name="r"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A000201"/>
+      <OMV name="j"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMV name="j"/>
+    </OMA>
+      <OMA>
+      <OMS name="Fib" cd="A000201"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="r"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMI>2</OMI>
+      <OMV name="r"/>
+    </OMA>
+    </OMOBJ>. - _Paul Weisenhorn_, Aug 18 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         With<OMOBJ>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMI>1</OMI>
+      <OMV name="k"/>
+    </OMA>
+    </OMOBJ> and A001950(k-1) &lt; n &lt;= A001950(k): a(n) = 2*n-k;<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A001950"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA><OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Paul Weisenhorn_, Aug 21 2012
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> From Roland Schroeder (florola(AT)gmx.de), Jul 13 2010: (Start)</CMP>
+    </assertion><assertion class="example">
+      <CMP> Example for n = 5; a(5) = 8</CMP>
+    </assertion><assertion class="example">
+      <CMP> (Start: [1,2,3,4,5]; 8 steps until [5,4,3,2,1]):</CMP>
+    </assertion><assertion class="example">
+      <CMP> [1,2,3,4,5]; [3,3,4,5]; [4,5,6]; [6,7,1,1]; [8,2,2,1,1,1]: [3,3,2,2,2,1,1,1]; [4,3,3,2,1,1,1]; [4,4,3,2,1,1]; [5,4,3,2,1]. (End)</CMP>
+    </assertion><omtext class="maple">
+      <CMP> Digits := 100; t := evalf((1+sqrt(5))/2); A000201 := n-&gt;floor(t*n);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Floor[N[n*(1+Sqrt[5])/2]], {n, 1, 75}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Array[ Floor[ #*GoldenRatio] &amp;, 68] (* _Robert G. Wilson v_, Apr 17 2010 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=floor(n*(sqrt(5)+1)/2)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=(n+sqrtint(5*n^2))\2 \\ _Charles R Greathouse IV_, Feb 07 2013</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) makelist(floor(n*(1+sqrt(5))/2),n,1,60); [_Martin Ettl_, Oct 17 2012]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000201 n = a000201_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000201_list = filter (even . length . takeWhile (== 0) . a213676_row) [1..]</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Mar 10 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> a(n) = least k such that s(k) = n, where s = A026242. Complement of A001950. See also A058066.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> The permutation A002251 maps between this sequence and A001950, in that A002251(a(n)) = A001950(n), A002251(A001950(n)) = a(n).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> First differences give A014675. a(n) = A022342(n) + 1 = A005206(n) + n + 1. a(2n)-a(n)=A007067(n). a(a(a(n)))-a(n) = A026274(n-1). - _Benoit Cloitre_, Mar 08 2003</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A185615 gives values n such that n divides A000201(n)^m for some integer m&gt;0.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A183110.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Mathematica coding shortened by _Robert G. Wilson v_, Apr 17 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

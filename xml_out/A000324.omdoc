@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000324.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000324">
+          <assertion class="***** TTTT *****">
+      <CMP> M3789 N1544</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,9,49,2209,4870849,23725150497409,562882766124611619513723649,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 316837008400094222150776738483768236006420971486980609</CMP>
+    </assertion><omtext class="name">
+      <CMP> A nonlinear recurrence: a(n) = a(n-1)^2 - 4*a(n-1) + 4 (for n&gt;1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> An infinite coprime sequence defined by recursion. - _Michael Somos_, Mar 14 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is the special case k=4 of sequences with exact mutual k-residues. In general, a(1)=k+1 and a(n)=min{m | m&gt;a(n-1), mod(m,a(i))=k, i=1,...,n-1}. k=1 gives Sylvester's sequence A000058 and k=2 Fermat sequence A000215. - _Seppo Mustonen_, Sep 04 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A000058, A00215, A000289 and this sequence here can be represented as values of polynomials defined via P_0(z)= 1+z, P_{n+1}(z) = z+ prod_{i=0..n} P_i(z), with recurrences P_{n+1}(z) = (P_n(z))^2 -z*P_n(z) +z, n&gt;=0. - _Vladimir Shevelev_, Dec 08 2010</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. W. Golomb, On certain nonlinear recurring sequences, Amer. Math. Monthly 70 (1963), 403-405.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000324/b000324.txt&quot;&gt;Table of n, a(n) for n = 0..12&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. V. Aho and N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/doubly.html&quot;&gt;Some doubly exponential sequences&lt;/a&gt;, Fib. Quart., 11 (1973), 429-437.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Mestrovic, &lt;a href=&quot;http://arxiv.org/abs/1202.3670&quot;&gt;Euclid's theorem on the infinitude of primes: a historical survey of its proofs (300 BC--2012) and another new proof&lt;/a&gt;, arXiv preprint arXiv:1202.3670, 2012 - From N. J. A. Sloane, Jun 13 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Mustonen, &lt;a href=&quot;http://www.survo.fi/papers/resseq.pdf&quot;&gt;On integer sequences with mutual k-residues&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Aa#AHSL&quot;&gt;Index entries for sequences of form a(n+1)=a(n)^2 + ...&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000324"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="L" cd="A000324"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, if<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ> where L() is Lucas sequence.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000324"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>4</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="Prod" cd="A000324"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>0</OMI>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A000324"/>
+      <OMV name="i"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Vladimir Shevelev_, Dec 08 2010
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> t = {1, 5}; Do[AppendTo[t, t[[-1]]^2 - 4*t[[-1]] + 4], {n, 11}] (* _T. D. Noe_, Jun 19 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;2,max(0,1+4*n),a(n-1)^2-4*a(n-1)+4)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;1,n==0,n=2^n;fibonacci(n+1)+fibonacci(n-1)+2)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> a(n) = A001566(n-1)+2 (for n&gt;0).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000058.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

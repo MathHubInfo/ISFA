@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000568.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000568">
+          <assertion class="***** TTTT *****">
+      <CMP> M1262 N0484</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,4,12,56,456,6880,191536,9733056,903753248,154108311168,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 48542114686912,28401423719122304,31021002160355166848,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 63530415842308265100288,244912778438520759443245824</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of outcomes of unlabeled n-team round-robin tournaments.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Harary and Palmer give incorrect values for a(24) and a(25); the correct values are a(24) = 195692027657521876084316842660833482785173437775365039898624 and a(25) = 131326696677895002131450257709457767457170027052967027982788816896. - _Vladeta Jovovic_, Apr 08 2001</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Cropper, Sebrina Ruth, &quot;Ranking Score Vectors of Tournaments&quot; (2011). All Graduate Reports and Creative Projects. Paper 91. Utah State University, School of Graduate Studies, http://digitalcommons.usu.edu/gradreports/91. - From _N. J. A. Sloane_, Jun 10 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. L. Davis, Structure of dominance relations, Bull. Math. Biophys., 16 (1954), 131-140.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Goldberg and J. W. Moon, On the composition of two tournaments. Duke Math. J. 37 1970 323-332.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. L. Gross and J. Yellen, eds., Handbook of Graph Theory, CRC Press, 2004; p. 157 and 523.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, pp. 126 and 245.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. W. Moon, Topics on Tournaments. Holt, NY, 1968, p. 87.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> K. B. Reid and L. W. Beineke &quot;Tournaments&quot;, pp. 169-204 in L. W. Beineke and R. J. Wilson, editors, Selected Topics in Graph Theory, Academic Press, NY, 1978.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Keith Briggs, &lt;a href=&quot;/A000568/b000568.txt&quot;&gt;Table of n, a(n) for n = 0..76&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Cameron, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;Sequences realized by oligomorphic permutation groups&lt;/a&gt;, J. Integ. Seqs. Vol. 3 (2000), #00.1.5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Brendan McKay, &lt;a href=&quot;http://cs.anu.edu.au/~bdm/data/digraphs.html&quot;&gt;Combinatorial Data&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> John W. Moon, &lt;a href=&quot;http://www.gutenberg.org/ebooks/42833&quot;&gt;Topics on tournaments&lt;/a&gt;, Holt, Rinehard and Winston (1968), see page 115.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000568/a000568.pdf&quot;&gt;Annotated scan of John Moon's tables of tournaments on up to 6 nodes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000568/a000568.txt&quot;&gt;A second Maple program for A000568&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Tournament.html&quot;&gt;Tournament&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/To#tournament&quot;&gt;Index entries for sequences related to tournaments&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Davis's formula: a(n) = Sum_{j} (1/(Product (k^(j_k) (j_k)!))) * 2^{t_j},
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         where<OMOBJ>
+      <OMV name="j"/>
+    </OMOBJ> runs through all partitions of<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> into odd parts, say with<OMOBJ>
+      <OMV name="j_1"/>
+    </OMOBJ> parts of size<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="j_3"/>
+    </OMOBJ> parts of size<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>, etc.,
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         and t_j = (1/2)*[ Sum_{r=1..n, s=1..n} j_r j_s gcd(r,s) - Sum_{r} j_r ].
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> with(combinat):with(numtheory): for n from 1 to 30 do p:=partition(n): s:=0:for k from 1 to nops(p) do ex:=1:for i from 1 to nops(p[k]) do if p[k][i] mod 2=0 then ex:=0:break:fi:od:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> if ex=1 then q:=convert(p[k],multiset): for i from 1 to n do a(i):=0:od:for i from 1 to nops(q) do a(q[i][1]):=q[i][2]:od:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> c:=1:ord:=1:for i from 1 to n do c:=c*a(i)!*i^a(i): if a(i)&lt;&gt;0 then ord:=lcm(ord,i):fi:od: g:=0:for d from 1 to ord do if ord mod d=0 then g1:=0:for del from 1 to n do if d mod del=0 then g1:=g1+del*a(del):fi:od:g:=g+phi(ord/d)*g1*(g1-1):fi:od: s:=s+2^(g/ord/2)/c:fi:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> od: print(n,s); od: # _Vladeta Jovovic_</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A006125 for the labeled analogue, A051337.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000420.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000420">
+          <assertion class="***** TTTT *****">
+      <CMP> M4431 N1874</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,7,49,343,2401,16807,117649,823543,5764801,40353607,282475249,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1977326743,13841287201,96889010407,678223072849,4747561509943,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 33232930569601,232630513987207,1628413597910449,11398895185373143,79792266297612001,558545864083284007</CMP>
+    </assertion><omtext class="name">
+      <CMP> Powers of 7.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Same as Pisot sequences E(1,7), L(1,7), P(1,7), T(1,7). See A008776 for definitions of Pisot sequences.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sum of coefficients of expansion of (1+x+x^2+x^3+x^4+x^5+x^6)^n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is number of compositions of natural numbers into n parts &lt;7.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The compositions of n in which each natural number is colored by one of p different colors are called p-colored compositions of n. For n&gt;=1, a(n) equals the number of 7-colored compositions of n such that no adjacent parts have the same color. - _Milan Janjic_, Nov 17 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers n such that sigma(7n) = 7n+sigma(n). - _Jahangeer Kholdi_, Nov 23 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000420/b000420.txt&quot;&gt;Table of n, a(n) for n=0..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Cameron, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL3/groups.html&quot;&gt;Sequences realized by oligomorphic permutation groups&lt;/a&gt;, J. Integ. Seqs. Vol. 3 (2000), #00.1.5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=272&quot;&gt;Encyclopedia of Combinatorial Structures 272&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tanya Khovanova, &lt;a href=&quot;http://www.tanyakhovanova.com/RecursiveSequences/RecursiveSequences.html&quot;&gt;Recursive Sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Y. Puri and T. Ward, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL4/WARD/short.html&quot;&gt;Arithmetic and growth of periodic orbits&lt;/a&gt;, J. Integer Seqs., Vol. 4 (2001), #01.2.1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_01&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (7).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000420"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>7</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000420"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000420"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="a" cd="A000420"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>7</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: exp(7*x).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>4</OMI><OMI>7</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>5</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>7</OMI>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>7</OMI>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>5</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>7</OMI>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>23</OMI><OMI>48</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. [Jolley, Summation of Series, Dover, 1961]
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(2)=49 there are 49 compositions of natural numbers into 2 parts &lt;7.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A000420:=-1/(-1+7*z); # _Simon Plouffe_ in his 1992 dissertation</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[7^n,{n,0,50}] (* _Vladimir Joseph Stephan Orlovsky_, Feb 15 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) makelist(7^n,n,0,20); /* _Martin Ettl_, Dec 27 2012 */</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

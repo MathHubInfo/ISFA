@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000253.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000253">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,4,11,27,63,142,312,673,1432,3015,6295,13055,26926,55284,113081,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 230572,468883,951347,1926527,3894878,7863152,15855105,31936240,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 64269135,129234351,259690239,521524126,1046810092,2100221753,4212028452,8444387067</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = 2*a(n-1) - a(n-2) + a(n-3) + 2^(n-1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From Holger Petersen (petersen(AT)informatik.uni-stuttgart.de), May 29 2006:  (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also number of binary strings of length n+2 containing the pattern 010. Proof: Clear for n = 0, 1, 2. For n &gt; 2 each string with pattern 010 of length n-1 gives 2 strings of length n with the property by appending a symbol. In addition each string of length n-1 without 010 and ending in 01 contributes one new string. Denote by c_w(m) the number of strings of length m without 010 and ending in w.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Since there is a total of 2^m strings of length m, we have c_01(m) = c_0(m-1) = (2^{m-1} - a(m-3)) - c_1(m-1) = (2^{m-1} - a(m-3)) - (2^{m-2} - a(m-4)) = 2^{m-2} - a(m-3) + a(m-4) (the first and third equalities follow from the fact that appending a 1 will not generate the pattern). The recurrence is a(n) = 2a(n-1) + c_01(n+1) = 2a(n-1) + 2^{n-1} - a(n-2) + a(n-3).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (End)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000253/b000253.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Stack Exchange, &lt;a href=&quot;http://math.stackexchange.com/questions/86495&quot;&gt;Recurrence relations - binary substrings&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (4,-5,3,-2).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000253"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMR xref="A077941"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMR xref="A077941"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Ralf Stephan_, Aug 19 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000253"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000079"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A005251"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. _Alois P. Heinz_, Apr 03 2012
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> f := proc(n) option remember; if n&lt;=1 then n else if n&lt;=3 then 7*n-10; else 2*f(n-1)-f(n-2)+f(n-3)+2^(n-1); fi; fi; end;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> nn=50; a=x^2/(1-x)^2; Drop[CoefficientList[Series[a x/(1-a x)/(1-2x), {x,0,nn}], x], 2] (* _Geoffrey Critzer_, Nov 26 2013 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> Jason Howald (jahowald(AT)umich.edu)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

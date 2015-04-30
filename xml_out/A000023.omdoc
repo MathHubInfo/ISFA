@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000023.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000023">
+          <assertion class="***** TTTT *****">
+      <CMP> M0373 N0140</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,2,8,8,112,656,5504,49024,491264,5401856,64826368,842734592,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 11798300672,176974477312,2831591702528,48137058811904,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 866467058876416,16462874118127616,329257482363600896,6914407129633521664,152116956851941670912</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> E.g.f.: exp(-2*x)/(1-x).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A010843, A000023, A000166, A000142, A000522, A010842, A053486, A053487 are successive binomial transforms with the e.g.f. exp(k*x)/(1-x) and recurrence b(n) = n*b(n-1)+k^n and are related to incomplete gamma functions at k. In this case k=-2, a(n) = n*a(n-1)+(-2)^n = Gamma(n+1,k)*exp(k) = Sum_{i=0..n} (-1)^(n-i)*binomial(n,i)*i^(n-i)*(i+k)^i. - _Vladeta Jovovic_, Aug 19 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the permanent of the n X n matrix with -1's on the diagonal and 1's elsewhere . - _Philippe Deléham_, Dec 15 2003</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 210.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;/A000023/b000023.txt&quot;&gt;Table of n, a(n) for n = 0..250&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. R. Kräuter, &lt;a href=&quot;http://www.mat.univie.ac.at/~slc/opapers/s09kraeu.html&quot;&gt;Permanenten - Ein kurzer Überblick&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. R. Kräuter, &lt;a href=&quot;http://www.mat.univie.ac.at/~slc/opapers/s11kraeu.html&quot;&gt;Über die Permanente gewisser zirkulärer Matrizen...&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         a(n) = Sum(k=0..n,<OMOBJ>
+      <OMA>
+      <OMR xref="A008290"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>, k)*(-1)^k ). - _Philippe Deléham_, Dec 15 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n)=sum{k=0..n, (-2)^(n-k)n!/(n-k)!}=sum{k=0..n,<OMOBJ>
+      <OMA>
+      <OMS name="binomial" cd="A000023"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>, k)k!(-2)^(n-k)}. - _Paul Barry_, Aug 26 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000023"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="i"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMR xref="A008290"/>
+      <OMV name="i"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="i"/>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>. - Nour-Eddine Fahssi, Jan 27 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000023"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="exp" cd="A000023"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="Gamma" cd="A000023"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="unary_minus"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>  (incomplete Gamma function). - _Mark van Hoeij_, Nov 11 2009
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000023"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMV name="b"/>
+    </OMA>
+    </OMOBJ> such that (-1)^n*Integral_{x=0..2} x^n*exp(x) dx = c + b*exp(2). - _Francesco Daddi_, Aug 01 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.: hypergeom([1,k],[],x/(1+2*x))/(1+2*x) with k=1,2,3 is the generating function for<OMOBJ>
+      <OMR xref="A000023"/>
+    </OMOBJ>,<OMOBJ>
+      <OMR xref="A087981"/>
+    </OMOBJ>, and<OMOBJ>
+      <OMR xref="A052124"/>
+    </OMOBJ>. - _Mark van Hoeij_, Nov 08 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Conjecture: -a(n) +(n-2)*a(n-1) +2*(n-1)*a(n-2) =0. - _R. J. Mathar_, Nov 14 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: 1/E(0) where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="E" cd="A000023"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="E" cd="A000023"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>; (continued fraction). - _Sergei N. Gladkovskii_, Nov 21 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="Q" cd="A000023"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Q" cd="A000023"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="Q" cd="A000023"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>; (continued fraction). - _Sergei N. Gladkovskii_, Apr 19 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="Q" cd="A000023"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Q" cd="A000023"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="Q" cd="A000023"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>; (continued fraction). - _Sergei N. Gladkovskii_, Sep 30 2013
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> a:=n-&gt;n!*sum(((-2)^k/k!), k=0..n): seq(a(n), n=0..27); # _Zerinvary Lajos_, Jun 22 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> FoldList[#1*#2 + (-2)^#2 &amp;, 1, Range[22]] (* _Robert G. Wilson v_, Jul 07 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;0,0,n!*polcoeff(exp(-2*x+x*O(x^n))/(1-x),n))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000023 n = foldl g 1 [1..n]</CMP>
+    </omtext><omtext class="program">
+      <CMP>   where g n m = n*m + (-2)^m</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _James Spahlinger_, Oct 08 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage)</CMP>
+    </omtext><omtext class="program">
+      <CMP> @CachedFunction</CMP>
+    </omtext><omtext class="program">
+      <CMP> def A000023(n):</CMP>
+    </omtext><omtext class="program">
+      <CMP>     if n == 0 : return 1</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return n*A000023(n-1)+(-2)^n</CMP>
+    </omtext><omtext class="program">
+      <CMP> [A000023(i) for i in (0..22)]   # _Peter Luschny_, Oct 17 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) x='x+O('x^66); Vec( serlaplace( exp(-2*x)/(1-x)) ) \\ _Joerg Arndt_, Oct 06 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A087891, A008290 A089258.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

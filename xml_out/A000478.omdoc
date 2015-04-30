@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000478.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000478">
+          <assertion class="***** TTTT *****">
+      <CMP> M4978 N2138</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 15,105,490,1918,6825,22935,74316,235092,731731,2252341,6879678,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 20900922,63259533,190957923,575363776,1731333808,5205011031,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 15638101281,46962537810,140988276150,423174543025,1269959836015,3810785476980,11434235478348,34306598748315,102927849307725</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of ways of placing n labeled balls into 3 indistinguishable boxes with at least 2 balls in each box.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Associated Stirling numbers.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 222.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. N. David and D. E. Barton, Combinatorial Chance. Hafner, NY, 1962, p. 296.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 76.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000478/b000478.txt&quot;&gt;Table of n, a(n) for n=6..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_06&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (10,-40,82,-91,52,-12).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: ((exp(x) - 1 - x)^3)/3!.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>12</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>40</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>45</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>15</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Simon Plouffe_ in his<OMOBJ>
+      <OMI>1992</OMI>
+    </OMOBJ> dissertation.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = (1+n+n^2)/2 - (1/2 + n/4)*2^n + 3^n/6 - Michael Steyer (m.steyer(AT)osram.de), Jan 09 2005
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000478"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="a" cd="A000478"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>40</OMI><OMA>
+      <OMS name="a" cd="A000478"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>82</OMI><OMA>
+      <OMS name="a" cd="A000478"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>91</OMI><OMA>
+      <OMS name="a" cd="A000478"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>52</OMI><OMA>
+      <OMS name="a" cd="A000478"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>12</OMI><OMA>
+      <OMS name="a" cd="A000478"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>11</OMI>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMV name="From"/>
+    </OMOBJ> Harvey P. Dale based on Michael Steyer's formula, Jul 17 2011]
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(6)=6!/(2!*2!*2!*3!)=15</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Table[(1+n+n^2)/2-(1/2+n/4)*2^n+3^n/6,{n,6,30}] (* or *) LinearRecurrence[ {10,-40,82,-91,52,-12},{15,105,490,1918,6825,22935},25] (* _Harvey P. Dale_, Jul 17 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) Vec(x^6*(12*x^3-40*x^2+45*x-15)/((1-x)^3*(1-2*x)^2*(3*x-1))+O(x^66)) /* _Joerg Arndt_, Apr 10 2013 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000247 (2 boxes), A058844 (4 boxes).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 6,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional comments from Michael Steyer (msteyer(AT)osram.de), Dec 02 2000.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _James A. Sellers_, Dec 06 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Joerg Arndt_, Apr 10 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

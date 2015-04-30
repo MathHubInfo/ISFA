@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000901.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000901">
+          <assertion class="***** TTTT *****">
+      <CMP> M4446 N1881</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,7,74,882,11144,159652,2571960,46406392,928734944,20436096048,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 490489794464,12752891909920,357081983435904,10712466529388608,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 342798976818878336,11655165558112403328,419585962575107694080</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of solutions to the rook problem on a 2n X 2n board having a certain symmetry group (see Robinson for details).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. C. Larson, The number of essentially different nonattacking rook arrangements, J. Recreat. Math., 7 (No. 3, 1974), circa pages 180-181.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. W. Robinson, Counting arrangements of bishops, pp. 198-214 of Combinatorial Mathematics IV (Adelaide 1975), Lect. Notes Math., 560 (1976).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Lucas, &lt;a href=&quot;http://gallica.bnf.fr/ark:/12148/bpt6k29021h&quot;&gt;Th\'{e}orie des Nombres&lt;/a&gt;, Gauthier-Villars, Paris, 1891, Vol. 1, p. 222.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         For asymptotics see the Robinson paper.
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> For Maple program see A000903.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Robert G. Wilson v_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _Sean A. Irvine_, Aug 23 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

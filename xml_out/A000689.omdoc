@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000689.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000689">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6,2,4,8,6,2,4,8,6,2,4,8,6</CMP>
+    </assertion><omtext class="name">
+      <CMP> Final decimal digit of 2^n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These are the analogs of the powers of 2 in carryless arithmetic mod 10.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let G = {2,4,8,6}. Let o be defined as XoY = least significant digit in XY. Then (G,o) is an Abelian group wherein 2 is a generator (Also see the first comment under A001148). - _K.V.Iyer_, Mar 12 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is also 2^n mod 10.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n &gt; 0: a(n) = A002081(n) - A002081(n-1).</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, Marc LeBrun and N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/carry1.pdf&quot;&gt;Carryless Arithmetic (I): The Mod 10 Version&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ca#CARRYLESS&quot;&gt;Index entries for sequences related to carryless arithmetic&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Fi#final&quot;&gt;Index entries for sequences related to final digits of numbers&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Periodic with period<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000689"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>6</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>8</OMI><OMV name="n"/></OMA></OMA>
+    </OMA>
+    </OMOBJ> mod 4)-[(n+1) mod 4]+2*[(n+2) mod 4]+11*[(n+3) mod 4]}-5*{1-[((n+1)!+1) mod (n+1)]}, with<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _Paolo P. Lava_, Jun 25 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000689"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <p></p><OMA>
+      <OMS name="a" cd="A000689"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A000689"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ>. G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _R. J. Mathar_, Apr 13 2010
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000689"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>5</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>3</OMI><OMV name="I"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="I"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>3</OMI><OMV name="I"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="I"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="C" cd="A000689"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> mod 2], with<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _Paolo P. Lava_, May 10 2010
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000689"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>10</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>47</OMI><OMV name="x"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>27</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>4</OMI><OMI>1</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000689"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A070402"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="floor" cd="A000689"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> mod 4)/2 ).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Michael Somos_, May 12 2012
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f. = 1 + 2*x + 4*x^2 + 8*x^3 + 6*x^4 + 2*x^5 + 4*x^6 + 8*x^7 + 6*x^8 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> P:=proc(n) local a,i; for i from 0 by 1 to n do a:=1/6*(8*(i mod 4)-((i+1) mod 4)+2*((i+2) mod 4)+11*((i+3) mod 4))-5*(1-(((i+1)!+1) mod (i+1))); print(a); od; end: P(100); - _Paolo P. Lava_, Jun 25 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[PowerMod[2, n, 10], {n, 0, 200}] (* _Vladimir Joseph Stephan Orlovsky_, Jun 10 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [power_mod(2,n,10)for n in xrange(0, 81)] #  _Zerinvary Lajos_, Nov 03 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=0,80, if(n,{x=(n+3)%4+1; print1(10-(4*x^3+47*x-27*x^2)/3,&quot;, &quot;)},{print1(&quot;1, &quot;)}))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [2^n mod 10: n in [0..150]]; // Vincenzo Librandi, Apr 12 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000689 n = a000689_list !! n</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000689_list = 1 : cycle [2,4,8,6]  -- _Reinhard Zumkeller_, Sep 15 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A173635.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Formula corrected by _Paolo P. Lava_, Mar 23 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

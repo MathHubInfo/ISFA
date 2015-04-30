@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000709.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000709">
+          <assertion class="***** TTTT *****">
+      <CMP> M1060 N0398</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,7,12,21,38,68,124,229,428,806,1530,2919,5591,10750,20730,40077,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 77653,150752,293161,570963,1113524,2174315,4250367,8317036,16289636,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 31931697,62642861,122980015,241595101,474910732,934088141,1838227618,3619356631</CMP>
+    </assertion><omtext class="name">
+      <CMP> Related to population of numbers of form x^2 + y^2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000709/b000709.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Daniel Shanks, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1964-0159174-9&quot;&gt;The second-order term in the asymptotic expansion of B(x)&lt;/a&gt;, Mathematics of Computation 18 (1964), pp. 75-86.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Qua#quadpop&quot;&gt;Index entries for sequences related to populations of quadratic forms&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         a(n) = int<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A000709"/>
+      <OMA>
+      <OMS name="log" cd="A000709"/>
+      <OMV name="u"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, u=1..2^(n-1))))). - Based on _Alois P. Heinz_'s Maple program, _Alonso del Arte_, Oct 24 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> Digits := 500:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; `if`(n=1, 1, round(evalf(int(1/sqrt(ln(u)), u=1..2^(n-1))))):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=1..35); # _Alois P. Heinz_, Dec 26 2010</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Floor[Integrate[1/Sqrt[Log[u]], {u, 1, 2^(n - 1)}]], {n, 2, 40}] (* Based on _Alois P. Heinz_'s Maple program, _Alonso del Arte_, Oct 24 2014 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(17) corrected and more terms from _Alois P. Heinz_, Dec 26 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

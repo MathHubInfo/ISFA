@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000506.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000506">
+          <assertion class="***** TTTT *****">
+      <CMP> M5322 N2313</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 61,841,7311,51663,325446,1910706,10715506,58258210,309958755,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1623847695,8412276585,43220104041,220683627988,1121561317408,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5679711010548,28683869195556,144552802373145,727271783033445</CMP>
+    </assertion><omtext class="name">
+      <CMP> One half of the number of permutations of [n] such that the differences have 5 runs with the same signs.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 260, #13</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. N. David, M. G. Kendall and D. E. Barton, Symmetric Function and Allied Tables, Cambridge, 1966, p. 260.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="-&gt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>16</OMI><OMV name="a"/><OMV name="n"/></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> as<OMOBJ>
+      <OMA>
+      <OMS name="-&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMS name="infinity"/>
+    </OMA>
+    </OMOBJ> . - _Philippe Deléham_, Feb 22 2004
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> A diagonal of A008970.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 6,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Emeric Deutsch_, Feb 21 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

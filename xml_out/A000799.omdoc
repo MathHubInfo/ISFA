@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000799.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000799">
+          <assertion class="***** TTTT *****">
+      <CMP> M0239 N0082</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,2,4,6,10,18,32,56,102,186,341,630,1170,2184,4096,7710,14563,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 27594,52428,99864,190650,364722,699050,1342177,2581110,4971026,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9586980,18512790,35791394,69273666,134217728,260301048,505290270,981706810,1908874353</CMP>
+    </assertion><omtext class="name">
+      <CMP> Floor( 2^n /n ).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000799/b000799.txt&quot;&gt;Table of n, a(n) for n = 1..300&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Quotient[2^n,n],{n,1,60}] (* _Vladimir Joseph Stephan Orlovsky_, May 07 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=1&lt;&lt;n\n</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000801, A065482, A082482, A053638.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

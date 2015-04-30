@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000167.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000167">
+          <assertion class="***** TTTT *****">
+      <CMP> M1938 N0767</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,2,9,49,306,2188,17810,162482,1642635,18231462,220420179,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2883693795,40592133316,611765693528,9828843229764,167702100599524,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3028466654021205,57708568527002410,1157199837194069405</CMP>
+    </assertion><omtext class="name">
+      <CMP> Nearest integer to modified Bessel function K_n(2).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 429.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000167/b000167.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., &lt;a href=&quot;http://www.nrbook.com/abramowitz_and_stegun/&quot;&gt;Handbook of Mathematical Functions&lt;/a&gt;, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy].</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Be#Bessel&quot;&gt;Index entries for sequences related to Bessel functions or polynomials&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Digits := 60: A000167 := proc(n) round( evalf ( BesselK( n,2 ) )); end;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[BesselK[n, 2] // Round, {n, 0, 21}] (* _Jean-François Alcover_, Mar 12 2014 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from H. P. Robinson</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

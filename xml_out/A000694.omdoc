@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000694.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000694">
+          <assertion class="***** TTTT *****">
+      <CMP> M1021 N0384</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,6,11,19,34,63,117,218,411,780,1487,2849,5477,10562,20419,39563,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 76805,149360,290896,567321,1107775,2165487,4237384,8299283,16268639,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 31915437,62656158,123088460,241958676,475901501,936544684</CMP>
+    </assertion><omtext class="name">
+      <CMP> Related to population of numbers of form x^2 + y^2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Shanks' paper gives erroneous value a(16)=10555. - _Sean A. Irvine_, Feb 25 2011</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Shanks, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1964-0159174-9&quot;&gt;The second-order term in the asymptotic expansion of B(x)&lt;/a&gt;, Mathematics of Computation 18 (1964), pp. 75-86.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Qua#quadpop&quot;&gt;Index entries for sequences related to populations of quadratic forms&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Digits:=500;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> K:=.764223653589220662990698731250092328116790541393409514721686673</CMP>
+    </omtext><omtext class="maple">
+      <CMP> 7496146416587328588384015050131312337219372691207925926341874206467</CMP>
+    </omtext><omtext class="maple">
+      <CMP> 8084323063315434629380531605171169636177508819961243824994277683469</CMP>
+    </omtext><omtext class="maple">
+      <CMP> 0516235139218719620569053295644670419176349770659569905712938660289</CMP>
+    </omtext><omtext class="maple">
+      <CMP> 3858998296105166296089099177929836072973697200640316985128636517347</CMP>
+    </omtext><omtext class="maple">
+      <CMP> 3921065768550978681981674707359066921;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:=n-&gt;round(evalf((2/3)*K*int(1/sqrt(ln(t)), t=1..2^n)));</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # _Sean A. Irvine_, Feb 25 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000691.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Feb 24 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

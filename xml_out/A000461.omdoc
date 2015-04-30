@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000461.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000461">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,22,333,4444,55555,666666,7777777,88888888,999999999,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10101010101010101010,1111111111111111111111,121212121212121212121212,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13131313131313131313131313,1414141414141414141414141414</CMP>
+    </assertion><omtext class="name">
+      <CMP> Concatenate n n times.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A055642(a(n)) = n * A055642(n). [_Reinhard Zumkeller_, Apr 26 2011]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Smarandache, &quot;Properties of the numbers&quot;, Univ. of Craiova Archives, 1975; Arizona State University Special Collections, Tempe, AZ.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A000461/b000461.txt&quot;&gt;Table of n, a(n) for n = 1..333&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/SmarandacheSequences.html&quot;&gt;Smarandache Sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000461"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>10</OMI>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="L" cd="A000461"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>10</OMI>
+      <OMA>
+      <OMS name="L" cd="A000461"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="L" cd="A000461"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A004216"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="floor" cd="A000461"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="log" cd="A000461"/>
+      <OMV name="_10"/>
+    </OMA><OMA><OMS name="times"/><OMI>10</OMI><OMV name="n"/></OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Henry Bottomley_, Jun 01 2000
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000461"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="i"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>10</OMI>
+      <OMA><OMS name="times"/><OMV name="i"/><OMA>
+      <OMS name="floor" cd="A000461"/>
+      <OMA>
+      <OMS name="log" cd="A000461"/>
+      <OMI>10</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>, n)) + 1))). - _José de Jesús Camacho Medina_, Dec 10 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> a:= n-&gt; parse(cat(n$n)): seq(a(n), n=1..20);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Sum[(n)*10^(i*(Floor[Log[10, n]] + 1)), {i, 0, n - 1}], {n, 1, 30}] (* _José de Jesús Camacho Medina_, Dec 10 2014 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[FromDigits[Flatten[IntegerDigits/@Table[n,{n}]]],{n,15}] (* _Harvey P. Dale_, Mar 01 2015 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000461 n = (read $ concat $ replicate n $ show n) :: Integer</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Apr 26 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A048376, A053422.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> John Radu (Suttones(AT)aol.com)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

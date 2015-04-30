@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000402.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000402">
+          <assertion class="***** TTTT *****">
+      <CMP> M4239 N1771</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,6,41,293,2309,19975,189524,1960041,21993884,266361634,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3465832370,48245601976,715756932697,11277786883720,188135296651083,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3313338641692957,61444453534759589,1196988740015236617,24442368179977776766,522124104504306695929</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of permutations of [n] in which the longest increasing run has length 3.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. N. David, M. G. Kendall and D. E. Barton, Symmetric Function and Allied Tables, Cambridge, 1966, p. 261, Table 7.4.1. (Values for n&gt;=16 are incorrect.)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Max Alekseyev, &lt;a href=&quot;/A000402/b000402.txt&quot;&gt;Table of n, a(n) for n = 1..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Max A. Alekseyev, &lt;a href=&quot;http://arxiv.org/abs/1205.4581&quot;&gt;On the number of permutations with bounded runs length&lt;/a&gt;, arXiv preprint arXiv:1205.4581, 2012. - From _N. J. A. Sloane_, Oct 23 2012</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(4)=6 because we have (124)3, (134)2, (234)1, 4(123), 3(124) and 2(134), where the parentheses surround increasing runs of length 3.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Column 3 of A008304. Other columns: A000303, A000434, A000456, A000467.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A001250, A001251, A001252, A001253, A010026, A211318.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Better description from _Emeric Deutsch_, May 08 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Terms a(16), a(17) are corrected and further terms added by _Max Alekseyev_, May 20 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

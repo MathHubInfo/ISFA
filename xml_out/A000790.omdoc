@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000790.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000790">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,4,341,6,4,4,6,6,4,4,6,10,4,4,14,6,4,4,6,6,4,4,6,22,4,4,9,6,4,4,6,6,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4,4,6,9,4,4,38,6,4,4,6,6,4,4,6,46,4,4,10,6,4,4,6,6,4,4,6,15,4,4,9,6,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4,4,6,6,4,4,6,9,4,4,15,6,4,4,6,6,4,4,6,21,4,4,10,6,4</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primary pretenders: least composite c such that n^c == n (mod c).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is remarkable that this sequence is periodic with period</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 19568584333460072587245340037736278982017213829337604336734362\</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 294738647777395483196097971852999259921329236506842360439300 = 2^2 * 3^2 * 5^2 * 7^2 * 11^2 * 13^2 * 17^2 * 19^2 * 23^2 * 29 * 31 * 37 * 41 * 43 * 47 * 53 * 59 * 61 * 67 * 71 * 73 * 79 * 83 * 89 * 97 * 101 * 103 * 107 * 109 * 113 * 127 * 131 * 137 * 139 * 149 * 151 * 157 * 163 * 167 * 173 * 179 * 181 * 191 * 193 * 197 * 199 * 211 * 223 * 227 * 229 * 233 * 239 * 241 * 251 * 257 * 263 * 269 * 271 * 277.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Note that the period is 277# * 23# (where as usual # is the primorial). - _Charles R Greathouse IV_, Feb 23 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Records are: 4, 341, 382 &amp; 561; and they occur at indices of: 0, 2, 383 &amp; 10103. - _Robert G. Wilson v_, Feb 22 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000790/b000790.txt&quot;&gt;Table of n, a(n) for n=0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> John H. Conway, Richard K. Guy, W. A. Schneeberger and N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/primary.html&quot;&gt;The Primary Pretenders&lt;/a&gt;, Acta Arith. 78 (1997), 307-313.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(2) = 341 because 2^341 = 2 mod 341 and there is no smaller composite number c such that 2^c = 2 mod c.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3) = 6 because 3^6 = 3 mod 6 (whereas 3^4 = 1 mod 4).</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a[n_] := For[c = 4, True, c = If[PrimeQ[c + 1], c + 2, c + 1], If[PowerMod[n, c, c] == Mod[n, c], Return[c]]]; Table[a[n], {n, 0, 100}] (* _Jean-François Alcover_, Oct 18 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=forcomposite(c=4,554,if(Mod(n,c)^c==n,return(c))); 561 \\ _Charles R Greathouse IV_, Feb 23 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Math.NumberTheory.Moduli (powerMod)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000790 n = head [c | c &lt;- a002808_list, powerMod n c c == mod n c]</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Jul 11 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A108574 (all values occurring in this sequence).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A002808.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000209.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000209">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,2,0,1,3,0,1,7,0,1,226,1,0,7,1,0,3,1,0,2,2,0,2,2,0,1,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,1,6,0,1,75,1,0,8,1,0,4,1,0,2,1,0,2,2,0,1,3,0,1,6,0,1,45,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,0,8,1,0,4,1,0,2,1,0,2,2,0,1,3,0,1,6,0,1,32,1,0,9,1</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Nearest integer to tan n.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000209/b000209.txt&quot;&gt;Table of n, a(n) for n=0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Digits := 100; f := n-&gt;round(evalf(tan(n))); [ seq(f(n), n=0..100) ];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Round[Tan[Range[0,90]]] (* _Harvey P. Dale_, Aug 26 2013 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> sign,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

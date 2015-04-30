@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000404.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000404">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,8,10,13,17,18,20,25,26,29,32,34,37,40,41,45,50,52,53,58,61,65,68,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 72,73,74,80,82,85,89,90,97,98,100,101,104,106,109,113,116,117,122,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 125,128,130,136,137,145,146,148,149,153,157,160,162,164,169,170,173,178</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers that are the sum of 2 nonzero squares.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From the formula it is easy to see that if n is in this sequence, then so are all odd powers of n. - _T. D. Noe_, Jan 13 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also numbers whose cubes are the sum of two nonzero squares. - Joe Namnath and Lawrence Sze</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A line perpendicular to y=mx has its first integral y-intercept at a^2+b^2. The remaining ones for that slope are multiples of that primitive value. - _Larry J Zimmermann_, Aug 19 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The primes in this sequence are sequence A002313.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Complement of A018825; A025426(a(n)) &gt; 0; A063725(a(n)) &gt; 0. - _Reinhard Zumkeller_, Aug 16 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If the two squares are not equal, then any power is still in the sequence: if n = x^2 + y^2 with x != y, then n^2 = (x^2-y^2)^2 + (2xy)^2 and n^3 = (x(x^2-3y^2))^2 + (y(3x^2-y^2))^2, etc. - _Carmine Suriano_, Jul 13 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> David A. Cox, &quot;Primes of the Form x^2 + n y^2&quot;, Wiley, 1989.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. H. Hardy and E. M. Wright, An Introduction to the Theory of Numbers, 5th ed., Oxford Univ. Press, 1979, p. 219, th. 251, 252.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Ian Stewart, &quot;Game, Set and Math&quot;, Chapter 8, 'Close Encounters of the Fermat Kind', Penguin Books, Ed. 1991, pp. 107-124.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000404/b000404.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joshua Harrington, Lenny Jones, and Alicia Lamarche, &lt;a href=&quot;http://arxiv.org/abs/1404.0187&quot;&gt;Representing integers as the sum of two squares in the ring Z_n&lt;/a&gt;, arXiv:1404.0187 [math.NT], 2014.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Xiao, &lt;a href=&quot;http://wims.unice.fr/~wims/en_tool~number~twosquares.en.html&quot;&gt;Two squares&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A084888/a084888.txt&quot;&gt;Illustration for A084888 and A000404&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Su#ssq&quot;&gt;Index entries for sequences related to sums of squares&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Let<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="t"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p_1"/>
+      <OMV name="a_1"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p_2"/>
+      <OMV name="a_2"/>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p_r"/>
+      <OMV name="a_r"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q_1"/>
+      <OMV name="b_1"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q_2"/>
+      <OMV name="b_2"/>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q_s"/>
+      <OMV name="b_s"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> with<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="t"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="a_i"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ> for i=1..r, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p_i"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ> for i=1..r and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q_j"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ> for j=1..s. Then<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> is<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> member iff 1) b_j=0 mod<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ> for j=1..s and 2) r&gt;0 or<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="t"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="or" cd="A000404"/>
+      <OMV name="both"/>
+    </OMA></OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> 25 = 3^2 + 4^2, therefore 25 is a term. Note that also 25^3 = 15625 = 44^2 + 117^2, therefore 15625 is a term.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> nMax=1000; n2=Floor[Sqrt[nMax-1]]; Union[Flatten[Table[a^2+b^2, {a,n2}, {b,a,Floor[Sqrt[nMax-a^2]]}]]]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) is_A000404(n)={ for( i=1,#n=factor(n)~%4, n[1,i]==3 &amp;&amp; n[2,i]%2 &amp;&amp; return); n &amp;&amp; ( vecmin(n[1,])==1 || (n[1,1]==2 &amp;&amp; n[2,1]%2))} \\ _M. F. Hasler_, Feb 07 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.List (findIndices)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000404 n = a000404_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000404_list = findIndices (&gt; 0) a025426_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Aug 16 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A001481 gives another version (allowing for zero squares).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A063725 (number of representations), A024509 (numbers with multiplicity), A025284, A018825. Also A050803, A050801, A001105, A033431, A084888, A000578, A000290, A057961, A232499, A001481, A004431, A007692.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_ and _J. H. Conway_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Ralf Stephan_, Nov 15 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Typo in formula corrected by _M. F. Hasler_, Feb 07 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Erroneous Mathematica program fixed by _T. D. Noe_, Aug 07 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> PARI code fixed for versions &gt; 2.5 by _M. F. Hasler_, Jan 01 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

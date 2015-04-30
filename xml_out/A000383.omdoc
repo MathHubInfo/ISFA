@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000383.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000383">
+          <assertion class="***** TTTT *****">
+      <CMP> M4088 N1697</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,1,1,6,11,21,41,81,161,321,636,1261,2501,4961,9841,19521,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 38721,76806,152351,302201,599441,1189041,2358561,4678401,9279996,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 18407641,36513081,72426721,143664401,284970241,565262081,1121244166,2224080691,4411648301</CMP>
+    </assertion><omtext class="name">
+      <CMP> Hexanacci numbers with a(0)=...=a(5)=1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000383/b000383.txt&quot;&gt;Table of n, a(n) for n=0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joerg Arndt, &lt;a href=&quot;http://www.jjj.de/fxt/#fxtbook&quot;&gt;Matters Computational (The Fxtbook)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. G. Baumgart, Letter to the editor &lt;a href=&quot;http://www.fq.math.ca/Scanned/2-4/baumgart-a.pdf&quot;&gt;Part 1&lt;/a&gt; &lt;a href=&quot;http://www.fq.math.ca/Scanned/2-4/baumgart-b.pdf&quot;&gt;Part 2&lt;/a&gt; &lt;a href=&quot;http://www.fq.math.ca/Scanned/2-4/baumgart-c.pdf&quot;&gt;Part 3&lt;/a&gt;, Fib. Quart. 2 (1964), 260, 302.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_06&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1,1,1,1,1,1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <p></p><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <p></p><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _R. J. Mathar_, Oct 11 2011
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> A000383:=(-1+z**2+2*z**3+3*z**4+4*z**5)/(-1+z**2+z**3+z**4+z**5+z+z**6); [_Simon Plouffe_ in his 1992 dissertation.]</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; (Matrix([[1$6]]). Matrix(6, (i,j)-&gt; if (i=j-1) or j=1 then 1 else 0 fi)^n)[1,6]: seq(a(n), n=0..28); # _Alois P. Heinz_, Aug 26 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> LinearRecurrence[{1,1,1,1,1,1},{1,1,1,1,1,1},50] (* _Harvey P. Dale_, Oct 30 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A060455.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A001592 Hexanacci numbers with a(0)=...=a(4)=0, a(5)=1.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A247192 Indices of primes in this sequence.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A249413 Primes in this sequence.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

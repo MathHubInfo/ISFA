@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000258.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000258">
+          <assertion class="***** TTTT *****">
+      <CMP> M2932 N1178</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,12,60,358,2471,19302,167894,1606137,16733779,188378402,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2276423485,29367807524,402577243425,5840190914957,89345001017415,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1436904211547895,24227076487779802,427187837301557598,7859930038606521508,150601795280158255827</CMP>
+    </assertion><omtext class="name">
+      <CMP> E.g.f.: exp(exp(exp(x)-1)-1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of 3-level labeled rooted trees with n leaves. - _Christian G. Bower_, Aug 15 1998</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of pairs of set partitions (d,d') of [n] such that d is finer than d'. - A. Joseph Kennedy (kennedy_2001in(AT)yahoo.co.in), Feb 05 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In the Comm. Algebra paper cited, I introduce a sequence of algebras called 'class partition algebras' with this sequence as dimensions. The algebras are the centralizers of wreath product in combinatorial representation theory. - A. Joseph Kennedy (kennedy_2001in(AT)yahoo.co.in), Feb 17 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the number of ways to partition {1,2,...n} and then partition each cell (block) into subcells.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Ginsburg, Iterated exponentials, Scripta Math., 11 (1945), 340-353.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. Hogg and B. A. Huberman, Attractors on finite sets: the dissipative dynamics of computing structures, Phys. Review A 32 (1985), 2338-2346.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Joseph Kennedy, Class partition algebras as centralizer algebras, Communications in Algebra, 35 (2007), 145-170, see page 153.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Ulrike Sattler, Decidable classes of formal power series with nice closure properties, Diplomarbeit im Fach Informatik, Univ. Erlangen - Nuernberg, Jul 27 1994</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. P. Stanley, Enumerative Combinatorics, Cambridge, Vol. 2, 1999; see Example 5.2.4.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000258/b000258.txt&quot;&gt;Table of n, a(n) for n=0..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Aboud, J.-P. Bultel, A. Chouria, J.-G. Luque, O. Mallet, &lt;a href=&quot;http://arxiv.org/abs/1402.2960&quot;&gt;Bell polynomials in combinatorial Hopf algebras&lt;/a&gt;, arXiv preprint arXiv:1402.2960, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Blasiak, A. Horzela, K. A. Penson, G.H.E. Duchamp and A. I. Solomon, &lt;a href=&quot;http://arXiv.org/abs/quant-ph/0501155&quot;&gt;Boson normal ordering via substitutions and Sheffer-type polynomials&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Cameron, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;Sequences realized by oligomorphic permutation groups&lt;/a&gt;, J. Integ. Seqs. Vol. 3 (2000), #00.1.5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Cameron, D. A. Gewurz and F. Merola, &lt;a href=&quot;http://www.maths.qmw.ac.uk/~pjc/preprints/product.pdf&quot;&gt;Product action&lt;/a&gt;, Discrete Math., 308 (2008), 386-394.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Gottfried Helms, &lt;a href=&quot;http://go.helms-net.de/math/binomial/04_5_SummingBellStirling.pdf&quot;&gt;Bell Numbers&lt;/a&gt;, 2008.</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=70&quot;&gt;Encyclopedia of Combinatorial Structures 70&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=292&quot;&gt;Encyclopedia of Combinatorial Structures 292&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. A. Penson, P. Blasiak, G. Duchamp, A. Horzela and A. I. Solomon, &lt;a href=&quot;http://arXiv.org/abs/quant-ph/0312202&quot;&gt;Hierarchical Dobinski-type relations via substitution and the moment problem&lt;/a&gt; [J. Phys. A 37 (2004), 3475-3487]</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane and Thomas Wieder, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0307064&quot;&gt;The Number of Hierarchical Orderings&lt;/a&gt;, Order 21 (2004), 83-89.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Sum(stirling2(n, k)*(bell(k)), k=0..n). - Detlef Pauly (dettodet(AT)yahoo.de), Jun 06 2002
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Representation as an infinite series (Dobinski-type formula), in Maple notation: a(n)=exp(exp(-1)-1)*sum(evalf(sum(p!*stirling2(k, p)*exp(-p), p=1..k))*k^n/k!, k=0..infinity),<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>, 2.... - _Karol A. Penson_, Nov 28 2003.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000258"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA>
+      <OMR xref="A055896"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>. - _R. J. Mathar_, Apr 15 2008
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> 1 + x + 3*x^2 + 12*x^3 + 60*x^4 + 358*x^5 + 2471*x^6 + 19302*x^7 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(combinat, bell, stirling2): seq(add(stirling2(n,k)*(bell(k)), k=0..n),n=0..30);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(combstruct); SetSetSetL := [T, {T=Set(S), S=Set(U,card &gt;= 1), U=Set(Z,card &gt;=1)},labeled];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> nn = 20; Range[0, nn]! CoefficientList[Series[Exp[Exp[Exp[x] - 1] - 1], {x, 0, nn}], x]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) makelist(sum(stirling2(n,k)*belln(k),k,0,n),n,0,24); /* _Emanuele Munarini_, Jul 04 2011 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> a(n)=|A039811(n, 1)| (first column of triangle). Cf. A000110, A000307, A000357, A000405, A001669.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Row sums of (Stirling2)^2 triangle A130191.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Column k=2 of A144150.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

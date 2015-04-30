@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000170.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000170">
+          <assertion class="***** TTTT *****">
+      <CMP> M1958 N0775</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,2,10,4,40,92,352,724,2680,14200,73712,365596,2279184,14772512,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 95815104,666090624,4968057848,39029188884,314666222712,2691008701644,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 24233937684440,227514171973736,2207893435808352,22317699616364044</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of ways of placing n nonattacking queens on n X n board.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. R. Bitner and E. M. Reingold, Backtrack programming techniques, Commun. ACM, 18 (1975), 651-656.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Freeman, A neural network solution to the n-queens problem, The Mathematica J., 3 (No. 3, 1993), 52-56.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Gardner, The Unexpected Hanging, pp. 190-2, Simon &amp; Shuster NY 1969</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Jieh Hsiang, Yuh-Pyng Shieh and Yao-Chiang Chen, The cyclic complete mappings counting problems, in Problems and Problem Sets for ATP, volume 02-10 of DIKU technical reports, G. Sutcliffe, J. Pelletier and C. Suttner, eds., 2002.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Kenji Kise, Takahiro Katagiri, Hiroki Honda and Toshitsugu Yuba: Solving the 24-queens Problem using MPI on a PC Cluster, Technical Report UEC-IS-2004-6, Graduate School of Information Systems, The University of Electro-Communications (2004)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. Masehian, H. Akbaripour, N. Mohabbati-Kalejahi, Landscape analysis and efficient metaheuristics for solving the n-queens problem, Computational Optimization and Applications, 2013; DOI 10.1007/s10589-013-9578-z.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Pope, D. Sonnier, A linear solution to the n-Queens problem using vector spaces, Journal of Computing Sciences in Colleges, Volume 29 Issue 5, May 2014 Pages 77-83.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. A. Sainte-Laguë, Les Réseaux (ou Graphes), Mémorial des Sciences Mathématiques, Fasc. 18, Gauthier-Villars, Paris, 1926, p. 47.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. J. Walker, An enumerative technique for a class of combinatorial problems, pp. 91-94 of Proc. Sympos. Applied Math., vol. 10, Amer. Math. Soc., 1960.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. B. Wells, Elements of Combinatorial Computing. Pergamon, Oxford, 1971, p. 238.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Amazing Mathematical Object Factory, &lt;a href=&quot;http://theory.cs.uvic.ca/amof/e_queeI.htm&quot;&gt;Information on the n Queens problem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jordan Bell, Brett Stevens, &lt;a href=&quot;http://dx.doi.org/10.1016/j.disc.2007.12.043&quot;&gt;A survey of known results and research areas for n-queens&lt;/a&gt;, Discrete Mathematics, Volume 309, Issue 1, 6 January 2009, Pages 1-31.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Bill, &lt;a href=&quot;http://www.durangobill.com/N_Queens.html&quot;&gt;Durango Bill's The N-Queens Problem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Kosters, &lt;a href=&quot;http://www.liacs.nl/~kosters/nqueens/index.html&quot;&gt;n-Queens bibliography&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> V. Kotesovec, &lt;a href=&quot;http://web.telecom.cz/vaclav.kotesovec/math.htm&quot;&gt;Non-attacking chess pieces&lt;/a&gt;, 6ed</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Masehian, H. Akbaripour, N. Mohabbati-Kalejahi, &lt;a href=&quot;http://ccis2k.org/iajit/PDF/vol.11,no.6/5421.pdf&quot;&gt;Solving the n Queens Problem using a Tuned Hybrid Imperialist Competitive Algorithm&lt;/a&gt;, 2013;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Bernd Nägel, Thomas B. Preußer, Rainer G. Spallek, &lt;a href=&quot;http://queens.inf.tu-dresden.de/&quot;&gt;Queens(AT)TUD&lt;/a&gt; project website.</CMP>
+    </omtext><omtext class="link">
+      <CMP> I. Rivin, I. Vardi and P. Zimmermann, &lt;a href=&quot;http://www.jstor.org/stable/2974691&quot;&gt;The n-queens problem&lt;/a&gt;, Amer. Math. Monthly, 101 (1994), 629-639.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/QueensProblem.html&quot;&gt;Queens Problem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Cheng Zhang, Jianpeng Ma, &lt;a href=&quot;http://arxiv.org/abs/0808.4003&quot;&gt;Counting Solutions for the N-queens and Latin Square Problems by Efficient Monte Carlo Simulations&lt;/a&gt;, 2008</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Strong conjecture: there is<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> constant<OMOBJ>
+      <OMV name="c"/>
+    </OMOBJ> around<OMOBJ>
+      <OMF dec="2.54"/>
+    </OMOBJ> such that<OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000170"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> is asymptotic to<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="c"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>; weak conjecture : lim n -&gt; infinity (1/n) * log(n!/a(n)) = constant =0.90.... - _Benoit Cloitre_, Nov 10 2002
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(2) = a(3) = 0, since on 2 X 2 and 3 X 3 chessboards there are no solutions.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> See A140393 for another version. Cf. A002562, A065256.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A036464 (2Q), A047659 (3Q), A061994 (4Q), A108792 (5Q), A176186 (6Q).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A099152, A006717, A051906.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Terms for n=21-23 computed by Sylvain PION (Sylvain.Pion(AT)sophia.inria.fr) and Joel-Yann FOURRE (Joel-Yann.Fourre(AT)ens.fr).</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(24) from Kenji KISE (kis(AT)is.uec.ac.jp), Sep 01 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(25) from Objectweb ProActive INRIA Team (proactive(AT)objectweb.org), Jun 11 2005 [Communicated by Alexandre Di Costanzo (Alexandre.Di_Costanzo(AT)sophia.inria.fr)]. This calculation took about 53 years of CPU time.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(25) has been confirmed by the NTU 25Queen Project at National Taiwan University and Ming Chuan University, led by Yuh-Pyng (Arping) Shieh, Jul 26 2005. This computation took 26613 days CPU time.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Some of the links may be broken. I would appreciate receiving updates to them. - _N. J. A. Sloane_, May 01 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> The NQueens-at-Home web site gives a different value for a(24), 226732487925864. Thanks to Goran Fagerstrom for pointing this out. I do not know which value is correct. I have therefore created a new entry, A140393, which gives the NQueens-at-home version of the sequence. - _N. J. A. Sloane_, Jun 18 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> It now appears that this sequence (A000170) is correct and A140393 is wrong. - _N. J. A. Sloane_, Nov 08 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Added a(26) as calculated by Queens(AT)TUD [http://queens.inf.tu-dresden.de/]. Thomas B. Preusser (thomas.preusser(AT)tu-dresden.de), Jul 11 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

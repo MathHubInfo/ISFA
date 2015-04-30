@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000150.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000150">
+          <assertion class="***** TTTT *****">
+      <CMP> M1753 N0696</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,2,7,20,66,212,715,2424,8398,29372,104006,371384,1337220,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4847208,17678835,64821680,238819350,883629164,3282060210,12233125112,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 45741281820,171529777432,644952073662,2430973096720,9183676536076</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of dissections of an n-gon, rooted at an exterior edge, asymmetric with respect to that edge.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of Dyck paths of length 2n having an odd number of peaks at even height. Example: a(3)=2 because we have UDU(UD)D and U(UD)DUD, where U=(1,1), D=(1,-1) and the peaks at even height are shown between parentheses. - _Emeric Deutsch_, Nov 13 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n&gt;=1, a(n) is the number of unordered binary trees with n internal nodes in which the left subtree is distinct from the right subtree. - _Geoffrey Critzer_, Feb 21 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, Enumeration of polyene hydrocarbons: a complete mathematical solution, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, &quot;Dissecting a polygon into triangles,&quot; Bull. Malayan Math. Soc., Vol. 5, pp. 57-60, 1958.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, On acyclic simplicial complexes. Mathematika 15 1968 115-122.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, p. 78, (3.5.26).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. K. Stockmeyer, The charm bracelet problem and its applications, pp. 339-349 of Graphs and Combinatorics (Washington, Jun 1973), Ed. by R. A. Bari and F. Harary. Lect. Notes Math., Vol. 406. Springer-Verlag, 1974.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000150/b000150.txt&quot;&gt;Table of n, a(n) for n=0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Lu#Lyndon&quot;&gt;Index entries for sequences related to Lyndon words&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Let c(x) = (1-sqrt(1-4*x))/(2*x) = g.f. for Catalan numbers<OMOBJ>
+      <OMR xref="A000108"/>
+    </OMOBJ>, let<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="d" cd="A000150"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMV name="x"/><OMV name="c"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. Then g.f. is<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="c" cd="A000150"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="d" cd="A000150"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sqrt" cd="A000150"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A000150"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="z"/></OMA>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="z"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="z"/></OMA>
+    </OMA>
+    </OMOBJ>. - _Emeric Deutsch_, Nov 13 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         With<OMOBJ>
+      <OMA>
+      <OMS name="c" cd="A000150"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> defined as above: g.f. = x*(c(x)^2/2 - c(x^2)/2). - _Geoffrey Critzer_, Feb 21 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000150"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A000150"/>
+      <OMS name="Pi"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="GAMMA" cd="A000150"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="GAMMA" cd="A000150"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="GAMMA" cd="A000150"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="GAMMA" cd="A000150"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _Mark van Hoeij_, Nov 11 2009
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000150"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="sqrt" cd="A000150"/>
+      <OMS name="Pi"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Vaclav Kotesovec_, Mar 10 2014
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> nn=20;CoefficientList[Series[x/2(((1-(1-4x)^(1/2))/(2x))^2-(1-(1-4x^2)^(1/2))/(2x^2)),{x,0,nn}],x]  (* _Geoffrey Critzer_, Feb 21 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> a(n) = T(2n+2, n), array T as in A051168, a count of Lyndon words.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A051168, A005430.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A007595.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A diagonal of the square array described in A051168.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional comments from _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

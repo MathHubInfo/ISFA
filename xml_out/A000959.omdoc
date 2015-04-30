@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000959.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000959">
+          <assertion class="***** TTTT *****">
+      <CMP> M2616 N1035</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,7,9,13,15,21,25,31,33,37,43,49,51,63,67,69,73,75,79,87,93,99,105,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 111,115,127,129,133,135,141,151,159,163,169,171,189,193,195,201,205,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 211,219,223,231,235,237,241,259,261,267,273,283,285,289,297,303</CMP>
+    </assertion><omtext class="name">
+      <CMP> Lucky numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> An interesting general discussion of the phenomenon of 'random primes' (generalizing the lucky numbers) occurs in Hawkins (1958). Heyde (1978) proves that Hawkins' random primes do not only almost always satisfy the Prime Number Theorem but also the Riemann Hypothesis. - Alf van der Poorten, Jun 27 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Bui and Keating establish an asymptotic formula for the number of k-difference twin primes, and more generally to all l-tuples, of Hawkins primes, a probabilistic model of the Eratosthenes sieve. The formula for k = 1 was obtained by Wunderlich [Acta Arith. 26 (1974), 59 - 81]. - _Jonathan Vos Post_, Mar 24 2009. (This is quoted from the abstract of the Bui-Heating (2006) article, _Joerg Arndt_, Jan 04 2014)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It appears that a 1's line is formed, as in the Gilbreath's conjecture, if we use 2 (or 4), 3, 5 (differ of 7), 9, 13, 15, 21, 25,... instead of A000959 1, 3, 7, 9, 13, 15, 21, 25, ... - _Eric Desbiaux_, Mar 25 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A254967(n-1,n-1). - _Reinhard Zumkeller_, Feb 11 2015</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Martin Gardner, Gardner's Workout, Chapter 21 &quot;Lucky Numbers and 2187&quot; pp. 149-156 A. K. Peters MA 2002.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Richard K. Guy, Unsolved Problems in Number Theory, C3.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. S. Ogilvy, Tomorrow's Math. 2nd ed., Oxford Univ. Press, 1972, p. 99.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> David Wells, The Penguin Dictionary of Curious and Interesting Numbers. Penguin Books, NY, 1986, 114.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, R. J. Mathar, and Hugo v. d. Sanden, &lt;a href=&quot;/A000959/b000959.txt&quot;&gt;Table of n, a(n) for n = 1..200000&lt;/a&gt; (first 10000 terms from T. D. Noe. Terms up to 30981 by R. J. Mathar)</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. M. Bui, J. P. Keating, &lt;a href=&quot;http://arxiv.org/abs/math/0607196&quot;&gt;On twin primes associated with the Hawkins random sieve&lt;/a&gt;, version 2, Mar 24, 2009. J. Number Theory 119 (2006), 284-296.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vema Gardiner, R. Lazarus, N. Metropolis and S. Ulam, &lt;a href=&quot;http://www.jstor.org/stable/3029719&quot;&gt;On certain sequences of integers defined by sieves&lt;/a&gt;, Math. Mag., 29 (1955), 117-119.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Martin Gardner, &lt;a href=&quot;http://dx.doi.org/10.1007/BF03024427&quot;&gt;Lucky numbers and 2187&lt;/a&gt;, Math. Intellig., 19 (No. 2, 1997), 26-29.</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Hawkins, &lt;a href=&quot;http://www.jstor.org/stable/3029322&quot;&gt;The random sieve&lt;/a&gt;, Math. Mag. 31 (1958), 1-3.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Hawkins and W. E. Briggs, &lt;a href=&quot;http://www.jstor.org/stable/3029213&quot;&gt;The lucky number theorem&lt;/a&gt;, Math. Mag. 31 1958 81-84.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. C. Heyde, &lt;a href=&quot;http://dx.doi.org/10.1214/aop/1176995433&quot;&gt;A Log Log Improvement to the Riemann Hypothesis for the Hawkins Random Sieve&lt;/a&gt;, Ann. Probability, 6 (1978), 850-875.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ivars Peterson, MathTrek, &lt;a href=&quot;http://web.archive.org/web/20130401223634/http://www.maa.org/mathland/mathtrek1.html&quot;&gt;Martin Gardner's Lucky Numbers&lt;/a&gt; (archived on Archive.org)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ivars Peterson, &lt;a href=&quot;http://archive.wikiwix.com/cache/?url=http://www.sciencenews.org/sn_arc97/9_6_97/mathland.htm&amp;amp;title=&quot;&gt;Martin Gardner's Lucky Numbers&lt;/a&gt; (archived on Wikiwix.com)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Walter Schneider, &lt;a href=&quot;http://web.archive.org/web/2004/www.wschnei.de/number-theory/lucky-numbers.html&quot;&gt;Lucky Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Torsten Sillke, &lt;a href=&quot;http://www.mathematik.uni-bielefeld.de/~sillke/SEQUENCES/series013&quot;&gt;S. M. Ulam's Lucky Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hugo van der Sanden, &lt;a href=&quot;http://crypt.org/hv/maths/lucky_1e8.bz2&quot;&gt;Lucky numbers up to 1e8&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Villemin's Almanach of Numbers, &lt;a href=&quot;http://villemin.gerard.free.fr/Wwwgvmm/Iteration/Chanceux.htm&quot;&gt;Nombre Chanceux&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/LuckyNumber.html&quot;&gt;Lucky number.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Lucky_number&quot;&gt;Lucky number&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> David W. Wilson, &lt;a href=&quot;/A000959/a000959.cpp.txt&quot;&gt;Fast space-efficient sequence generating program in C++&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Si#sieve&quot;&gt;Index entries for sequences generated by sieves&lt;/a&gt; [From _Reinhard Zumkeller_, Oct 15 2008]</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Start with the natural numbers. Delete every<OMOBJ>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="nd"/></OMA>
+    </OMOBJ> number, leaving 1 3 5 7 ...; the<OMOBJ>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="nd"/></OMA>
+    </OMOBJ> number remaining is<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>, so delete every<OMOBJ>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="rd"/></OMA>
+    </OMOBJ> number, leaving 1 3 7 9 13 15 ...; now delete every<OMOBJ>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMV name="th"/></OMA>
+    </OMOBJ> number, leaving 1 3 7 9 13 ...; now delete every<OMOBJ>
+      <OMA><OMS name="times"/><OMI>9</OMI><OMV name="th"/></OMA>
+    </OMOBJ> number; etc.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Other identities:
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A145649"/>
+      <OMA>
+      <OMS name="a" cd="A000959"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>; complement of<OMOBJ>
+      <OMR xref="A050505"/>
+    </OMOBJ>. - _Reinhard Zumkeller_, Oct 15 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         From _Antti Karttunen_, Feb 26 2015: (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For all<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A109497"/>
+      <OMA>
+      <OMS name="a" cd="A000959"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For all<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000959"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000040"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A032600"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For all<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000959"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A255553"/>
+      <OMA>
+      <OMR xref="A000040"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         (End)
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> ## luckynumbers(n) returns all lucky numbers from 1 to n. ## Try n=10^5 just for fun. luckynumbers:=proc(n) local k, Lnext, Lprev; Lprev:=[$1..n]; for k from 1 do if k=1 or k=2 then Lnext:= map(w-&gt; Lprev[w],remove(z -&gt; z mod Lprev[2] = 0,[$1..nops(Lprev)])); if nops(Lnext)=nops(Lprev) then break fi; Lprev:=Lnext; else Lnext:= map(w-&gt; Lprev[w],remove(z -&gt; z mod Lprev[k] = 0,[$1..nops(Lprev)])); if nops(Lnext)=nops(Lprev) then break fi; Lprev:=Lnext; fi; od; return Lnext; end: # _Walter Kehowski_, Jun 05 2008</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # Alternative</CMP>
+    </omtext><omtext class="maple">
+      <CMP> L:= [seq(2*i+1,i=0..10^3)]:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for n from 2 while n &lt; nops(L) do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   r:= L[n];</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   L:= subsop(seq(r*i=NULL,i=1..nops(L)/r),L);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> od:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> L; # _Robert Israel_, Nov 19 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> luckies = 2*Range@200 - 1; f[n_] := Block[{k = luckies[[n]]}, luckies = Delete[luckies, Table[{k}, {k, k, Length@luckies, k}]]]; Do[f@n, {n, 2, 30}]; luckies (* _Robert G. Wilson v_, May 09 2006 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> sieveMax = 10^6; luckies = Range[1, sieveMax, 2]; sieve[n_] := Module[{k = luckies[[n]]}, luckies = Delete[luckies, Table[{i}, {i, k, Length[luckies], k}]]]; n = 1; While[luckies[[n]] &lt; Length[luckies], n++; sieve[n]]; luckies</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000959 n = a000959_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000959_list =  1 : sieve 2 [1,3..] where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    sieve k xs = z : sieve (k + 1) (lucky xs) where</CMP>
+    </omtext><omtext class="program">
+      <CMP>       z = xs !! (k - 1 )</CMP>
+    </omtext><omtext class="program">
+      <CMP>       lucky ws = us ++ lucky vs where</CMP>
+    </omtext><omtext class="program">
+      <CMP>             (us, _:vs) = splitAt (z - 1) ws</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Dec 05 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A000959(nMax)={my(v=vector(nMax,i,i),i,k);while(v[i=!k+k++]&lt;=#v,v=vecextract(v,2^#v-1-sum(j=1,#v\v[i],2^(v[i]*j-1))));v} \\ _M. F. Hasler_, Sep 22 2013</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Python)</CMP>
+    </omtext><omtext class="program">
+      <CMP> def lucky(n):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ...L=list(range(1, n+1,2)); j=1</CMP>
+    </omtext><omtext class="program">
+      <CMP> ...while L[j] &lt;= len(L)-1:</CMP>
+    </omtext><omtext class="program">
+      <CMP> ......L=[L[i] for i in range(len(L)) if (i+1)%L[j]!=0]</CMP>
+    </omtext><omtext class="program">
+      <CMP> ......j+=1</CMP>
+    </omtext><omtext class="program">
+      <CMP> ...return(L)</CMP>
+    </omtext><omtext class="program">
+      <CMP> _Robert FERREOL_, Nov 19 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Scheme)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (define (A000959 n) ((rowfun_n_for_A000959sieve n) n)) ;; Code for rowfun_n_for_A000959sieve given in A255543.</CMP>
+    </omtext><omtext class="program">
+      <CMP> ;; _Antti Karttunen_, Feb 26 2015</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column 1 of A255545. (cf. also arrays A255543, A255551).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A050505 (complement).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A145649 (characteristic function).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A137164-A137185, A039672, A045954, A249876.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A031883 (first differences), A254967 (iterated absolute differences), see also A054978.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A109497 (works as an left inverse function).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. also A000040, A003309, A032600, A219178, A255553.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice,core</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_. Entry updated Mar 07 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Typo in Walter Kehowski's Maple program fixed by _Robert Israel_, Nov 19 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

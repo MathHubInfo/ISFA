@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000798.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000798">
+          <assertion class="***** TTTT *****">
+      <CMP> M3631 N1476</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,4,29,355,6942,209527,9535241,642779354,63260289423,8977053873043,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1816846038736192,519355571065774021,207881393656668953041,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 115617051977054267807460,88736269118586244492485121,93411113411710039565210494095,134137950093337880672321868725846,261492535743634374805066126901117203</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of different quasi-orders (or topologies, or transitive digraphs) with n labeled elements.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(17)-a(18) are from Brinkmann's and McKay's paper. - _Vladeta Jovovic_, Jun 10 2007</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Moussa Benoumhani, The Number of Topologies on a Finite Set, Journal of Integer Sequences, Vol. 9 (2006), Article 06.2.6.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. I. Brown and S. Watson, The number of complements of a topology on n points is at least 2^n (except for some special cases), Discr. Math., 154 (1996), 27-39.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Tyler Clark and Tom Richmond, The Number of Convex Topologies on a Finite Totally Ordered Set, 2013, to appear in Involve; http://people.wku.edu/tom.richmond/Papers/CountConvexTopsFTOsets.pdf</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 229.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Erne', Struktur- und Anzahlformeln fuer Topologien auf Endlichen Mengen, Manuscripta Math., 11 (1974), 221-259.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Erne' and K. Stege, Counting Finite Posets and Topologies, Order, 8 (1991), 247-265.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. W. Evans, F. Harary and M. S. Lynn, On the computer enumeration of finite topologies, Commun. ACM, 10 (1967), 295-297, 313.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, p. 243.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Heitzig and J. Reinhold, The number of unlabeled orders on fourteen elements, Order 17 (2000) no. 4, 333-341.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. J. Kleitman and B. L. Rothschild, The number of finite topologies, Proc. Amer. Math. Soc., 25 (1970), 276-282.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Messaoud Kolli, &quot;Direct and Elementary Approach to Enumerate Topologies on a Finite Set&quot;, J. Integer Sequences, Volume 10, 2007, Article 07.3.1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Kolli, On the cardinality of the T_0-topologies on a finite set, Preprint, 2014.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Levinson, H.; Silverman, R. Topologies on finite sets. II. Proceedings of the Tenth Southeastern Conference on Combinatorics, Graph Theory and Computing (Florida Atlantic Univ., Boca Raton, Fla., 1979), pp. 699--712, Congress. Numer., XXIII-XXIV, Utilitas Math., Winnipeg, Man., 1979. MR0561090 (81c:54006) - From _N. J. A. Sloane_, Jun 05 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Rayburn, On the Borel fields of a finite set, Proc. Amer. Math.. Soc., 19 (1968), 885-889.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Shafaat, On the number of topologies definable for a finite set, J. Austral. Math. Soc., 8 (1968), 194-198.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> For further references concerning the enumeration of topologies and posets see under A001035.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Gunnar Brinkmann and Brendan D. McKay, &lt;a href=&quot;http://cs.anu.edu.au/~bdm/papers/posets.pdf&quot;&gt;Posets on up to 16 points&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Brinkmann,  B. D. McKay, &lt;a href=&quot;http://dx.doi.org/10.1023/A:1016543307592&quot;&gt;Posets on up to 16 Points&lt;/a&gt;, Order 19 (2) (2002) 147-179 (Table IV).</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. R. Finch, &lt;a href=&quot;http://www.people.fas.harvard.edu/~sfinch/&quot;&gt;Transitive relations, topologies and partial orders&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. Foissy, C. Malvenuto, F. Patras, &lt;a href=&quot;http://arxiv.org/abs/1403.7488&quot;&gt;B_infinity-algebras, their enveloping algebras, and finite spaces&lt;/a&gt;, arXiv preprint arXiv:1403.7488, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. Foissy and C. Malvenuto, &lt;a href=&quot;http://arxiv.org/abs/1407.0476&quot;&gt;The Hopf algebra of finite topologies and T-partitions&lt;/a&gt;, arXiv preprint arXiv:1407.0476, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Giraudo, J.-G. Luque, L. Mignot and F. Nicart, &lt;a href=&quot;http://arxiv.org/abs/1401.2010&quot;&gt;Operads, quasiorders and regular languages&lt;/a&gt;, arXiv preprint arXiv:1401.2010, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Institut f. Mathematik, Univ. Hanover, &lt;a href=&quot;http://www-ifm.math.uni-hannover.de/html/preprints.phtml&quot;&gt;Erne/Heitzig/Reinhold papers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Dongseok Kim, Young Soo Kwon and Jaeun Lee, &lt;a href=&quot;http://arxiv.org/abs/1206.0550&quot;&gt;Enumerations of finite topologies associated with a finite graph&lt;/a&gt;, arXiv preprint arXiv:1206.0550, 2012. - From _N. J. A. Sloane_, Nov 09 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Pfeiffer, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL7/Pfeiffer/pfeiffer6.html&quot;&gt;Counting Transitive Relations&lt;/a&gt;, Journal of Integer Sequences, Vol. 7 (2004), Article 04.3.2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Rusin, &lt;a href=&quot;http://www.math.niu.edu/~rusin/known-math/97/finite.top&quot;&gt;More info and references&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/classic.html#POSETS&quot;&gt;Classic Sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wietske Visser, Koen V. Hindriks and Catholijn M. Jonker, &lt;a href=&quot;http://mmi.tudelft.nl/sites/default/files/visser_hindriks_jonker_2012b.pdf&quot;&gt;Goal-based Qualitative Preference Systems&lt;/a&gt;,  2012. - From _N. J. A. Sloane_, Oct 07 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Related to<OMOBJ>
+      <OMR xref="A001035"/>
+    </OMOBJ> by A000798(n) = Sum Stirling2(n, k)*A001035(k).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: A(exp(x) - 1) where<OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000798"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> is the e.g.f. for<OMOBJ>
+      <OMR xref="A001035"/>
+    </OMOBJ>. - _Geoffrey Critzer_, Jul 28 2014
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A001035 (labeled posets), A001930 (unlabeled topologies), A000112 (unlabeled posets), A006057.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Sequences in the Erne' (1974) paper: A000798, A001035, A006056, A006057, A001929, A001927, A006058, A006059, A000110.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,core,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Two more terms from Jobst Heitzig (heitzig(AT)math.uni-hannover.de), Jul 03 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

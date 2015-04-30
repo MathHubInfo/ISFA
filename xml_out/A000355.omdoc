@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000355.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000355">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,11,23,29,83,89,131,191,251,431,443,491,509,683,743,809,911,1031,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1049,1103,1223,1229,1289,1409,1451,1511,1583,1811,1889,1931,2003,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2063,2069,2129,2351,2543,2549,2903,2963,2969,3023,3329,3389,3449,3491,3623,3803</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes = 3, 9, 11 (mod 20) such that 2p+1 is also prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = (A000353(n)-1)/2. - _Reinhard Zumkeller_, Feb 10 2009</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. A. J. Matthews, Maximally periodic reciprocals, Bull. Institute of Mathematics and Its Applications, vol. 28, p. 147-148, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Zumkeller, &lt;a href=&quot;/A000355/b000355.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) is(n)=my(k=n%20); (k==3||k==9||k==11) &amp;&amp; isprime(2*n+1) &amp;&amp; isprime(n) \\ _Charles R Greathouse IV_, Nov 20 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Subset of A005384.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> R. A. J. Matthews [ 100265.3005(AT)compuserve.com ]</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Reinhard Zumkeller_, Feb 10 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

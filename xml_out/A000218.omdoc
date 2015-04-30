@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000218.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000218">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,9,81,65,61,37,58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,58,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37</CMP>
+    </assertion><omtext class="name">
+      <CMP> Take sum of squares of digits of previous term.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Honsberger, Ingenuity in Math., Random House, 1970, p. 83.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Porges, A set of eight numbers, Amer. Math. Monthly, 52 (1945), 379-382.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000218/b000218.txt&quot;&gt;Table of n, a(n) for n = 1..100&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Periodic with period<OMOBJ>
+      <OMI>8</OMI>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> NestList[Total[IntegerDigits[#]^2]&amp;, 3, 80] (* _Vincenzo Librandi_, Jan 29 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A000218(n)=[3, 9, 81, 65, 61, 37, 58, 89, 145, 42, 20, 4, 16][n%8+(n%8&lt;6 &amp; n&gt;7)*8] \\ _M. F. Hasler_, May 24 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000218 n = a000218_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000218_list = iterate a003132 3</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Aug 24 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [3, 9, 81, 65, 61] cat &amp;cat[[37, 58, 89, 145, 42, 20, 4, 16]: n in [0..17]]; // _Vincenzo Librandi_, Jan 29 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A003132 (the iterated map), A003621, A039943, A099645, A031176, A007770, A000216 (starting with 2), A080709 (starting with 4), A000221 (starting with 5), A008460 (starting with 6), A008462 (starting with 8), A008463 (starting with 9), A139566 (starting with 15), A122065 (starting with 74169). - _M. F. Hasler_, May 24 2009</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,easy,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

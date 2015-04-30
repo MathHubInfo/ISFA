@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000741.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000741">
+          <assertion class="***** TTTT *****">
+      <CMP> M2531 N0999</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,3,6,9,15,18,27,30,45,42,66,63,84,84,120,99,153,132,174,165,231,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 180,270,234,297,270,378,276,435,360,450,408,540,414,630,513,636,552,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 780,558,861,690,828,759,1035,744,1113,870,1104,972,1326,945,1380,1116,1386,1218</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of compositions of n into 3 ordered relatively prime parts.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000741/b000741.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. W. Gould, &lt;a href=&quot;http://www.fq.math.ca/Scanned/2-4/gould.pdf&quot;&gt;Binomial coefficients, the bracket function and compositions with relatively prime summands&lt;/a&gt;, Fib. Quart. 2(4) (1964), 241-260.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Kimberling, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL6/Kimberling/kimberling24.html&quot;&gt;Matrix Transformations of Integer Sequences&lt;/a&gt;, J. Integer Seqs., Vol. 6, 2003.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Moebius transform of<OMOBJ>
+      <OMA>
+      <OMR xref="A000217"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> with (numtheory):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> mobtr:= proc(p)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>           proc(n) option remember;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             add (mobius(n/d)*p(d), d=divisors(n))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>           end</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000217:= n-&gt; n*(n+1)/2:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= mobtr (n-&gt; A000217(n-2)):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq (a(n), n=1..58);  # _Alois P. Heinz_, Feb 08 2011</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> mobtr[p_] := Module[{f}, f[n_] := f[n] = Sum[MoebiusMu[n/d]*p[d], {d, Divisors[n]}]; f]; A000217[n_] := n*(n+1)/2; a = mobtr[A000217[#-2]&amp;]; Table[a[n], {n, 1, 58}] (* _Jean-François Alcover_, Mar 12 2014, after _Alois P. Heinz_ *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Alois P. Heinz_, Feb 08 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

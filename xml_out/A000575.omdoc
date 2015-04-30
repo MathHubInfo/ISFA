@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000575.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000575">
+          <assertion class="***** TTTT *****">
+      <CMP> M4729 N2021</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 10,80,365,1246,3535,8800,19855,41470,81367,151580,270270,464100,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 771290,1245488,1960610,3016820,4547840,6729800,9791859,14028850,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 19816225,27627600,38055225,51833730,69867525,93262260,123360780,161784040,210477476,271763360</CMP>
+    </assertion><omtext class="name">
+      <CMP> Tenth column of quintinomial coefficients.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In the Carlitz et al. reference a(n)= Q_{5,n+2}(2), n &gt;= 0, with a(n)=binomial(11+n,n+2)-(n+3)*binomial(n+6,n+2), (eq.(3.3), p. 356, with n=5, m-&gt;n+2,r=2). Q_{5,m}(2) is the number of sequences (i_1,i_2,...,i_m) with i_s, s=1,...,m, from {1,2,3,4,5} (repetitions allowed), with exactly 2 increases between successive elements (first position is counted as an increase).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Carlitz et al., Permutations and sequences with repetitions by number of increases, J. Combin. Theory, 1 (1966), 350-374.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000575/b000575.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000575"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A035343"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, 9) = binomial(n+6, 6)*(n^3+42*n^2+677*n+5040)/(9!/6!).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>10</OMI><OMA><OMS name="times"/><OMI>20</OMI><OMV name="x"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>15</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>10</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>; numerator polynomial is<OMOBJ>
+      <OMA>
+      <OMS name="N5" cd="A000575"/>
+      <OMI>9</OMI>
+    </OMA>
+    </OMOBJ>, x) from the array<OMOBJ>
+      <OMR xref="A063422"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000575"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="C" cd="A000575"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>40</OMI><OMA>
+      <OMS name="C" cd="A000575"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>65</OMI><OMA>
+      <OMS name="C" cd="A000575"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMI>5</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>56</OMI><OMA>
+      <OMS name="C" cd="A000575"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMI>6</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>28</OMI><OMA>
+      <OMS name="C" cd="A000575"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMI>7</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="C" cd="A000575"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMI>8</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A000575"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMI>9</OMI>
+    </OMA><OMV name="see"/></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> comment in A213887). - _Vladimir Shevelev_ and _Peter J. C. Moses_, Jun 22 2012
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> CoefficientList[Series[(10-20*x+15*x^2-4*x^3)/(1-x)^10,{x,0,50}],x](* _Vincenzo Librandi_, Mar 28 2012 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Comments and more terms from _Wolfdieter Lang_, Aug 29 2001</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Nov 24 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

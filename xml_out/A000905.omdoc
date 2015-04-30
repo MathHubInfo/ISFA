@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000905.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000905">
+          <assertion class="***** TTTT *****">
+      <CMP> M0736 N0275</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,5,11,47,923,409619,83763206255,3508125906290858798171,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6153473687096578758448522809275077520433167,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 18932619208894981833333582059033329370801266249535902023330546944758507753065602135843</CMP>
+    </assertion><omtext class="name">
+      <CMP> Hamilton numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = minimal degree of an equation from which n successive terms after the first can be removed (by a series of transformation comparable to Tschirnhaus') without requiring the solution of an equation of degree greater than n (and excluding cases where an equation of degree greater than n is needed but is in fact factorizable into several equations of degree all less than n). Hamilton computed the first six terms of this sequence (see reference). That is the reason why Sylvester and Hammond named them &quot;Hamilton numbers&quot;. - _Olivier Gérard_, Oct 17 2007</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Raymond Garver, The Tschinrhaus transformation, The Annals of Mathematics, 2nd Ser., Vol. 29, No. 1/4. (1927 - 1928), pp. 329.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. R. Hamilton, Sixth Report of the British Association for the Advancement of Science, London, 183i, 295-348.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. J. Sylvester and M. J. Hammond, On Hamilton's numbers, Phil. Trans. Roy. Soc., 178 (1887), 285-312.</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Lucas, &lt;a href=&quot;http://gallica.bnf.fr/ark:/12148/bpt6k29021h&quot;&gt;Th\'{e}orie des Nombres&lt;/a&gt;, Gauthier-Villars, Paris, 1891, Vol. 1, p. 496.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1)=2 is the familiar fact than one can always remove the linear term of a quadratic equation.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2)=3 because one can put any cubic equation in the form x^3-a=0 by a Tschirnhaus transformation based on the solutions of a quadratic equation.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4)=11 because one can remove the 4 terms after the first term in a polynomial of degree 11 without having to solve a quintic.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A000905 := proc(n) option remember; local i; if n=1 then 2 else 2+add((-1)^(i+1)*binomial(A000905(n-i),i+1),i=1..n-1); fi; end;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[1]=2; a[n_] := a[n] = 2+Sum[(-1)^(i+1)*Product[a[n-i] - k, {k, 0, i}]/(i+1)!, {i, 1, n-1}]; Table[a[n], {n, 1, 11}] (* _Jean-François Alcover_, May 17 2011, after Maple prog. *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001660.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Equals A006719(n) - 1.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A134294.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> The formula given by Lucas on p. 498 is slightly in error - see Maple program given here.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

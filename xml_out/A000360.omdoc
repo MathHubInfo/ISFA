@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000360.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000360">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,1,1,1,2,0,2,2,2,1,3,1,2,1,2,2,4,1,4,3,3,1,4,2,4,2,3,2,3,0,3,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4,2,6,3,5,2,5,4,7,2,6,4,4,1,5,3,6,3,6,4,6,1,5,4,5,2,5,2,3,1,3,3,6,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7,5,6,2,8,5,9,4,8,5,7,1,7,6,9,4,11,6,9,3,8,6,10,3,8,5,5,1,6,4,8,4,9,6,9,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> From a fat-fractal triangle which happens to be a self-replicating tiling.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Melvyn J. Lafitte, Sur l'Effet Noa`h en Geometrie, rapport a l'INPI, Mars 1995.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Melvyn J. Lafitte, Ensembles Auto-Similaires d'Interieur Non-Vide, Preprint Hiver 1997, Chaire de Geometrie, Departement de Mathematiques, Ecole Polytechnique Federale de Lausanne, Switzerland.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000360/b000360.txt&quot;&gt;Table of n, a(n) for n=0..10000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000360"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000360"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000360"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A000360"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000360"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000360"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> mod 3). - _Ralf Stephan_, Oct 05 2003
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> a[0] = 1; a[n_?EvenQ] := a[n] = a[n/2] + a[n/2-1]; a[n_?OddQ] := a[n] = a[(n-1)/2] - Mod[(n-1)/2-1, 3] + 1; Table[a[n], {n, 0, 103}] (* _Jean-François Alcover_, Jan 20 2015, after _Ralf Stephan_ *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.List (transpose)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000360 n = a000360_list !! n</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000360_list = 1 : concat (transpose</CMP>
+    </omtext><omtext class="program">
+      <CMP>    [zipWith (+) a000360_list $ drop 2 a057078_list,</CMP>
+    </omtext><omtext class="program">
+      <CMP>     zipWith (+) a000360_list $ tail a000360_list])</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Mar 22 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Related to A002487 by new(3n)=(old(3n)+1)/2, new(3n+1)=(old(3n+1)-1)/2, new(3n+2)=old(3n+2)/2. Cf. A000361, A000876.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A057078.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy,eigen,look</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> Melvyn Jeremie Lafitte (mjlafitte(AT)gmail.com)</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _David W. Wilson_, Aug 30 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

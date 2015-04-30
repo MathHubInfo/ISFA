@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000472.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000472">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,28,802,643726,414383582242,171713753231982206218246,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 29485613049014079571725771288849499850026859242</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = a(n-1)^2 + (a(n-2)+1)(a(n-1)-a(n-2)^2 ).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Damiani, E.; D'Antona, O.; Naldi, G.; and Pavarino, L.; Tiling bricks with bricks. Stud. Appl. Math. 83 (1990), number 2, 91-110.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000472/b000472.txt&quot;&gt;Table of n, a(n) for n = 1..14&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Br#bricks&quot;&gt;Index entries for sequences related to bricks&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000472 := proc(n) option remember; if n&lt;=2 then 3*n-1 else A000472(n-1)^2+(1+A000472(n-2))*(A000472(n-1)-A000472(n-2)^2); fi; end;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RecurrenceTable[{a[1]==2,a[2]==5,a[n]==a[n-1]^2+(a[n-2]+1)(a[n-1]- a[n-2]^2)}, a[n],{n,10}] (* _Harvey P. Dale_, Sep 29 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) I:=[2,5]; [n le 2 select I[n] else  Self(n-1)^2 + (Self(n-2)+1)*(Self(n-1)-Self(n-2)^2 ): n in [1..10]]; // Vincenzo Librandi, Sep 30 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000472 n = a000472_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000472_list = 2 : 5 : zipWith (+) (map (^ 2) $ tail a000472_list)</CMP>
+    </omtext><omtext class="program">
+      <CMP>    (zipWith (*) (map (+ 1) a000472_list)</CMP>
+    </omtext><omtext class="program">
+      <CMP>                 (zipWith (-) (tail a000472_list)</CMP>
+    </omtext><omtext class="program">
+      <CMP>                              (map (^ 2) a000472_list)))</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Oct 03 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Ottavio D'Antona [ dantona(AT)hermes.dsi.unimi.it ]</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

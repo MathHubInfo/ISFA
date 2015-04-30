@@ -1,0 +1,757 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000010.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000010">
+          <assertion class="***** TTTT *****">
+      <CMP> M0299 N0111</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,2,4,2,6,4,6,4,10,4,12,6,8,8,16,6,18,8,12,10,22,8,20,12,18,12,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 28,8,30,16,20,16,24,12,36,18,24,16,40,12,42,20,24,22,46,16,42,20,32,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 24,52,18,40,24,36,28,58,16,60,30,36,32,48,20,66,32,44</CMP>
+    </assertion><omtext class="name">
+      <CMP> Euler totient function phi(n): count numbers &lt;= n and prime to n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of elements in a reduced residue system modulo n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Degree of the n-th cyclotomic polynomial (cf. A013595). - _Benoit Cloitre_, Oct 12 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of distinct generators of a cyclic group of order n. Number of primitive n-th roots of unity. (A primitive n-th root x is such that x^k is not equal to 1 for k = 1, 2, ..., n - 1, but x^n = 1.) - _Lekraj Beedassy_, Mar 31 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also number of complex Dirichlet characters modulo n; sum(k = 1, n, a(k)) is asymptotic to (3/Pi^2)*n^2. - _Steven Finch_, Feb 16 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the highest degree of irreducible polynomial dividing 1 + x + x^2 + ... + x^(n-1) = (x^n - 1)/(x - 1). - _Alexander Adamchuk_, Sep 02 2006, corrected Sep 27 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(p) = p - 1 for prime p. a(n) is even for n &gt; 2. For n &gt; 2 a(n)/2 = A023022(n) = number of partitions of n into 2 ordered relatively prime parts. - _Alexander Adamchuk_, Jan 25 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of automorphisms of the cyclic group of order n. - _Benoit Jubin_, Aug 09 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n+2) equals the number of palindromic Sturmian words of length n which are 'bispecial', prefix or suffix of two Sturmian words of length n + 1. - _Fred Lunnon_, Sep 05 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Suppose that a and n are coprime positive integers, then by Euler's totient theorem, any factor of n divides a^phi(n) - 1. - _Lei Zhou_, Feb 28 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A096396(n) + A096397(n). - _Reinhard Zumkeller_, Mar 24 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If m has k prime factors,(f1, f2, ..., fk), then phi(m*n) = phi(f1*n) * phi(f2*n) * ... * phi(fk*n)/phi(n)^(k-1). For example, phi(42*n) = phi(2*n) * phi(3*n) * phi(7*n)/phi(n)^2. - _Gary Detlefs_, Apr 21 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> sum(n&gt;=1, a(n)/n! ) = 1.954085357876006213144... This sum is referenced in Plouffe's inverter. - _Alexander R. Povolotsky_, Feb 02 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The order of the multiplicative group of units modulo n. - _Michael Somos_, Aug 27 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 840.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. M. Apostol, Introduction to Analytic Number Theory, Springer-Verlag, 1976, page 24.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 193.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. W. Curtis, Pioneers of Representation Theory ..., Amer. Math. Soc., 1999; see p. 3.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. E. Dickson, History of the Theory of Numbers. Carnegie Institute Public. 256, Washington, DC, Vol. 1, 1919; Vol. 2, 1920; Vol. 3, 1923, see vol. 1, Chapter V.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. R. Finch, Mathematical Constants, Cambridge, 2003, pp. 115-119.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Carl Friedrich Gauss, &quot;Disquitiones Arithmeticae&quot;, Yale University Press, 1965; see p. 21.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Ronald L. Graham, Donald E. Knuth and Oren Patashnik, Concrete Math., 2n-d ed.; Addison-Wesley, 1994, p. 137.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. H. Hardy and E. M. Wright, An Introduction to the Theory of Numbers, 5th ed., Oxford Univ. Press, 1979, th. 60, 62, 63, 288, 323, 328, 330.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Peter Hilton and Jean Pedersen, A Mathematical Tapestry, Demonstrating the Beautiful Unity of Mathematics, Cambridge University Press, (pages 261-264, the Coach theorem)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. Ribenboim, The New Book of Prime Number Records.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane and Daniel Forgues, &lt;a href=&quot;/A000010/b000010.txt&quot;&gt;Table of n, phi(n) for n=1..100000&lt;/a&gt; (first 10000 terms from N. J. A. Sloane)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joerg Arndt, &lt;a href=&quot;http://www.jjj.de/fxt/#fxtbook&quot;&gt;Matters Computational (The Fxtbook)&lt;/a&gt;, section 39.7, pp. 776-778</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., &lt;a href=&quot;http://www.nrbook.com/abramowitz_and_stegun/&quot;&gt;Handbook of Mathematical Functions&lt;/a&gt;, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy].</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Alpern, &lt;a href=&quot;http://www.alpertron.com.ar/ECM.HTM&quot;&gt;Factorization using the Elliptic Curve Method(along with sigma_0, sigma_1 and phi functions)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Bayart, &lt;a href=&quot;http://www.bibmath.net/dico/index.php3?action=affiche&amp;amp;quoi=./i/indicateureuler.html&quot;&gt;Indicateur d'Euler&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Bogomolny, &lt;a href=&quot;http://www.cut-the-knot.org/blue/Euler.shtml&quot;&gt;Euler Function and Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, The Prime Glossary, &lt;a href=&quot;http://primes.utm.edu/glossary/page.php?sort=EulersPhi&quot;&gt;Euler's phi function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. Ford, &lt;a href=&quot;http://arXiv.org/abs/math.NT/9907204&quot;&gt;[math/9907204] The number of solutions of phi(x)=m&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Kevin Ford, Florian Luca and Pieter Moree, &lt;a href=&quot;http://arxiv.org/abs/1108.3805&quot;&gt;Values of the Euler phi-function not divisible by a given odd prime, and the distribution of Euler-Kronecker constants for cyclotomic fields&lt;/a&gt;, arXiv:1108.3805, 2011</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Fripertinger, &lt;a href=&quot;http://www-ang.kfunigraz.ac.at/~fripert/fga/k1euler.html&quot;&gt;The Euler phi function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Daniele A. Gewurz and Francesca Merola, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL6/Gewurz/gewurz5.html&quot;&gt;Sequences realized as Parker vectors ...&lt;/a&gt;, J. Integer Seqs., Vol. 6, 2003.</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Pérez Herrero, &lt;a href=&quot;http://psychedelic-geometry.blogspot.com/2010/07/totient-carnival.html&quot;&gt;Totient Carnival partitions&lt;/a&gt;, Psychedelic Geometry Blogspot</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Lal and P. Gillard, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-69-99858-5&quot;&gt;Table of Euler's phi function, n &lt; 10^5&lt;/a&gt;, Math. Comp., 23 (1969), 682-683.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. N. Lehmer, &lt;a href=&quot;http://projecteuclid.org/euclid.bams/1183425137&quot;&gt;Review of Dickson's History of the Theory of Numbers&lt;/a&gt;, Bull. Amer. Math. Soc., 26 (1919), 125-132.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Mathforum, &lt;a href=&quot;http://mathforum.org/library/drmath/view/51541.html&quot;&gt;Proving phi(m) Is Even&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. Matthews, &lt;a href=&quot;http://www.numbertheory.org/php/factor.html&quot;&gt;Factorizing n and calculating phi(n),omega(n),d(n),sigma(n) and mu(n)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Graeme McRae, &lt;a href=&quot;http://2000clicks.com/MathHelp/NumberFactorsTotientFunction.aspx&quot;&gt;Euler's Totient Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Carl Pomerance and Hee-Sung Yang, &lt;a href=&quot;http://www.math.dartmouth.edu/~carlp/uupaper7.pdf&quot;&gt;Variant of a theorem of Erdos on the sum-of-proper-divisors function&lt;/a&gt;, Math. Comp., to appear (2014).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Primefan, &lt;a href=&quot;http://primefan.tripod.com/Phi500.html&quot;&gt;Euler's Totient Function Values For n=1 to 500, with Divisor Lists&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Marko Riedel, &lt;a href=&quot;http://www.mathematik.uni-stuttgart.de/~riedelmo/combnumth.html&quot;&gt;Combinatorics and number theory page.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. Schneider, PlanetMath.org, &lt;a href=&quot;http://planetmath.org/encyclopedia/EulerPhifunction.html&quot;&gt;Euler phi-function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Sierpiński, &lt;a href=&quot;http://matwbn.icm.edu.pl/ksiazki/mon/mon42/mon4206.pdf&quot;&gt;Euler's Totient Function And The Theorem Of Euler&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> U. Sondermann, &lt;a href=&quot;http://home.earthlink.net/~usondermann/eulertot.html&quot;&gt;Euler's Totient Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. A. Stein, &lt;a href=&quot;http://modular.math.washington.edu/edu/Fall2001/124/lectures/lecture6/html/node3.html&quot;&gt;Phi is a Multiplicative Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Villemin, &lt;a href=&quot;http://villemin.gerard.free.fr/Wwwgvmm/Nombre/TotEuler.htm&quot;&gt;Totient d'Euler&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. de Vries, &lt;a href=&quot;http://math-it.org/Mathematik/Zahlentheorie/Zahl/ZahlApplet.html&quot;&gt;The prime factors of an integer (along with Euler's phi and Carmichael's lambda functions)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric W. Weisstein, &lt;a href=&quot;http://mathworld.wolfram.com/ModuloMultiplicationGroup.html&quot;&gt;MathWorld: Modulo Multiplication Group&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric W. Weisstein, &lt;a href=&quot;http://mathworld.wolfram.com/MoebiusTransform.html&quot;&gt;MathWorld: Moebius Transform&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric W. Weisstein, &lt;a href=&quot;http://mathworld.wolfram.com/TotientFunction.html&quot;&gt;MathWorld: Totient Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Euler%27s_phi_function&quot;&gt;Euler's totient function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n&quot;&gt;Multiplicative group of integers modulo n&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wolfram Research, &lt;a href=&quot;http://functions.wolfram.com/NumberTheoryFunctions/EulerPhi/03/02&quot;&gt;First 50 values of phi(n)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Xiao, Numerical Calculator, &lt;a href=&quot;http://wims.unice.fr/wims/en_tool~number~calcnum.en.html&quot;&gt;To display phi(n) operate on &quot;eulerphi(n)&quot;&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Di#divseq&quot;&gt;Index to divisibility sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         phi(n) = n*Product_{distinct primes<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ> dividing n} (1-1/p).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="Sum_" cd="A000010"/>
+      <OMV name="d"/>
+    </OMA>
+    </OMOBJ> divides n } phi(d) = n.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="phi" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="Sum_" cd="A000010"/>
+      <OMV name="d"/>
+    </OMA>
+    </OMA>
+    </OMOBJ> divides n } mu(d)*n/d, i.e., the Moebius transform of the natural numbers; mu() = Moebius function A008683().
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Dirichlet generating function<OMOBJ>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="n"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="phi" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMV name="s"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="zeta" cd="A000010"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="s"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="zeta" cd="A000010"/>
+      <OMV name="s"/>
+    </OMA>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMOBJ>. Also<OMOBJ>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="n"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="phi" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Multiplicative with<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000010"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="p"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="e"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _David W. Wilson_, Aug 01 2001
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="n"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="phi" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="log" cd="A000010"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA></OMA><OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="x"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMV name="cf"/></OMA>
+    </OMA>
+    </OMOBJ>. A002088) - _Henry Bottomley_, Nov 16 2001
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="binomial" cd="A000010"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, 2) - sum{i = 1,<OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMOBJ>, a(i)*floor(n/i)} (see A000217 for inverse) - _Jon Perry_, Mar 02 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         It is<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> classical result (certainly known to Landau, 1909) that lim inf<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="phi" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="taking" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> to be primes), lim sup<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="phi" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ> log log n) = e^{gamma}, with gamma = Euler's constant<OMOBJ>
+      <OMA>
+      <OMS name="taking" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> to be products of consecutive primes starting from<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ> and applying Mertens' theorem). See e.g. Ribenboim, pp.<OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>319</OMI><OMI>320</OMI>
+    </OMA>
+    </OMOBJ>. - Pieter Moree, Sep 10 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = sum_(i = 1..n) | k(n, i)| where<OMOBJ>
+      <OMA>
+      <OMS name="k" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>, i) is the Kronecker symbol. Also a(n) = #{ 1 &lt;= i &lt;= n : k(n, i) = 0}. - _Benoit Cloitre_, Aug 06 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Conjecture : limit Sum((-1)^i/(i * phi(i)) 2 &lt;= i &lt;= Infinity) exists and is ca.<OMOBJ>
+      <OMF dec="0.558"/>
+    </OMOBJ>. - Orges Leka (oleka(AT)students.uni-mainz.de), Dec 23 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         From _Enrique Pérez Herrero_, Sep 07 2010: (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="i"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="floor" cd="A000010"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sigma_k" cd="A000010"/>
+      <OMA><OMS name="times"/><OMV name="i"/><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMS name="sigma_k" cd="A000010"/>
+      <OMV name="i"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="sigma_k" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>, where sigma_2 is<OMOBJ>
+      <OMR xref="A001157"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="i"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="floor" cd="A000010"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="tau_k" cd="A000010"/>
+      <OMA><OMS name="times"/><OMV name="i"/><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMS name="tau_k" cd="A000010"/>
+      <OMV name="i"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="tau_k" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>, where tau_3 is<OMOBJ>
+      <OMR xref="A007425"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="i"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="floor" cd="A000010"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="rad" cd="A000010"/>
+      <OMA><OMS name="times"/><OMV name="i"/><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMS name="rad" cd="A000010"/>
+      <OMV name="i"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="rad" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>, where rad is<OMOBJ>
+      <OMR xref="A007947"/>
+    </OMOBJ> (End)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A173557"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A003557"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _R. J. Mathar_, Mar 30 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="phi" cd="A000010"/>
+      <OMA><OMS name="times"/><OMV name="p"/><OMV name="n"/></OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="phi" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="floor" cd="A000010"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="p"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> mod p)/(p-1))+p-1], for prime<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ>. - _Gary Detlefs_, Apr 21 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> odd = 2 * A135303((n-1)/2) * A003558((n-1)/2) or<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="phi" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="c"/><OMV name="k"/></OMA>
+    </OMA>
+    </OMOBJ>; the Coach theorem of Pedersen et al. Cf.<OMOBJ>
+      <OMR xref="A135303"/>
+    </OMOBJ>. - _Gary W. Adamson_, Aug 15 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="sum" cd="A000010"/>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, mu(n)*x^n/(1-x^n)^2), where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="mu" cd="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A008683"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Mamuka Jibladze_, Apr 05 2015
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f. = x + x^2 + 2*x^3 + 2*x^4 + 4*x^5 + 2*x^6 + 6*x^7 + 4*x^8 + 6*x^9 + 4*x^10 + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(8) = 4 with {1, 3, 5, 7} units modulo 8. a(10) = 4 with {1, 3, 7, 9} units modulo 10. - _Michael Somos_, Aug 27 2013</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory): A000010 := phi; [ seq(phi(n), n=1..100) ]; # version 1</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(numtheory): phi := proc(n) local i,t1,t2; t1 := ifactors(n)[2]; t2 := n*mul((1-1/t1[i][1]),i=1..nops(t1)); end; # version 2</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Array[EulerPhi, 70]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Axiom) [eulerPhi(n) for n in 1..100]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [ EulerPhi(n) : n in [1..100] ]; // Sergei Haller (sergei(AT)sergei-haller.de), Dec 21 2006</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n==0, 0, eulerphi(n))}; /* _Michael Somos_, Feb 05 2011 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage)</CMP>
+    </omtext><omtext class="program">
+      <CMP> # euler_phi is a standard function in Sage.</CMP>
+    </omtext><omtext class="program">
+      <CMP> def A000010(n): return euler_phi(n)</CMP>
+    </omtext><omtext class="program">
+      <CMP> def A000010_list(n): return [ euler_phi(i) for i in range(1,n+1)]</CMP>
+    </omtext><omtext class="program">
+      <CMP> # Jaap Spies, Jan 07 2007</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) { for (n=1, 100000, write(&quot;b000010.txt&quot;, n, &quot; &quot;, eulerphi(n))); } \\ _Harry J. Smith_, Apr 26 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [euler_phi(n)for n in xrange(1,70)] # _Zerinvary Lajos_, Jun 06 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) makelist(totient(n),n,0,1000); /* _Emanuele Munarini_, Mar 26 2011 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell) a n = length (filter (==1) (map (gcd n) [1..n])) -- _Allan C. Wechsler_, Dec 29 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A008683, A003434, A007755, A049108, A002202 (values).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A005277 (nontotient numbers). For inverse see A002181, A006511, A058277.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Jordan function J_k(n) is a generalization - see A059379 and A059380 (triangle of values of J_k(n)), A000010 (J_1), A059376 (J_3), A059377 (J_4), A059378 (J_5).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A054521, A023022, A054525, A134540.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Row sums of triangle A134540.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Equals right and left borders of triangle A159937. - _Gary W. Adamson_, Apr 26 2009</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Row sums of A127448. - _Mats Granvik_, May 28 2008</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Equals row sums of triangle A143239 (a consequence of the Dedekind-Liouville rule, see Concrete Mathematics p. 137). - _Gary W. Adamson_, Aug 01 2008</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Equals row sums of triangle A143353 and of  A143276.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A003558, A135303</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,core,nonn,mult,nice,hear,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

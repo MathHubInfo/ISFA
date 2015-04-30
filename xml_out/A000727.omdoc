@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000727.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000727">
+          <assertion class="***** TTTT *****">
+      <CMP> M3204 N1296</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,2,8,5,4,10,8,9,0,14,16,10,4,0,8,14,20,2,0,11,20,32,16,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,4,14,8,9,20,26,0,2,28,0,16,16,28,22,0,14,16,0,40,0,28,26,32,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 17,0,32,16,22,0,10,32,34,8,14,0,45,4,38,8,0,0,34,8,38,0,22,56,2,28,0,0,10,20,64,40,20,44</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of Product_{k &gt;= 1} (1-x^k)^4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number 51 of the 74 eta-quotients listed in Table I of Martin 1996.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Boylan, Exceptional congruences for the coefficients of certain eta-product newforms, J. Number Theory 98 (2003), no. 2, 377-389.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Koike, On McKay's conjecture, Nagoya Math. J., 95 (1984), 85-89.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Y. Martin, Multiplicative eta-quotients, Trans. Amer. Math. Soc. 348 (1996), no. 12, 4825-4856, see page 4852 Table I.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Newman, Morris; A table of the coefficients of the powers of $\eta(\tau)$. Nederl. Akad. Wetensch. Proc. Ser. A. 59 = Indag. Math. 18 (1956), 204-216.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. H. Silverman, A Friendly Introduction to Number Theory, 3rd ed., Pearson Education, Inc, 2006, p. 415. Exer. 47.2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Robert M. Ziff, &quot;On Cardy's formula for the critical crossing probability in 2d percolation,&quot; J. Phys. A. 28, 1249-1255 (1995).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000727/b000727.txt&quot;&gt;Table of n, a(n) for n = 0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. R. Finch, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0701251&quot;&gt;Powers of Euler's q-Series&lt;/a&gt;, (arXiv:math.NT/0701251).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Pro#1mxtok&quot;&gt;Index entries for expansions of Product_{k &gt;= 1} (1-x^k)^m&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Euler transform of period<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ> sequence<OMOBJ>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>, ...]. - _Michael Somos_, Apr 02 2005
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Given g.f.<OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000727"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ>, then<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="B" cd="A000727"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A000727"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> satisfies<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMA>
+      <OMS name="f" cd="A000727"/>
+      <OMA>
+      <OMS name="B" cd="A000727"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="B" cd="A000727"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, B(x^4)) where<OMOBJ>
+      <OMA>
+      <OMS name="f" cd="A000727"/>
+      <OMV name="u"/>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="v"/>
+    </OMOBJ>, w) = w*u^2 - v^3 + 16 * u*w^2. - _Michael Somos_, Apr 02 2005
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000727"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="b" cd="A000727"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="b" cd="A000727"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> is multiplicative with<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000727"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="b" cd="A000727"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>0</OMI>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000727"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="b" cd="A000727"/>
+      <OMV name="p"/>
+    </OMA><OMA>
+      <OMS name="b" cd="A000727"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="e"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMV name="p"/><OMA>
+      <OMS name="b" cd="A000727"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="e"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000727"/>
+      <OMV name="p"/>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="mod" cd="A000727"/>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000727"/>
+      <OMV name="p"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="y"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="mod" cd="A000727"/>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMV name="x"/>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="mod" cd="A000727"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Michael Somos_, Aug 23 2006
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Coefficients of L-series for elliptic curve &quot;36a1&quot;: y^2 = x^3 + 1. - _Michael Somos_, Jul 01 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000727"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A187076"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000727"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMR xref="A187150"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000727"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>25</OMI><OMV name="n"/></OMA><OMI>9</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="a" cd="A000727"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>25</OMI><OMV name="n"/></OMA><OMI>14</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="a" cd="A000727"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>25</OMI><OMV name="n"/></OMA><OMI>19</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="a" cd="A000727"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>25</OMI><OMV name="n"/></OMA><OMI>24</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000727"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>25</OMI><OMV name="n"/></OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="a"/><OMV name="n"/></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. Convolution inverse of<OMOBJ>
+      <OMR xref="A023003"/>
+    </OMOBJ>. Convolution square of<OMOBJ>
+      <OMR xref="A002107"/>
+    </OMOBJ>. Convolution square is<OMOBJ>
+      <OMR xref="A000731"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f. = 1 - 4*x + 2*x^2 + 8*x^3 - 5*x^4 - 4*x^5 - 10*x^6 + 8*x^7 + 9*x^8 + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> G.f. = q - 4*q^7 + 2*q^13 + 8*q^19 - 5*q^25 - 4*q^31 - 10*q^37 + 8*q^43 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory): etr:= proc(p) local b; b:=proc(n) option remember; local d,j; if n=0 then 1 else add(add(d*p(d), d=divisors(j)) *b(n-j), j=1..n)/n fi end end: a:= etr(n-&gt; -4): seq(a(n), n=0..81); # _Alois P. Heinz_, Sep 08 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> etr[p_] := Module[{b}, b[n_] := b[n] = If[n == 0, 1, Sum[Sum[d*p[d], {d, Divisors[j]}]*b[n - j], {j, 1, n}]/n]; b]; a = etr[-4&amp;]; Table[a[n], {n, 0, 81}] (* _Jean-François Alcover_, Mar 10 2014, after _Alois P. Heinz_ *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ QPochhammer[ x]^4, {x, 0, n}]; (* _Michael Somos_, Jun 12 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A, p, e, x, y, a0, a1); if( n&lt;0, 0, n = 6*n + 1; A = factor(n); prod( k=1, matsize(A)[1], if( p=A[k, 1], e=A[k, 2]; if( p&lt;5, 0, if( p%6==5, if( e%2, 0, (-1)^(e/2) * p^(e/2)), for( y=1, sqrtint(p\3), if( issquare( p - 3*y^2, &amp;x), break)); a0=1; if( x%3!=1, x=-x); a1 = x = 2*x; for( i=2, e, y = x*a1 - p*a0; a0=a1; a1=y); a1)))))}; /* _Michael Somos_, Aug 23 2006 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;0, 0, polcoeff(eta(x + x * O(x^n))^4, n))};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;0, 0, ellak( ellinit( [0, 0, 0, 0, 1], 1), 6*n + 1))}; /* _Michael Somos_, Jul 01 2004 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) ModularForms( Gamma0(36), 2, prec=493).0; # _Michael Somos_, Jun 12 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) qEigenform( EllipticCurve( [0, 0, 0, 0, 1]), 493); /* _Michael Somos_, Jun 12 2014 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) A := Basis( ModularForms( Gamma0(36), 2), 493); A[2] - 4*A[8]; /* _Michael Somos_, Jun 12 2014 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000731, A002107, A023003, A187076, A187150.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

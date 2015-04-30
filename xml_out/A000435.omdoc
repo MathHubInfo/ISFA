@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000435.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000435">
+          <assertion class="***** TTTT *****">
+      <CMP> M4558 N1940</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,8,78,944,13800,237432,4708144,105822432,2660215680,73983185000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2255828154624,74841555118992,2684366717713408,103512489775594200,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4270718991667353600,187728592242564421568,8759085548690928992256</CMP>
+    </assertion><omtext class="name">
+      <CMP> Normalized total height of all nodes in all rooted trees with n labeled nodes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is the sequence that started it all: the first sequence in the data base!</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The height h(V) of a node V in a rooted tree is its distance from the root. a(n) = Sum_{all nodes V in all n^(n-1) rooted trees on n nodes} h(V)/n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In the trees which have [0,n-1] = (0,1....,n-1) as their ordered set of nodes, the number of nodes at distance i from node 0 is f(n,i) = (n-1)...(n-i)(i+1)n^(j-1), 0&lt;=i&lt;n-1, i+j=n-1 (and f(n,n-1)=(n-1)!): (n-1)...(n-i) counts the words coding the paths of length i from any node to 0, n^(j-1) counts the Pruefer codes of the rest, words build by iterated deletion of the greater node of degree 1 ... except the last one, (i+1), necessary pointing at the path. If g(n,i)=(n-1)...(n-i)n^j, i+j=n-1, f(n,i)=g(n,i)-g(n,i+1), g(n,i)=sum (f(n,k), k &gt;= i), the sequence is sum ((g(n,i), 1&lt;=i&lt;n). - Claude Lenormand (claude.lenormand(AT)free.fr), Jan 26 2001</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If one randomly selects one ball from an urn containing n different balls, with replacement, until exactly one ball has been selected twice, the probability that that ball was also the second ball to be selected once is a(n)/n^n. See also A001865. - _Matthew Vandermast_, Jun 15 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the number of connected endofunctions with no fixed points. - _Geoffrey Critzer_, Dec 13 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) (mod 10): 0, 1, 8, 8, 4, 0, 2, 4, 2, 0, 0, 4, 2, 8, ..., ; disregarding the first 5 terms, this sequence cycles through the twenty terms {0, 2, 4, 2, 0, 0, 4, 2, 8, 0, 0, 8, 6, 2, 0, 0, 6, 8, 8, 0}. - _Robert G. Wilson v_, Jan 09 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The number of decimal digits of a(n) begins: 1, 1, 1, 2, 3, 5, 6, 7, 9, 10, 11, 13, 14, 16, 18, 19, 21, ..., . - _Robert G. Wilson v_, Jan 09 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> V. I. Arnold, Topological classification of complex trigonometric polynomials and the combinatorics of graphs with the same number of edges and vertices, Functional Anal. Appl., 30 (1996), 1-17.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Goulden, I. P.; Jackson, D. M.; and Vainshtein, A., The number of ramified coverings of the sphere by the torus and surfaces of higher genera. Ann. Comb. 4 (2000), no. 1, 27-46. (See Theorem 1.1.)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Robert G. Wilson v and T. D. Noe, &lt;a href=&quot;/A000435/b000435.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt; (first 100 terms supplied by T. D. Noe)</CMP>
+    </omtext><omtext class="link">
+      <CMP> I. P. Goulden and D. M. Jackson, &lt;a href=&quot;http://arXiv.org/abs/math.AG/9902009&quot;&gt;A proof of a conjecture for the number of ramified coverings of the sphere by the torus&lt;/a&gt;, arXiv:math/9902009 [math.AG], 1999.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Goulden, I. P.; Jackson, D. M.; and Vainshtein, A., &lt;a href=&quot;http://arXiv.org/abs/math.CO/9902125&quot;&gt;The number of ramified coverings of the sphere by the torus and surfaces of higher genera&lt;/a&gt;, arXiv:math/9902125 [math.AG], 1999.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Riordan and N. J. A. Sloane, &lt;a href=&quot;http://dx.doi.org/10.1017/S1446788700007527&quot;&gt;Enumeration of rooted trees by total height&lt;/a&gt;, J. Austral. Math. Soc., vol. 10 pp. 278-282, 1969.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Marko Riedel et. al. &lt;a href=&quot;http://math.stackexchange.com/questions/1071564/&quot;&gt;Connected endofunctions with no fixed points&lt;/a&gt;, MathStackExchange, Dec 2014.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000435/a000435_1.pdf&quot;&gt;Page from 1964 notebook showing start of OEIS&lt;/a&gt; [includes A000027, A000217, A000292, A000332, A000389, A000579, A000110, A007318, A000058, A000215, A000289, A000324, A234953 (= A001854(n)/n), A000435, A000169, A000142, A000272, A000312, A000111]</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000435/a000435_2.pdf&quot;&gt;Cover of same notebook&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/sg.txt&quot;&gt;My favorite integer sequences&lt;/a&gt;, in Sequences and their Applications (Proceedings of SETA '98).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000435/a000435.pdf&quot;&gt;Illustration of a(3) and a(4)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         a(n) = (n-1)! * Sum<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>, k=0..n-2).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000435"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A001864"/>
+      <OMV name="n"/>
+    </OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: LambertW(-x)-ln(1+LambertW(-x)) - _Vladeta Jovovic_, Apr 10 2001
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000435"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A001865"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000435"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A001865"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A000169"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Geoffrey Critzer_, Dec 13 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000435"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="sqrt" cd="A000435"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMS name="Pi"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Vaclav Kotesovec_, Aug 07 2013
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> A000435 := n-&gt; (n-1)!*add (n^k/k!, k=0..n-2);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(simplify((n-1)*GAMMA(n-1,n)*exp(n)),n=1..20); # _Vladeta Jovovic_, Jul 21 2005)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[n_] := (n - 1)! Sum [n^k/k!, {k, 0, n - 2}]; Array[f, 18] (* _Robert G. Wilson v_, Aug 10 2010 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> nx = 18; Rest[ Range[0, nx]! CoefficientList[ Series[ LambertW[-x] - Log[1 + LambertW[-x]], {x, 0, nx}], x]] (* _Robert G. Wilson v_, Apr 13 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001863, A001864, A001854, A234953.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional references from _Valery A. Liskovets_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Editorial changes by _N. J. A. Sloane_, Feb 03 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

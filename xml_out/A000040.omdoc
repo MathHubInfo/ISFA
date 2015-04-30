@@ -1,0 +1,890 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000040.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000040">
+          <assertion class="***** TTTT *****">
+      <CMP> M0652 N0241</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 97,101,103,107,109,113,127,131,137,139,149,151,157,163,167,173,179,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 181,191,193,197,199,211,223,227,229,233,239,241,251,257,263,269,271</CMP>
+    </assertion><omtext class="name">
+      <CMP> The prime numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A065091 for comments, formulae etc. concerning only odd primes. For all information concerning prime powers, see A000961. For contributions concerning &quot;almost primes&quot; see A002808.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A number n is prime if it is greater than 1 and has no positive divisors except 1 and n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A natural number is prime if and only if it has exactly two (positive) divisors.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A prime has exactly one proper positive divisor, 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sum of an odd number &gt; 1 (2i+1, i &gt;= 1) of consecutive positive odd numbers centered on the j-th odd number &gt;= 2i+1 (2j+1, j &gt;= i) being (2i+1)*(2j+1) has 2 or more odd prime factors (odd semiprime iff 2i+1 and 2j+1 are primes). - _Daniel Forgues_, Jul 15 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The paper by Kaoru Motose starts as follows: &quot;Let q be a prime divisor of a Mersenne number 2^p-1 where p is prime. Then p is the order of 2 (mod q). Thus p is a divisor of q - 1 and q &gt; p. This shows that there exist infinitely many prime numbers.&quot; - Pieter Moree, Oct 14 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1 is not a prime, for if the primes included 1, then the factorization of a natural number n into a product of primes would not be unique, since n = n*1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1 is the empty product (has 0 prime factors), whereas a prime has 1 prime factor (itself). - _Daniel Forgues_, Jul 23 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Prime(n) and pi(n) are inverse functions: A000720(a(n)) = n and a(n) is the least number m such that a(A000720(m)) = a(n). a(A000720(n)) = n if (and only if) n is prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Elementary primality test: If no prime =&lt; sqrt(m) divides m, then m is prime (since a prime is its own exclusive multiple, apart from 1). - _Lekraj Beedassy_, Mar 31 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Second sequence ever computed by electronic computer, on EDSAC, May 09 1949 (see Renwick link). - _Russ Cox_, Apr 20 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Every prime p is a linear combination of previous primes prime(n) with nonzero coefficients c(n) and |c(n)| &lt; prime(n). - _Amarnath Murthy_, _Franklin T. Adams-Watters_ and _Joshua Zucker_, May 17 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> There is a unique decomposition of the primes: provided the weight A117078(n) is &gt; 0, we have prime(n) = weight * level + gap, or A000040(n) = A117078(n) * A117563(n) + A001223(n). - _Rémi Eismann_, Feb 16 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equals row sums of triangle A143350. - _Gary W. Adamson_, Aug 10 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> APSO (Alternating partial sums of sequence) a-b+c-d+e-f+g... = (a+b+c+d+e+f+g...)-2*(b+d+f...): APSO(A000040) = A008347=A007504 - 2*(A077126 repeated) (A007504-A008347)/2 = A077131 alternated with A077126. - _Eric Desbiaux_, Oct 28 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Greek transliteration of 'Prime Number' is 'Proton Arithmon'. - _Daniel Forgues_, May 08 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It appears that, with the Bachet-Bezout theorem, A000040 = (2*A039701) + (3*A157966). - _Eric Desbiaux_, Nov 15 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A008864(n) - 1 = A052147(n) - 2 = A113395(n) - 3 = A175221(n) - 4 = A175222(n) - 5 = A139049(n) - 6 = A175223(n) - 7 = A175224(n) - 8 = A140353(n) - 9 = A175225(n) - 10. - _Jaroslav Krizek_, Mar 06 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 2 and 3 might be referred to as the two &quot;forcibly prime numbers&quot; since there are no integers greater than 1 and less than or equal to their respective square roots. Not a single trial division ever needs to be done for 2 or 3, so they are disqualified from the outset from any attempt to belong to the set of composite numbers. 2 and 3 are thus the only consecutive primes. Since any further prime needs to be coprime to both 2 and 3, they must be congruent to 5 or 1 (mod 2*3) and thus must all be of the form (2*3)*k -/+ 1 with k &gt;= 1. When both (2*3)*k - 1 and (2*3)*k + 1 are prime for a given k &gt;= 1, they are referred to as twin primes (3 and 5 being the only twin primes of the form (2*2)*k - 1 and (2*2)*k + 1). - _Daniel Forgues_, Mar 19 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For prime n, the sum of divisors of n &gt; the product of divisors of n. Sigma(n)==1 (mod n). - _Juri-Stepan Gerasimov_, Mar 12 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture: a(n) = (6*f(n) + (-1)^f(n)-3)/2, n &gt; 2, where f(n) = floor(ithprime(n)/3) + 1. See A181709. - _Gary Detlefs_, Dec 12 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A number n is prime if and only if it is different from zero and different from a unit and each multiple of n decomposes into factors such that n divides at least one of the factors. This definition has the advantage that it does not make an assertion on the number of divisors of n. It applies equally for the integers (where a prime has exactly four divisors) and the natural numbers (where a prime has exactly two divisors). - _Peter Luschny_, Oct 09 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Motivated by his conjecture on representations of integers by alternating sums of consecutive primes, for any positive integer n, Zhi-Wei Sun conjectured that the polynomial P_n(x)= sum_{k=0}^n a(k+1)*x^k is irreducible over the field of rational numbers with the Galois group S_n, and moreover P_n(x) is irreducible mod a(m) for some m&lt;=n(n+1)/2. It seems that no known criterion on irreduciblity of polynomials implies this conjecture. - _Zhi-Wei Sun_, Mar 23 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Reading the primes (excluding 2,3,5) mod 90 divides them into 24 classes, which are described by A181732, A195993, A198382, A196000, A201804, A196007, A201734, A201739, A201819, A201816, A201817, A201818, A202104, A201820, A201822, A201101, A202113, A202105, A202110, A202112, A202129, A202114, A202115 and A202116. - _J. W. Helkenberg_, Jul 24 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The old definition of prime numbers was &quot;positive integers that have no divisors other than 1 and itself&quot;, which gives A008578, not this sequence. - _Omar E. Pol_, Oct 05 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Questions on a(2n) and Ramanujan primes are in A233739. - _Jonathan Sondow_, Dec 16 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Hieronymus Fischer_, Apr 02 2014: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Natural numbers such that there is exactly one base b such that the base-b alternate digital sum is 0 (see A239707).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equivalently: Numbers p &gt; 1 such that b = p-1 is the only base &gt;= 1 for which the base-b alternate digital sum is 0.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equivalently: Numbers p &gt; 1 such that the base-b alternate digital sum is &lt;&gt; 0 for all bases 1 &lt;= b &lt; p-1. (End)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> An integer n &gt; 1 is a prime if and only if it is not the sum of positive integers in arithmetic progression with common difference 2. - _Jean-Christophe Hervé_, Jun 01 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture: Numbers having prime factors &lt;= p(n+1) are {k|k^f(n) mod primorial(n)=1}, where f(n)= LCM(p(i)-1,i=1..n) = A058254(n) and primorial(n) = A002110. For example, numbers with no prime divisor &lt;= p(7)= 17 or, equivalently, the primes &lt; 17^2 are {k|k^60/ mod 30030=1}. - _Gary Detlefs_, Jun 07 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Cramer conjecture prime(n+1) - prime(n) &lt; C log^2 prime(n) is equivalent to the inequality (log prime(n+1)/log prime(n))^n &lt; e^C, as n tend to infinity, where C is an absolute constant. - _Thomas Ordowski_, Oct 06 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The primes appear as the denominators of the only fractions in the table of integers and reduced fractions for: (k!/e) * Sum_{n&gt;=0} Sum_{j=0..n} j^k/n!, k&gt;=0, occurring at k=p-1, where p is a prime, with p=2 occurring at both k=1 and k=3. - _Richard R. Forberg_, Dec 23 2014.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The preceding comment also applies to the z-sequence of the Sheffer matrix, when multiplied by the factorial of its index. See A130190. - _Richard R. Forberg_, Dec 28 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Aigner and G. M. Ziegler, Proofs from The Book, Springer-Verlag, Berlin, 2nd. ed., 2001; see p. 3.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. M. Apostol, Introduction to Analytic Number Theory, Springer-Verlag, 1976, page 2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. Bach and Jeffrey Shallit, Algorithmic Number Theory, I, Chaps. 8, 9.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. M. Bressoud, Factorization and Primality Testing, Springer-Verlag NY 1989.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Cipolla, &quot;La determinazione asintotica dell'n-mo numero primo.&quot;, Rend. d. R. Acc. di sc. fis. e mat. di Napoli, s. 3, VIII (1902), pp. 132-166.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Crandall and C. Pomerance, Prime Numbers: A Computational Perspective, Springer, NY, 2001; see p. 1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J.-P. Delahaye, Merveilleux nombres premiers, Pour la Science-Belin Paris, 2000.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J.-P. Delahaye, Savoir si un nombre est premier: facile, Pour La Science, 303(1) 2003, pp. 98-102.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Dietzfelbinger, Primality Testing in Polynomial Time, Springer NY 2004.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. du Sautoy, The Music of the Primes, Fourth Estate / HarperCollins, 2003; see p. 5.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> U. Dudley, Formulas for primes, Math. Mag., 56 (1983), 17-22.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Pierre Dusart, Autour de la fonction qui compte le nombre de nombres premiers, Dissertation, Universite de Limoges (1998).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Pierre Dusart, The k-th prime is greater than k(ln k + ln ln k-1) for k&gt;=2, Mathematics of Computation 68: (1999), 411-415.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Elie, &quot;L'algorithme AKS&quot;, in 'Quadrature', No. 60, pp. 22-32, 2006 EDP-sciences, Les Ulis (France);</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Seymour. B. Elk, &quot;Prime Number Assignment to a Hexagonal Tessellation of a Plane That Generates Canonical Names for Peri-Condensed Polybenzenes&quot;, J. Chem. Inf. Comput. Sci., vol. 34 (1994), pp. 942-946.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. &amp; F. Ellison, Prime Numbers, Hermann Paris 1985</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. Estermann, Introduction to Modern Prime Number Theory, Camb. Univ. Press, 1969.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. H. Hardy and E. M. Wright, An Introduction to the Theory of Numbers. 3rd ed., Oxford Univ. Press, 1954, p. 2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Peter Hilton and Jean Pedersen, A Mathematical Tapestry: Demonstrating the Beautiful Unity of Mathematics, Cambridge University Press, 2010, pp. (260-264).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. D. Huskey, Derrick Henry Lehmer [1905-1991]. IEEE Ann. Hist. Comput. 17 (1995), no. 2, 64-68. Math. Rev. 96b:01035</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. N. Huxley, The Distribution of Prime Numbers, Oxford Univ. Press, 1972.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. S. Jandu, Prime Numbers And Factorization, Infinite Bandwidth Publishing, N. Hollywood CA 2007.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. Landau, Handbuch der Lehre von der Verteilung der Primzahlen, Chelsea, NY, 1974.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. H. Lehmer, The sieve problem for all-purpose computers. Math. Tables and Other Aids to Computation, Math. Tables and Other Aids to Computation, 7, (1953). 6-14. Math. Rev. 14:691e</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. N. Lehmer, &quot;List of Prime Numbers from 1 to 10,006,721&quot;, Carnegie Institute, Washington, D.C. 1909.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. J. LeVeque, Topics in Number Theory. Addison-Wesley, Reading, MA, 2 vols., 1956, Vol. 1, Chap. 6.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Lifchitz, Table Des nombres Premiers de 0 a 20 millions (Tomes I &amp; II), Albert Blanchard, Paris 1971.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. F. Lukes, C. D. Patterson and H. C. Williams, Numerical sieving devices: their history and some applications. Nieuw Arch. Wisk. (4) 13 (1995), no. 1, 113-139. Math. Rev. 96m:11082</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Kaoru Motose, On values of cyclotomic polynomials. II, Math. J. Okayama Univ. 37 (1995), 27-36.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. Ribenboim, The New Book of Prime Number Records, Springer-Verlag NY 1995.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. Ribenboim, The Little Book of Bigger Primes, Springer-Verlag NY 2004.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Riesel, Prime Numbers and Computer Methods for Factorization, Birkhaeuser Boston, Cambridge MA 1994.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> B. Rittaud, &quot;31415879. Ce nombre est-il premier?&quot; ['Is this number prime?'], La Recherche, Vol. 361, pp. 70-73, Feb 15 2003, Paris.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Barkley Rosser, Explicit Bounds for Some Functions of Prime Numbers, American Journal of Mathematics 63 (1941) 211-232.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Shanks, Solved and Unsolved Problems in Number Theory, 2nd. ed., Chelsea, 1978, Chap. 1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Wells, Prime Numbers: The Most Mysterious Figures In Math, J.Wiley NY 2005.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. C. Williams and Jeffrey Shallit, Factoring integers before computers. Mathematics of Computation 1943-1993: a half-century of computational mathematics (Vancouver, BC, 1993), 481-531, Proc. Sympos. Appl. Math., 48, AMS, Providence, RI, 1994. Math. Rev. 95m:11143</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000040/b000040.txt&quot;&gt;Table of n, prime(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000040/a000040.txt&quot;&gt;Table of n, prime(n) for n = 1..100000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Agrawal, N. Kayal &amp; N. Saxena, &lt;a href=&quot;http://annals.math.princeton.edu/2004/160-2/p12&quot;&gt;PRIMES is in P&lt;/a&gt;, Annals of Maths., 160:2 (2004), pp. 781-793. [&lt;a href=&quot;http://www.cse.iitk.ac.in/users/manindra/algebra/primality_v6.pdf&quot;&gt;alternate link&lt;/a&gt;]</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Agrawal, &lt;a href=&quot;http://www.cse.iitk.ac.in/users/manindra/presentations/GodelTalk.pdf &quot;&gt;A Short History of &quot;PRIMES is in P&quot;&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Alfeld, &lt;a href=&quot;http://www.math.utah.edu/~alfeld/math/prime.html&quot;&gt;Notes and Literature on Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. W. Andrushkiw, R. I. Andrushkiw and C. E. Corzatt, &lt;a href=&quot;http://www.jstor.org/stable/2689456&quot;&gt;Representations of Positive Integers as Sums of Arithmetic Progressions&lt;/a&gt;, Mathematics Magazine, Vol. 49, No. 5 (Nov., 1976), pp. 245-248.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Anonymous, &lt;a href=&quot;http://www.mathematical.com/primelist1to100kk.html&quot;&gt;Prime Number Master Index (for primes up to 2*10^7)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Anonymous, &lt;a href=&quot;http://everything2.net/index.pl?node_id=74889&amp;amp;displaytype=printable&amp;amp;lastnode_id=74889&quot;&gt;prime number&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. T. Bateman &amp; H. G. Diamond, &lt;a href=&quot;http://www.jstor.org/stable/2974443&quot;&gt;A Hundred Years of Prime Numbers&lt;/a&gt;, Amer. Math. Month., Vol. 103 (9), Nov. 1996, pp. 729-741.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. J. Bernstein, &lt;a href=&quot;http://cr.yp.to/papers/aks.pdf&quot;&gt;Proving Primality After Agrawal-Kayal-Saxena&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. J. Bernstein, &lt;a href=&quot;http://cr.yp.to/primetests.html&quot;&gt;Distinguishing prime numbers from composite numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Berrizbeitia, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0211334&quot;&gt;Sharpening &quot;Primes is in P&quot; for a large family of numbers&lt;/a&gt;, arXiv:math/0211334 [math.NT], 2002.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Booker, &lt;a href=&quot;http://primes.utm.edu/nthprime&quot;&gt;The Nth Prime Page&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Bornemann, &lt;a href=&quot;http://www.ams.org/notices/200305/fea-bornemann.pdf&quot;&gt;PRIMES Is in P: A Breakthrough for &quot;Everyman&quot;&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Bowyer, &lt;a href=&quot;http://www.bath.ac.uk/~ensab/Primes&quot;&gt;Formulae for Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. M. Bredikhin, &lt;a href=&quot;http://eom.springer.de/P/p074530.htm&quot;&gt;Prime number&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. P. Brent, &lt;a href=&quot;http://wwwmaths.anu.edu.au/~brent/pub/pub120.html&quot;&gt;Primality testing and integer factorization&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Britton, &lt;a href=&quot;http://britton.disted.camosun.bc.ca/jbprimelist.htm&quot;&gt;Prime Number List&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Butler, &lt;a href=&quot;http://www.tsm-resources.com/alists/prim.html&quot;&gt;The first 2000 Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, &lt;a href=&quot;http://www.utm.edu/research/primes/&quot;&gt;The Prime Pages&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, &lt;a href=&quot;http://primes.utm.edu/glossary/page.php?sort=TablesOfPrimes&quot;&gt;Tables of primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, &lt;a href=&quot;http://www.utm.edu/research/primes/lists/small/10000.txt&quot;&gt;The first 10000 primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, &lt;a href=&quot;http://primes.utm.edu/curios/includes/file.php?file=primetest.html&quot;&gt;A Primality Test&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell and Y. Xiong, &lt;a href=&quot;http://arxiv.org/abs/1209.2007&quot;&gt;What is the smallest prime?&lt;/a&gt;, J. Integer Seq. 15 (2012), no. 9, Article 12.9.7 and arXiv:1209.2007.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Chris K. Caldwell, Angela Reddick, Yeng Xiong and Wilfrid Keller, &lt;a href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL15/Caldwell2/cald6.html&quot;&gt;The History of the Primality of One: A Selection of Sources&lt;/a&gt;, Journal of Integer Sequences, Vol. 15 (2012), #12.9.8.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Chamness, &lt;a href=&quot;http://www.alumni.caltech.edu/~chamness/prime.html&quot;&gt;Prime number generator (Applet)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Cox, &lt;a href=&quot;http://members.cox.net/mathmistakes/primes.htm&quot;&gt;Primes is in P&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Davis &amp; R. Hersh, The Mathematical Experience, &lt;a href=&quot;http://www.fortunecity.com/emachines/e11/86/mathex5.html&quot;&gt;The Prime Number Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J.-M. De Koninck, &lt;a href=&quot;http://campmath.uqam.ca/infos2004/conf_double.pdf&quot;&gt;Les nombres premiers: mysteres et consolation&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J.-M. De Koninck, &lt;a href=&quot;http://campmath.uqam.ca/2005/nbPremMysEnj.pdf&quot;&gt;Nombres premiers: mysteres et enjeux&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J.-P. Delahaye, &lt;a href=&quot;http://www.cnrs.fr/Cnrspresse/math2000/html/math10.htm&quot;&gt;Formules et nombres premiers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Elie, &lt;a href=&quot;http://www.trigofacile.com/maths/curiosite/primarite/aks/pdf/algorithme-aks.pdf&quot;&gt;L'algorithme AKS ou Les nombres premiers sont de classe P&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. Euler, &lt;a href=&quot;http://arXiv.org/abs/math.HO/0501118&quot;&gt;Observations on a theorem of Fermat and others on looking at prime numbers&lt;/a&gt;, arXiv:math/0501118 [math.HO], 2005-2008.</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Fendt, &lt;a href=&quot;http://www.walter-fendt.de/m14e/primes.htm&quot;&gt;Table of Primes from 1 to 1000000000000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Flajolet, S. Gerhold and B. Salvy, &lt;a href=&quot;http://arxiv.org/abs/math/0501379&quot;&gt;On the non-holonomic character of logarithms, powers and the n-th prime function&lt;/a&gt;, arXiv:math/0501379 [math.CO], 2005.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Flamant, &lt;a href=&quot;http://jocelyn.smoofy.net/np/cache/index.html&quot;&gt;Primes up to one million&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. Ford, Expositions of the &lt;a href=&quot;http://www.math.uiuc.edu/~ford&quot;&gt;PRIMES is in P&lt;/a&gt; theorem.</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. &amp; Y. Gallot, &lt;a href=&quot;http://perso.wanadoo.fr/yves.gallot/primes/chrrcds.html&quot;&gt;The Chronology of Prime Number Records&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Garrett, &lt;a href=&quot;http://www.math.umn.edu/~garrett/crypto/overheads01.pdf&quot;&gt;Big Primes, Factoring Big Integers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Garrett, &lt;a href=&quot;http://www.math.umn.edu/~garrett/js/naive_prim_test.html&quot;&gt;Naive Primality Test&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Garrett, &lt;a href=&quot;http://www.math.umn.edu/~garrett/js/list_pr.html&quot;&gt;Listing Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. Gast, &lt;a href=&quot;http://web.archive.org/web/20070412005510/http://www.eleves.ens.fr/home/gast/misc/GastCrypto.pdf&quot;&gt;PRIMES is in P: Manindra Agrawal, Neeraj Kayal and Nitin Saxena&lt;/a&gt; (in French)</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. A. Goldston, S. W. Graham, J. Pintz and C. Y. Yildirim, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0506067&quot;&gt;Small gaps between primes and almost primes&lt;/a&gt;, arXiv:math/0506067 [math.NT], 2005.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Granville, &lt;a href=&quot;http://www.ams.org/bull/2005-42-01/S0273-0979-04-01037-7/home.html&quot;&gt;It is easy to determine whether a given integer is prime&lt;/a&gt; [&lt;a href=&quot;http://math.stanford.edu/~brubaker/granville.pdf&quot;&gt;alternate link&lt;/a&gt;]</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Hartmann, &lt;a href=&quot;http://www.beweise.mathematic.de/&quot;&gt;Prime number proofs&lt;/a&gt; (in German)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Haskell Wiki, &lt;a href=&quot;http://www.haskell.org/haskellwiki/Prime_numbers&quot;&gt;Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> ICON Project, &lt;a href=&quot;http://www.cs.arizona.edu/icon/oddsends/primes.htm&quot;&gt;List of first 50000 primes grouped within ten columns&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. Kayal &amp; N. Saxena, Resonance 11-2002, &lt;a href=&quot;http://www.ias.ac.in/resonance/Nov2002/pdf/Nov2002ResearchNews.pdf&quot;&gt;A polynomial time algorithm to test if a number is prime or not&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Landau, Handbuch der Lehre von der Verteilung der Primzahlen, &lt;a href=&quot;http://name.umdl.umich.edu/ABV2766.0001.001&quot;&gt;vol. 1&lt;/a&gt; and &lt;a href=&quot;http://name.umdl.umich.edu/ABV2766.0002.001&quot;&gt;vol. 2&lt;/a&gt;, Leipzig, Berlin, B. G. Teubner, 1909.</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Liang &amp; H. Yan, &lt;a href=&quot;http://arxiv.org/abs/math/0603450&quot;&gt;Pseudo Random test of prime numbers&lt;/a&gt;, arXiv:math/0603450 [math.NT], 2006.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Malkevitch, &lt;a href=&quot;http://www.ams.org/featurecolumn/archive/primes1.html&quot;&gt;Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Mathworld Headline News, &lt;a href=&quot;http://mathworld.wolfram.com/news/2002-08-07/primetest/&quot;&gt;Primality Testing is Easy&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. Matthews, &lt;a href=&quot;http://www.numbertheory.org/php/prime_generator.html&quot;&gt;Generating prime numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Y. Motohashi, &lt;a href=&quot;http://arXiv.org/abs/math.HO/0512143&quot;&gt;Prime numbers-your gems&lt;/a&gt;, arXiv:math/0512143 [math.HO], 2005.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Moyer, &lt;a href=&quot;http://www.rsok.com/~jrm/printprimes.html&quot;&gt;Some Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. W. Neville, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0210282&quot;&gt;New Results on Primes from an Old Proof of Euler's&lt;/a&gt;, arXiv:math/0210282 [math.NT], 2002-2003.</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. C. Noll, &lt;a href=&quot;http://www.isthe.com/chongo/tech/math/prime/&quot;&gt;Prime numbers, Mersenne Primes, Perfect Numbers, etc.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. A. Nyblom and C. Evans, &lt;a href=&quot;http://ajc.maths.uq.edu.au/pdf/28/ajc_v28_p149.pdf&quot;&gt;On the enumeration of partitions with summands in arithmetic progression&lt;/a&gt;, Australasian Journal of Combinatorics, Vol. 28 (2003), pp. 149-159.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. J. O'Connor &amp; E. F. Robertson, &lt;a href=&quot;http://www-groups.dcs.st-and.ac.uk/~history/HistTopics/Prime_numbers.html&quot;&gt;Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. E. O'Neill, &lt;a href=&quot;http://www.cs.hmc.edu/~oneill/papers/Sieve-JFP.pdf&quot;&gt;The Genuine Sieve of Eratosthenes&lt;/a&gt;, J. of Functional Programming, Vol 19 Issue 1, Jan 2009, p. 95ff, CUP NY</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Ogihara &amp; S. Radziszowski, &lt;a href=&quot;http://www.cs.rit.edu/~spr/PUBL/primes.pdf&quot;&gt;Agrawal-Kayal-Saxena Algorithm for Testing Primality in Polynomial Time&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Papaphilippou, &lt;a href=&quot;http://www.philippos.info/unit_c/primeg/&quot;&gt;Plotter of prime numbers frequency graph (flash object)&lt;/a&gt; [From Philippos Papaphilippou (philippos(AT)safe-mail.net), Jun 02 2010]</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. M. Parganin, &lt;a href=&quot;http://noe-education.org/D11102.php&quot;&gt;Primes less than 50000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> I. Peterson, &lt;a href=&quot;http://www.fortunecity.com/emachines/e11/86/tourist2b.html&quot;&gt;Prime Pursuits&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Omar E. Pol, &lt;a href=&quot;http://www.polprimos.com&quot;&gt;Numeros primos&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Omar E. Pol, &lt;a href=&quot;http://www.polprimos.com/imagenespub/4.jpg&quot;&gt;Illustration of initial terms&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Primefan, &lt;a href=&quot;http://primefan.tripod.com/500Primes1.html&quot;&gt;The First 500 Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Primefan, &lt;a href=&quot;http://primefan.tripod.com/PrimeLister.html&quot;&gt;Script to Calculate Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Project Gutenberg Etext, &lt;a href=&quot;http://www.gutenberg.org/etext/65&quot;&gt;First 100,000 Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. D. Pruitt, &lt;a href=&quot;http://www.mathematical.com/mathprimegen.html&quot;&gt;Formulae for Generating All Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Ramachandran, Frontline 19 (17) 08-2000, &lt;a href=&quot;http://www.flonnet.com/fl1917/19171290.htm&quot;&gt;A Prime Solution&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. S. Renwick, &lt;a href=&quot;http://www.cl.cam.ac.uk/Relics/elog.html&quot;&gt;EDSAC log&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Richman, &lt;a href=&quot;http://www.math.fau.edu/Richman/primes.htm&quot;&gt;Generating primes by the sieve of Eratosthenes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Barkley Rosser and Lowell Schoenfeld, &lt;a href=&quot;http://projecteuclid.org/euclid.ijm/1255631807&quot;&gt; Approximate formulas for some functions of prime numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. M. Ruiz and J. Sondow, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0210312&quot;&gt;Formulas for pi(n) and the n-th prime&lt;/a&gt;, arXiv:math/0210312 [math.NT], 2002-2014.</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. O. S. Math, &lt;a href=&quot;http://www.sosmath.com/tables/prime/prime.html&quot;&gt;First 1000 Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Schulman, &lt;a href=&quot;http://www.sonic.net/~undoc/java/PrimeCalc.html&quot;&gt;Prime Number Calculator&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Slone, PlanetMath.Org, &lt;a href=&quot;http://planetmath.org/encyclopedia/FirstThousandPositivePrimeNumbers.html&quot;&gt;First thousand positive prime numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Stiglic, &lt;a href=&quot;http://crypto.cs.mcgill.ca/~stiglic/PRIMES_P_FAQ.html&quot;&gt;The PRIMES is in P little FAQ&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Zhi-Wei Sun, &lt;a href=&quot;http://dx.doi.org/10.1016/j.jnt.2013.02.003&quot;&gt;On functions taking only prime values&lt;/a&gt;, J. Number Theory, 133 (2013), no. 8, 2794-2812.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tomas Svoboda, &lt;a href=&quot;http://www.svobodat.com/primes/PRIMES1T.TXT&quot;&gt;List of primes up to 10^6&lt;/a&gt; [Slow link]</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Teitelbaum, &lt;a href=&quot;http://www.ams.org/bull/2002-39-03/S0273-0979-02-00947-3/S0273-0979-02-00947-3.pdf&quot;&gt;Review of &quot;Prime numbers:A computational perspective&quot; by R. Crandall &amp; C. Pomerance&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Thonnard, &lt;a href=&quot;http://www.proftnj.com/calcprem.htm&quot;&gt;Les nombres premiers(Primality check; Closest next prime; Factorizer)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Tramu, &lt;a href=&quot;http://www.echolalie.org/gbgraph/gb/index.htm&quot;&gt;Movie of primes scrolling&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Turpel, &lt;a href=&quot;http://www2.vo.lu/homepages/armand/index.html&quot;&gt;Aesthetics of the Prime Sequence&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Wagon, &lt;a href=&quot;http://www.americanscientist.org/bookshelf/pub/prime-time&quot;&gt;Prime Time: Review of &quot;Prime Numbers:A Computational Perspective&quot; by R. Crandall &amp; C. Pomerance&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. R. Watkins, &lt;a href=&quot;http://www.maths.ex.ac.uk/~mwatkins/zeta/unusual.htm&quot;&gt;unusual and physical methods for finding prime numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Wedeniwski, &lt;a href=&quot;http://w210.Ub.uni-tuebingen.de/dbt/volltexte/2001/420/pdf/dissertation.pdf&quot;&gt;Primality Tests on Commutator Curves&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Wegrzynowski, &lt;a href=&quot;http://www.lifl.fr/~wegrzyno/FormulPrem/FormulesPremiers23.html&quot;&gt;Les formules simples qui donnent des nombres premiers en grande quantites&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/PrimeNumber.html&quot;&gt;Prime Number.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Prime-GeneratingPolynomial.html&quot;&gt;Prime-Generating Polynomial&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/PrimeSpiral.html&quot;&gt;Prime Spiral&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://www.wikipedia.org/wiki/Prime_number&quot;&gt;Prime number&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Xiao, Primes server, &lt;a href=&quot;http://wims.unice.fr/~wims/en_tool~number~primes.html&quot;&gt;Sequential Batches Primes Listing (up to orders not exceeding 10^308)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Xiao, Numerical Calculator, &lt;a href=&quot;http://wims.unice.fr/wims/en_tool~number~calcnum.en.html&quot;&gt;To display p(n) for n up to 41561, operate on &quot;prime(n)&quot;&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         The prime number theorem is the statement that a(n) ~ n * log<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> as n -&gt; infinity (Hardy and Wright, page 10).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>, n*(log n + log log n - 3/2) &lt; a(n); for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>20</OMI>
+    </OMA>
+    </OMOBJ>, a(n) &lt; n*(log n + log log n - 1/2). [Rosser and Schoenfeld]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For all<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000040"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> log<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ>. [Rosser]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA><OMS name="times"/><OMV name="log"/><OMV name="n"/></OMA></OMA><OMA><OMS name="times"/><OMV name="n"/><OMV name="log"/></OMA>
+    </OMA>
+    </OMOBJ> log n - 1) &lt; a(n) &lt; n log<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="n"/>
+    </OMA>
+    </OMOBJ> log log<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> for n &gt;= 6 [Dusart, quoted in the Wikipedia article]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000040"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> log<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="n"/>
+    </OMA>
+    </OMOBJ> log log<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMA><OMS name="times"/><OMV name="log"/><OMV name="n"/></OMA>
+    </OMA><OMV name="log"/></OMA>
+    </OMA>
+    </OMOBJ> log n - log 2 - 2) + O( n (log log n)^2/ (log n)^2). [Cipoli, quoted in the Wikipedia article]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = 2 + sum_{k = 2..floor(2n*log(n)+2)} (1-floor(pi(k)/n)), for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>, where the formula for<OMOBJ>
+      <OMA><OMS name="times"/><OMS name="pi"/><OMV name="k"/></OMA>
+    </OMOBJ> is given in<OMOBJ>
+      <OMA>
+      <OMR xref="A000720"/>
+      <OMV name="Ruiz"/>
+    </OMA>
+    </OMOBJ> and Sondow 2002). - _Jonathan Sondow_, Mar 06 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMV name="I"/>
+    </OMOBJ> conjecture that<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                
+              </OMBVAR>
+            <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="p" cd="A000040"/>
+      <OMV name="i"/>
+    </OMA><OMA>
+      <OMS name="log" cd="A000040"/>
+      <OMA>
+      <OMS name="p" cd="A000040"/>
+      <OMV name="i"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMS name="Pi"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMF dec="1.570796327"/><OMS name="..." cd="arithmetics"></OMS><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMI>100000</OMI>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="i"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="p" cd="A000040"/>
+      <OMV name="i"/>
+    </OMA><OMA>
+      <OMS name="log" cd="A000040"/>
+      <OMA>
+      <OMS name="p" cd="A000040"/>
+      <OMV name="i"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMF dec="1.565585514"/><OMS name="..." cd="arithmetics"></OMS></OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS></OMA>
+    </OMA>
+    </OMOBJ> It converges very slowly. - _Miklos Kristof_, Feb 12 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         The last conjecture has been discussed by the math.research newsgroup recently. The sum, which is greater than<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMS name="Pi"/><OMI>2</OMI>
+    </OMA>
+    </OMOBJ>, is shown in sequence<OMOBJ>
+      <OMR xref="A137245"/>
+    </OMOBJ>. - _T. D. Noe_, Jan 13 2009
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A000005"/>
+      <OMA>
+      <OMS name="a" cd="A000040"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A002033"/>
+      <OMA>
+      <OMS name="a" cd="A000040"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>. - _Juri-Stepan Gerasimov_, Oct 17 2009
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A001222"/>
+      <OMA>
+      <OMS name="a" cd="A000040"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>. - _Juri-Stepan Gerasimov_, Nov 10 2009
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         From _Gary Detlefs_, Sep 10 2010: (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Conjecture:
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = {n| n! mod n^2 = n(n-1)},<OMOBJ>
+      <OMA>
+      <OMS name="&lt;&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = {n| n!*h(n) mod n = n-1},<OMOBJ>
+      <OMA>
+      <OMS name="&lt;&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="h" cd="A000040"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="sum" cd="A000040"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, k=1..n). (End)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         First<OMOBJ>
+      <OMI>15</OMI>
+    </OMOBJ> primes;<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000040"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="p"/><OMA>
+      <OMS name="abs" cd="A000040"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="p"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="m"/><OMA>
+      <OMS name="int" cd="A000040"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="m"/><OMI>3</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="m"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="int" cd="A000040"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMI>8</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="int" cd="A000040"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA><OMI>8</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMI>1</OMI>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>15</OMI>
+    </OMA>
+    </OMOBJ>. - Timothy Hopper (timothyhopper(AT)hotmail.co.uk), Oct 23 2010
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000040"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A104272"/>
+      <OMV name="n"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>, and<OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000040"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A104272"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ> as n -&gt; infinity. - _Jonathan Sondow_, Dec 16 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Conjecture: Sequence = {5 and n &lt;&gt; 5| ( Fibonacci(n) mod<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> or<OMOBJ>
+      <OMA>
+      <OMS name="Fibonacci" cd="A000040"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> mod n = n - 1) and<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> mod n = 1}. - _Gary Detlefs_, May 25 2014
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Conjecture: Sequence = {5 and n &lt;&gt; 5| ( Fibonacci(n) mod<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> or<OMOBJ>
+      <OMA>
+      <OMS name="Fibonacci" cd="A000040"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> mod n = n - 1) and<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA>
+    </OMA>
+    </OMOBJ> mod 3*n = 8}. - _Gary Detlefs_, May 28 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> A000040 := n-&gt;ithprime(n); [ seq(ithprime(i),i=1..100) ];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Prime[Range[60]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> primitiveElements[lst_List] := Block[{lsu = {lst[[1]]}, lsv = Rest@ lst}, While[ Length@ lsv &gt; 0, If [Min@ Mod[ lsv[[1]], lsu] != 0, AppendTo[ lsu, lsv[[1]] ]]; lsv = Rest@ lsv]; lsu]; primitiveElements[ Range[2, 275]] (* or *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> NestList[ NextPrime, 2, 57] (* _Robert G. Wilson v_, Aug 16 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [n : n in [2..500] | IsPrime(n)];</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) a := func&lt; n | NthPrime(n) &gt;;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;1, 0, prime(n))};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) a = sloane.A000040; print a</CMP>
+    </omtext><omtext class="program">
+      <CMP> print a.list(58) # _Jaap Spies_, 2007</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) prime_range(1,300) # _Zerinvary Lajos_, May 27 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) A000040(n) := block(</CMP>
+    </omtext><omtext class="program">
+      <CMP>     if n = 1 then return(2),</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return( next_prime(A000040(n-1)))</CMP>
+    </omtext><omtext class="program">
+      <CMP>     )$ /* recursive, to be replaced if possible - _R. J. Mathar_, Feb 27 2012 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> From _M. F. Hasler_, Oct 21 2013: (Start) The following PARI code provides asymptotic approximations, one based on the asymptotic formula cited above (slight overestimate for n &gt; 10^8), the other one based on pi(x) ~ li(x) = Ei(log(x)) (slight underestimate):</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) prime1(n)=n*(log(n)+log(log(n))-1+(log(log(n))-2)/log(n)-((log(log(n))-6)*log(log(n))+11)/log(n)^2/2)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) prime2(n)=solve(X=n*log(n)/2,2*n*log(n),real(eint1(-log(X)))+n) \\ (End)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)  See also Haskell Wiki Link</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.List (genericIndex)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000040 n = genericIndex a000040_list (n - 1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000040_list = base ++ larger where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    base   = [2,3,5,7,11,13,17]</CMP>
+    </omtext><omtext class="program">
+      <CMP>    larger = p : filter prime more</CMP>
+    </omtext><omtext class="program">
+      <CMP>    prime n = all ((&gt; 0) . mod n) $ takeWhile (\x -&gt; x*x &lt;= n) larger</CMP>
+    </omtext><omtext class="program">
+      <CMP>    _ : p : more = roll $ makeWheels base</CMP>
+    </omtext><omtext class="program">
+      <CMP>    roll (Wheel n rs) = [n * k + r | k &lt;- [0..], r &lt;- rs]</CMP>
+    </omtext><omtext class="program">
+      <CMP>    makeWheels = foldl nextSize (Wheel 1 [1])</CMP>
+    </omtext><omtext class="program">
+      <CMP>    nextSize (Wheel size bs) p = Wheel (size * p)</CMP>
+    </omtext><omtext class="program">
+      <CMP>        [r | k &lt;- [0..p-1], b &lt;- bs, let r = size*k+b, mod r p &gt; 0]</CMP>
+    </omtext><omtext class="program">
+      <CMP> data Wheel = Wheel Integer [Integer]</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Apr 07 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) forprime(p=2, 10^3, print1(p, &quot;, &quot;)) \\ _Felix Fröhlich_, Jun 30 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002808, A008578, A006879, A006880, A000720 (&quot;pi&quot;), A001223 (differences between primes), A233588.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. primes in lexicographic order: A210757, A210758, A210759, A210760, A210761.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A003558, A179480 (relating to the Quasi-order theorem of Hilton and Pedersen).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Boustrophedon transforms: A000747, A000732, A230953.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> a(2n) = A104272(n) - A233739(n).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> core,nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Apr 30 1991</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional links contributed by _Lekraj Beedassy_, Dec 23 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional comments from _Jonathan Sondow_, Dec 27 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

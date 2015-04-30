@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000966.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000966">
+          <assertion class="***** TTTT *****">
+      <CMP> M3808 N1557</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,11,17,23,29,30,36,42,48,54,60,61,67,73,79,85,91,92,98,104,110,116,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 122,123,129,135,141,147,153,154,155,161,167,173,179,185,186,192,198,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 204,210,216,217,223,229,235,241,247,248,254,260,266,272,278,279,285</CMP>
+    </assertion><omtext class="name">
+      <CMP> n! never ends in this many 0's.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This sequence also holds for bases 5, 15, 20, 30, 40, 60 and 120. These bases (together with 10) are the proper divisors of 5! that are divisible by 5. - _Carl R. White_, Jan 21 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The g.f. conjectured by _Simon Plouffe_ in 1992 dissertation is not correct; the first discrepancy is a(31) = 155, his g.f. gives 160. In fact, the g.f. for this sequence is not rational; the first differences are bounded but not periodic. [_Franklin T. Adams-Watters_, Jul 03 2009]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> David Wells, The Penguin Dictionary of Curious and Interesting Numbers (Rev. ed. 1997), p. 42</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000966/b000966.txt&quot;&gt;Table of n, a(n) for n=1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. Moser, &lt;a href=&quot;http://www.jstor.org/stable/3029408&quot;&gt;Problem 158&lt;/a&gt;, Math. Mag., 27 (1953), 54-55. Solution by C. W. Trigg.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Fa#factorial&quot;&gt;Index entries for sequences related to factorial numbers&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         The simplest way to obtain this sequence is by constructing<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> power series<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000966"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMV name="k"/></OMA>
+      <OMV name="a"/>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ> whose exponents give the terms of the sequence. Define<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="e" cd="A000966"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="f" cd="A000966"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="e" cd="A000966"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="x" cd="A000966"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="t" cd="A000966"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="e" cd="A000966"/>
+      <OMV name="n"/>
+    </OMA><OMI>6</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Now use the recurrence<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000966"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> and for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000966"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="f" cd="A000966"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="A" cd="A000966"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="t" cd="A000966"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>; then<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="A"/>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="limit" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="-&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMS name="infinity"/>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="n"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA><OMA><OMS name="times"/><OMV name="A"/><OMV name="n"/></OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>. This follows easily from the explicit formula for<OMOBJ>
+      <OMA>
+      <OMR xref="A027868"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>. Here is the beginning of A: x^5 + x^11 + x^17 + x^23 + x^29 + x^30 + x^36 + x^42 + x^48 + ... - _N. J. A. Sloane_, Feb 02 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Formula from C. W. Trigg<OMOBJ>
+      <OMV name="see"/>
+    </OMOBJ> the Moser reference): The terms are given by the formula<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="r"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="p_1" cd="A000966"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="k"/><OMI>5</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="p_2" cd="A000966"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="k"/><OMI>5</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="p_2" cd="A000966"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="k"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="p_3" cd="A000966"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="k"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+    </OMOBJ> where k = 1 2 3 ... and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p_i"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> except when<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="k"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMV name="i"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="k"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMV name="i"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> when<OMOBJ>
+      <OMV name="p_i"/>
+    </OMOBJ> has the value<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMV name="i"/>
+    </OMA>
+    </OMA><OMV name="k"/>
+    </OMA>
+    </OMOBJ> and [] denotes &quot;floor&quot;.
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> 17 is in the sequence because on passing from 74! to 75!, the number of end zeros jumps from 16 to 18 skipping 17.</CMP>
+    </assertion><assertion class="example">
+      <CMP> More generally, we have:</CMP>
+    </assertion><assertion class="example">
+      <CMP> n, n!</CMP>
+    </assertion><assertion class="example">
+      <CMP> -----</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2, 2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3, 6</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4, 24</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5, 120</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6, 720</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7, 5040</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8, 40320</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9, 362880</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10, 3628800</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11, 39916800</CMP>
+    </assertion><assertion class="example">
+      <CMP> 12, 479001600</CMP>
+    </assertion><assertion class="example">
+      <CMP> 13, 6227020800</CMP>
+    </assertion><assertion class="example">
+      <CMP> 14, 87178291200</CMP>
+    </assertion><assertion class="example">
+      <CMP> 15, 1307674368000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 16, 20922789888000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 17, 355687428096000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 18, 6402373705728000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 19, 121645100408832000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 20, 2432902008176640000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 21, 51090942171709440000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 22, 1124000727777607680000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 23, 25852016738884976640000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 24, 620448401733239439360000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 25, 15511210043330985984000000 &lt;- jump from 4 to 6 trailing 0's, so 5 is a term</CMP>
+    </assertion><assertion class="example">
+      <CMP> 26, 403291461126605635584000000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 27, 10888869450418352160768000000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 28, 304888344611713860501504000000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 29, 8841761993739701954543616000000</CMP>
+    </assertion><assertion class="example">
+      <CMP> 30, 265252859812191058636308480000000</CMP>
+    </assertion><assertion class="example">
+      <CMP> etc.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> read(transforms); e:=n-&gt;(5^n-1)/4; f:=n-&gt;(1-x^(e(n)-1))/(1-x^e(n-1)); t:=n-&gt;x^(e(n)-6); A[2]:=1; for n from 3 to 8 do A[n]:=f(n)*A[n-1]+t(n); od: POWERS(series(x^5*A[8],x,5005),x,5005); # _N. J. A. Sloane_, Feb 02 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u=Union[FoldList[Plus,0,IntegerExponent[Range[1000],5]]]; Complement[Range[u[[ -1]]], u] (* _T. D. Noe_, Feb 02 2007 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000142, A027868, A080066 (first differences).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Robert G. Wilson v_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Mark Hudson (mrmarkhudson(AT)hotmail.com), Jan 24 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected by _Sascha Kurz_, Jan 27 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

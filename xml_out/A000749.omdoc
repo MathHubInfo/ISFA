@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000749.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000749">
+          <assertion class="***** TTTT *****">
+      <CMP> M3383 N1364</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,4,10,20,36,64,120,240,496,1024,2080,4160,8256,16384,32640,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 65280,130816,262144,524800,1049600,2098176,4194304,8386560,16773120,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 33550336,67108864,134225920,268451840,536887296,1073741824,2147450880</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n)=4a(n-1)-6a(n-2)+4a(n-3), n &gt; 3, with a(0)=a(1)=a(2)=0,a(3)=1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of strings over Z_2 of length n with trace 1 and subtrace 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Same as number of strings over GF(2) of length n with trace 1 and subtrace 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also expansion of bracket function.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is also the number of induced subgraphs with odd number of edges in the complete graph K(n-1). [From Alessandro Cosentino (cosenal(AT)gmail.com), Feb 02 2009]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Contribution from _Gary W. Adamson_, Mar 13 2009: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> M^n * [1,0,0,0] = [A038503(n), a(n), A038505(n-1), A038504(n)]; where M =</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a 4x4 matrix [1,1,0,0; 0,1,1,0; 0,0,1,1; 1,0,0,1]. Sum of the 4 terms =</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 2^n. Example; M^6 * [1,0,0,0] = [16, 20, 16, 12] sum = 64 = 2^6. (End)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. W. Gould, Binomial coefficients, the bracket function and compositions with relatively prime summands, Fib. Quart. 2 (1964), 241-260.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Maran van Heesch, The multiplicative complexity of symmetric functions over a field with characteristic p, Thesis, 2014; http://alexandria.tue.nl/extra1/afstversl/wsk-i/heesch2014.pdf</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000749/b000749.txt&quot;&gt;Table of n, a(n) for n=0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Ruskey, &lt;a href=&quot;http://www.theory.csc.uvic.ca/~cos/inf/trs/str/Zq/str_tr_subtr_Z2.html&quot;&gt;Strings over Z_2 of given Trace and Subtrace&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Ruskey, &lt;a href=&quot;http://www.theory.csc.uvic.ca/~cos/inf/trs/str/Fq/str_tr_subtr_F2.html&quot;&gt;Strings over GF(2) of given Trace and Subtrace&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_03&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (4,-6,4).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000749"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="C" cd="A000749"/>
+      <OMV name="n"/>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>, 4*k+3).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000749"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000749"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A038505"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A000749"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMR xref="A009545"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="for" cd="A000749"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Without the two initial zeros, binomial transform of<OMOBJ>
+      <OMR xref="A007877"/>
+    </OMOBJ>. - _Henry Bottomley_, Jun 04 2001
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n)=2^n/4-2^(n/2)sin(pi*n/4)/2-0^n/4.<OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000749"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> is the binomial transform of<OMOBJ>
+      <OMR xref="A021913"/>
+    </OMOBJ>. - _Paul Barry_, Aug 30 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000749"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMV name="t"/>
+    </OMOBJ>, s) = a(n-1;<OMOBJ>
+      <OMV name="t"/>
+    </OMOBJ>, s) + a(n-1;<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="t"/><OMI>1</OMI>
+    </OMA>
+    </OMOBJ>, s+t+1) where<OMOBJ>
+      <OMV name="t"/>
+    </OMOBJ> is the trace and<OMOBJ>
+      <OMV name="s"/>
+    </OMOBJ> is the subtrace.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Without the initial three zeros, = binomial transform of<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>, 3,...]. - _Gary W. Adamson_, Jun 19 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n)=-(1/4)*[(1+I)*(1-I)^(n-1)-(1-I)*(1+I)^(n-1)]+(1/2)*2^(n-1),100)-(1/4)*(C(2*n,n) mod 2), with<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMA><OMS name="times"/><OMI>0</OMI><OMV name="From"/></OMA>
+    </OMA>
+    </OMOBJ> _Paolo P. Lava_, Jun 29 2009]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="Q" cd="A000749"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Q" cd="A000749"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMV name="k"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>5</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="Q" cd="A000749"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> ; (continued fraction). - _Sergei N. Gladkovskii_, Mar 15 2013
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(4;1,1)=4 since the four binary strings of trace 1, subtrace 1 and length 4 are { 0111, 1011, 1101, 1110 }.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A000749 := proc(n) local k; add(binomial(n,4*k+3),k=0..floor(n/4)); end;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000749:=-1/((2*z-1)*(2*z**2-2*z+1)); [_Simon Plouffe_ in his 1992 dissertation.]</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; if n=0 then 0 else (Matrix(3, (i,j)-&gt; if (i=j-1) then 1 elif j=1 then [4,-6,4][i] else 0 fi)^(n-1))[1,3] fi: seq(a(n), n=0..33); # _Alois P. Heinz_, Aug 26 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Join[{0},LinearRecurrence[{4,-6,4},{0,0,1},40]] (* _Harvey P. Dale_, Mar 31 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=sum(k=0,n\4,binomial(n,4*k+3)).</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000749 n = a000749_list !! n</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000749_list = 0 : 0 : 0 : 1 : zipWith3 (\u v w -&gt; 4 * u - 6 * v + 4 * w)</CMP>
+    </omtext><omtext class="program">
+      <CMP>    (drop 3 a000749_list) (drop 2 a000749_list) (drop 1 a000749_list)</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Jul 15 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000748, A000750, A001659, A006090, A038503, A038504, A038505.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A038503, A133209, A133212.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional comments from Antonio G. Astudillo (afg_astudillo(AT)hotmail.com), Nov 22 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> New definition from _Paul Curtz_, Oct 29 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _N. J. A. Sloane_, Jun 13 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

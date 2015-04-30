@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000293.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000293">
+          <assertion class="***** TTTT *****">
+      <CMP> M3392 N1371</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,4,10,26,59,140,307,684,1464,3122,6500,13426,27248,54804,108802,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 214071,416849,805124,1541637,2930329,5528733,10362312,19295226,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 35713454,65715094,120256653,218893580,396418699,714399381,1281403841,2287986987,4067428375,7200210523,12693890803,22290727268,38993410516,67959010130,118016656268,204233654229,352245710866,605538866862,1037668522922,1772700955975,3019333854177,5127694484375,8683676638832,14665233966068,24700752691832,41495176877972,69531305679518</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = number of solid (i.e., three-dimensional) partitions of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> An ordinary partition is a row of numbers in non-decreasing order whose sum is n. Here the numbers are in a three-dimensional pile, non-decreasing in the x-, y- and z-directions.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Finding a g.f. for this sequence is an unsolved problem. At first it was thought that it was given by A000294.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equals A000041 convolved with A002836: [1, 0, 2, 5, 12, 24, 56, 113,...] and row sums of the convolution triangle A161564. - _Gary W. Adamson_, Jun 13 2009</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. O. L. Atkin, P. Bratley, I. G. McDonald and J. K. S. McKay, Some computations for m-dimensional partitions, Proc. Camb. Phil. Soc., 63 (1967), 1097-1100.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. Bratley and J. K. S. McKay, Algorithm 313: Multi-dimensional partition generator, Comm. ACM, 10 (Issue 10, 1967), p. 666.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, A note on solid partitions, Math. Comp., 24 (1970), 955-961.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. A. MacMahon, Memoir on the theory of partitions of numbers - Part VI, Phil. Trans. Roal Soc., 211 (1912), 345-373.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. A. MacMahon, Combinatory Analysis. Cambridge Univ. Press, London and New York, Vol. 1, 1915 and Vol. 2, 1916; see vol. 2, p 332.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. P. Naveen, On The Asymptotics of Some Counting Problems in Physics, Thesis, Bachelor of Technology, DEPARTMENT OF PHYSICS, INDIAN INSTITUTE OF TECHNOLOGY, MADRAS, May 2011; http://www.physics.iitm.ac.in/~suresh/theses/NaveenThesis.pdf</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Suresh Govindarajan, &lt;a href=&quot;/A000293/b000293.txt&quot;&gt;Table of n, a(n) for n = 0..72&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Srivatsan Balakrishnan, Suresh Govindarajan and Naveen S. Prabhakar, &lt;a href=&quot;http://arxiv.org/abs/1105.6231&quot;&gt;On the asymptotics of higher-dimensional partitions&lt;/a&gt;, arXiv:1105.6231.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Suresh Govindarajan, &lt;a href=&quot;http://boltzmann.wikidot.com/solid-partitions&quot;&gt;Solid Partitions Project &lt;/a&gt; Dec 14, 2010</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. A. MacMahon, &lt;a href=&quot;http://www.hti.umich.edu/cgi/t/text/text-idx?c=umhistmath;idno=ABU9009&quot;&gt;Combinatory analysis&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ville Mustonen and R. Rajesh, &lt;a href=&quot;http://arXiv.org/abs/cond-mat/0303607&quot;&gt;Numerical Estimation of the Asymptotic Behaviour of Solid Partitions of an Integer&lt;/a&gt;, J. Phys. A 36 (2003), no. 24, 6651-6659.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/SolidPartition.html&quot;&gt;Solid Partition&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Examples for n=2 and n=3.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 4: 2; 11 where the first 1 is at the origin and the second 1 is in the x, y or z direction.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3) = 10: 3; 21 where the 2 is at the origin and the 1 is on the x, y or z axis; 111 (a row of 3 ones on the x, y or z axes); and three 1's with one 1 at the origin and the other two 1's on two of the three axes.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000041, A000219, A000294, A000334, A000390, A002835, A002836, A005980, A037452, A080207, A082535.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A002836, A000041, A161564. - _Gary W. Adamson_, Jun 13 2009</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from the Mustonen and Rajesh article, May 02 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(51)-a(62) found by _Suresh Govindarajan_ and students, Dec 14 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(63)-a(68) found by _Suresh Govindarajan_ and students, Jun 01 2011</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(69)-a(72) found by _Suresh Govindarajan_ and Srivatsan Balakrishnan, Jan 03 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

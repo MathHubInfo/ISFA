@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000613.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000613">
+          <assertion class="***** TTTT *****">
+      <CMP> M1241 N0475</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,10,46,1372,475499108,1038397981840994509577948,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10825608503765473087803384381127710579846422820261084889808</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of Boolean functions of n variables.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. A. Harrison, The number of equivalence classes of Boolean functions under groups containing negation, IEEE Trans. Electron. Comput. 12 (1963), 559-561.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. A. Harrison, On the classification of Boolean functions by the general linear and affine groups, J. Soc. Indust. Appl. Math. 12 (1964) 285-299.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Bo#Boolean&quot;&gt;Index entries for sequences related to Boolean functions&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000613"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000585"/>
+      <OMV name="n"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Sean A. Irvine_, Mar 21 2011
+      </CMP>
+      </omdoc:p><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, Feb 23 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

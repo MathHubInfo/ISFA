@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000666.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000666">
+          <assertion class="***** TTTT *****">
+      <CMP> M1650 N0646</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,6,20,90,544,5096,79264,2208612,113743760,10926227136,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1956363435360,652335084592096,405402273420996800,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 470568642161119963904,1023063423471189431054720,4178849203082023236058229792,32168008290073542372004082199424</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of symmetric relations on n nodes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Each node may or may not be related to itself.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also the number of rooted graphs on n+1 nodes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The 1-1-correspondence is as follows. Given a rooted graph on n+1 nodes, replace each edge joining the root node to another node by a self-loop at that node and erase the root node. The result is an undirected graph on n nodes which is the graph of the symmetric relation.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also the number of the graphs with n nodes whereby each node is colored or not colored. A loop can be interpreted as a colored node. - Juergen Will, Oct 31 2011</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, pp. 101, 241.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. D. McIlroy, Calculation of numbers of structures of relations on finite sets, Massachusetts Institute of Technology, Research Laboratory of Electronics, Quarterly Progress Reports, No. 17, Sept. 15, 1955, pp. 14-22.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. W. Robinson, Numerical implementation of graph counting algorithms, AGRC Grant, Math. Dept., Univ. Newcastle, Australia, 1976.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, &lt;a href=&quot;/A000666/b000666.txt&quot;&gt;Table of n, a(n) for n = 0..80&lt;/a&gt; [Shortened file because terms grow rapidly: see Applegate link below for additional terms]</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, &lt;a href=&quot;/A000666/a000666.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Cameron, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL3/groups.html&quot;&gt;Sequences realized by oligomorphic permutation groups&lt;/a&gt;, J. Integ. Seqs. Vol. 3 (2000), #00.1.5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. L. Davis, &lt;a href=&quot;http://dx.doi.org/10.1090/S0002-9939-1953-0055294-2&quot;&gt;The number of structures of finite relations&lt;/a&gt;, Proc. Amer. Math. Soc. 4 (1953), 486-495.</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Harary, &lt;a href=&quot;http://dx.doi.org/10.1090/S0002-9947-1955-0068198-2&quot;&gt;The number of linear, directed, rooted, and connected graphs&lt;/a&gt;, Trans. Am. Math. Soc. 78 (1955) 445-463, eq. (24).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Frank Harary, Edgar M. Palmer, Robert W. Robinson, Allen J. Schwenk, &lt;a href=&quot;http://dx.doi.org/10.1002/jgt.3190010405&quot;&gt;Enumeration of graphs with signed points and lines&lt;/a&gt;, J. Graph Theory 1 (1977), no. 4, 295-308.</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Oberschelp, &lt;a href=&quot;http://gdz.sub.uni-goettingen.de/no_cache/dms/load/img/?IDDOC=68416&quot;&gt;Kombinatorische Anzahlbestimmungen in Relationen&lt;/a&gt;, Math. Ann., 174 (1967), 53-78.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Pfeiffer, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL7/Pfeiffer/pfeiffer6.html&quot;&gt;Counting Transitive Relations&lt;/a&gt;, Journal of Integer Sequences, Vol. 7 (2004), Article 04.3.2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Marko Riedel, &lt;a href=&quot;/A000666/a000666_1.txt&quot;&gt;Maple program for A000666&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sage, &lt;a href=&quot;http://www.sagemath.org/doc/reference/graphs/sage/graphs/graph_generators.html&quot;&gt;Common Graphs (Graph Generators)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> StackExchange, &lt;a href=&quot;http://math.stackexchange.com/questions/41386/enumerating-graphs-with-self-loops&quot;&gt;Enumerating Graphs with Self-Loops&lt;/a&gt;, Jan 23 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/RootedGraph.html&quot;&gt;Rooted Graph&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Let<OMOBJ>
+      <OMA>
+      <OMS name="G_" cd="A000666"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="k"/>
+    </OMA>
+    </OMOBJ> be the number of rooted graphs on<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMOBJ> nodes with<OMOBJ>
+      <OMV name="k"/>
+    </OMOBJ> edges and let<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="G_" cd="A000666"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMV name="x"/></OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="G_" cd="A000666"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="k"/>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>. Thus<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000666"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="G_" cd="A000666"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>1</OMI></OMA>
+    </OMA>
+    </OMOBJ>. Let<OMOBJ>
+      <OMA>
+      <OMS name="S_n" cd="A000666"/>
+      <OMV name="x_1"/>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMS name="..." cd="arithmetics"></OMS>
+    </OMOBJ>, x_n) denote the cycle index for Sym_n.<OMOBJ>
+      <OMV name="cf"/>
+    </OMOBJ>. the link in A000142).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Compute<OMOBJ>
+      <OMA><OMS name="times"/><OMV name="x_1"/><OMV name="S_n"/></OMA>
+    </OMOBJ> and regard it as the cycle index of<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> set of permutations on<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMOBJ> points and find the corresponding cycle index for the action on the<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMOBJ> edges joining those points<OMOBJ>
+      <OMV name="the"/>
+    </OMOBJ> corresponding &quot;pair group&quot;). Finally, by replacing each<OMOBJ>
+      <OMV name="x_i"/>
+    </OMOBJ> by<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="i"/>
+    </OMA>
+    </OMA>
+    </OMOBJ> gives<OMOBJ>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="G_" cd="A000666"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMV name="x"/></OMA>
+    </OMOBJ>. [Harary]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Example,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="S_2"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x_1"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="x_2"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMV name="x_1"/><OMV name="S_2"/></OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x_1"/>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMV name="x_1"/><OMV name="x_2"/></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. The pair group is<OMOBJ>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x_1"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMV name="x_1"/><OMV name="x_2"/></OMA>
+    </OMA></OMA>
+    </OMOBJ> and so<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="G_3" cd="A000666"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>; set<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="x"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> to get<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000666"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMI>6</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> # see Riedel link above</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Join[{1,2}, Table[CycleIndex[Join[PairGroup[SymmetricGroup[n]], Permutations[Range[n*(n-1)/2+1, n*(n+1)/2]], 2],s] /. Table[s[i]-&gt;2, {i,1,n^2-n}], {n,2,8}]] (* _Geoffrey Critzer_, Nov 04 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000595, A001172, A001174, A006905, A000250.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Description corrected by _Christian G. Bower_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, Apr 18 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Entry revised by _N. J. A. Sloane_, Mar 06 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

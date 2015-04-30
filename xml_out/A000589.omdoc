@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000589.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000589">
+          <assertion class="***** TTTT *****">
+      <CMP> M4797 N2048</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,11,77,440,2244,10659,48279,211508,904475,3798795,15737865,64512240,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 262256280,1059111900,4254603804,17018415216,67837293986,269638992062,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1069258071970,4232010895376,16723268860760,65997186039785,260170725132045,1024713341952300</CMP>
+    </assertion><omtext class="name">
+      <CMP> 11*binomial(2n,n-5)/(n+6).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of lattice paths from (0,0) to (n,n) with steps E=(1,0) and N=(0,1) which touch but do not cross the line x-y=5. - _Herbert Kociemba_, May 24 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of standard tableaux of shape (n+5,n-5). - _Emeric Deutsch_, May 30 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A214292(2*n-1,n-6) for n &gt; 5. - _Reinhard Zumkeller_, Jul 12 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Papoulis, A new method of inversion of the Laplace transform, Quart. Applied Math. 14 (1956), 405ff.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, The distribution of crossings of chords joining pairs of 2n points on a circle, Math. Comp., 29 (1975), 215-222.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000589/b000589.txt&quot;&gt;Table of n, a(n) for n = 5..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. K. Guy, Catwalks, Sandsteps and Pascal Pyramids, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;J. Integer Seqs., Vol. 3 (2000), #00.1.6&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Expansion of<OMOBJ>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="C"/>
+      <OMI>11</OMI>
+    </OMA></OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="C"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMV name="is"/></OMA>
+    </OMA>
+    </OMOBJ> g.f. for Catalan numbers,<OMOBJ>
+      <OMR xref="A000108"/>
+    </OMOBJ> . - _Philippe Deléham_, Feb 03 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Let<OMOBJ>
+      <OMV name="A"/>
+    </OMOBJ> be the Toeplitz matrix of order<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> defined by: A[i,i-1]=-1,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000589"/>
+      <OMV name="i"/><OMV name="j"/>
+    </OMA>
+      <OMA>
+      <OMS name="Catalan" cd="A000589"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="j"/><OMV name="i"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMV name="j"/>
+    </OMA>
+    </OMOBJ>, and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000589"/>
+      <OMV name="i"/><OMV name="j"/>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>, otherwise. Then, for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>10</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000589"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>10</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="coeff" cd="A000589"/>
+      <OMA>
+      <OMS name="charpoly" cd="A000589"/>
+      <OMV name="A"/><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>10</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMV name="From"/>
+    </OMOBJ> _Milan Janjic_, Jul 08 2010]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <p></p><OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMV name="a"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _R. J. Mathar_, Jun 20 2013
+      </CMP>
+      </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 5,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

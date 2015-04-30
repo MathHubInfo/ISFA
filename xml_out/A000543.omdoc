@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000543.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000543">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,23,333,2916,16725,70911,241913,701968,1798281,4173775,8942021,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 17930628,34009053,61518471,106823025,179003456,290715793,459239463,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 707740861,1066780100,1576090341,2286660783,3263156073,4586706576</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of inequivalent ways to color vertices of a cube using at most n colors.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Here inequivalent means under the action of the rotation group of the cube, of order 24, which in its action on the vertices has cycle index (x1^8 + 9*x2^4 + 6*x4^2 + 8*x1^2*x3^2)/24.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also the number of ways to color the faces of a regular octahedron with n colors, counting mirror images separately.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. G. De Bruijn, Polya's theory of counting, in E. F. Beckenbach, ed., Applied Combinatorial Mathematics, Wiley, 1964, pp. 144-184 (see p. 147).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000543/b000543.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/PolyhedronColoring.html&quot;&gt;Polyhedron Coloring&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000543"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>24</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>6</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>17</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMI>6</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. (Replace all x_i's in the cycle index by n.)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>13</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>149</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>514</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>149</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>13</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>9</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Colin Barker_, Jan 29 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000543"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="C" cd="A000543"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>21</OMI><OMA>
+      <OMS name="C" cd="A000543"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>267</OMI><OMA>
+      <OMS name="C" cd="A000543"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1718</OMI><OMA>
+      <OMS name="C" cd="A000543"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>5250</OMI><OMA>
+      <OMS name="C" cd="A000543"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>7980</OMI><OMA>
+      <OMS name="C" cd="A000543"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>5880</OMI><OMA>
+      <OMS name="C" cd="A000543"/>
+      <OMV name="n"/><OMI>7</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1680</OMI><OMA>
+      <OMS name="C" cd="A000543"/>
+      <OMV name="n"/><OMI>8</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. Each term indicates the number of ways to use<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> colors to color the cube vertices (octahedron faces) with exactly<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>5</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>6</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>7</OMI>
+    </OMOBJ>, or<OMOBJ>
+      <OMI>8</OMI>
+    </OMOBJ> colors.
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> f:= n-&gt;(1/24)*n^2*(n^6+17*n^2+6);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> CoefficientList[Series[x*(1+x)*(1+13*x+149*x^2+514*x^3+149*x^4+13*x^5+x^6)/(1-x)^9,{x,0,30}],x] (* _Vincenzo Librandi_, Apr 15 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [(1/24)*n^2*(n^6+17*n^2+6): n in [0..30]]; // _Vincenzo Librandi_, Apr 15 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A047780 (faces), A060530 (edges).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A006550.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A128766. Number when each pair of mirror images is counted as one.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> Clint. C. Williams [ Clintwill(AT)aol.com ]</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Entry revised by _N. J. A. Sloane_, Jan 03 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

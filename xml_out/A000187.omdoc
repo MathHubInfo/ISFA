@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000187.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000187">
+          <assertion class="***** TTTT *****">
+      <CMP> M2153 N0858</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,30,3522,1066590,604935042,551609685150,737740947722562,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1360427147514751710,3308161927353377294082,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 10256718523496425979562270,39490468691102039103925777602,184856411587530526077816051412830</CMP>
+    </assertion><omtext class="name">
+      <CMP> Generalized Euler numbers, c(5,n).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Shanks, Generalized Euler and class numbers, Math. Comp. 21 (1967), 689-694; 22 (1968), 699.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sean A. Irvine, &lt;a href=&quot;/A000187/b000187.txt&quot;&gt;Table of n, a(n) for n = 0..250&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         From the Shanks paper: Consider the Dirichlet series L_a(s) = sum_{k&gt;=0)} (-a|2k+1) / (2k+1)^s, where (-a|2k+1) is the Jacobi symbol. Then the numbers<OMOBJ>
+      <OMA>
+      <OMS name="d_" cd="A000187"/>
+      <OMV name="a"/><OMV name="n"/>
+    </OMA>
+    </OMOBJ> are defined by<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="L_a" cd="A000187"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMS name="pi"/><OMA><OMS name="times"/><OMI>2</OMI><OMV name="a"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A000187"/>
+      <OMV name="a"/>
+    </OMA><OMV name="c"/><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="a"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> and n=0,1,2,... - _Sean A. Irvine_, Mar 26 2012
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A000192, A000490.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Kok Seng Chua (chuaks(AT)ihpc.nus.edu.sg), Jun 02 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

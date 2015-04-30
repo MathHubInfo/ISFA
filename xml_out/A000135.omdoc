@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000135.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000135">
+          <assertion class="***** TTTT *****">
+      <CMP> M1595 N0622</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,6,13,24,42,73,125,204,324,511,801,1228,1856,2780,4135,6084,8873,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 12847,18481,26416,37473,52871,74216,103596,143841,198839,273654,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 374987,511735,695559,941932,1271139,1709474,2291195,3061385,4078152,5416322</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions into non-integral powers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) counts the solutions to the inequality sum_{i=1,2,..} x_i^(2/3)&lt;=n for any number of distinct integers 1&lt;=x_1&lt;x_2&lt;x_3&lt;x_4&lt;... - _R. J. Mathar_, Jul 03 2009</CMP>
+    </omtext><omtext class="reference">
+      <CMP> B. K. Agarwala and F. C. Auluck, Statistical mechanics and partitions into non-integral powers of integers, Proc. Camb. Phil. Soc., 47 (1951), 207-216.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. K. Agarwala, F. C. Auluck, &lt;a href=&quot;http://dx.doi.org/10.1017/S0305004100026505&quot;&gt;Statistical mechanics and partitions into non-integral powers of integers&lt;/a&gt;, Proc. Camb. Phil. Soc., 47 (1951), 207-216.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sean A. Irvine, &lt;a href=&quot;/A000135/a000135.txt&quot;&gt;Tentative values of first 55 terms&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> For n=3, the 6 solutions are (i) 1^(2/3)&lt;=3. (ii) 1^(2/3)+2^(2/3)&lt;=3. (iii) 2^(2/3)&lt;=3. (iv) 3^(2/3)&lt;=3. (v) 4^(2/3)&lt;=3. (vi) 5^(2/3)&lt;=3. - _R. J. Mathar_, Jul 03 2009</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000148, A000158, A000160.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 8 more terms from _R. J. Mathar_, Jul 03 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 20 more terms from _Sean A. Irvine_, Sep 28 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

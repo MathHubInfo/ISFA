@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000282.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000282">
+          <assertion class="***** TTTT *****">
+      <CMP> M3169 N1285</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,70,3783,338475,40565585,6061961733,1083852977811,225615988054171,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 53595807366038234,14308700593468127485,4241390625289880226714,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1382214286200071777573643,491197439886557439295166226</CMP>
+    </assertion><omtext class="name">
+      <CMP> Finite automata.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. A. Harrison, A census of finite automata, Canad. J. Math. 17 (1965), 100-113.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A054732.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, Apr 22 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

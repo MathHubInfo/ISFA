@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000531.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000531">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,7,38,187,874,3958,17548,76627,330818,1415650,6015316,25413342,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 106853668,447472972,1867450648,7770342787,32248174258,133530264682,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 551793690628,2276098026922,9373521044908,38546133661492</CMP>
+    </assertion><omtext class="name">
+      <CMP> From area of cyclic polygon of 2n + 1 sides.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Expected number of matches remaining in Banach's original matchbox problem (counted when empty box is chosen), multiplied by 2^(2*n-1). - Michael Steyer (msteyer(AT)osram.de), Apr 13 2001</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A conjectured definition: Let 0 &lt; a_1 &lt; a_2 &lt;...&lt;a_{2n} &lt; 1. Then how many ways are there in which one can add or subtract all the a_i to get an odd number. For example, take n = 2. Then the options are a_1+a_2+a_3+a_4 = 1 or 3; one can change the sign of any of the a_i's and get 1; or -a_1-a_2+a_3+a_4 = 1. That's a total of 7, which is the 2nd number of this sequence. One of the definitions of the sequence (which was how I came across it) is the degree of the equation giving the area of a cyclic polygon in terms of the sides. I conjectured that for any set of side lengths there is a unique way of fitting them together for any possible winding number and any possible subset of sides which go round the circle in a retrograde manner. - Simon Norton (simon(AT)dpmms.cam.ac.uk), May 14 2001</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = total weight of upsteps in all Dyck n-paths (A000108) when each upstep is weighted with its position in the path. For example, the Dyck path UDUUDUDD has upsteps in positions 1,3,4,6 and contributes 1+3+4+6=14 to the weight for Dyck 4-paths. The summand (n-k)*binomial(2*n+1, k) in the Maple formula below is the total weight of upsteps terminating at height n-k, 0&lt;=k&lt;=n-1. - _David Callan_, Dec 29 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Catalan transform of binomial transform of squares. - _Philippe Deléham_, Oct 31 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is also the number of walks of length 2n in the quarter plane starting and ending at the origin using steps {(1,1),(1,0),(-1,0), (-1,-1)} (which appear in Gessel's conjecture) in which the steps (1,0) and (-1,0) appear exactly once each. - _Arvind Ayyer_, Mar 02 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equals the Catalan sequence, A000108, convolved with A002457: (1, 6, 30, 140, ...). - _Gary W. Adamson_, May 14 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Total number  of occurrences of the pattern 213 (or 132) in all skew-indecomposable (n+2)-permutations avoiding the pattern 123. For example, a(1) = 1, since there is one occurrence of the pattern 213 in the set {213, 132}. - _Cheyne Homberger_, Mar 13 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. Feller, An Introduction to Probability Theory and Its Applications, Vol. I.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000531/b000531.txt&quot;&gt;Table of n, a(n) for n = 1..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Arvind Ayyer, &lt;a href=&quot;http://arxiv.org/abs/0902.2329&quot;&gt;Towards a human proof of Gessel's conjecture&lt;/a&gt;, arXiv:0902.2329 [math.CO], 2009.</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Bowman, &lt;a href=&quot;http://www.jstor.org/stable/3608200&quot;&gt;Cyclic pentagons&lt;/a&gt;, Math. Gaz. 36, (1952). 244-250. MR0051523.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Burstein and S. Elizalde, &lt;a href=&quot;http://arxiv.org/abs/1305.3177&quot;&gt;Total occurrence statistics on restricted permutations&lt;/a&gt;, arXiv preprint arXiv:1305.3177, 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Homberger, &lt;a href=&quot;http://www.combinatorics.org/ojs/index.php/eljc/article/view/v19i3p43&quot;&gt;Expected patterns in permutation classes&lt;/a&gt;, Electronic Journal of Combinatorics, 19(3) (2012), P43.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Cheyne Homberger, &lt;a href=&quot;http://arxiv.org/abs/1410.2657&quot;&gt;Patterns in Permutations and Involutions: A Structural and Enumerative Approach&lt;/a&gt;, arXiv preprint 1410.2657, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. F. Moebius, &lt;a href=&quot;http://www.hti.umich.edu/cgi/t/text/pageviewer-idx?sid=a6ca480904b4c265d485a1da0bbff12a&amp;amp;idno=aax2934.0001.001&amp;amp;c=umhistmath&amp;amp;cc=umhistmath&amp;amp;seq=430&amp;amp;view=image&quot;&gt;Über die Gleichungen, mittelst welcher aus den Seiten eines in einen Kreis zu beschreibenden Vielecks der Halbmesser des Kreises und die Fläche des Vielecks gefunden werden&lt;/a&gt;, Gesammelte Werke, vol. 1., pp. 407-438.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. P. Robbins, &lt;a href=&quot;http://www.jstor.org/stable/2974766&quot;&gt;Areas of polygons inscribed in a circle&lt;/a&gt;, Amer. Math. Monthly, 102 (1995), 523-530.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/CyclicPolygon.html&quot;&gt;Cyclic Polygon&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Y. Q. Zhao, &lt;a href=&quot;http://mathstat.carleton.ca/~zhao/TEACHING/70.265/random-v/random-v.html&quot;&gt;Introduction to Probability with Applications&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000531"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - Simon Norton (simon(AT)dpmms.cam.ac.uk), May 14 2001
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="na" cd="A000531"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMV name="n"/></OMA><OMI>2</OMI>
+    </OMA><OMV name="a"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>16</OMI><OMV name="n"/></OMA><OMI>8</OMI>
+    </OMA><OMV name="a"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>. - _Michael Somos_, Apr 18 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: 1/2*((1+4*x)*exp(2*x)*BesselI(0, 2*x) + 4*x*exp(2*x)*BesselI(1, 2*x) - exp(4*x)). - _Vladeta Jovovic_, Sep 22 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000531"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMV name="n"/>
+    </OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="binomial" cd="A000531"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS></OMA>
+    </OMA>
+    </OMOBJ>, k)*4^(-k) = (2*n+1)*(2*n+3)*C(n) - 2^(2*n+1) (C(n) = Catalan); g.f.: x*c(x)/(1-4*x)^(3/2), c(x): g.f. of Catalan numbers<OMOBJ>
+      <OMR xref="A000108"/>
+    </OMOBJ>. - _Wolfdieter Lang_
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000531"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMR xref="A039599"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="k"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>, for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>. - _Philippe Deléham_, Jun 10 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000531"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMR xref="A106566"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMR xref="A001788"/>
+      <OMV name="k"/>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>. - _Philippe Deléham_, Oct 31 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         (Conjecture)<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000531"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="cos" cd="A000531"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="k"/><OMS name="Pi"/></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMV name="n"/></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS></OMA>
+    </OMA>
+    </OMOBJ>. - _L. Edson Jeffery_, Jan 21 2012
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> f := proc(n) sum((n-k)*binomial(2*n+1,k),k=0..n-1); end;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := ((2n+1)!/n!^2-4^n)/2; Table[a[n], {n, 1, 22}] (* _Jean-François Alcover_, Dec 07 2011, after Pari *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;1,0,((2*n+1)!/n!^2-4^n)/2)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002457 (Banach's modified matchbox problem), A135404, A002457.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Simon Plouffe_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Moebius reference from _Michael Somos_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

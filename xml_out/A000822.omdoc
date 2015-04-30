@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000822.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000822">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,11,40,361,1952,24611,177280,2873041,25866752,512343611,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5535262720,129570724921,1633165156352,44110959165011,635421069967360,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 19450718635716001,315212388819402752,10784052561125704811</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of (sin^2 x + sin x ) /cos 2x.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. J. Mathar, &lt;a href=&quot;/A000822/b000822.txt&quot;&gt;Table of n, a(n) for n = 1..200&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Bisections are A000464 and A000816.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

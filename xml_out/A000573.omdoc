@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000573.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000573">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,56,6552,1293216,420909504,207624560256,147174521059584,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 143968880078466048,188237563987982390784,320510030393570671051776,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 695457005987768649183581184,1888143905499961681708381310976,6314083806394358817244705266941952,25655084790196439186603345691314159616</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 4 X n normalized Latin rectangles.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. M. Kerawala, The enumeration of the Latin rectangle of depth three by means of a difference equation, Bull. Calcutta Math. Soc., 33 (1941), 119-127.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. S. Stones, The many formulae for the number of Latin rectangles, Electron. J. Combin 17 (2010), A1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. S. Stones and I. M. Wanless, Divisors of the number of Latin rectangles, J. Combin. Theory Ser. A 117 (2010), 204-215.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sheng Lin, Xiaoguang Liu and Douglas S. Stones, Gang Wang, &lt;a href=&quot;/A000573/b000573.txt&quot;&gt;Table of n, K(4,n) for n=4..150&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. G. Doyle, &lt;a href=&quot;http://arxiv.org/abs/math/0703896&quot;&gt;The number of Latin rectangles&lt;/a&gt;, (2007), arXiv:math/0703896v1 [math.CO].</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. D. McKay and E. Rogoyski, &lt;a href=&quot;http://www.combinatorics.org/Volume_2/volume2.html#N3&quot;&gt;Latin squares of order ten&lt;/a&gt;, Electron. J. Combinatorics, 2 (1995) #N3.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Douglas Stones, &lt;a href=&quot;http://code.google.com/p/latinrectangles/downloads/list&quot;&gt;Doyle's formula for the number of reduced 6xn Latin rectangles&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Douglas Stones, &lt;a href=&quot;http://combinatoricswiki.org/wiki/Enumeration_of_Latin_Squares_and_Rectangles&quot;&gt;Enumeration Of Latin Squares And Rectangles&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/La#Latin&quot;&gt;Index entries for sequences related to Latin squares and rectangles&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A003170, A001009.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 4,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Brendan McKay_ and Eric Rogoyski</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000495.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000495">
+          <assertion class="***** TTTT *****">
+      <CMP> N1373</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,4,10,27,74,202,548,1490,4052,11013,29937,81377,221207,601302,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1634509,4443055,12077476,32829985,89241150,242582598,659407867,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1792456423,4872401723,13244561065,36002449669,97864804714,266024120301,723128532146,1965667148572</CMP>
+    </assertion><omtext class="name">
+      <CMP> Nearest integer to sinh(n).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000495/b000495.txt&quot;&gt;Table of n, a(n) for n = 0..250&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> f := n-&gt;round(evalf(sinh(n)));</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Floor[Sinh[n] + 1/2], {n, 0, 50}] (* _T. D. Noe_, Jun 20 2012 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Terms corrected by _Sean A. Irvine_, Oct 27 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Nov 14 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

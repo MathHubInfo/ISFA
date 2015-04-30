@@ -14,7 +14,8 @@ src_managed/
 project/boot/
 project/plugins/project/
 
-# Scala-IDE specific
+# Scala-IDE specificfa
+
 .scala_dependencies
 .worksheet
 

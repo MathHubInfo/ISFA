@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000879.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000879">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,9,15,30,39,61,72,99,146,162,219,263,283,329,409,487,519,609,675,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 705,811,886,1000,1163,1252,1294,1381,1423,1523,1877,1976,2141,2190,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2489,2547,2729,2915,3043,3241,3436,3512,3868,3945,4089,4164,4627,5106</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of primes &lt; prime(n)^2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = Min{x : A052180[x] = p(n) = A000040(n)}. E.g. n = 4: a(4) = 15 since p(4) = 7 occurs first in A052180 as the term with subscript 15, A052180(15) = A052180(A083270[4]) = A000040(4) = 7. - _Labos Elemer_, May 14 2003</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of primes determined at the n-th step of the Eratosthenes' sieve. - _Jean-Christophe Hervé_, Oct 21 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> Donovan Johnson, &lt;a href=&quot;/A000879/b000879.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> PrimePi[Prime[Range[50]]^2] (* _Harvey P. Dale_, Jan 16 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n) = primepi(prime(n)^2); \\ _Michel Marcus_, Oct 28 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A050216 (gives first difference), A089609, A052180, A000720, A000885, A054270 (primes of rank a(n))</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> gandalf(AT)hrn.office.ssi.net (James D. Ausfahl)</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Ralf Stephan_, Aug 24 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000106.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000106">
+          <assertion class="***** TTTT *****">
+      <CMP> M1415 N0553</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,5,12,30,74,188,478,1235,3214,8450,22370,59676,160140,432237,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1172436,3194870,8741442,24007045,66154654,182864692,506909562,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1408854940,3925075510,10959698606,30665337738,85967279447,241433975446,679192039401,1913681367936,5399924120339</CMP>
+    </assertion><omtext class="name">
+      <CMP> 2nd power of rooted tree enumerator; number of linear forests of 2 rooted trees.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 150.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe and Alois P. Heinz, &lt;a href=&quot;/A000106/b000106.txt&quot;&gt;Table of n, a(n) for n = 2..1000&lt;/a&gt; (terms n = 2..200 from T. D. Noe)</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=385&quot;&gt;Encyclopedia of Combinatorial Structures 385&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Self-convolution of rooted trees<OMOBJ>
+      <OMR xref="A000081"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000106"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="c"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="d"/>
+      <OMR xref="A051491"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMF dec="2.955765285651995"/><OMS name="..." cd="arithmetics"></OMS></OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMA><OMS name="times"/><OMF dec="0.8798480251420506"/><OMS name="..." cd="arithmetics"></OMS></OMA>
+    </OMA>
+    </OMOBJ> . - _Vaclav Kotesovec_, Sep 11 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> b:= proc(n) option remember; if n&lt;=1 then n else add(k*b(k)* s(n-1, k), k=1..n-1)/(n-1) fi end: s:= proc(n,k) option remember; add(b(n+1-j*k), j=1..iquo(n,k)) end: B:= proc(n) option remember; add(b(k)*x^k, k=1..n) end: a:= n-&gt; coeff(series(B(n-1)^2, x=0, n+1), x,n): seq(a(n), n=2..35); # _Alois P. Heinz_, Aug 21 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> &lt;&lt;NumericalDifferentialEquationAnalysis`; btc = ButcherTreeCount[max = 30]; Flatten[ Table[ ListConvolve[t=Take[btc, n], t], {n, 1, max}]] (* _Jean-François Alcover_, Nov 02 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000106 n = a000106_list !! (n-2)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000106_list = drop 2 $ conv a000081_list [] where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    conv (v:vs) ws = (sum $ zipWith (*) ws' $ reverse ws') : conv vs ws'</CMP>
+    </omtext><omtext class="program">
+      <CMP>                     where ws' = v : ws</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Jun 17 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000081, A000242, A000300, A000343, A000395.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Christian G. Bower_, Nov 15 1999</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

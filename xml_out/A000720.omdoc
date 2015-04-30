@@ -1,0 +1,934 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000720.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000720">
+          <assertion class="***** TTTT *****">
+      <CMP> M0256 N0090</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,2,3,3,4,4,4,4,5,5,6,6,6,6,7,7,8,8,8,8,9,9,9,9,9,9,10,10,11,11,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 11,11,11,11,12,12,12,12,13,13,14,14,14,14,15,15,15,15,15,15,16,16,16,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 16,16,16,17,17,18,18,18,18,18,18,19,19,19,19,20,20,21,21,21,21,21,21</CMP>
+    </assertion><omtext class="name">
+      <CMP> pi(n), the number of primes &lt;= n. Sometimes called PrimePi(n) to distinguish it from the number 3.14159...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Partial sums of A010051 (characteristic function of primes). - _Jeremy Gardiner_, Aug 13 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> pi(n) and prime(n) are inverse functions: a(A000040(n)) = n and A000040(n) is the least number m such that A000040(a(m)) = A000040(n). A000040(a(n)) = n if (and only if) n is prime. - _Jonathan Sondow_, Dec 27 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The g.f. -z*(-1-z-z^3-z^5+z^6+z^7)/((1+z)*(z^2-z+1)*(z^2+z+1)*(z-1)^2) conjectured by _Simon Plouffe_ in his 1992 dissertation is wrong.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See the additional references and links mentioned in A143227. - _Jonathan Sondow_, Aug 03 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equals row sums of triangle A143538. - _Gary W. Adamson_, Aug 23 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A036234(n)-1. - _Jaroslav Krizek_, Mar 23 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A lower bound that gets better with larger N is that there are at least T prime numbers less than N, where the recursive function T is: T = N- N*sum(A005867(i)/A002110(i), i=0..T(sqrt(N))). - _Ben Paul Thurston_, Aug 23 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of partitions of 2n into exactly two parts with the smallest part prime. - _Wesley Ivan Hurt_, Jul 20 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 870.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. M. Apostol, Introduction to Analytic Number Theory, Springer-Verlag, 1976, page 8.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Ayoub, An Introduction to the Analytic Theory of Numbers, Amer. Math. Soc., 1963; p. 129.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Bressoud &amp; Wagon, A Course in Computational Number Theory, Springer/Key, 2000 (with a Mathematica package for computational number theory); wagon_notes.nb: http://www.msri.org/publications/ln/msri/2000/introant/wagon/mma/wagon_notes.nb</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Crandall and C. Pomerance, Prime Numbers: A Computational Perspective, Springer, NY, 2001; see p. 5.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Pierre Dusart, Autour de la fonction qui compte le nombre de nombres premiers, Dissertation, Universite de Limoges (1998).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. H. Hardy and E. M. Wright, An Introduction to the Theory of Numbers, 5th ed., Oxford Univ. Press, 1979, Theorems 6, 7, 420.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. J. O. Jameson, The Prime Number Theorem, Camb. Univ. Press, 2003</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. S. Mitrinovic et al., Handbook of Number Theory, Kluwer, Section VII.1. (For inequalities, etc.)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. Narkiewicz, The Development of Prime Number Theory, Springer-Verlag 2000.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Tenebaum and M. Mendes France, Prime Numbers and Their Distribution, AMS Providence RI 1999</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane and Daniel Forgues, &lt;a href=&quot;/A000720/b000720.txt&quot;&gt;Table of n, pi(n) for n = 1..100000&lt;/a&gt; (first 20000 terms from N. J. A. Sloane)</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., &lt;a href=&quot;http://www.nrbook.com/abramowitz_and_stegun/&quot;&gt;Handbook of Mathematical Functions&lt;/a&gt;, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy].</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Axler, &lt;a href=&quot;http://docserv.uni-duesseldorf.de/servlets/DocumentServlet?id=26247&quot;&gt;Über die Primzahl-Zählfunktion, die n-te Primzahl und verallgemeinerte Ramanujan-Primzahlen&lt;/a&gt;, Ph.D. thesis 2013, in German, English summary.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. T. Bateman &amp; H. G. Diamond, &lt;a href=&quot;http://www.jstor.org/stable/2974443&quot;&gt;A Hundred Years of Prime Numbers&lt;/a&gt;, Amer. Math. Month., Vol. 103 (9), Nov. 1996, pp. 729-741, MAA Washington DC.</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Bennett, &lt;a href=&quot;http://www.freewebs.com/history_of_mathematics&quot;&gt;The role of Riemann's zeta function in the analytic proof of the Prime Number Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Bonanno &amp; M. S. Mega, &lt;a href=&quot;http://arXiv.org/abs/cond-mat/0309251&quot;&gt;Toward a dynamic model for prime numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. M. Bressoud, &lt;a href=&quot;http://wwwdev.maa.org/reviews/primenumbertheorem.html&quot;&gt;Review of &quot;The Prime Number Theorem&quot; by G. J. O. Jameson&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. Brubaker, &lt;a href=&quot;http://math.stanford.edu/~brubaker/pnt.pdf&quot;&gt;The Prime Number Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, The Prime Glossary, &lt;a href=&quot;http://primes.utm.edu/glossary/page.php/PrimeNumberThm.html&quot;&gt;Prime number theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, &lt;a href=&quot;http://www.utm.edu/research/primes/howmany.shtml&quot;&gt;How Many Primes Are There&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. W. L. Chen, &lt;a href=&quot;http://www.maths.mq.edu.au/~wchen/lndpnfolder/lndpn.html&quot;&gt;Distribution of Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Deleglise, &lt;a href=&quot;http://algo.inria.fr/dumas/Algosem/deleglise9596/&quot;&gt;Computation of large values of pi(x)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Pierre Dusart, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-99-01037-6&quot;&gt;The k-th prime is greater than k(ln k + ln ln k-1) for k&gt;=2&lt;/a&gt;, Mathematics of Computation 68: (1999), 411-415.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Encyclopedia Britannica, &lt;a href=&quot;http://users.forthnet.gr/ath/kimon/PNT/Prime%20Number%20Theorem.htm&quot;&gt;The Prime Number Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Gray and J. D. Mitchell, &lt;a href=&quot;http://dx.doi.org/10.1016/j.disc.2007.08.075&quot;&gt;Largest subsemigroups of the full transformation monoid&lt;/a&gt;, Discrete Math., 308 (2008), 4801-4810.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. H. Hardy &amp; J. E. Littlewood, &lt;a href=&quot;http://users.ift.uni.wroc.pl/~mwolf/Hardy_Littlewood%20zeta.pdf&quot;&gt;Contributions To The Theory Of The Riemann Zeta-Function And The Theory Of The Distribution Of Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Hassani, &lt;a href=&quot;http://www.iasbs.ac.ir/~mhassani/publication/pi-by-psi.pdf&quot;&gt;Approximation of pi(x) by Psi(x)&lt;/a&gt;, J. Inequ. Pure Appl. Math. 7 (2006) vol. 1, #7</CMP>
+    </omtext><omtext class="link">
+      <CMP> Y.-C. Kim, &lt;a href=&quot;http://arXiv.org/abs/math/0502062&quot;&gt;Note on the Prime Number Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. V. Kolev, &lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.25.1554&quot;&gt;On the number of Prime Numbers less than a Given Quantity&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. V. Kumchev, &lt;a href=&quot;http://www.ma.utexas.edu/~kumchev/DistributionOfPrimesNotes.pdf&quot;&gt;The Distribution of Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. C. Lagarias, V. S. Miller and A. M. Odlyzko, &lt;a href=&quot;http://www.dtc.umn.edu/~odlyzko/doc/cnt.html&quot;&gt;Computing pi(x): The Meissel-Lehmer method&lt;/a&gt;, Math. Comp., 44 (1985), pp. 537-560.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. C. Lagarias and A. M. Odlyzko, &lt;a href=&quot;http://www.dtc.umn.edu/~odlyzko/doc/cnt.html&quot;&gt;Computing pi(x): An analytic method&lt;/a&gt;, J. Algorithms, 8 (1987), pp. 173-191.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. J. Lorch, &lt;a href=&quot;http://www.bsu.edu/web/math/exchange/03-01/Lorch.pdf&quot;&gt;The Distribution of Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. McKenzie, &lt;a href=&quot;http://www.icecreambreakfast.com/primecount/primecounting.php&quot;&gt;Computing the Prime Counting Function with Linnik's Identity ...&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. B. Paksoy, &lt;a href=&quot;http://arxiv.org/abs/1210.6991&quot;&gt;Derived Ramanujan primes: R'_n&lt;/a&gt;, arXiv 2012.</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. E. Petersen, &lt;a href=&quot;http://oregonstate.edu/~peterseb/misc/docs/pnt.pdf&quot;&gt;Prime Number Theorem(version 1996)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. E. Petersen, &lt;a href=&quot;http://oregonstate.edu/~peterseb/misc/docs/pnt2.pdf&quot;&gt;Prime Number Theorem(version 20020514)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Omar E. Pol, &lt;a href=&quot;http://www.polprimos.com&quot;&gt;Determinacion geometrica de los numeros primos y perfectos&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Omar E. Pol, &lt;a href=&quot;http://www.polprimos.com/imagenespub/polprdipi.jpg&quot;&gt;Illustration of initial terms: Divisors and pi(x)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. Riemann, &lt;a href=&quot;http://www.maths.tcd.ie/pub/HistMath/People/Riemann/Zeta/&quot;&gt;On the Number of Prime Numbers&lt;/a&gt; 1859, last page (various transcripts)</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Barkley Rosser, &lt;a href=&quot;http://www.jstor.org/stable/2371291&quot;&gt;Explicit Bounds for Some Functions of Prime Numbers&lt;/a&gt;, American Journal of Mathematics 63 (1941) 211-232.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Barkley Rosser and Lowell Schoenfeld, &lt;a href=&quot;http://projecteuclid.org/euclid.ijm/1255631807&quot;&gt;Approximate formulas for some functions of prime numbers&lt;/a&gt;, Ill. Journ. Math. 6 (1962) 64-94.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Barkley Rosser and Lowell Schoenfeld, &lt;a href=&quot;/A000720/a000720.html&quot;&gt;Approximate formulas for some functions of prime numbers&lt;/a&gt; (scan of some key pages from an ancient annotated photocopy)</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. M. Ruiz and J. Sondow, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0210312&quot;&gt;Formulas for pi(n) and the n-th prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. M. Selvam, &lt;a href=&quot;http://lanl.arXiv.org/html/physics/0005067&quot;&gt;Quantum-like Chaos in Prime Number Distribution and in Turbulent Fluid Flows&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. M. Selvam, &lt;a href=&quot;http://redshift.vif.com/JournalFiles/V08NO3PDF/V08N3SEL.PDF&quot;&gt;Quantum-like Chaos in Prime NumberDistribution and in Turbulent Fluid Flows&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jeffrey Shallit, &lt;a href=&quot;http://www.cs.uwaterloo.ca/~shallit/bib/pi.bib&quot;&gt;Bibliography on calculation of pi(x)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Sondow, &lt;a href=&quot;http://arxiv.org/abs/0907.5232&quot;&gt;Ramanujan primes and Bertrand's postulate&lt;/a&gt;, Amer. Math. Monthly, 116 (2009), 630-635.</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. R. Watkins, &lt;a href=&quot;http://www.maths.ex.ac.uk/~mwatkins/zeta/ss-a.htm&quot;&gt;The distribution of Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. R. Watkins, &lt;a href=&quot;http://www.maths.ex.ac.uk/~mwatkins/zeta/pnt.htm&quot;&gt;the prime number theorem (some references)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/PrimeCountingFunction.html&quot;&gt;Prime Counting Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Prime_number_theorem&quot;&gt;Prime number theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Prime-counting_function&quot;&gt;Prime-counting function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Wolf, &lt;a href=&quot;http://www.maths.ex.ac.uk/~mwatkins/zeta/wolfgas.htm&quot;&gt;'Applications of Statistical Mechanics in Prime Number Theory'&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wolfram Research, &lt;a href=&quot;http://functions.wolfram.com/NumberTheoryFunctions/PrimePi/03/02&quot;&gt;First 50 values of pi(n)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. J. Wright, &lt;a href=&quot;http://www.math.okstate.edu/~wrightd/4713/nt_essay/node17.html&quot;&gt;Distribution of primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         The prime number theorem gives the asymptotic expression<OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="log" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="x"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>, pi(x) &lt; (x / log x ) * (1 + 3/(2 log x) ). For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="x"/>
+      <OMI>59</OMI>
+    </OMA>
+    </OMOBJ>, pi(x) &gt; (x / log x) * ( 1 + 1/(2 log x) ). [Rosser and Schoenfeld]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="x"/>
+      <OMI>355991</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMS name="pi"/><OMV name="x"/></OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="log" cd="A000720"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="log" cd="A000720"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="2.51"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="log" cd="A000720"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="x"/>
+      <OMI>599</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMS name="pi"/><OMV name="x"/></OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="log" cd="A000720"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="log" cd="A000720"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. [Dusart]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="x"/>
+      <OMI>55</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="log" cd="A000720"/>
+      <OMV name="x"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMS name="pi"/><OMV name="x"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="log" cd="A000720"/>
+      <OMV name="x"/>
+    </OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. [Rosser]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For n&gt;1: A138194(n) &lt;= a(n) &lt;= A138195(n) (Tschebyscheff, 1850). - _Reinhard Zumkeller_, Mar 04 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ>, a(n)=1+sum_{j=3..n} ((j-2)!-j*floor((j-2)!/j)) (Hardy and Wright); for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>2</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="j"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="floor" cd="A000720"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>2</OMI><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="j"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="i"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="floor" cd="A000720"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="j"/><OMV name="i"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="floor" cd="A000720"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="j"/><OMI>1</OMI>
+    </OMA><OMV name="i"/>
+    </OMA>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA><OMV name="j"/>
+    </OMA>
+    </OMA><OMV name="Ruiz"/></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMA>
+    </OMOBJ> and Sondow 2000). - _Benoit Cloitre_, Aug 31 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A001221"/>
+      <OMA>
+      <OMR xref="A000142"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Benoit Cloitre_, Jun 03 2005
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f. sum_{p prime} x^p/(1-x) = b(x)/(1-x), where<OMOBJ>
+      <OMA>
+      <OMS name="b" cd="A000720"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> is the g.f. for<OMOBJ>
+      <OMR xref="A010051"/>
+    </OMOBJ>. - _Franklin T. Adams-Watters_, Jun 15 2006
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMV name="A"/>
+    </OMOBJ> recursive definition of PrimePi using the LegendrePhi function given in the Wagon_notes.nb: Pi(n) = Pi(Sqrt(n)) + Phi(n,<OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Pi" cd="A000720"/>
+      <OMA>
+      <OMS name="Sqrt" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMOBJ>, with<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Pi" cd="A000720"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Pi" cd="A000720"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _Roger L. Bagula_, Mar 26 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         From _Enrique Pérez Herrero_, Jul 12 2010: (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>2</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="i"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="floor" cd="A000720"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="i"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMR xref="A000203"/>
+      <OMV name="i"/>
+    </OMA>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>2</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="i"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="floor" cd="A000720"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000010"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="i"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>2</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="i"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="floor" cd="A000720"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMR xref="A000005"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>. (End)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Let<OMOBJ>
+      <OMA>
+      <OMS name="pf" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> denote the set of prime factors of an integer<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ>. Then<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="card" cd="A000720"/>
+      <OMA>
+      <OMS name="pf" cd="A000720"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="floor" cd="A000720"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Peter Luschny_, Mar 13 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMV name="n"/>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="p"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="mu" cd="A000720"/>
+      <OMV name="p"/>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Wesley Ivan Hurt_, Jan 04 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMV name="n"/>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="p"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="mu" cd="A000720"/>
+      <OMV name="p"/>
+    </OMA><OMV name="d"/><OMV name="p"/><OMA>
+      <OMS name="sigma" cd="A000720"/>
+      <OMV name="p"/>
+    </OMA><OMA>
+      <OMS name="phi" cd="A000720"/>
+      <OMV name="p"/>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS></OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMV name="n"/>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="p"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMI>2</OMI>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Wesley Ivan Hurt_, Jan 04 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000720"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ> and then, for all<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>, repeat<OMOBJ>
+      <OMA><OMS name="times"/><OMV name="k"/><OMA>
+      <OMR xref="A001223"/>
+      <OMV name="k"/>
+    </OMA></OMA>
+    </OMOBJ> times. - _Jean-Christophe Hervé_, Oct 29 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="log" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="m"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A233824"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="log" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="O" cd="A000720"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="log" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="m"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="m"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _Jonathan Sondow_, Dec 19 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000720"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A001221"/>
+      <OMA>
+      <OMR xref="A003418"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Eric Desbiaux_, May 01 2014
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> There are 3 primes &lt;= 6, namely 2, 3 and 5, so pi(6) = 3.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory); A000720 := pi; [ seq(A000720(i),i=1..50) ];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> A000720[n_] := PrimePi[n]; Table[ A000720[n], {n, 1, 100} ]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Array[ PrimePi[ # ]&amp;, 100 ]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Accumulate[Table[Boole[PrimeQ[n]],{n,100}]] (* _Harvey P. Dale_, Jan 17 2015 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A000720=vector(100,n,omega(n!));</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) vector(300,j,primepi(j)) \\ _Joerg Arndt_, May 09 2008</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [prime_pi(n) for n in xrange(1, 79)] # _Zerinvary Lajos_, Jun 06 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [ #PrimesUpTo(n): n in [1..200] ];  // _Bruno Berselli_, Jul 06 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000720 n = a000720_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000720_list = scanl1 (+) a010051_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Sep 15 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A000720(n) = matsize(factor(n!))[1] \\ _Colin Barker_, Mar 11 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A048989, A000040, A132090, A137588, A099802, A139328, A014085, A060715, A104272, A143223, A143224, A143225, A143226, A143227.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A143538, A036234, A033844, A034387, A034386, A179215, A010051, A212210-A212213, A233824, A056171.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A060715 Number of primes between n and 2n (exclusive).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A035250 Number of primes between n and 2n (inclusive).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A038107 Number of primes &lt; n^2.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A014085 Number of primes between n^2 and (n+1)^2.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A007053 Number of primes &lt;= 2^n.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A036378 Number of primes p between powers of 2, 2^n &lt; p &lt;= 2^(n+1).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A006880 Number of primes &lt; 10^n.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A006879 Number of primes with n digits.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> For lists of large values of a(n) see, e.g., A005669(n) = A000720(A002386(n)), A214935(n) = A000720(A205827(n)).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,core,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional links contributed by _Lekraj Beedassy_, Dec 23 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

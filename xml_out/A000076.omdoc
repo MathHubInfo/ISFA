@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000076.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000076">
+          <assertion class="***** TTTT *****">
+      <CMP> M1079 N0409</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,2,4,7,14,24,43,82,149,284,534,1015,1937,3713,7136,13759,26597,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 51537,100045,194586,378987,739161,1443465,2821923,5522689</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of integers &lt;= 2^n of form 4 x^2 + 4 x y + 5 y^2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Shanks and L. P. Schmid, Variations on a theorem of Landau. Part I, Math. Comp., 20 (1966), 551-569.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Qua#quadpop&quot;&gt;Index entries for sequences related to populations of quadratic forms&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(4)=4 since 2^4=16 and 4=4*1^2, 5=5*1^2, 13=4*1^2+4*1*1+5*1^2, 16=4*2^2.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;0,0,sum(k=1,2^n,0&lt;sum(j=0,sqrtint(k)\2,issquare(k-4*j^2)&amp;(k-j)%2==0)))</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

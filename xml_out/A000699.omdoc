@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000699.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000699">
+          <assertion class="***** TTTT *****">
+      <CMP> M3618 N1468</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,4,27,248,2830,38232,593859,10401712,202601898,4342263000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 101551822350,2573779506192,70282204726396,2057490936366320,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 64291032462761955,2136017303903513184,75197869250518812754,2796475872605709079512,109549714522464120960474,4509302910783496963256400,194584224274515194731540740</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of irreducible diagrams with 2n nodes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Perturbation expansion in quantum field theory: spinor case in 4 spacetime dimensions.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. J. Broadhurst and D. Kreimer, Combinatoric explosion of renormalization tamed by Hopf algebra: 30-loop Pad-Borel resummation. Phys. Lett. B 475 (2000), 63-70.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Jonathan Burns, Assembly Graph Words - Single Transverse Component (Counts), http://shell.cas.usf.edu/~saito/DNAweb/SimpleAssemblyTable.txt.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Jonathan Burns, Egor Dolzhenko, Natasa Jonoska, Tilahun Muche and Masahico Saito, Four-Regular Graphs with Rigid Vertices Associated to DNA Recombination, May 23, 2011; http://jtburns.myweb.usf.edu/assembly/papers/Graphs_and_DNA_Recomb_2011.pdf.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Klazar, Non-P-recursiveness of numbers of matchings or linear chord diagrams with many crossings, Advances in Appl. Math., Vol. 30 (2003), pp. 126-136.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Klazar, Counting even and odd partitions, Amer. Math. Monthly, 110 (No. 6, 2003), 527-532.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Nijenhuis, Albert and Wilf, Herbert S., The enumeration of connected graphs and linked diagrams, J. Combin. Theory Ser. A 27 (1979), no. 3, 356-359.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. R. Stein, On a class of linked diagrams, I. Enumeration, J. Combin. Theory, A 24 (1978), 357-366.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. R. Stein and C. J. Everett, On a class of linked diagrams, II. Asymptotics, Discrete Math., 21 (1978), 309-318.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Touchard, Sur un proble`me de configurations et sur les fractions continues, Canad. J. Math., 4 (1952), 2-25.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000699/b000699.txt&quot;&gt;Table of n, a(n) for n=1..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. J. Broadhurst and D. Kreimer, &lt;a href=&quot;http://arXiv.org/abs/hep-th/9912093&quot;&gt;Combinatoric explosion of renormalization ...&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jonathan Burns and Tilahun Muche, &lt;a href=&quot;http://arxiv.org/abs/1105.2926&quot;&gt;Counting Irreducible Double Occurrence Words&lt;/a&gt;, arXiv preprint arXiv:1105.2926, 2011.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Flajolet and M. Noy, &lt;a href=&quot;http://algo.inria.fr/flajolet/Publications/FlNo00.pdf&quot;&gt;Analytic Combinatorics of Chord Diagrams&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> V. Pilaud, J. Rué, &lt;a href=&quot;http://arxiv.org/abs/1307.6440&quot;&gt;Analytic combinatorics of chord and hyperchord diagrams with k crossings&lt;/a&gt;, arXiv preprint arXiv:1307.6440, 2013</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000699"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="i"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A000699"/>
+      <OMV name="i"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A000699"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="i"/>
+    </OMA>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS></OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A212273"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="n"/><OMV name="a"/><OMV name="n"/></OMA>
+    </OMA>
+    </OMOBJ>. [_Michael Somos_, May 12 2012]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f. satisfies: A(x) = x + x^2*[d/dx A(x)^2/x].<OMOBJ>
+      <OMV name="From"/>
+    </OMOBJ> _Paul D. Hanna_, Dec 31 2010]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000699"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="exp" cd="A000699"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Vaclav Kotesovec_, Feb 22 2014
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(31)=627625976637472254550352492162870816129760 was computed using Kreimer's Hopf algebra of rooted trees. It subsumes 2.6*10^21 terms in quantum field theory.</CMP>
+    </assertion><assertion class="example">
+      <CMP> G.f.: A(x) = x + x^2 + 4*x^3 + 27*x^4 + 248*x^5 + 2830*x^6 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> where d/dx A(x)^2/x = 1 + 4*x + 27*x^2 + 248*x^3 + 2830*x^4 +...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> max = 18; f[x_] := Sum[c[k]*x^k, {k, 0, max}]; c[0] = 0; coes = CoefficientList[ Series[f[x] - (x+x^2*D[f[x]^2/x, x]), {x, 0, max}], x]; sol = Solve[ Thread[coes == 0]]; a[n_] := c[n] /. sol[[1]]; Table[a[n], {n, 1, max}](* _Jean-François Alcover_, Apr 06 2012, after Paul D. Hanna *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a = ConstantArray[0,20]; a[[1]]=1; Do[a[[n]] = (n-1)*Sum[a[[i]]*a[[n-i]],{i,1,n-1}],{n,2,20}]; a (* _Vaclav Kotesovec_, Feb 22 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n)=local(A=x+x^2+x*O(x^n));for(i=1,n,A=x+x^2*deriv(A^2/x)+x*O(x^n));polcoeff(A,n)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A); A = O(x) ; for( i=1, n, A = x + A * (2 * x * A' - A)); polcoeff(A, n)} /* _Michael Somos_, May 12 2012 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A004300, A051862, A212273.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _David Broadhurst_, Dec 14 1999</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

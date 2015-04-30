@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000636.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000636">
+          <assertion class="***** TTTT *****">
+      <CMP> M1185 N0457</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,9,21,52,129,332,859,2261,5983,15976,42836,115469,312246,847241,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2304522,6283327,17164401,46972357,128741107,353345434,970999198,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2671347292,7356752678</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of paraffins C_n H_{2n} X_2 with n carbon atoms.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. R. Henze and C. M. Blair, The number of structural isomers of the more important types of aliphatic compounds, J. Amer. Chem. Soc., 56 (1934), 157.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Polya, Algebraische Berechnung der Anzahl der Isomeren einiger organischer Verbindungen, Zeit. f. Kristall., 93 (1936), 415-443; line 4 of Table I.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. C. Read, The Enumeration of Acyclic Chemical Compounds, pp. 25-61 of A. T. Balaban, ed., Chemical Applications of Graph Theory, Ac. Press, 1976; see p. 28.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

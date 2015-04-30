@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000033.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000033">
+          <assertion class="***** TTTT *****">
+      <CMP> M0602 N0216</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,3,4,40,210,1477,11672,104256,1036050,11338855,135494844,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1755206648,24498813794,366526605705,5851140525680,99271367764480,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1783734385752162,33837677493828171,675799125332580020,14173726082929399560,311462297063636041906</CMP>
+    </assertion><omtext class="name">
+      <CMP> Coefficients of ménage hit polynomials.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 197.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> David W. Wilson, &lt;a href=&quot;/A000033/b000033.txt&quot;&gt;Table of n, a(n) for n = 1..100&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         a(n) = coefficient of<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ> in polynomial p(t) = SUM(k = 0..n, (2n C(2n-k,k) (n-k)! (t-1)^k)/(2n-k))
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = SUM(k = 2..n, ((-1)^k n (2n-k-1)! (n-k)!)/((2n-2k)! (k-2)!)) - _David W. Wilson_, Jun 22 2006
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = n*A000426(n) - _Vladeta Jovovic_, Dec 27 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Recurrence: (n-3)*(n-2)*(2*n-5)*(2*n-7)*a(n) = (n-3)*(n-2)*n*(2*n-7)^2*a(n-1) + (n-4)*(n-3)*n*(2*n-3)^2*a(n-2) + (n-2)*n*(2*n-5)*(2*n-3)*a(n-3). - _Vaclav Kotesovec_, Oct 26 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000033"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="e"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Vaclav Kotesovec_, Oct 26 2012
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> Table[n*Sum[(-1)^k*(2*n-k-1)!*(n-k)!/((2*n-2*k)!*(k-2)!),{k,2,n}],{n,1,20}] (* _Vaclav Kotesovec_, Oct 26 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> fac = a000142</CMP>
+    </omtext><omtext class="program">
+      <CMP> a n = sum $ map f [2..n]</CMP>
+    </omtext><omtext class="program">
+      <CMP>   where f k = g k `div` h k</CMP>
+    </omtext><omtext class="program">
+      <CMP>         g k = (-1)^k * n * fac (2*n-k-1) * fac (n-k)</CMP>
+    </omtext><omtext class="program">
+      <CMP>         h k = fac (2*n-2*k) * fac (k-2)</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _James Spahlinger_, Oct 08 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A diagonal of A058087.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000179, A000425.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_ and _Simon Plouffe_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended to 34 terms by _N. J. A. Sloane_, May 25 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited and further extended by _David W. Wilson_, Dec 27 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000983.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000983">
+          <assertion class="***** TTTT *****">
+      <CMP> M0329 N0124</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,2,4,7,12,16,32,62</CMP>
+    </omtext><omtext class="name">
+      <CMP> Size of minimal covering code of length n and covering radius 1 (the next term is in the range 105-120).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For k &gt; 0, a(2^k-1) = 2^(2^k-k-1). In this case the minimal covering code is also a Hamming code.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In the game described at http://en.wikipedia.org/wiki/Hat_Puzzle#Hamming_Codes, with n players, the optimal strategy wins with probability 1-a(n)/2^n. In the optimal strategy, the players first agree on a minimal covering code of length n. After the hats are placed, each player knows two words of length n such that one of them is the hat colors of the n players. If one of these two words is a member of the covering code and the other word is not, that player guesses the word that is not. Otherwise, that player does not guess. This strategy guarantees that the team wins for all words that are not members of the covering code.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Because each codeword covers n+1 of the 2^n words, A053637(n+1) is a lower bound. - _Rob Pratt_, Jan 05 2015</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. D. Cohen et al., Covering Codes, North-Holland, 1997, p. 166.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> I. S. Honkala and P. R. J. Ostergard, Code design, Chapter 13 of Local Search in Combinatorial Optimization, E. Aarts and J. K. Lenstra (editors), Wiley, New York 1997, pp. 441-456.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Hamalainen et al., &lt;a href=&quot;http://www.jstor.org/stable/2974552&quot;&gt;Football pools - a game for mathematicians&lt;/a&gt;, Amer. Math. Monthly, 102 (1995), 579-588.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. G. Kalbfleisch and R. G. Stanton, &lt;a href=&quot;http://jlms.oxfordjournals.org/content/s1-44/1/60.extract&quot;&gt;A combinatorial problem in matching&lt;/a&gt;, J. London Math. Soc., 44 (1969), 60-64.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Lobstein, G. Cohen and N. J. A. Sloane, &lt;a href=&quot;http://gallica.bnf.fr/ark:/12148/bpt6k5494233r/f15.image&quot;&gt;Recouvrements d'Espaces de Hamming Binaires&lt;/a&gt;, C. R. Acad. Sci. Paris, Series I, 301 (1985), 135-138.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. R. J. Ostergard and M. K. Kaikkonen, &lt;a href=&quot;http://dx.doi.org/10.1016/S0012-365X(97)81825-0&quot;&gt;New upper bounds for binary covering codes&lt;/a&gt;, Discrete Mathematics 178 (1998), 165-179.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. R. J. Ostergard and U. Blass, &lt;a href=&quot;http://dx.doi.org/10.1109/18.945268&quot;&gt;On the size of optimal binary codes of length 9 and covering radius 1&lt;/a&gt;, IEEE Trans. Inform. Theory, 47 (2001), 2556-2557. [Determines a(9)].</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Coa#covcod&quot;&gt;Index entries for sequences related to covering codes&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A column of A060438. Cf. A029866.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,more,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

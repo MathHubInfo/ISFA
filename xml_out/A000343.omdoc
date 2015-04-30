@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000343.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000343">
+          <assertion class="***** TTTT *****">
+      <CMP> M3901 N1601</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,20,70,230,721,2200,6575,19385,56575,163952,472645,1357550,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3888820,11119325,31753269,90603650,258401245,736796675,2100818555,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5990757124,17087376630,48753542665,139155765455,397356692275,1135163887190,3244482184720,9277856948255</CMP>
+    </assertion><omtext class="name">
+      <CMP> 5th power of rooted tree enumerator; number of linear forests of 5 rooted trees.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 150.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000343/b000343.txt&quot;&gt;Table of n, a(n) for n = 5..750&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="B" cd="A000343"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>5</OMI>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMA>
+      <OMS name="B" cd="A000343"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> is g.f. of<OMOBJ>
+      <OMR xref="A000081"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> b:= proc(n) option remember; if n&lt;=1 then n else add(k*b(k)* s(n-1, k), k=1..n-1)/(n-1) fi end: s:= proc(n,k) option remember; add(b(n+1-j*k), j=1..iquo(n,k)) end: B:= proc(n) option remember; add(b(k)*x^k, k=1..n) end: a:= n-&gt; coeff(series(B(n-4)^5, x=0, n+1), x,n): seq(a(n), n=5..29); # _Alois P. Heinz_, Aug 21 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> b[n_] := b[n] = If[n &lt;= 1, n, Sum[k*b[k]*s[n-1, k], {k, 1, n-1}]/(n-1)]; s[n_, k_] := s[n, k] = Sum[b[n+1-j*k], {j, 1, Quotient[n, k]}]; B[n_] := B[n] = Sum[b[k]*x^k, {k, 1, n}]; a[n_] := Coefficient[Series[B[n-4]^5, {x, 0, n+1}], x, n]; Table[a[n], {n, 5, 32}] (* _Jean-François Alcover_, Mar 05 2014, after _Alois P. Heinz_ *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000081, A000106, A000242, A000300, A000395.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 5,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Christian G. Bower_, Nov 15 1999.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

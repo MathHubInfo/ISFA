@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000287.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000287">
+          <assertion class="***** TTTT *****">
+      <CMP> M3290 N1326</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,4,6,24,66,214,676,2209,7296,24460,82926,284068,981882,3421318,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 12007554,42416488,150718770,538421590,1932856590,6969847486,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 25237057110,91729488354,334589415276,1224445617889,4494622119424</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of rooted polyhedral graphs with n edges.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. J. W. Duijvestijn and P. J. Federico, The number of polyhedral (3-connected planar) graphs. Math. Comp. 37 (1981), no. 156, 523-532.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Handbook of Combinatorics, North-Holland '95, p. 892. (Gives different last term)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. T. Tutte, A new branch of enumerative graph theory, Bull. Amer. Math. Soc., 68 (1962), 500-504.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. T. Tutte, A census of planar maps, Canad. J. Math., 15 (1963), 249-271.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Tutte, W. T. Three-connected planar maps. Proceedings of the Manitoba Conference on Numerical Mathematics (Univ. Manitoba, Winnipeg, Man., 1971), pp. 43--52. Dept. Comput. Sci., Univ. Manitoba, Winnipeg, Man., 1971. MR0335323 (49 #105). - From _N. J. A. Sloane_, Jun 05 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Liu Yanpei, On the number of rooted c-nets, J. Combin. Theory, B 36 (1984), 118-123.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000287/b000287.txt&quot;&gt;Table of n, a(n) for n = 6..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://arxiv.org/abs/0912.0072&quot;&gt; Une méthode pour obtenir la fonction génératrice d'une série&lt;/a&gt;. FPSAC 1993, Florence. Formal Power Series and Algebraic Combinatorics.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000287"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="b" cd="A000287"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000287"/>
+      <OMI>3</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000287"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>27</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>9</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="b" cd="A000287"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>54</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>90</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>32</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMV name="From"/>
+    </OMOBJ> _Sean A. Irvine_, Apr 14 2010]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA><OMV name="a"/><OMV name="n"/></OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA><OMV name="n"/></OMA><OMI>3</OMI>
+    </OMA><OMV name="a"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMV name="n"/></OMA><OMI>4</OMI>
+    </OMA><OMV name="a"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>15</OMI><OMI>2</OMI>
+    </OMA><OMV name="n"/></OMA><OMI>6</OMI>
+    </OMA><OMV name="a"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>3</OMI>
+    </OMA><OMV name="a"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA><OMV name="From"/></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> _Simon Plouffe_, Feb 09 2012]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Liu Yanpei gives another recurrence. - _N. J. A. Sloane_, Mar 28 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000287"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A000287"/>
+      <OMS name="Pi"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>5</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Vaclav Kotesovec_, Jul 19 2013
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f. = x^6 + 4*x^8 + 6*x^9 + 24*x^10 + 66*x^11 + 214*x^12 + 676*x^13 + ...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a[6] = 1; a[n_] := a[n] = ((9*(5 - 3*n)*n - 16)*a[n-1]*((n-1)!)^2 + 2*((-1)^n*(9*n*(3*n - 17) + 160)*((n-1)!)^2 + ((2*n - 2)!)))/(2*(9*n*(3*n - 11) + 88)*((n-1)!)^2); Table[ a[n], {n, 6, 31}] (* _Jean-François Alcover_, Oct 04 2011, after formula *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000256.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 6,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Simon Plouffe_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Apr 14 2010.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Librandi b-file verified by _N. J. A. Sloane_, Mar 29 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,555 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000001.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000001">
+          <assertion class="***** TTTT *****">
+      <CMP> M0098 N0035</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,1,2,1,5,2,2,1,5,1,2,1,14,1,5,1,5,2,2,1,15,2,2,5,4,1,4,1,51,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,1,14,1,2,2,14,1,6,1,4,2,2,1,52,2,5,1,5,1,15,2,13,2,2,1,13,1,2,4,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 267,1,4,1,5,1,4,1,50,1,2,3,4,1,6,1,52,15,2,1,15,1,2,1,12,1,10,1,4,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of groups of order n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, number of nonisomorphic subgroups of order n in symmetric group S_n. - _Lekraj Beedassy_, Dec 16 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, number of nonisomorphic primitives of the combinatorial species Lin[n-1]. - _Nicolae Boicu_, Apr 29 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The record values are (A046058): 1, 2, 5, 14, 15, 51, 52, 267, 2328, 56092, 10494213, 49487365422, ..., and they appear at positions (A046059): 1, 4, 8, 16, 24, 32, 48, 64, 128, 256, 512, 1024, .... _Robert G. Wilson v_, Oct 12 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 302, #35.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. H. Conway et al., The Symmetries of Things, Peters, 2008, p. 209.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. S. M. Coxeter and W. O. J. Moser, Generators and Relations for Discrete Groups, 4th ed., Springer-Verlag, NY, reprinted 1984, p. 134.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> CRC Standard Mathematical Tables and Formulae, 30th ed. 1996, p. 150.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. L. Graham, D. E. Knuth and O. Patashnik, Concrete Mathematics, A Foundation for Computer Science, Addison-Wesley Publ. Co., Reading, MA, 1989, Section 6.6 'Fibonacci Numbers' pp. 281-283.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Hall, Jr. and J. K. Senior, The Groups of Order 2^n (n &lt;= 6). Macmillan, NY, 1964.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Joyner, 'Adventures in Group Theory', Johns Hopkins Press. Pp. 169-172 has table of groups of orders &lt; 26.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. S. Mitrinovic et al., Handbook of Number Theory, Kluwer, Section XIII.24, p. 481.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. F. Newman and E. A. O'Brien, A CAYLEY library for the groups of order dividing 128. Group theory (Singapore, 1987), 437-442, de Gruyter, Berlin-New York, 1989.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> H.-U. Besche and Ivan Panchenko, &lt;a href=&quot;/A000001/b000001.txt&quot;&gt;Table of n, a(n) for n = 1..2047&lt;/a&gt; [Terms 1 through 2015 copied from Small Groups Library mentioned below. Terms 2016 - 2047 added by Ivan Panchenko, Aug 29 2009]</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. A. Bender, &lt;a href=&quot;http://www.jstor.org/stable/1967981&quot;&gt;A determination of the groups of order p^5&lt;/a&gt;, Ann. of Math. (2) 29, pp. 61-72 (1927).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hans Ulrich Besche and Bettina Eick, &lt;a href=&quot;http://dx.doi.org/10.1006/jsco.1998.0258&quot;&gt;Construction of finite groups&lt;/a&gt;, Journal of Symbolic Computation, Vol. 27, No. 4, Apr 15 1999, pp. 387-404.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hans Ulrich Besche and Bettina Eick, &lt;a href=&quot;http://dx.doi.org/10.1006/jsco.1998.0259&quot;&gt;The groups of order at most 1000 except 512 and 768&lt;/a&gt;, Journal of Symbolic Computation, Vol. 27, No. 4, Apr 15 1999, pp. 405-413.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. U. Besche, B. Eick and E. A. O'Brien, &lt;a href=&quot;http://www.ams.org/era/2001-07-01/S1079-6762-01-00087-7/home.html&quot;&gt;The groups of order at most 2000&lt;/a&gt;, Electron. Res. Announc. Amer. Math. Soc. 7 (2001), 1-4.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. U. Besche, B. Eick and E. A. O'Brien, &lt;a href=&quot;http://www.icm.tu-bs.de/ag_algebra/software/small/&quot;&gt;The Small Groups Library&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. U. Besche, B. Eick and E. A. O'Brien, &lt;a href=&quot;http://www.icm.tu-bs.de/ag_algebra/software/small/number.html&quot;&gt;Number of isomorphism types of finite groups of given order&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H.-U. Besche, B. Eick and E. A. O'Brien, &lt;a href=&quot;http://dx.doi.org/10.1142/S0218196702001115&quot;&gt;A Millennium Project: Constructing Small Groups&lt;/a&gt;, Internat. J. Algebra and Computation, 12 (2002), 623-644.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Bottomley, &lt;a href=&quot;/A000001/a000001.gif&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. H. Conway, Heiko Dietrich and E. A. O'Brien, &lt;a href=&quot;http://www.math.auckland.ac.nz/~obrien/research/gnu.pdf&quot;&gt;Counting groups: gnus, moas and other exotica&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Otto Hölder, &lt;a href=&quot;http://dx.doi.org/10.1007/BF01443651&quot;&gt;Die Gruppen der Ordnungen p^3, pq^2, pqr, p^4&lt;/a&gt;, Math. Ann. 43 pp. 301-412 (1893).</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. A. Miller, &lt;a href=&quot;http://www.jstor.org/stable/2370630&quot;&gt;Determination of all the groups of order 64&lt;/a&gt;, Amer. J. Math., 52 (1930), 617-634.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ed Pegg Jr., &lt;a href=&quot;http://www.maa.org/editorial/mathgames/mathgames_12_08_03.html&quot;&gt;Illustration of initial terms&lt;/a&gt; [broken link?]</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. S. Rajan, &lt;a href=&quot;http://dx.doi.org/10.1016/0012-365X(93)90061-W&quot;&gt;The equations D^kY=X^n in combinatorial species&lt;/a&gt;, Discrete Mathematics 118 (1993) 197-206 North-Holland.</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Rodemich, &lt;a href=&quot;http://dx.doi.org/10.1016/0021-8693(90)90244-I&quot;&gt;The groups of order 128&lt;/a&gt;, J. Algebra 67 (1980), no. 1, 129-142.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Gordon Royle, &lt;a href=&quot;http://school.maths.uwa.edu.au/~gordon/data.html&quot;&gt;Numbers of Small Groups&lt;/a&gt; [broken link?]</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Rusin, &lt;a href=&quot;http://www.math.niu.edu/~rusin/known-math/95/numgrps&quot;&gt;Asymptotics&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/FiniteGroup.html&quot;&gt;Finite Group&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Finite_group&quot;&gt;Finite group&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Wild, &lt;a href=&quot;http://math.sun.ac.za/~wild/Marcel Wild - Home Page_files/Groups16AMM.pdf&quot;&gt;The groups of order 16 made easy&lt;/a&gt;, Amer. Math. Monthly, 112 (No. 1, 2005), 20-31.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Gang Xiao, &lt;a href=&quot;http://wims.unice.fr/~wims/wims.cgi?module=tool/algebra/smallgroup&quot;&gt;SmallGroup&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Gre#groups&quot;&gt;Index entries for sequences related to groups&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         From _Mitch Harris_, Oct 25 2006: (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="q"/>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="r"/>
+    </OMOBJ> primes:
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000001"/>
+      <OMV name="p"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000001"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000001"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMI>5</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000001"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+      <OMI>14</OMI>
+    </OMA>
+    </OMOBJ>, if<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>, otherwise<OMOBJ>
+      <OMI>15</OMI>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000001"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>61</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="p"/></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="gcd" cd="A000001"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="p"/><OMI>1</OMI>
+    </OMA><OMI>3</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="gcd" cd="A000001"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="p"/><OMI>1</OMI>
+    </OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000001"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA>
+      <OMI>51</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000001"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA>
+      <OMI>67</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000001"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2</OMI><OMI>27</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="e"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="O" cd="A000001"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="e"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>8</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000001"/>
+      <OMV name="pq"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="gcd" cd="A000001"/>
+      <OMV name="p"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="q"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="gcd" cd="A000001"/>
+      <OMV name="p"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="q"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="p"/>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMV name="q"/>
+    </OMA>
+    </OMOBJ>
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(pq^2) = one of the following:
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * 5,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="q"/>
+    </OMOBJ> odd,
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * (p+9)/2,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ> odd,
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * 5,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>,
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * 3,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ> and<OMOBJ>
+      <OMV name="q"/>
+    </OMOBJ> odd.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * 4,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMV name="q"/>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="p"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * 5,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * 2, q != +/-1 mod<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="p"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMV name="q"/>
+    </OMOBJ>,
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(pqr) (p &lt; q &lt; r) = one of the following:
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * q==1 mod<OMOBJ>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMA>
+      <OMS name="p" cd="A000001"/>
+      <OMV name="r"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMA>
+      <OMS name="p" cd="A000001"/>
+      <OMV name="r"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> mod<OMOBJ>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="q" cd="A000001"/>
+      <OMV name="a"/>
+    </OMA><OMV name="pqr"/></OMA>
+    </OMOBJ>
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * No..........No..........No..........1
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * No..........No..........Yes.........2
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * No..........Yes.........No..........2
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * No..........Yes.........Yes.........4
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * Yes.........No..........No..........2
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * Yes.........No..........Yes.........3
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * Yes.........Yes.........No..........p+2
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         * Yes.........Yes.........Yes.........p+4 (table from Derek Holt) (End)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000001"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000688"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A060689"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _R. J. Mathar_, Mar 14 2015
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> GroupTheory:-NumGroups( n )</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> FiniteGroupCount[Range[100]] (* _Harvey P. Dale_, Jan 29 2013 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := If[ n &lt; 1, 0, FiniteGroupCount @ n]; (* _Michael Somos_, May 28 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) D:=SmallGroupDatabase(); [ NumberOfSmallGroups(D, n) : n in [1..1000] ]; // John Cannon, Dec 23 2006</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> The main sequences concerned with group theory are A000001 (this one), A000679, A001034, A001228, A005180, A000019, A000637, A000638, A002106, A005432, A000688, A060689, A051532.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A046058, A023675, A023676. A003277 gives n for which A000001(n) = 1.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,core,nice,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Michael Somos_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Typo in b-file description fixed by _David Applegate_, Sep 05 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected a broken link. - _N. J. A. Sloane_, May 10 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

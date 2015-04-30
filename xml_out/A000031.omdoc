@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000031.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000031">
+          <assertion class="***** TTTT *****">
+      <CMP> M0564 N0203</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,4,6,8,14,20,36,60,108,188,352,632,1182,2192,4116,7712,14602,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 27596,52488,99880,190746,364724,699252,1342184,2581428,4971068,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9587580,18512792,35792568,69273668,134219796,260301176,505294128,981706832</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of n-bead necklaces with 2 colors when turning over is not allowed; also number of output sequences from a simple n-stage cycling shift register; also number of binary irreducible polynomials whose degree divides n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also a(n)-1 is the number of 1's in the truth table for the lexicographically least de Bruijn cycle (Fredricksen).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In music, a(n) is the number of distinct classes of scales and chords in an n-note equal-tempered tuning system. [Paul Cantrell, Dec 28 2011]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. Fine, Classes of periodic sequences, Illinois J. Math., 2 (1958), 285-302.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Fredricksen, The lexicographically least de Bruijn cycle, J. Combin. Theory, 9 (1970) 1-5.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Harold Fredricksen, An algorithm for generating necklaces of beads in two colors, Discrete Mathematics, Volume 61, Issues 2-3, September 1986, Pages 181-188</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. N. Gilbert and J. Riordan, Symmetry types of periodic sequences, Illinois J. Math., 5 (1961), 657-665.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. W. Golomb, Shift-Register Sequences, Holden-Day, San Francisco, 1967, pp. 120, 172.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Lempel, Abraham. On extremal factors of the de Bruijn graph. J. Combinatorial Theory Ser. B 11 1971 17--27. MR0276126 (43 #1874)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. M. May, Simple mathematical models with very complicated dynamics, Nature, 261 (Jun 10, 1976), 459-467.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Karyn McLellan, Periodic coefficients and random Fibonacci sequences, Electronic Journal of Combinatorics, 20(4), 2013, #P32.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Mykkeltveit, Johannes. A proof of Golomb's conjecture for the de Bruijn graph. J. Combinatorial Theory Ser. B 13 (1972), 40--45.MR0323629 (48 #1985)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. A. Siehler, The Finite Lamplighter Groups: A Guided Tour, College Mathematics Journal, Vol. 43, No. 3 (May 2012), pp. 203-211. - From _N. J. A. Sloane_, Oct 05 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, On single-deletion-correcting codes, in Codes and Designs (Columbus, OH, 2000), 273-291, Ohio State Univ. Math. Res. Inst. Publ., 10, de Gruyter, Berlin, 2002.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. P. Stanley, Enumerative Combinatorics, Cambridge, Vol. 2, 1999; see Problem 7.112(a).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. C. Titsworth, Equivalence classes of periodic sequences, Illinois J. Math., 8 (1964), 266-270.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. M. Uludag, A. Zeytin and M. Durmus, Binary Quadratic Forms as Dessins, http://math.gsu.edu.tr/uludag/CHARKSANDDESSINS.pdf, 2012. - From _N. J. A. Sloane_, Dec 31 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000031/b000031.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joerg Arndt, &lt;a href=&quot;http://www.jjj.de/fxt/#fxtbook&quot;&gt;Matters Computational (The Fxtbook)&lt;/a&gt;, p. 151, pp. 379-383</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Cameron, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;Sequences realized by oligomorphic permutation groups&lt;/a&gt;, J. Integ. Seqs. Vol. 3 (2000), #00.1.5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. N. Ethier and J. Lee, &lt;a href=&quot;http://arxiv.org/abs/1202.2609&quot;&gt;Parrondo games with spatial dependence&lt;/a&gt;, arXiv preprint arXiv:1202.2609, 2012. - From _N. J. A. Sloane_, Jun 10 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. N. Ethier, &lt;a href=&quot;http://arxiv.org/abs/1301.2352&quot;&gt;Counting toroidal binary arrays&lt;/a&gt;, arXiv preprint arXiv:1301.2352, 2013.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Flajolet and R. Sedgewick, &lt;a href=&quot;http://algo.inria.fr/flajolet/Publications/books.html&quot;&gt;Analytic Combinatorics&lt;/a&gt;, 2009; see pages 18, 64</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=2&quot;&gt;Encyclopedia of Combinatorial Structures 2&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=130&quot;&gt;Encyclopedia of Combinatorial Structures 130&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Ruskey, &lt;a href=&quot;http://www.theory.cs.uvic.ca/~cos/inf/neck/NecklaceInfo.html&quot;&gt;Necklaces, Lyndon words, De Bruijn sequences, etc.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/dijen.txt&quot;&gt;On single-deletion-correcting codes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Necklace.html&quot;&gt;Necklace&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wolfram Research, &lt;a href=&quot;http://functions.wolfram.com/NumberTheoryFunctions/EulerPhi/31/08/ShowAll.html&quot;&gt;Number of necklaces&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ne#necklaces&quot;&gt;Index entries for sequences related to necklaces&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000031"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="n"/>
+    </OMA><OMV name="Sum_"/><OMV name="d"/></OMA>
+    </OMA>
+    </OMOBJ> divides n } phi(d)*2^(n/d), where phi is<OMOBJ>
+      <OMR xref="A000010"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Warning: easily confused with<OMOBJ>
+      <OMR xref="A001037"/>
+    </OMOBJ> which has<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> similar formula.
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> For n=3 and n=4 the necklaces are {000,001,011,111} and {0000,0001,0011,0101,0111,1111}.</CMP>
+    </assertion><assertion class="example">
+      <CMP> The analogous shift register sequences are {000..., 001001..., 011011..., 111...} and {000..., 00010001..., 00110011..., 0101..., 01110111..., 111... }.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory); A000031 := proc(n) local d,s; if n = 0 then RETURN(1); else s := 0; for d in divisors(n) do s := s+phi(d)*2^(n/d); od; RETURN(s/n); fi; end; [ seq(A000031(n), n=0..50) ];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := Sum[If[Mod[n, d] == 0, EulerPhi[d] 2^(n/d), 0], {d, 1, n}]/n</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := Fold[#1 + 2^(n/#2) EulerPhi[#2] &amp;, 0, Divisors[n]]/n</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Expand[CycleIndex[CyclicGroup[n], t] /. Table[t[i]-&gt; 2, {i, 1, n}]], {n,0, 30}] (* _Geoffrey Critzer_, Mar 06 2011*)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {A000031(n)=if(n==0,1,sumdiv(n,d,eulerphi(d)*2^(n/d))/n)}. - Randall L. Rathbun, Jan 11 2002</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000031 0 = 1</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000031 n = (`div` n) $ sum $</CMP>
+    </omtext><omtext class="program">
+      <CMP>    zipWith (*) (map a000010 divs) (map a000079 $ reverse divs)</CMP>
+    </omtext><omtext class="program">
+      <CMP>    where divs = a027750_row n</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Mar 21 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001037 (primitive solutions to same problem), A014580, A000016, A000013, A000029 (if turning over is allowed), A000011, A001371, A058766.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Rows sums of triangle in A047996.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Dividing by 2 gives A053634.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A008965(n) = a(n) - 1 allowing different offsets.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A008965, A053635, A052823.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice,core,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> There is an error in Fig. M3860 in the 1995 Encyclopedia of Integer Sequences: in the third line, the formula for A000031 = M0564 should be (1/n) sum phi(d) 2^(n/d).</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Mathematica code corrected by _Ben Branman_, Jan 08 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

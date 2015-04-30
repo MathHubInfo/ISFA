@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000279.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000279">
+          <assertion class="***** TTTT *****">
+      <CMP> M3106 N1258</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,24,216,1824,15150,124416,1014888,8241792,66724398,538990800,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4346692680,35009591040,281699380560,2264868936960,18198009147600,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 146142982814208,1173123636533454,9413509300965936,75513633110271264</CMP>
+    </assertion><omtext class="name">
+      <CMP> Card matching.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of permutations of 3 distinct letters (ABC) each with n copies such that one (1) fixed points. E.g., if AAAAABBBBBCCCCC n=3*5 letters permutations then one fixed points n5=15150. - _Zerinvary Lajos_, Feb 02 2006</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 193.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000279/b000279.txt&quot;&gt;Table of n, a(n) for n = 1..300&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ca#cardmatch&quot;&gt;Index entries for sequences related to card matching&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         a(n) = 3n * sum(C(n, k+1)*C(n, k)*C(n-1, k), k=0..n-1).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMS name="hypergeom" cd="A000279"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>4</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA></OMA>
+    </OMOBJ>, 5/3],[2],27*x^2/(1-2*x)^3)/(1-2*x)^3 - 3*hypergeom([2/3, 4/3],[1],27*x^2/(1-2*x)^3)/(1-2*x)^2). - _Mark van Hoeij_, Oct 23 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000279"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000172"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMR xref="A000172"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Mark van Hoeij_, Oct 26 2011
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> f[n_] := HypergeometricPFQ[{-n, -n, -n}, {1, 1}, -1]; a[n_] := n^2*(f[n]+4*f[n-1])/(n+1); Array[a, 20] (* _Jean-François Alcover_, Mar 11 2014, after _Mark van Hoeij_ *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000489, A000535.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A033581.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, Apr 26 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Emeric Deutsch_, Feb 19 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

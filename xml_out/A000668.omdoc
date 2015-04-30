@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000668.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000668">
+          <assertion class="***** TTTT *****">
+      <CMP> M2696 N1080</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,7,31,127,8191,131071,524287,2147483647,2305843009213693951,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 618970019642690137449562111,162259276829213363391578010288127,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 170141183460469231731687303715884105727</CMP>
+    </assertion><omtext class="name">
+      <CMP> Mersenne primes (of form 2^p - 1 where p is a prime).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equivalently, primes of form 2^n - 1 for integers n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A000043 for the values of p.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Prime repunits in base 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Define f(k) = 2k+1; begin with k = 2, a(n+1) = least prime of the form f(f(f(...(a(n)))). - _Amarnath Murthy_, Dec 26 2003</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Mersenne primes other than the first are of form 6n+1. - _Lekraj Beedassy_, Aug 27 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A034876(a(n)) = 0 and A034876(a(n)+1) = 1. - _Jonathan Sondow_, Dec 19 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Mersenne primes are solutions to sigma(n+1)-sigma(n)=n as perfect numbers (A000396(n)) are solutions to sigma(n)=2n. - _Benoit Cloitre_, Feb 07 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Appears to give all n such that sigma(n+1)-sigma(n)=n. - _Benoit Cloitre_, Aug 27 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If n is in the sequence then sigma(sigma(n))=2n+1. Is it true that this sequence gives all numbers n such that sigma(sigma(n))=2n+1? - _Farideh Firoozbakht_, Aug 19 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Mersenne primes other than the first are of form 24n+7; see also A124477. - _Artur Jasinski_, Nov 25 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is easily proved that if n is a Mersenne prime then sigma(sigma(n)) - sigma(n) = n. Is it true that Mersenne primes are all the solutions of the equation sigma(sigma(x)) - sigma(x) = x? - _Farideh Firoozbakht_, Feb 12 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sum of divisors of n-th even superperfect number A061652(n). Sum of divisors of n-th superperfect number A019279(n), if there are no odd superperfect numbers. - _Omar E. Pol_, Mar 11 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Indices of both triangular numbers and generalized hexagonal numbers (A000217) that are also even perfect numbers. - _Omar E. Pol_, May 10 2008, Sep 22 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of positive integers (1, 2, 3,...) whose sum is the n-th perfect number A000396(n). - _Omar E. Pol_, May 10 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Vertex number where the n-th perfect number A000396(n) is located in the square spiral whose vertices are the positive triangular numbers A000217. - _Omar E. Pol_, May 10 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> R(a(n)) is prime when R(k) means the digital reverse of k base 2. In base 10, R(a(n)) is prime when R(k) means the digital reverse of k base 10. For example, R(2^53-1) = 1990474529917009 is prime although 2^53-1 is an element of A001348 (not itself prime). - _Jonathan Vos Post_, Jul 11 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Mersenne numbers A000225 whose indices are the prime numbers A000043. - _Omar E. Pol_, Aug 31 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The digital roots are 1 if p == 1 (mod 6) and 4 if p == 5 (mod 6). [T. Koshy, Math Gaz. 89 (2005) p. 465]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Primes p such that for all primes q&lt;p p XOR q = p - q. - _Brad Clardy_, Oct 26 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These primes are Brazilian primes, so they are also in A085104 and A023195. - _Bernard Schott_, Dec 26 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> All prime numbers p can be classified by k = (p mod 12) into four classes: k=1, 5, 7, 11. The Mersennne prime numbers 2^p-1, p&gt;2 are in the class k=7 with p=12*(n-1)+7, n=1,2,.... As all 2^p (p odd) are in class k=8 it follows that all 2^p-1, p&gt;2 are in class k=7. - _Freimut Marschner_, Jul 27 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From &quot;The Guinness Book of Primes&quot;: &quot;During the reign of Queen Elizabeth I, the largest known prime number was the number of grains of rice on the chess board up to and including the nineteenth square: 524,287 [= 2^19 -1]. By the time Lord Nelson was fighting the Battle of Trafalgar, the record for the largest prime had gone up to the thirty-first square of the chessboard: 2,147,483,647 [= 2^31 -1]. This ten-digits number was proved to be prime in 1772 by the Swiss mathematician Leonard Euler, and it held the record until 1867.&quot; [du Sautoy] - _Robert G. Wilson v_, Nov 26 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If n is in the sequence then A024816(n) = antisigma(n) = antisigma(n+1) - 1. Is it true that this sequence gives all numbers n such that antisigma(n) = antisigma(n+1) - 1? Are there composite numbers with this property? - _Jaroslav Krizek_, Jan 24 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If n is in the sequence then phi(n) + sigma(sigma(n)) = 3n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Is it true that Mersenne primes are all the solutions of the equation phi(x) + sigma(sigma(x)) = 3x? - _Farideh Firoozbakht_, Sep 03 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(5) = A229381(2) = 8191 is the &quot;Simpsons' Mersenne prime&quot;. - _Jonathan Sondow_, Jan 02 2015</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. M. Apostol, Introduction to Analytic Number Theory, Springer-Verlag, 1976, page 4.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Brillhart et al., Factorizations of b^n +- 1. Contemporary Mathematics, Vol. 22, Amer. Math. Soc., Providence, RI, 2nd edition, 1985; and later supplements.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Everest, A. van der Poorten, I. Shparlinski and T. Ward, Recurrence Sequences, Amer. Math. Soc., 2003; see esp. p. 255.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Marcus P. F. du Sautoy, The Number Mysteries, A Mathematical Odyssey Through Everyday Life, Palgrave Macmillan, First published in 2010 by the Fourth Estate, an imprint of Harper Collins UK, 2011, p. 46. - _Robert G. Wilson v_, Nov 26 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> B. Tuckerman, The 24th Mersenne prime, Notices Amer. Math. Soc., 18 (Jun, 1971), Abstract 684-A15, p. 608.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harry J. Smith, &lt;a href=&quot;/A000668/b000668.txt&quot;&gt;Table of n, a(n) for n = 1..18&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Alfeld, &lt;a href=&quot;http://www.math.utah.edu/~pa/math/largeprime.html&quot;&gt;The 39th Mersenne prime&lt;/a&gt; [From _Lekraj Beedassy_, Nov 09 2008]</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Bernheiden, &lt;a href=&quot;http://translate.google.com/translate?hl=en&amp;amp;sl=de&amp;amp;u=http://www.mathe-schule.de/Mathe/primzahlen.htm&quot;&gt;Prime numbers(Prmality check &amp; Mersenne primes: 39th to 43rd)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Andrew R. Booker, &lt;a href=&quot;http://primes.utm.edu/nthprime/&quot;&gt;The Nth Prime Page&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Brillhart et al., &lt;a href=&quot;http://dx.doi.org/10.1090/conm/022&quot;&gt;Factorizations of b^n +- 1&lt;/a&gt;, Contemporary Mathematics, Vol. 22, Amer. Math. Soc., Providence, RI, 3rd edition, 2002.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Butler, &lt;a href=&quot;http://www.tsm-resources.com/alists/mers.html&quot;&gt;Mersenne Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, &lt;a href=&quot;http://www.utm.edu/research/primes/mersenne/index.html&quot;&gt;Mersenne primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, &quot;Top Twenty&quot; page, &lt;a href=&quot;http://www.utm.edu/research/primes/lists/top20/Mersenne.html&quot;&gt;Mersenne Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. A. Khan, &lt;a href=&quot;http://arxiv.org/abs/1203.2083&quot;&gt;Primes in Geometric-Arithmetic Progression&lt;/a&gt;, arXiv preprint arXiv:1203.2083, 2012. - From _N. J. A. Sloane_, Sep 15 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> Math Reference Project, &lt;a href=&quot;http://www.mathreference.com/num,mers.html&quot;&gt;Mersenne and Fermat Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Mestrovic, &lt;a href=&quot;http://arxiv.org/abs/1202.3670&quot;&gt;Euclid's theorem on the infinitude of primes: a historical survey of its proofs (300 BC--2012) and another new proof&lt;/a&gt;, arXiv preprint arXiv:1202.3670, 2012 - From _N. J. A. Sloane_, Jun 13 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. C. Noll, &lt;a href=&quot;http://www.isthe.com/chongo/tech/math/prime/mersenne.html&quot;&gt;Mersenne Prime Digits and Names&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Omar E. Pol, &lt;a href=&quot;http://www.polprimos.com&quot;&gt;Determinacion geometrica de los numeros primos y perfectos&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Primefan, &lt;a href=&quot;http://primefan.tripod.com/MersennePrimes.html&quot;&gt;The Mersenne Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Christian Salas, &lt;a href=&quot;http://arxiv.org/abs/1203.3969&quot;&gt;Cantor Primes as Prime-Valued Cyclotomic Polynomials&lt;/a&gt;, arXiv preprint arXiv:1203.3969, 2012.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. J. Smith, &lt;a href=&quot;http://harry-j-smith-memorial.com/Perfect/MersPlot.html&quot;&gt;Plot of Mersenne Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Spence, &lt;a href=&quot;http://www.rugeley.demon.co.uk/gimps/prime.htm&quot;&gt;36th Mersenne Prime Found&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Stepney, &lt;a href=&quot;http://public.logica.com/~stepneys/cyc/m/mersenne.htm&quot;&gt;Mersenne Prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Thesaurus.maths.org, &lt;a href=&quot;http://thesaurus.maths.org/dictionary/map/word/990&quot;&gt;Mersenne Prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. Tuckerman, &lt;a href=&quot;http://www.pnas.org/content/68/10/2319.abstract&quot;&gt;The 24th Mersenne prime&lt;/a&gt;, Proc. Nat. Acad. Sci. USA, 68 (1971), 2319-2320.</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. S. Wagstaff, Jr., &lt;a href=&quot;http://www.cerias.purdue.edu/homes/ssw/cun/index.html&quot;&gt;The Cunningham Project&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/MersennePrime.html&quot;&gt;Mersenne Prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/PerfectNumber.html&quot;&gt;Perfect Number&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/MersennePrime.html&quot;&gt;Mersenne Prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://www.wikipedia.org/wiki/Mersenne_prime&quot;&gt;Mersenne prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Wolf, &lt;a href=&quot;http://arxiv.org/abs/1112.2412&quot;&gt;Computer experiments with Mersenne primes&lt;/a&gt;, arXiv preprint arXiv:1112.2412, 2011</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000668"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="sigma" cd="A000668"/>
+      <OMA>
+      <OMR xref="A061652"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A000203"/>
+      <OMA>
+      <OMR xref="A061652"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Omar E. Pol_, Apr 15 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000668"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="sigma" cd="A000668"/>
+      <OMA>
+      <OMR xref="A019279"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A000203"/>
+      <OMA>
+      <OMR xref="A019279"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, provided that there are no odd superperfect numbers. - _Omar E. Pol_, May 10 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000668"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000225"/>
+      <OMA>
+      <OMR xref="A000043"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Omar E. Pol_, Aug 31 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000668"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMR xref="A000043"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMR xref="A000005"/>
+      <OMA>
+      <OMR xref="A061652"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Omar E. Pol_, Oct 27 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000668"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000040"/>
+      <OMA>
+      <OMR xref="A059305"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A001348"/>
+      <OMA>
+      <OMR xref="A016027"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Omar E. Pol_, Jun 29 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000668"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A007947"/>
+      <OMA>
+      <OMR xref="A000396"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, provided that there are no odd perfect numbers. - _Omar E. Pol_, Feb 01 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000668"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMR xref="A134709"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Ivan N. Ianakiev_, Sep 07 2013
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> A000668 := proc(n) local i;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> i := 2^(ithprime(n))-1:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> if (isprime(i)) then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>    return i</CMP>
+    </omtext><omtext class="maple">
+      <CMP> fi: end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(A000668(n), n=1..31); # - _Jani Melik_, Feb 09 2011</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # Alternate:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(numtheory:-mersenne([i]),i=1..26); # _Robert Israel_, Jul 13 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[2^Range[1000] - 1, PrimeQ] (* _Vladimir Joseph Stephan Orlovsky_, Jul 19 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) forprime(p=2,1e5,if(ispseudoprime(2^p-1),print1(2^p-1&quot;, &quot;))) \\ _Charles R Greathouse IV_, Jul 15 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000043, A028335 (lengths), A001348, A046051, A057951-A057958, A034876, A124477, A135659, A019279, A061652, A000203, A000217, A000225.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A085104, A023195, A083420, A023758.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000885.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000885">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,4,6,10,12,19,21,25,33,35,46,53,56,67,80,93,98,117,128,131,146,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 160,174,195,210,217,227,233,244,286,298,325,331,376,386,406,423,444,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 467,492,505,554,561,581,589,641,700,723,732,748,780,789,835,868,895,938,945,975</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of twin prime pairs &lt; square of n-th prime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Donovan Johnson, &lt;a href=&quot;/A000885/b000885.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> With[{tpps=Select[Partition[Prime[Range[10000]],2,1],Last[#]- First[#] == 2&amp;]}, Table[ Count[tpps,_?(Last[#]&lt;Prime[n]^2&amp;)],{n,60}]] (* _Harvey P. Dale_, Aug 11 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000879.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> gandalf(AT)hrn.office.ssi.net (James D. Ausfahl)</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000195.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000195">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4</CMP>
+    </assertion><omtext class="name">
+      <CMP> log(n) rounded down.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equals A004233(n) - 1 for n &gt; 1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000195/b000195.txt&quot;&gt;Table of n, a(n) for n=1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Digits := 100; f := n-&gt;floor(evalf(log(n))); [ seq(f(n), n=1..100) ];</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=floor(log(n))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000195 = floor . log . fromIntegral  -- _Reinhard Zumkeller_, Mar 17 2015</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000193, A004233.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000523.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,8</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000444.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000444">
+          <assertion class="***** TTTT *****">
+      <CMP> M4641 N1984</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 9,64,326,1433,5799,22224,81987,293987,1031298,3555085,12081775,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 40576240,134919788,444805274,1455645411,4733022100,15302145060,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 49223709597,157629612076,502736717207,1597541346522,5059625685739,15975936032821,50304490599602</CMP>
+    </assertion><omtext class="name">
+      <CMP> Partially labeled rooted trees with n nodes (3 of which are labeled).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 134.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000444/b000444.txt&quot;&gt;Table of n, a(n) for n = 3..650&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000444"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="B" cd="A000444"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>9</OMI><OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="B" cd="A000444"/>
+      <OMV name="x"/>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="B" cd="A000444"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="B" cd="A000444"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="B" cd="A000444"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> is g.f. for rooted trees with<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> nodes, cf.<OMOBJ>
+      <OMR xref="A000081"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000444"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="c"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="d"/>
+      <OMR xref="A051491"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMF dec="2.955765285651995"/><OMS name="..." cd="arithmetics"></OMS></OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMA><OMS name="times"/><OMF dec="0.24466511750061817"/><OMS name="..." cd="arithmetics"></OMS></OMA>
+    </OMA>
+    </OMOBJ> . - _Vaclav Kotesovec_, Sep 11 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> b:= proc(n) option remember; if n&lt;=1 then n else add(k*b(k)* s(n-1, k), k=1..n-1)/(n-1) fi end: s:= proc(n,k) option remember; add(b(n+1-j*k), j=1..iquo(n,k)) end: B:= proc(n) option remember; add(b(k)*x^k, k=1..n) end: a:= n-&gt; coeff(series(B(n-2)^3*(9-8*B(n-2)+2*B(n-2)^2)/(1-B(n-2))^5, x=0, n+1), x,n): seq(a(n), n=3..24); # _Alois P. Heinz_, Aug 21 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> b[n_] := b[n] = If[n &lt;= 1, n, Sum[k*b[k]*s[n-1, k], {k, 1, n-1}]/(n-1)]; s[n_, k_] := s[n, k] = Sum[b[n+1-j*k], {j, 1, Quotient[n, k]}]; B[n_] := B[n] = Sum [b[k]*x^k, {k, 1, n}]; a[n_] := Coefficient[Series[B[n-2]^3*(9 - 8*B[n-2] + 2*B[n-2]^2)/(1 - B[n-2])^5, {x, 0, n+1}], x, n]; Table[a[n], {n, 3, 30}] (* _Jean-François Alcover_, Mar 10 2014, after _Alois P. Heinz_ *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000081, A000107, A000243, A000269, A000485, A000524-A000526.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A042977.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, Oct 19 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

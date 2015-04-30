@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000353.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000353">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,23,47,59,167,179,263,383,503,863,887,983,1019,1367,1487,1619,1823,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2063,2099,2207,2447,2459,2579,2819,2903,3023,3167,3623,3779,3863,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4007,4127,4139,4259,4703,5087,5099,5807,5927,5939,6047,6659,6779,6899,6983</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes == 7, 19, 23 (mod 40) such that (p-1)/2 is also prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = 2*A000355(n)+1; the decimal expansion of 1/a(n) will produce a stream of a(n)-1 pseudo-random digits. -_Reinhard Zumkeller_, Feb 10 2009</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. A. J. Matthews, Maximally periodic reciprocals, Bull. Institute of Mathematics and Its Applications, vol. 28, p. 147-148, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Zumkeller, &lt;a href=&quot;/A000353/b000353.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Sophie_Germain_prime&quot;&gt;Sophie Germain prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/1#1overn&quot;&gt;Index entries for sequences related to decimal expansion of 1/n.&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) is(n)=my(k=n%40); (k==7||k==19||k==23) &amp;&amp; isprime(n\2) &amp;&amp; isprime(n) \\ _Charles R Greathouse IV_, Nov 20 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Subset of A005385.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Subsequence of A001913, A006883.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> R. A. J. Matthews [ 100265.3005(AT)compuserve.com ]</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Reinhard Zumkeller_, Feb 10 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

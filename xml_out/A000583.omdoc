@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000583.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000583">
+          <assertion class="***** TTTT *****">
+      <CMP> M5004 N2154</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,16,81,256,625,1296,2401,4096,6561,10000,14641,20736,28561,38416,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 50625,65536,83521,104976,130321,160000,194481,234256,279841,331776,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 390625,456976,531441,614656,707281,810000,923521,1048576,1185921</CMP>
+    </assertion><omtext class="name">
+      <CMP> Fourth powers: a(n) = n^4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Figurate numbers based on 4-dimensional regular convex polytope called the 4-measure polytope, 4-hypercube or tessaract with Schlaefli symbol {4,3,3}. - Michael J. Welch (mjw1(AT)ntlworld.com), Apr 01 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sum(k&gt;0, 1/a(k)) = Pi^4/90 = A013662. - _Jaume Oliver Lafont_, Sep 20 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Totally multiplicative sequence with a(p) = p^4 for prime p. - _Jaroslav Krizek_, Nov 01 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The binomial transform yields A058649. The inverse binomial transforms yields the (finite) 0, 1, 14, 36, 24, the 4th row in A019538 and A131689. - _R. J. Mathar_, Jan 16 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Generate Pythagorean triangles with parameters a and b to get sides of lengths x=b^2-a^2, y=2*a*b, and z=a^2 + b^2. In particular use a=n-1 and b=n for a triangle with sides (x1,y1,z1) and a=n and b=n+1 for another triangle with sides (x2,y2,z2). Then x1*x2 +y1*y2 +z1*z2 = 8*a(n). - _J. M. Bergot_, Jul 22 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n &gt; 0, a(n) is the largest integer k such that k^4 + n is a multiple of k + n. Also, for n &gt; 0, a(n) is the largest integer k such that k^2 + n^2 is a multiple of k + n^2. - _Derek Orr_, Sep 04 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000583/b000583.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Bottomley, &lt;a href=&quot;/A000583/a000583.gif&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Bottomley, &lt;a href=&quot;http://fs.gallup.unm.edu/Bottomley-Sm-Mult-Functions.htm&quot;&gt;Some Smarandache-type multiplicative sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ralph Greenberg, &lt;a href=&quot;http://www.math.washington.edu/~greenber/MathPoet.html&quot;&gt;Math for Poets&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Milan Janjic, &lt;a href=&quot;http://www.pmfbl.org/janjic/&quot;&gt;Enumerative Formulas for Some Functions on Finite Sets&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hyun Kwang Kim, &lt;a href=&quot;http://dx.doi.org/10.1090/S0002-9939-02-06710-2&quot;&gt;On Regular Polytope Numbers&lt;/a&gt;, Proc. Amer. Math. Soc., 131 (2002), 65-75.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/BiquadraticNumber.html&quot;&gt;Biquadratic Number&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_05&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (5,-10,10,-5,1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000583"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A123865"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A002523"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Multiplicative with<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000583"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="e"/></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _David W. Wilson_, Aug 01 2001
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>11</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>11</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. More generally, g.f. for<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMV name="m"/>
+    </OMA>
+    </OMOBJ> is<OMOBJ>
+      <OMA>
+      <OMS name="Euler" cd="A000583"/>
+      <OMV name="m"/>
+    </OMA>
+    </OMOBJ>, x)/(1-x)^(m+1), where<OMOBJ>
+      <OMA>
+      <OMS name="Euler" cd="A000583"/>
+      <OMV name="m"/>
+    </OMA>
+    </OMOBJ>, x) is Eulerian polynomial of degree<OMOBJ>
+      <OMA>
+      <OMS name="m" cd="A000583"/>
+      <OMV name="cf"/>
+    </OMA>
+    </OMOBJ>. A008292).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Dirichlet generating function: zeta(s-4). - _Franklin T. Adams-Watters_, Sep 11 2005
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: (x+7x^2+6x^3+x^4)*e^x. More generally, the general form for the e.g.f. for<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMV name="m"/>
+    </OMA>
+    </OMOBJ> is<OMOBJ>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="phi" cd="A000583"/>
+      <OMV name="_m"/>
+    </OMA><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="e"/>
+      <OMV name="x"/>
+    </OMA></OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="phi" cd="A000583"/>
+      <OMV name="_m"/>
+    </OMA>
+    </OMOBJ> is the exponential polynomial of order<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ>. - _Franklin T. Adams-Watters_, Sep 11 2005
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000583"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="C" cd="A000583"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMI>4</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>11</OMI><OMA>
+      <OMS name="C" cd="A000583"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>11</OMI><OMA>
+      <OMS name="C" cd="A000583"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMI>4</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="C" cd="A000583"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = n*A177342(n) - sum(i=1..n-1, A177342(i)) - (n-1), with<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>. - _Bruno Berselli_, May 07 2010
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A000583"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A000583"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A002061"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Charlie Marion_, Jun 13 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000583"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="a" cd="A000583"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMS name="a" cd="A000583"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="a" cd="A000583"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A000583"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMI>24</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Ant King_, Sep 23 2013
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> A000583 := n-&gt;n^4: seq(A000583(n), n=0..50);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000583:=-(z+1)*(z**2+10*z+1)/(z-1)**5; # _Simon Plouffe_ in his 1992 dissertation; gives sequence without initial zero</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with (combinat):seq(fibonacci(3, n^2)-1, n=0..33); # _Zerinvary Lajos_, May 25 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Range[0,100]^4 (* _Vladimir Joseph Stephan Orlovsky_, Mar 14 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A000583(n) = n^4 \\ _Michael B. Porter_, Nov 09 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000583 = (^ 4)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000583_list = scanl (+) 0 a005917_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Nov 13 2014, Nov 11 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) makelist(n^4,n,0,30); /* _Martin Ettl_, Nov 12 2012 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [n^4 : n in [0..50]]; // _Wesley Ivan Hurt_, Sep 05 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000538, A005917 (first differences), A000332, A014820, A092181, A092182, A092183.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A004831, A002646.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,core,easy,nice,mult</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Broken link to Hyun Kwang Kim's paper fixed by _Felix Fröhlich_, Jun 16 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

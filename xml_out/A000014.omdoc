@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000014.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000014">
+          <assertion class="***** TTTT *****">
+      <CMP> M0320 N0118</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,0,1,1,2,2,4,5,10,14,26,42,78,132,249,445,842,1561,2988,5671,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10981,21209,41472,81181,160176,316749,629933,1256070,2515169,5049816,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 10172638,20543579,41602425,84440886,171794492,350238175,715497037,1464407113</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of series-reduced trees with n nodes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Other terms for &quot;series-reduced tree&quot;: (i) homeomorphically irreducible tree, (ii) homeomorphically reduced tree, (iii) reduced tree, (iv) topological tree.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Bergeron, G. Labelle and P. Leroux, Combinatorial Species and Tree-Like Structures, Camb. 1998, p. 284.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. G. Cantor, personal communication.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary, Graph Theory. Addison-Wesley, Reading, MA, 1969, p. 232.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, p. 62, Fig. 3.3.3.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and G. Prins, The number of homeomorphically irreducible trees and other species, Acta Math., 101 (1959), 141-162.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary, R. W. Robinson and A. J. Schwenk, Twenty-step algorithm for determining the asymptotic number of trees of various species, J. Austral. Math. Soc., Series A, 20 (1975), 483-503. Errata: Vol. A 41 (1986), p. 325.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. L. Gross and J. Yellen, eds., Handbook of Graph Theory, CRC Press, 2004; p. 526.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Christian G. Bower, &lt;a href=&quot;/A000014/b000014.txt&quot;&gt;Table of n, a(n) for n = 0..500&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Callan, &lt;a href=&quot;http://arxiv.org/abs/1406.7784&quot;&gt;A sign-reversing involution to count labeled lone-child-avoiding trees&lt;/a&gt;, arXiv:1406.7784 [math.CO], (30-June-2014)</CMP>
+    </omtext><omtext class="link">
+      <CMP> James Grime and Brady Haran, &lt;a href=&quot;http://www.youtube.com/watch?v=iW_LkYiuTKE&quot;&gt;The problem in Good Will Hunting&lt;/a&gt;, 2013 (Numberphile video).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000014/a000014.gif&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Series-ReducedTree.html&quot;&gt;Series-Reduced Tree&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000014"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMV name="x"/>
+    </OMA><OMV name="f"/><OMV name="x"/></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMV name="g"/><OMV name="x"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMV name="g"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMA>
+      <OMS name="f" cd="A000014"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> is g.f. for<OMOBJ>
+      <OMR xref="A059123"/>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="g" cd="A000014"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> is g.f. for<OMOBJ>
+      <OMR xref="A001678"/>
+    </OMOBJ>. [Harary and E. M. Palmer,<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ>.<OMOBJ>
+      <OMI>62</OMI>
+    </OMOBJ>, Eq. (3.3.10) with extra<OMOBJ>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Hbar" cd="A000014"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> term which should be there according to eq.(3.3.14),<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ>.<OMOBJ>
+      <OMI>63</OMI>
+    </OMOBJ>, with eq.(3.3.9)].
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000014"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="c"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>5</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="d"/>
+      <OMR xref="A246403"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMF dec="2.18946198566085"/><OMS name="..." cd="arithmetics"></OMS></OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMA><OMS name="times"/><OMF dec="0.684447272004914"/><OMS name="..." cd="arithmetics"></OMS></OMA>
+    </OMA>
+    </OMOBJ> . - _Vaclav Kotesovec_, Aug 25 2014
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f. = x + x^2 + x^4 + x^5 + 2*x^6 + 2*x^7 + 4*x^8 + 5*x^9 + 10*x^10 + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> The star graph with n nodes (except for n=3) is a series-reduced tree. For n=6 the other series-reduced tree is shaped like the letter H. - _Michael Somos_, Dec 19 2014</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(powseries): with(combstruct): n := 30: Order := n+3: sys := {B = Prod(C,Z), S = Set(B,1 &lt;= card), C = Union(Z,S)}:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> G001678 := (convert(gfseries(sys,unlabeled,x) [S(x)], polynom)) * x^2: G0temp := G001678 + x^2:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> G059123 := G0temp / x + G0temp - (G0temp^2+eval(G0temp,x=x^2))/(2*x):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> G000014 := ((x-1)/x) * G059123 + ((1+x)/x^2) * G0temp - (1/x^2) * G0temp^2:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000014 := 0,seq(coeff(G000014,x^i),i=1..n); # Ulrich Schimke (ulrschimke(AT)aol.com)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = my(A); if( n&lt;1, 0, A = x / (1 - x^2) + x * O(x^n); for(k=3, n-1, A /= (1 - x^k + x * O(x^n))^polcoeff(A, k)); polcoeff( (subst(A, x, x^2) * (1 - x) + A * (2 - A) * (1 + x)) / 2, n))}; /* _Michael Somos_, Dec 19 2014 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000055 (trees), A001678 (series-reduced planted trees), A007827 (series-reduced trees by leaves).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,core,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> G.f. corrected by _Wolfdieter Lang_, Jan 09 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000264.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000264">
+          <assertion class="***** TTTT *****">
+      <CMP> M2974 N1203</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,14,80,518,3647,27274,213480,1731652,14455408,123552488,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1077096124,9548805240,85884971043,782242251522,7203683481720,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 66989439309452,628399635777936,5940930064989720,56562734108608536</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 3-edge-connected rooted cubic maps with 2n nodes and a distinguished Hamilton cycle.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000264/b000264.txt&quot;&gt;Table of n, a(n) for n = 1..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. B. Richmond, &lt;a href=&quot;http://dx.doi.org/10.1016/0095-8956(76)90031-9&quot;&gt;On Hamiltonian polygons&lt;/a&gt;, J. Combinatorial Theory Ser. B 21 (1976), no. 1, 81--87. MR0432491 (55 #5479) [See v_n].</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. T. Tutte, &lt;a href=&quot;http://dx.doi.org/10.4153/CJM-1962-032-x&quot;&gt;A census of Hamiltonian polygons&lt;/a&gt;, Canad. J. Math., 14 (1962), 402-417.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Let b(n)=(2n)!*(2n+2)!/(2*n!*(n+1)!^2*(n+2)!). Let<OMOBJ>
+      <OMA>
+      <OMS name="B" cd="A000264"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> be the generating function producing<OMOBJ>
+      <OMA>
+      <OMS name="b" cd="A000264"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>, and<OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000264"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> be the generating function producing<OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000264"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>. Then these sequences satisfy the functional equation<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="B" cd="A000264"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="A" cd="A000264"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="B" cd="A000264"/>
+      <OMV name="x"/>
+    </OMA></OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Sean A. Irvine_, Apr 05 2010
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> max = 21; b[n_] := (2n)!*(2n + 2)!/(2*n!*(n + 1)!^2*(n + 2)!); b[0] = 0; bf[x_] := Sum[b[n]*x^n, {n, 0, max}]; Clear[a]; a[0] = 0; a[1] = a[2] = 1; af[x_] := Sum[a[n]*x^n, {n, 0, max}]; se = Series[bf[x] - af[x*(1 + 2*bf[x])^2], {x, 0, max}] // Normal; Table[a[n], {n, 1, max}] /. SolveAlways[se == 0, x] // First (* _Jean-François Alcover, Jan 31 2013, after _Sean A. Irvine_ *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000309, A000356, A004304.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Better definition from _Michael Albert_, Oct 24 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Apr 05 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

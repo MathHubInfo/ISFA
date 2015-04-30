@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000086.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000086">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,0,0,0,2,0,0,0,0,0,2,0,0,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0,2,0,0,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,0,2,0,2,0,0,0,2,0,0,0,0,0,2,0,0,0,0,0,0,0,2,0,0,0,2,0,0,0,0,0,2,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,0,0,0,2,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,4,0,2,0,0,0,2,0,0,0,0,0,2,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of solutions to x^2 - x + 1 == 0 (mod n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of elliptic points of order 3 for GAMMA_0(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equivalently, number of fixed points of GAMMA_0(n) of type rho.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Values are 0 or a power of 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Shadow transform of central polygonal numbers A002061. - _Michel Marcus_, Jun 06 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(A226946(n)) = 0; a(A034017(n)) &gt; 0. - _Reinhard Zumkeller_, Jun 23 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Shimura, Introduction to the Arithmetic Theory of Automorphic Functions, Princeton, 1971, see p. 25, Eq. (3).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> B. Schoeneberg, Elliptic Modular Functions, Springer-Verlag, NY, 1974, p. 101.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Christian G. Bower, &lt;a href=&quot;/A000086/b000086.txt&quot;&gt;Table of n, a(n) for n=1..2000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harriet Fell, Morris Newman, Edward Ordman, &lt;a href=&quot;http://archive.org/details/jresv67Bn1p61&quot;&gt;Tables of genera of groups of linear fractional transformations&lt;/a&gt;, J. Res. Nat. Bur. Standards Sect. B 67B 1963 61-68.</CMP>
+    </omtext><omtext class="link">
+      <CMP> John S. Rutherford, &lt;a href=&quot;http://dx.doi.org/10.1107/S010876730804333X&quot;&gt;Sublattice enumeration. IV. Equivalence classes of plane sublattices by parent Patterson symmetry and colour lattice group type&lt;/a&gt;, Acta Cryst. (2009). A65, 156-163. [See Table 4].</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Multiplicative with<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000086"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="e"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMI>0</OMI>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="e"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="mod" cd="A000086"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMI>0</OMI>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="mod" cd="A000086"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _David W. Wilson_, Aug 01 2001
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000086"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> x + x^3 + 2*x^7 + 2*x^13 + 2*x^19 + 2*x^21 + 2*x^31 + 2*x^37 + 2*x^39 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory); A000086 := proc (n) local d, s; if modp(n,9) = 0 then RETURN(0) fi; s := 1; for d in divisors(n) do if isprime(d) then s := s*(1+eval(legendre(-3,d))) fi od; s end: # _Gene Ward Smith_, May 22 2006</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Array[ Function[ n, If[ EvenQ[ n ] || Mod[ n, 9 ]==0, 0, Count[ Array[ Mod[ #^2-#+1, n ]&amp;, n, 0 ], 0 ] ] ], 84 ]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;1, 0, sum( x=0, n-1, (x^2 - x + 1)%n==0))}</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;1, 0, direuler( p=2, n, if( p==3, 1 + X, if( p%3==2, 1, (1 + X) / (1 - X)))) [n])}</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000086 n = if n `mod` 9 == 0 then 0</CMP>
+    </omtext><omtext class="program">
+      <CMP>   else product $ map ((* 2) . a079978 . (+ 2)) $ a027748_row $ a038502 n</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Jun 23 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000089, A000091, A001616, A014683.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A027748, A079978, A038502, A007949.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice,mult</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

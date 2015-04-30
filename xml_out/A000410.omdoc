@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000410.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000410">
+          <assertion class="***** TTTT *****">
+      <CMP> M4308 N1803</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,6,425,65625,27894671,35716401889,144866174953833</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of singular n X n rational (0,1)-matrices.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of all n X n (0,1)-matrices having distinct, nonzero ordered rows and determinant 0 - compare A000409.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = number of singular n X n rational {0,1}-matrices with no zero rows and with all rows distinct, up to permutation of rows and so a(n) = binomial(2^n-1,n) - A088389(n). Cf. A116506, A116507, A116527, A116532. - _Vladeta Jovovic_, Apr 03 2006</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. Metropolis and P. R. Stein, On a class of (0,1) matrices with vanishing determinants, J. Combin. Theory, 3 (1967), 191-198.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Zivkovic, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0511636&quot;&gt;Classification of small (0,1) matrices&lt;/a&gt;, Linear Algebra and its Applications, 414 (2006), 310-346.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Mat#binmat&quot;&gt;Index entries for sequences related to binary matrices&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000409, A046747, A064230, A064231.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A046747(n) = 2^(n^2) - n! * binomial(2^n -1, n) + n! * A000410(n). Cf. A000409.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> n=7 term from Guenter M. Ziegler (ziegler(AT)math.TU-Berlin.DE)</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(8) from _Vladeta Jovovic_, Mar 28 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

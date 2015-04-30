@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000098.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000098">
+          <assertion class="***** TTTT *****">
+      <CMP> M1373 N0533</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,5,10,19,33,57,92,147,227,345,512,752,1083,1545,2174,3031,4179,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5719,7752,10438,13946,18519,24428,32051,41805,54265,70079,90102,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 115318,147005,186626,236064,297492,373645,467707</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n if there are two kinds of 1, two kinds of 2 and two kinds of 3.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also number of partitions of 2*n+1 with exactly 3 odd parts (offset 1). - _Vladeta Jovovic_, Jan 12 2005</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Gupta et al., Tables of Partitions. Royal Society Mathematical Tables, Vol. 4, Cambridge Univ. Press, 1958, p. 90.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, Combinatorial Identities, Wiley, 1968, p. 199.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000098/b000098.txt&quot;&gt;Table of n, a(n) for n=0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Euler transform of 2 2 2 1 1 1 1...
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.=1/[(1-x)(1-x^2)(1-x^3)*product((1-x^k), k=1..infinity)].
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000098"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="sum" cd="A000098"/>
+      <OMA>
+      <OMR xref="A000097"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMA><OMS name="times"/><OMI>3</OMI><OMV name="j"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, j=0..floor(n/3)),<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(3)=10 because we have 3, 3', 2+1, 2+1', 2'+1, 2'+1', 1+1+1, 1+1+1', 1+1'+1' and 1'+1'+1'.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000070, A008951, A000097, A000710.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Fourth column of Riordan triangle A008951 and of triangle A103923.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Emeric Deutsch_, Mar 23 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

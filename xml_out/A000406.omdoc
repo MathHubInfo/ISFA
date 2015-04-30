@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000406.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000406">
+          <assertion class="***** TTTT *****">
+      <CMP> M4264 N1782</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,6,57,741,12244,245755,5809875,158198200,4877852505,168055077875,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6400217406500,267058149580823,12118701719205803,594291742526530761,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 31323687504696772151,1766116437541895988303,106080070002238888908150</CMP>
+    </assertion><omtext class="name">
+      <CMP> Coefficients of iterated exponentials.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Ginsburg, Iterated exponentials, Scripta Math., 11 (1945), 340-353.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000406/b000406.txt&quot;&gt;Table of n, a(n) for n=1..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Cameron, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;Sequences realized by oligomorphic permutation groups&lt;/a&gt;, J. Integ. Seqs. Vol. 3 (2000), #00.1.5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=302&quot;&gt;Encyclopedia of Combinatorial Structures 302&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: -ln(1+ln(1+ln(1+ln(1+ln(1+ln(1-x)))))).
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A003713, A000268, A000310, A000359, A001765.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

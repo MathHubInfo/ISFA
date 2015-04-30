@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000894.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000894">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,6,60,700,8820,116424,1585584,22084920,312869700,4491418360,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 65166397296,953799087696,14062422446800,208618354980000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3111393751416000,46619049708716400,701342468412012900</CMP>
+    </assertion><omtext class="name">
+      <CMP> (2*n)!*(2*n+1)! /((n+1)! *n!^3).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = (n+1) * A000891(n) = A248045(n+1) / A000142(n). - _Reinhard Zumkeller_, Sep 30 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. R. Hansen, A Table of Series and Products, Prentice-Hall, Englewood Cliffs, NJ, 1975, p. 96.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Yidong Sun and Fei Ma, Some new binomial sums related to the Catalan triangle, Electronic Journal of Combinatorics 21(1) (2014), #P1.33</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000894/b000894.txt&quot;&gt;Table of n, a(n) for n = 0..180&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Yidong Sun and Fei Ma, &lt;a href=&quot;http://arxiv.org/abs/1305.2017&quot;&gt;Four transformations on the Catalan triangle&lt;/a&gt;, arXiv preprint arXiv:1305.2017, 2013 (see Omega_1)</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000894"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A000894"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="C" cd="A000894"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A001700"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A000984"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A000984"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A000984"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _Zerinvary Lajos_, Jan 23 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.: (EllipticK(4*x^(1/2)) - EllipticE(4*x^(1/2)))/(4*x*Pi). - <OMOBJ>
+      <OMV name="Mark"/>
+    </OMOBJ> van Hoeij, Oct 24 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="a"/><OMV name="n"/></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMV name="a"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _R. J. Mathar_, Sep 08 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000894"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A103371"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A132813"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Reinhard Zumkeller_, Apr 04 2014
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A000894"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <p></p><OMA><OMS name="times"/><OMI>23040</OMI><OMA>
+      <OMS name="a" cd="A000894"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>1400</OMI><OMA>
+      <OMS name="a" cd="A000894"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A000894"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <p></p><OMA><OMS name="times"/><OMI>1184</OMI><OMA>
+      <OMS name="a" cd="A000894"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>90</OMI><OMA>
+      <OMS name="a" cd="A000894"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A000894"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <p></p><OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMS name="a" cd="A000894"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A000894"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> for all<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> in Z. - _Michael Somos_, May 28 2014
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         0 = a(n+1)^3 * (+256*a(n) - 6*a(n+1) + a(n+2)) + a(n) * a(n+1) * a(n+
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         2) * (-768*a(n) - 20*a(n+1) - 3*a(n+2)) + 90*a(n)^2*a(n+2)^2 for all<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> in Z. - _Michael Somos_, Sep 17 2014
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f. = 1 + 6*x + 60*x^2 + 700*x^3 + 8820*x^4 + 116424*x^5 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> seq(binomial(2*n+1,n)*binomial(2*n,n), n=0..16); - _Zerinvary Lajos_, Jan 23 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := Binomial[2 n + 1, n] Binomial[2 n, n]; (* _Michael Somos_, May 28 2014 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ (EllipticK[ 16 x] - EllipticE[ 16 x]) / (4 x Pi), {x, 0, n}]; (* _Michael Somos_, May 28 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Factorial(2*n)*Factorial(2*n+1) /(Factorial(n+1)* Factorial(n)^3): n in [0..20]]; // _Vincenzo Librandi_, Oct 25 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000894 n = a132813 (2 * n) n  -- _Reinhard Zumkeller_, Apr 04 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) =  binomial( 2*n + 1, n) * binomial( 2*n, n)}; /* _Michael Somos_, May 28 2014 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> First differences of A082578. Cf. A002463.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A001700, A000984.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP>  Cf. A000142, A000891, A248045.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

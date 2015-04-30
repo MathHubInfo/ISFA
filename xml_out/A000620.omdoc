@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000620.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000620">
+          <assertion class="***** TTTT *****">
+      <CMP> M1642 N0642</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,2,6,20,60,176,512,1488,4326,12648,37186,109980,327216,979020,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2944414,8897732,27005290,82288516,251650788,772127678,2376238138,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7333188770,22688297950,70360977228,218678818026,681017928476,2124840874610,6641336507270,20791999731518</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of monosubstituted alkanes C(n-1)H(2n-1)-X with n-1 carbon atoms that are stereoisomers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also number of monosubstituted alkanes C(n)H(2n+1)-X of the form R-CH2-X (primary) that are stereoisomers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let the entries in the nine columns of Blair and Henze's Table I (JACS 54 (1932), p. 1098) be denoted by Ps(n), Pn(n), Ss(n), Sn(n), Ts(n), Tn(n), As(n), An(n), T(n) respectively (here P = Primary, S = Secondary, T = Tertiary, s = stereoisomers, n = non-stereoisomers and the last column T(n) gives total).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Then Ps (and As) = this sequence, Pn (and An, Sn) = A000621, Ss = A000622, Ts = A000623, Tn = A000624, T = A000625. Recurrences generating these sequences are given in the Maple program in A000620.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. M. Blair and H. R. Henze, The number of stereoisomeric and non-stereoisomeric mono-substitution products of the paraffins, J. Amer. Chem. Soc., 54 (1932), 1098-1105.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vaclav Kotesovec, &lt;a href=&quot;/A000620/b000620.txt&quot;&gt;Table of n, a(n) for n = 1..1930&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         See Maple program for recurrences for this sequence and<OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMR xref="A000621"/><OMR xref="A000625"/>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000620"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="c"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="b"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="b"/>
+      <OMA><OMS name="times"/><OMF dec="3.287112055584475"/><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="see" cd="A000620"/>
+      <OMR xref="A239803"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMA><OMS name="times"/><OMF dec="0.10535213328241952"/><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="see" cd="A000620"/>
+      <OMR xref="A239805"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Vaclav Kotesovec_, Mar 27 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> # Blair and Henze's recurrences for A000620-A000625 (see comments lines for relationship between the sequences and their symbols).</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Ps := [0,0,0]; Pn := [1,1,1]; Ss := [0,0,0]; Sn := [0,0,1]; Ts := [0,0,0]; Tn := [0,0,0]; As := [0,0,0]; An := [1,1,2]; T := [1,1,2];</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for n from 4 to 60 do Ps := [op(Ps),As[n-1]]; Pn := [op(Pn),An[n-1]]; t1 := add( 2*T[n-1-j]*T[j],j=1..floor((n-2)/2) ); if n mod 2 = 1 then i := (n-1)/2; t1 := t1+T[i]^2-An[i]; fi; Ss := [op(Ss),t1];</CMP>
+    </omtext><omtext class="maple">
+      <CMP> t2 := 0; if n mod 2 = 1 then i := (n-1)/2; t2 := An[i]; fi; Sn := [op(Sn),t2]; t3 := 0; for i from 1 to (n-1)/3 do for j from i+1 to (n-2)/2 do k := n-1-i-j; if j&lt;k then t3 := t3+2*T[i]*T[j]*T[k]; fi; od: od:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> t4 := 0; t5 := 0; for i from 1 to (n-2)/2 do j := n-1-2*i; if j &gt; 0 and i &lt;&gt; j then t4 := t4+(T[i]^2-An[i])*T[j]+An[i]*As[j]; t5 := t5+An[i]*An[j]; fi; od; t6 := 0; t7 := 0; if n mod 3 = 1 then i := (n-1)/3; t6 := (2*T[i]+T[i]^3)/3-An[i]^2; t7 := An[i]^2; fi;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Ts := [op(Ts), t3+t4+t6]; Tn := [op(Tn), t5+t7]; As := [op(As), Ps[n]+Ss[n]+Ts[n]]; An := [op(An), Pn[n]+Sn[n]+Tn[n]]; T := [op(T),As[n]+An[n]]; od: Ps; Pn; Ss; Ts; Tn; T;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000621-A000625, A239803, A239805.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional comments from Bruce Corrigan, Nov 04, 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

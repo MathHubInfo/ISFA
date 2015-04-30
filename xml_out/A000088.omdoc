@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000088.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000088">
+          <assertion class="***** TTTT *****">
+      <CMP> M1253 N0479</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,4,11,34,156,1044,12346,274668,12005168,1018997864,165091172592,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 50502031367952,29054155657235488,31426485969804308768,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 64001015704527557894928,245935864153532932683719776,1787577725145611700547878190848,24637809253125004524383007491432768</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of graphs on n unlabeled nodes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Euler transform of the sequence A001349.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, number of equivalence classes of sign patterns of totally nonzero symmetric n X n matrices.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. J. Cameron, Some sequences of integers, Discrete Math., 75 (1989), 89-102; also in &quot;Graph Theory and Combinatorics 1988&quot;, ed. B. Bollobas, Annals of Discrete Math., 43 (1989), 89-102.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. J. Cameron and C. R. Johnson, The number of equivalence patterns of symmetric sign patterns, Discr. Math., 306 (2006), 3074-3077.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. L. Davis, The numbers of structures of finite relations, Proc. Amer. Math. Soc., 4 (1953), 486-494.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. L. Gross and J. Yellen, eds., Handbook of Graph Theory, CRC Press, 2004; p. 519.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary, Graph Theory. Addison-Wesley, Reading, MA, 1969, p. 214.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, p. 240.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Hougardy, Classes of perfect graphs, Discr. Math. 306 (2006), 2529-2571.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Kauers and P. Paule, The Concrete Tetrahedron, Springer 2011, p. 54.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Lupanov, O. B. Asymptotic estimates of the number of graphs with n edges. (Russian) Dokl. Akad. Nauk SSSR 126 1959 498--500. MR0109796 (22 #681).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Lupanov, O. B. &quot;On asymptotic estimates of the number of graphs and networks with n edges.&quot; Problems of Cybemetics [in Russian], Moscow 4 (1960): 5-21.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. D. McIlroy, Calculation of numbers of structures of relations on finite sets, Massachusetts Institute of Technology, Research Laboratory of Electronics, Quarterly Progress Reports, No. 17, Sep. 15, 1955, pp. 14-22.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Milicevic and N. Trinajstic, &quot;Combinatorial Enumeration in Chemistry&quot;, Chem. Modell., Vol. 4, (2006), pp. 405-469.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. Oberschelp, Kombinatorische Anzahlbestimmungen in Relationen, Math. Ann., 174 (1967), 53-78.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Petkovsek and T. Pisanski, Counting disconnected structures: chemical trees, fullerenes, I-graphs and others, Croatica Chem. Acta, 78 (2005), 563-567.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. C. Read and R. J. Wilson, An Atlas of Graphs, Oxford, 1998.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. W. Robinson, Enumeration of non-separable graphs, J. Combin. Theory 9 (1970), 327-356.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. W. Robinson, Numerical implementation of graph counting algorithms, AGRC Grant, Math. Dept., Univ. Newcastle, Australia, 1976.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Turner, James; Kautz, William H. A survey of progress in graph theory in the Soviet Union. SIAM Rev. 12 1970 suppl. iv+68 pp. MR0268074 (42 #2973). See p. 18. - _N. J. A. Sloane_, Apr 08 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Keith M. Briggs, &lt;a href=&quot;/A000088/b000088.txt&quot;&gt;Table of n, a(n) for n = 0..75&lt;/a&gt; (From link below)</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. M. Larson, &lt;a href=&quot;https://www.sas.upenn.edu/polisci/sites/www.sas.upenn.edu.polisci/files/Larson_cheaters_Feb2014.pdf&quot;&gt;Cheating Because They Can: Social Networks and Norm Violators&lt;/a&gt;, 2014. See Footnote 11. - N. J. A. Sloane, Mar 20 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Absil and H Mélot, &lt;a href=&quot;http://arxiv.org/abs/1304.7993&quot;&gt;Digenes: genetic algorithms to discover conjectures about directed and undirected graphs&lt;/a&gt;, arXiv preprint arXiv:1304.7993, 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> Natalie Arkus, Vinothan N. Manoharan, Michael P. Brenner. &lt;a href=&quot;http://arxiv.org/abs/1011.5412&quot;&gt; Deriving Finite Sphere Packings&lt;/a&gt;, Nov 24, 2010. (See Table 1.)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Benjamin A. Blumer, Michael S. Underwood and David L. Feder, &lt;a href=&quot;http://arxiv.org/abs/1111.5032&quot;&gt;Single-qubit unitary gates by graph scattering&lt;/a&gt;, arXiv:1111.5032, 2011</CMP>
+    </omtext><omtext class="link">
+      <CMP> Keith M. Briggs, &lt;a href=&quot;http://keithbriggs.info/cgt.html&quot;&gt;Combinatorial Graph Theory&lt;/a&gt; [Gives first 140 terms]</CMP>
+    </omtext><omtext class="link">
+      <CMP> Gunnar Brinkmann, Kris Coolsaet, Jan Goedgebeur and Hadrien Melot, &lt;a href=&quot;http://arxiv.org/abs/1204.3549&quot;&gt;House of Graphs: a database of interesting graphs&lt;/a&gt;, arXiv preprint arXiv:1204.3549, 2012. - From _N. J. A. Sloane_, Oct 08 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Cameron, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL3/groups.html&quot;&gt;Sequences realized by oligomorphic permutation groups&lt;/a&gt;, J. Integ. Seqs. Vol. 3 (2000), #00.1.5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Flajolet and R. Sedgewick, &lt;a href=&quot;http://algo.inria.fr/flajolet/Publications/AnaCombi/anacombi.html&quot;&gt;Analytic Combinatorics&lt;/a&gt;, 2009; see page 105</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Friedman, &lt;a href=&quot;/A000088/a000088a.gif&quot;&gt;Illustration of small graphs&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harald Fripertinger, &lt;a href=&quot;http://www.mathe2.uni-bayreuth.de/frib/html/book/hyl00_41.html&quot;&gt;Graphs&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Hegarty, &lt;a href=&quot;http://arxiv.org/abs/1212.4303&quot;&gt;On the notion of balance in social network analysis&lt;/a&gt;, arXiv preprint arXiv:1212.4303, 2012. - From _N. J. A. Sloane_, Feb 02 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Hougardy, &lt;a href=&quot;http://www.or.uni-bonn.de/~hougardy/&quot;&gt;Home Page&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vladeta Jovovic, &lt;a href=&quot;/A063843/a063843.rtf&quot;&gt;Formulae for the number T(n,k) of n-multigraphs on k nodes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Maksim Karev, &lt;a href=&quot;http://arxiv.org/abs/1404.0026&quot;&gt;The space of framed chord diagrams as a Hopf module&lt;/a&gt;, arXiv preprint arXiv:1404.0026, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Brendan McKay, &lt;a href=&quot;http://www.csse.uwa.edu.au/~gordon/remote/graphs/graphcount&quot;&gt;Maple program&lt;/a&gt; (redirects to &lt;a href=&quot;http://staffhome.ecm.uwa.edu.au/~00013890/remote/graphs/graphcount&quot;&gt;here&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Pfeiffer, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL7/Pfeiffer/pfeiffer6.html&quot;&gt;Counting Transitive Relations&lt;/a&gt;, Journal of Integer Sequences, Vol. 7 (2004), Article 04.3.2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Marko Riedel, &lt;a href=&quot;http://www.roard.com/docs/cookbook/cbsu5.html#x8-170001.5&quot;&gt;Nonisomorphic graphs&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sage, &lt;a href=&quot;http://www.sagemath.org/doc/reference/graphs/sage/graphs/graph_generators.html&quot;&gt;Common Graphs (Graph Generators)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. S. Skiena, &lt;a href=&quot;http://www.cs.sunysb.edu/~algorith/files/generating-graphs.shtml&quot;&gt;Generating graphs&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000088/a000088.gif&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/SimpleGraph.html&quot;&gt;Simple Graph&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/ConnectedGraph.html&quot;&gt;Connected Graph&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/DegreeSequence.html&quot;&gt;Degree Sequence&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000088"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="binomial" cd="A000088"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, 2)/n!*(1+(n^2-n)/2^(n-1)+8*n!/(n-4)!*(3*n-7)*(3*n-9)/2^(2*n)+O(n^5/2^(5*n/2))) (see Harary, Palmer reference). - _Vladeta Jovovic_ and _Benoit Cloitre_, Feb 01 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000088"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="binomial" cd="A000088"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, 2)/n!*[1+2*n$2*2^{-n}+8/3*n$3*(3n-7)*2^{-2n}+64/3*n$4*(4n^2-34n+75)*2^{-3n}+O(n^8*2^{-4*n})] where n$k is the falling factorial: n$k=n(n-1)(n-2)...(n-k+1). - Keith Briggs (keith.briggs(AT)bt.com), Oct 24 2005
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         From David Pasino (davepasino(AT)yahoo.com), Jan 31 2009: (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000088"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="a" cd="A000088"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>, 2), where<OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000088"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>, t) is the number of t-uniform hypergraphs on<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> unlabeled nodes<OMOBJ>
+      <OMV name="cf"/>
+    </OMOBJ>.<OMOBJ>
+      <OMR xref="A000665"/>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="t"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMR xref="A051240"/>
+    </OMOBJ> for t = 4).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="a" cd="A000088"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>, t) = Sum_{c : 1*c_1+2*c_2+...+n*c_n=n) per(c)*2^f(c), where:
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         ..per(c) = 1/(Prod_{i=1..n} c_i!*i^c_i);
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         ..f(c) = (1/ord(c)) * Sum_{r=1..ord(c)} Sum_{x : 1*x_1+2*x_2...+t*x_t=t} Product_{k=1..t} binomial(y(r,<OMOBJ>
+      <OMV name="k"/>
+    </OMOBJ>; c), x_k);
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         ..ord(c) = LCM{i : c_i&gt;0};
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         ..y(r,<OMOBJ>
+      <OMV name="k"/>
+    </OMOBJ>; c) = Sum_{s|r : GCD(k, r/s)=1} s*c_(k*s) is the number of k-cycles of the<OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="r"/><OMV name="th"/>
+    </OMA>
+    </OMOBJ> power of<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> permutation of type<OMOBJ>
+      <OMV name="c"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         (End)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000088"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="binomial" cd="A000088"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMV name="see"/></OMA>
+    </OMA>
+    </OMOBJ> Flajolet and Sedgewick<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ>.<OMOBJ>
+      <OMI>106</OMI>
+    </OMOBJ>, Gross and Yellen,<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ>.<OMOBJ>
+      <OMI>519</OMI>
+    </OMOBJ>, etc.]. - _N. J. A. Sloane_, Nov 11 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For asymptotics see also Lupanov<OMOBJ>
+      <OMI>1959</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1960</OMI>
+    </OMOBJ>, also Turner and Kautz,<OMOBJ>
+      <OMV name="p"/>
+    </OMOBJ>.<OMOBJ>
+      <OMI>18</OMI>
+    </OMOBJ>. - _N. J. A. Sloane_, Apr 08 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> # To produce all graphs on 4 nodes, for example (from _N. J. A. Sloane_, Oct 07 2013):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(GraphTheory):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> L:=[NonIsomorphicGraphs](4,output=graphs,outputform=adjacency):</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Needs[&quot;Combinatorica`&quot;]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[ NumberOfGraphs[n], {n, 0, 19}] (*  Geoffrey Critzer, Mar 12 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage)</CMP>
+    </omtext><omtext class="program">
+      <CMP> def a(n):</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return len(list(graphs(n)))</CMP>
+    </omtext><omtext class="program">
+      <CMP> # - _Ralf Stephan_, May 30 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Partial sums of A002494.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A001349 (connected graphs), A002218, A006290.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Second column of A063841.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Row sums of A008406.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> core,nonn,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Harary gives an incorrect value for a(8). Compare A007149.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

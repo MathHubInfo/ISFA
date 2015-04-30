@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000055.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000055">
+          <assertion class="***** TTTT *****">
+      <CMP> M0791 N0299</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,2,3,6,11,23,47,106,235,551,1301,3159,7741,19320,48629,123867,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 317955,823065,2144505,5623756,14828074,39299897,104636890,279793450,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 751065460,2023443032,5469566585,14830871802,40330829030,109972410221,300628862480,823779631721,2262366343746,6226306037178</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of trees with n unlabeled nodes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, number of unlabeled 2-gonal 2-trees with n 2-gons.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Main diagonal of A054924.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Left border of A157905. - _Gary W. Adamson_, Mar 08 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Robert Munafo_, Jan 24 2010: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also counts classifications of K items that require exactly N-1 binary partitions; see Munafo link at A005646, also A171871 and A171872.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The 11 trees for N = 7 are illustrated at the Munafo web link.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Link to A171871/A171872 conjectured by Robert Munafo, then proved by Andrew Weimholt and Franklin T. Adams-Watters on Dec 29 2009. (End)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Bergeron, G. Labelle and P. Leroux, Combinatorial Species and Tree-Like Structures, Camb. 1998, p. 279.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. L. Biggs et al., Graph Theory 1736-1936, Oxford, 1976, p. 49.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Cayley, On the analytical forms called trees, with application to the theory of chemical combinations, Reports British Assoc. Advance. Sci. 45 (1875), 257-305 = Math. Papers, Vol. 9, 427-460 (see p. 459).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. R. Finch, Mathematical Constants, Cambridge, 2003, pp. 295-316.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. L. Gross and J. Yellen, eds., Handbook of Graph Theory, CRC Press, 2004; p. 526.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary, Graph Theory. Addison-Wesley, Reading, MA, 1969, p. 232.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, p. 58 and 244.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, Fundamental Algorithms, 3d Ed. 1997, pp. 386-88.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. C. Read and R. J. Wilson, An Atlas of Graphs, Oxford, 1998.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 138.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. J. Mathar and Robert G. Wilson v, &lt;a href=&quot;/A000055/b000055.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. J. Cameron, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL3/groups.html&quot;&gt;Sequences realized by oligomorphic permutation groups&lt;/a&gt;, J. Integ. Seqs. Vol. 3 (2000), #00.1.5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Cayley, &lt;a href=&quot;http://www.jstor.org/stable/2369158&quot;&gt;On the analytical forms called trees&lt;/a&gt;, Amer. J. Math., 4 (1881), 266-268.</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. R. Finch, &lt;a href=&quot;http://www.people.fas.harvard.edu/~sfinch/constant/otter/otter.html&quot;&gt;Otter's Tree Enumeration Constants&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Flajolet and R. Sedgewick, &lt;a href=&quot;http://algo.inria.fr/flajolet/Publications/books.html&quot;&gt;Analytic Combinatorics&lt;/a&gt;, 2009; see page 481</CMP>
+    </omtext><omtext class="link">
+      <CMP> Andrew Gainer-Dewar, &lt;a href=&quot;http://www.combinatorics.org/ojs/index.php/eljc/article/view/v19i4p45&quot;&gt;Gamma-Species and the Enumeration of k-Trees&lt;/a&gt;, Electronic Journal of Combinatorics, Volume 19 (2012), #P45. - From _N. J. A. Sloane_, Dec 15 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. D. Grant, &lt;a href=&quot;http://dx.doi.org/10.1007/BFb0057373&quot;&gt;The stability index of graphs&lt;/a&gt;, pp. 29-52 of Combinatorial Mathematics (Proceedings 2nd Australian Conf.), Lect. Notes Math. 403, 1974.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. Hoppe, A. Petrone, &lt;a href=&quot;http://arxiv.org/abs/1408.3644&quot;&gt;Integer sequence discovery from small graphs&lt;/a&gt;, arXiv preprint arXiv:1408.3644, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Elena V. Konstantinova and Maxim V. Vidyuk, &lt;a href=&quot;http://dx.doi.org/10.1021/ci025659y&quot;&gt;Discriminating tests of information and topological indices. Animals and trees&lt;/a&gt;, J. Chem. Inf. Comput. Sci. 43 (2003), 1860-1871. See Table 15, column 1 on page 1868.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Labelle, C. Lamathe and P. Leroux, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0312424&quot;&gt;Labeled and unlabeled enumeration of k-gonal 2-trees&lt;/a&gt;, arXiv:math/0312424 [math.CO], 2003.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Munafo, &lt;a href=&quot;http://mrob.com/pub/math/seq-a005646.html#trees&quot;&gt;Relation to Tree Graphs&lt;/a&gt; [From Robert Munafo, Jan 24 2010]</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Otter, &lt;a href=&quot;http://www.jstor.org/stable/1969046&quot;&gt;The number of trees&lt;/a&gt;, Ann. of Math. (2) 49 (1948), 583-599.</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. M. Palmer and A. J. Schwenk, &lt;a href=&quot;http://dx.doi.org/10.1016/0095-8956(79)90073-X&quot;&gt;On the number of trees in a random forest&lt;/a&gt;, J. Combin. Theory, B 27 (1979), 109-121.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sebastian Piec, Krzysztof Malarz and Krzysztof Kulakowski. &lt;a href=&quot;http://arXiv.org/abs/cond-mat/0501594&quot;&gt;How to count trees?&lt;/a&gt;, Internal. J. Modern Phys., C16 (2005) 1527-1534.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. Pippenger, &lt;a href=&quot;http://dx.doi.org/10.1137/S0895480100368463&quot;&gt;Enumeration of equicolorable trees&lt;/a&gt;, SIAM J. Discrete Math., 14 (2001), 93-115.</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. M. Rains and N. J. A. Sloane, &lt;a href=&quot;https://cs.uwaterloo.ca/journals/JIS/cayley.html&quot;&gt;On Cayley's Enumeration of Alkanes (or 4-Valent Trees)&lt;/a&gt;, J. Integer Sequences, Vol. 2 (1999), Article 99.1.1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. W. Robinason, &lt;a href=&quot;/A000055/a000055.png&quot;&gt;Letter to N. J. A. Sloane, Jul 29 1980&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000055/a000055.gif&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Tree.html&quot;&gt;Tree&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Robert Alan Wright, Bruce Richmond, Andrew Odlyzko, Brendan D. McKay, &lt;a href=&quot;http://cs.anu.edu.au/~bdm/papers/ConstantTimeTrees.pdf&quot;&gt;Constant Time Generation of Free Trees&lt;/a&gt;, SIAM Journal of Computing, vol. 15, no. 2, pp. 540-548, (1986).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000055"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="T" cd="A000055"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="T" cd="A000055"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="T" cd="A000055"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A000055"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+    </OMOBJ> is the g.f. for<OMOBJ>
+      <OMR xref="A000081"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(1) = 1 [o]; a(2) = 1 [o-o]; a(3) = 1 [o-o-o];</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4) = 2 [o-o-o and o-o-o-o]</CMP>
+    </assertion><assertion class="example">
+      <CMP> ........... | ..............</CMP>
+    </assertion><assertion class="example">
+      <CMP> ........... o ..............</CMP>
+    </assertion><assertion class="example">
+      <CMP> G.f. = 1 + x + x^2 + x^3 + 2*x^4 + 3*x^5 + 6*x^6 + 11*x^7 + 23*x^8 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> G000055 := series(1+G000081-G000081^2/2+subs(x=x^2,G000081)/2,x,31); A000055 := n-&gt;coeff(G000055,x,n); # where G000081 is g.f. for A000081 starting with n=1 term</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(numtheory): b:= proc(n) option remember; `if`(n&lt;=1, n, (add(add(d*b(d), d=divisors(j)) *b(n-j), j=1..n-1))/ (n-1)) end: a:= n-&gt; `if`(n=0, 1, b(n) -(add(b(k) *b(n-k), k=0..n) -`if`(irem(n, 2)=0, b(n/2), 0))/2):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..50);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # _Alois P. Heinz_, Aug 21 2008</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # Program to create b-file b000055.txt:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000081 := proc(n) option remember; local d, j;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> if n &lt;= 1 then n else</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     add(add(d*procname(d),d=numtheory[divisors](j))*procname(n-j),j=1..n-1)/(n-1);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> fi end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000055 := proc(nmax) local a81, n, t, a, j, i ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a81 := [seq(A000081(i), i=0..nmax)] ; a := [] ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for n from 0 to nmax do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     if n = 0 then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         t := 1+op(n+1, a81) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     else</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         t := op(n+1, a81) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     fi;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     if type(n, even) then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         t := t-op(1+n/2, a81)^2/2 ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         t := t+op(1+n/2, a81)/2 ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     fi;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     for j from 0 to (n-1)/2 do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         t := t-op(j+1, a81)*op(n-j+1, a81) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     od:</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     a := [op(a), t] ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> od:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> L := A000055(1000) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> #  _R. J. Mathar_, Mar 06 2009</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> s[ n_, k_ ] := s[ n, k ] = a[ n + 1 - k ] + If[ n &lt; 2k, 0, s[ n - k, k ] ]; a[ 1 ] = 1; a[ n_ ] := a[ n ] = Sum[ a[ i ]s[ n - 1, i ]i, {i, 1, n - 1} ]/(n - 1); Table[ a[ i ] - Sum[ a[ j ]a[ i - j ], {j, 1, i/2} ] + If[ OddQ[ i ], 0, a[ i/2 ](a[ i/2 ] + 1)/2 ], {i, 1, 50} ] (* _Robert A. Russell_ *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> b[0] = 0; b[1] = 1; b[n_] := b[n] = Sum[d*b[d]*b[n-j], {j, 1, n-1}, {d, Divisors[j]}]/(n-1); a[0] = 1; a[n_] := b[n] - (Sum[b[k]*b[n-k], {k, 0, n}] - If[Mod[n, 2] == 0, b[n/2], 0])/2; Table[a[n], {n, 0, 50}] (* _Jean-François Alcover_, Apr 09 2014, after _Alois P. Heinz_ *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A, A1, an, i, t); if( n&lt;2, n&gt;=0, an = Vec(A = A1 = 1 + O('x^n)); for(m=2, n, i=m\2; an[m] = sum(k=1, i, an[k] * an[m-k]) + (t = polcoeff( if( m%2, A *= (A1 - 'x^i)^-an[i], A), m-1))); t + if( n%2==0, binomial( -polcoeff(A, i-1), 2)))}; /* _Michael Somos_ */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> N=66;  A=vector(N+1, j, 1);</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (n=1, N, A[n+1] = 1/n * sum(k=1, n, sumdiv(k, d, d * A[d]) * A[n-k+1] ) );</CMP>
+    </omtext><omtext class="program">
+      <CMP> A000081=concat([0], A);</CMP>
+    </omtext><omtext class="program">
+      <CMP> H(t)=subst(Ser(A000081, 't), 't, t);</CMP>
+    </omtext><omtext class="program">
+      <CMP> x='x+O('x^N);</CMP>
+    </omtext><omtext class="program">
+      <CMP> Vec( 1 + H(x) - 1/2*( H(x)^2 - H(x^2) ) )</CMP>
+    </omtext><omtext class="program">
+      <CMP> \\ _Joerg Arndt_, Jul 10 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) N := 30; P&lt;x&gt; := PowerSeriesRing(Rationals(),N+1); f := func&lt; A | x*&amp;*[Exp(Evaluate(A,x^k)/k) : k in [1..N]]&gt;; G := x; for i in [1..N] do G := f(G); end for; G000081 := G; G000055 := 1 + G - G^2/2 + Evaluate(G,x^2)/2; A000055 := Eltseq(G000055); // Geoff Baileu (geoff(AT)maths.usyd.edu.au), Nov 30 2009</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000676 (centered trees), A000677 (bicentered trees), A027416 (trees with a centroid), A102011 (trees with a bicentroid).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000081 (rooted trees), A000272 (labeled trees), A000169 (labeled rooted trees), A212809 (radius of convergence).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A036361 (labeled 2-trees), A036362 (labeled 3-trees), A036506 (labeled 4-trees), A054581 (unlabeled 2-trees).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A157904, A157905. - _Gary W. Adamson_, Mar 08 2009</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Related to A005646; see A171871 and A171872. - _Robert Munafo_, Jan 24 2010</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A051491, A086308.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice,core</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

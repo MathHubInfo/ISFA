@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000767.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000767">
+          <assertion class="***** TTTT *****">
+      <CMP> M5017 N2162</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 16,192,2016,20160,197940,1930944,18805488,183156320,1785303660,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 17421627280</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of n-step self-avoiding walks on f.c.c. lattice ending at point with x = 2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. L. Martin, The exact enumeration of self-avoiding walks on a lattice, Proc. Camb. Phil. Soc., 58 (1962), 92-101.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Fa#fcc&quot;&gt;Index entries for sequences related to f.c.c. lattice&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000765, A000766, A000768, A001336, A227511.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,walk,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited and extended by _Joseph Myers_, Jul 14 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

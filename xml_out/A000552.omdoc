@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000552.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000552">
+          <assertion class="***** TTTT *****">
+      <CMP> M5159 N2241</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 24,300,3360,38850,475776,6231960,87530400,1316954430,21173760960,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 362670636900,6596214691248,126980000240730,2579214238608000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 55118036257959600,1235935135837111104,29009023670878484598</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of labeled rooted trees of height 3 with n nodes.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, Enumeration of trees by height and diameter, IBM J. Res. Dev. 4 (1960), 473-478.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: x*(exp(x*exp(x*exp(x)))-exp(x*exp(x))). - _Vladeta Jovovic_, Jan 29 2008
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> ht := proc(m) local i; [ T0,{seq(T.i=Prod(Z,Set(T.(i+1))),i=0..m-1),T.m=Z},labeled ] end: M[ 5159 ] := n -&gt; count(ht(3),size=n)-count(ht(2),size=n): seq(M[ 5159 ](n), n=4..19);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> With[{nn=20},Drop[CoefficientList[Series[x(Exp[x Exp[x Exp[x]]]- Exp[x Exp[x]]),{x,0,nn}],x]Range[0,nn]!,4]] (* _Harvey P. Dale_, Oct 01 2011 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 4,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Paul Zimmermann_, Mar 15 1996</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

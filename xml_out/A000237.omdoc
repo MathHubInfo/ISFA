@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000237.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000237">
+          <assertion class="***** TTTT *****">
+      <CMP> M2754 N1107</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,3,8,26,84,297,1066,3976,15093,58426,229189,910127,3649165,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 14756491,60103220,246357081,1015406251,4205873378,17497745509,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 73084575666,306352303774,1288328048865,5433980577776,22982025183983</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of mixed Husimi trees with n nodes; or rooted polygonal cacti with bridges.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Christian G. Bower, &lt;a href=&quot;/A000237/b000237.txt&quot;&gt;Table of n, a(n) for n=0..500&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. G. Bower, &lt;a href=&quot;/transforms2.html&quot;&gt;Transforms (2)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. W. Ford and G. E. Uhlenbeck, &lt;a href=&quot;http://www.jstor.org/stable/89494&quot;&gt;Combinatorial problems in the theory of graphs III&lt;/a&gt;, Proc. Nat. Acad. Sci. USA, 42 (1956), 529-535.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ca#cacti&quot;&gt;Index entries for sequences related to cacti&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Shifts left under transform<OMOBJ>
+      <OMV name="T"/>
+    </OMOBJ> where Ta = EULER(BIK(a)).<OMOBJ>
+      <OMV name="See"/>
+    </OMOBJ> Transforms links.] - _Christian G. Bower_, Nov 15 1998
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A000083, A000314, A035082, A035349-A035357.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,eigen,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Christian G. Bower_, Nov 15 1998</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

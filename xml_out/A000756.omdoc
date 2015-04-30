@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000756.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000756">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,5,13,41,157,699,3561,20401,129881,909523,6948269,57504201,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 512516565,4894172027,49851629137,539521049441,6182455849009,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 74781598946211,952148890494165,12729293006112121,178281831561868013</CMP>
+    </assertion><omtext class="name">
+      <CMP> Boustrophedon transform of sequence 1,1,0,0,0,0,...</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Ludwig Seidel, Über eine einfache Entstehungsweise der Bernoulli'schen Zahlen und einiger verwandten Reihen, Sitzungsberichte der mathematisch-physikalischen Classe der königlich bayerischen Akademie der Wissenschaften zu München, volume 7 (1877), 157-187.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A000756/b000756.txt&quot;&gt;Table of n, a(n) for n = 0..400&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. N. Gladkovskii, &lt;a href=&quot;http://arxiv.org/abs/1208.2243&quot;&gt;Continued fraction expansion for function sec(x) + tan(x)&lt;/a&gt;,  arXiv:1208.2243v1 [math.HO], Aug 09 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. N. Gladkovskii, &lt;a href=&quot;https://www.researchgate.net/publication/232870963&quot;&gt;On the continued fraction expansion for functions 1/sin(x) + cot(x) and sec(x) + tan(x)&lt;/a&gt;, Nov 12 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> Peter Luschny, &lt;a href=&quot;http://oeis.org/wiki/User:Peter_Luschny/SeidelTransform&quot;&gt;An old operation on sequences: the Seidel transform&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Millar, N. J. A. Sloane and N. E. Young, A new operation on sequences: the Boustrophedon on transform, J. Combin. Theory, 17A 44-54 1996 (&lt;a href=&quot;http://neilsloane.com/doc/bous.txt&quot;&gt;Abstract&lt;/a&gt;, &lt;a href=&quot;http://neilsloane.com/doc/bous.pdf&quot;&gt;pdf&lt;/a&gt;, &lt;a href=&quot;http://neilsloane.com/doc/bous.ps&quot;&gt;ps&lt;/a&gt;).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Boustrophedon_transform&quot;&gt;Boustrophedon_transform&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Bo#boustrophedon&quot;&gt;Index entries for sequences related to boustrophedon transform&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: (1+x)*( tan(x) + sec(x) ).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         From _Sergei N. Gladkovskii_ Dec 03 2012 (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: (1+x)*( 1 + x/U(0) ); U(k)= 4k + 1 - x/(2-x/(4k + 3 + x/(2+x/U(k+1) )));(continued fraction, , 4-step).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: (1+x)*(1 + 2*x/(U(0) - x) ) where U(k)= 4*k + 2 - x^2/U(k+1);(continued fraction, 1-step).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         (End)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000756"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMS name="Pi"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2</OMI><OMS name="Pi"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Vaclav Kotesovec_, Oct 02 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For n &gt; 0: a(n) = A000111(n) + n*A000111(n-1). - _Reinhard Zumkeller_, Nov 03 2013
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> CoefficientList[Series[(1+x)*(Tan[x]+1/Cos[x]), {x, 0, 20}], x]* Range[0, 20]! (* _Vaclav Kotesovec_, Oct 02 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) Algorithm of L. Seidel (1877)</CMP>
+    </omtext><omtext class="program">
+      <CMP> def A000756_list(n) :</CMP>
+    </omtext><omtext class="program">
+      <CMP>     R = []; A = {-1:1, 0:1}; k = 0; e = 1</CMP>
+    </omtext><omtext class="program">
+      <CMP>     for i in (0..n) :</CMP>
+    </omtext><omtext class="program">
+      <CMP>         Am = 0; A[k + e] = 0; e = -e</CMP>
+    </omtext><omtext class="program">
+      <CMP>         for j in (0..i) : Am += A[k]; A[k] = Am; k += e</CMP>
+    </omtext><omtext class="program">
+      <CMP>         R.append(A[-i//2] if i%2 == 0 else A[i//2])</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return R</CMP>
+    </omtext><omtext class="program">
+      <CMP> A000756_list(22) # Peter Luschny, May 27 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> x='x+O('x^66);</CMP>
+    </omtext><omtext class="program">
+      <CMP> Vec(serlaplace((1+x)*(tan(x)+ 1/cos(x))))</CMP>
+    </omtext><omtext class="program">
+      <CMP> /* _Joerg Arndt_, May 28 2012 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000756 n = sum $ zipWith (*) (a109449_row n) (1 : 1 : [0, 0 ..])</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Nov 03 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A109449.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

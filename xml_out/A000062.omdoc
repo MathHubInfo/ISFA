@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000062.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000062">
+          <assertion class="***** TTTT *****">
+      <CMP> M0948 N0355</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,5,6,8,9,11,12,13,15,16,18,19,20,22,23,25,26,27,29,30,32,33,34,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 36,37,38,40,41,43,44,45,47,48,50,51,52,54,55,57,58,59,61,62,64,65,66,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 68,69,71,72,73,75,76,77,79,80,82,83,84,86,87,89,90,91,93,94,96,97,98</CMP>
+    </assertion><omtext class="name">
+      <CMP> A Beatty sequence: a(n) = floor(n/(e-2)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The g.f. (1+z+2*z^2+z^3+z^4+z^5)/(z^4+z^3+z^2+z+1)/(z-1)^2 conjectured by _Simon Plouffe_ in his 1992 dissertation is wrong.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Christian G. Bower, &lt;a href=&quot;/A000062/b000062.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> I. G. Connell, &lt;a href=&quot;http://dx.doi.org/10.4153/CMB-1959-025-0&quot;&gt;Some properties of Beatty sequences I&lt;/a&gt;, Canad. Math. Bull., 2 (1959), 190-197.</CMP>
+    </omtext><omtext class="link">
+      <CMP> I. G. Connell, &lt;a href=&quot;http://dx.doi.org/10.4153/CMB-1960-004-2&quot;&gt;Some properties of Beatty sequences II&lt;/a&gt;, Canad. Math. Bull., 3 (1960), 17-22.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Lambek and L. Moser, &lt;a href=&quot;http://www.jstor.org/stable/2308078&quot;&gt;Inverse and complementary sequences of natural numbers&lt;/a&gt;, Amer. Math. Monthly, 61 (1954), 454-458.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Lambek and L. Moser, &lt;a href=&quot;http://dx.doi.org/10.4153/CMB-1959-013-x&quot;&gt;On some two way classifications of integers&lt;/a&gt;, Canad. Math. Bull. 2 (1959), 85-89.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Be#Beatty&quot;&gt;Index entries for sequences related to Beatty sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for n from 1 to 200 do printf(`%d,`,floor( n/(exp(1)-2))) od:</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Floor[n/(E-2)],{n,100}] (* _Vladimir Joseph Stephan Orlovsky_, Jan 24 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=floor( n/(exp(1)-2) ) \\ Hauke Worpel (thebigh(AT)outgun.com), Jun 11 2008</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Floor( n/(Exp(1)-2) ): n in [1..80]]; // _Vincenzo Librandi_, Mar 27 2015</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A194807 (1/(e-2)).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _James A. Sellers_, Feb 19 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

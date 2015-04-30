@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000615.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000615">
+          <assertion class="***** TTTT *****">
+      <CMP> M0379 N0142 N0747</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,8,72,1536,86080,14487040,8274797440,17494930604032</CMP>
+    </omtext><omtext class="name">
+      <CMP> Threshold functions of exactly n variables.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Muroga, Threshold Logic and Its Applications. Wiley, NY, 1971, p. 38, Table 2.3.2. - Row 4.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Muroga, I. Toda and M. Kondo, Majority decision functions of up to six variables, Math. Comp., 16 (1962), 459-472.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Muroga, T. Tsuboi and C. R. Baugh, Enumeration of threshold functions of eight variables, IEEE Trans. Computers, 19 (1970), 818-825.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence in two entries, N0142 and N0747).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000609.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_. Entry revised by _N. J. A. Sloane_, Jun 11 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000280.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000280">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,3,11,38,1369,56241,2565782650,177895665388171,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16891164530321501264425013171,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5629840598310484749297545401724540333537382</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = a(n-1) + a(n-2)^3.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Next term has 85 digits. - _Harvey P. Dale_, Jun 20 2011</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000280/b000280.txt&quot;&gt;Table of n, a(n) for n = 0..17&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000280 := proc(n) option remember; if n &lt;= 1 then n else A000280(n-2)^3+A000280(n-1); fi; end;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a[ -2]:=0: a[ -1]:=1:a[0]:=1: a[1]:=2: for n from 2 to 10 do a[n]:=a[n-1]+a[n-2]^3 od: seq(a[n], n=-2..10);# [From _Zerinvary Lajos_, Mar 19 2009]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RecurrenceTable[{a[1]==0,a[2]==1,a[n]==a[n-1]+a[n-2]^3},a[n],{n,15}] (* _Harvey P. Dale_, Jun 20 2011 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> Stephen J. Greenfield (greenfie(AT)math.rutgers.edu)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

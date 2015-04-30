@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000902.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000902">
+          <assertion class="***** TTTT *****">
+      <CMP> M2853 N1147</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,10,38,156,692,3256,16200,84496,460592,2611104,15355232,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 93376960,585989952,3786534784,25152768128,171474649344,1198143415040,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8569374206464,62668198184448,468111364627456,3568287053001728</CMP>
+    </assertion><omtext class="name">
+      <CMP> E.g.f.: (1/2)*(exp(2x + x^2) + 1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of solutions to the rook problem on a 2n X 2n board having a certain symmetry group (see Robinson for details).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> One more than the number of ordered pairs of minimally intersecting partitions such that p consists of exactly two blocks.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. C. Larson, The number of essentially different nonattacking rook arrangements, J. Recreat. Math., 7 (No. 3, 1974), circa pages 180-181.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. W. Robinson, Counting arrangements of bishops, pp. 198-214 of Combinatorial Mathematics IV (Adelaide 1975), Lect. Notes Math., 560 (1976).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000902/b000902.txt&quot;&gt;Table of n, a(n) for n=0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Lucas, &lt;a href=&quot;http://gallica.bnf.fr/ark:/12148/bpt6k29021h&quot;&gt;Th\'{e}orie des Nombres&lt;/a&gt;, Gauthier-Villars, Paris, 1891, Vol. 1, p. 222.</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. Pittel, &lt;a href=&quot;http://www.combinatorics.org&quot;&gt;Where the typical set partitions meet and join&lt;/a&gt;, Electron. J. of Combin. 7, R5.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000902"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A000902"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A000902"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ>. - _N. J. A. Sloane_, Sep 23 2006
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000902"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="e"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA><OMV name="Sum"/><OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="l"/>
+      <OMI>0</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, 1/l! * {(1+x)^l-1}^2].
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For asymptotics see the Robinson paper.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         But the asymptotic formula in the Robinson paper is wrong<OMOBJ>
+      <OMA>
+      <OMS name="see" cd="A000902"/>
+      <OMR xref="A000898"/>
+    </OMA>
+    </OMOBJ>, discussion from Oct 01 2013). - _Vaclav Kotesovec_, Aug 04 2014
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000902"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="exp" cd="A000902"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sqrt" cd="A000902"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Vaclav Kotesovec_, Aug 04 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> (1/2)*(exp(2*x + x^2) + 1);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> For Maple program see A000903.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> n = 22; CoefficientList[ Series[(1/2)*(Exp[2*x+x^2] + 1), {x, 0, n}], x] * Table[k!, {k, 0, n}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (* _Jean-François Alcover_, May 18 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000902 n = a000902_list !! n</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000902_list = 1 : 1 : 3 : map (* 2) (zipWith (+)</CMP>
+    </omtext><omtext class="program">
+      <CMP>    (drop 2 a000902_list) (zipWith (*) [2..] $ tail a000902_list))</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Sep 10 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Equals 1/2 * A000898(n) for n&gt;0.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Simon Plouffe_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

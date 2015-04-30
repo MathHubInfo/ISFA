@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000502.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000502">
+          <assertion class="***** TTTT *****">
+      <CMP> M5280 N2298</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 42,1586,31388,442610,5030004,49145460,429166584,3435601554,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 25658464260,181055975100,1218601601672,7880146275092,49238911113224,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 298652277299880,1764885293279472,10192638073849554,57674223198273444,320430129184331628,1751190732477786600,9428906326013866076,50084560529695713560,262767521450593566680,1363049865350949194640,6997091408385651436500,35574379172542272659688,179258908485659235515352,895827468451622607205200,4442385594472223942397672,21871555968464155937448080,106958771000949466098945104,519767712768164680745022944,2510872436703684655047207762,12061854932881499884016376036,57638984943605113572323531340,274068077621341051602455876520</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of genus 0 rooted maps with 6 faces with n vertices.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. R. S. Walsh, Combinatorial Enumeration of Non-Planar Maps. Ph.D. Dissertation, Univ. of Toronto, 1971.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tutte, W. T.; &lt;a href=&quot;http://dx.doi.org/10.1090/S0002-9904-1968-11877-4&quot;&gt;On the enumeration of planar maps&lt;/a&gt;. Bull. Amer. Math. Soc. 74 1968 64-74.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. R. S. Walsh and A. B. Lehman, &lt;a href=&quot;http://dx.doi.org/10.1016/0095-8956(72)90056-1&quot;&gt;Counting rooted maps by genus&lt;/a&gt;, J. Comb. Thy B13 (1972), 122-141 and 192-218.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="x" cd="A000502"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A000502"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>105</OMI><OMA><OMS name="times"/><OMI>92</OMI><OMV name="x"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>84</OMI><OMA><OMS name="times"/><OMI>76</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A000502"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+      <OMI>7</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Sean A. Irvine_, Nov 14 2010
+      </CMP>
+      </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 5,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Nov 14 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

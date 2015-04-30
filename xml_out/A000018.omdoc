@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000018.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000018">
+          <assertion class="***** TTTT *****">
+      <CMP> M0331 N0126</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,2,4,8,13,25,44,83,152,286,538,1020,1942,3725,7145,13781,26627,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 51572,100099,194633,379037,739250,1443573,2822186,5522889,10818417,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 21209278,41613288,81705516,160532194,315604479,620834222,1221918604,2406183020,4740461247</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of positive integers &lt;= 2^n of form x^2 + 16y^2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Shanks and L. P. Schmid, Variations on a theorem of Landau. Part I, Math. Comp., 20 (1966), 551-569.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Qua#quadpop&quot;&gt;Index entries for sequences related to populations of quadratic forms&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=local(A);if(n&lt;0,0,A=qfrep([1,0;0,16],2^n);sum(k=1,2^n,A[k]!=0))</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _David W. Wilson_, Feb 07 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition corrected by _Sean A. Irvine_, Sep 09 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

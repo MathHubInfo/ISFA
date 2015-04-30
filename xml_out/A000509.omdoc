@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000509.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000509">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,6,8,10,12,13,14,14,17,21,22,24</CMP>
+    </omtext><omtext class="name">
+      <CMP> Size of second largest n-arc in PG(2,q), where q runs through the primes and prime powers &gt;= 7.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sufficient data to extend this through q = 2333 is in Davydov. New upper bounds on the smallest size of a complete arc in the projective plane PG(2,q) are obtained for 841 &lt;= q &lt;= 2333. The bounds are obtained by computer search using a randomized greedy algorithm. Also new sizes of complete arcs are presented. [From _Jonathan Vos Post_, Apr 18 2010]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. W. P. Hirschfeld, Complete arcs, Discr. Math., 174 (1997), 177-184.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. W. P. Hirschfeld and L. Storme, The packing problem in statistics, coding theory and finite projective spaces, J. Statist. Plann. Inference 72 (1998), no. 1-2, 355-380.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Keri, Types of superregular matrices and the number of n-arcs and complete n-arcs in PG(r,q), Journal of Combinatorial Designs, Vol. 14 (2006), pp. 363-390.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alexander A. Davydov, Giorgio Faina, Stefano Marcugini, Fernanda Pambianco, &lt;a href=&quot;http://arxiv.org/abs/1004.2817&quot;&gt;New sizes of complete arcs in PG(2,q)&lt;/a&gt;, April 16, 2010. [From _Jonathan Vos Post_, Apr 18 2010]</CMP>
+    </omtext><assertion class="example">
+      <CMP> m'(31)=22 because there are no complete n-arcs in PG(2,31) for 23&lt;=n&lt;=31</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000510.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000961.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,more,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> J. W. P. Hirschfeld [ jwph(AT)sussex.ac.uk ]</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition clarified by G. Keri (keri(AT)sztaki.hu), Jan 03 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> New arXiv paper has data sufficient for a b-list. [From _Jonathan Vos Post_, Apr 18 2010]</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000541.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000541">
+          <assertion class="***** TTTT *****">
+      <CMP> M5394 N2343</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,129,2316,18700,96825,376761,1200304,3297456,8080425,18080425,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 37567596,73399404,136147921,241561425,412420800,680856256,1091194929,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1703414961,2597286700,3877286700,5678375241,8172733129,11577558576,16164030000,22267545625</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sum of 7th powers: 1^7 + 2^7 + ... + n^7.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is divisible by A000537(n) if and only n is congruent to 1 mod 3 (see A016777) - _Artur Jasinski_, Oct 10 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This sequence is related to A000540 by a(n) = n*A000540(n)-sum(A000540(i), i=0..n-1). - _Bruno Berselli_, Apr 26 2010</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 815.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 155.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000541/b000541.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., &lt;a href=&quot;http://www.nrbook.com/abramowitz_and_stegun/&quot;&gt;Handbook of Mathematical Functions&lt;/a&gt;, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy].</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. Berselli, A description of the recursive method in Comments lines: website &lt;a href=&quot;http://www.lanostra-matematica.org/2008/12/sequenze-numeriche-e-procedimenti.html&quot;&gt;Matem@ticamente&lt;/a&gt; (in Italian).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_09&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (9,-36,84,-126,126,-84,36,-9,1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000541"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>2</OMI>
+    </OMA></OMA><OMI>24</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000541"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="Sqrt" cd="A000541"/>
+      <OMA>
+      <OMS name="Sum" cd="A000541"/>
+      <OMA>
+      <OMS name="Sum" cd="A000541"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="i"/><OMV name="j"/></OMA>
+      <OMI>7</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="i"/>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>, n}],<OMOBJ>
+      <OMV name="j"/>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>, n}]]. - _Alexander Adamchuk_, Oct 26 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Jacobi formula: a(n) = 2(A000217(n))^4 - A000539(n). - _Artur Jasinski_, Oct 10 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>120</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>1191</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2416</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1191</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>120</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>9</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Colin Barker_, May 25 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000541"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="a" cd="A000541"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>28</OMI><OMA>
+      <OMS name="a" cd="A000541"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>56</OMI><OMA>
+      <OMS name="a" cd="A000541"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>70</OMI><OMA>
+      <OMS name="a" cd="A000541"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>56</OMI><OMA>
+      <OMS name="a" cd="A000541"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>28</OMI><OMA>
+      <OMS name="a" cd="A000541"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="a" cd="A000541"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>7</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A000541"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>8</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMI>5040</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Ant King_, Sep 24 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = -sum(j=1..7, j*s(n+1,n+1-j)*S(n+7-j,n)), where<OMOBJ>
+      <OMA>
+      <OMS name="s" cd="A000541"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="S" cd="A000541"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMOBJ> are the Stirling numbers of the first kind and the second kind, respectively. - _Mircea Merca_, Jan 25 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> a[0]:=0:a[1]:=1:for n from 2 to 50 do a[n]:=a[n-1]+n^7 od: seq(a[n], n=0..25); # _Zerinvary Lajos_, Feb 22 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Sum[k^7, {k, 1, n}], {n, 0, 100}] (* _Artur Jasinski_, Oct 10 2007 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> s = 0; lst = {s}; Do[s += n^7; AppendTo[lst, s], {n, 1, 30, 1}]; lst (* _Zerinvary Lajos_, Jul 12 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=n^2*(n+1)^2*(3*n^4+6*n^3-n^2-4*n+2)/24 \\ _Edward Jiang_, Sep 10 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n) = sum(i=1, n, i^7); \\ _Michel Marcus_, Sep 11 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Python)</CMP>
+    </omtext><omtext class="program">
+      <CMP> A000541_list, m = [0], [5040, -15120, 16800, -8400, 1806, -126, 1, 0, 0]</CMP>
+    </omtext><omtext class="program">
+      <CMP> for _ in range(10**2):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....for i in range(8):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........m[i+1] += m[i]</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....A000541_list.append(m[-1]) # _Chai Wah Wu_, Nov 05 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Row 7 of array A103438.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000217, A000537, A000539.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

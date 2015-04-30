@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000012.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000012">
+          <assertion class="***** TTTT *****">
+      <CMP> M0003</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> The simplest sequence of positive numbers: the all 1's sequence.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of ways of writing n as a product of primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of ways of writing n as a sum of distinct powers of 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Continued fraction for golden ratio A001622.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Partial sums of A000007 (characteristic function of 0). - _Jeremy Gardiner_, Sep 08 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> An example of an infinite sequence of positive integers whose distinct pairwise concatenations are all primes! - Don Reble, Apr 17 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Binomial transform of A000007; inverse binomial transform of A000079. - _Philippe Deléham_, Jul 07 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A063524(a(n)) = 1. - _Reinhard Zumkeller_, Oct 11 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n &gt;= 0, let M(n) be the matrix with first row = (n n+1) and 2nd row = (n+1 n+2). Then a(n) = absolute value of det(M(n)). - _K.V.Iyer_, Apr 11 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The partial sums give the natural numbers (A000027). - _Daniel Forgues_, May 08 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Enrique Pérez Herrero_, Sep 04 2009: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is also tau_1(n) where tau_2(n) is A000005.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is a completely multiplicative arithmetical function.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is both square free and a perfect square. See A005117 and A000290. (End)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also smallest divisor of n. - _Juri-Stepan Gerasimov_, Sep 07 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also decimal expansion of 1/9. - _Enrique Pérez Herrero_, Sep 18 2009; corrected by _Klaus Brockhaus_, Apr 02 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is also the number of complete graphs on n nodes. - Pablo Chavez (pchavez(AT)cmu.edu), Sep 15 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Totally multiplicative sequence with a(p) = 1 for prime p. Totally multiplicative sequence with a(p) = a(p-1) for prime p. - _Jaroslav Krizek_, Oct 18 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> n-th prime minus phi(prime(n)); number of divisors of n-th prime minus number of perfect partitions of n-th prime; the number of perfect partitions of n-th prime number; the number of perfect partitions of n-th non-composite number. - _Juri-Stepan Gerasimov_, Oct 26 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For all n&gt;0, the sequence of limit values for a(n) = n!Sum[k=n..inf, k/(k+1)!]. Also, a(n) = n^0. - _Harlan J. Brothers_, Nov 01 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is also the number of 0-regular graphs on n vertices. - _Jason Kimberley_, Nov 07 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Differences between consecutive n. - _Juri-Stepan Gerasimov_, Dec 05 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Matthew Vandermast_, Oct 31 2010: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1) When sequence is read as a regular triangular array, T(n,k) is the coefficient of the k-th power in the expansion of (x^(n+1)-1)/(x-1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 2) Sequence can also be read as a uninomial array with rows of length 1, analogous to arrays of binomial, trinomial, etc., coefficients. In a q-nomial array, T(n,k) is the coefficient of the k-th power in the expansion of ((x^q -1)/(x-1))^n, and row n has a sum of q^n and a length of (q-1)*n + 1. (End)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The number of maximal self-avoiding walks from the NW to SW corners of a 2 X n grid.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> When considered as a rectangular array, A000012 is a member of the chain of accumulation arrays that includes the multiplication table A003991 of the positive integers. The chain is ... &lt; A185906 &lt; A000007 &lt; A000012 &lt; A003991 &lt; A098358 &lt; A185904 &lt; A185905 &lt; ... (See A144112 for the definition of accumulation array.) - _Clark Kimberling_, Feb 06 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A007310(n+1) (Modd 3) := A193680(A007310(n+1)), n&gt;=0. For general Modd n (not to be confused with mod n) see a comment on A203571. The nonnegative members of the three residue classes Modd 3, called [0], [1], and [2], are shown in the array A088520, if there the third row is taken as class  [0] after inclusion of 0. - _Wolfdieter Lang_, Feb 09 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let M = Pascal's triangle without 1's (A014410) and V = a variant of the Bernoulli numbers A027641 but starting [1/2, 1/6, 0, -1/30,...]. Then M*V = [1, 1, 1, 1,...]. - _Gary W. Adamson_, Mar 05 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> As a lower triangular array, T is an example of the fundamental generalized factorial matrices of A133314. Multiplying each n-th diagonal by t^n gives M(t) = I/(I-t*S) = I + t*S + (t*S)^2 + ... where S is the shift operator A129184, and T = M(1). The inverse of M(t) is obtained by multiplying the first sub-diagonal of T by -t and the other sub-diagonals by zero, so A167374 is the inverse of T. Multiplying by t^n/n! gives exp(t*S) with inverse exp(-t*S). - _Tom Copeland_, Nov 10 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The original definition of the meter was one ten-millionth of the distance from the Earth's equator to the North Pole. According to that historical definition, the length of one degree of latitude, that is 60 nautical miles, would be exactly 111111.111... meters. - _Jean-François Alcover_, Jun 02 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Deficiency of 2^n. - _Omar E. Pol_, Jan 30 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Consider n &gt;= 1 nonintersecting spheres each with surface area S. Define point p on sphere S_i to be a &quot;public point&quot; if and only if there exists a point q on sphere S_j, j != i, such that line segment pq INTERSECT S_i = {p} and pq INTERSECT S_j = {q}; otherwise, p is a &quot;private point.&quot; The total surface area composed of exactly all private points on all n spheres is a(n)*S = S. (&quot;The Private Planets Problem&quot; in Zeitz). - _Rick L. Shepherd_, May 29 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n&gt;0, digital roots of centered 9-gonal numbers (A060544). - _Colin Barker_, Jan 30 2015</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Paul Zeitz, The Art and Craft of Mathematical Problem Solving, The Great Courses, The Teaching Company, 2010 (DVDs and Course Guidebook, Lecture 6: &quot;Pictures, Recasting, and Points of View&quot;, pp. 32 - 34).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000012/b000012.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt; [Useful when plotting one sequence against another. See Swayne link.]</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, Omar E. Pol and N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/tooth.pdf&quot;&gt;The Toothpick Sequence and Other Sequences from Cellular Automata&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harlan Brothers, &lt;a href=&quot;http://functions.wolfram.com/GammaBetaErf/Factorial/23/01/0002/&quot;&gt;Factorial: Summation (formula 06.01.23.0002)&lt;/a&gt;, The Wolfram Functions Site [From _Harlan J. Brothers_, Nov 01 2009]</CMP>
+    </omtext><omtext class="link">
+      <CMP> Daniele A. Gewurz and Francesca Merola, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL6/Gewurz/gewurz5.html&quot;&gt;Sequences realized as Parker vectors of oligomorphic permutation groups&lt;/a&gt;, J. Integer Seqs., Vol. 6, 2003.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. M. Hinz, S. Klavžar, U. Milutinović, C. Petr, &lt;a href=&quot;http://dx.doi.org/10.1007/978-3-0348-0237-6&quot;&gt;The Tower of Hanoi - Myths and Maths&lt;/a&gt;, Birkhäuser 2013. See page 172. &lt;a href=&quot;http://tohbook.info&quot;&gt;Book's website&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000012/a000012.html&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/toothlist.html&quot;&gt;Catalog of Toothpick and Cellular Automata Sequences in the OEIS&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Michael Z. Spivey and Laura L. Steil, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL9/Spivey/spivey7.html&quot;&gt;The k-Binomial Transforms and the Hankel Transform&lt;/a&gt;, Journal of Integer Sequences, Vol. 9 (2006), Article 06.1.1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. F. Swayne, &lt;a href=&quot;/plot2.html&quot;&gt;Plot pairs of sequences in the OEIS&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/GoldenRatio.html&quot;&gt;Golden Ratio&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/ChromaticNumber.html&quot;&gt;Chromatic Number&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/GraphCycle.html&quot;&gt;Graph Cycle&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Xiao, &lt;a href=&quot;http://wims.unice.fr/~wims/en_tool~number~contfrac.en.html&quot;&gt;Contfrac&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ch#char_fns&quot;&gt;Index entries for characteristic functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Con#confC&quot;&gt;Index entries for continued fractions for constants&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Di#divseq&quot;&gt;Index to divisibility sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Par#partN&quot;&gt;Index entries for related partition-counting sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_01&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000012"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: exp(x).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="prod" cd="A000012"/>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, 1 + x^(2^k) ). - _Zak Seidov_, Apr 06 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Completely multiplicative with<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000012"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Dirichlet generating function: zeta(s). - _Franklin T. Adams-Watters_, Sep 11 2005
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Regarded as<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> square array by antidiagonals, g.f.<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="y"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>, e.g.f. sum<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="T" cd="A000012"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="y"/>
+      <OMV name="m"/>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="m"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="e"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMV name="y"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, e.g.f. sum T(n,m) x^n y^m/m! = e^y/(1-x). Regarded as<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> triangular array, g.f.<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="xy"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>, e.g.f. sum T(n,m) x^n y^m/m! = e^{xy}/(1-x). - _Franklin T. Adams-Watters_, Feb 06 2006
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: E(0)-1-x, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="E" cd="A000012"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="k"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="E" cd="A000012"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> ; (continued fraction). - _Sergei N. Gladkovskii_, Dec 20 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: E(0)-1, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="E" cd="A000012"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="E" cd="A000012"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>; (continued fraction). - _Sergei N. Gladkovskii_, Dec 23 2013
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> 1.618033988749894848204586834... = 1 + 1/(1 + 1/(1 + 1/(1 + 1/(1 + ...))))</CMP>
+    </assertion><assertion class="example">
+      <CMP> From _Wolfdieter Lang_, Feb 09 2012: (Start)</CMP>
+    </assertion><assertion class="example">
+      <CMP> Modd 7 for nonnegative odd numbers not divisible by 3:</CMP>
+    </assertion><assertion class="example">
+      <CMP> A007310: 1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> Modd 3:  1, 1, 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> (End)</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A000012 := n-&gt;1; [ seq(1, i=0..100) ];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := 1; Array[1 &amp;, 50] (* Joseph Biberstine (jrbibers(AT)indiana.edu), Dec 26 2006 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [1 : n in [0..100]];</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = 1};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) { default(realprecision, 1080); phi = (1 + sqrt(5))/2; x=contfrac(phi); for (n=1, 1001, write(&quot;b000012.txt&quot;, n-1, &quot; &quot;, x[n])); } \\ _Harry J. Smith_, May 14 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000012 = const 1</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000012_list = repeat 1  -- _Reinhard Zumkeller_, May 07 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) makelist(1, n, 1, 30); /* _Martin Ettl_, Nov 07 2012 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000004, A007395, A010701, A000027.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Regular graphs A005176 (any degree), A051031 (triangular array), chosen degrees: A000012 (k=0), A059841 (k=1), A008483 (k=2), A005638 (k=3), A033301 (k=4), A165626 (k=5), A165627 (k=6), A165628 (k=7). - _Jason Kimberley_, Nov 07 2009</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> For other q-nomial arrays, see A007318, A027907, A008287, A035343, A063260, A063265, A171890. - _Matthew Vandermast_, Oct 31 2010</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A027641, A014410.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A211216, A212393.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A060544.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,core,easy,mult,cofr,cons,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, May 16 1994</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

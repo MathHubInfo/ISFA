@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000533.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000533">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,11,101,1001,10001,100001,1000001,10000001,100000001,1000000001,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10000000001,100000000001,1000000000001,10000000000001,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 100000000000001,1000000000000001,10000000000000001</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(0)=1; a(n) = 10^n + 1, n &gt;= 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, b^n+1 written in base b, for any base b &gt;= 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, A083318 written in base 2. - _Omar E. Pol_, Feb 24 2008, Dec 30 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, palindromes formed from the reflected decimal expansion of the concatenation of 1 and infinite 0's. - _Omar E. Pol_, Dec 14 2008]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A178500(n) + 1. - _Reinhard Zumkeller_, May 28 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It seems that the sequence gives 'all' positive integers m with m^4 is palindrome. Note that a(0)^4 = 1 is a palindrome and for n &gt; 0, a(n)^4 = (10^n + 1)^4 = 10^(4n) + 4*10^(3n) + 6*10^(2n) + 4*10^(n) + 1 is a palindrome. - _Farideh Firoozbakht_, Oct 28 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000533/b000533.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_02&quot;&gt;Index entries for sequences related to linear recurrences with constant coefficients&lt;/a&gt;, signature (11,-10)</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000533"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>10</OMI>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>0</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Reinhard Zumkeller_, Jun 10 2003
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>10</OMI><OMV name="x"/></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>; a(n)=sum{k=0..n,<OMOBJ>
+      <OMA>
+      <OMS name="binomial" cd="A000533"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>, k)*0^(k(n-k))*10^k}. - _Paul Barry_, Feb 05 2005
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> Join[{1},LinearRecurrence[{11,-10},{11,101},20]] (* _Harvey P. Dale_, May 01 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [10^n + 1 - 0^n: n in [0..30]]; // _Vincenzo Librandi_, Jul 15 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n,10^n+1,1) \\ _Charles R Greathouse IV_, Oct 28 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A083318, A138144, A138145, A152756.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

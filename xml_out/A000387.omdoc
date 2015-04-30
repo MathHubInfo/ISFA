@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000387.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000387">
+          <assertion class="***** TTTT *****">
+      <CMP> M4138 N1716</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,6,20,135,924,7420,66744,667485,7342280,88107426,1145396460,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16035550531,240533257860,3848532125880,65425046139824,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1177650830516985,22375365779822544,447507315596451070,9397653627525472260,206748379805560389951</CMP>
+    </assertion><omtext class="name">
+      <CMP> Rencontres numbers: number of permutations of [n] with exactly two fixed points.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also: odd permutations of length n with no fixed points. - Martin Wohlgemuth (mail(AT)matroid.com), May 31 2003</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also number of cycles of length 2 in all derangements of [n]. Example: a(4)=6 because in the derangements of [4], namely (1432), (1342), (13)(24), (1423), (12)(34), (1243), (1234), (1324), and (14)(23), we have altogether 6 cycles of length 2. - _Emeric Deutsch_, Mar 31 2009</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 65.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000387/b000387.txt&quot;&gt;Table of n, a(n) for n=2..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> FindStat - Combinatorial Statistic Finder, &lt;a href=&quot;http://www.findstat.org/St000022&quot;&gt;The number of fixed points of a permutation&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Gordon and E. McMahon, &lt;a href=&quot;http://www.jstor.org/stable/10.4169/000298910X523353&quot;&gt;Moving faces to other places: facet derangements&lt;/a&gt;, Amer. Math. Monthly, 117 (2010), 865-88.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Wohlgemuth, &lt;a href=&quot;http://matheplanet.com/matheplanet/nuke/html/print.php?sid=444&quot;&gt;Derangements revisited&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000387"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="sum" cd="A000387"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="j"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, j=2..n-2).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000387"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000166"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A003221"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000387"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A000166"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A000387"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>, 2). - _David Wasserman_, Aug 13 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: z^2*exp(-z)/(2*(1-z)). - _Emeric Deutsch_, Jul 22 2009
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A000387"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A145221"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Mark van Hoeij_, Jul 06 2010
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000387"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="exp" cd="A000387"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Geoffrey Critzer_, Nov 17 2013
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(4)=6 because we have 1243, 1432, 1324, 4231, 3214, and 2134. - _Emeric Deutsch_, Mar 31 2009</CMP>
+    </assertion><omtext class="maple">
+      <CMP> a:= n-&gt; -add((n-1)!*add((-1)^k/(k-1)!, j=0..n-1), k=1..n-1)/2: seq(a(n), n=2..25); # _Zerinvary Lajos_, May 18 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Subfactorial[n - 2]*Binomial[n, 2], {n, 2, 22}] (* _Zerinvary Lajos_, Jul 10 2009 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) x='x+O('x^66); Vec( serlaplace(exp(-x)/(1-x)*(x^2/2!)) ) \\ _Joerg Arndt_, Feb 19 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A008290, A000166, A000240, A000449, A000475, A129135, A003221.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A diagonal of A008291.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A170942.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

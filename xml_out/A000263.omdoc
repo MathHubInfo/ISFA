@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000263.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000263">
+          <assertion class="***** TTTT *****">
+      <CMP> M2967 N1200</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,14,39,91,173,307,502,779,1150,1651,2280,3090,4090,5313,6787,8564,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10643,13103,15948,19235,23000,27316,32174,37677,43849,50758,58427,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 66978,76373,86765,98171,110662,124310,139202,155339,172885</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions into non-integral powers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) counts the solutions to the inequality x_1^(1/2)+x_2^(1/2)&lt;=n for any two distinct integers 1&lt;=x_1&lt;x_2. - _R. J. Mathar_, Jul 03 2009</CMP>
+    </omtext><omtext class="reference">
+      <CMP> B. K. Agarwala and F. C. Auluck, Statistical mechanics and partitions into non-integral powers of integers, Proc. Camb. Phil. Soc., 47 (1951), 207-216.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. K. Agarwala, F. C. Auluck, &lt;a href=&quot;http://dx.doi.org/10.1017/S0305004100026505&quot;&gt;Statistical mechanics and partitions into non-integral powers of integers&lt;/a&gt;, Proc. Camb. Phil. Soc., 47 (1951), 207-216.</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000263 := proc(n) local a,x1,x2 ; a := 0 ; for x1 from 1 to n^2 do x2 := (n-x1^(1/2))^2 ; if floor(x2) &gt;= x1+1 then a := a+floor(x2-x1) ; fi; od: a ; end: seq(A000263(n),n=3..80) ; # _R. J. Mathar_, Sep 29 2009</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _R. J. Mathar_, Sep 29 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

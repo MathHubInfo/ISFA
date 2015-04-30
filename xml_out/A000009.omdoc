@@ -1,0 +1,996 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000009.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000009">
+          <assertion class="***** TTTT *****">
+      <CMP> M0281 N0100</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,2,3,4,5,6,8,10,12,15,18,22,27,32,38,46,54,64,76,89,104,122,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 142,165,192,222,256,296,340,390,448,512,585,668,760,864,982,1113,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1260,1426,1610,1816,2048,2304,2590,2910,3264,3658,4097,4582,5120,5718,6378</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of Product_{m=1..infinity} (1 + x^m); number of partitions of n into distinct parts; number of partitions of n into odd parts (if n &gt; 0).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Partitions into distinct parts are sometimes called &quot;strict partitions&quot;.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The number of different ways to run up a staircase with m steps, taking steps of odd sizes (or taking steps of distinct sizes), where the order is not relevant and there is no other restriction on the number or the size of each step taken is the coefficient of x^m.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Ramanujan theta functions: f(q) (see A121373), phi(q) (A000122), psi(q) (A010054), chi(q) (A000700).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The result that number of partitions of n into distinct parts = number of partitions of n into odd parts is due to Euler.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Bijection: given n = l1 * 1 + l2 * 3 + l3 * 5 + l7 * 7 + ..., a partition into odd parts, write each li in binary, li = 2^a1 + 2^a2 + 2^a3 + ... where the aj's are all different, then expand n = (2^a1 * 1 + ...)*1 + ... by removing the brackets and we get a partition into distinct parts. For the reverse operation, just keep splitting any even number into halves until no evens remain.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Euler transform of period 2 sequence [1,0,1,0,...]. - _Michael Somos_, Dec 16, 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of different partial sums 1+[1,2]+[1,3]+[1,4]+..., where [1,x] indicates a choice. E.g., a(6)=4, as we can write 1+1+1+1+1+1, 1+2+3, 1+2+1+1+1, 1+1+3+1. - _Jon Perry_, Dec 31 2003</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the sum of the number of partitions of x_j into at most j parts, where j is the index for the j-th triangular number and n-T(j)=x_j. For example; a(12)=partitions into &lt;=4 parts of 12-T(4)=2 + partitions into &lt;=3 parts of 12-T(3)=6 + partitions into &lt;=2 parts of 12-T(2)=9 + partitions into 1 part of 12-T(1)=11 =(2)(11)+(6)(51)(42)(411)(33)(321)(222)+(9)(81)(72)(63)(54)+(11) = 2+7+5+1 = 15. - _Jon Perry_, Jan 13 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of partitions of n where if k is the largest part, all parts 1..k are present. - _Jon Perry_, Sep 21 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = Sum(A117195(n,k): 0&lt;=k&lt;n) = A117192(n)+A117193(n) for n&gt;0. - _Reinhard Zumkeller_, Mar 03 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The number of connected threshold graphs having n edges. - Michael D. Barrus (mbarrus2(AT)uiuc.edu), Jul 12 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Starting with offset 1 = row sums of triangle A146061 and the INVERT transform of A000700 starting: (1, 0, 1, -1, 1, -1, 1, -2, 2, -2, 2, -3, 3, -3, 4, -5,...). - _Gary W. Adamson_, Oct 26 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of partitions of n in which the largest part occurs an odd number of times and all other parts occur an even number of times. (Such partitions are the duals of the partitions with odd parts.) - _David Wasserman_, Mar 04 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equals A035363 convolved with A010054. The convolution square of A000009 = A022567 = A000041 convolved with A010054. A000041 = A000009 convolved with A035363. - _Gary W. Adamson_, Jun 11 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Considering all partitions of n into distinct parts: there are A140207(n) partitions of maximal size which is A003056(n), and A051162(n) is the greatest number occurring in these partitions. - _Reinhard Zumkeller_, Jun 13 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(A004526(n)) = A172033(n). - _Reinhard Zumkeller_, Jan 23 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equals left border of triangle A091602 starting with offset 1. - _Gary W. Adamson_, Mar 13 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A054242(n,0) = A201377(n,0). - _Reinhard Zumkeller_, Dec 02 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of symmetric unimodal compositions of n+1 where the maximal part appears once. Also number of symmetric unimodal compositions of n where the maximal part appears an odd number of times. - _Joerg Arndt_, Jun 11 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Because for these partitions the exponents of the parts 1, 2, ... are either 0 or 1 (j^0 meaning that part j is absent) one could call these partitions also 'fermionic partitions'. The parts are the levels, that is the positive integers, and the occupation number is either 0 or 1 (like Pauli's exclusion principle). The 'fermionic states' are denoted by these partitions of n. - _Wolfdieter Lang_, May 14 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Mohammad K. Azarian, A Generalization of the Climbing Stairs Problem, Mathematics and Computer Education, Vol. 31, No. 1, pp. 24-28, Winter 1997.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> MathEduc Database (Zentralblatt MATH, 1997c.01891).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Mohammad K. Azarian, A Generalization of the Climbing Stairs Problem II, Missouri Journal of Mathematical Sciences, Vol. 16, No. 1, Winter 2004, pp. 12-17. Zentralblatt MATH, Zbl 1071.05501.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. E. Andrews, The Theory of Partitions, Cambridge University Press, 1998, p. 19.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. E. Andrews, Number Theory, Dover Publications, 1994, Theorem 12-3, pp. 154-5, and (13-1-1) p. 163.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. E. Andrews, Euler's &quot;De Partitio Numerorum&quot;, Bull. Amer. Math. Soc., 44 (No. 4, 2007), 561-573.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Ayoub, An Introduction to the Analytic Theory of Numbers, Amer. Math. Soc., 1963; see p. 196.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. J. I'a. Bromwich, Introduction to the Theory of Infinite Series, Macmillan, 2nd. ed. 1949, p. 116, Problem 18.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 99.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. Dunham, The Mathematical Universe, pp. 57-62 J.Wiley 1994.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Leonhard Euler, De partitione numerorum, Novi commentarii academiae scientiarum Petropolitanae 3 (1750/1), 1753, reprinted in: Commentationes Arithmeticae. (Opera Omnia. Series Prima: Opera Mathematica, Volumen Secundum), 1915, Lipsiae et Berolini, 254-294.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. H. Hardy and E. M. Wright, An Introduction to the Theory of Numbers. 3rd ed., Oxford Univ. Press, 1954, p. 277, Theorems 344, 346.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Lascoux, Sylvester's bijection between strict and odd partitions, Discrete Math., 277 (2004), 275-278.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. J. Moreno and S. S. Wagstaff, Jr., Sums of Squares of Integers, Chapman and Hall, 2006, p. 253.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. J. Newman, A Problem Seminar, pp. 18;93;102-3 Prob. 93 Springer-Verlag NY 1982.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. D. Nguyen, D. Taggart, Mining the OEIS: Ten Experimental Conjectures, 2013; http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.391.2522&amp;rep=rep1&amp;type=pdf. Mentions this sequence. - From _N. J. A. Sloane_, Mar 16 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Ramanujan, Collected Papers, Ed. G. H. Hardy et al., Cambridge 1927; Chelsea, NY, 1962. See Table V on page 309.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000009/b000009.txt&quot;&gt;Table of n, a(n) for n = 0..1999&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joerg Arndt, &lt;a href=&quot;http://www.jjj.de/fxt/#fxtbook&quot;&gt;Matters Computational (The Fxtbook)&lt;/a&gt;, pp.348-350</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., &lt;a href=&quot;http://www.nrbook.com/abramowitz_and_stegun/&quot;&gt;Handbook of Mathematical Functions&lt;/a&gt;, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy], p. 836.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Francesca Aicardi, &lt;a href=&quot;http://arxiv.org/abs/0806.1273&quot;&gt;MATRICIAL FORMULAE FOR PARTITIONS&lt;/a&gt;, arXiv:0806.1273.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Bottomley, &lt;a href=&quot;/A000009/a000009.gif&quot;&gt;Illustration for A000009, A000041, A047967&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Huantian Cao, &lt;a href=&quot;http://www.cs.uga.edu/~rwr/STUDENTS/hcao.html&quot;&gt;AutoGF: An Automated System to Calculate Coefficients of Generating Functions&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. B. C. Darling, Collected Papers of Ramanujan, &lt;a href=&quot;http://www.imsc.res.in/~rao/ramanujan/CamUnivCpapers/Cpaper36/page34.htm&quot;&gt;Table for q(n); n=1 through 100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alejandro Erickson and Mark Schurch, &lt;a href=&quot;http://arxiv.org/abs/1110.5103&quot;&gt;Monomer-dimer tatami tilings of square regions&lt;/a&gt;, arXiv preprint arXiv:1110.5103, 2011</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Flajolet and R. Sedgewick, &lt;a href=&quot;http://algo.inria.fr/flajolet/Publications/books.html&quot;&gt;Analytic Combinatorics&lt;/a&gt;, 2009; see page 48 and 499</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Georgiadis, &lt;a href=&quot;http://web.mit.edu/egeorg/Public/Partitions/PartitionsQ.pdf&quot;&gt;Computing Partition Numbers q(n)&lt;/a&gt;, Technical Report, February (2009). [From Evangelos Georgiadis (egeorg(AT)mit.edu), Mar 19 2009]</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=108&quot;&gt;Encyclopedia of Combinatorial Structures 108&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Lascoux, &lt;a href=&quot;http://www.combinatorics.net/lascoux/articles/SylvesterBij.ps&quot;&gt;Sylvester's bijection&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Lovejoy, &lt;a href=&quot;http://www.liafa.jussieu.fr/~lovejoy/5powersQ.pdf&quot;&gt;The Number Of Partitions Into Distinct Parts Modulo Powers Of 5&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Sandifer, How Euler Did It, &lt;a href=&quot;http://www.maa.org/editorial/euler/How%20Euler%20Did%20It%2024%20partitions.pdf&quot;&gt;Philip Naude's problem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Somos, &lt;a href=&quot;http://cis.csuohio.edu/~somos/multiq.pdf&quot;&gt;Introduction to Ramanujan theta functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/PartitionFunctionP.html&quot;&gt;Partition Function P&lt;/a&gt;, &lt;a href=&quot;http://mathworld.wolfram.com/PartitionFunctionQ.html&quot;&gt;Partition Function Q&lt;/a&gt;, &lt;a href=&quot;http://mathworld.wolfram.com/PartitionFunctionb.html&quot;&gt;Partition Function bk&lt;/a&gt;, &lt;a href=&quot;http://mathworld.wolfram.com/EulerIdentity.html&quot;&gt;Euler Identity&lt;/a&gt;, &lt;a href=&quot;http://mathworld.wolfram.com/RamanujanThetaFunctions.html&quot;&gt;Ramanujan Theta Functions&lt;/a&gt;, &lt;a href=&quot;http://mathworld.wolfram.com/q-PochhammerSymbol.html&quot;&gt;q-Pochhammer Symbol&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wolfram Research, &lt;a href=&quot;http://functions.wolfram.com/IntegerFunctions/PartitionsQ/11&quot;&gt;Generating functions for q(n)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. P. Zaletel and R. S. K. Mong, &lt;a href=&quot;http://arxiv.org/abs/1208.4862&quot;&gt;Exact Matrix Product States for Quantum Hall Wave Functions&lt;/a&gt;, arXiv preprint arXiv:1208.4862, 2012. - From _N. J. A. Sloane_, Dec 25 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="prod" cd="A000009"/>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="m"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, 1+x^m) = 1/prod(m&gt;=0, 1-x^(2m+1) ) = sum(k&gt;=0, prod(i=1..k, x^i/(1-x^i) ) ) = sum(n&gt;=0, x^(n*(n+1)/2) / prod(k=1..n, 1-x^k) ).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="sum" cd="A000009"/>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, x^n*prod(k=1,n-1,1+x^k)) = 1+sum(n&gt;=1, x^n*prod(k&gt;=n+1,1+x^k)) - _Joerg Arndt_, Jan 29 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Product_{k=1..inf} (1+x^(2k)) = Sum_{k=0..inf} x^(k*(k+1))/Product_{i=1..k}(1-x^(2i)) - Euler (Hardy and Wright, Theorem 346).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Asymptotics: a(n) ~ exp(Pi l_n / sqrt(3)) / ( 4 3^(1/4) l_n^(3/2) ) where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="l_n"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>24</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> (Ayoub).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000009"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="n"/>
+    </OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="b" cd="A000009"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A000009"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS></OMA>
+    </OMA>
+    </OMOBJ>, with<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000009"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000009"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000593"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMV name="sum"/>
+    </OMA>
+    </OMOBJ> of odd divisors of<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ>; cf.<OMOBJ>
+      <OMR xref="A000700"/>
+    </OMOBJ>. - _Vladeta Jovovic_, Jan 21 2002
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000009"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="t" cd="A000009"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>, 0),<OMOBJ>
+      <OMV name="t"/>
+    </OMOBJ> as defined in<OMOBJ>
+      <OMR xref="A079211"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000009"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A026837"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A026838"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A118301"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A118302"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000009"/>
+      <OMA>
+      <OMR xref="A001318"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A051044"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000009"/>
+      <OMA>
+      <OMR xref="A090864"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A118303"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Reinhard Zumkeller_, Apr 22 2006
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Expansion of<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="chi" cd="A000009"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="chi" cd="A000009"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="chi" cd="A000009"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="f" cd="A000009"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="phi" cd="A000009"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="f" cd="A000009"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="phi" cd="A000009"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="psi" cd="A000009"/>
+      <OMV name="x"/>
+    </OMA><OMV name="f"/>
+    </OMA><OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="f" cd="A000009"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMV name="f"/>
+    </OMA><OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="x"/>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="f" cd="A000009"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="psi" cd="A000009"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> in powers of<OMOBJ>
+      <OMV name="x"/>
+    </OMOBJ> where phi(), psi(), chi(), f() are Ramanujan theta functions. - _Michael Somos_, Mar 12 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f. is period<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ> Fourier series which satisfies<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="f" cd="A000009"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>1152</OMI><OMV name="t"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMV name="f"/>
+    </OMA><OMV name="t"/></OMA>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMA>
+      <OMS name="exp" cd="A000009"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> Pi i t). - _Michael Somos_, Aug 16 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Expansion of<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>24</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="eta" cd="A000009"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="eta" cd="A000009"/>
+      <OMV name="q"/>
+    </OMA>
+    </OMA>
+    </OMOBJ> in powers of<OMOBJ>
+      <OMV name="q"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Expansion of q^(-1/24) 2^(-1/2) f2(t) in powers of<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMA>
+      <OMS name="exp" cd="A000009"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> Pi i t) where f2() is<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> Weber function. - _Michael Somos_, Oct 18 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Given g.f.<OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000009"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ>, then<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="B" cd="A000009"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A000009"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMI>8</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> satisfies<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMA>
+      <OMS name="f" cd="A000009"/>
+      <OMA>
+      <OMS name="B" cd="A000009"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, B(x^2)) where<OMOBJ>
+      <OMA>
+      <OMS name="f" cd="A000009"/>
+      <OMV name="u"/>
+    </OMA>
+    </OMOBJ>, v) = v - u^2 + 16*u*v^2 . - _Michael Somos_, May 31 2005
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Given g.f.<OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000009"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ>, then<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="B" cd="A000009"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A000009"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>8</OMI>
+    </OMA>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> satisfies<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMA>
+      <OMS name="f" cd="A000009"/>
+      <OMA>
+      <OMS name="B" cd="A000009"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, B(x^3)) where<OMOBJ>
+      <OMA>
+      <OMS name="f" cd="A000009"/>
+      <OMV name="u"/>
+    </OMA>
+    </OMOBJ>, v) = (u^3 - v) * (u + v^3) - 9 * u^3 * v^3. - _Michael Somos_, Mar 25 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         From Evangelos Georgiadis, Andrew V. Sutherland, Kiran S. Kedlaya (egeorg(AT)mit.edu), Mar 03 2009: (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000009"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>. a(n)= 2*(Sum_{k=1} (-1)^(k+1) a(n-k^2)) + sigma(n) where
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="sigma" cd="A000009"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="j"/>
+    </OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="j"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="j"/></OMA><OMI>1</OMI>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> OR n=(j*(3*j-1))/2)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         otherwise<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="sigma" cd="A000009"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. (End)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         From _Gary W. Adamson_, Jun 13 2009: (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         The product G.f. = (1/(1-x))*(1/(1-x^3))*(1/(1-x^5))*...; = (1,1,1,...)*
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA><OMS name="times"/><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME><OMS name="..." cd="arithmetics"></OMS></OMA>
+    </OMOBJ>; =
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA><OMS name="times"/><OMV name="a"/><OMV name="b"/><OMV name="c"/><OMS name="..." cd="arithmetics"></OMS></OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ>,<OMOBJ>
+      <OMA><OMS name="times"/><OMV name="a"/><OMV name="b"/></OMA>
+    </OMOBJ>, a*b*c,...converge to A000009:
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>, 3,..4,... = a*b
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ>, 5,..6,... = a*b*c
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>5</OMI>
+    </OMOBJ>, 6,..7,... = a*b*c*d
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>5</OMI>
+    </OMOBJ>, 6,..8,... = a*b*c*d*e
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>5</OMI>
+    </OMOBJ>, 6,..8,... = a*b*c*d*e*f
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA><OMS name="times"/><OMS name="..." cd="arithmetics"></OMS><OMV name="Cf"/></OMA>
+    </OMOBJ>. analogous example in A000041). (End)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = P(n)-P(n-2)-P(n-4)+P(n-10)+P(n-14)+...+(-1)^m P(n-2p_m)+..., where<OMOBJ>
+      <OMA>
+      <OMS name="P" cd="A000009"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> is the partition function<OMOBJ>
+      <OMR xref="A000041"/>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p_m"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="m" cd="A000009"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="m"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> is the<OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="m"/><OMV name="th"/>
+    </OMA>
+    </OMOBJ> generalized pentagonal number<OMOBJ>
+      <OMR xref="A001318"/>
+    </OMOBJ>. - _Jerome Malenfant_, Feb 16 2011
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA></OMA>
+    </OMOBJ>; x)_{inf} where<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ>; q)_k is the q-Pochhammer symbol. - _Vladimir Reshetnikov_, Apr 24 2013
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f. = 1 + x + x^2 + 2*x^3 + 2*x^4 + 3*x^5 + 4*x^6 + 5*x^7 + 6*x^8 + 8*x^9 + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> G.f. = q + q^25 + q^49 + 2*q^73 + 2*q^97 + 3*q^121 + 4*q^145 + 5*q^169 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> The partitions of n into distinct parts (see A118457) for small n are:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1: 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2: 2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3: 3, 21</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4: 4, 31</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5: 5, 41, 32</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6: 6, 51, 42, 321</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7: 7, 61, 52, 43, 421</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8: 8, 71, 62, 53, 521, 431</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> From _Reinhard Zumkeller_, Jun 13 2009: (Start)</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(8)=6, A140207(8)=#{5+2+1,4+3+1}=2, A003056(8)=3, A051162(8)=5;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(9)=8, A140207(9)=#{6+2+1,5+3+1,4+3+2}=3, A003056(9)=3, A051162(9)=6;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(10)=10, A140207(10)=#{4+3+2+1}=1, A003056(10)=4, A051162(10)=4. (End)</CMP>
+    </assertion><omtext class="maple">
+      <CMP> N := 100; t1 := series(mul(1+x^k,k=1..N),x,N); A000009 := proc(n) coeff(t1,x,n); end;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> spec := [ P, {P=PowerSet(N), N=Sequence(Z,card&gt;=1)} ]: [ seq(combstruct[count](spec, size=n), n=0..58) ];</CMP>
+    </omtext><omtext class="maple">
+      <CMP> spec := [ P, {P=PowerSet(N), N=Sequence(Z,card&gt;=1)} ]: combstruct[allstructs](spec, size=10); # to get the actual partitions for n=10</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A := mul(1+x^m,m=1..100); A000009 := n-&gt;coeff(A,x,n);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> PartitionsQ[Range[0, 60]] (* _Harvey Dale_, Jul 27 2009 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ Product[1 + x^k, {k, n}], {x, 0, n}]; (* _Michael Somos_, Jul 06 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ 1 / Product[1 - x^k, {k, 1, n, 2}], {x, 0, n}]; (* _Michael Somos_, Jul 06 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := With[ {t = Log[q] / (2 Pi I)}, SeriesCoefficient[ q^(-1/24) DedekindEta[2 t] / DedekindEta[ t], {q, 0, n}]]; (* _Michael Somos_, Jul 06 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ 1 / QPochhammer[ x, x^2], {x, 0, n}]; (* _Michael Somos_, May 24 2013 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ Series[ QHypergeometricPFQ[ {q}, {q x}, q, - q x], {q, 0, n}] /. x -&gt; 1, {q, 0, n}]; (* _Michael Somos_, Mar 04 2014 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ QHypergeometricPFQ[{}, {}, q, -1] / 2, {q, 0, n}]; (* _Michael Somos_, Mar 04 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;0, 0, polcoeff( prod( k=1, n, 1 + x^k, 1 + x * O(x^n)), n))}; /* _Michael Somos_, Nov 17 1999 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A); if( n&lt;0, 0, A = x * O(x^n); polcoeff( eta(x^2 + A) / eta(x + A), n))};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) Coefficients(&amp;*[1+x^m:m in [1..100]])[1..100] where x is PolynomialRing(Integers()).1; // Sergei Haller (sergei(AT)sergei-haller.de), Dec 21 2006</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000009 = p 1 where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    p _ 0 = 1</CMP>
+    </omtext><omtext class="program">
+      <CMP>    p k m = if m &lt; k then 0 else p (k + 1) (m - k) + p (k + 1) m</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Nov 05 2013</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) num_distinct_partitions(60,list); /* _Emanuele Munarini_, Feb 24 2014 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima)</CMP>
+    </omtext><omtext class="program">
+      <CMP> h(n):=if oddp(n)=true then 1 else 0;</CMP>
+    </omtext><omtext class="program">
+      <CMP> S(n,m):=if n=0 then 1 else if n&lt;m then 0 else if n=m then h(n) else sum(h(k)*S(n-k,k),k,m,n/2)+h(n);</CMP>
+    </omtext><omtext class="program">
+      <CMP> makelist(S(n,1),n,0,27); /* _Vladimir Kruchinin_, Sep 07 2014 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Apart from the first term, equals A052839-1. The rows of A053632 converge to this sequence. When reduced modulo 2 equals the absolute values of A010815. The positions of odd terms given by A001318.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> a(n)=sum(A097306(n, m), n=1..m), row sums of triangle of number of partitions of n into m odd parts.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000726, A001935, A035959, A219601, A035985, A000041, A000700, A003724, A004111, A007837, A068049, A035294, A078408, A081360, A088670, A109950, A109968, A132312, A146061, A035363, A010054, A091602, A118457 (the partitions), A118459 (partition lengths), A015723 (total number of parts), A230957 (boustrophedon transform).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,core,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

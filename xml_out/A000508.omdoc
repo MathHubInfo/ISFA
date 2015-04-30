@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000508.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000508">
+          <assertion class="***** TTTT *****">
+      <CMP> M5324 N2315</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 61,2763,38528,249856,1066590,3487246,9493504,22634496,48649086,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 96448478,179369856,315621376,530788622,860061996,1346126848,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2046820352,3038120316,4403100222,6254596992,8737505280,11992903772</CMP>
+    </assertion><omtext class="name">
+      <CMP> Generalized class numbers.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Shanks, Generalized Euler and class numbers, Math. Comp. 21 (1967), 689-694; 22 (1968), 699.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000233, A000362.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Kok Seng Chua (chuaks(AT)ihpc.nus.edu.sg), Jun 02 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

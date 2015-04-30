@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000801.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000801">
+          <assertion class="***** TTTT *****">
+      <CMP> M1015 N0381</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,6,10,16,26,44,76,132,234,420,761,1391,2561,4745,8841,16551,31114,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 58708,111136,211000,401650,766372,1465422,2807599,5388709,10359735,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 19946715,38459505,74250899,143524565,277742293,538043341,1043333611,2025040421</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sum_{k = 1..n} floor(2^k / k).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000801/b000801.txt&quot;&gt;Table of n, a(n) for n = 1..500&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000801 := proc(n) local k; sum(floor(2^k/k),k=1..n); end;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Sum[Floor[2^k/k], {k, n}], {n, 30}] (* _T. D. Noe_, Jun 20 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000799.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

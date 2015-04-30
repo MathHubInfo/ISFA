@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000130.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000130">
+          <assertion class="***** TTTT *****">
+      <CMP> M1528 N0598</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,2,5,20,115,790,6217,55160,545135,5938490,70686805,912660508,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 12702694075,189579135710,3019908731105,51139445487680,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 917345570926087,17376071107513090,346563420097249645,7259714390232227300,159352909727731210835,3657569576966074846118</CMP>
+    </assertion><omtext class="name">
+      <CMP> One-half the number of permutations of length n with exactly 1 rising or falling successions.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (1/2) times number of permutations of 12...n such that exactly one of the following occurs: 12, 23, ..., (n-1)n, 21, 32, ..., n(n-1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Partial sums seem to be in A000239. - _Ralf Stephan_, Aug 28 2003</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. N. David, M. G. Kendall and D. E. Barton, Symmetric Function and Allied Tables, Cambridge, 1966, p. 263.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, A recurrence for permutations without rising or falling successions. Ann. Math. Statist. 36 (1965), 708-710.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000130/b000130.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Coefficient of<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> in<OMOBJ>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="S" cd="A000130"/>
+      <OMV name="n"/>
+    </OMA><OMV name="t"/></OMA>
+    </OMOBJ> defined in<OMOBJ>
+      <OMR xref="A002464"/>
+    </OMOBJ>, divided by<OMOBJ>
+      <OMI>2</OMI>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000130"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="exp" cd="A000130"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Vaclav Kotesovec_, Sep 11 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> S:= proc(n) option remember; `if`(n&lt;4, [1, 1, 2*t, 4*t+2*t^2]</CMP>
+    </omtext><omtext class="maple">
+      <CMP>        [n+1], expand((n+1-t)*S(n-1) -(1-t)*(n-2+3*t)*S(n-2)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>        -(1-t)^2*(n-5+t)*S(n-3) +(1-t)^3*(n-3)*S(n-4)))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; coeff(S(n), t, 1)/2:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..30);  # _Alois P. Heinz_, Dec 21 2012</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> S[n_] := S[n] = If[n&lt;4, {1, 1, 2*t, 4*t+2*t^2}[[n+1]], Expand[(n+1-t)*S[n-1] - (1-t)*(n-2+3*t)*S[n-2] - (1-t)^2*(n-5+t)*S[n-3] + (1-t)^3*(n-3)*S[n-4]]]; a[n_] := Coefficient[S[n], t, 1]/2; Table[a[n], {n, 0, 30}] (* _Jean-François Alcover_, Mar 10 2014, after _Alois P. Heinz_ *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002464, A086853. Equals A086852/2. A diagonal of A010028.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

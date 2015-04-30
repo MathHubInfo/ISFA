@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000549.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000549">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,5,8,10,13,16,20,25,32,37,40,52,58,64,80,85,100,128,130,148,160,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 208,232,256,320,340,400,512,520,592,640,832,928,1024,1280,1360,1600,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2048,2080,2368,2560,3328,3712,4096,5120,5440,6400,8192,8320,9472,10240</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers that are the sum of 2 squares but not sum of 3 nonzero squares.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It appears that starting at 64, the sequence follows the pattern, 2^(2n) + {0, 16, 21, 36, 64, 66, 84, 96, 144, 168} * 2^(2n-6) for n &gt;= 3. - _T. D. Noe_, Jun 20 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Intersection of A001481 and A004214. - _Ralf Stephan_, Mar 28 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe and Robert Israel, &lt;a href=&quot;/A000549/b000549.txt&quot;&gt;Table of n, a(n) for n = 1..113&lt;/a&gt; (first 100 terms from T. D. Noe)</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Su#ssq&quot;&gt;Index entries for sequences related to sums of squares&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # this requires Maple 17 or later</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   m:= 5000: # to find all entries &lt;= m^2</CMP>
+    </omtext><omtext class="maple">
+      <CMP> N:= m^2:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(SignalProcessing):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(ArrayTools):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A1:= Array(0..N,datatype=float[8]):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for i from 1 to m do A1[i^2]:= 1 end do:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> B:= Convolution(A1,A1):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A2:= Array(0..N,datatype=float[8]):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Copy(N+1,B,A2):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> All1:= Array(0..N,datatype=float[8],fill=1):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> MinimumEvery(A2,All1,container=A2):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> B:= Convolution(A1,A2):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A3:= Array(0..N,datatype=float[8]):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Copy(N+1,B,A3);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> MinimumEvery(A3,All1,container=A3);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> MaximumEvery(A1,A2,container=A2);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> B:= evalhf(map(round,A3-A2));</CMP>
+    </omtext><omtext class="maple">
+      <CMP> MinimumEvery(B,Array(0..N,datatype=float[8]),container=B);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> R:= ArrayTools[SearchArray](B);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000549:= map(`-`,convert(R,list),1); # _Robert Israel_, Mar 28 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Matlab) Asq = zeros(1,10^7);</CMP>
+    </omtext><omtext class="program">
+      <CMP> Asq( [0:3162] .^ 2 + 1) = 1;</CMP>
+    </omtext><omtext class="program">
+      <CMP> Psq = zeros(1,10^7);</CMP>
+    </omtext><omtext class="program">
+      <CMP> Psq( [1:3162] .^ 2 + 1) = 1;</CMP>
+    </omtext><omtext class="program">
+      <CMP> As2 = conv(Asq,Asq);</CMP>
+    </omtext><omtext class="program">
+      <CMP> As2 = min(1, As2(1:10^7));</CMP>
+    </omtext><omtext class="program">
+      <CMP> Ps2 = conv(Psq,Psq);</CMP>
+    </omtext><omtext class="program">
+      <CMP> Ps2 = min(1, Ps2(1:10^7));</CMP>
+    </omtext><omtext class="program">
+      <CMP> As3 = conv(Asq,As2);</CMP>
+    </omtext><omtext class="program">
+      <CMP> As3 = min(1, As3(1:10^7));</CMP>
+    </omtext><omtext class="program">
+      <CMP> Ps3 = conv(Psq,Ps2);</CMP>
+    </omtext><omtext class="program">
+      <CMP> Ps3 = min(1, Ps3(1:10^7));</CMP>
+    </omtext><omtext class="program">
+      <CMP> D = As3 - Ps3;</CMP>
+    </omtext><omtext class="program">
+      <CMP> A000549 = find(D(2:end))</CMP>
+    </omtext><omtext class="program">
+      <CMP> % _Robert Israel_, Mar 26 2014</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_ and _J. H. Conway_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _T. D. Noe_, Jun 20 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

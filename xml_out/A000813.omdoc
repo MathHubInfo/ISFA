@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000813.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000813">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,15,47,1185,6241,230895,1704527,83860545,796079041,48942778575,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 567864586607,41893214676705,574448847467041,49441928730798255,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 782259922208550287,76946148390480577665,1379749466246228538241</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of (sin x + cos x)/cos 4x.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. J. Mathar, &lt;a href=&quot;/A000813/b000813.txt&quot;&gt;Table of n, a(n) for n = 1..200&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000813"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="floor" cd="A000813"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="Re" cd="A000813"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="I"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="j"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="binomial" cd="A000813"/>
+      <OMV name="n"/><OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="Li_" cd="A000813"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="j"/>
+    </OMA>
+    </OMA><OMV name="I"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMV name="j"/>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Peter Luschny_, Apr 29 2013
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> p := proc(n) local j; 2*I*(1+add(binomial(n,j)*polylog(-j,I)*4^j, j=0..n)) end:  A000813 := n -&gt; -(-1)^iquo(n,2)*Re(p(n));</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(A000813(i),i=0..11);  # _Peter Luschny_, Apr 29 2013</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := 2*(-1)^Floor[n/2]*Im[Sum[4^j*Binomial[n, j]*PolyLog[-j, I], {j, 0, n}]]; Table[a[n], {n, 0, 17}] (* _Jean-François Alcover_, Apr 30 2013, after _Peter Luschny_ *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> With[{nn=20},CoefficientList[Series[(Sin[x]+Cos[x])/Cos[4x],{x,0,nn}],x] Range[0,nn]!] (* _Harvey P. Dale_, Dec 12 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) x='x+O('x^66); Vec(serlaplace((sin(x)+cos(x))/cos(4*x))) \\ _Joerg Arndt_, Apr 30 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> a(2n) = A001728(n). Cf. A006873, A156201, A156205.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

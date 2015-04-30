@@ -1,12 +1,11 @@
 import org.scalatest.FlatSpec
-import parsers._
+import parser._
 
 /**
  * Created by enxhi on 4/3/15.
  */
-  
+
 class FormulaParserTest extends FlatSpec{
-  val parser = new FormulaParser()
 
 
   val expr1 = "T(x) + x + 3"
@@ -71,97 +70,97 @@ class FormulaParserTest extends FlatSpec{
 
 
   expr1 should "be parsed to" in {
-    val parsed = parser.parse(expr1).get
+    val parsed = FormulaParser.parse(expr1).get
     assert(parsed == result1)
   }
 
   expr2 should "be parsed to" in{
-    val parsed = parser.parse(expr2).get
+    val parsed = FormulaParser.parse(expr2).get
     assert(parsed == result2)
   }
 
   expr3 should "be parsed to" in{
-    val parsed = parser.parse(expr3).get
+    val parsed = FormulaParser.parse(expr3).get
     assert(parsed == result3)
   }
 
   expr4 should "be parsed to" in{
-    val parsed = parser.parse(expr4).get
+    val parsed = FormulaParser.parse(expr4).get
     assert(parsed == result4)
   }
 
   expr5 should "be parsed to" in{
-    val parsed = parser.parse(expr5).get
+    val parsed = FormulaParser.parse(expr5).get
     assert(parsed == result5)
   }
 
   expr6 should "be parsed to" in{
-    val parsed = parser.parse(expr6).get
+    val parsed = FormulaParser.parse(expr6).get
     assert(parsed == result6)
   }
 
   expr7 should "be parsed to" in{
-    val parsed = parser.parse(expr7).get
+    val parsed = FormulaParser.parse(expr7).get
     assert(parsed == result7)
   }
 
   expr8 should "be parsed to" in{
-    val parsed = parser.parse(expr8).get
+    val parsed = FormulaParser.parse(expr8).get
     assert(parsed == result8)
   }
 
   expr9 should "be parsed to" in{
-    val parsed = parser.parse(expr9).get
+    val parsed = FormulaParser.parse(expr9).get
     assert(parsed == result9)
   }
 
   expr10 should "be parsed to" in{
-    val parsed = parser.parse(expr10).get
+    val parsed = FormulaParser.parse(expr10).get
     assert(parsed == result10)
   }
 
   expr11 should "be parsed to" in{
-    val parsed = parser.parse(expr11).get
+    val parsed = FormulaParser.parse(expr11).get
     assert(parsed == result11)
   }
 
   expr12 should "be parsed to" in{
-    val parsed = parser.parse(expr12).get
+    val parsed = FormulaParser.parse(expr12).get
     assert(parsed == result12)
   }
 
   expr13 should "be parsed to" in{
-    val parsed = parser.parse(expr13).get
+    val parsed = FormulaParser.parse(expr13).get
     assert(parsed == result13)
   }
 
   expr14 should "be parsed to" in{
-    val parsed = parser.parse(expr14).get
+    val parsed = FormulaParser.parse(expr14).get
     assert(parsed == result14)
   }
 
   expr15 should "be parsed to" in{
-    val parsed = parser.parse(expr15).get
+    val parsed = FormulaParser.parse(expr15).get
     assert(parsed == result15)
   }
 
   expr16 should "be parsed to" in{
-    val parsed = parser.parse(expr16).get
+    val parsed = FormulaParser.parse(expr16).get
     assert(parsed == result16)
   }
 
   expr17 should "be parsed to" in{
-    val parsed = parser.parse(expr17).get
+    val parsed = FormulaParser.parse(expr17).get
     assert(parsed == result17)
   }
 
   expr18 should "be parsed to" in{
-    val parsed = parser.parse(expr18).get
+    val parsed = FormulaParser.parse(expr18).get
     assert(parsed == result18)
   }
 
   expr19 should "be parsed to" in{
-    val parsed = parser.parse(expr19).get
+    val parsed = FormulaParser.parse(expr19).get
     assert(parsed == result19)
   }
 

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000418.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000418">
+          <assertion class="***** TTTT *****">
+      <CMP> M4408 N1862</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,0,1,7,34,136,487,1615,5079,15349,45009,128899,362266,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1002681,2740448,7411408,19865445,52840977,139624510,366803313,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 958696860,2494322662,6463281890,16686206047,42935345688,110142163940,281763465941</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of n-node rooted trees of height 7.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, Enumeration of trees by height and diameter, IBM J. Res. Dev. 4 (1960), 473-478.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000418/b000418.txt&quot;&gt;Table of n, a(n) for n=1..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMR xref="A034824"/><OMR xref="A034823"/>
+    </OMA>
+    </OMOBJ>. (_Christian G. Bower_).
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> For Maple program see link in A000235.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column h=7 of A034781.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,9</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

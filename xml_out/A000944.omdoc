@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000944.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000944">
+          <assertion class="***** TTTT *****">
+      <CMP> M1796 N0709</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,2,7,34,257,2606,32300,440564,6384634,96262938,1496225352,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 23833988129,387591510244,6415851530241,107854282197058</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of polyhedra (or 3-connected simple planar graphs) with n nodes.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. T. Croft, K. J. Falconer and R. K. Guy, Unsolved Problems in Geometry, B15.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. B. Dillencourt, Polyhedra of small orders and their Hamiltonian properties. Tech. Rep. 92-91, Info. and Comp. Sci. Dept., Univ. Calif. Irvine, 1992.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Duijvestijn, A. J. W.; Federico, P. J.; The number of polyhedral (3-connected planar) graphs. Math. Comp. 37 (1981), no. 156, 523-532.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Federico, P. J., Enumeration of polyhedra: The number of 9-hedra. J. Combinatorial Theory 7 1969 155--161. MR0243424 (39 #4746)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Lukas Finschi, A Graph Theoretical Approach for Reconstruction and Generation of Oriented Matroids, A dissertation submitted to the Swiss Federal Institute of Technology, Zurich for the degree of Doctor of Mathematics, 2001. See p. 155.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Fukuda, Komei; Miyata, Hiroyuki; Moriyama, Sonoko. Complete Enumeration of Small Realizable Oriented Matroids. Discrete Comput. Geom. 49 (2013), no. 2, 359--381. MR3017917. - From _N. J. A. Sloane_, Feb 16 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> B. Grünbaum, Convex Polytopes. Wiley, NY, 1967, p. 424.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. B. Korchagin, Ordering cellular spaces ..., Discrete Comput. Geom., 40 (2008), 289-311.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Y. Y. Prokhorov, ed., Mnogogrannik [Polyhedron], Mathematical Encyclopedia Dictionary, Soviet Encyclopedia, 1988.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. M. Ziegler, Questions about polytopes, pp. 1195-1211 of Mathematics Unlimited - 2001 and Beyond, ed. B. Engquist and W. Schmid, Springer-Verlag, 2001.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Brinkmannm and B. McKay, &lt;a href=&quot;http://cs.anu.edu.au/~bdm/plantri/&quot;&gt;Program for generating these objects.&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. P. Michon, &lt;a href=&quot;http://www.numericana.com/data/polyhedra.htm&quot;&gt;Counting Polyhedra&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/PolyhedralGraph.html&quot;&gt;Polyhedral Graph&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A005470, A049337, A049334, A003094, A049336, A021103.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Row sums of A212438.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,hard,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Brendan McKay_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(18) from _Brendan McKay_, Jun 02 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

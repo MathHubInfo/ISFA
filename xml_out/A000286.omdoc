@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000286.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000286">
+          <assertion class="***** TTTT *****">
+      <CMP> M3251 N1312</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,4,5,11,20,36,65,119,218,412,770,1466,2784,5322,10226,19691,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 38048,73665,142927,277822,540851,1054502,2058507,4023164,7871226,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 15414517,30213010,59266164,116343183,228545303,449240025,883569304,1738768584,3423466797,6743729031</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of positive integers &lt;= 2^n of form 2 x^2 + 5 y^2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Shanks and L. P. Schmid, Variations on a theorem of Landau. Part I, Math. Comp., 20 (1966), 551-569.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Qua#quadpop&quot;&gt;Index entries for sequences related to populations of quadratic forms&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

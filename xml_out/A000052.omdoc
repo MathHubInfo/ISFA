@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000052.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000052">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,5,4,9,1,7,6,3,2,0,18,80,88,85,84,89,81,87,86,83,82,11,15,50,58,55,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 54,59,51,57,56,53,52,40,48,45,44,49,41,47,46,43,42,14,19,90,98,95,94,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 99,91,97,96,93,92,17,70,78,75,74,79,71,77,76,73,72</CMP>
+    </assertion><omtext class="name">
+      <CMP> 1-digit numbers arranged in alphabetical order, then the 2-digit numbers arranged in alphabetical order, then the 3-digit numbers, etc.</CMP>
+    </omtext><assertion class="example">
+      <CMP> eight, five, four, nine, one, seven, six, three, two, zero, eighteen, etc.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,word,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

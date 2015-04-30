@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000686.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000686">
+          <assertion class="***** TTTT *****">
+      <CMP> M4449 N1884</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,7,85,1777,63601,3882817,403308865,71139019777,21276992674561,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10778161937857537,9238819435213784065,13390649605615389843457,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 32796747486424209782108161,135669064080920007649863745537,947468281528010179181982467702785,11166618111585805201637975219611631617</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 4-colored labeled graphs on n nodes, divided by 4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sequence represents 1/4 of the number of 4-colored labeled graphs on n nodes. Indeed, on p. 413 of the Read paper, column 4 is 4,28,340,7108,... - _Emeric Deutsch_, May 06 2004</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. C. Read, personal communication.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. R. Finch, &lt;a href=&quot;http://www.people.fas.harvard.edu/~sfinch/&quot;&gt;Bipartite, k-colorable and k-colored graphs&lt;/a&gt; (4*A000686)</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. C. Read, &lt;a href=&quot;http://cms.math.ca/10.4153/CJM-1960-035-0&quot;&gt;The number of k-colored graphs on labelled nodes&lt;/a&gt;, Canad. J. Math., 12 (1960), 410—414.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000686"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>4</OMI>
+    </OMA><OMV name="sum"/><OMA>
+      <OMS name="binomial" cd="A000686"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>, k)*2^[k(n-k)]*b(k), k=0..n), where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000686"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000686"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMR xref="A000685"/>
+      <OMV name="k"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _Emeric Deutsch_, May 06 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         From _Peter Bala_, Apr 12 2013: (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000686"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>4</OMI>
+    </OMA><OMA>
+      <OMR xref="A223887"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000686"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>4</OMI>
+    </OMA><OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="binomial" cd="A000686"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMV name="k"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA></OMA>
+    </OMA><OMV name="b"/><OMV name="k"/><OMV name="b"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS></OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A000686"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="k"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="binomial" cd="A000686"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMV name="k"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA></OMA>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Let<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="E" cd="A000686"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="n"/>
+              </OMBVAR>
+            <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="C" cd="A000686"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>. Then<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> generating function for this sequence is 1/4*(E(x)^4 - 1) = sum_{n &gt;= 0} a(n)*x^n/(n!*2^C(n,2)) = x + 7*x^2/(2!*2) + 85*x^3/(3!*2^3) + .... (End)
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> b[n_] := Sum[ 2^((i-j)*j + i*(n-i))*Binomial[n, i]*Binomial[i, j], {i, 0, n}, {j, 0, i}]; a[n_] := 1/4*Sum[ Binomial[n, k]*2^(k*(n-k))*b[k], {k, 0, n}]; Table[a[n], {n, 1, 14}] (* _Jean-François Alcover_, Dec 07 2011, after Emeric Deutsch *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> N=66;  x='x+O('x^N);</CMP>
+    </omtext><omtext class="program">
+      <CMP> E=sum(n=0, N, x^n/(n!*2^binomial(n,2)) );</CMP>
+    </omtext><omtext class="program">
+      <CMP> tgf=E^4-1;  v=Vec(tgf);</CMP>
+    </omtext><omtext class="program">
+      <CMP> v=vector(#v, n, v[n] * n! * 2^(n*(n-1)/2) ) / 4</CMP>
+    </omtext><omtext class="program">
+      <CMP> /* _Joerg Arndt_, Apr 10 2013 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000683, A000685. A223887.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Pab Ter (pabrlos(AT)yahoo.com) and _Emeric Deutsch_, May 05 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

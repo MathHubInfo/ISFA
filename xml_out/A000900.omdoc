@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000900.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000900">
+          <assertion class="***** TTTT *****">
+      <CMP> M1964 N0777</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,2,10,28,106,344,1272,4592,17692,69384,283560,1191984,5171512,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 23087168,105883456,498572416,2404766224,11878871456,59975885856,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 309439708352,1628919330208,8746079933568,47840206525056</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of solutions to the rook problem on an n X n board having a certain symmetry group (see Robinson for details).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. C. Larson, The number of essentially different nonattacking rook arrangements, J. Recreat. Math., 7 (No. 3, 1974), circa pages 180-181.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. W. Robinson, Counting arrangements of bishops, pp. 198-214 of Combinatorial Mathematics IV (Adelaide 1975), Lect. Notes Math., 560 (1976).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000900/b000900.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Lucas, &lt;a href=&quot;http://gallica.bnf.fr/ark:/12148/bpt6k29021h&quot;&gt;Th\'{e}orie des Nombres&lt;/a&gt;, Gauthier-Villars, Paris, 1891, Vol. 1, p. 222.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000900"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000085"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A000898"/>
+      <OMA>
+      <OMS name="int" cd="A000900"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         For asymptotics see the Robinson paper.
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> For Maple program see A000903.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a85[n_] := Sum[ (2k)!/k!/2^k Binomial[n, 2k], {k, 0, n/2}]; a898[n_] := Sum[ 2^k*StirlingS1[n, k]*BellB[k], {k, 0, n}]; a[n_] := (a85[n] - a898[Floor[n/2]])/2; a[1] = 0; Table[a[n], {n, 0, 25}] (* _Jean-François Alcover_, Dec 13 2011, after formula *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, May 09 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

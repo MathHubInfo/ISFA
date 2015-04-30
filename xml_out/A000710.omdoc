@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000710.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000710">
+          <assertion class="***** TTTT *****">
+      <CMP> M1375 N0535</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,5,10,20,35,62,102,167,262,407,614,919,1345,1952,2788,3950,5524,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7671,10540,14388,19470,26190,34968,46439,61275,80455,105047,136541,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 176593,227460,291673,372605,474085,601105,759380,956249,1200143,1501749,1873407</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n, with two kinds of 1,2,3 and 4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also number of partitions of 2*n+4 with exactly 4 odd parts. - _Vladeta Jovovic_, Jan 12 2005</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Gupta et al., Tables of Partitions. Royal Society Mathematical Tables, Vol. 4, Cambridge Univ. Press, 1958, p. 90.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, Combinatorial Identities, Wiley, 1968, p. 199.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000710/b000710.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Euler transform of 2 2 2 2 1 1 1...
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.: 1/[(1-x)(1-x^2)(1-x^3)(1-x^4)*product((1-x^k), k=1..infinity)].
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000710"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="sum" cd="A000710"/>
+      <OMA>
+      <OMR xref="A000098"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMA><OMS name="times"/><OMI>4</OMI><OMV name="j"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, j=0..floor(n/4)),<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> a(2) = 5 because we have 2, 2', 1+1, 1+1', 1+1'.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory): etr:= proc(p) local b; b:=proc(n) option remember; local d,j; if n=0 then 1 else add(add(d*p(d), d=divisors(j)) *b(n-j), j=1..n)/n fi end end: a:= etr(n-&gt; `if`(n&lt;5,2,1)): seq(a(n), n=0..40); # _Alois P. Heinz_, Sep 08 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> etr[p_] := Module[{b}, b[n_] := b[n] = If[n == 0, 1, Sum[Sum[d*p[d], {d, Divisors[j]}]*b[n-j], {j, 1, n}]/n]; b]; a = etr[If[#&lt;5, 2, 1]&amp;]; Table[a[n], {n, 0, 39}] (* _Jean-François Alcover_, Mar 10 2014, after _Alois P. Heinz_ *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000712.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000070, A008951, A000097, A000098.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Fifth column of Riordan triangle A008951 and of triangle A103923.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Emeric Deutsch_, Mar 22 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

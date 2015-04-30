@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000152.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000152">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,32,480,4480,29152,140736,525952,1580800,3994080,8945824,18626112,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 36714624,67978880,118156480,197120256,321692928,509145568,772845120,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1143441760,1681379200,2428524096,3392205824,4658843520,6411152640</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of ways of writing n as a sum of 16 squares.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. H. Hardy and E. M. Wright, An Introduction to the Theory of Numbers. 3rd ed., Oxford Univ. Press, 1954, p. 314.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. Grosswald, Representations of Integers as Sums of Squares. Springer-Verlag, NY, 1985, p. 107.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. C. Milne, Infinite families of exact sums of squares formulas, Jacobi elliptic functions, continued fractions and Schur functions, Ramanujan J., 6 (2002), 7-149.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000152/b000152.txt&quot;&gt;Table of n, a(n) for n=0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Su#ssq&quot;&gt;Index entries for sequences related to sums of squares&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> (sum(x^(m^2),m=-10..10))^16;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[SquaresR[16, n], {n, 0, 23}] (* _Ray Chandler_ *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A022047(n) = A000152(2*n).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Ray Chandler_, Nov 28 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

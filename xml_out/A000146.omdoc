@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000146.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000146">
+          <assertion class="***** TTTT *****">
+      <CMP> M1717 N0680</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,1,1,2,6,56,528,6193,86579,1425518,27298230,601580875,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 15116315766,429614643062,13711655205087,488332318973594,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 19296579341940067,841693047573682616,40338071854059455412</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> From von Staudt-Clausen representation of Bernoulli numbers: a(n) = Bernoulli(2n) + Sum_{(p-1)|2n} 1/p.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The von Staudt-Clausen theorem states that this number is always an integer.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. H. Hardy and E. M. Wright, An Introduction to the Theory of Numbers, 5th ed., Oxford Univ. Press, 1979, Th. 118.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Knuth, D. E.; Buckholtz, Thomas J. Computation of tangent, Euler and Bernoulli numbers. Math. Comp. 21 1967 663-688.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Mestrovic, On a Congruence Modulo n^3 Involving Two Consecutive Sums of Powers, Journal of Integer Sequences, Vol. 17 (2014), 14.8.4.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Rademacher, Topics in Analytic Number Theory, Springer, 1973, Section 5.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000146/b000146.txt&quot;&gt;Table of n, a(n) for n=1..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/vonStaudt-ClausenTheorem.html&quot;&gt;von Staudt-Clausen Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Be#Bernoulli&quot;&gt;Index entries for sequences related to Bernoulli numbers.&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000146 := proc(n) local a ,i,p; a := bernoulli(2*n) ;for i from 1 do p := ithprime(i) ; if (2*n) mod (p-1) = 0 then a := a+1/p ; elif p-1 &gt; 2*n then break; end if; end do: a ; end proc: # _R. J. Mathar_, Jul 08 2011</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[ BernoulliB[2 n] + Total[ 1/Select[ Prime /@ Range[n+1], Divisible[2n, #-1] &amp;]], {n, 1, 22}] (* _Jean-François Alcover_, Oct 12 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;1,0,sumdiv(2*n,d, isprime(d+1)/(d+1))+bernfrac(2*n))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. also A002882, A003245, A127187, A127188.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,nice,easy,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Signs courtesy of Antreas P. Hatzipolakis (xpolakis(AT)hol.gr)</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Michael Somos_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

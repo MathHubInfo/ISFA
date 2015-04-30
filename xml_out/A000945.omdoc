@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000945.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000945">
+          <assertion class="***** TTTT *****">
+      <CMP> M0863 N0329</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,7,43,13,53,5,6221671,38709183810571,139,2801,11,17,5471,52662739,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 23003,30693651606209,37,1741,1313797957,887,71,7127,109,23,97,159227,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 643679794963466223081509857,103,1079990819,9539,3143065813,29,3847,89,19,577,223,139703,457,9649,61,4357</CMP>
+    </assertion><omtext class="name">
+      <CMP> Euclid-Mullin sequence: a(1) = 2, a(n+1) is smallest prime factor of Product_{k=1..n} a(k) + 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> &quot;Does the sequence ... contain every prime? ... [It] was considered by Guy and Nowakowski and later by Shanks, [Wagstaff 1993] computed the sequence through the 43rd term. The computational problem inherent in continuing the sequence further is the enormous size of the numbers that must be factored. Already the number a(1)* ... *a(43) + 1 has 180 digits.&quot; - Crandall and Pomerance</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If this variant of Euclid-Mullin sequence is initiated either with 3, 7 or 43 instead of 2, then from a[5] onwards it is unchanged. See also A051614. - _Labos Elemer_, May 03 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Wilfrid Keller informed me that a(1)* ... *a(43) + 1 was factored as the product of two primes on Mar 09 2010 by the GNFS method. See the post in the Mersenne Forum for more details. The smaller 68-digit prime is a(44). Terms a(45)-a(47) were easy to find. Finding a(48) will require the factorization of a 256-digit number. See the b-file for the four new terms. - _T. D. Noe_, Oct 15 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> On Sep 11 2012, Ryan Propper factored the 256-digit number by finding a 75-digit factor by using ECM. Finding a(52) will require the factorization of a 335-digit number. See the b-file for the terms a(48) to a(52). - _V. Raman_, Sep 17 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. Cobeli and A. Zaharescu, Promenade around Pascal Triangle-Number Motives, Bull. Math. Soc. Sci. Math. Roumanie, Tome 56(104) No. 1, 2013, 73-98; http://rms.unibuc.ro/bulletin/pdf/56-1/PromenadePascalPart1.pdf. - From _N. J. A. Sloane_, Feb 16 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Crandall and C. Pomerance, Prime Numbers: A Computational Perspective, Springer, NY, 2001; see p. 6.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy and R. Nowakowski, Discovering primes with Euclid, Delta (Waukesha), Vol. 5, pp. 49-63, 1975.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Des MacHale, Infinitely many proofs that there are infinitely many primes, Math. Gazette, 97 (No. 540, 2013), 495-498.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. A. Mullin, Recursive function theory, Bull. Amer. Math. Soc., 69 (1963), 737.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. Naur, Mullin's sequence of primes is not monotonic, Proc. Amer. Math. Soc., 90 (1984), 43-44.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. Pollack and E. Trevino, The primes that Euclid forgot, http://www.math.uga.edu/~pollack/mullin.pdf, 2013. - From _N. J. A. Sloane_, Feb 20 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Pollack, Paul; Treviño, Enrique. The Primes that Euclid Forgot. Amer. Math. Monthly 121 (2014), no. 5, 433--437. MR3193727</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. S. Wagstaff, Jr., Computing Euclid's primes, Bull. Institute Combin. Applications, 8 (1993), 23-32.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe and Ryan Propper, &lt;a href=&quot;/A000945/b000945.txt&quot;&gt;Table of n, a(n) for n = 1..51&lt;/a&gt; (first 47 terms from T. D. Noe)</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. R. Booker, &lt;a href=&quot;http://arxiv.org/abs/1107.3318&quot;&gt;On Mullin's second sequence of primes&lt;/a&gt;, arXiv preprint arXiv:1107.3318, 2011</CMP>
+    </omtext><omtext class="link">
+      <CMP> Mersenne Forum, &lt;a href=&quot;http://www.mersenneforum.org/showthread.php?p=207854#post207854&quot;&gt;Factoring 43rd Term of Euclid-Mullin sequence&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Mersenne Forum, &lt;a href=&quot;http://www.mersenneforum.org/showthread.php?p=311145&quot;&gt;Factoring EM47&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Mestrovic, &lt;a href=&quot;http://arxiv.org/abs/1202.3670&quot;&gt;Euclid's theorem on the infinitude of primes: a historical survey of its proofs (300 BC--2012) and another new proof&lt;/a&gt;, arXiv preprint arXiv:1202.3670, 2012 - From N. J. A. Sloane, Jun 13 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> OEIS wiki, &lt;a href=&quot;https://oeis.org/wiki/OEIS_sequences_needing_factors&quot;&gt;OEIS sequences needing factors&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(5) is equal to 13 because 2*3*7*43+1 = 1807 = 13 * 139.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[1]=2; f[n_] := f[n] = FactorInteger[Product[f[i], {i, 1, n - 1}] + 1][[1, 1]] Table[f[n], {n, 1, 46}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) print1(k=2);for(n=2,20,print1(&quot;, &quot;,p=factor(k+1)[1,1]);k*=p) \\ _Charles R Greathouse IV_, Jun 10 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000946, A005265, A005266, A051309-A051334, A051614, A051615, A051616, A056756.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

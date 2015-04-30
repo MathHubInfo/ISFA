@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000373.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000373">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,8,44,214,1000,4592,20888,94846,434973,2042836,9979086,51460622,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 283839957,1688139424,10859199656,75338888918,560740210491,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4445766353604,37329808482989,330143634313064,3064464030121369</CMP>
+    </assertion><omtext class="name">
+      <CMP> Conjectured dimension of a module associated with the free commutative Moufang loop with n generators.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> There is an explicit formula for the n-th term of this sequence (see Eq. (8.4) of Smith (1982)). It is conjectured that this gives the answer to a question of Manin about the dimension of a certain module associated with the free commutative Moufang loop with n generators. - _N. J. A. Sloane_, May 21 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Yu. I. Manin, Cubic Forms, Second edition, North-Holland Publishing Co., Amsterdam, 1986, page 312. MR0833513 (87d:11037)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Smith, Jonathan D. H.; Commutative Moufang loops and Bessel functions. Invent. Math. 67 (1982), no. 1, 173-187.</CMP>
+    </omtext><assertion class="example">
+      <CMP> G.f. = x^3 + 8*x^4 + 44*x^5 + 214*x^6 + 1000*x^7 + 4592*x^8 + 20888*x^9 + ...</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A); if( n&lt;3, 0, A = Vec(-1 + serlaplace( serlaplace( subst( 1 / besselj(0, x + O(x^n)), x^2, 4*x)))); A[1] = 0; sum(k=1, (n-1)\2, sum(p=0, n - 2*k - 1, n! / p! / (2*k+1)! / (n - p - 2*k -1 )! * (A[k] + binomial( p+k-1, k-1)))))}; /* _Michael Somos_, May 17 2004 */</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

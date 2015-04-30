@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000192.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000192">
+          <assertion class="***** TTTT *****">
+      <CMP> M2167 N0865</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,46,7970,3487246,2849229890,3741386059246,7205584123783010,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 19133892392367261646,67000387673723462963330,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 299131045427247559446422446,1658470810032820740402966226850</CMP>
+    </assertion><omtext class="name">
+      <CMP> Generalized Euler numbers c(6,n).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sean A. Irvine, &lt;a href=&quot;/A000192/b000192.txt&quot;&gt;Table of n, a(n) for n = 0..250&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Shanks, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1967-0223295-5&quot;&gt;Generalized Euler and class numbers&lt;/a&gt;. Math. Comp. 21 (1967) 663-688.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Shanks, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1968-0227093-9&quot;&gt;Corrigenda to: &quot;Generalized Euler and class numbers&quot;&lt;/a&gt;, Math. Comp. 22 (1968), 699</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/EulerNumber.html&quot;&gt;Euler Number.&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> L[ a_, s_, t_:10000 ] := Plus@@Table[ N[ JacobiSymbol[ -a, 2k+1 ](2k+1)^(-s), 30 ], {k, 0, t} ]; c[ a_, n_, t_:10000 ] := (2n)!/Sqrt[ a ](2a/Pi)^(2n+1)L[ a, 2n+1, t ] (* _Eric W. Weisstein_, Aug 30 2001 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000191, A000187.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Eric W. Weisstein_, Aug 30 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

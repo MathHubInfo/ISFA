@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000291.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000291">
+          <assertion class="***** TTTT *****">
+      <CMP> M1168 N0447</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,9,16,29,47,77,118,181,267,392,560,797,1111,1541,2106,2863,3846,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5142,6808,8973,11733,15275,19753,25443,32582,41569,52770,66757,84078,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 105555,131995,164566,204450,253292,312799,385285,473183,579722,708353,863553</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of bipartite partitions of n white objects and 2 black ones.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of ways to factor p^n*q^2 where p and q are distinct primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = if n &lt;= 2 then A054225(2,n) else A054225(n,2). - _Reinhard Zumkeller_, Nov 30 2011</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. C. Auluck, On partitions of bipartite numbers. Proc. Cambridge Philos. Soc. 49, (1953). 72-83.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. S. Cheema and H. Gupta, Tables of Partitions of Gaussian Integers. National Institute of Sciences of India, Mathematical Tables, Vol. 1, New Delhi, 1956, p. 1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Amarnath Murthy, &quot;Generalization of Smarandache Factor Partition introducing Smarandache Factor Partition&quot;. Smarandache Notions Journal, 1-2-3, vol. 11, 2000.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Amarnath Murthy, Program for finding out the number of Smarandache Factor Partitions. Smarandache Notions Journal, Vol. 13, 2002.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Amarnath Murthy, e-book, MS LIT format, &quot;Ideas on Smarandache Notions&quot;.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Amarnath Murthy and Charles Ashbacher, Generalized Partitions and Some New Ideas on Number Theory and Smarandache Sequences, Hexis, Phoenix; USA 2005. See Section 1.9, 1.14.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000291/b000291.txt&quot;&gt;Table of n, a(n) for n = 0..300&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(2) = 9: let p = 2 and q = 3, p^2*q^2 = 36; there are 9 factorizations: (36), (18*2), (12*3), (9*4), (9*2^2), (6*6), (6*3*2), (4*3^2), (3^2*2^2).</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> max = 40; col = 2; s1 = Series[Product[1/(1-x^(n-k)*y^k), {n, 1, max+2}, {k, 0, n}], {y, 0, col}] // Normal; s2 = Series[s1, {x, 0, max+1}]; a[n_] := SeriesCoefficient[s2, {x, 0, n}, {y, 0, col}]; Table[ a[n] , {n, 0, max}] (* _Jean-François Alcover_, Mar 13 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column 2 of A054225.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A005380.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Christian G. Bower_, Jan 08 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

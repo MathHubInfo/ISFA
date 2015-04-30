@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000660.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000660">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,5,14,41,136,523,2330,11857,67912,432291,3027166,23125673,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 191389108,1705788659,16289080922,165919213089,1795666675824,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 20576824369027,248892651678198,3168999664907705,42366404751871660</CMP>
+    </assertion><omtext class="name">
+      <CMP> Boustrophedon transform of 1,1,2,3,4,5,...</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A000660/b000660.txt&quot;&gt;Table of n, a(n) for n = 0..400&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Peter Luschny, &lt;a href=&quot;http://oeis.org/wiki/User:Peter_Luschny/SeidelTransform&quot;&gt;An old operation on sequences: the Seidel transform&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Millar, N. J. A. Sloane and N. E. Young, A new operation on sequences: the Boustrophedon on transform, J. Combin. Theory, 17A 44-54 1996 (&lt;a href=&quot;http://neilsloane.com/doc/bous.txt&quot;&gt;Abstract&lt;/a&gt;, &lt;a href=&quot;http://neilsloane.com/doc/bous.pdf&quot;&gt;pdf&lt;/a&gt;, &lt;a href=&quot;http://neilsloane.com/doc/bous.ps&quot;&gt;ps&lt;/a&gt;).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Boustrophedon_transform&quot;&gt;Boustrophedon_transform&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Bo#boustrophedon&quot;&gt;Index entries for sequences related to boustrophedon transform&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         a(n) = sum(A109449(n,k)*A028310(k): k=0..n). - _Reinhard Zumkeller_, Nov 04 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: <OMOBJ>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="exp" cd="A000660"/>
+      <OMV name="x"/>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sec" cd="A000660"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="tan" cd="A000660"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA></OMA>
+    </OMOBJ>. - _Sergei N. Gladkovskii_, Oct 28 2014
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000660"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A231179"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A000111"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Sergei N. Gladkovskii_, Oct 28 2014
+      </CMP>
+      </omdoc:p><omtext class="program">
+      <CMP> (Sage) # Algorithm of L. Seidel (1877)</CMP>
+    </omtext><omtext class="program">
+      <CMP> def A000660_list(n) :</CMP>
+    </omtext><omtext class="program">
+      <CMP>     R = []; A = {-1:0, 0:1}</CMP>
+    </omtext><omtext class="program">
+      <CMP>     k = 0; e = 1</CMP>
+    </omtext><omtext class="program">
+      <CMP>     for i in range(n) :</CMP>
+    </omtext><omtext class="program">
+      <CMP>         Am = i</CMP>
+    </omtext><omtext class="program">
+      <CMP>         A[k + e] = 0</CMP>
+    </omtext><omtext class="program">
+      <CMP>         e = -e</CMP>
+    </omtext><omtext class="program">
+      <CMP>         for j in (0..i) :</CMP>
+    </omtext><omtext class="program">
+      <CMP>             Am += A[k]</CMP>
+    </omtext><omtext class="program">
+      <CMP>             A[k] = Am</CMP>
+    </omtext><omtext class="program">
+      <CMP>             k += e</CMP>
+    </omtext><omtext class="program">
+      <CMP>         print [A[z] for z in (-i//2..i//2)]</CMP>
+    </omtext><omtext class="program">
+      <CMP>         R.append(A[e*i//2])</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return R</CMP>
+    </omtext><omtext class="program">
+      <CMP> A000660_list(10) # _Peter Luschny_, Jun 02 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000660 n = sum $ zipWith (*) (a109449_row n) (1 : [1..])</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Nov 04 2013</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Simon Plouffe_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

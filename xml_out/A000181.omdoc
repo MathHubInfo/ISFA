@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000181.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000181">
+          <assertion class="***** TTTT *****">
+      <CMP> M2076 N0820</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,15,60,469,3660,32958,328920,3614490,43341822,563144725,7880897892,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 118177520295,1890389939000,32130521850972,578260307815920,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 10985555094348948,219687969344126490,4613039009310624795,101479234383619208204,2333872309936442446905</CMP>
+    </assertion><omtext class="name">
+      <CMP> Coefficients of ménage hit polynomials.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 197.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sean A. Irvine, &lt;a href=&quot;/A000181/b000181.txt&quot;&gt;Table of n, a(n) for n = 4..250&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A diagonal of A058087. Cf. A000179, A000425.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 4,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Simon Plouffe_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

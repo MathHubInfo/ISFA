@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000491.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000491">
+          <assertion class="***** TTTT *****">
+      <CMP> M4365 N1830</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,19,47,97,189,339,589,975,1576,2472,3804,5727,8498,12400,17874,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 25433,35818,49908,68939,94378,128234,172917,231630,308240,407804,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 536412,701910,913773,1184022,1527165,1961432,2508762,3196473,4057403,5132066</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of bipartite partitions of n white objects and 5 black ones.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of ways to factor p^n*q^5 where p and q are distinct primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = if n &lt;= 5 then A054225(5,n) else A054225(n,5). [_Reinhard Zumkeller_, Nov 30 2011]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. C. Auluck, On partitions of bipartite numbers. Proc. Cambridge Philos. Soc. 49, (1953). 72-83.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. S. Cheema and H. Gupta, Tables of Partitions of Gaussian Integers. National Institute of Sciences of India, Mathematical Tables, Vol. 1, New Delhi, 1956, p. 1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000491/b000491.txt&quot;&gt;Table of n, a(n) for n = 0..500&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(numtheory):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> b:= proc(n, k) option remember; `if`(n&gt;k, 0, 1) +`if`(isprime(n), 0,</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       add(`if`(d&gt;k, 0, b(n/d, d)), d=divisors(n) minus {1, n}))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; b(243*2^n$2):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..40);  # _Alois P. Heinz_, Jun 27 2013</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> b[n_, k_] := b[n, k] = If[n&gt;k, 0, 1] + If[PrimeQ[n], 0, Sum[If[d&gt;k, 0, b[n/d, d]], {d, DeleteCases[Divisors[n], 1|n]}]]; a[n_] := b[3^5*2^n, 3^5*2^n]; Table[a[n], {n, 0, 40}] (* _Jean-François Alcover_, Mar 13 2014, after _Alois P. Heinz_ *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column 5 of A054225.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A005380.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Christian G. Bower_, Jan 08 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

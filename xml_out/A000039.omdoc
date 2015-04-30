@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000039.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000039">
+          <assertion class="***** TTTT *****">
+      <CMP> M0629 N0230</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,5,6,10,11,17,21,27,33,46,53,68,82,104,123,154,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 179,221,262,314,369,446,515,614,715,845,977,1148,1321,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1544,1778,2060,2361,2736,3121,3592,4097,4696,5340,6105,6916,7882,8919,10123,11429,12952,14580</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Coefficient of q^(2n) in the series expansion of Ramanujan's mock theta function f(q).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. A. Dragonette, Some Asymptotic Formulae for the Mock Theta Series of Ramanujan, Trans. Amer. Math. Soc., 72 (1952), 474-500.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000039/b000039.txt&quot;&gt;Table of n, a(n) for n=0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/MockThetaFunction.html&quot;&gt;Mock Theta Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[q_, s_] := Sum[q^(n^2)/Product[1+q^k, {k, n}]^2, {n, 0, s}]; Take[CoefficientList[Series[f[q, 100], {q, 0, 100}], q], {1, -1, 2}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;0,0,polcoeff(1+sum(k=1,sqrtint(2*n),x^k^2/prod(i=1,k,1+x^i,1+O(x^(2*n)))^2),2*n))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A000025(2n)=a(n). Cf. A000199.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Eric W. Weisstein_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

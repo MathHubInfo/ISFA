@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000671.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000671">
+          <assertion class="***** TTTT *****">
+      <CMP> M1083 N0411</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,4,7,14,29,60,127,275,598,1320,2936,6584,14858,33744,76999,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 176557,406456,939241,2177573,5064150,11809632,27610937,64705623,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 151966597,357623905,843176524,1991439229,4711115672,11162025770</CMP>
+    </assertion><omtext class="name">
+      <CMP> Boron trees with n nodes = n-node rooted trees with deg &lt;=3 at root and out-degree &lt;=2 elsewhere.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The subsequence of primes begins: 2, 7, 29, 127, 176557, 2177573, 151966597.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Cayley, On the analytical forms called trees, with application to the theory of chemical combinations, Reports British Assoc. Advance. Sci. 45 (1875), 257-305 = Math. Papers, Vol. 9, 427-460 (see p. 450).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. J. Cyvin et al., Enumeration of constitutional isomers of polyenes, J. Molec. Structure (Theochem), 357 (1995), 255-261.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. C. Read, personal communication.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000671/b000671.txt&quot;&gt;Table of n, a(n) for n=0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A000671"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="f"/>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="subs" cd="A000671"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>, f)*f+2*subs(x=x^3, f)), where f = G001190(x)/x, G001190 = g.f. for<OMOBJ>
+      <OMR xref="A001190"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A000671"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A001190"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A036657"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A036658"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Another g.f.: let<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="B0" cd="A000671"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>, G036656(x) = g.f. for<OMOBJ>
+      <OMR xref="A036656"/>
+    </OMOBJ>, G036657(x) = g.f. for<OMOBJ>
+      <OMR xref="A036657"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Then g.f. = x*(cycle_index(S3, B0)+cycle_index(S3, G036656)+cycle_index(S3, G036657)+cycle_index(S2, B0)*(G036656+G036657)+cycle_index(S2, G036656)*(G036657+B0)+cycle_index(S2, G036657)*(B0+G036656)+B0*G036656*G036657), where<OMOBJ>
+      <OMA>
+      <OMS name="cycle_index" cd="A000671"/>
+      <OMV name="Sk"/>
+    </OMA>
+    </OMOBJ>, f) means apply the cycle index for the symmetric group<OMOBJ>
+      <OMV name="S_k"/>
+    </OMOBJ> to<OMOBJ>
+      <OMA>
+      <OMS name="f" cd="A000671"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.<OMOBJ>
+      <OMA>
+      <OMS name="cycle_index" cd="A000671"/>
+      <OMV name="S2"/>
+    </OMA>
+    </OMOBJ>, f) = (1/2!)*(f^2+subs(x=x^2, f),<OMOBJ>
+      <OMA>
+      <OMS name="cycle_index" cd="A000671"/>
+      <OMV name="S3"/>
+    </OMA>
+    </OMOBJ>, f) = (1/3!)*(f^3+3*subs(x=x^2, f)*f+2*subs(x=x^3, f)).
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> N := 40: t1 := G001190/x: G000671 := series(x*(1/3!)*(t1^3+3*subs(x=x^2,t1)*t1+2*subs(x=x^3,t1)), x, N); A000671 := n-&gt;coeff(G000671,x,n);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> CI2 := proc(f) (1/2)*(f^2+subs(x=x^2,f)); end; CI3 := proc(f) (1/6)*(f^3+3*subs(x=x^2,f)*f+2*subs(x=x^3,f)); end;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> N := 40: B0 := series(1 + x,x,N): G000671 := series(x*(CI3(B0) + CI3(G036656) + CI3(G036657) + CI2(B0)*(G036656 + G036657) + CI2(G036656)*(G036657 + B0) + CI2(G036657)*(B0 + G036656) + B0*G036656*G036657),x,N); A036658 := n-&gt;coeff(G036658,x,n);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> max = 31; G001190[x_] := Sum[c[k]*x^k, {k, 0, max}]; c[0] = 0; c[1] = c[2] = c[3] = 1; solc = SolveAlways[ Normal[ Series[ G001190[x] - (x + (1/2)*(G001190[x]^2 + G001190[x^2])), {x, 0, max}]] == 0, x]; f[x_] := G001190[x]/x; g[x_] := Sum[a[k]*x^k, {k, 0, max}]; a[0] = 0; a[1] = a[2] = 1; sola = SolveAlways[ Normal[ Series[ g[x] - (x/3!)*(f[x]^3 + 3*f[x^2]*f[x] + 2*f[x^3]) /. solc[[1]], {x, 0, max}]] == 0, x]; Table[a[n], {n, 0, max}] /. sola[[1]] (* _Jean-François Alcover_, May 29 2012, from first g.f. *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

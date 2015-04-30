@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000469.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000469">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,6,10,14,15,21,22,26,30,33,34,35,38,39,42,46,51,55,57,58,62,65,66,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 69,70,74,77,78,82,85,86,87,91,93,94,95,102,105,106,110,111,114,115,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 118,119,122,123,129,130,133,134,138,141,142,143,145,146,154,155,158</CMP>
+    </assertion><omtext class="name">
+      <CMP> 1 together with products of 2 or more distinct primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Nonprime squarefree numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Except for 1, composite n such that the squarefree part of n is greater than phi(n). - _Benoit Cloitre_, Apr 06 2002</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000469/b000469.txt&quot;&gt;Table of n, a(n) for n=1..10000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> such that<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A007913"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000010"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Benoit Cloitre_, Apr 06 2002
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="N"/><OMA>
+      <OMS name="floor" cd="A000469"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="N"/><OMV name="p1"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="floor" cd="A000469"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="N"/><OMV name="p2"/>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="floor" cd="A000469"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="N"/><OMV name="p"/>
+    </OMA><OMV name="i"/></OMA><OMA>
+      <OMS name="floor" cd="A000469"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="N"/><OMV name="c2"/>
+    </OMA><OMA>
+      <OMS name="floor" cd="A000469"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="N"/><OMV name="c3"/>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="floor" cd="A000469"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="N"/><OMV name="c"/>
+    </OMA><OMV name="j"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> where<OMOBJ>
+      <OMV name="N"/>
+    </OMOBJ> is any number; p1,p2 are the primes with<OMOBJ>
+      <OMA>
+      <OMS name="p" cd="A000469"/>
+      <OMV name="i"/>
+    </OMA>
+    </OMOBJ> being the first prime &gt; square root of<OMOBJ>
+      <OMV name="N"/>
+    </OMOBJ> and<OMOBJ>
+      <OMV name="c2"/>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="c3"/>
+    </OMOBJ> are the numbers other than<OMOBJ>
+      <OMI>1</OMI>
+    </OMOBJ> in this sequence with<OMOBJ>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="c" cd="A000469"/>
+      <OMV name="j"/>
+    </OMA>
+      <OMV name="N"/>
+    </OMA>
+    </OMOBJ> will yield the number of primes less than or equal to<OMOBJ>
+      <OMV name="N"/>
+    </OMOBJ> other than<OMOBJ>
+      <OMV name="p1"/>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="p2"/>
+    </OMOBJ>,<OMOBJ>
+      <OMS name="..." cd="arithmetics"></OMS>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="p" cd="A000469"/>
+      <OMV name="i"/>
+    </OMA>
+    </OMOBJ>. - _Ben Paul Thurston_, Aug 15 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         A005171(n))*A008966(a(n)) = 1. - _Reinhard Zumkeller_, Nov 01 2009
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="Sum" cd="A000469"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, Infinity, 1/a(n)^s) = Zeta(s)/Zeta(2s) - PrimeZeta(s). - _Enrique Pérez Herrero_, Mar 31 2012
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> lst={}; Do[If[SquareFreeQ[n], If[ !PrimeQ[n], AppendTo[lst,n]]], {n,200}]; lst (* _Vladimir Joseph Stephan Orlovsky_, Jan 20 2009 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> With[{upto=200},Complement[Select[Range[upto],SquareFreeQ],Prime[ Range[ PrimePi[ upto]]]]] (* _Harvey P. Dale_, Oct 01 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=0,64, if(isprime(n), n+1, if(issquarefree(n),print(n))))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=1,160,if(core(n)*(1-isprime(n))&gt;eulerphi(n),print1(n,&quot;,&quot;)))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000469 n = a000469_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000469_list = filter ((== 0) . a010051) a005117_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Mar 21 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A005117, A007913, A000010.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A120944 (composite squarefree numbers, same sequence apart from the first term).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A010051, A239508, A239509.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> Dan Bentley (dtb(AT)research.att.com)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000679.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000679">
+          <assertion class="***** TTTT *****">
+      <CMP> M1470 N0581</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,5,14,51,267,2328,56092,10494213,49487365422</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of groups of order 2^n.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> James Gleick, Faster, Vintage Books, NY, 2000 (see pp. 259-261).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. James, M. F. Newman, and E. A. O'Brien, &quot;The Groups of Order 128.&quot; J. Algebra 129, 136-158, 1990.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Hall, Jr. and J. K. Senior, The Groups of Order 2^n (n &lt;= 6). Macmillan, NY, 1964.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. A. Miller, Determination of all the groups of order 64, Amer. J. Math., 52 (1930), 617-634.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Newman, M. F. and O'Brien, E. A.; A CAYLEY library for the groups of order dividing 128. Group theory (Singapore, 1987), 437-442, de Gruyter, Berlin-New York, 1989.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. A. O'Brien, The Groups of Order 256. J. Algebra 143, 219-235, 1991.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Eugene Rodemich, The groups of order 128. J. Algebra 67:1 (1980), pp. 129-142.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hans Ulrich Besche and Bettina Eick, &lt;a href=&quot;http://abel.math.harvard.edu/~nfrogers/cgt/besche-eick.pdf&quot;&gt;Construction of finite groups&lt;/a&gt;, Journal of Symbolic Computation, Vol. 27, No. 4, Apr 15 1999, pp. 387-404.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hans Ulrich Besche and Bettina Eick, &lt;a href=&quot;http://www.icm.tu-bs.de/~beick/publ/1000.ps&quot;&gt;The groups of order at most 1000 except 512 and 768&lt;/a&gt;, Journal of Symbolic Computation, Vol. 27, No. 4, Apr 15 1999, pp. 405-413.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hans Ulrich Besche and Bettina Eick; E. A. O'Brien, &lt;a href=&quot;http://www.aimsciences.org/journals/pdfsnews.jsp?paperID=2377&amp;amp;mode=full&quot;&gt;The groups of order at most 2000&lt;/a&gt;, Electron. Res. Announc. Amer. Math. Soc. 7 (2001), 1-4.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hans Ulrich Besche, &lt;a href=&quot;http://www.math.rwth-aachen.de/~Hans-Ulrich.Besche/small.html&quot;&gt;The Small Groups library&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Bettina Eick and E. A. O'Brien, &lt;a href=&quot;http://www.math.auckland.ac.nz/~obrien/research/count-pgroups.pdf&quot;&gt;Enumerating p-groups&lt;/a&gt;. Group theory. J. Austral. Math. Soc. Ser. A 67 (1999), no. 2, 191-205.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/FiniteGroup.html&quot;&gt;Finite Group&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Wild, &lt;a href=&quot;http://math.sun.ac.za/~wild/Marcel Wild - Home Page_files/Groups16AMM.pdf&quot;&gt;The groups of order 16 made easy&lt;/a&gt;, Amer. Math. Monthly, 112 (No. 1, 2005), 20-31.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Gre#groups&quot;&gt;Index entries for sequences related to groups&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000679"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2</OMI><OMI>27</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="O" cd="A000679"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>8</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A000001, A046058.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,more,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(9) and a(10) found by Eamonn O'Brien.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000823.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000823">
+          <assertion class="***** TTTT *****">
+      <CMP> M4428 N1872</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,46,4336,134281216,288230380379570176,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2658455991569831764110243006194384896,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 452312848583266388373324160190187140390789016525312000869601987902398529536</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of switching networks (see Harrison reference for precise definition).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of equivalence classes with complementation of n variables on the domain and symmetric group of 2 variables operating on the range. - _Sean A. Irvine_, Jul 11 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Essentially the same sequence as A000231. - _Sean A. Irvine, Jul 11 2011</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Sw#switching&quot;&gt;Index entries for sequences related to switching networks&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000823"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA><OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Sean A. Irvine_, Jul 11 2011
+      </CMP>
+      </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Jul 10 2011</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(7) corrected by _Sean A. Irvine_, May 29 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

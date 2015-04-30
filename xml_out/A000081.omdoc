@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000081.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000081">
+          <assertion class="***** TTTT *****">
+      <CMP> M1180 N0454</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,4,9,20,48,115,286,719,1842,4766,12486,32973,87811,235381,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 634847,1721159,4688676,12826228,35221832,97055181,268282855,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 743724984,2067174645,5759636510,16083734329,45007066269,126186554308,354426847597</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of rooted trees with n nodes (or connected functions with a fixed point).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, number of ways of arranging n-1 nonoverlapping circles: e.g., there are 4 ways to arrange 3 circles, as represented by ((O)), (OO), (O)O, OOO, also see example. (Of course the rules here are different from the usual counting parentheses problems - compare A000108, A001190, A001699.) See link below for proof.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Take a string of n x's and insert n-1 ^'s and n-1 pairs of parentheses in all possible legal ways (cf. A003018). Sequence gives number of distinct functions. The single node tree is &quot;x&quot;. Making a node f2 a child of f1 represents f1^f2. Since (f1^f2)^f3 is just f1^(f2*f3) we can think of it as f1 raised to both f2 and f3, that is, f1 with f2 and f3 as children. E.g. for n=4 the distinct functions are ((x^x)^x)^x; (x^(x^x))^x; x^((x^x)^x); x^(x^(x^x )). - _W. Edwin Clark_ and _Russ Cox_ Apr 29, 2003; corrected by Keith Briggs (keith.briggs(AT)bt.com), Nov 14 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, number of connected multigraphs of order n without cycles except for one loop. See the Bomfim link for a picture showing the bijection between rooted trees and multigraphs of this kind. - _Washington Bomfim_, Sep 04 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, number of planted trees with n+1 nodes.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Bergeron, G. Labelle and P. Leroux, Combinatorial Species and Tree-Like Structures, Camb. 1998, p. 279.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. L. Biggs et al., Graph Theory 1736-1936, Oxford, 1976, p. 42, 49.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Cayley, On the analytical forms called trees, with application to the theory of chemical combinations, Reports British Assoc. Advance. Sci. 45 (1875), 257-305 = Math. Papers, Vol. 9, 427-460 (see p. 451).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. L. Gross and J. Yellen, eds., Handbook of Graph Theory, CRC Press, 2004; p. 526.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary, Graph Theory. Addison-Wesley, Reading, MA, 1969, p. 232.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, pp. 54 and 244.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, The Art of Computer Programming, Vol. 1: Fundamental Algorithms, 3d Ed. 1997, pp. 386-388.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, The Art of Computer Programming, vol. 1, 3rd ed., Fundamental Algorithms, p. 395, ex. 2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, TAOCP, Vol. 4, Section 7.2.1.6.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Polya and R. C. Read, Combinatorial Enumeration of Groups, Graphs and Chemical Compounds, Springer-Verlag, 1987, p. 63.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. C. Read and R. J. Wilson, An Atlas of Graphs, Oxford, 1998. [Comment from Neven Juric: Page 64 incorrectly gives a(21)=35224832.]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 138.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane and Robert G. Wilson v, &lt;a href=&quot;/A000081/b000081.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt; the first 201 terms from N. J. A. Sloane.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Cayley, &lt;a href=&quot;http://www.jstor.org/stable/2369158&quot;&gt;On the analytical forms called trees&lt;/a&gt;, Amer. J. Math., 4 (1881), 266-268.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Flajolet, S. Gerhold and B. Salvy, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0501379&quot;&gt;On the non-holonomic character of logarithms, powers and the n-th prime function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Flajolet and R. Sedgewick, &lt;a href=&quot;http://algo.inria.fr/flajolet/Publications/books.html&quot;&gt;Analytic Combinatorics&lt;/a&gt;, 2009; see page 71</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Goebel, &lt;a href=&quot;http://dx.doi.org/10.1016/0095-8956(80)90049-0&quot;&gt;On a 1-1-correspondence between rooted trees and natural numbers&lt;/a&gt;, J. Combin. Theory, B 29 (1980), 141-143.</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Goebel and R. P. Nederpelt, &lt;a href=&quot;http://www.jstor.org/stable/2316312&quot;&gt;The number of numerical outcomes of iterated powers&lt;/a&gt;, Amer. Math. Monthly, 80 (1971), 1097-1103.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ivan Gutman and Yeong-Nan Yeh, &lt;a href=&quot;http://www.emis.de/journals/PIMB/067/3.html&quot;&gt;Deducing properties of trees from their Matula numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. K. Guy, &lt;a href=&quot;/A000081/a000081.pdf&quot;&gt;Letter to N. J. A. Sloane, 1988-04-12&lt;/a&gt; (annotated scanned copy)</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. K. Guy and J. L. Selfridge, &lt;a href=&quot;/A003018/a003018.pdf&quot;&gt;The nesting and roosting habits of the laddered parenthesis&lt;/a&gt; (annotated cached copy)</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. K. Guy and J. L. Selfridge, &lt;a href=&quot;http://www.jstor.org/stable/2319392&quot;&gt;The nesting and roosting habits of the laddered parenthesis&lt;/a&gt;, Amer. Math. Monthly 80 (8) (1973), 868-876.</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=57&quot;&gt;Encyclopedia of Combinatorial Structures 57&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Kalinowski and W. Gluza, &lt;a href=&quot;http://arxiv.org/abs/1106.4938&quot;&gt;Evaluation of High Order Terms for the Hubbard Model in the Strong-Coupling Limit&lt;/a&gt;, arXiv:1106.4938, 2011 (Physical Review B 85, 045105, Jan 2012)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Math Overflow, &lt;a href=&quot;http://mathoverflow.net/questions/79442/number-of-distinct-values-taken-by-xx-x-with-parentheses-inserted-in-all-pos&quot;&gt;Discussion&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Matula, &lt;a href=&quot;http://www.jstor.org/stable/2027327?seq=30&quot;&gt;A natural rooted tree enumeration by prime factorization&lt;/a&gt;, SIAM Rev. 10 (1968) 273.</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. M. Palmer and A. J. Schwenk, &lt;a href=&quot;http://dx.doi.org/10.1016/0095-8956(79)90073-X&quot;&gt;On the number of trees in a random forest&lt;/a&gt;, J. Combin. Theory, B 27 (1979), 109-121.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. Pippenger, &lt;a href=&quot;http://dx.doi.org/10.1137/S0895480100368463&quot;&gt;Enumeration of equicolorable trees&lt;/a&gt;, SIAM J. Discrete Math., 14 (2001), 93-115.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Polya, &lt;a href=&quot;http://dx.doi.org/10.1007/BF02546665&quot;&gt;Kombinatorische Anzahlbestimmungen für Gruppen, Graphen und chemische Verbindungen&lt;/a&gt;, Acta Mathematica, vol.68, no.1, pp.145-254, (1937).</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. W. Robinson, &lt;a href=&quot;/A000055/a000055.png&quot;&gt;Letter to N. J. A. Sloane, Jul 29 1980&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Ruskey, &lt;a href=&quot;http://www.theory.cs.uvic.ca/~cos/inf/tree/RootedTree.html&quot;&gt;Information on Rooted Trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000081/a000081.html&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A000081/a000081b.txt&quot;&gt;Bijection between rooted trees and arrangements of circles&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/RootedTree.html&quot;&gt;Rooted Tree&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/PlantedTree.html&quot;&gt;Planted Tree&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Xiao, &lt;a href=&quot;http://wims.unice.fr/~wims/en_tool~number~contfrac.en.html&quot;&gt;Contfrac&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#core&quot;&gt;Index entries for &quot;core&quot; sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Par#parens&quot;&gt;Index entries for sequences related to parenthesizing&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Con#confC&quot;&gt;Index entries for continued fractions for constants&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.<OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000081"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> satisfies A(x) = x*exp(A(x)+A(x^2)/2+A(x^3)/3+A(x^4)/4+...) [Polya]
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Also A(x) = Sum_{n &gt;= 1} a(n)*x^n = x / Product_{n &gt;= 1} (1-x^n)^a(n).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Recurrence: a(n+1) = (1/n) * sum_{k=1..n} ( sum_{d|k} d*a(d) ) * a(n-k+1).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Asymptotically<OMOBJ>
+      <OMA><OMS name="times"/><OMV name="c"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMA><OMS name="times"/><OMF dec="0.4399"/><OMS name="..." cd="arithmetics"></OMS></OMA>
+    </OMA>
+    </OMOBJ> and d = 2.9558... [Polya; Knuth, section 7.2.1.6].
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Euler transform is sequence itself with offset<OMOBJ>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>. - _Michael Somos_, Dec 16 2001
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> G.f. = x + x^2 + 2*x^3 + 4*x^4 + 9*x^5 + 20*x^6 + 48*x^7 + 115*x^8 + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> From _Joerg Arndt_, Jun 29 2014: (Start)</CMP>
+    </assertion><assertion class="example">
+      <CMP> The a(6) = 20 trees with 6 nodes have the following level sequences (with level of root =0) and parenthesis words:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 01:  [ 0 1 2 3 4 5 ]    (((((())))))</CMP>
+    </assertion><assertion class="example">
+      <CMP> 02:  [ 0 1 2 3 4 4 ]    ((((()()))))</CMP>
+    </assertion><assertion class="example">
+      <CMP> 03:  [ 0 1 2 3 4 3 ]    ((((())())))</CMP>
+    </assertion><assertion class="example">
+      <CMP> 04:  [ 0 1 2 3 4 2 ]    ((((()))()))</CMP>
+    </assertion><assertion class="example">
+      <CMP> 05:  [ 0 1 2 3 4 1 ]    ((((())))())</CMP>
+    </assertion><assertion class="example">
+      <CMP> 06:  [ 0 1 2 3 3 3 ]    (((()()())))</CMP>
+    </assertion><assertion class="example">
+      <CMP> 07:  [ 0 1 2 3 3 2 ]    (((()())()))</CMP>
+    </assertion><assertion class="example">
+      <CMP> 08:  [ 0 1 2 3 3 1 ]    (((()()))())</CMP>
+    </assertion><assertion class="example">
+      <CMP> 09:  [ 0 1 2 3 2 3 ]    (((())(())))</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10:  [ 0 1 2 3 2 2 ]    (((())()()))</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11:  [ 0 1 2 3 2 1 ]    (((())())())</CMP>
+    </assertion><assertion class="example">
+      <CMP> 12:  [ 0 1 2 3 1 2 ]    (((()))(()))</CMP>
+    </assertion><assertion class="example">
+      <CMP> 13:  [ 0 1 2 3 1 1 ]    (((()))()())</CMP>
+    </assertion><assertion class="example">
+      <CMP> 14:  [ 0 1 2 2 2 2 ]    ((()()()()))</CMP>
+    </assertion><assertion class="example">
+      <CMP> 15:  [ 0 1 2 2 2 1 ]    ((()()())())</CMP>
+    </assertion><assertion class="example">
+      <CMP> 16:  [ 0 1 2 2 1 2 ]    ((()())(()))</CMP>
+    </assertion><assertion class="example">
+      <CMP> 17:  [ 0 1 2 2 1 1 ]    ((()())()())</CMP>
+    </assertion><assertion class="example">
+      <CMP> 18:  [ 0 1 2 1 2 1 ]    ((())(())())</CMP>
+    </assertion><assertion class="example">
+      <CMP> 19:  [ 0 1 2 1 1 1 ]    ((())()()())</CMP>
+    </assertion><assertion class="example">
+      <CMP> 20:  [ 0 1 1 1 1 1 ]    (()()()()())</CMP>
+    </assertion><assertion class="example">
+      <CMP> (End)</CMP>
+    </assertion><omtext class="maple">
+      <CMP> N := 30: a := [1,1]; for n from 3 to N do x*mul( (1-x^i)^(-a[i]), i=1..n-1); series(%,x,n+1); b := coeff(%,x,n); a := [op(a),b]; od: a; A000081 := proc(n) if n=0 then 1 else a[n]; fi; end; G000081 := series(add(a[i]*x^i,i=1..N),x,N+2); # also used in A000055</CMP>
+    </omtext><omtext class="maple">
+      <CMP> spec := [ T, {T=Prod(Z,Set(T))} ]; A000081 := n-&gt; combstruct[count](spec,size=n); [seq(combstruct[count](spec,size=n), n=0..40)];</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # a much more efficient method for computing the result with Maple. It uses two procedures:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a := proc(n) local k; a(n) := add(k*a(k)*s(n-1,k), k=1..n-1)/(n-1) end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a(0) := 0: a(1) := 1: s := proc(n,k) local j; s(n,k) := add(a(n+1-j*k), j=1..iquo(n,k)); # Joe Riel (joer(AT)san.rr.com), Jun 23 2008</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # even more efficient, uses the Euler transform:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(numtheory): a:= proc(n) option remember; local d, j; `if`(n&lt;=1, n, (add(add(d*a(d), d=divisors(j)) *a(n-j), j=1..n-1))/ (n-1)) end: seq(a(n), n=0..50); # _Alois P. Heinz_, Sep 06 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> s[ n_, k_ ] := s[ n, k ]=a[ n+1-k ]+If[ n&lt;2k, 0, s[ n-k, k ] ]; a[ 1 ]=1; a[ n_ ] := a[ n ]=Sum[ a[ i ]s[ n-1, i ]i, {i, 1, n-1} ]/(n-1); Table[ a[ i ], {i, 1, 30} ] (* _Robert A. Russell_ *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := a[n] = If[n &lt;= 1, n, Sum[Sum[d*a[d], {d, Divisors[j]}]*a[n-j], {j, 1, n-1}]/(n-1)]; Table[a[n], {n, 0, 30}] (* _Jean-François Alcover_, Feb 17 2014, after _Alois P. Heinz_ *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := a[n] = If[n &lt;= 1, n, Sum[a[n - j] DivisorSum[j, # a[#] &amp;], {j, n - 1}]/(n - 1)]; Table[a[n], {n, 0, 30}] (* _Jan Mangaldan_, May 07 2014, after _Alois P. Heinz_ *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (* first do *) &lt;&lt; NumericalDifferentialEquationAnalysis`; (* then *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> ButcherTreeCount[30] (* v8 onward _Robert G. Wilson v_, Sep 16 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A = x); if( n&lt;1, 0, for( k=1, n-1, A /= (1 - x^k + x * O(x^n))^polcoeff(A, k)); polcoeff(A, n))}; /* _Michael Somos_, Dec 16 2002 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A, A1, an, i); if( n&lt;1, 0, an = Vec(A = A1 = 1 + O(x^n)); for( m=2, n, i=m\2; an[m] = sum( k=1, i, an[k] * an[m-k]) + polcoeff( if( m%2, A *= (A1 - x^i)^-an[i], A), m-1)); an[n])}; /* _Michael Somos_, Sep 05 2003 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) N=66;  A=vector(N+1, j, 1);</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (n=1, N, A[n+1] = 1/n * sum(k=1,n, sumdiv(k,d, d*A[d]) * A[n-k+1] ) );</CMP>
+    </omtext><omtext class="program">
+      <CMP> concat([0], A) \\ _Joerg Arndt_, Apr 17 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) N := 30; P&lt;x&gt; := PowerSeriesRing(Rationals(),N+1); f := func&lt; A | x*&amp;*[Exp(Evaluate(A,x^k)/k) : k in [1..N]]&gt;; G := x; for i in [1..N] do G := f(G); end for; G000081 := G; A000081 := [0] cat Eltseq(G); // Geoff Bailey (geoff(AT)maths.usyd.edu.au), Nov 30 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima)</CMP>
+    </omtext><omtext class="program">
+      <CMP> g(m):= block([si,v],s:0,v:divisors(m), for si in v do (s:s+r(m/si)/si),s);</CMP>
+    </omtext><omtext class="program">
+      <CMP> r(n):=if n=1 then 1 else sum(Co(n-1,k)/k!,k,1,n-1);</CMP>
+    </omtext><omtext class="program">
+      <CMP> Co(n,k):=if k=1  then g(n)  else sum(g(i+1)*Co(n-i-1,k-1),i,0,n-k);</CMP>
+    </omtext><omtext class="program">
+      <CMP> makelist(r(n),n,1,12); /*_Vladimir Kruchinin_, Jun 15 2012 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.List (genericIndex)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000081 = genericIndex a000081_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000081_list = 0 : 1 : f 1 [1,0] where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    f x ys = y : f (x + 1) (y : ys) where</CMP>
+    </omtext><omtext class="program">
+      <CMP>      y = sum (zipWith (*) (map h [1..x]) ys) `div` x</CMP>
+    </omtext><omtext class="program">
+      <CMP>      h = sum . map (\d -&gt; d * a000081 d) . a027750_row</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Jun 17 2013</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage)</CMP>
+    </omtext><omtext class="program">
+      <CMP> @CachedFunction</CMP>
+    </omtext><omtext class="program">
+      <CMP> def a(n):</CMP>
+    </omtext><omtext class="program">
+      <CMP>     if n &lt; 2: return n</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return add(add(d*a(d) for d in divisors(j))*a(n-j) for j in (1..n-1))/(n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> [a(n) for n in (0..30)] # _Peter Luschny_, Jul 18 2014 after _Alois P. Heinz_</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000041 (partitions), A000055 (unrooted trees), A000169, A005200, A051491, A187770, A051492, A093637, A001858.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Row sums of A144963. - _Gary W. Adamson_, Sep 27 2008</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A209397 (log(A(x)/x)).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000106 (self-convolution).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A027750.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,core,nice,eigen</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

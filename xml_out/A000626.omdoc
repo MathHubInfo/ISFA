@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000626.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000626">
+          <assertion class="***** TTTT *****">
+      <CMP> M3422 N1386</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,4,11,35,101,290,804,2256,6296,17689,49952,142016,406330,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1170272,3390932,9882412,28955403,85261439,252213192,749250700,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2234562027,6688670232,20088920730,60525912003,182895125096,554186425193,1683554604984,5126814324715,15647846830627,47862034920652,146691540312878</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of stereoisomeric paraffins with n carbon atoms.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. M. Blair and H. R. Henze, The number of stereoisomeric and non-stereoisomeric paraffin hydrocarbons, J. Amer. Chem. Soc., 54 (1932), 1538-1545.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Reference gives recurrence.
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A000627, A000628.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by Tom Zeller (tzellera(AT)aim.com), Jun 01 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

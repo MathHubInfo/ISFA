@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000910.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000910">
+          <assertion class="***** TTTT *****">
+      <CMP> M3973 N1643</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,5,35,140,420,1050,2310,4620,8580,15015,25025,40040,61880,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 92820,135660,193800,271320,373065,504735,672980,885500,1151150,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1480050,1883700,2375100,2968875,3681405,4530960,5537840,6724520,8115800,9738960,11623920,13803405</CMP>
+    </assertion><omtext class="name">
+      <CMP> 5*C(n,6).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. Jordan, Calculus of Finite Differences. Budapest, 1939, p. 449.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000910/b000910.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>7</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. [Colin Barker, Mar 01 2012]
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> Table[5Binomial[n, 6], {n, 0, 100}] (* Stefan Steinerberger, Apr 30 2006 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A diagonal of A088617. Equals 5*A000579(n+3) = A080159(n+3, 3).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A210569.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

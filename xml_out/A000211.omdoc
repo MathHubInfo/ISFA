@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000211.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000211">
+          <assertion class="***** TTTT *****">
+      <CMP> M2396 N0953</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,3,5,6,9,13,20,31,49,78,125,201,324,523,845,1366,2209,3573,5780,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9351,15129,24478,39605,64081,103684,167763,271445,439206,710649,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1149853,1860500,3010351,4870849,7881198</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = a(n-1) + a(n-2) - 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let I=I_n be the nXn identity matrix and P=P_n be the incidence matrix of the cycle (1,2,3,...,n). Then, for n&gt;=3, a(n) is the number of (0,1) nXn matrices A&lt;=P^(-1)+I+P with exactly two 1's in every row and column. - _Vladimir Shevelev_, Apr 11 2010</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. Metropolis et al., Permanents of cyclic (0,1) matrices, J. Combin. Theory, 7 (1969), 291-321.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Minc, Permanents of (0,1)-circulants, Canad. Math. Bull., 7 (1964), 253-263.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, Discordant permutations, Scripta Math., 20 (1954), 14-23.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 233.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. P. Stanley, Enumerative Combinatorics I, Example 4.7.15, p. 252.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> K. Yamamoto, Structure polynomial of Latin rectangles and its application to a combinatorial problem, Memoirs of the Faculty of Science, Kyusyu University, Series A, 10 (1956), 1-13.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000211/b000211.txt&quot;&gt;Table of n, a(n) for n=0..500&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_03&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (2,0,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>2</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>4</OMI><OMA><OMS name="times"/><OMI>5</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="x"/>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         a(n) = Lucas number<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000032"/>
+      <OMV name="n"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Binomial transform of<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMI>3</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMI>7</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>11</OMI>
+    </OMA>
+    </OMOBJ>, 18,...], i.e. the series continues as<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> signed version of the Lucas series,<OMOBJ>
+      <OMR xref="A000204"/>
+    </OMOBJ>. - _Gary W. Adamson_, Nov 08 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000211"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="F" cd="A000211"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="F" cd="A000211"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="where" cd="A000211"/>
+      <OMA>
+      <OMS name="F" cd="A000211"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> is the<OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="th"/>
+    </OMA>
+    </OMOBJ> Fibonacci number}. - _Zerinvary Lajos_, Feb 01 2008
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000211"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="per" cd="A000211"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="I"/><OMV name="P"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="P"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="per" cd="A000211"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="P"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA><OMV name="I"/><OMV name="P"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Vladimir Shevelev_, Apr 11 2010
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> A000211:=-(1+z)*(4*z-3)/(z-1)/(z**2+z-1); # conjectured by _Simon Plouffe_ in his 1992 dissertation; gives sequence except for the leading 4</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(combinat): seq(fibonacci(n)+fibonacci(n+2)+2, n=-1..32); # _Zerinvary Lajos_, Feb 01 2008</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; (Matrix([[4,1,5]]). Matrix(3, (i,j)-&gt; if (i=j-1) then 1 elif j=1 then [2, 0, -1][i] else 0 fi)^n)[1,1]: seq(a(n), n=0..33); # _Alois P. Heinz_, Aug 01 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Transpose[NestList[{Last[#],First[#]+Last[#]-2}&amp;,{4,3},40]] [[1]]  (* _Harvey P. Dale_, Mar 22 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000211 n = a000211_list !! n</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000211_list = 4 : 3 : map (subtract 2)</CMP>
+    </omtext><omtext class="program">
+      <CMP>    (zipWith (+) a000211_list (tail a000211_list))</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Feb 29 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000204.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

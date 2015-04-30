@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000789.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000789">
+          <assertion class="***** TTTT *****">
+      <CMP> M1347 N0516</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,8,13,16,21,26,35</CMP>
+    </omtext><omtext class="name">
+      <CMP> Ramsey numbers.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. G. Kalbfleisch, Construction of special edge-chromatic graphs, Canad. Math. Bull., 8 (1965), 575-584.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,hard,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

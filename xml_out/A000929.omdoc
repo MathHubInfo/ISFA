@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000929.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000929">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,2,2,3,4,4,5,6,6,7,8,9,11,12,13,15,16,17,20,22,23,26,28,29,32,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 35,37,41,45,47,51,55,58,63,68,72,77,82,86,92,98,103,111,118,123,131,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 139,145,154,164,171,180,190,198,208,219,229,241,253,264,278,291</CMP>
+    </assertion><omtext class="name">
+      <CMP> Dimension of n-th degree part of Steenrod algebra.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of partitions p(1)+p(2)+...+p(m) = n (into positive parts) such that 2*p(k) &lt;= p(k-1)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of partitions of n into parts of the form 2^j-1, j=1,2,... (called s-partitions). Example: a(7)=4 because we have [7], [3,3,1], [3,1,1,1,1] and [1,1,1,1,1,1,1]. - _Emeric Deutsch_, Mar 06 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> One direction of a bijection between both sorts of partitions, as an algorithm: take a partition P (p(1)+p(2)+...+p(m) such that 2*p(k) &lt;= p(k-1), m is the number of parts), subtract 1 from p(m), 2 from p(m-1), 4 from p(m-2), etc. (this gives a valid partition of the same type), add the part 2^m-1 to the other (initially empty) partition P', repeat until P is empty. The other direction goes by splitting parts 2^k-1 (uniquely) into distinct powers of 2 that are (in decreasing order) added at the left. [_Joerg Arndt_, Jan 06 2013]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. C. P. Bhatt, An interesting way to partition a number, Inform. Process. Lett., 71, 1999, 141-148.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. M. Y. Goh, P. Hitczenko and A. Shokoufandeh, s-partitions, Inform. Process. Lett., 82, 2002, 327-329.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Steenrod, N. and Epstein, D., &quot;Cohomology Operations,&quot; Princeton Univ. Press, 1962.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Zumkeller, &lt;a href=&quot;/A000929/b000929.txt&quot;&gt;Table of n, a(n) for n = 0..512&lt;/a&gt; [From _Reinhard Zumkeller_, Mar 18 2009]</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="prod" cd="A000929"/>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, 1-x^(2^i-1) ). [_Simon Plouffe_] (corrected, _Joerg Arndt_, Dec 28 2012).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000929"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="p" cd="A000929"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> with p(n,k) = if<OMOBJ>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ> then<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="p" cd="A000929"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="p" cd="A000929"/>
+      <OMV name="n"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> else<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>0</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMOBJ>.<OMOBJ>
+      <OMV name="From"/>
+    </OMOBJ> _Reinhard Zumkeller_, Mar 18 2009]
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> From _Joerg Arndt_, Dec 28 2012: (Start)</CMP>
+    </assertion><assertion class="example">
+      <CMP> There are a(17)=13 partitions of 17 into Mersenne numbers:</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 1]  [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 2]  [ 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 3]  [ 3 3 1 1 1 1 1 1 1 1 1 1 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 4]  [ 3 3 3 1 1 1 1 1 1 1 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 5]  [ 3 3 3 3 1 1 1 1 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 6]  [ 3 3 3 3 3 1 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 7]  [ 7 1 1 1 1 1 1 1 1 1 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 8]  [ 7 3 1 1 1 1 1 1 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 9]  [ 7 3 3 1 1 1 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [10]  [ 7 3 3 3 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [11]  [ 7 7 1 1 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [12]  [ 7 7 3 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [13]  [ 15 1 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> There are a(17)=13 partitions p(1)+p(2)+...+p(m) = 17 such that 2*p(k) &lt;= p(k-1):</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 1]  [ 10 4 2 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 2]  [ 10 5 2 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 3]  [ 11 4 2 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 4]  [ 11 5 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 5]  [ 12 4 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 6]  [ 12 5 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 7]  [ 13 3 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 8]  [ 13 4 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [ 9]  [ 14 2 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [10]  [ 14 3 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [11]  [ 15 2 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [12]  [ 16 1 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [13]  [ 17 ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> (End)</CMP>
+    </assertion><omtext class="maple">
+      <CMP> The sequence is C(n,n) where C := proc(m,n) option remember; local k, a; if m = 0 then if n = 0 then 1 else 0 fi; elif m &gt; n then C(n,n); else a := 0; for k from 0 to m do a := a + C(floor(k/2), n-k) od; a; fi end;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> g:=1/product(1-x^(2^k-1),k=1..10): gser:=series(g,x=0,70): seq(coeff(gser,x,n),n=0..64); - _Emeric Deutsch_, Mar 06 2006</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>  nn = 63; CoefficientList[</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Series[Product[1/(1 - x^(2^i - 1)), {i, 1, nn}], {x, 0, nn}], x] (* _Geoffrey Critzer_, Jul 09 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> N=166; q='q+O('q^N);</CMP>
+    </omtext><omtext class="program">
+      <CMP> gf=1/prod(n=1,1+ceil(log(N)/log(2)), 1-q^(2^n - 1) );</CMP>
+    </omtext><omtext class="program">
+      <CMP> Vec(gf)</CMP>
+    </omtext><omtext class="program">
+      <CMP> /* _Joerg Arndt_, Oct 06 2012 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A117145.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A000225, A000041, A018819, A079559. [From _Reinhard Zumkeller_, Mar 18 2009]</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> Dan Christensen [ jdchrist(AT)math.mit.edu ]</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

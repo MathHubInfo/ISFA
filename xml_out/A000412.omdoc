@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000412.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000412">
+          <assertion class="***** TTTT *****">
+      <CMP> M2657 N1060</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,7,16,31,57,97,162,257,401,608,907,1325,1914,2719,3824,5313,7316,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9973,13495,18105,24132,31938,42021,54948,71484,92492,119120,152686,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 194887,247693,313613,395547,497154,622688,777424,967525,1200572,1485393,1832779,2255317</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of bipartite partitions of n white objects and 3 black ones.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of ways to factor p^n*q^3 where p and q are distinct primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = if n &lt;= 3 then A054225(3,n) else A054225(n,3). [_Reinhard Zumkeller_, Nov 30 2011]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. C. Auluck, On partitions of bipartite numbers. Proc. Cambridge Philos. Soc. 49, (1953). 72-83.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. S. Cheema and H. Gupta, Tables of Partitions of Gaussian Integers. National Institute of Sciences of India, Mathematical Tables, Vol. 1, New Delhi, 1956, p. 1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A000412/b000412.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> max = 40; col = 3; s1 = Series[Product[1/(1-x^(n-k)*y^k), {n, 1, max+2}, {k, 0, n}], {y, 0, col}] // Normal; s2 = Series[s1, {x, 0, max+1}]; a[n_] := SeriesCoefficient[s2, {x, 0, n}, {y, 0, col}]; Table[ a[n] , {n, 0, max}] (* _Jean-François Alcover_, Mar 13 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column 3 of A054225.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A005380.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Christian G. Bower_, Jan 08 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

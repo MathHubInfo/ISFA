@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000925.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000925">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,1,0,2,2,0,0,1,2,2,0,0,2,0,0,2,2,1,0,2,0,0,0,0,4,2,0,0,2,0,0,1,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,0,2,2,0,0,2,2,0,0,0,2,0,0,0,2,3,0,2,2,0,0,0,0,2,0,0,2,0,0,2,4,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2,0,0,0,1,2,2,0,0,0,0,0,2,2,2,0,0,4,0,0,0,2,2,0,0,0,0,0,0,2,1,0,4</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of ordered ways of writing n as a sum of 2 squares of nonnegative integers.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Das and A. C. Melissinos, Quantum Mechanics: A Modern Introduction, Gordon and Breach, 1986, p. 47.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. Grosswald, Representations of Integers as Sums of Squares. Springer-Verlag, NY, 1985.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000925/b000925.txt&quot;&gt;Table of n, a(n) for n=0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Su#ssq&quot;&gt;Index entries for sequences related to sums of squares&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Coefficient of<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMOBJ> in (1/4)*(1 + theta_3(0, q))^2.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000925"/>
+      <OMA>
+      <OMR xref="A001481"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000925"/>
+      <OMA>
+      <OMR xref="A022544"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>. - _Benoit Cloitre_, Apr 20 2003
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> a[n_] := (pr = PowersRepresentations[n, 2, 2]; Count[Union[Join[pr, Reverse /@ pr]], {j_ /; j &gt;= 0, k_ /; k &gt;= 0}]); a /@ Range[0, 100] (* _Jean-François Alcover_, Apr 05 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> nn = 100; t = CoefficientList[Series[Sum[x^k^2, {k, 0, Sqrt[nn]}]^2, {x, 0, nn}], x] (* _T. D. Noe_, Apr 05 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=sum(i=0,n,sum(j=0,n,if(i^2+j^2-n,0,1)))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000925 n = sum $ map (a010052 . (n -)) $ takeWhile (&lt;= n) a000290_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Sep 14 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP>  Cf. A000290, A010052, A000161, A247367.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> Jacques Haubrich (jhaubrich(AT)freeler.nl)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

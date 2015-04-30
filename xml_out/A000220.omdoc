@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000220.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000220">
+          <assertion class="***** TTTT *****">
+      <CMP> M2583 N1022</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,0,0,0,1,1,3,6,15,29,67,139,310,667,1480,3244,7241,16104,36192,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 81435,184452,418870,955860,2187664,5025990,11580130,26765230,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 62027433,144133676,335731381,783859852,1834104934,4300433063,10102854473,23778351222</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of asymmetric trees with n nodes (also called identity trees).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Bergeron, G. Labelle and P. Leroux, Combinatorial Species and Tree-Like Structures, Camb. 1998, p. 330.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. R. Finch, Mathematical Constants, Cambridge, 2003, p. 301 and 562.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary, Graph Theory. Addison-Wesley, Reading, MA, 1969, p. 232.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, p. 66, Eq. (3.3.22).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary, R. W. Robinson and A. J. Schwenk, Twenty-step algorithm for determining the asymptotic number of trees of various species, J. Austral. Math. Soc., Series A, 20 (1975), 483-503. Errata: Vol. A 41 (1986), p. 325.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, Fundamental Algorithms, 3d Ed. 1997, pp. 386-88 describes methodology for generating similar sequence rapidly.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. C. Read and R. J. Wilson, An Atlas of Graphs, Oxford, 1998.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. J. Schwenk, personal communication.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe and Alois P. Heinz, &lt;a href=&quot;/A000220/b000220.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt; (first 200 terms from T. D. Noe)</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Friedman, &lt;a href=&quot;/A000220/a000220.gif&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         G.f.:<OMOBJ>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A000220"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A000220"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A000220"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="A" cd="A000220"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMOBJ> is g.f. for<OMOBJ>
+      <OMR xref="A004111"/>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000220"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="c"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>5</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, where<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="d"/>
+      <OMR xref="A246169"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMF dec="2.517540352632004"/><OMS name="..." cd="arithmetics"></OMS></OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMA><OMS name="times"/><OMF dec="0.29938828746578433"/><OMS name="..." cd="arithmetics"></OMS></OMA>
+    </OMA>
+    </OMOBJ> . - _Vaclav Kotesovec_, Aug 25 2014
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> with(numtheory):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> b:= proc(n) option remember; `if`(n&lt;2, n, add(b(n-k)*add(</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       b(d)*d*(-1)^(k/d+1), d=divisors(k)), k=1..n-1)/(n-1))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; b(n)-(add(b(j)*b(n-j), j=0..n)+</CMP>
+    </omtext><omtext class="maple">
+      <CMP>        `if`(irem(n, 2)=0, b(n/2), 0))/2:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=1..50);  # _Alois P. Heinz_, Feb 24 2015</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> s[ n_, k_ ] := s[ n, k ]=a[ n+1-k ]+If[ n&lt;2k, 0, -s[ n-k, k ] ]; a[ 1 ]=1; a[ n_ ] := a[ n ]=Sum[ a[ i ]s[ n-1, i ]i, {i, 1, n-1} ]/(n-1); Table[ a[ i ]-Sum[ a[ j ]a[ i-j ], {j, 1, i/2} ]+If[ OddQ[ i ], 0, a[ i/2 ](a[ i/2 ]-1)/2 ], {i, 1, 50} ] (* _Robert A. Russell_ *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000055, A000081.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A246169, A004111, A035056.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,9</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

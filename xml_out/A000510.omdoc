@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000510.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000510">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,9,9,11,15,15,17</CMP>
+    </omtext><omtext class="name">
+      <CMP> Maximal number of points in PG(2,q) with at most 3 on a line (next term is 21 or 22).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. W. P. Hirschfeld and L. Storme, The packing problem in statistics, coding theory and finite projective spaces, J. Statist. Plann. Inference 72 (1998), no. 1-2, 355-380.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000509.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> J. W. P. Hirschfeld [ jwph(AT)sussex.ac.uk ]</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

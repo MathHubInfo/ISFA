@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000917.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000917">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,20,105,504,2310,10296,45045,194480,831402,3527160,14872858,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 62403600,260757900,1085822640,4508102925,18668849760,77138650050,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 318107374200,1309542023790,5382578744400,22093039119060,90567738003600,370847442355650,1516927277253024</CMP>
+    </assertion><omtext class="name">
+      <CMP> (2n+3)!/(n!*(n+2)!).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> G.f.: c(x)*(4-c(x))/(1-4*x)^(3/2), c(x) = g.f. for Catalan numbers A000108 (agrees with Han 75 99, (5.27.9). Convolution of A038679 with A000984 (central binomial coefficients); also convolution of A038665 with A000302 (powers of 4). - _Wolfdieter Lang_, Dec 11 1999</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Appears as diagonal in A003506. - _Zerinvary Lajos_, Apr 12 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)=number of double rises in all Grand Dyck paths of semilength n+2. Example: a(0)=3 because in the 6 (=A000984(2)) Grand Dyck paths of semilength 2, namely udud, (uu)dd, uddu, d(uu)d, dudu, dd(uu), we have a total of 3 uu's (shown between parentheses). - _Emeric Deutsch_, Nov 29 2008</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. R. Hansen, A Table of Series and Products, Prentice-Hall, Englewood Cliffs, NJ, 1975, p. 99.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000917/b000917.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a := proc(n) (n+1)*binomial(2*n+3, n+2) end: seq(a(n), n=0..23); - _Zerinvary Lajos_, Nov 26 2006</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq((n+1)*binomial(2*n+4, n+2)/2, n=0..23); # _Zerinvary Lajos_, Feb 28 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[(2*n + 3)!/(n!*(n + 2)!), {n, 0, 25}] (* _T. D. Noe_, Jun 20 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007054, A038665, A038679, A000108, A000984, A000302, A003506. 1/beta(n, n+2) in A061928.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

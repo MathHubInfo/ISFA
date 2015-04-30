@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000952.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000952">
+          <assertion class="***** TTTT *****">
+      <CMP> M1574 N0615</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,6,10,14,18,26,30,38,42,46,50,54,62</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers n == 2 (mod 4) that are the orders of conference matrices.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A conference matrix of order n is an n X n {-1,0,+1} matrix A such that A A' = (n-1)I.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If n == 2 (mod 4) then a necessary condition is that n-1 is a sum of 2 squares. It is conjectured that this condition is also sufficient. If n == 2 mod 4 and n-1 is a prime or prime power the condition is automatically satisfied.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> V. Belevitch, Conference matrices and Hadamard matrices, Ann. Soc. Scientifique Bruxelles, 82 (I) (1968), 13-32.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. A. Balonin  and Jennifer Seberry, A review and new symmetric conference matrices, http://ro.uow.edu.au/cgi/viewcontent.cgi?article=3757&amp;context=eispapers, 2014.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> CRC Handbook of Combinatorial Designs, 1996, Chapter 52.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. J. MacWilliams and N. J. A. Sloane, The Theory of Error-Correcting Codes, Elsevier-North Holland, 1978, p. 56.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joerg Arndt, &lt;a href=&quot;/A000952/a000952.txt&quot;&gt;Some relevant Pari/GP programs&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> The essentially unique conference matrix of order 6:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0 +1 +1 +1 +1 +1</CMP>
+    </assertion><assertion class="example">
+      <CMP> +1 0 +1 -1 -1 +1</CMP>
+    </assertion><assertion class="example">
+      <CMP> +1 +1 0 +1 -1 -1</CMP>
+    </assertion><assertion class="example">
+      <CMP> +1 -1 +1 0 +1 -1</CMP>
+    </assertion><assertion class="example">
+      <CMP> +1 -1 -1 +1 0 +1</CMP>
+    </assertion><assertion class="example">
+      <CMP> +1 +1 -1 -1 +1 0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,more,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 66 seems to be the smallest order for which it is not known if a matrix exists. Since 65 is the sum of two squares, according to the conjecture, 66 should be the next term.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _N. J. A. Sloane_, Mar 13 2008, Mar 16 2008, May 22 2014.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

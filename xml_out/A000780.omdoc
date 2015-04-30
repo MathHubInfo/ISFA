@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000780.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000780">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,16,78,456,3120,24480,216720,2136960,23224320,275788800,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3552595200,49337164800,734788454400,11681891020800,197458829568000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3535951491072000,66869236482048000,1331693730791424000,27856727993622528000,610658404052336640000</CMP>
+    </assertion><omtext class="name">
+      <CMP> (n+1)!/2+(n-1)(n-1)!.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. R. Stembridge, Some combinatorial aspects of reduced words in finite Coxeter groups. Trans. Amer. Math. Soc. 349 (1997), no. 4, 1285-1332.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000780/b000780.txt&quot;&gt;Table of n, a(n) for n = 1..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=392&quot;&gt;Encyclopedia of Combinatorial Structures 392&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000780"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>2</OMI>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Gary Detlefs_, May 22 2010
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> seq((n-1)!* (n^2+3*n-2)/2, n = 1..19); # _Gary Detlefs_, May 22 2010</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[(n + 1)!/2 + (n - 1)*(n - 1)!, {n, 40}] (* _Vladimir Joseph Stephan Orlovsky_, Feb 23 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Factorial(n+1)/2+(n-1)*Factorial(n-1): n in [1..25]]; // _Vincenzo Librandi_, Jun 07 2013</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

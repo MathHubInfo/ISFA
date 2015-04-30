@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000061.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000061">
+          <assertion class="***** TTTT *****">
+      <CMP> M0938 N0352</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,4,4,6,8,8,12,14,14,16,20,20,24,32,24,30,38,32,40,46,40,48,60,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 50,54,64,60,68,80,64,72,92,76,96,100,82,104,112,96,108,126,112,120,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 148,112,128,168,130,156,160,140,162,184,160,168,198,170,192,220,168,192</CMP>
+    </assertion><omtext class="name">
+      <CMP> Generalized tangent numbers d(n,1).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Knuth, D. E.; Buckholtz, Thomas J. Computation of tangent, Euler and Bernoulli numbers. Math. Comp. 21 1967 663-688.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sean A. Irvine, &lt;a href=&quot;/A000061/b000061.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Shanks, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1967-0223295-5&quot;&gt;Generalized Euler and class numbers&lt;/a&gt;, Math. Comp. 21 1967 663-688.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Shanks, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1968-0227093-9&quot;&gt;Corrigenda to: &quot;Generalized Euler and class numbers&quot;&lt;/a&gt;, Math. Comp. 22 (1968), 699</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/TangentNumber.html&quot;&gt;Tangent Number&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         From _Sean A. Irvine_, Mar 26 2012: (Start)
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Consider the Dirichlet series L_a(s) = sum_{k&gt;=0} (-a|2k+1) / (2k+1)^s, where (-a|2k+1) is the Jacobi symbol. Then the numbers<OMOBJ>
+      <OMA>
+      <OMS name="d" cd="A000061"/>
+      <OMV name="a"/><OMV name="n"/>
+    </OMA>
+    </OMOBJ> are defined by<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="L_a" cd="A000061"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMS name="pi"/><OMA><OMS name="times"/><OMI>2</OMI><OMV name="a"/></OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A000061"/>
+      <OMV name="a"/>
+    </OMA><OMV name="d"/><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> for<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="a"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMOBJ> and n=1,2,3...
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         From the Shanks paper, these can be computed as:
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Write<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="a"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="bm"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMV name="b"/>
+    </OMOBJ> squarefree, then d(a,n)=m^(2n-1)(m*prod_(p_i|m)(p_i^(-1))) * prod_(p_i|m)(p_i^(2*n)-jacobi(b,p_i))d(b,n) with<OMOBJ>
+      <OMA>
+      <OMS name="d" cd="A000061"/>
+      <OMV name="b"/><OMV name="n"/>
+    </OMA>
+    </OMOBJ>, b square-free determined by:
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="D" cd="A000061"/>
+      <OMV name="b"/><OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMV name="sum"/><OMA><OMS name="times"/><OMA>
+      <OMS name="jacobi" cd="A000061"/>
+      <OMV name="k"/><OMV name="b"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="b"/><OMA><OMS name="times"/><OMI>4</OMI><OMV name="k"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA></OMA>
+    </OMA>
+    </OMOBJ>, k=1..(b-1)/2)  if<OMOBJ>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMV name="b"/>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="mod" cd="A000061"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="D" cd="A000061"/>
+      <OMV name="b"/><OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMV name="sum"/><OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME></OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="b"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="mod" cd="A000061"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="D" cd="A000061"/>
+      <OMV name="b"/><OMV name="n"/>
+    </OMA>
+      <OMS name="name">
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval">
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+                </OMS>
+              </OMA>
+              <OMBVAR>
+                <OMV name="i"/>
+              </OMBVAR>
+            <OMA><OMS name="times"/><OMA>
+      <OMS name="d" cd="A000061"/>
+      <OMV name="b"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="i"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="b"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="i"/>
+    </OMA><OMA>
+      <OMS name="C" cd="A000061"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="i"/></OMA>
+    </OMA></OMA>
+          </OMA>
+      </OMBIND>
+    </OMS>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="D" cd="A000061"/>
+      <OMI>1</OMI><OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Sequence gives<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000061"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="d" cd="A000061"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>. (End)
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A000176.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Kok Seng Chua (chuaks(AT)ihpc.nus.edu.sg), Jun 03 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> It would be nice to have a more precise definition! - _N. J. A. Sloane_, May 26 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

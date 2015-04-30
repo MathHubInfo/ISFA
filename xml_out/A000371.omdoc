@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000371.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000371">
+          <assertion class="***** TTTT *****">
+      <CMP> M0385 N0145</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,10,218,64594,4294642034,18446744047940725978,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 340282366920938463334247399005993378250,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 115792089237316195423570985008687907850547725730273056332267095982282337798562</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = Sum_{k=0..n} (-1)^(n-k)*binomial(n,k)*2^(2^k).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Inverse binomial transform of A001146.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of nondegenerate Boolean functions of n variables.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Twice the number of covers of an n-set (A003465). That is, the number of subsets of an n-element set S whose union is S.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From David P. Moulton, Nov 11 2010: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> To see why the formula in the definition gives the number of covers of an n-set we use inclusion-exclusion.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The set S has n elements and T, the power set of S, has 2^n elements.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let U be the power set of T; we want to know how many elements of U have union S.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For any element i of S, let U_i be the subset of U whose unions do not contain i, so we want to compute the size of the complement of the union of the U_i s.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Write U_I for the union of U_i for i in I. Then U_I consists of all subsets of T whose union is disjoint from I, so it consists of all subsets of the power set of S - I. The power set of S - I has 2^(n - #I) elements, so U_I has size 2^2^(n - #I).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Then the basic inclusion--exclusion formula says that our answer is</CMP>
+    </omtext><omtext class="comment">
+      <CMP> #(U - union_{i in S} U_i) = sum_{I subseteq S} (-1)^#I #U_I = sum_{j=0}^n (-1)^j sum{#I = j} #U_I = sum_{j=0}^n (-1)^j (n choose j) 2^2^(n-j), as required.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (End)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Here is Comtet's proof: Let P'(S) be the power set of nonempty subsets of S. Then |P'(P'(S)| = 2^(2^n-1)-1 = Sum_k binomial(n,k)*a(k). Apply the inverse binomial transform to get a(n) = Sum_k (-1)^k*binomial(n,k)*2^(2^(n-k)-1). - _N. J. A. Sloane_, May 19 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n&gt;0, a(n)=A076078(A002110(n)). - _Matthew Vandermast_, Nov 14 2010</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Baumann, H. Strass, On the number of bipolar Boolean functions, http://www.informatik.uni-leipzig.de/~baumann/papers/bipolar.pdf, J. Symbolic Logic, to appear (2014).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 165.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. A. Harrison, Introduction to Switching and Automata Theory. McGraw Hill, NY, 1965, p. 170.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Muroga, Threshold Logic and Its Applications. Wiley, NY, 1971, p. 38 and 214.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. G. Wagner, Covers of finite sets, Proc. 4th S-E Conf. Combin., Graph Theory, Computing, Congress. Numer. 8 (1973), 515-520.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. Hearne and C. G. Wagner, &lt;a href=&quot;http://dx.doi.org/10.1016/0012-365X(73)90141-6&quot;&gt;Minimal covers of finite sets&lt;/a&gt;, Discr. Math. 5 (1973), 247-251.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Klazar, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0305048&quot;&gt;Extremal problems for ordered hypergraphs&lt;/a&gt;, arXiv:math/0305048 [math.CO], 2003.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. J. Macula, &lt;a href=&quot;http://www.jstor.org/stable/2690690&quot;&gt;Covers of a finite set&lt;/a&gt;, Math. Mag., 67 (1994), 141-144.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Cover.html&quot;&gt;Cover&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Bo#Boolean&quot;&gt;Index entries for sequences related to Boolean functions&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         The coefficient of<OMOBJ>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMOBJ> in the polynomial p_n(x) = sum_{j=0}^n (-1)^j (n choose j) (x+1)^2^(n-j) gives the number of covers of<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> set of size<OMOBJ>
+      <OMV name="n"/>
+    </OMOBJ> where the covers have<OMOBJ>
+      <OMV name="k"/>
+    </OMOBJ> elements.  Also, there is<OMOBJ>
+      <OMV name="a"/>
+    </OMOBJ> recurrence: f_n(k) = k if<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ>, = f_{n-1}(k^2) - f_{n-1}(k) if<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMOBJ> that gives<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000371"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="f_n" cd="A000371"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> and<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="p_n" cd="A000371"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="f_n" cd="A000371"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _David W. Wilson_, Nov 11 2010
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: Sum(exp((2^n-1)*x)*log(2)^n/n!, n=0..infinity). - _Vladeta Jovovic_, May 30 2004
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000371"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Charles<OMOBJ>
+      <OMV name="R"/>
+    </OMOBJ> Greathouse IV_, Jan 02 2012
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000371"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMR xref="A003465"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>. - _Maurizio De Leo_, Feb 27 2015
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> Let n=2, S={a,b}, P={0,a,b,ab}. There are ten subsets of P whose union is S: {ab}, {a,b}, {a,ab}, {b,ab}, {a,b,ab}, and the empty set together with the same five. - _Marc LeBrun_, Nov 10 2010</CMP>
+    </assertion><omtext class="maple">
+      <CMP> f:=n-&gt;add((-1)^(n-k)*binomial(n,k)*2^(2^k),k=0..n);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Sum[(-1)^(n-k) Binomial[n,k]2^(2^k),{k,0,n}],{n,0,10}] (* _Harvey P. Dale_, Oct 17 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=sum(k=0,n,(-1)^(n-k)*binomial(n,k)&lt;&lt;(2^k)) \\ _Charles R Greathouse IV_, Jan 02 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Equals twice A003465.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A001146, A002110, A076078, A055154.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Since this sequence arises in several different contexts, I replaced the old definition with an explicit formula. - _N. J. A. Sloane_, Nov 23 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000920.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000920">
+          <assertion class="***** TTTT *****">
+      <CMP> M5473 N2370</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,720,15120,191520,1905120,16435440,129230640,953029440,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6711344640,45674188560,302899156560,1969147121760,12604139926560,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 79694820748080,499018753280880,3100376804676480,19141689213218880,117579844328562000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Differences of 0: 6!*Stirling2(n,6).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of surjections from an n-element set onto a six-element set, with n &gt;= 6. - Mohamed Bouhamida (bhmd95(AT)yahoo.fr), Dec 15 2007</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. T. Davis, Tables of the Mathematical Functions. Vols. 1 and 2, 2nd ed., 1963, Vol. 3 (with V. J. Fisher), 1962; Principia Press of Trinity Univ., San Antonio, TX, Vol. 2, p. 212.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 33.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. F. Steffensen, Interpolation, 2nd ed., Chelsea, NY, 1950, see p. 54.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. H. Voigt, Theorie der Zahlenreihen und der Reihengleichungen, Goschen, Leipzig, 1911, p. 31.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A000920/b000920.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. H. Voigt, &lt;a href=&quot;http://historical.library.cornell.edu/cgi-bin/cul.math/docviewer?did=05260001&amp;amp;seq=7&quot;&gt;Theorie der Zahlenreihen und der Reihengleichungen&lt;/a&gt;, Leipzig, 1911.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="Sum" cd="A000920"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="i"/>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A000920"/>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>, i)*(6-i)^n, i = 0 .. 5).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000920"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>6</OMI>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A000920"/>
+      <OMI>6</OMI><OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A000920"/>
+      <OMI>6</OMI><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A000920"/>
+      <OMI>6</OMI><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A000920"/>
+      <OMI>6</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="C" cd="A000920"/>
+      <OMI>6</OMI><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ> with<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>6</OMI>
+    </OMA>
+    </OMOBJ>. - Mohamed Bouhamida (bhmd95(AT)yahoo.fr), Dec 15 2007
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         G.f.:(720*x^6)/((x-1)*(6*x-1)*(4*x-1)*(3*x-1)*(2*x-1)*(5*x-1)) [From Maksym Voznyy (voznyy(AT)mail.ru), Jul 26 2009]
+      </CMP>
+      </omdoc:p><omtext class="maple">
+      <CMP> 720/(-1+z)/(6*z-1)/(4*z-1)/(3*z-1)/(2*z-1)/(5*z-1);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with (combstruct):ZL:=[S,{S=Sequence(U,card=r),U=Set(Z,card&gt;=1)}, labeled]: seq(count(subs(r=6,ZL),size=m),m=1..22); - _Zerinvary Lajos_, Mar 09 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> CoefficientList[Series[(720*x^5)/((x-1)*(6*x-1)*(4*x-1)*(3*x-1)*(2*x-1)*(5*x-1)),{x,0,30}],x] (* _Vincenzo Librandi_, Apr 11 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001117, A000919, A019538, A000920.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000918, A000919, A001117, A001118.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> G.f. proposed by Maksym Voznyy checked and corrected by R. J. Mathar, Sep 16 2009.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

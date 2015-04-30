@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000722.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000722">
+          <assertion class="***** TTTT *****">
+      <CMP> M2144 N0853</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,24,40320,20922789888000,263130836933693530167218012160000000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 126886932185884164103433389335161480802865516174545192198801894375214704230400000000000000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Invertible Boolean functions of n variables: a(n) = (2^n)!.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These are invertible maps from {0,1}^n to {0,1}^n, or in other words permutations of the 2^n binary vectors of length n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 2^n-th order derivative of n-th Mandelbrot iterate. Example: a(2) = 24, after one iterate in the Mandelbrot(z(n+1) = z(n)^2 + c) we have the function z(2) = z^4 + 2*c*z^2 + c^2 + c, for which the 4th-order derivative is 24. - Bert van den Bosch (zeusooooo(AT)hotmail.com), Sep 07 2003</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. S. Lorens, &lt;a href=&quot;http://dx.doi.org/10.1109/PGEC.1964.263724&quot;&gt;Invertible Boolean functions&lt;/a&gt;, IEEE Trans. Electron. Computers, EC-13 (1964), 529-541.</CMP>
+    </omtext><omtext class="link">
+      <CMP> I. Strazdins, &lt;a href=&quot;http://dx.doi.org/10.1023/A:1005769927571&quot;&gt;Universal affine classification of Boolean functions&lt;/a&gt;, Acta Applic. Math. 46 (1997), 147-167.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Bo#Boolean&quot;&gt;Index entries for sequences related to Boolean functions&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000722"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Sum of reciprocals = 0.54169146825401604874... - _Cino Hilliard_, Feb 08 2003
+      </CMP>
+      </omdoc:p><omtext class="program">
+      <CMP> (PARI) atonfact(a,n) = {sr=0; for(x=1,n, y =(a^x)!; sr+=1.0/y; print1(y&quot; &quot;); ); print(); print(sr) }</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000652, A000653, A000654, A001038, A001537, A046856, A046857.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

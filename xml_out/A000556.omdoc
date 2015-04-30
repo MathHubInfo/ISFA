@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000556.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000556">
+          <assertion class="***** TTTT *****">
+      <CMP> M3966 N1638</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,5,31,257,2671,33305,484471,8054177,150635551,3130337705,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 71556251911,1784401334897,48205833997231,1402462784186105,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 43716593539939351,1453550100421124417,51350258701767067711,1920785418183176050505</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of exp(-x) / (1 - exp(x) + exp(-x)).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Ledin, On a certain kind of Fibonacci sums, Fib. Quart., 5 (1967), 45-58.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         Sum(k!*fibonacci(k + 1)*stirling2(n, k), k = 0 .. n).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         E.g.f.: 1/(1 + U(0)) where U(k)= 1 - 2^k/(1 - x/(x - (k+1)*2^k/U(k+1) ));(continued fraction<OMOBJ>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="rd"/></OMA>
+    </OMOBJ> kind, 3-step ). - _Sergei N. Gladkovskii_, Dec 05 2012
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> _John W. Layman_ observes that this is also Sum (-2)^k*binomial(n, k)*b(n-k), where b() = A005923.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A005923.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

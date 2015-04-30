@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000489.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000489">
+          <assertion class="***** TTTT *****">
+      <CMP> M5025 N2168</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,16,435,7136,99350,1234032,14219212,155251840,1628202762,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16550991200,164111079110,1594594348800,15235525651840,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 143518352447680,1335670583147400,12301278983461376,112264111607438906,1016361486936571680,9136254276320346046</CMP>
+    </assertion><omtext class="name">
+      <CMP> Card matching.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 193.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000489/b000489.txt&quot;&gt;Table of n, a(n) for n = 1..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ca#cardmatch&quot;&gt;Index entries for sequences related to card matching&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000489"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="binomial" cd="A000489"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMOBJ>, 3)*sum(binomial(n, k+3)*binomial(n, k)*binomial(n-3, k), k=0..n-3) +6n*binomial(n, 2)*sum(binomial(n, k+1)*binomial(n-1, k+2)*binomial(n-2, k), k=0..n-3)+n^3*sum(binomial(n-1, k)^3, k=0..n-1).
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Recurrence: (n+3)*(243*n^7 - 1701*n^6 + 4239*n^5 - 4671*n^4 + 6042*n^3 - 17352*n^2 + 25032*n - 12016)*(n-1)^2*a(n) = n*(1701*n^9 - 6804*n^8 + 270*n^7 + 19116*n^6 + 35085*n^5 - 203640*n^4 + 324384*n^3 - 246736*n^2 + 75440*n - 5440)*a(n-1) + 8*n*(243*n^7 - 864*n^5 - 486*n^4 + 4233*n^3 - 5274*n^2 + 2460*n - 184)*(n-1)^2*a(n-2). - _Vaclav Kotesovec_, Aug 07 2013
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000489"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="sqrt" cd="A000489"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>8</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMS name="Pi"/>
+    </OMA>
+    </OMA>
+    </OMOBJ>. - _Vaclav Kotesovec_, Aug 07 2013
+      </CMP>
+      </omdoc:p><omtext class="mathematica">
+      <CMP> a[n_] := 3*Binomial[n, 3]*Sum[Binomial[n, k + 3]*Binomial[n, k]*Binomial[n - 3, k], {k, 0, n - 3}] + 6 n*Binomial[n, 2]*Sum[Binomial[n, k + 1]*Binomial[n - 1, k + 2]*Binomial[n - 2, k], {k, 0, n - 3}] + n^3*Sum[Binomial[n - 1, k]^3, {k, 0, n - 1}]; Table[a[n], {n, 20}] (* _T. D. Noe_, Jun 20 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000279, A000535.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, Apr 26 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Emeric Deutsch_, Feb 19 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

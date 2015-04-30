@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000066.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000066">
+          <assertion class="***** TTTT *****">
+      <CMP> M1013 N0380</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,6,10,14,24,30,58,70,112,126</CMP>
+    </omtext><omtext class="name">
+      <CMP> Smallest number of vertices in trivalent graph with girth (shortest cycle) = n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also called the order of the (3,n) cage graph.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Recently (unpublished) McKay and Myrvold proved that the minimal graph on 112 vertices is unique. - May 20 2003</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If there are n vertices and e edges, then 3n=2e, so n is always even.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Current lower bounds for a(13)..a(32) are 202, 258, 384, 512, 768, 1024, 1536, 2048, 3072, 4096, 6144, 8192, 12288, 16384, 24576, 32768, 49152, 65536, 98304, 131072. - from Table 3 of the Dynamic cage survey via _Jason Kimberley_, Dec 31 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Current upper bounds for a(13)..a(32) are 272, 384, 620, 960, 2176, 2560, 4324, 5376, 16028, 16206, 49326, 49608, 108906, 109200, 285852, 415104, 1141484, 1143408, 3649794, 3650304. - from Table 3 of the Dynamic cage survey via _Jason Kimberley_, Dec 31 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. T. Balaban, Trivalent graphs of girth nine and eleven and relationships among cages, Rev. Roum. Math. Pures et Appl. 18 (1973) 1033-1043.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Brendan McKay, personal communication.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Brendan McKay, W. Myrvold and J. Nadon, Fast backtracking principles applied to find new cages, 9th Annual ACM-SIAM Symposium on Discrete Algorithms, 1998, 188-191.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. O'Keefe and P. K. Wong, A smallest graph of girth 10 and valency 3, J. Combin. Theory, B 29 (1980), 91-105.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Sachs, On regular graphs with given girth, pp. 91-97 of M. Fiedler, editor, Theory of Graphs and Its Applications: Proceedings of the Symposium, Smolenice, Czechoslovakia, 1963. Academic Press, NY, 1964.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Wong, Pak Ken; Cages-a survey. J. Graph Theory 6 (1982), no. 1, 1-22.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Andries E. Brouwer, &lt;a href=&quot;http://www.win.tue.nl/~aeb/graphs/cages/cages.html&quot;&gt;Cages&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Geoff Exoo, &lt;a href=&quot;http://ginger.indstate.edu/ge/CAGES&quot;&gt;Regular graphs of given degree and girth&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Exoo and R. Jajcay, &lt;a href=&quot;http://www.combinatorics.org/ojs/index.php/eljc/article/view/DS16&quot;&gt;Dynamic cage survey&lt;/a&gt;, Electr. J. Combin. (2008, 2011).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Gordon Royle, &lt;a href=&quot;http://units.maths.uwa.edu.au/~gordon/remote/cages/&quot;&gt;Cubic Cages&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/CageGraph.html&quot;&gt;Cage Graph&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+         For all<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="g"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000066"/>
+      <OMV name="g"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A027383"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="g"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMOBJ>, with equality if and only if<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="g"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMOBJ>,<OMOBJ>
+      <OMI>4</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>5</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>6</OMI>
+    </OMOBJ>,<OMOBJ>
+      <OMI>8</OMI>
+    </OMOBJ>, or<OMOBJ>
+      <OMI>12</OMI>
+    </OMOBJ>.  - _Jason Kimberley_, Dec 21 2012 and Jan 01 2013
+      </CMP>
+      </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A006787, A052453 (number of such graphs).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Orders of cages: A054760 (n,k), this sequence (3,n), A037233 (4,n), A218553 (5,n), A218554 (6,n), A218555 (7,n),  A191595 (n,5).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,more,nice,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional comments from _Matthew Cook_, May 15, 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Balaban proved 112 as an upper bound for a(11). The proof that it is also a lower bound is in the paper by Brendan McKay, W. Myrvold and J. Nadon.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A000224.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A000224">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,2,2,3,4,4,3,4,6,6,4,7,8,6,4,9,8,10,6,8,12,12,6,11,14,11,8,15,12,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16,7,12,18,12,8,19,20,14,9,21,16,22,12,12,24,24,8,22,22,18,14,27,22,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 18,12,20,30,30,12,31,32,16,12,21,24,34,18,24,24,36,12</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of squares mod n.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. D. Stangl, Counting squares in Z_n, Math. Mag. 69 (1996) 285-289.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A000224/b000224.txt&quot;&gt;Table of n, a(n) for n=1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. R. Finch and Pascal Sebah, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0604465&quot;&gt;Squares and Cubes Modulo n&lt;/a&gt; (arXiv:math.NT/0604465).</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. J. F. Primrose, &lt;a href=&quot;http://dx.doi.org/10.2307/3617445&quot;&gt;The number of quadratic residues mod m&lt;/a&gt;, Math. Gaz. v. 61 (1977) n. 415, 60-61.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+        <OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000224"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A105612"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ>.
+      </CMP>
+      </omdoc:p><omdoc:p class="formula">
+        <CMP>
+         Multiplicative with<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000224"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA><OMI>6</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>;<OMOBJ>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="e"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="p"/></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMOBJ> if<OMOBJ>
+      <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMOBJ>. - _David W. Wilson_, Aug 01 2001
+      </CMP>
+      </omdoc:p><assertion class="example">
+      <CMP> The sequence of squares (A000290) modulo 10 reads 0, 1, 4, 9, 6, 5, 6, 9, 4, 1, 0, 1, 4, 9, 6, 5, 6, 9, 4, 1,... and this reduced sequence contains a(10)=6 different values, {0,1,4,5,6,9}. - _R. J. Mathar_, Oct 10 2014</CMP>
+    </assertion><omtext class="maple">
+      <CMP> seq(nops({seq(n^2 mod k,n=1..100)}),k=1..65); # _Emeric Deutsch_</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A000224 := proc(n)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     local a,ifs,f,p,e,c ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     a := 1 ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     ifs := ifactors(n)[2] ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     for f in ifs do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         p := op(1,f) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         e := op(2,f) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         if p = 2 then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             if type(e,'odd') then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>                 a := a*(2^(e-1)+5)/3 ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             else</CMP>
+    </omtext><omtext class="maple">
+      <CMP>                 a := a*(2^(e-1)+4)/3 ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         else</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             if type(e,'odd') then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>                 c := 2*p+1 ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             else</CMP>
+    </omtext><omtext class="maple">
+      <CMP>                 c := p+2 ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             a := a*(p^(e+1)+c)/2/(p+1) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end do:</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     a ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> end proc: # 2nd implementation, _R. J. Mathar_, Oct 10 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Length[Union[#]]&amp; /@ Table[Mod[k^2, n], {n, 65}, {k, n}] (* _Jean-François Alcover_, Aug 30 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[2] = 2; a[n_] := a[n] = Switch[fi = FactorInteger[n], {{_, 1}}, (fi[[1, 1]] + 1)/2, {{2, _}}, 3/2 + 2^fi[[1, 2]]/6 + (-1)^(fi[[1, 2]]+1)/6, {{_, _}}, {p, k} = fi[[1]]; 3/4 + (p-1)*(-1)^(k+1)/(4*(p+1)) + p^(k+1)/(2*(p+1)), _, Times @@ Table[ a[Power @@ f], {f, fi}]]; Table[a[n], {n, 1, 100}] (* _Jean-François Alcover_, Mar 09 2015 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n) = local(v,i); v = vector(n,i,0); for(i=0, floor(n/2),v[i^2%n+1] = 1); sum(i=1,n,v[i]) - Franklin T. Adams-Watters, Nov 05 2006</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=my(f=factor(n));prod(i=1,#f[,1],if(f[i,1]==2,2^f[1,2]\6+2,f[i,1]^(f[i,2]+1)\(2*f[i,1]+2)+1)) \\ _Charles R Greathouse IV_, Jul 15 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a000224 n = product $ zipWith f (a027748_row n) (a124010_row n) where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    f 2 e = 2 ^ e `div` 6 + 2</CMP>
+    </omtext><omtext class="program">
+      <CMP>    f p e = p ^ (e + 1) `div` (2 * p + 2) + 1</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Aug 01 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A095972, A046530 (cubic residues), A052273 (4th powers), A052274 (5th powers), A052275 (6th powers), A085310 (7th powers), A085311 (8th powers), A085312 (9th powers), A085313 (10th powers), A085314 (11th powers), A228849 (12th powers).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice,mult,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>
