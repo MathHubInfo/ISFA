@@ -1,9 +1,11 @@
 
 import java.io.File
 import java.net.URL
+import processor.{TextParserIns}
+
 import scala.io.Source
 import scala.xml.{Elem, XML}
-import parser.{FormulaParser, DocumentParser}
+import parser.{DocumentParser}
 
 
 object Library {
@@ -14,6 +16,28 @@ object Library {
   //will just give id of number-th OEIS entry
   private def createID( number : String) : String = "A"+"000000".substring(0,6-number.length) + number
 
+
+  def crawlDocuments(from : Int, to :Int) = {
+    if(from < 1){
+      throw new Error("There is no entry "+from+" in OEIS!")
+    }
+
+    from to to foreach(i =>{
+      val theory = createID(i.toString)
+      val file = Source.fromURL(getURL(theory))
+
+      printToFile(new File("resources/"+theory)){
+        p => file.getLines().foreach(p.println)
+      }
+
+      if(i % 10 == 0){
+        println("Fetching entry "+ theory)
+      }
+
+      file.close()
+    })
+  }
+
   def crawlXML(from : Int, to : Int)= {
     if(from < 1){
       throw new Error("There is no entry "+from+" in OEIS!")
@@ -21,12 +45,35 @@ object Library {
 
     from to to foreach(i =>{
       val theory = createID(i.toString)
-      val xml = DocumentParser.fromReaderToXML(Source.fromURL(getURL(theory)))
+      val file = Source.fromURL(getURL(theory))
+
+      val xml = DocumentParser.fromReaderToXML(file)
 
       if(i % 10 == 0){
         println("Fetching entry "+ theory)
       }
 
+      file.close()
+      writeXML(xml, theory)
+    })
+  }
+
+  def crawlXMLLocal(from : Int, to : Int)= {
+    if(from < 1){
+      throw new Error("There is no entry "+from+" in OEIS!")
+    }
+
+    from to to foreach(i =>{
+      val theory = createID(i.toString)
+      val file = Source.fromFile("/home/enxhi/github/OEIS_1/resources/"+theory)
+
+      val xml = DocumentParser.fromReaderToXML(file)
+
+      if(i % 10 == 0){
+        println("Fetching entry "+ theory)
+      }
+
+      file.close()
       writeXML(xml, theory)
     })
   }
@@ -70,15 +117,16 @@ object Library {
   }
 
   def writeFormula(formulas : List[String], theory : String) : Unit = {
-    printToFile(new File("out/xml_out"+theory)) { p =>
+    printToFile(new File("xml_out/"+theory)) { p =>
       formulas.foreach(p.println)
     }
   }
 
   def main(args : Array[String]) = {
-    crawlXML(1, 4000)
-    println(FormulaParser.succeded)
-    println(FormulaParser.calls)
-    println(FormulaParser.exceptions)
+//    crawlDocuments(1000, 3000)
+    crawlXMLLocal(1, 3000)
+    println(TextParserIns.succeded)
+    println(TextParserIns.calls)
+    println(TextParserIns.exceptions)
   }
 }

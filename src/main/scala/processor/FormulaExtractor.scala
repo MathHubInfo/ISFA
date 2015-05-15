@@ -4,76 +4,126 @@ package processor
  * Created by enxhi on 4/2/15.
  */
 
+import parser.{Num, Divisible, Expression, FormulaParser}
+
 import scala.collection.mutable
 import scala.io.Source
 import scala.util.matching.Regex
 import scala.util.parsing.combinator.{JavaTokenParsers, PackratParsers}
+import scala.xml.Elem
 
+trait Line extends Expression
 
-class TextParser extends JavaTokenParsers with PackratParsers {
-  var variables = new mutable.HashSet[String]()
-  var functions = new mutable.HashSet[String]()
-  val dictionary = Source.fromFile("/home/enxhi/github/OEIS_1/src/main/resources/dictionary").getLines().toSet
+case class Sentence(parts : List[Expression]) extends Line{
+  override def present: String = parts.mkString("")
 
-  override val skipWhitespace = false
+  override def clear: Expression = this
 
-  lazy val oeis_text: PackratParser[String] =
-    (words) ~> rep1(".*?".r ~ rep(delim)) ^^ {
-      case x =>
-//        x.tail.foldLeft(x.head)((x, y) => {
-//        if (x._2.trim.endsWith("$EF$") && y.startsWith("$BF$")) {
-//          x._2.trim.dropRight("$EF$".length) + y.drop("$BF$".length)
-//        } else {
-//          x + y
-//        }
-//      })
-        println(x)
-        x.mkString("")
-    }
-
-  lazy val word: PackratParser[String] = "[A-Za-z]+\\b(?!(\\(|\\{))".r | "([A-Za-z]+\\.+(?!(\\(|\\{)))+".r
-  lazy val formula: Regex = ("(.+?)" + delim.regex).r
-  lazy val delim: Regex = List(" ","\\ " , "\\," , "\\;" , "\\?", "(?<=[A-Za-z\\)])\\:",
-    "(?<![A-Z]{1})(?<!\\.)\\.(?!\\d+)(?!\\.)(?![A-Za-z])(?!\\:)").mkString("|").r
-
-  lazy val words: PackratParser[String] =
-    word ~ (delim) ^? {
-     // case w1~k if(dictionary.contains(w1)) => println("W " + w1); w1+" "
-      case w1~(a) if(dictionary.contains(w1) || dictionary.contains(w1+a)) => w1 + a + " "
-    } |
-    "_*[A-Z]+[A-Za-z']+\\b(?!\\()_*".r ^^ /*human names (not functions)*/ {
-      x => println("N " + x); x+" "
-    } |
-   "([A-Za-z]{2,}\\b(?!(\\(|\\{)))|(([A-Za-z]+\\.+(?!(\\(|\\{)))+)|(_*[A-Z]+[\\ A-Za-z'\\.]+(?!\\()_*)".r ^^ {
-     x => println(x); x
-   } |
-    delim ^^ {x=>println(x); x}
-
-
-  lazy val dots : PackratParser[String] = "..." | ".."
-  lazy val formulas: PackratParser[String] =
-    dots ^^ {
-      x=> "$BF$" +x+ "$EF$"
-    } |
-    (formula) ^^ {
-      case formula(form, delimiter1, delimiter2, d3) =>
-        println(form + " " + delimiter1 +" "+ delimiter2 + d3)
-        "$BF$ " + form  + "$EF$" +
-          (if(delimiter2 != null) delimiter2 else "") +
-          (if(delimiter1 != null) delimiter1 else "")
-    }
-
+  //  override def toString = present
+  override def toNode(implicit theory: String): Elem =
+    <OMOBJ>
+      {parts.map(x =>
+        x match {
+          case a : Line => a.toNode
+          case a : Expression => a.toNode
+        })
+      }
+    </OMOBJ>
 }
 
+case class Delim(delim : String) extends Line{
+  override def present: String = delim
 
-object Parse extends TextParser{
+  override def clear: Expression = this
 
-  def main(args : Array[String]): Unit = {
-    val test = "where a(2*n) "
+  //  override def toString = present
+  //shouldn't be called
+  override def toNode(implicit theory: String): Elem = <text>{delim}</text>
+}
 
-    println("input : "+ test)
-    println(parseAll(oeis_text, test))
+case class Word(word : String) extends Line{
+  override def present: String = word
 
+  override def clear: Expression = this
+
+  //  override def toString = present
+
+  //shouldn't be called
+  override def toNode(implicit theory: String): Elem = <text>{word}</text>
+}
+
+case class Name(name : String) extends Line{
+  override def present: String = name
+
+  override def clear: Expression = this
+
+  //  override def toString = present
+  //shouldn't be called
+  override def toNode(implicit theory: String): Elem = <text>{name}</text>
+}
+
+case class Date(date : String) extends Line{
+  override def present: String = date
+
+  override def clear: Expression = this
+
+  //  override def toString = present
+  //shouldn't be called
+  override def toNode(implicit theory: String): Elem = <text>{date}</text>
+}
+
+case class Email(email : String) extends Line{
+  override def present: String = email
+
+  override def clear: Expression = this
+
+  override def toNode(implicit theory: String): Elem = <text>{email}</text>
+}
+
+class TextParser extends FormulaParser {
+
+  def parseLine(line : String, theory : String = "") : Option[Line] = {
+    if(line.isEmpty){
+      return None
+    }
+
+    initSet()
+    calls += 1
+    try {
+      val parsed = parseAll(sentence, line)
+      parsed.successful match {
+        case false =>
+          failFile.println("----------------")
+          failFile.write(theory + "\t" + parsed +"\n")
+          failFile.println("----------------")
+          None
+        case true =>
+          succeded +=1
+          successFile.write(theory + "\t" + line+"\n")
+           val processed = parsed.get.parts.map({
+            case x : Line => x
+            case x : Expression => postProcess(x)
+          })
+          Some(Sentence(processed))
+      }
+    }catch{
+      case ex : Throwable =>
+        println("ex:" + ex)
+        println("line: " + line)
+        println("theory: "+ theory)
+        exceptions+=1
+        exceptionFile.write(theory + "\t" + line + "\n")
+        None
+    }
   }
 }
 
+object TextParserIns extends TextParser{
+
+  def main(args : Array[String]): Unit = {
+    val test = " (-1)^n"
+    println("input : "+ test)
+    println(parseAll(sentence, test))
+  }
+
+}

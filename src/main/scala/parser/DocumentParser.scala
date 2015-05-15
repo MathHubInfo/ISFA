@@ -1,13 +1,15 @@
 package parser
 
+import processor.{TextParserIns, TextParser}
+
 import scala.io.{BufferedSource, Source}
 import scala.util.matching.Regex
 import scala.util.matching.Regex.Match
 import scala.xml._
 
 object DocumentParser {
-
   val dictionary = Source.fromFile("/home/enxhi/github/OEIS_1/src/main/resources/dictionary").getLines().toSet
+
   private val IDregex = "A\\d+".r
 
   private def assertion(xclass : String, cmpval : String) : Elem ={
@@ -41,13 +43,13 @@ object DocumentParser {
       </omdoc>
     }
 
-    def omdocWrapperCMP(xclass : String, cmpval : String) = (omtext(xclass, cmpval))
-    def omdocWrapperAs(xclass : String, cmpval : String) = (assertion(xclass, cmpval))
+    def omdocWrapperCMP(xclass : String, cmpval : String) = omtext(xclass, cmpval)
+    def omdocWrapperAs(xclass : String, cmpval : String) = assertion(xclass, cmpval)
 
     var theory : Option[String] = None
 
     val xml: List[Any] = source.getLines().toList.collect({
-      case line if(line.length > 2) =>
+      case line if line.length > 2 =>
         val contentIndex: Option[Match] = IDregex.findFirstMatchIn(line)
 
         if(!contentIndex.isEmpty && theory.isEmpty){
@@ -60,7 +62,7 @@ object DocumentParser {
           case "%C" =>  omdocWrapperCMP("comment", line.substring(contentIndex.get.end))
           case "%D" =>  omdocWrapperCMP("reference", line.substring(contentIndex.get.end))
           case "%H" =>  omdocWrapperCMP("link", line.substring(contentIndex.get.end))
-          case "%F" =>  formulaWrapper(line.substring(contentIndex.get.end), theory.get)
+          case "%F" =>  formulaWrap(line.substring(contentIndex.get.end), theory.get)
           case "%Y" =>  omdocWrapperAs("crossref", line.substring(contentIndex.get.end))
           case "%K" =>  omdocWrapperAs("keywords", line.substring(contentIndex.get.end))
           case "%A" =>  omdocWrapperAs("author", line.substring(contentIndex.get.end))
@@ -73,7 +75,7 @@ object DocumentParser {
           case "%T" =>  omdocWrapperAs("***** UUUU *****", line.substring(contentIndex.get.end))
           case "%U" =>  omdocWrapperAs("***** IIII *****", line.substring(contentIndex.get.end))
           case "%I" =>  omdocWrapperAs("***** TTTT *****", line.substring(contentIndex.get.end))
-          case a if(line.startsWith("%")) => println(a);omdocWrapperAs("notsupported","Unexpected tag!")
+          case a if line.startsWith("%") => println(a);omdocWrapperAs("notsupported","Unexpected tag!")
           case _ =>
         }
     })
@@ -93,7 +95,7 @@ object DocumentParser {
     val R = r.r
 
     s match {
-      case R(delim, text, rest, _) if(delim == null) => (text, "") :: split(rest, l)
+      case R(delim, text, rest, _) if delim == null => (text, "") :: split(rest, l)
       case R(delim, text, rest, _) => (text, delim) :: split(rest, l)
       case x => Nil
     }
@@ -121,7 +123,7 @@ object DocumentParser {
 
     def isWord(token : String, dropped : Boolean) : Boolean = {
       if(dropped && token.trim == "-") return true
-      if(funcs.exists(_ == token.trim)) return false
+      if(funcs.contains(token.trim)) return false
 
       val result = dictionary.contains(token.trim) ||
         delimiters.exists(x => token.matches(x)) ||
@@ -168,9 +170,9 @@ object DocumentParser {
     var dropped = false
 
     //Take the words first, when you can't see words anymore start taking formulas until you spot a word
-    while(!words.isEmpty) {
+    while(words.nonEmpty) {
 
-      while (!words.isEmpty && isWord(words.head._1, dropped)) {
+      while (words.nonEmpty && isWord(words.head._1, dropped)) {
         balancedPar += computeBalancedPar(words.head._1)
         temp = temp :+ words.head._1
         delims = delims :+ words.head._2
@@ -180,7 +182,7 @@ object DocumentParser {
 
       transformed = transformed :+ temp.zip(delims).map( wordDelim => wordDelim._2 + wordDelim._1).mkString("")
 
-      if(!words.isEmpty){
+      if(words.nonEmpty){
         temp = Nil
         delims = Nil
 
@@ -189,7 +191,7 @@ object DocumentParser {
         * */
         var isFormulaUnfinished = false
 
-        while(!words.isEmpty && (!isWord(words.head._1, dropped) || isFormulaUnfinished)){
+        while(words.nonEmpty && (!isWord(words.head._1, dropped) || isFormulaUnfinished)){
           balancedPar += computeBalancedPar(words.head._1)
           isFormulaUnfinished = false
           if(temp.length == 0 && words.head._2.trim == ":"){
@@ -201,7 +203,7 @@ object DocumentParser {
           words = words.tail
 
           //not checking before while loop because the comma can only be after at least one expr.
-          if(!words.isEmpty) {
+          if(words.nonEmpty) {
             //if there is a comma inside two parans then it is part of the formula
             if ((words.head._2 == "," || words.head._2 == ":") && balancedPar > 0) {
               isFormulaUnfinished = true
@@ -236,47 +238,57 @@ object DocumentParser {
     </OMOBJ>
   }
 
-  private def formulaWrapper(line : String, theory : String) : Elem = {
-    val extracted = extractFormula(line)
-    val res = (extracted._1.toArray, extracted._2.toArray)
-    val formulaPosition = res._2
-    val tokenizedLine = res._1
-
-    val omdoc : Elem =
+  def formulaWrap(line : String, theory : String ) : Elem = {
+    <omdoc:p class="formula">
       <CMP>
-        {
-        (0 to tokenizedLine.length - 1).map( i =>
-        {
-          if (formulaPosition.contains(i)) {
-            val parse = FormulaParser.parse(res._1(i), theory)
-            parse match {
-              case Some(expression) =>
-                parsedFormulaWrap(expression, theory)
-              case None => {
-                tokenizedLine(i)
-              }
-            }
-          } else {
-            {tokenizedLine(i)}
+        {TextParserIns.parseLine(line, theory) match {
+          case Some(a) => a.toNode(theory)
+          case None => line
           }
-        })
         }
       </CMP>
-
-    val result  : Elem =
-      <omdoc:p class="formula">
-        {omdoc}
-      </omdoc:p>
-
-    result
+    </omdoc:p>
   }
 
-
+//  private def formulaWrapper(line : String, theory : String) : Elem = {
+//    val extracted = extractFormula(line)
+//    val res = (extracted._1.toArray, extracted._2.toArray)
+//    val formulaPosition = res._2
+//    val tokenizedLine = res._1
+//
+//    val omdoc : Elem =
+//      <CMP>
+//        {
+//        (0 to tokenizedLine.length - 1).map( i =>
+//        {
+//          if (formulaPosition.contains(i)) {
+//            val parse = formulaParser.parse(res._1(i), theory)
+//            parse match {
+//              case Some(expression) =>
+//                parsedFormulaWrap(expression, theory)
+//              case None => {
+//                tokenizedLine(i)
+//              }
+//            }
+//          } else {
+//            {tokenizedLine(i)}
+//          }
+//        })
+//        }
+//      </CMP>
+//
+//    val result  : Elem =
+//      <omdoc:p class="formula">
+//        {omdoc}
+//      </omdoc:p>
+//
+//    result
+//  }
 
   def getFormulas(source : BufferedSource) : List[String] = {
 
     val formula: List[(List[String], List[Int])] = source.getLines().toList.collect({
-      case line if(line.length > 2) =>
+      case line if line.length > 2 =>
 
         val contentIndex: Option[Match] = IDregex.findFirstMatchIn(line)
         val scalaerror  = line.substring(0,2) match{
@@ -290,12 +302,11 @@ object DocumentParser {
 
 
     formula.map(pair =>{
-      pair._1.zipWithIndex.map({ case (word, index) => {
+      pair._1.zipWithIndex.map({ case (word, index) =>
         if (pair._2.contains(index))
           "FORMULA " + word
         else
           word
-      }
       })
     }).flatten
   }

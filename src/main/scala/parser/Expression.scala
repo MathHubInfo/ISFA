@@ -29,6 +29,23 @@ case class Constant(name : String) extends Expression{
   def clear = this
 }
 
+case class Abs(exp : Expression) extends Expression{
+  def present : String = "|"+exp.present+"|"
+  def toNode(implicit theory : String) = <OMS></OMS> // TODO:
+  def clear = this
+}
+
+case class Divisible(num : Expression, by : Expression) extends Expression{
+  def present : String = num + "|" + by
+  def toNode(implicit theory : String) : Elem =
+    <OMA>
+      <OMS name="divisible" cd="arithemtics">
+        {num.toNode}
+        {by.toNode}
+      </OMS>
+    </OMA>
+  def clear = this
+}
 
 case class Power(base : Expression, exp : Expression) extends Expression{
   def present : String = base.toString +"^"+ exp.toString
@@ -130,18 +147,18 @@ case class Iters(name : String, from : Option[Expression], to : Option[Expressio
             <OMS name={name} cd="arithmetics"/>
               <OMA>
                 <OMS name="interval">
-                  {if(!from.isEmpty) {
+                  {if(from.nonEmpty) {
                       from.get.toNode
                     }
                   }
-                  {if(!to.isEmpty) {
+                  {if(to.nonEmpty) {
                       to.get.toNode
                     }
                   }
                 </OMS>
               </OMA>
               <OMBVAR>
-                {if(!from.isEmpty) {
+                {if(from.nonEmpty) {
                     from.get match {
                       case Equation(eq, Var(a), rest) => Var(a).toNode
                       case _ => ""
