@@ -4,13 +4,12 @@ package processor
  * Created by enxhi on 4/2/15.
  */
 
+import java.io.Serializable
+
 import parser.{Num, Divisible, Expression, FormulaParser}
 
-import scala.collection.mutable
-import scala.io.Source
-import scala.util.matching.Regex
 import scala.util.parsing.combinator.{JavaTokenParsers, PackratParsers}
-import scala.xml.Elem
+import scala.xml.{Node, Elem}
 
 trait Line extends Expression
 
@@ -22,13 +21,21 @@ case class Sentence(parts : List[Expression]) extends Line{
   //  override def toString = present
   override def toNode(implicit theory: String): Elem =
     <OMOBJ>
-      {parts.map(x =>
-        x match {
-          case a : Line => a.toNode
-          case a : Expression => a.toNode
-        })
+    {parts.map {
+      case a: Sentence => a.toSubNode
+      case a: Line => a.present
+      case a: Expression => a.toNode
       }
+    }
     </OMOBJ>
+
+  def toSubNode(implicit theory: String): List[Serializable] = {
+    parts.map {
+      case a: Sentence => a.toSubNode
+      case a: Line => a.present
+      case a: Expression => a.toNode
+    }
+  }
 }
 
 case class Delim(delim : String) extends Line{
@@ -42,7 +49,7 @@ case class Delim(delim : String) extends Line{
 }
 
 case class Word(word : String) extends Line{
-  override def present: String = word
+  override def present: String = word+" "
 
   override def clear: Expression = this
 
@@ -53,7 +60,7 @@ case class Word(word : String) extends Line{
 }
 
 case class Name(name : String) extends Line{
-  override def present: String = name
+  override def present: String = name+" "
 
   override def clear: Expression = this
 
@@ -63,7 +70,7 @@ case class Name(name : String) extends Line{
 }
 
 case class Date(date : String) extends Line{
-  override def present: String = date
+  override def present: String = date+" "
 
   override def clear: Expression = this
 
@@ -73,7 +80,7 @@ case class Date(date : String) extends Line{
 }
 
 case class Email(email : String) extends Line{
-  override def present: String = email
+  override def present: String = email+" "
 
   override def clear: Expression = this
 
@@ -100,11 +107,11 @@ class TextParser extends FormulaParser {
         case true =>
           succeded +=1
           successFile.write(theory + "\t" + line+"\n")
-           val processed = parsed.get.parts.map({
-            case x : Line => x
-            case x : Expression => postProcess(x)
-          })
-          Some(Sentence(processed))
+//           val processed = parsed.get.parts.map({
+//            case x : Line => x
+//            case x : Expression => postProcess(x)
+//          })
+          Some(parsed.get)
       }
     }catch{
       case ex : Throwable =>
@@ -121,7 +128,7 @@ class TextParser extends FormulaParser {
 object TextParserIns extends TextParser{
 
   def main(args : Array[String]): Unit = {
-    val test = " (-1)^n"
+    val test = "G.f.: anXko + 3x + 4 + a X 4"
     println("input : "+ test)
     println(parseAll(sentence, test))
   }

@@ -75,7 +75,7 @@ object DocumentParser {
           case "%T" =>  omdocWrapperAs("***** UUUU *****", line.substring(contentIndex.get.end))
           case "%U" =>  omdocWrapperAs("***** IIII *****", line.substring(contentIndex.get.end))
           case "%I" =>  omdocWrapperAs("***** TTTT *****", line.substring(contentIndex.get.end))
-          case a if line.startsWith("%") => println(a);omdocWrapperAs("notsupported","Unexpected tag!")
+          case a if line.startsWith("%") => omdocWrapperAs("notsupported","Unexpected tag!")
           case _ =>
         }
     })

@@ -1,6 +1,7 @@
 
 import java.io.File
 import java.net.URL
+import java.util.Calendar
 import processor.{TextParserIns}
 
 import scala.io.Source
@@ -15,7 +16,6 @@ object Library {
 
   //will just give id of number-th OEIS entry
   private def createID( number : String) : String = "A"+"000000".substring(0,6-number.length) + number
-
 
   def crawlDocuments(from : Int, to :Int) = {
     if(from < 1){
@@ -65,16 +65,22 @@ object Library {
 
     from to to foreach(i =>{
       val theory = createID(i.toString)
-      val file = Source.fromFile("/home/enxhi/github/OEIS_1/resources/"+theory)
+      val fileLoc = "/home/enxhi/github/OEISLAB/oeis/source/oeis_source/"+theory+".txt"
+      val ioFile = new java.io.File(fileLoc)
+      if(ioFile.exists) {
+        val file = Source.fromFile(ioFile)
 
-      val xml = DocumentParser.fromReaderToXML(file)
+        val xml = DocumentParser.fromReaderToXML(file)
 
-      if(i % 10 == 0){
-        println("Fetching entry "+ theory)
+        if (i % 1000 == 0) {
+          println("Fetching entry " + theory)
+        }
+
+        file.close()
+        writeXML(xml, theory)
+      }else{
+        println("File doesn't exists: " + theory)
       }
-
-      file.close()
-      writeXML(xml, theory)
     })
   }
 
@@ -113,7 +119,7 @@ object Library {
   }
 
   def writeXML(xml : Elem, theory : String) = {
-    //XML.save("xml_out/" + theory +".omdoc", xml, "UTF-8", true, null)
+    XML.save("xml_out/" + theory +".omdoc", xml, "UTF-8", true, null)
   }
 
   def writeFormula(formulas : List[String], theory : String) : Unit = {
@@ -123,10 +129,12 @@ object Library {
   }
 
   def main(args : Array[String]) = {
-//    crawlDocuments(1000, 3000)
-    crawlXMLLocal(1, 3000)
+//    crawlXMLLocal(1, 3000)
+    println(Calendar.getInstance().getTime())
+    crawlXMLLocal(1, 258062)
     println(TextParserIns.succeded)
     println(TextParserIns.calls)
     println(TextParserIns.exceptions)
+    println(Calendar.getInstance().getTime())
   }
 }
