@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A175511.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A175511">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,4,8,11,13,16,21,32,29,40,47,48,55,60,69,71,79,85,88,96,101,109,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 120,125,124,129,132,139,163,169,180,183,192,191,199,208,215,225,236,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 239,253,253,260,257,280,303,309,312,311,320,323,341,348,357,361,364</CMP>
+    </assertion><omtext class="name">
+      <CMP> n-th even semiprime minus n-th semiprime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harvey P. Dale, &lt;a href=&quot;/A175511/b175511.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A175511"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A100484"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A001358"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Module[{sps=Select[Range[600],PrimeOmega[#]==2&amp;],evs},evs= Select[ sps, EvenQ]; #[[1]]-#[[2]]&amp;/@Thread[{evs,Take[sps,Length[evs]]}]] (* _Harvey P. Dale_, Sep 07 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A131634.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Juri-Stepan Gerasimov_, Jun 03 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Entries checked by _R. J. Mathar_, Aug 12 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

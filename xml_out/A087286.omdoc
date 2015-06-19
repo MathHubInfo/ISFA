@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A087286.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A087286">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,8,9,12,15,17,18,19,22,24,30,36,37,38,40,44,55,57,64,65,68,71,73,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 79,80,89,97,98,100,101,106,107,108,112,113,119,121,128,129,138,141,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 145,148,151,154,156,161,163,164,168,169,171,172,190,196,197,198,204,208</CMP>
+    </assertion><omtext class="name">
+      <CMP> Possible differences between a square and the closest smaller cube.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Integers of the form m^2 - floor((m^2-1)^(1/3))^3 for integer m.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/MordellCurve.html&quot;&gt;Mordell Curve.&lt;/a&gt; Section in World of Mathematics.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 2^2-1^3=3, 3^2-2^3=1, 4^2-2^3=8, 5^2-2^3=17, 6^2-3^3=9, 7^2-3^3=22,...,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1138^2-109^3=15</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A087285, A088017, A054504, A165289.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Hugo Pfoertner_, Sep 18 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A222364.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A222364">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,4,5,14,17,70,89,326,413,1630,2089,8058,10349,40598,52385,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 204914,265061,1041934,1351369,5315674,6908045,27228710,35450225,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 139873618,182386933,720480478,940751513,3719466954,4862439261,19240428310</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX1 0..2 arrays with no more than floor(nX1/2) elements unequal to at least one king-move neighbor, with new values introduced in row major 0..2 order</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 1 of A222371</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A222364/b222364.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> All solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0....0....0....0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1....0....0....0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1....0....1....0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1....1....1....0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Feb 17 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

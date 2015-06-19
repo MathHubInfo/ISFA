@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A253142.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A253142">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,8,14,16,22,26,32,38,44,46,52,64,68,86,88,98,124,134,158,178,184,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 196,212,236,242,248,256,262,296,298,316,322,338,364,374,386,394,452,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 472,484,488,548,578,586,598,602,626,632,638,646,658,662,676,694,718,728,736,794,806,842,848,862</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n + 15 and n^2 + 15 are prime.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 2 + 15 = 17 and 2^2 + 15 = 19 are both prime, so 2 is in the sequence.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> p = 15; Select[Range[2,1000,2], PrimeQ[p + #^2] &amp;&amp; PrimeQ[p + #] &amp;]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Intersection of A086303 and A121982.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zak Seidov_, Dec 27 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

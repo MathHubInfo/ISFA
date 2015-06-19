@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A024737.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A024737">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,1,1,3,9,27,84,261,810,2514,8046,25704,81975,261261,854037,2784540,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9057393,29439855,97650930,323099676,1066565907,3517004046,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11791407663,39431809098,131550859650,438453827928,1481254263945,4993010577093</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = Sum (a(2i-1)*a(n-2i+1), i = 1,2,...,k), where k = [ (n+1)/4 ].</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A093109.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A093109">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,6,8,16,18,32,42,52,54,55,64,93,128,162,171,256,272,294,355,406,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 486,506,512,605,676,820,1024,1332,1458,1474,1711,1806,1830,2048,2058,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2162,2504,2525,2715,2756,2883,2943,3081,3249,3629,3916,4096,4374,4624,5210</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that the Zsigmondy number Zs(n,5,1) differs from the n-th cyclotomic polynomial evaluated at 5.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A019323(n) does not equal A064081(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Vladeta Jovovic points out that the sequence seems to contain the powers of two as well as the numbers of the form 3*2^k.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A093107, A093108, A093106.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ralf Stephan_, Mar 20 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, Apr 02 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition corrected by Jerry Metzger, Nov 04 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

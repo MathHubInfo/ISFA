@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A248698.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A248698">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,23,166,621,1676,3715,7218,12761,21016,32751,48830,70213,97956,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 133211,177226,231345,297008,375751,469206,579101,707260,855603,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1026146,1221001,1442376,1692575,1973998,2289141,2640596,3031051,3463290,3940193,4464736,5039991</CMP>
+    </assertion><omtext class="name">
+      <CMP> Floor of sums of the non-integer fourth roots of n, as partitioned by the integer roots: floor[sum(j from n^4+1 to (n+1)^4-1, j^(1/4))].</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The fractional portion of each sum converges to 3/10.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A247112 for references to other related sequences and a conjecture.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Colin Barker, &lt;a href=&quot;/A248698/b248698.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_05&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (5,-10,10,-5,1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n) = floor[sum(j from n^4+1 to (n+1)^4-1, j^(1/4))].</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A248698"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA><OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>21</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>51</OMI><OMV name="x"/></OMA><OMI>23</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Dec 30 2014 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Table[AccountingForm[N[Sum[j^(1/4), {j, n^4 + 1, (n + 1)^4 - 1}], 20]], {n, 0, 50}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[3 n + 8 n^2 + 8 n^3 + 4 n^4, {n, 0, 50}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n) = floor(sum(j=n^4+1, (n+1)^4-1, j^(1/4))); \\ _Michel Marcus_, Dec 22 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) concat(0, Vec(-x*(x^3+21*x^2+51*x+23)/(x-1)^5 + O(x^100))) \\ _Colin Barker_, Dec 30 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A247112.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Richard R. Forberg_, Dec 02 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

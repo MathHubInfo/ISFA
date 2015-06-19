@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A170967.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A170967">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,0,0,0,1,1,0,0,1,1,0,0,1,2,1,0,0,1,1,0,0,1,1,0,0,0,1,1</CMP>
+    </omtext><omtext class="name">
+      <CMP> Expansion of Prod((1+x^(4*i+1)),i=0..m-1) for m = 4.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A169975, A170966-A170984.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,fini,full</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,15</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Aug 29 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

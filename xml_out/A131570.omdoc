@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A131570.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A131570">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,12,6,3,34,17,1718,859,859860,429930,214965,214965214966,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 107482607483,107482607483107482607484,53741303741553741303742,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 26870651870776870651871,2687065187077687065187126870651870776870651872</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(1) = 1; for n &gt;= 1, if a(n) is odd then a(n+1) = a(n) followed by a(n)+1, but if a(n) is even then a(n+1) = a(n)/2.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 17 is odd so the next term is 1718; 1718 is even so the next term is 1718/2 = 859.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> catL := proc(a,b) a*10^( max(ilog10(b)+1,1)) +b ; end: A131570 := proc(n) option remember ; local prev; if n = 1 then 1 ; else prev := A131570(n-1) ; if prev mod 2 = 1 then catL(prev,prev+1) ; else prev/2 ; fi ; fi ; end: seq(A131570(n),n=1..20) ; - _R. J. Mathar_, Oct 26 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a = {1}; Do[If[OddQ[a[[ -1]]], AppendTo[a, FromDigits[Join[IntegerDigits[a[[ -1]]], IntegerDigits[a[[ -1]] + 1]]]], AppendTo[a, a[[ -1]]/2]], {25}]; a - _Stefan Steinerberger_, Oct 26 2007</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Rodolfo Kurchan_, Aug 27 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _R. J. Mathar_ and _Stefan Steinerberger_, Oct 26 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

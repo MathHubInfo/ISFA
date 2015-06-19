@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A203706.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A203706">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,361,56277,84553833,49208814333,169562387740473,208430698274481501,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1281126039821691353577,35292441292705740030129333,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 104535840312291670484725915119,3928951393854870421503654084782523</CMP>
+    </assertion><omtext class="name">
+      <CMP> v(n+1)/v(n), where v=A203705.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A093883 for a discussion and guide to related sequences.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[j_] := Prime[j]; z = 11;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u := Product[f[j]^2 - f[j] f[k] + f[k]^2, {j, 1, k - 1}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> v[n_] := Product[u, {k, 2, n}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[v[n], {n, 1, z}]          (* A203705 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[v[n + 1]/v[n], {n, 1, z}] (* A203706 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Jan 05 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

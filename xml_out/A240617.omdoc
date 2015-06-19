@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A240617.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A240617">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,5,14,46,165,651,2771,12638,61398,315563,1710027,9725543,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 57886132,359476571,2323518017,15597303757,108522502933,781283103284,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5810573402452,44579551962460,352360829928066,2865876353091752,23958937424819348,205673285003637629</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of n-length words w over an n-ary alphabet such that w is empty or a prefix z concatenated with letter a_i and i=1 or 0 &lt; #(z,a_{i-1}) &gt;= #(z,a_i), where #(z,a_i) counts the occurrences of the i-th letter in z.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(0) = 1: the empty word.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(1) = 1: 1.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 2: 11, 12.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3) = 5: 111, 112, 121, 122, 123.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4) = 14: 1111, 1112, 1121, 1122, 1123, 1211, 1212, 1213, 1221, 1223, 1231, 1232, 1233, 1234.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(5) = 46: 11111, 11112, 11121, ..., 12343, 12344, 12345.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(6) = 165: 111111, 111112, 111121, ..., 123454, 123455, 123456.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Main diagonal of A240608.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alois P. Heinz_, Apr 09 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

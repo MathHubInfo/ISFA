@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A073843.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A073843">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,9,2,25,36,49,16,3,100,121,144,169,196,225,8,289,324,361,400,441,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 484,529,576,5,676,81,784,841,900,961,64,1089,1156,1225,6,1369,1444,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1521,1600,1681,1764,1849,1936,2025,2116,2209,2304,7,2500,2601,2704</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(1) = 1; for n&gt;1 a(n) = smallest number of the form n^r (with r rational != 1) not included earlier.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The formula in terms of A052409 and A052410 implies that the sequence is a permutation of the positive integers. - _Franklin T. Adams-Watters_, Jul 26 2006</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A073843"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="b"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="b"/>
+    </OMA>
+    </OMA><OMV name="b"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="b"/>
+      <OMA>
+      <OMS name="gcd" cd="A073843"/>
+      <OMV name="b_1"/><OMS name="..." cd="arithmetics"></OMS><OMV name="b_r"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>with prime factorization <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p_1"/>
+      <OMV name="b_1"/>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p_r"/>
+      <OMV name="b_r"/>
+    </OMA></OMA><OMV name="_Sascha"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>Kurz_ ,Aug 14 2002 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      If <OMOBJ>
+        <OMA>
+      <OMR xref="A052409"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>is odd ,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A073843"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A052410"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A052409"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>;otherwise <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A073843"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A052410"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A052409"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Franklin <OMOBJ>
+        <OMV name="T"/>
+      </OMOBJ>.Adams -Watters_ ,Jul 26 2006 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(15) = 15^2 = 225, but a(16) = 8 = 16^(3/4).</CMP>
+    </assertion><omtext class="maple">
+      <CMP> for n from 2 to 150 do a := ifactors(n); b := a[2][1][2]:for j from 2 to nops(a[2]) do b := gcd(b,a[2][j][2]); od; bb := floor(evalf(n^(1/b))); if(b mod 2=1) then c[n] := bb^(b+1) else c[n] := bb^(b-1); fi; od:c[1]=1:seq(c[j],j=1..150);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A073842.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Aug 13 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sascha Kurz_, Aug 14 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

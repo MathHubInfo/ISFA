@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A078176.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A078176">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,11,15,19,23,27,63,67,71,75,79,83,87,91,127,131,135,139,143,147,151,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 155,191,195,455,715,975,1235,1495,1755,4095,4099,4103,4107,4111,4115,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4119,4123,4159,4163,4167,4171,4175,4179,4183,4187,4223,4227,4231,4235</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers given by the Rule 225 Cellular Automaton.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Discovered by Stephen Wolfram in 1981.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Wolfram, A New Kind of Science, p. 58.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/ElementaryCellularAutomaton.html&quot;&gt;Elementary Cellular Automaton&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Binary Cellular Automaton .<OMOBJ>
+        <OMA>
+      <OMS cd="set1" name="set">
+        <OMI>1</OMI><OMI>1</OMI><OMI>1</OMI>
+      </OMS>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS cd="set1" name="set">
+        <OMI>1</OMI><OMI>1</OMI><OMI>0</OMI>
+      </OMS>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS cd="set1" name="set">
+        <OMI>1</OMI><OMI>0</OMI><OMI>1</OMI>
+      </OMS>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS cd="set1" name="set">
+        <OMI>0</OMI><OMI>0</OMI><OMI>1</OMI>
+      </OMS>
+    </OMA>
+      </OMOBJ>produce <OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> With[{k = Abs[Drop[CellularAutomaton[225, {{1}, 0}, 100], 1] - 1]}, Table[FromDigits[RotateLeft[k[[n]], n + 2], 2], {n, 1, Length[k]}]]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ed Pegg Jr_, Nov 20 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

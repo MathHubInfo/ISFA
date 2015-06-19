@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A191679.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A191679">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2211,2261,2311,2463,2725,4257,6125,6611,7821,9841,9973,10303,10499,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10631,10953,11987,12115,12179,12243,12309,12375,12637,12837,13497,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13695,14169,15063,15395,16207,16483,16821,17605,17891,19017,20345,20487,21135,22539,22811,23219,23985</CMP>
+    </assertion><omtext class="name">
+      <CMP> Potential magic constants of 9x9 magic squares composed of consecutive primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For a 9x9 magic square composed of 81 consecutive primes, it is necessary that the sum of these primes is a multiple of 9.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This sequence consists of integers equal the sum of 81 consecutive primes divides by 9. It is not known whether each such set of consecutive primes can be arranged into 9x9 magic square but it looks plausible.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Stefano Tognon, &lt;a href=&quot;http://digilander.libero.it/ice00/magic/prime/squares37.html#9&quot;&gt;Squares from 37&lt;/a&gt; (in Italian)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Natalia Makarova, &lt;a href=&quot;http://www.natalimak1.narod.ru/prime9.htm&quot;&gt;Sequence of Magic Numbers MK 9th Order&lt;/a&gt; (in Russian)</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1)= 2211 for a square containing prime(12)..prime(92):</CMP>
+    </assertion><assertion class="example">
+      <CMP> [37 127 163 179 229 233 379 421 443</CMP>
+    </assertion><assertion class="example">
+      <CMP> 41 431 463 457 59 139 433 109 79</CMP>
+    </assertion><assertion class="example">
+      <CMP> 409 311 389 71 307 347 281 53 43</CMP>
+    </assertion><assertion class="example">
+      <CMP> 373 137 181 251 401 239 317 89 223</CMP>
+    </assertion><assertion class="example">
+      <CMP> 173 419 101 103 113 353 313 277 359</CMP>
+    </assertion><assertion class="example">
+      <CMP> 97 383 397 479 47 197 107 263 241</CMP>
+    </assertion><assertion class="example">
+      <CMP> 349 131 193 149 367 199 73 467 283</CMP>
+    </assertion><assertion class="example">
+      <CMP> 439 61 257 191 227 167 151 449 269</CMP>
+    </assertion><assertion class="example">
+      <CMP> 293 211 67 331 461 337 157 83 271]</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 2261 for a square containing prime(13)..prime(93):</CMP>
+    </assertion><assertion class="example">
+      <CMP> [41  379  281  467  349  257  229  199  59</CMP>
+    </assertion><assertion class="example">
+      <CMP> 313  223  127  337  131  101  479  107  443</CMP>
+    </assertion><assertion class="example">
+      <CMP> 409  71  331  79  137  263  347  271  353</CMP>
+    </assertion><assertion class="example">
+      <CMP> 211  307  487  149  251  293  181  113  269</CMP>
+    </assertion><assertion class="example">
+      <CMP> 191  419  109  439  173  233  103  397  197</CMP>
+    </assertion><assertion class="example">
+      <CMP> 97  283  193  317  433  457  241  157  83</CMP>
+    </assertion><assertion class="example">
+      <CMP> 461  139  239  359  373  179  67  401  43</CMP>
+    </assertion><assertion class="example">
+      <CMP> 89  277  73  53  367  167  463  389  383</CMP>
+    </assertion><assertion class="example">
+      <CMP> 449  163  421  61  47  311  151  227  431</CMP>
+    </assertion><assertion class="example">
+      <CMP> ]</CMP>
+    </assertion><omtext class="maple">
+      <CMP> s:= proc(n) option remember;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>        `if` (n=1, add (ithprime(i), i=1..81),</CMP>
+    </omtext><omtext class="maple">
+      <CMP>                   ithprime(n+80) -ithprime(n-1) +s(n-1))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= proc(n) option remember; local k, m;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>        a(n-1);</CMP>
+    </omtext><omtext class="maple">
+      <CMP>        for k from 1+b(n-1) while irem (s(k), 9, 'm')&lt;&gt;0 do od;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>        b(n):= k; m</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a(0):=0: b(0):=0:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq (a(n), n=1..50);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Total[#]/9&amp;/@Select[Partition[Prime[Range[500]],81,1],Divisible[ Total[ #],9]&amp;] (* _Harvey P. Dale_, Jan 08 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A073520, A173981, A176571, A177434, A188536, A189188.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Natalia Makarova_, Jun 11 2011</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Max Alekseyev_, Jun 18 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

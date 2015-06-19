@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A164793.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A164793">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,13,2,1000000,4000000,45,25,75,13000000</CMP>
+    </omtext><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = smallest number which has in its English name the letter &quot;i&quot; in the n-th position, -1 if such number no exist, -2 for infinite</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(1)= Infinite, a(2)=fIve, a(3)=thIrteen</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> word,sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Claudio Meller_, Aug 26 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

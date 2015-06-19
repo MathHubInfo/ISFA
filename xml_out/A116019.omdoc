@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A116019.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A116019">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,4,10,11,21,49,186,207,221,342,406,3324,4443,33324,43375,222221,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 314000,344032,389924,414806,987652,2222221,190476186,222087442,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 222222221,422720878,2222222221,4444444443</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that sigma(n) + phi(n) is a repdigit.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (1). If m=(2*10^n-11)/9 is product of two distinct primes then m is in the sequence because phi(m)+sigma(m)=phi(p*q)+sigma(p*q)=2(p*q+1)=2m+2=4*(10^n-1)/9, so phi(m)+sigma(m) is a repdigit number. 21, 221, 222221, 2222221, 222222221,... are such terms. - _Farideh Firoozbakht_, Aug 17 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (2). If m=(4*10^n-13)/9 is product of two distinct primes then m is in the sequence because phi(m)+sigma(m)=phi(p*q)+sigma(p*q)=2(p*q+1)=2m+2=8*(10^n-1)/9, so phi(m)+sigma(m) is a repdigit number. 4443, 4444444443, 44444444443,... are such terms. - _Farideh Firoozbakht_, Aug 17 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (3). If p=(25*10^(n-1)-7)/9 is an odd prime then m=12*p is in the sequence because phi(m)+sigma(m)=32p+24=8*(10^(n+1)-1)/9 so phi(m)+sigma(m) is a repdigit number. 3324, 33324, 33333333324,... are such terms. - _Farideh Firoozbakht_, Aug 17 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (4). If n is a nonnegative integer and p=(8*10^(3n+2)-17)/27 is prime then m=14*p is in the sequence because phi(m)+sigma(m)=30p+18=8*(10^(3n+3)-1)/9 is a repdigit number. 406, 414806, 414814814814814814814806, ... are such terms of the sequence. - _Farideh Firoozbakht_, Aug 01 2014</CMP>
+    </omtext><assertion class="example">
+      <CMP> sigma(314000)+phi(314000)=888888.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Do[If[Length[Union[IntegerDigits[EulerPhi[n] + DivisorSigma[1, n]]]]==1, Print[n]], {n, 280000000}] - _Farideh Firoozbakht_, Aug 17 2006</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=1,10^7,d=digits(sigma(n)+eulerphi(n));c=0;for(i=1,#d-1,if(d[i]!=d[i+1],c++;break));if(c==0,print1(n,&quot;, &quot;))) \\ _Derek Orr_, Aug 01 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A116017, A116018, A116020.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Giovanni Resta_, Feb 13 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 3 more terms from _Farideh Firoozbakht_, Aug 17 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(28)-a(30) from _Donovan Johnson_, Jan 16 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

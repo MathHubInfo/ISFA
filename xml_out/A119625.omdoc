@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A119625.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A119625">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 17,72,28,83,39,94,50,6,7,8,9,10,2,3,4,5,6,7,8,9,10,2,3,4,5,6,7,8,9,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10,2,3,4,5,6,7,8,9,10,2,3,4,5,6,7,8,9,10,2,3,4,5,6,7,8,9,10,2,3,4,5,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6,7,8,9,10,2,3,4,5,6,7,8,9,10,2,3,4,5,6,7,8,9,10,2,3,4,5,6,7,8,9,10,2,3,4,5</CMP>
+    </assertion><omtext class="name">
+      <CMP> Start with 17 and repeatedly reverse the digits and add 1 to get the next term.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> After 7 steps enters a cycle of length 9.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane and others, &lt;a href=&quot;/wiki/Sequences_of_RADD_type&quot;&gt;Sequences of RADD type&lt;/a&gt;, OEIS wiki.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> NestList[FromDigits[Reverse[IntegerDigits[#]]]+1&amp;,17,100] (* _Harvey P. Dale_, Dec 15 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A118551.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Luc Stevens (lms022(AT)yahoo.com), May 14 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

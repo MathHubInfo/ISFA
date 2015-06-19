@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A111478.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A111478">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,111919,111919191919,11191919191937373737,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 111919191919373737372121212121,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 111919191919373737372121212121717171717171,111919191919373737372121212121717171717171101101101101101101101</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes pertaining to A111477.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 111919191919 = one copy of 11, two copies of 19, three copies of 19.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A111471, A111472, A111473, A111474, A111475, A111477.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Aug 05 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Tracy Poff (tracy.poff(AT)gmail.com), Dec 31 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

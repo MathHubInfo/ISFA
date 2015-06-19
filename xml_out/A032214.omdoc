@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A032214.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A032214">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,6,6,10,18,22,30,42,98,110,174,234,346,798,958,1458,2058,2990,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4022,9234,10746,16774,22950,33682,44562,64182,126230,154778,229986,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 317766,452206,607290,851314,1120158,2130750,2567162</CMP>
+    </assertion><omtext class="name">
+      <CMP> &quot;DFK&quot; (bracelet, size, unlabeled) transform of 2,2,2,2...</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. G. Bower, &lt;a href=&quot;/transforms2.html&quot;&gt;Transforms (2)&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Christian G. Bower_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

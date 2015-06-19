@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A161091.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A161091">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,1,1,1,1,1,1,1,1,2,1,1,2,3,2,2,3,4,3,3,4,5,4,4,6,6,5,6,7,8,7,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8,10,8,8,11,11,10,11,13,13,13,13,15,18,15,16,20,21,19,21,23,24,24,24,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 27,30,28,28,33,36,33,35,39,42,41,42,45,49,47,48,55,56,54,58,63,67,65,66,72,78</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n into squares where every part appears at least 3 times</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A161091/b161091.txt&quot;&gt;Table of n, a(n) for n=1..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Contribution from _Emeric Deutsch_ ,Jun 24 2009 :(Start )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .=<OMOBJ>
+        <OMA>
+      <OMS name="Product" cd="A161091"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="j"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="j"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>..infinity ].
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      (End )
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Contribution from _Emeric Deutsch_, Jun 24 2009: (Start)</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(23)=4 because we have (4^5)(1^3), (4^4)(1^7), (4^3)(1^11), and (1^23).</CMP>
+    </assertion><assertion class="example">
+      <CMP> (End)</CMP>
+    </assertion><omtext class="maple">
+      <CMP> g := product(1+x^(3*j^2)/(1-x^(j^2)), j = 1 .. 20): gser := series(g, x = 0, 90): seq(coeff(gser, x, n), n = 2 .. 84); [From _Emeric Deutsch_, Jun 24 2009]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,12</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Jun 02 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

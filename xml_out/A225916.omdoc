@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A225916.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A225916">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 15,21,35,39,51,65,95,119,141,155,159,161,185,201,219,221,291,305,329,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 341,365,371,395,471,485,501,515,519,579,581,611,669,681,695,779,791,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 815,831,851,905,921,959,989,1059,1079,1121,1139,1145,1149,1199,1205,1241</CMP>
+    </assertion><omtext class="name">
+      <CMP> Product of distinct primes p*q such that both 2p + q and p + 2q are prime numbers.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Lei Zhou, &lt;a href=&quot;/A225916/b225916.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 15=3*5, both 2*3+5=11 and 3+2*5=13 are prime number, so 15 is a term of this sequence.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> NextA046388[n_] := Block[{p1 = Prime[Range[2, PrimePi[Max[3, NextPrime[Ceiling@Sqrt[n + 1] - 1]]]]], p2}, p2 = Table[Max[NextPrime[p1[[i]]], NextPrime[Ceiling[(n + 1)/p1[[i]]] - 1]], {i, Length[p1]}]; Min[p1*p2]]; seed=1; Table[While[seed = NextA046388[seed]; fct = FactorInteger[seed]; p1 = fct[[1, 1]]; p2 = fct[[2, 1]]; c1 = 2*p1 + p2; c2 = p1 + 2*p2; ! ((PrimeQ[c1]) &amp;&amp; (PrimeQ[c2]))]; seed, {i, 1, 52}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> nn = 1241; pq = Select[Range[nn], PrimeOmega[#] == 2 &amp;]; p = Table[FactorInteger[r][[1, 1]], {r, pq}]; q = pq/p; t = {}; Do[If[PrimeQ[2 p[[i]] + q[[i]]] &amp;&amp; PrimeQ[p[[i]] + 2 q[[i]]], AppendTo[t, pq[[i]]]], {i, Length[pq]}]; t (* _T. D. Noe_, May 21 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A046388.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lei Zhou_, May 20 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

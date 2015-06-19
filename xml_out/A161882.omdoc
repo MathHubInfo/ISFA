@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A161882.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A161882">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,3,4,2,3,3,4,3,2,3,3,2,3,2,4,2,3,3,2,3,3,3,3,2,2,3,3,2,2,3,4,3,2,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3,2,3,2,2,2,3,3,3,2,3,3,3,3,2,2,2,2,3,2,3,3,2,3,2,2,3,3,4,2,3,3,2,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2,3,3,2,2,2,3,3,2,3,2,3,2,3,3,2,3,2,3,2,2,2,3,3,3,2,3,2,3,3,2,2,2,3,2,2,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest k such that n^2 = a_1^2+...+a_k^2 and all a_i are positive integers less than n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Related to hypotenuse numbers: A161882(A009003(n))=2 for all n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Jacobi's four-square theorem can be used to show that a(n) &lt;= 4. - _Charles R Greathouse IV_, Jul 31 2011</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A161882/b161882.txt&quot;&gt;Table of n, a(n) for n = 2..700&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jean-Charles Meyrignac, &lt;a href=&quot;http://euler.free.fr/&quot;&gt;Computing minimal equal sums of like powers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Weisstein, Eric W., &lt;a href=&quot;http://mathworld.wolfram.com/DiophantineEquation2ndPowers.html&quot;&gt;Diophantine Equation 2nd Powers&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n)=2 iff n is in A009003 (hypotenuse numbers) , a(n)=4 iff n is in A000079 (powers of 2), else a(n)=3. - _M. F. Hasler_, Dec 17 2014</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 2^2 = 1^2 + 1^2 + 1^2 + 1^2, so a(2)=4. 3^2 = 2^2 + 2^2 + 1^2, so a(3)=3.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) A161882(n)={vecmin(factor(n)[,1]%4)==1 &amp;&amp; return(2);  if(n==1&lt;&lt;valuation(n,2),4,3)} \\ _M. F. Hasler_, Dec 17 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A161883, A161884, A161885.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Dmitry Kamenetsky_, Jun 21 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Alois P. Heinz_, Dec 04 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A143567.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A143567">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,5,21,61,211,1401,8065,37241,240021,1997821,14657501,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 105629525,958412911,9201199281,86311594881,871038486001,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9432024424585,106531641929781,1271523772132741,15583607760968941,194983864950339851</CMP>
+    </assertion><omtext class="name">
+      <CMP> E.g.f. satisfies: A(x) = exp(x*A(x^3/3!)).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A143567/b143567.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A:= proc(n) option remember; if n&lt;=0 then 1 else unapply (convert (series (exp (x*A(n-3,k)(x^3/6)), x,n+1), polynom),x) fi end: a:= n-&gt; coeff (A(n)(x), x,n)*n!: seq(a(n), n=0..29);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> A[n_] := A[n] = If[n &lt;= 0, 1&amp;, Function[Normal[Series[Exp[y*A[n-2][y^3/3!]], {y, 0, n+1}] /. y -&gt; #]]]; a[n_] := Coefficient [A[n][x], x, n]*n!; Table[a[n], {n, 0, 29}] (* _Jean-François Alcover_, Feb 13 2014, after Maple *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> 3rd column of A143565.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alois P. Heinz_, Aug 24 2008, Aug 25 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

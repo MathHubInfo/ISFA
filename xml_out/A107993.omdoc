@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A107993.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A107993">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,67,71,103,137,151,157,197,199,211,227,239,257,263,277,281,311,331,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 359,367,373,401,419,457,461,467,499,503,521,523,541,563,571,577,587,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 613,641,647,661,673,677,709,719,733,739,743,761,797,809,811,821,829</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes of the form r(r(r(r(r(r(n)+1)+1)+1)+1)+1)+1, where A141468(n) = r(n) = n-th nonprime.</CMP>
+    </omtext><assertion class="example">
+      <CMP> If n = 1, then</CMP>
+    </assertion><assertion class="example">
+      <CMP> r(r(r(r(r(r(1)+1)+1)+1)+1)+1)+1 = r(r(r(r(r(0+1)+1)+1)+1)+1)+1 = r(r(r(r(r(1)+1)+1)+1)+1)+1 = r(r(r(r(0+1)+1)+1)+1)+1 = r(r(r(r(1)+1)+1)+1)+1 = r(r(r(0+1)+1)+1)+1 = r(r(r(1)+1)+1)+1 = r(r(0+1)+1)+1 = r(r(1)+1)+1 = r(0+1)+1 = r(1)+1 = 0+1 = 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> (nonprime).</CMP>
+    </assertion><assertion class="example">
+      <CMP> If n = 2, then</CMP>
+    </assertion><assertion class="example">
+      <CMP> r(r(r(r(r(r(2)+1)+1)+1)+1)+1)+1 = r(r(r(r(r(1+1)+1)+1)+1)+1)+1 = r(r(r(r(r(2)+1)+1)+1)+1)+1 = r(r(r(r(1+1)+1)+1)+1)+1 = r(r(r(r(2)+1)+1)+1)+1 = r(r(r(1+1)+1)+1)+1 = r(r(r(2)+1)+1)+1 = r(r(1+1)+1)+1 = r(r(2)+1)+1 = r(1+1)+1 = r(2)+1 = 1+1 = 2 = a(1).</CMP>
+    </assertion><assertion class="example">
+      <CMP> If n = 3, then</CMP>
+    </assertion><assertion class="example">
+      <CMP> r(r(r(r(r(r(3)+1)+1)+1)+1)+1)+1 = r(r(r(r(r(4+1)+1)+1)+1)+1)+1 = r(r(r(r(r(5)+1)+1)+1)+1)+1 = r(r(r(r(8+1)+1)+1)+1)+1 = r(r(r(r(9)+1)+1)+1)+1 = r(r(r(14+1)+1)+1)+1 = r(r(r(15)+1)+1)+1 = r(r(22+1)+1)+1 = r(r(23)+1)+1 = r(33+1)+1 = r(34)+1 = 48+1 = 49</CMP>
+    </assertion><assertion class="example">
+      <CMP> (nonprime).</CMP>
+    </assertion><assertion class="example">
+      <CMP> If n = 4, then</CMP>
+    </assertion><assertion class="example">
+      <CMP> r(r(r(r(r(r(4)+1)+1)+1)+1)+1)+1 = r(r(r(r(r(6+1)+1)+1)+1)+1)+1 = r(r(r(r(r(7)+1)+1)+1)+1)+1 = r(r(r(r(10+1)+1)+1)+1)+1 = r(r(r(r(11)+1)+1)+1)+1 = r(r(r(16+1)+1)+1)+1 = r(r(r(17)+1)+1)+1 = r(r(25+1)+1)+1 = r(r(26)+1)+1 = r(36+1)+1 = r(37)+1 = 51+1 = 52</CMP>
+    </assertion><assertion class="example">
+      <CMP> (nonprime).</CMP>
+    </assertion><assertion class="example">
+      <CMP> If n = 5, then</CMP>
+    </assertion><assertion class="example">
+      <CMP> r(r(r(r(r(r(5)+1)+1)+1)+1)+1)+1 = r(r(r(r(r(8+1)+1)+1)+1)+1)+1 = r(r(r(r(r(9)+1)+1)+1)+1)+1 = r(r(r(r(14+1)+1)+1)+1)+1 = r(r(r(r(15)+1)+1)+1)+1 = r(r(r(22+1)+1)+1)+1 = r(r(r(23)+1)+1)+1 = r(r(33+1)+1)+1 = r(r(34)+1)+1 = r(48+1)+1 = r(49)+1 = 66+1 = 67 = a(2).</CMP>
+    </assertion><assertion class="example">
+      <CMP> If n = 6, then</CMP>
+    </assertion><assertion class="example">
+      <CMP> r(r(r(r(r(r(6)+1)+1)+1)+1)+1)+1 = r(r(r(r(r(9+1)+1)+1)+1)+1)+1 = r(r(r(r(r(10)+1)+1)+1)+1)+1 = r(r(r(r(15+1)+1)+1)+1)+1 = r(r(r(r(16)+1)+1)+1)+1 = r(r(r(24+1)+1)+1)+1 = r(r(r(25)+1)+1)+1 = r(r(35+1)+1)+1 = r(r(36)+1)+1 = r(50+1)+1 = r(51)+169+1 = 70</CMP>
+    </assertion><assertion class="example">
+      <CMP> (nonprime).</CMP>
+    </assertion><assertion class="example">
+      <CMP> If n = 7, then</CMP>
+    </assertion><assertion class="example">
+      <CMP> r(r(r(r(r(r(7)+1)+1)+1)+1)+1)+1 = r(r(r(r(r(10+1)+1)+1)+1)+1)+1 = r(r(r(r(r(11)+1)+1)+1)+1)+1 = r(r(r(r(16+1)+1)+1)+1)+1 = r(r(r(r(17)+1)+1)+1)+1 = r(r(r(25+1)+1)+1)+1 = r(r(r(26)+1)+1)+1 = r(r(36+1)+1)+1 = r(r(37)+1)+1 = r(51+1)+1 = r(52)+1 = 70+1 = 71 = a</CMP>
+    </assertion><assertion class="example">
+      <CMP> (4).</CMP>
+    </assertion><assertion class="example">
+      <CMP> If n = 8, then</CMP>
+    </assertion><assertion class="example">
+      <CMP> r(r(r(r(r(r(8)+1)+1)+1)+1)+1)+1 = r(r(r(r(r(12+1)+1)+1)+1)+1)+1 = r(r(r(r(r(13)+1)+1)+1)+1)+1 = r(r(r(r(20+1)+1)+1)+1)+1 = r(r(r(r(21)+1)+1)+1)+1 = r(r(r(30+1)+1)+1)+1 = r(r(r(31)+1)+1)+1 = r(r(44+1)+1)+1 = r(r(45)+1)+1 = r(62+1)+1 = r(63)+1 = 85+1 = 86</CMP>
+    </assertion><assertion class="example">
+      <CMP> (nonprime).</CMP>
+    </assertion><assertion class="example">
+      <CMP> If n = 9, then</CMP>
+    </assertion><assertion class="example">
+      <CMP> r(r(r(r(r(r(9)+1)+1)+1)+1)+1)+1 = r(r(r(r(r(14+1)+1)+1)+1)+1)+1 = r(r(r(r(r(15)+1)+1)+1)+1)+1 = r(r(r(r(22+1)+1)+1)+1)+1 = r(r(r(r(23)+1)+1)+1)+1 = r(r(r(33+1)+1)+1)+1 = r(r(r(34)+1)+1)+1 = r(r(48+1)+1)+1 = r(r(49)+1)+1 = r(66+1)+1 = r(67)+1 = 90+1 = 91</CMP>
+    </assertion><assertion class="example">
+      <CMP> (nonprime), etc.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000040, A141468.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Juri-Stepan Gerasimov_, Aug 25 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 179 replaced by 157, 257 inserted and extended by _R. J. Mathar_, Sep 05 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

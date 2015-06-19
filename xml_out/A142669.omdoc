@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A142669.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A142669">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,349,463,577,691,919,1033,1489,1831,2287,2857,2971,3313,3541,3769,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4111,4339,4567,4909,5023,5479,5821,6163,6277,6619,6733,6961,7417,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7759,7873,8101,8329,8443,9013,9127,9241,9697,9811,10039,10267,10723,10837,11863</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes congruent to 7 mod 57.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A142669/b142669.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Prime[Range[2300]], MemberQ[{7}, Mod[#, 57]] &amp;] (* _Vincenzo Librandi_, Sep 01 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(12000) | p mod 57 eq 7 ]; // _Vincenzo Librandi_, Sep 01 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Jul 11 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

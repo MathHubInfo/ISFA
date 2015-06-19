@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A043441.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A043441">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,13,21,29,37,40,41,42,43,44,46,47,53,61,69,77,85,93,101,104,105,106,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 107,108,110,111,117,125,133,141,149,157,165,168,169,170,171,172,174,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 175,181,189,197,205,213,221,229,232,233,234</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that number of 5's in base 8 is 1.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

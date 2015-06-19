@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A182835.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A182835">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,4,6,7,8,9,11,12,13,14,16,17,18,19,20,21,23,24,25,26,27,28,30,31,32,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 33,34,35,36,37,39,40,41,42,43,44,45,46,48,49,50,51,52,53,54,55,56,57,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 59,60,61,62,63,64,65,66,67,68,70,71,72,73,74,75,76,77,78,79,80,81,83,84,85,86,87,88,89,90,91,92</CMP>
+    </assertion><omtext class="name">
+      <CMP> n+floor(sqrt(2n+3)), complement of A179207.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A182835"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="floor" cd="A182835"/>
+      <OMA>
+      <OMS name="sqrt" cd="A182835"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> a=2; b=3; Table[n+Floor[(a*n+b)^(1/2)],{n,80}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A179207.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Jan 07 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

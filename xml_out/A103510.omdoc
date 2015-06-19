@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A103510.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A103510">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 9,11,21,57,23,55,245,241,115,833,83,523,437,193,447,733,167,689,1417,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 611,2297,1081,2731,1283,2755,5057,2761,887,2719,9221,4909,8179,4397,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13891,9557,2351,9257,5869,10627,11941,1487,2797,3947,5899,11237,20069</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = 1 + 2 * least i such that A103509(i)=n+1, 0 if no such i exists.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Array[a, 500]; Do[a[n] = 0, {n, 1, 500}]; n = 9; ct = 0; While[ct &lt; 150, m = 3; While[ ! (PrimeQ[m] &amp;&amp; (((n - m)/2) &gt; 2) &amp;&amp; PrimeQ[(n - m)/2]), m = m + 2]; k = PrimePi[m]; If[a[k] == 0, a[k] = n; ct = ct + 1]; n = n + 2]; Print[a]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Scheme:) (define (A103510 n) (+ 1 (* 2 (first-n-where-fun_n-is-i1 A103509 (+ 1 n)))))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (define (first-n-where-fun_n-is-i1 fun i) (let loop ((n 1)) (cond ((= i (fun n)) n) (else (loop (+ n 1))))))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A103508, A103151, A103152, A103153, A103506, A103509, A025017.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lei Zhou_, Feb 10 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited and Scheme-code added by _Antti Karttunen_, Jun 19 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

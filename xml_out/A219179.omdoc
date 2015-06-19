@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A219179.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A219179">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,14,15,91,92,132,140,991,1891,3525,3792,4025,4650,5775,6384,45847,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 78337,99904,105664,180544,133152769,134176771,227512999,233016679,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 451443979,865079296,1478127616,1509765120,1585188864,1660973056,1793101824,3063803904</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that sigma(n)/tau(n) is a perfect number.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> perfectQ[n_] := DivisorSigma[1, n] == 2*n; Select[Range[10000], perfectQ[DivisorSigma[1, #] / DivisorSigma[0, #]] &amp;] (* _T. D. Noe_, Nov 13 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Subsequence of A003601.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000396 (perfect numbers).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zdenek Cervenka_, Nov 13 2012</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(21)-a(32) from _Donovan Johnson_, Nov 13 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

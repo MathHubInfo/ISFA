@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A191560.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A191560">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 15625,6103515625,2384185791015625,931322574615478515625,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 363797880709171295166015625,142108547152020037174224853515625,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 55511151231257827021181583404541015625,21684043449710088680149056017398834228515625,8470329472543003390683225006796419620513916015625</CMP>
+    </assertion><omtext class="name">
+      <CMP> 25^(4*n+3)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A191560/b191560.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [25^(4*n+3): n in [0..10]]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vincenzo Librandi_, Jul 07 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A034906.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A034906">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,8,23,46,61,215,652,821,2918,4201,6904,8402,48361,63556,86723,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 270131,441262,882425,2517902,4034914,6758401,8068838,23445533,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 46880176,61277761,219078635,654534862</CMP>
+    </assertion><omtext class="name">
+      <CMP> Powers of 2 written backwards and sorted.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A034906/b034906.txt&quot;&gt;Table of n, a(n) for n=1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Sort[FromDigits[Reverse[IntegerDigits[#]]]&amp;/@(2^Range[0,30])] (* _Harvey P. Dale_, Mar 06 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000079, A004094.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

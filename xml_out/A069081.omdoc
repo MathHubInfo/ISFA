@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A069081.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A069081">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,10,18,24,26,32,34,50,58,74,82,88,90,98,106,120,122,130,146,152,160,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 170,178,194,202,216,218,226,234,242,250,274,288,290,298,306,312,314,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 338,344,346,362,370,386,394,408,410,416,440,442,458,466,472,482,490</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that sigma(n)/tau(n) has denominator 2.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>such that <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A057021"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Benoit Cloitre_, Apr 05 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

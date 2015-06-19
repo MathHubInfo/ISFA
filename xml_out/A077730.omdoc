@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A077730.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A077730">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,15,1825,6667,235702,2581988,8819171,94280904,316227766,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10050378152592120755,1054092553389459777333,348155311911395676354583,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 36237153766973933397363154,3760507165451774726100982411</CMP>
+    </assertion><omtext class="name">
+      <CMP> A077729(n)^(1/2).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A077729.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Nov 19 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _Sascha Kurz_, Jan 04 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A195821.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A195821">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,1,1,3,5,7,12,19,25,37,56,72,102,138,187,246,330,422,563,721,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 931,1177,1523,1903,2421,3020,3797,4700,5875,7218,8956,10954,13474,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 16401,20083,24316,29576,35685,43179,51870,62490,74757,89666,106927,127687</CMP>
+    </assertion><omtext class="name">
+      <CMP> Total number of parts that are not the smallest part in all partitions of n that do not contain 1 as a part.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Total number of parts that are not the smallest part in all partitions of the head of the last section of the set of partitions of n. For more information see A195820.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A195821/b195821.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A195821"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A138135"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A195820"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A138137"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A195820"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A000041"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> For n = 8 the seven partitions of 8 that do not contain 1 as a part are:</CMP>
+    </assertion><assertion class="example">
+      <CMP> .   8</CMP>
+    </assertion><assertion class="example">
+      <CMP> .   4  +  4</CMP>
+    </assertion><assertion class="example">
+      <CMP> .  (5) +  3</CMP>
+    </assertion><assertion class="example">
+      <CMP> .  (6) +  2</CMP>
+    </assertion><assertion class="example">
+      <CMP> .  (3) + (3) +  2</CMP>
+    </assertion><assertion class="example">
+      <CMP> .  (4) +  2  +  2</CMP>
+    </assertion><assertion class="example">
+      <CMP> .   2  +  2  +  2  +  2</CMP>
+    </assertion><assertion class="example">
+      <CMP> Note that in every partition the parts that are not the smallest part are shown between parentheses. The total number of parts that are not the smallest part is 0+0+1+1+2+1+0 = 5, so a(8) = 5.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000041, A000070, A002865, A092269, A135010, A138121, A138135, A138137, A182984, A195820.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Omar E. Pol_, Oct 19 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

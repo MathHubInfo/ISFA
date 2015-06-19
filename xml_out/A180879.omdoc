@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A180879.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A180879">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,12,50,160,525,1540,4662,13104,38346,105336,303732,823680,2361645,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6357780,18208190,48814480,139952670,374315656,1075431084,2872519104,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8273365282,22082137896,63760878300,170112213600,492371090100</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of permutations p() of 1..n+2 with centered difference p(i+1)-p(i-1) &lt; 0 exactly once</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 2 of A180887</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A180879/b180879.txt&quot;&gt;Table of n, a(n) for n=1..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> /* bc , formula r(n,k) from A000892 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> define factorial(n) {</CMP>
+    </omtext><omtext class="program">
+      <CMP> auto prod;</CMP>
+    </omtext><omtext class="program">
+      <CMP> prod=1;</CMP>
+    </omtext><omtext class="program">
+      <CMP> while(n&gt;=2)prod*=n--;</CMP>
+    </omtext><omtext class="program">
+      <CMP> return prod;</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><omtext class="program">
+      <CMP> define binomial(n,i) {</CMP>
+    </omtext><omtext class="program">
+      <CMP> if(i&lt;0||i&gt;n)return 0;</CMP>
+    </omtext><omtext class="program">
+      <CMP> return factorial(n)/(factorial(i)*factorial(n-i));</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><omtext class="program">
+      <CMP> define r(n,k) {</CMP>
+    </omtext><omtext class="program">
+      <CMP> auto j,sum;</CMP>
+    </omtext><omtext class="program">
+      <CMP> sum=0;</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(j=0; j&lt;=k+1; j++) {</CMP>
+    </omtext><omtext class="program">
+      <CMP> sum+=(-1)^j*(k+1-j)^n*binomial(n+1,j);</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><omtext class="program">
+      <CMP> return sum;</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><omtext class="program">
+      <CMP> define t(n,k) {</CMP>
+    </omtext><omtext class="program">
+      <CMP> auto sum,i;</CMP>
+    </omtext><omtext class="program">
+      <CMP> sum=0;</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(i=0; i&lt;=(k-1); i++)sum+=r((n+k)/2,i)*r((n+k)-(n+k)/2,(k-1)-i);</CMP>
+    </omtext><omtext class="program">
+      <CMP> return sum*binomial((n+k),(n+k)/2);</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=1; n&lt;=100; n++) {</CMP>
+    </omtext><omtext class="program">
+      <CMP> print n, &quot; &quot;, t(n,2), &quot;\n&quot;;</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><omtext class="program">
+      <CMP> quit</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Sep 23 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

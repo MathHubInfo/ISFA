@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A043998.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A043998">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 30,103,130,203,230,309,330,403,430,503,530,603,630,703,730,803,830,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 903,930,1003,1039,1103,1130,1203,1230,1309,1330,1403,1430,1503,1530,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1603,1630,1703,1730,1803,1830,1903,1930,2003,2039</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that 0 and 3 occur juxtaposed in the base 10 representation of n but not of n+1.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A031564.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A031564">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4358,4374,4382,4386,4406,4414,4418,4434,4454,4462,4478,4482,4486,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4502,4518,4526,4534,4546,4562,4566,4574,4598,4614,4622,9804,9813,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9876,9897,9903,9921,9942,9957,9969,9993,10014,10029,10041,10077,10101,10113,10119</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that continued fraction for sqrt(n) has even period and central term 66.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

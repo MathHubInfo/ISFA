@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A050875.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A050875">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 33,45,51,63,128,131,133,137,145,152,155,157,161,164,167,173,181,185,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 188,191,193,194,199,203,211,217,218,223,227,229,230,239,247,251,253,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 254,514,516,519,520,523,525,528,531,533,537</CMP>
+    </assertion><omtext class="name">
+      <CMP> Binary numbers d(1)...d(j) such that d(i)=d(j+1-i) for all but 6 i.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

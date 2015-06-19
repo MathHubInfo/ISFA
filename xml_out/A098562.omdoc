@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A098562.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A098562">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 13,20477,75997,239087,2210983,3579761,29194283,40002073,45448471,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 55600481,77290091,108095623,114986483,155637463,226226771,302920139,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 324657881,519681709,551321299,618359839,797005427,944007487,1039681147,1124764853,1923614047,2135308631</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes that are the sum of the squares of the first n primes for some n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These are the primes arising in A098561.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(1) = 13 is an emirp (as R(13) = A004086(a(13)) = 31 is prime. a(13) = 114986483 is also an emirp (i.e., also an element of A006567). - _Jonathan Vos Post_, Aug 13 2009</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. D. Bajpai, &lt;a href=&quot;/A098562/b098562.txt&quot;&gt;Table of n, a(n) for n = 1..15000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> From _K. D. Bajpai_, Dec 15 2014: (Start)</CMP>
+    </assertion><assertion class="example">
+      <CMP> 13 is in the sequence because the sum of the squares of the first 2 primes is 2^2 + 3^2 = 4 + 9 = 13, which is prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> 20477 is in the sequence because the sum of the squares of the first 18 primes is 2^2 + 3^2 + 5^2 + ... + 59^2 + 61^2 = 4 + 9 + 25 + ... + 3481 + 3721 = 20477, which is prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> (End)</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Select[Table[Sum[Prime[k]^2, {k, 1, n}], {n, 1000}], PrimeQ]  (* _K. D. Bajpai_, Dec 15 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)  s=0; forprime(p=2, 1e6, t=s+=p^2; if(isprime(t), print1(t,&quot;, &quot;))) \\  _K. D. Bajpai_, Dec 15 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A098561 (corresponding n), A024450 (sum of squares of primes), A066525 (sums of cubes of primes), A013918 (sums of primes).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000040, A006567. - _Jonathan Vos Post_, Aug 13 2009</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Rick L. Shepherd_, Sep 14 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(24)-a(26) from _K. D. Bajpai_, Dec 15 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

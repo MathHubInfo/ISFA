@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A127691.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A127691">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,2,64,2002,69264,2697354,117899520,5740530914,308814720400,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 18213955960378,1169672907313728,81286160430474066,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6080123714344570128,487166244246501489002,41636260100744439399424,3781449867356996500139458,363724112817207189865471248</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> (2*n+1)^n-(2*n-1)^n-(2*n)^n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Theorem: (2*n+1)^n-(2*n-1)^n-(2*n)^n &gt; 0 for n &gt;= 3.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. S. Mitrinovic, Analytic Inequalities, Springer-Verlag, 1970; p. 192, 3.1.13.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Apr 03 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

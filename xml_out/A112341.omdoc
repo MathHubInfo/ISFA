@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A112341.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A112341">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,3,4,5,5,7,6,7,9,8,9,12,9,10,16,13,16,15,21,15,18,19,18,21,23,20,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 24,23,25,29,28,23,27,33,32,27,32,33,30,29,36,34,37,37,37,38,41,45,38,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 39,49,47,45,53,46,53,46,45,49,53,51,48,49,55,51,62,66,61,61,60,66,63,61</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of primes between (prime(n)-1)^2 and prime(n)^2.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A112341"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000720"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000040"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A000720"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000040"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-Chandler 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Begin with the first prime ,compute square root ,take floor and add <OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>.If result is a prime number then begin the count for that prime value .Increment the count until prime value changes .
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(5)=5 because for primes 101-103-107-109-113 the floor of the square root of each is 10. for each 10, 1 is added, so for prime 11 the count is 5.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[n_] := PrimePi[Prime[n]^2] - PrimePi[(Prime[n] - 1)^2]; Table[f[n], {n, 74}] (*Chandler*)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (UBASIC) 10 A=1 20 B=nxtprm(B) 30 C=int(sqrt(B)) 40 D=C+1 50 if E=D then N=N+1:else print N:N=1:stop 60 if D=prmdiv(D) then print B;C;D;&quot;-&quot; 70 E=D 80 goto 20</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A112342.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Enoch Haga_, Sep 05 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Ray Chandler_, Sep 06 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

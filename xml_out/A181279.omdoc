@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A181279.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A181279">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,9,79,766,6060,49928,395024,3170784,25244608,201926272,1612664064,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 12897654272,103124642816,824888150016,6597998055424,52781434593280,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 422230539485184,3377790630133760,27021938497224704,216174442832068608</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 3Xn binary matrices M with rows in strictly increasing order and rows of M*Mtranspose (mod 2) in strictly decreasing order</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row 3 of A181274</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A181279/b181279.txt&quot;&gt;Table of n, a(n) for n=1..144&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical (for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>):<OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA><OMI>7</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>18</OMI><OMV name="n"/></OMA><OMI>105</OMI><OMA><OMS name="times"/><OMI>17</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA><OMI>3</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMV name="n"/></OMA><OMI>19</OMI><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA><OMI>3</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Vaclav Kotesovec_ ,Nov 27 2012 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> M and M*Mtranspose (mod 2) for 3X3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..0......1..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..1......1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..0......0..0..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Oct 10 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

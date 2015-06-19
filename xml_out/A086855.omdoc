@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A086855.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A086855">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,2,22,226,2198,22120,236968,2732268,33940644,453148422,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6480322210,98907371822,1605581578202,27631315113916,502618772515748,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9637245372790760,194291040277517688,4109014039030693578,90968013940830446574,2104072961763468757082</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of permutations of length n with exactly 4 rising or falling successions.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Permutations of 12...n such that exactly 4 of the following occur: 12, 23, ..., (n-1)n, 21, 32, ..., n(n-1).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. N. David, M. G. Kendall and D. E. Barton, Symmetric Function and Allied Tables, Cambridge, 1966, p. 263.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A086855/b086855.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Riordan, &lt;a href=&quot;http://projecteuclid.org/euclid.aoms/1177700181&quot;&gt;A recurrence for permutations without rising or falling successions&lt;/a&gt;, Ann. Math. Statist. 36 (1965), 708-710.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Coefficient of <OMOBJ>
+        <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>4</OMI>
+    </OMA>
+      </OMOBJ>in <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="S" cd="A086855"/>
+      <OMV name="n"/>
+    </OMA><OMV name="t"/></OMA>
+      </OMOBJ>defined in <OMOBJ>
+        <OMR xref="A002464"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A086855"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2</OMI><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="exp" cd="A086855"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Vaclav Kotesovec_ ,Aug 14 2013 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> S:= proc(n) option remember; `if`(n&lt;4, [1, 1, 2*t, 4*t+2*t^2]</CMP>
+    </omtext><omtext class="maple">
+      <CMP>        [n+1], expand((n+1-t)*S(n-1) -(1-t)*(n-2+3*t)*S(n-2)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>        -(1-t)^2*(n-5+t)*S(n-3) +(1-t)^3*(n-3)*S(n-4)))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; ceil(coeff(S(n), t, 4)):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq (a(n), n=0..25);  # _Alois P. Heinz_, Jan 11 2013</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> S[n_] := S[n] = If[n&lt;4, {1, 1, 2*t, 4*t+2*t^2}[[n+1]], Expand[(n+1-t)*S[n-1] - (1-t)*(n-2+3*t)*S[n-2] - (1-t)^2*(n-5+t)*S[n-3] + (1-t)^3*(n-3)*S[n-4]]]; a[n_] := Ceiling[Coefficient[S[n], t, 4]]; Table [a[n], {n, 0, 25}] (* _Jean-François Alcover_, Oct 13 2014, after _Alois P. Heinz_ *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002464, A000130, A000349, A001267, A086852, A086853. A diagonal of A001100.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Twice A001268.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Aug 19 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

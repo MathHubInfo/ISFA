@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A112701.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A112701">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,8,106,1821,35435,741329,16270997,369570944,8613236374,204812473608,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4949266755812,121188396669810,3000342229924222,74979188061284522,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1888846103011564082,47915719069874907917,1222954711282739097587</CMP>
+    </assertion><omtext class="name">
+      <CMP> Partial sum of Catalan numbers A000108 multiplied by powers of 7.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A112701"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A112701"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>7</OMI>
+      <OMV name="k"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,with <OMOBJ>
+        <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="C" cd="A112701"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000108"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="c" cd="A112701"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="c" cd="A112701"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A112701"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>is the <OMOBJ>
+        <OMV name="o"/>
+      </OMOBJ>.g.f .of Catalan numbers <OMOBJ>
+        <OMR xref="A000108"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Eighth column (m=7) of triangle A112705.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_, Oct 31 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

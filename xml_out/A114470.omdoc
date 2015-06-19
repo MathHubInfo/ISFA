@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A114470.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A114470">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,7,76,764,7654,76553,765549,7655510</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of decimal digits in Delannoy[10^n].</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/DelannoyNumber.html&quot;&gt;Delannoy Number&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Limit" cd="A114470"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Log" cd="A114470"/>
+      <OMI>10</OMI><OMA>
+      <OMS name="a" cd="A114470"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="-&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMS name="Infinity"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="Log" cd="A114470"/>
+      <OMI>10</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>3</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="sqrt" cd="A114470"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMF dec="0.7655513706757262"/>
+    </OMA>
+      </OMOBJ>...since the real root possessing the smallest absolute value of expression <OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>6</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>(found in the <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .)equals <OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>3</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="sqrt" cd="A114470"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.(See <OMOBJ>
+        <OMR xref="A104178"/>
+      </OMOBJ>).-_Paul Hanna_ ,Dec 01 2005 
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A001850, A114472.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric W. Weisstein_, Nov 30 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

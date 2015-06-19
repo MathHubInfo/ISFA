@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A180698.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A180698">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,3,15,4,16,5,11,17,57,6,12,86,18,1,24,7,47,13,87,36,2,93,42,8,116,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 65,31,14,105,71,37,3,128,94,60,26,9,134,100,66,49,15,140,123,106,72,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 55,21,4,129,112,95,78,44,27,10,152,135,101,84,67,50,33,16,158,141,124,107</CMP>
+    </assertion><omtext class="name">
+      <CMP> 15^a(n) is smallest power of 15 beginning with n.</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Mondot, &lt;a href=&quot;/A180698/b180698.txt&quot;&gt;Table of n, a(n) for n=1..32699&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A180696, A180697, A180700</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> Daniel Mondot (dmondot(AT)gmail.com), Sep 18 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

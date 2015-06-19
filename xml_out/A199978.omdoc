@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A199978.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A199978">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 10,20,25,30,40,45,50,52,54,55,56,58,60,65,69,70,78,80,85,87,90,95,96,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 100,102,104,105,106,108,110,120,125,130,140,145,150,152,154,155,156,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 158,159,160,165,169,170,178,180,185,187,190,195,196,200,201,202</CMP>
+    </assertion><omtext class="name">
+      <CMP> Nonprime numbers whose multiplicative digital root is 0.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Complement of A199977 with respect to A034048.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Number 58 is in sequence because 5*8 = 40, 4*0 = 0.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> digRoot[n_] := Module[{k = n}, While[k &gt; 9, k = Times @@ IntegerDigits[k]]; k]; Select[Range[300], ! PrimeQ[#] &amp;&amp; digRoot[#] == 0 &amp;] (* _T. D. Noe_, Nov 23 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A199977 (primes whose multiplicative digital root is 0).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jaroslav Krizek_, Nov 13 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

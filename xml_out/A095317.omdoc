@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A095317.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A095317">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 131,137,193,257,521,523,547,577,593,641,643,673,769,773,1031,1033,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1049,1061,1091,1093,1097,1153,1217,1283,1289,1297,1409,1553,1601,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2053,2063,2069,2081,2083,2087,2089,2099,2113,2129,2131,2137,2153</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes in whose binary expansion the number of 1 bits is &lt;= number of 0 bits minus 2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Karttunen and J. Moyer: &lt;a href=&quot;/A095062/a095062.c.txt&quot;&gt;C-program for computing the initial terms of this sequence&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)forprime(p=2,2200,v=binary(p);s=0;for(k=1,#v,s+=if(v[k]==1,+1,-1));if(s&lt;=-2,print1(p,&quot;, &quot;)))</CMP>
+    </omtext><omtext class="program">
+      <CMP> \\ _Washington Bomfim_, Jan 13 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Complement of A095316 in A000040. Subset: A095321. Subset of A095071. Cf. also A095327.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Antti Karttunen_, Jun 04 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

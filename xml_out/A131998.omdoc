@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A131998.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A131998">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,7,10,24,33,40,44,70,78,84,90,99,105,126,132,168,176,189,190,198,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 208,210,231,252,306,315,340,360,368,384,391,408,420,441,462,480,520,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 546,575,580,598,600,608,612,638,682,693,700,702,736,740,760,770,792,814</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that the number of letters in the n-th ordinal number divides n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Which numbers k occur as the dividends?</CMP>
+    </omtext><omtext class="comment">
+      <CMP> k...smallest n such that A006944(n)/n = k.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1...5.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 2..10.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 3..11</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 4..44.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 5..never?</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 6..78.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 7..70.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 8.168.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 9.189.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 10.90.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 11.99.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> {n such that A006944(n)|n}.</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(1) = 5 because &quot;fifth&quot; has 5 letters.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 7 because &quot;seventh&quot; has 7 letters.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3) = 10 because &quot;tenth&quot; has 5 letters and 10/5 = 2.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4) = 24 because &quot;twentyfourth&quot; has 12 letters and 24/12 = 2.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(5) = 33 because &quot;thirtythird&quot; has 11 letters and 33/11 = 3.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(6) = 44 because &quot;fortyfourth&quot; has 11 letters and 44/11 = 4.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A006944, A116910.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,word</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Vos Post_, Oct 08 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _R. J. Mathar_, Oct 24 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

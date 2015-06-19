@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A170265.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A170265">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,16,240,3600,54000,810000,12150000,182250000,2733750000,41006250000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 615093750000,9226406250000,138396093750000,2075941406250000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 31139121093750000,467086816406250000,7006302246093750000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of reduced words of length n in Coxeter group on 16 generators S_i with relations (S_i)^2 = (S_i S_j)^41 = I.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The initial terms coincide with those of A170735, although the two sequences are eventually different.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Computed with MAGMA using commands similar to those used to compute A154638.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> G.f. (t^41 + 2*t^40 + 2*t^39 + 2*t^38 + 2*t^37 + 2*t^36 + 2*t^35 + 2*t^34 +</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 2*t^33 + 2*t^32 + 2*t^31 + 2*t^30 + 2*t^29 + 2*t^28 + 2*t^27 + 2*t^26 +</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 2*t^25 + 2*t^24 + 2*t^23 + 2*t^22 + 2*t^21 + 2*t^20 + 2*t^19 + 2*t^18 +</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 2*t^17 + 2*t^16 + 2*t^15 + 2*t^14 + 2*t^13 + 2*t^12 + 2*t^11 + 2*t^10 +</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 2*t^9 + 2*t^8 + 2*t^7 + 2*t^6 + 2*t^5 + 2*t^4 + 2*t^3 + 2*t^2 + 2*t +</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 1)/(105*t^41 - 14*t^40 - 14*t^39 - 14*t^38 - 14*t^37 - 14*t^36 - 14*t^35</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      -<OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>34</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>33</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>32</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>31</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>30</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>29</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>28</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>-
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>27</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>26</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>25</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>24</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>23</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>22</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>21</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>-
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>20</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>19</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>18</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>17</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>16</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>15</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>14</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>-
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>13</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>12</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>11</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>10</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>9</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>8</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>7</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>-
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 14*t^6 - 14*t^5 - 14*t^4 - 14*t^3 - 14*t^2 - 14*t + 1)</CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _John Cannon_ and _N. J. A. Sloane_, Dec 03 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

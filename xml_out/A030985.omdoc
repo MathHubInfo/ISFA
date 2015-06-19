@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A030985.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A030985">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,92,792,9792,69792,369792,2369792,62369792,262369792,7262369792,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 27262369792,27262369792,27262369792,80027262369792,580027262369792,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4580027262369792,14580027262369792,914580027262369792</CMP>
+    </assertion><omtext class="name">
+      <CMP> 3-automorphic numbers ending in 2: final digits of 3*n^2 agree with n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the unique positive integer less than 10^n such that a(n) is divisible by 2^n and 3*a(n) - 1 is divisible by 5^n. - _Eric M. Schmidt_, Aug 18 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric M. Schmidt, &lt;a href=&quot;/A030985/b030985.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ar#automorphic&quot;&gt;Index entries for sequences related to automorphic numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Fi#final&quot;&gt;Index entries for sequences related to final digits of numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/AutomorphicNumber.html&quot;&gt;Automorphic Number&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [crt(0, inverse_mod(3, 5^n), 2^n, 5^n) for n in xrange(1, 1001)] # _Eric M. Schmidt_, Aug 18 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric W. Weisstein_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

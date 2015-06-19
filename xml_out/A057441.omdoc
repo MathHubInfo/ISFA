@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A057441.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A057441">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 80,282,306,830,954,1032,1104,1112,1286,1362,1386,1446,1682,1832,1914,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2090,2190,2210,2340,2436,2522,2564,2580,2634,2804,2880,2886,2954,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3096,3252,3360,3380,3582,3666,3752,3944,4064,4122,4154,4244,4310,4326,4370</CMP>
+    </assertion><omtext class="name">
+      <CMP> n*M127 - 1 is prime, where M127 = 2^127 - 1.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[ Range[ 1, 10000 ], PrimeQ[ #(2^127 - 1) - 1 ] &amp; ]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A057440.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Sep 08 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

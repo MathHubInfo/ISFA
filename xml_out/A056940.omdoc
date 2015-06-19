@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A056940.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A056940">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,5,1,1,15,15,1,1,35,105,35,1,1,70,490,490,70,1,1,126,1764,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4116,1764,126,1,1,210,5292,24696,24696,5292,210,1,1,330,13860,116424,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 232848,116424,13860,330,1,1,495,32670,457380,1646568,1646568,457380</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of antichains (or order ideals) in the poset 4*m*n or plane partitions with rows &lt;= m, columns &lt;= n and entries &lt;= 4</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Determinants of 4 X 4 subarrays of Pascal's triangle A007318 (a matrix entry being set to 0 when not present). - _Gerald McGarvey_, Feb 24 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sums are: {1, 2, 7, 32, 177, 1122, 7898, 60398, 494078, 4274228, 38763298,...}. - _Roger L. Bagula_, Mar 08 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also determinants of 4x4 arrays whose entries come from a single row: T(n,k) = det [C(n,k),C(n,k-1),C(n,k-2),C(n,k-3); C(n,k+1),C(n,k),C(n,k-1),C(n,k-2); C(n,k+2),C(n,k+1),C(n,k),C(n,k-1); C(n,k+3),C(n,k+2),C(n,k+1),C(n,k)]. - _Peter Bala_, May 10 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Berman and Koehler, Cardinalities of finite distributive lattices, Mitteilungen aus dem Mathematischen Seminar Giessen, 121 (1976), p. 103-124</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. A. MacMahon, Combinatory Analysis, sect 495, 1916.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. P. Stanley, Theory and application of plane partitions. II. Studies in Appl. Math. 50 (1971), p. 259-279. Thm. 18.1</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Paul Barry, On Integer-Sequence-Based Constructions of Generalized Pascal Triangles, Journal of Integer Sequences, Vol. 9 (2006), Article 06.2.4.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. A. MacMahon, &lt;a href=&quot;http://www.hti.umich.edu/cgi/t/text/text-idx?c=umhistmath;idno=ABU9009&quot;&gt;Combinatory analysis&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Pos#posets&quot;&gt;Index entries for sequences related to posets&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="Product" cd="A056940"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="C" cd="A056940"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="m"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="m"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="C" cd="A056940"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS cd="set1" name="set">
+        <OMV name="k"/><OMI>0</OMI><OMI>3</OMI>
+      </OMS>
+    </OMA>
+    </OMA>
+      </OMOBJ>gives the array as a square .
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Contribution from _Roger <OMOBJ>
+        <OMV name="L"/>
+      </OMOBJ>.Bagula_ ,Mar 08 2010 :(Start )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>;
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="c" cd="A056940"/>
+      <OMV name="n"/><OMV name="q"/>
+    </OMA>
+      <OMA>
+      <OMS name="Product" cd="A056940"/>
+      <OMA>
+      <OMS name="Product" cd="A056940"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="i"/><OMV name="j"/>
+    </OMA><OMA>
+      <OMS cd="set1" name="set">
+        <OMV name="j"/><OMI>0</OMI><OMV name="q"/>
+      </OMS>
+    </OMA>
+    </OMA><OMA>
+      <OMS cd="set1" name="set">
+        <OMV name="i"/><OMI>1</OMI><OMV name="n"/>
+      </OMS>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>;
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A056940"/>
+      <OMV name="n"/><OMV name="m"/><OMV name="q"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="c" cd="A056940"/>
+      <OMV name="n"/><OMV name="q"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="c" cd="A056940"/>
+      <OMV name="m"/><OMV name="q"/>
+    </OMA><OMA>
+      <OMS name="c" cd="A056940"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA><OMV name="q"/>
+    </OMA><OMV name="End"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      From Peter Bala ,Oct 13 2011 :(Start )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="T" cd="A056940"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="T" cd="A056940"/>
+      <OMV name="n"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="T" cd="A056940"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="k"/>
+    </OMA></OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="T" cd="A056940"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="T" cd="A056940"/>
+      <OMV name="n"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="T" cd="A056940"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Define <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A056940"/>
+      <OMV name="r"/><OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="r"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.The triangle whose <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS cd="set1" name="set">
+        <OMV name="n"/><OMV name="k"/>
+      </OMS>
+    </OMA><OMV name="th"/>
+    </OMA>
+      </OMOBJ>entry is <OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A056940"/>
+      <OMV name="r"/><OMI>0</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A056940"/>
+      <OMV name="r"/><OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A056940"/>
+      <OMV name="r"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A056940"/>
+      <OMV name="r"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>is <OMOBJ>
+        <OMA>
+      <OMR xref="A007318"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="r"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMR xref="A001263"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="r"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMR xref="A056939"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="r"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMR xref="A056940"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="r"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMR xref="A056941"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="r"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.(End )
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Contribution from _Roger L. Bagula_, Mar 08 2010: (Start)</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 5, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 15, 15, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 35, 105, 35, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 70, 490, 490, 70, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 126, 1764, 4116, 1764, 126, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 210, 5292, 24696, 24696, 5292, 210, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 330, 13860, 116424, 232848, 116424, 13860, 330, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 495, 32670, 457380, 1646568, 1646568, 457380, 32670, 495, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 715, 70785, 1557270, 9343620, 16818516, 9343620, 1557270, 70785, 715, 1} (End)</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Contribution from _Roger L. Bagula_, Mar 08 2010: (Start)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> c[n_, q_] = Product[Product[i + j, {j, 0, q}], {i, 1, n}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t[n_, m_, q_] = c[n, q]/(c[m, q]*c[n - m, q]);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Flatten[Table[Table[t[n, m, q], {m, 0, n}], {n, 0, 10}]], {q, 2, 12}] (End)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000372, A056932, A001263, A056939, A056941.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Antidiagonals sum to A005362 (Hoggatt sequence)</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. q=2: A056939 [From _Roger L. Bagula_, Mar 08 2010]</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Mitch Harris_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

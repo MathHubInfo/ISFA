@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A131574.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A131574">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 65,85,145,185,205,221,265,305,365,377,445,481,485,493,505,533,545,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 565,629,685,689,697,745,785,793,865,901,905,949,965,985,1037,1073,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1145,1157,1165,1189,1205,1241,1261,1285,1313,1345,1385,1405,1417,1465,1469</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n that are the product of two distinct odd primes and x^2 + y^2 = n has integer solutions.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These numbers are the product of two distinct primes of the form 4k+1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Colin Barker, Aug 29 2007, &lt;a href=&quot;/A131574/b131574.txt&quot;&gt;Table of n, a(n) for n = 1..172&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> x^2 + y^2 = 65 = 5*13 has solutions (x,y) = (1,8), (4,7), (7,4) and (8,1).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000415, A121387, A248649, A248712.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Colin Barker_, Aug 28 2007, corrected Aug 29 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

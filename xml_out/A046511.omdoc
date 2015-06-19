@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A046511.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A046511">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 25,26,27,28,29,34,35,36,37,38,43,44,45,46,48,52,53,54,56,58,62,63,64,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 65,67,72,73,76,82,83,84,85,92,99,125,126,127,128,129,134,135,136,137,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 138,143,144,145,146,148,152,153,154,156,158,162,163,164,165,167,172</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers with multiplicative persistence value 2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A046511/b046511.txt&quot;&gt;Table of n, a(n) for n = 1..3000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/MultiplicativePersistence.html&quot;&gt;Multiplicative Persistence&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 129 -&gt; [ 18 ] -&gt; [ 8 ] = one digit in two steps.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> mpQ[n_]:=Length[NestWhileList[Times@@IntegerDigits[#]&amp;,n,#&gt;9&amp;]]==3; Select[Range[200], mpQ] (* _Harvey P. Dale_, Apr 12 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A003001, A014120, A046502.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Patrick De Geest_, Sep 15 1998</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

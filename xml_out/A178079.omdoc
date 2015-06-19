@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A178079.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A178079">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,1,2,1,3,7,8,25,37,47,318,559,2023,7039,496,90431,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 314775,1139599,8007614,13512079,154788437,1247862041,5097732072,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 56844671623,290379801907,1403230649825,32188159859842,199066111517153</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> A (1,-1) Somos-4 sequence.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Hankel transform of A178078 is a(n+2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Apparently a(n) = -A174400(n+1). - _R. J. Mathar_, Dec 10 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is a strong elliptic divisibility sequence t_n as given in [Kimberling, p. 16] where x = 1, y = 1, z = 2. - _Michael Somos_, Aug 06 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Kimberling, &lt;a href=&quot;http://www.fq.math.ca/Scanned/17-1/kimberling1.pdf&quot;&gt;Strong divisibility sequences and some conjectures&lt;/a&gt;, Fib. Quart., 17 (1979), 13-17.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A178079"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A178079"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A178079"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A178079"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A178079"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A178079"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="a" cd="A178079"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Michael Somos_ ,Aug 06 2014 
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (MAGMA) I:=[0,1,1,1,2]; [n le 5 select I[n] else (Self(n-1)*Self(n-3)-Self(n-2)^2)/Self(n-4): n in [1..30]]; // _Vincenzo Librandi_, Aug 07 2014</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Barry_, May 19 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Missing a(0)=0 and a(1)=1 added by _Michael Somos_, Aug 06 2014</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vincenzo Librandi_, Aug 07 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

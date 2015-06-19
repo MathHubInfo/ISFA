@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A081399.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A081399">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,1,2,3,4,3,4,4,5,5,6,7,9,7,8,8,10,9,10,10,11,11,11,12,12,11,13,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 13,14,11,13,14,14,13,14,14,16,15,16,18,19,19,19,19,21,19,20,19,21,20,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 21,21,21,19,20,20,22,22,24,25,25,23,23,23,24,24,27,26,27,25,27,28,29,28</CMP>
+    </assertion><omtext class="name">
+      <CMP> Bigomega of the n-th Catalan number: a(n) = A001222(A000108(n)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is easy to show that a(n) is between n/log(n) and 2n/log(n) (for n&gt;n0), cf. [Campbell 1984]. The sequence A137687, roughly the middle of this interval, is a fair approximation for A081399. See A137686 for the (signed) difference of the two sequences.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. F. Hasler, &lt;a href=&quot;/A081399/b081399.txt&quot;&gt;Table of n, a(n) for n=0,...,3000&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Douglas M. Campbell, &lt;a href=&quot;http://www.jstor.org/stable/2689673&quot;&gt;The Computation of Catalan Numbers&lt;/a&gt;, Mathematics Magazine, Vol. 57, No. 4. (Sep., 1984), pp. 195-208.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A081399"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A001222"/>
+      <OMA>
+      <OMR xref="A000108"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> with(numtheory):a:=proc(n) if n=0 then 0 else bigomega(binomial(2*n,n)/(1+n)) fi end: seq(a(n), n=0..75); # _Zerinvary Lajos_, Apr 11 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := PrimeOmega[ CatalanNumber[n]]; Table[a[n], {n, 0, 75}] (* _Jean-François Alcover_, Jul 02 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A081399(n)=bigomega(prod(i=2,n,(n+i)/i)) \\ - M. F. Hasler, Feb 06 2008</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001222, A000108, A022559, A023816, A048621, A081405, A120626, A137686-A137687.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A080405.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Mar 28 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited and extended by _M. F. Hasler_, Feb 06 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

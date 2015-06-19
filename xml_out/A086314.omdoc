@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A086314.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A086314">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,6,33,170,1170,10962,172844,4944024,270116280,28022441260,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5448008695536,1969579223350128,1321964082404214704,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1649890513414726210320,3840060942271653473695680</CMP>
+    </assertion><omtext class="name">
+      <CMP> Total number of edges in the distinct simple graphs on n nodes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A000088(n)*n(n-1)/4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A000088(n)*A064038(n)/A014695(n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/SimpleGraph.html&quot;&gt;Simple Graph&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/GraphEdge.html&quot;&gt;Graph Edge&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[D[GraphPolynomial[n,x],x]/.x-&gt;1,{n,1,20}]  (* _Geoffrey Critzer_, Sep 29 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000088, A014695, A064038.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric W. Weisstein_, Jul 15, 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

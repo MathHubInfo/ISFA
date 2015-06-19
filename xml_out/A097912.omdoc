@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A097912.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A097912">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,3,4,5,6,7,8,9,10,16,27,38,49,50,51,62,73,84,90,94,156,278,301,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 326,478,590,591,623,748,750,823,946,1034,1567,2890,2891,3567,4012,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4367,5890,5891,6234,7012,7345,8690,8723,9456,10345,16789,20145,26789,30125</CMP>
+    </assertion><omtext class="name">
+      <CMP> Look at the first 10 digits of the sequence: they are all different. The same for the next 10. And the next 10, etc. This sequence is the slowest increasing one with that property.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric Angelini_, Sep 04 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

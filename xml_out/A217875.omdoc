@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A217875.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A217875">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 22229,25391,69557,107563,111409,167953,200843,202309,208609,217271,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 221891,236609,238591,250091,250343,274609,290557,355591,373091,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 382391,404291,407119,415409,417419,439063,441229,447943,515191,542873,581891,582119,591691,614963</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes which have the same (base 10) digital sum A007953 as the next smaller and next larger prime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. F. Hasler, &lt;a href=&quot;/A217875/b217875.txt&quot;&gt;Table of n, a(n) for n = 1..733&lt;/a&gt; (all terms below 10^7).</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Caldwell (Ed.), &lt;a href=&quot;http://primes.utm.edu/curios/page.php?short=22229&quot;&gt;22229 (another Prime Pages' Curiosity)&lt;/a&gt;.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {q=r=0; forprime(p=1,default(primelimit),(p-q)%18==0 &amp; (q-r)%18==0 &amp; A007953(p)==A007953(q) &amp; A007953(p)==A007953(r) &amp; print1(q&quot;,&quot;); r=q; q=p)}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A subsequence of A066540.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _M. F. Hasler_, Oct 13 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

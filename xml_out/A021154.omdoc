@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A021154.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A021154">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,19,256,3066,35007,391545,4339462,47896672,527676853,5808513711,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 63913994508,703155662118,7735220904139,85089973066117,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 936002419362994,10296090191237004,113257309994958465,1245831999401562363</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of 1/((1-x)(1-2x)(1-5x)(1-11x)).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A021154/b021154.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (19,-105,197,-110).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>19</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMI>256</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMI>3</OMI>
+    </OMA>
+      <OMI>3066</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>105</OMI><OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>197</OMI><OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>110</OMI><OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Harvey <OMOBJ>
+        <OMV name="P"/>
+      </OMOBJ>.Dale_ ,Sep 09 2012 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>19</OMI>
+    </OMA>
+      </OMOBJ>;for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>16</OMI><OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>55</OMI><OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Vincenzo Librandi_ ,Jul 07 2013 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A021154"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>11</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>15</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>40</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMI>27</OMI>
+    </OMA><OMI>1080</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[_Yahia Kahloune_ ,Jul 07 2013 ]
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> CoefficientList[Series[1/((1-x)(1-2x)(1-5x)(1-11x)),{x,0,30}],x] (* or *) LinearRecurrence[{19,-105,197,-110},{1,19,256,3066},30] (* _Harvey P. Dale_, Sep 09 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) m:=25; R&lt;x&gt;:=PowerSeriesRing(Integers(), m); Coefficients(R!(1/((1-x)*(1-2*x)*(1-5*x)*(1-11*x))));/* or */ I:=[1, 19, 256, 3066]; [n le 4 select I[n] else 19*Self(n-1)-105*Self(n-2)+197*Self(n-3)-110*Self(n-4): n in [1..25]]; // _Vincenzo Librandi_, Jul 07 2013</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

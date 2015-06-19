@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A196366.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A196366">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,14,16,16,64,21,69,30,150,80,55,32,272,33,35,57,130,205,70,430,119,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 96,624,266,77,413,854,352,160,65,91,185,117,693,78,102,198,560,319,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 80,682,85,286,455,336,145,385,221,110,112,208,448,285,510,799,176</CMP>
+    </assertion><omtext class="name">
+      <CMP> Positive integers b for which there is a primitive (-5/2)-Pythagorean triple (a,b,c) satisfying a&lt;=b.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A195770 for definitions of k-Pythagorean triple, primitive k-Pythagorean triple, and lists of related sequences.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (See A196362.)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A195770, A196362, A196365, A196367, A196364.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Oct 01 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A114935.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A114935">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,6,44,332,2476,18136,130824,933372,6610676,46603616,327603904,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2298933412,16115938476,112906938696,790735321784,5536710117452,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 38763269947876,271368229299376,1899679393564464,1329816419891749</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of connected (3,n)-hypergraphs (without empty edges).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Kilibarda and V. Jovovic, &quot;Enumeration of some classes of T_0-hypergraphs&quot;, in preparation, 2004.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      E.g.f .:<OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="exp" cd="A114935"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMV name="x"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="exp" cd="A114935"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="exp" cd="A114935"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="exp" cd="A114935"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="exp" cd="A114935"/>
+      <OMV name="x"/>
+    </OMA></OMA>
+    </OMA><OMI>2</OMI>
+    </OMA></OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A002501, A002502, A093732, A093732-A114934, A114936, A114937.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> Goran Kilibarda, _Vladeta Jovovic_, Jan 08 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

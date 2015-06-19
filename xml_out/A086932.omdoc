@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A086932.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A086932">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,0,4,8,8,0,12,8,12,0,12,16,16,0,16,24,20,0,32,24,24,0,20,24,36,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,28,32,32,0,48,32,32,0,36,40,48,0,40,64,44,0,48,48,48,0,56,40,64,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 52,72,48,0,80,56,60,0,60,64,96,0,48,96,68,0,96,64,72,0,72,72,80,0,96,96</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of non-congruent solutions of x^2 + y^2 == -1 mod n.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Multiplicative ,with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A086932"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="e"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>or <OMOBJ>
+        <OMI>0</OMI>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="e"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A086932"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="p"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="e"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="mod" cd="A086932"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A086932"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="p"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="e"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="mod" cd="A086932"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Vladeta Jovovic_ ,Sep 24 2003 
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A060968.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> mult,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> Yuval Dekel (dekelyuval(AT)hotmail.com), Sep 21 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _John W. Layman_, Sep 25 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

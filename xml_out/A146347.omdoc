@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A146347.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A146347">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,60,1212,326156,11838000,132595090,833892048,3734547512,13353954384,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 40631696580,109398542704,267495297138</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nXn arrays of squares of integers summing to 11 with every element equal to at least one neighbor.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Apr 14 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

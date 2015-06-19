@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A124216.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A124216">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,4,1,1,9,9,1,1,16,34,16,1,1,25,90,90,25,1,1,36,195,328,195,36,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,1,49,371,931,931,371,49,1,1,64,644,2240,3334,2240,644,64,1,1,81,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1044,4788,9846,9846</CMP>
+    </assertion><omtext class="name">
+      <CMP> Generalized Pascal triangle.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Consider the 1-parameter family of triangles with g.f. (1-x(1+y))/(1-2x(1+y)+x^2(1+k*x+y^2)). A007318 corresponds to k=2. A056241 corresponds to k=1. A124216 corresponds to k=0. Row sums are A006012. Diagonal sums are A124217.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="x" cd="A124216"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="y"/>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="y"/>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="x" cd="A124216"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="y"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>;Number triangle <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A124216"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A124216"/>
+      <OMV name="n"/><OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="C" cd="A124216"/>
+      <OMV name="j"/><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="j"/><OMV name="k"/>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="j"/><OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Equals 2*A001263 - A007318; (i.e. twice the Narayana triangle minus Pascal's triangle). - _Gary W. Adamson_, Jun 14 2007</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle begins</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 4, 1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 9, 9, 1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 16, 34, 16, 1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 25, 90, 90, 25, 1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 36, 195, 328, 195, 36, 1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 49, 371, 931, 931, 371, 49, 1</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A001263.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Barry_, Oct 19 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

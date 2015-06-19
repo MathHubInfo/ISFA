@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A196827.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A196827">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,0,9,1,5,4,9,3,3,5,5,8,9,7,2,5,7,9,2,5,2,5,3,4,5,2,4,1,8,9,6,4,0,4,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3,0,0,8,1,3,4,9,4,2,0,3,9,0,9,1,3,3,7,3,7,4,3,3,9,3,4,6,8,0,0,7,1,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5,8,5,1,4,2,9,6,6,0,2,9,9,9,9,3,2,8,9,6,2,5,5,0,5,3,4,7,8,9,4,5</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of the least x&gt;0 satisfying 1/(1+x^2)=3*sin(x).</CMP>
+    </omtext><assertion class="example">
+      <CMP> x=0.3091549335589725792525345241896404300813494203...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Plot[{1/(1 + x^2), Sin[x], 2 Sin[x], 3 Sin[x], 4 Sin[x]}, {x, 0, 2}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t = x /. FindRoot[1 == (1 + x^2) Sin[x], {x, 0, 1}, WorkingPrecision -&gt; 100]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[t]  (* A196825 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t = x /. FindRoot[1 == 2 (1 + x^2) Sin[x], {x, 0, 1}, WorkingPrecision -&gt; 100]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[t]  (* A196826 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t = x /. FindRoot[1 == 3 (1 + x^2) Sin[x], {x, 0, 1}, WorkingPrecision -&gt; 100]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[t]  (* A196827 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t = x /. FindRoot[1 == 4 (1 + x^2) Sin[x], {x, 0, 1}, WorkingPrecision -&gt; 100]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[t]  (* A196828 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t = x /. FindRoot[1 == 5 (1 + x^2) Sin[x], {x, 0, 1}, WorkingPrecision -&gt; 100]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[t]  (* A196829 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t = x /. FindRoot[1 == 6 (1 + x^2) Sin[x], {x, 0, 1}, WorkingPrecision -&gt; 100]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[t]  (* A196830 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A196832.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Oct 07 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

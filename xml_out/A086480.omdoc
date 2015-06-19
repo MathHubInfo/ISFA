@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A086480.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A086480">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,8,12,1,125,24,343,2,1,40,1331,3,2197,56,3375</CMP>
+    </omtext><omtext class="name">
+      <CMP> a(n) = smallest number such that the geometric mean of n and a(n) is an integer a(n)*n= k^2. n is not equal to a(n).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A086481.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_ and Jason Earls, Jul 26 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

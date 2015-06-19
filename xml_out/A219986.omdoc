@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A219986.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A219986">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,36,1764,92416,5267025,315630756,19684370601,1264977082944,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 83266957255329,5588691282002500,381203015928291216,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 26357375491548319296,1843677173726039815969,130261796682232750056900,9284172482167489217304900,666818520819487582805692416</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of n-step paths on a quartic lattice that move from (0,0,0,0) to (1,0,0,1) allowing all moves in {-1,0,1}^4 inclusive the zero move.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A219986/b219986.txt&quot;&gt;Table of n, a(n) for n = 0..60&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> b:= proc(n, p) option remember; `if`(p[4]&gt;n, 0, `if`(n=0, 1,</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       add(add(add(add(b(n-1, sort(map(abs, p+[i, j, k, m])))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       , i=-1..1), j=-1..1), k=-1..1), m=-1..1)))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; b(n, [0$2, 1$2]):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq (a(n), n=0..20);  # _Alois P. Heinz_, Dec 02 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (JavaScript)</CMP>
+    </omtext><omtext class="program">
+      <CMP> b=new Array();</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (i1=-1;i1&lt;2;i1++)</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (i2=-1;i2&lt;2;i2++)</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (i3=-1;i3&lt;2;i3++)</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (i4=-1;i4&lt;2;i4++) {</CMP>
+    </omtext><omtext class="program">
+      <CMP> n=(i1+1)+(i2+1)*3+(i3+1)*9+(i4+1)*27;</CMP>
+    </omtext><omtext class="program">
+      <CMP> b[n]=[i1,i2,i3,i4];</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><omtext class="program">
+      <CMP> function inc(arr,m) {</CMP>
+    </omtext><omtext class="program">
+      <CMP> al=arr.length-1;</CMP>
+    </omtext><omtext class="program">
+      <CMP> full=true;</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (ac=0;ac&lt;=al;ac++) if (arr[ac]!=m) {full=false;break;}</CMP>
+    </omtext><omtext class="program">
+      <CMP> if (full==true) return false;</CMP>
+    </omtext><omtext class="program">
+      <CMP> while (arr[al]==m &amp;&amp; al&gt;0) {arr[al]=0;al--;}</CMP>
+    </omtext><omtext class="program">
+      <CMP> arr[al]++;</CMP>
+    </omtext><omtext class="program">
+      <CMP> return true;</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (k=0;k&lt;5;k++) {</CMP>
+    </omtext><omtext class="program">
+      <CMP> c=0;</CMP>
+    </omtext><omtext class="program">
+      <CMP> a=new Array();</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (i=0;i&lt;k;i++) a[i]=0;</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (i=0;i&lt;Math.pow(81,k);i++) {</CMP>
+    </omtext><omtext class="program">
+      <CMP> p=[0,0,0,0];</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (j=0;j&lt;k;j++) {p[0]+=b[a[j]][0];p[1]+=b[a[j]][1];p[2]+=b[a[j]][2];p[3]+=b[a[j]][3];}</CMP>
+    </omtext><omtext class="program">
+      <CMP> if (p[0]==1 &amp;&amp; p[1]==0 &amp;&amp; p[2]==0 &amp;&amp; p[3]==1) c++;</CMP>
+    </omtext><omtext class="program">
+      <CMP> inc(a,80);</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><omtext class="program">
+      <CMP> document.write(c+&quot;, &quot;);</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A219670, A219671.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jon Perry_, Dec 02 2012</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Alois P. Heinz_, Dec 02 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

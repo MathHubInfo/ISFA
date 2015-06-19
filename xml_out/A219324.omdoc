@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A219324.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A219324">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,4,5,6,7,8,9,247,370,378,407,481,518,592,629,1360,3075,26027,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 26933,45018,69781,80487,154791,1920261,2137616,2716713,3100883,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3480140,3934896,4179451,4830936,5218958,11955168,80651025,95738203,257059332,278945612,456790123,469135802,493827160,494376160</CMP>
+    </assertion><omtext class="name">
+      <CMP> Positive integers n that are equal to the determinant of the circulant matrix formed by the decimal digits of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Belukhov proved that if d is an odd divisor of p-1, then for integers q=(p^d-1)/((p-1)*d) and t such that (p-1)*(d-1)/2 &lt; t &lt; (p-1)*(d+1)/2 and gcd(t,d)=1, the number q*t equals the determinant of the circulant matrix formed by its base-p digits. For this sequence (where p=10), not every term can be obtained in this way.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If you rotate left (or take the absolute value of the determinant), then the sequence contains the following additional terms: 48, 1547, 123823, 289835, 23203827,.... (cf. A219326, A219327) - _Robert G. Wilson v_, Dec 12 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(58) &gt; 6*10^11. - _Giovanni Resta_, Dec 14 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> Robert G. Wilson v and Giovanni Resta, &lt;a href=&quot;/A219324/b219324.txt&quot;&gt;Table of n, a(n) for n = 1..57&lt;/a&gt; (first 47 terms from Robert G. Wilson v)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Max Alekseyev, &lt;a href=&quot;/A219324/a219324.png&quot;&gt;Illustration for a(40) = 456790123&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. I. Belukhov, &lt;a href=&quot;http://www.mccme.ru/free-books/matpros/mpf.pdf&quot;&gt;Solution to Problem 14.7&lt;/a&gt; (in Russian), Matematicheskoe Prosveshchenie 15 (2011), pp. 241-244.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Circulant_matrix&quot;&gt;Circulant matrix&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP>           | 2 4 7 |</CMP>
+    </assertion><assertion class="example">
+      <CMP> 247 = det | 7 2 4 |</CMP>
+    </assertion><assertion class="example">
+      <CMP>           | 4 7 2 |</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[n_] := Det[ NestList[ RotateRight@# &amp;, IntegerDigits@ n, Floor[ Log10[n] + 1] - 1]]; k = 1; lst = {}; While[k &lt; 1120000000, a = f@ k; If[a == k, AppendTo[lst, k]]; k++]; lst (* _Robert G. Wilson v_, Nov 20 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) { isA219324(n) = local(d,m,r); d=eval(Vec(Str(n))); m=#d; r=Mod(x,polcyclo(m)); prod(j=1,m,sum(i=1,m,d[i]*r^((i-1)*j)))==n }</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A219325 (binary digits), A219326 (digits in reverse order), A219327 (absolute value of determinant).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Max Alekseyev_, Nov 17 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

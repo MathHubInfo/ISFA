@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A066048.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A066048">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,9,4,25,6,49,4,9,10,121,6,169,14,15,4,289,6,361,10,21,22,529,6,25,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 26,9,14,841,10,961,4,33,34,35,6,1369,38,39,10,1681,14,1849,22,15,46,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2209,6,49,10,51,26,2809,6,55,14,57,58,3481,10,3721,62,21,4,65,22,4489,34</CMP>
+    </assertion><omtext class="name">
+      <CMP> Product of smallest and greatest prime factors of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For all n &gt; 1 a(n) is semiprime; n is semiprime iff a(n) = n; n is prime iff a(n) = n^2;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For all primes p and k &gt; 0, a(p^k) = p^2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Zumkeller, &lt;a href=&quot;/A066048/b066048.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A066048"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A020639"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A006530"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> f[n_] := Transpose[ FactorInteger[n]][[1]]; Table[ First[f[n]]*Last[f[n]], {n, 2, 100} ]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> p[n_]:=Module[{fctrs=Transpose[FactorInteger[n]][[1]]},First[fctrs] Last[fctrs]]; Array[p,70] (* _Harvey P. Dale_, Jun 11 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) { for (n = 1, 10000, if (n==1, a=1, f=factor(n)~; a=f[1, 1] * f[1, length(f)]); write(&quot;b066048.txt&quot;, n, &quot; &quot;, a) ) } [From _Harry J. Smith_, Nov 08 2009]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A001358, A001248, A000961.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A130064, A130065.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Robert G. Wilson v_, Jan 03 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

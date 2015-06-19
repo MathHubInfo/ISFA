@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A066758.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A066758">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,15,21,62481,67896,2618616,10095771,10550121,5491258003,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 103352174628,299536839001,7220385308804403,7686108558349885,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 10917127849295955,724804915074540097006</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangular numbers not divisible by 10 whose reverse is pentagonal.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 51 is pentagonal and 15 is triangular</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> dtn[L_] := Fold[10#1+#2&amp;, 0, L] tritest[n_] := Module[{t}, t=Floor[N[Sqrt[2n]]]; 2n==t(t+1)] A={0}; For[i=1, i&gt;0, i++, t=i(3i-1)/2; r=dtn[Reverse[IntegerDigits[t]]]; If[tritest[r]&amp;&amp;Mod[t, 10]&gt;0, AppendTo[A, r]; Print[A]]]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> base,more,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Erich Friedman_, Jan 17 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(13)-a(16) from _Lars Blomberg_, May 18 2011</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Description clarified and offset corrected  by _Lars Blomberg_, May 29 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

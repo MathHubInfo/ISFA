@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A254868.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A254868">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,2,8,4,16,12,48,44,40,36,32,28,24,20,80,76,72,68,64,60,56,52,208,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 204,200,196,192,188,184,180,176,172,168,164,160,156,152,148,144,140,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 136,132,128,124,120,116,112,108,104,100,96,92,88,84,336,332,328,324</CMP>
+    </assertion><omtext class="name">
+      <CMP> Recamán [-, +, *]-sequence with seed 6 and step 4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Starting at the seed number (6) the sequence continues by subtracting, adding or multiplying by the step number (4). Subtracting gets precedence over addition which gets precedence over multiplication. The new number must be a positive integer and not previously listed. The sequence terminates if this is impossible, but for this seed (6) and step (4) the sequence is infinite.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> More chaotic sequences are obtained if division is included: cf. A254873.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These sequences were first explored by Brian Kehrig, a 15-year-old student at Renert School, Calgary, Canada.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> They are exceptionally nice sequences to introduce to the elementary school math classroom.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Like many Recamán sequences, this is worth listening to.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A254868/b254868.txt&quot;&gt;Table of n, a(n) for n = 1..100000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1) = 6.  a(2) = 6-4 = 2.  a(3) = 2*4 = 8.  a(4) = 8-4 = 4.  a(5) = 4*4 = 16.  a(6) = 16-4 = 12.  a(7) = 12*4 = 48 ...</CMP>
+    </assertion><omtext class="program">
+      <CMP> (Sage)</CMP>
+    </omtext><omtext class="program">
+      <CMP> A=[6]</CMP>
+    </omtext><omtext class="program">
+      <CMP> step=4</CMP>
+    </omtext><omtext class="program">
+      <CMP> for i in [1..100]:</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....if A[i-1]-step&gt;0 and not((A[i-1]-step) in A):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........A.append(A[i-1]-step)</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....else:</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........if not((A[i-1]+step) in A):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ............A.append(A[i-1]+step)</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........else:</CMP>
+    </omtext><omtext class="program">
+      <CMP> ............A.append(step*A[i-1])</CMP>
+    </omtext><omtext class="program">
+      <CMP> A # - _Tom Edgar_, Feb 16 2015</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.Set (Set, singleton, notMember, insert)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a254868 n = a254868_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a254868_list = 6 : kehrig (singleton 6) 6 where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    kehrig s x | x &gt; 4 &amp;&amp; (x - 4) `notMember` s =</CMP>
+    </omtext><omtext class="program">
+      <CMP>                 (x - 4) : kehrig (insert (x - 4) s) (x - 4)</CMP>
+    </omtext><omtext class="program">
+      <CMP>               | (x + 4) `notMember` s =</CMP>
+    </omtext><omtext class="program">
+      <CMP>                 (x + 4) : kehrig (insert (x + 4) s) (x + 4)</CMP>
+    </omtext><omtext class="program">
+      <CMP>               | otherwise =</CMP>
+    </omtext><omtext class="program">
+      <CMP>                 (x * 4) : kehrig (insert (x * 4) s) (x * 4)</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Feb 25 2015</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A005132 (original Recamán sequence).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A254873 (an example with division at the top in the hierarchy of operations).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,hear,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Gordon Hamilton_, Feb 09 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

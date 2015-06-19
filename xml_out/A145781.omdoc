@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A145781.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A145781">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,6,15,91,246,715,3535,21099,95995,175470,4468006,31516774,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 192339970,212951314,5138843466,76699112491,103728576730,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3051100701874,14417674958635,245230361204214,2296196521511806,10940476546738414</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least m &gt;= 0 which when added to primorial(n) yields a square.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Aebi and G. Cairns, &lt;a href=&quot;http://www.parabola.unsw.edu.au/vol45_no1/vol45_no1_1.pdf&quot;&gt;Partitions of primes&lt;/a&gt;, Parabola 45, Issue 1 (2009); see the table on p. 5. - _Jonathan Sondow_, Jun 21 2012</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A145781"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A216144"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMR xref="A002110"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Jonathan Sondow_ ,Sep 02 2012 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(1)= 4 - 2 = 2, a(2)= 9 - 2*3 = 3, a(3)= 36 - 2*3*5 = 6, a(4)= 225 - 2*3*5*7 = 15, and a(5)= 2401 - 2*3*5*7*11 = 91.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> (IntegerPart[Sqrt[#]]+1)^2-#&amp;/@Rest[FoldList[Times,1,Prime[Range[30]]]]  (* _Harvey P. Dale_, Jan 14 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) j=[];for (n=1,30,j=concat(j,(ceil(sqrt(prod(i=1,n,prime(i))))^2 -prod(i=1,n,prime(i)))));j</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002110, A216144, A215658, A215659.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alexander R. Povolotsky_, Oct 18 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition shortened and clarified by _Jonathan Sondow_, Sep 02 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

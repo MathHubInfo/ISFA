@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A069526.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A069526">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,16,0,16,25,0,7,16,0,70,0,0,52,70,0,16,34,0,133,160,0,0,115,0,25,52,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,700,232,0,124,160,0,34,70,0,0,304,0,160,205,0,43,0,0,322,1222,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2401,250,0,52,106,0,0,7000,0,232,4012,0,61,124,0,1024,520,0,11122,340</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest multiple of n with digit sum = 7, or 0 if no such number exists, e.g. a(3k)= a(11k) = 0.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Either no multiples of 37k have digit sum 7 or their first values are &gt; 10000000. - Larry Reeves (larryr(AT)acm.org), Jul 02 2002</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A069521-A069528.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Apr 01 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Larry Reeves (larryr(AT)acm.org), Jul 02 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

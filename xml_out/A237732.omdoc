@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A237732.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A237732">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 54984,2496240,109504800,5108851584,212153261712,9731801668120,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 407773528420896,18180758816258640</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+2)X(2+2) 0..2 arrays with the (lower) medians of each row and column unequal to its neighbors</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 2 of A237733</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2..0..1....1..0..1..2....0..0..1..0....2..2..0..2....2..1..0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2..2..2....2..0..0..2....1..0..2..1....0..1..0..2....2..0..0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..1..2....0..2..1..2....1..0..2..0....1..2..2..1....1..1..2..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Feb 12 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

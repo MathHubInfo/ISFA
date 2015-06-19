@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A052525.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A052525">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,1,2,3,6,10,20,36,71,136,270,531,1070,2147,4367,8895,18262,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 37588,77795,161444,336383,702732,1472582,3093151,6513402,13744384,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 29063588,61570853,130669978,277767990,591373581,1260855164</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of unlabeled rooted trees with n leaves in which the degrees of the root and all internal nodes are &gt;= 3.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Old name was &quot;Non-planar unlabeled trees with neither unary nor binary nodes&quot;. I am leaving this alternative name here because it may help clarify the definitions of related sequences. - _N. J. A. Sloane_.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vaclav Kotesovec, &lt;a href=&quot;/A052525/b052525.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=95&quot;&gt;Encyclopedia of Combinatorial Structures 95&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A052525"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="c"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="d"/>
+      <OMF dec="2.2318799173898687"/>
+    </OMA>
+      </OMOBJ>...,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMF dec="0.33906163445848797"/>
+    </OMA>
+      </OMOBJ>....-_Vaclav Kotesovec_ ,May 04 2015 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> For instance, with 7 leaves, the 6 choices are:</CMP>
+    </assertion><assertion class="example">
+      <CMP> . [ *,*,*,*,*,*,* ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> . [ *,*,*,*,[ *,*,* ] ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> . [ *,*,*,[ *,*,*,* ] ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> . [ *,*,[ *,*,*,*,* ] ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> . [ *,*,[ *,*,[ *,*,* ] ] ]</CMP>
+    </assertion><assertion class="example">
+      <CMP> . [ *,[ *,*,* ],[ *,*,* ] ]</CMP>
+    </assertion><omtext class="maple">
+      <CMP> spec := [ S, {B=Union(S, Z), S=Set(B, 3 &lt;= card)}, unlabeled ]: seq(combstruct[ count ](spec, size=n), n=0..50);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A052524 and A052526.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> encyclopedia(AT)pommard.inria.fr, Jan 25 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Paul Zimmermann_, Oct 31 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

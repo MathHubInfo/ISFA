@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A162198.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A162198">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,102,104,106,108,202,204,206,208,302,304,306,308,402,404,406,408,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 502,504,506,508,602,604,606,608,702,704,706,708,802,804,806,808,902,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 904,906,908,11012,11014,11016,11018,12012,12014,12016,12018,13012,13014</CMP>
+    </assertion><omtext class="name">
+      <CMP> Even cyclops numbers.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A134808, A134809.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Omar E. Pol_, Jul 04 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

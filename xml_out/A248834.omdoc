@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A248834.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A248834">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 15,25,245,3025,39605,525625,6997445,93219025,1242045605,16549536025,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 220514700245,2938258798225,39150987330005,521669482807225,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6951013841444645,92619168339300625,1234109231890228805,16443956730548563225,219108411138085022645,2919522145350504838225</CMP>
+    </assertion><omtext class="name">
+      <CMP> The numerator of curvature of touching circles inscribed in a special way in the smaller segment of circle of radius 1/6 divided by a chord of length sqrt(8/75).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Refer to comment of A240926. Consider a circle C of radius 1/6 (in some length units) with a chord of length sqrt(8/75). This has been chosen such that the smaller sagitta has length 2/15. The input, besides the circle C is the circle C_0 with radius R_0 = 1/15, touching the chord and circle C. The following sequence of circles C_n with radii R_n, n &gt;= 1, is obtained from the condition that C_n touches i) the circle C, ii) the chord and iii) the circle C_(n-1). The numerator of circle curvatures C_n = 1/R_n, n &gt;= 0, are conjectured to be a(n). The denominator is A000244 for n &gt; 0. If one considers the curvature of touching circles inscribed in the larger segment (sagitta length 1/5), the sequence would be A248833. See an illustration given in the link.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Kival Ngaokrajang, &lt;a href=&quot;/A248834/a248834.pdf&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Conjecture :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A248834"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>17</OMI><OMA>
+      <OMS name="a" cd="A248834"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>51</OMI><OMA>
+      <OMS name="a" cd="A248834"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>27</OMI><OMA>
+      <OMS name="a" cd="A248834"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Oct 15 2014 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Empirical <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>54</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>117</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>46</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>9</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Oct 15 2014 
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> {</CMP>
+    </omtext><omtext class="program">
+      <CMP> r=0.4;print1(round(6/r),&quot;, &quot;);r1=r;dn=1;</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (n=1,40,</CMP>
+    </omtext><omtext class="program">
+      <CMP> if (n&lt;=1,ab=2-r,ab=sqrt(ac^2+r^2));</CMP>
+    </omtext><omtext class="program">
+      <CMP> ac=sqrt(ab^2-r^2);</CMP>
+    </omtext><omtext class="program">
+      <CMP> if (n&lt;=1,z=0,z=(Pi/2)-atan(ac/r)+asin((r1-r)/(r1+r));r1=r);</CMP>
+    </omtext><omtext class="program">
+      <CMP> b=acos(r/ab)-z;</CMP>
+    </omtext><omtext class="program">
+      <CMP> r=r*(1-cos(b))/(1+cos(b));</CMP>
+    </omtext><omtext class="program">
+      <CMP> print1(round((6/r)*dn),&quot;, &quot;);</CMP>
+    </omtext><omtext class="program">
+      <CMP> dn=dn*3</CMP>
+    </omtext><omtext class="program">
+      <CMP> )</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A240926, A078986, A097315, A247512, A247335, A247512, A248833.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,frac</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Kival Ngaokrajang_, Oct 15 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

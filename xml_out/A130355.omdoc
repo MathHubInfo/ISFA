@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A130355.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A130355">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,3,2,6,8,7,5,4,15,14,19,21,22,16,20,17,11,13,18,12,10,9,39,41,40,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 38,37,52,51,56,58,59,60,62,63,64,43,42,53,57,61,44,54,45,29,28,46,33,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 35,36,47,55,48,30,34,49,31,25,27,50,32,26,24,23,113,112,117,119,120</CMP>
+    </assertion><omtext class="name">
+      <CMP> Row 13 of A122203.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The signature-permutation of the Catalan automorphism which is derived from the thirteenth non-recursive Catalan automorphism *A089858 with recursion schema SPINE (see A122203 for the definition).</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Karttunen, &lt;a href=&quot;/A130355/b130355.txt&quot;&gt;Table of n, a(n) for n = 0..2055&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Per#IntegerPermutationCatAuto&quot;&gt;Index entries for signature-permutations of Catalan automorphisms&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Inverse: A130356.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Antti Karttunen_, Jun 05 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

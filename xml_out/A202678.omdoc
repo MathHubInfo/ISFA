@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A202678.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A202678">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,11,1,1,30,57,1,1,50,395,203,1,1,70,1133,3221,574,1,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 90,2271,15840,19011,1386,1,1,110,3809,45980,156892,88729,2982,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,130,5747,101640,660617,1195097,346295,5874</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Array:  row n shows the coefficients of the characteristic polynomial of the n-th principal submatrix of the symmetric matrix A185957; by antidiagonals.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let p(n)=p(n,x) be the characteristic polynomial of the n-th principal submatrix.  The zeros of p(n) are positive, and they are interlace the zeros of p(n+1).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S-G Hwang, &quot;Cauchy's interlace theorem for eigenvalues of Hermitian matrices,&quot; American Mathematical Monthly 111 (2004) 157-159.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Mercer and P. Mercer, &quot;Cauchy's interlace theorem and lower bounds for the spectral radius,&quot; International Journal of Mathematics and Mathematical Sciences 23, no. 8 (2000) 563-566.</CMP>
+    </omtext><assertion class="example">
+      <CMP> The 1st principal submatrix (ps) of A185957 is {{1}} (using Mathematica matrix notation), with p(1)=1-x and zero-set {1}.</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> The 2nd ps is {{1,3},{3,10}}, with p(2)=1-11x+x^2 and zero-set {0.091..., 10.908...}.</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> The 3rd ps is {{1,3,6},{3,10,21},{6,21,46}}, with p(3)=1-30x+57x^2-x^3 and zero-set {0.035..., 0.495..., 56.469...}.</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> Top of the array:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1...-1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1...-11...1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1...-30...57....-1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1...-50...395...-203...1</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[k_] := k (k + 1)/2</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> U[n_] :=  NestList[Most[Prepend[#, 0]] &amp;, #, Length[#] - 1] &amp;[Table[f[k], {k, 1, n}]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> L[n_] := Transpose[U[n]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> F[n_] := CharacteristicPolynomial[L[n].U[n], x];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> c[n_] := CoefficientList[F[n], x]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> TableForm[Flatten[Table[F[n], {n, 1, 10}]]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[c[n], {n, 1, 12}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[%]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> TableForm[Table[c[n], {n, 1, 10}]]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A185957, A202605.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> tabl,sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Dec 22 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A191497.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A191497">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,1,2,4,8,15,30,60,120,241,482,964,1928,3855,7710,15420,30840,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 61681,123362,246724,493448,986895,1973790,3947580,7895160,15790321,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 31580642,63161284,126322568,252645135</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n+1) = 2*a(n) + A014017(n+5), a(0) = 0.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (2,0,0,-1,2).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A191497"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A191497"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A191497"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A191497"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="a" cd="A191497"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A191497"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A191497"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>16</OMI><OMA>
+      <OMS name="a" cd="A191497"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .-<OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA><OMV name="R"/>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar ,Jun 23 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A191497"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="floor" cd="A191497"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A133145"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMI>17</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar ,Jun 23 2011 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> A191497 := proc(n): if n=0 then 0 else A191497(n) := 2*A191497(n-1) + A014017(n+4) fi: end: A014017 := proc(n): (1/8)*(-(n mod 8)-((n+3) mod 8)+((n+4) mod 8)+((n+7) mod 8)) end: seq(A191497(n),n=0..32); [Johannes W. Meijer, Jun 28 2011]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> LinearRecurrence[{2,0,0,-1,2},{0,0,0,0,1},40] (* _Harvey P. Dale_, Apr 19 2013 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Curtz_, Jun 03 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A019192.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A019192">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,4,8,4,20,68,108,258,704,1586,3600,9474,23534,57098,146818,381946</CMP>
+    </omtext><omtext class="name">
+      <CMP> Cycle class sequence c(n) (the number of true cycles of length n in which a certain node is included) for zeolite MTT = ZSM-23 Nan[ AlnSi24-nO48 ].</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Thimm and W. E. Klee, Zeolite cycle sequences, Zeolites, 19, pp. 422-424, 1997.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Thimm, &lt;a href=&quot;/thimm1.html&quot;&gt;Cycle sequences of crystal structures&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> Georg Thimm (mgeorg(AT)ntu.edu.sg)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A195296.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A195296">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,9,9,7,1,4,2,2,7,3,8,1,4,3,6,0,5,6,5,0,4,8,9,8,3,4,5,3,0,5,4,6,9,9,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6,9,1,8,2,5,6,7,8,0,0,1,8,6,3,1,6,6,3,4,5,3,4,0,0,0,8,0,9,3,8,4,1,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7,2,0,7,4,3,9,6,0,5,5,1,5,3,1,9,8,2,8,8,3,9,1,7,4,3,6,4,2,4,7</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of shortest length, (C), of segment from side CA through incenter to side CB in right triangle ABC with sidelengths (a,b,c)=(8,15,17).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A195284 for definitions and a general discussion.</CMP>
+    </omtext><assertion class="example">
+      <CMP> (C)=6.99714227381436056504898345305469969182567800...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a = 8; b = 15; c = 17;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> h = a (a + c)/(a + b + c); k = a*b/(a + b + c);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[t_] := (t - a)^2 + ((t - a)^2) ((a*k - b*t)/(a*h - a*t))^2;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> s = NSolve[D[f[t], t] == 0, t, 150]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f1 = (f[t])^(1/2) /. Part[s, 4]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[%, 10, 100] (* (A) A195293 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[t_] := (b*t/a)^2 + ((b*t/a)^2) ((a*h - a*t)/(b*t - a*k))^2</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> s = NSolve[D[f[t], t] == 0, t, 150]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f3 = (f[t])^(1/2) /. Part[s, 1]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[%, 10, 100] (* (B) A195296 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[t_] := (t - a)^2 + ((t - a)^2) (k/(h - t))^2</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> s = NSolve[D[f[t], t] == 0, t, 150]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f2 = (f[t])^(1/2) /. Part[s, 4]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[%, 10, 100] (* (C) A010524 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (f1 + f2 + f3)/(a + b + c)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[%, 10, 100] (* Philo(ABC,I), A195297 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A195284.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Sep 14 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

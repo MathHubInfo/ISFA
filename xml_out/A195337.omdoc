@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A195337.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A195337">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,5,7,11,38,39</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers whose home prime is a known palindrome.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The status of 77 is unknown. Other terms include 101, 131, 151, 159, 181, 191, 219, 313, 373, 383, 532, 679, 727, 757, 787, 797, 919, 929,...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers k such that A037274 is a palindrome. The palindromic primes (A002385) are a subsequence.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The non palindromic numbers (or composite numbers) are 38, 39, 159, 219, 532, 679 ...</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. de Geest, &lt;a href=&quot;http://www.worldofnumbers.com/topic1.htm&quot;&gt;Repeated factorization of concatenated...&lt;/a&gt;, world of numbers.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Mersenne Wiki, &lt;a href=&quot;http://www.mersennewiki.org/index.php/Base_10_Home_Prime_Results&quot;&gt;Base 10 Home Prime Results&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein, &lt;a href=&quot;http://mathworld.wolfram.com/HomePrime.html&quot;&gt;Home prime&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Home prime of 38 is 373.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Home prime of 39 is 313.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Home prime of 159 is 353.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Home prime of 219 is 373.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Home prime of 532 is 37573.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Home prime of 679 is 797.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A002113, A002385, A037274.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Kausthub Gudipati_, Sep 16 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

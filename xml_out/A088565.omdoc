@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A088565.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A088565">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,41,139,149,199,239,251,397,433,439,443,491,569,599,641,647,661,787,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 853,883,1031,1087,1097,1153,1187,1319,1423,1613,1619,1637,1657,1667,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1697,1759,1789,2081,2129,2143,2221,2239,2459,2633,2689,2741,2753,2777</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p such that the p-th digit in the decimal expansion of Pi is 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The 2nd 1 in Pi is in the 2nd place of the digits 3,1,4,1,5,...</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) pizeros(n,d) = { default(realprecision,5000); p = Pi; v = Vec(Str(p)); for(x=1,n, if(v[x] == Str(d) &amp;&amp; isprime(x-1),print1(x-1&quot;,&quot;)) ) }</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A014976.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Cino Hilliard_, Nov 19 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A022287.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A022287">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,15,59,132,234,365,525,714,932,1179,1455,1760,2094,2457,2849,3270,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3720,4199,4707,5244,5810,6405,7029,7682,8364,9075,9815,10584,11382,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 12209,13065,13950,14864,15807,16779</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = n*(29*n+1)/2.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A022287"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>29</OMI><OMV name="n"/></OMA><OMA>
+      <OMS name="a" cd="A022287"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMI>14</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A022287"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.[_Vincenzo Librandi_ ,Aug 04 2010 ]
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

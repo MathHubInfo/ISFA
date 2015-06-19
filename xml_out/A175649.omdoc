@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A175649.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A175649">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,5,7,10,12,9,5,10,18,16,18,22,17,10,19,22,24,26,17,23,36,28,10,20,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 18,12,38,39,41,33,16,33,31,17,42,58,37,23,48,53,55,56,21,33,72,52,12,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 14,27,35,68,58,21,25,31,53,90,69,71,94,43,12,20,34,83,86,45,40,85,76</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = sopf(n) + sopf(n+1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)=A008472(n)+A008472(n+1).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A008472.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zak Seidov_, Aug 02 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

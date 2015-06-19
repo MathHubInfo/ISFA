@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A029743.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A029743">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,5,7,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 103,107,109,127,137,139,149,157,163,167,173,179,193,197,239,241,251,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 257,263,269,271,281,283,293,307,317,347,349,359,367,379,389</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes with distinct digits.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This sequence has 283086 terms, the last being 987654103 = A007810(9). - _Jud McCranie_</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Intersection of A010784 and A000040; A178788(a(n)) * A010051(a(n)) = 1. [_Reinhard Zumkeller_, Sep 25 2011]</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A029743/b029743.txt&quot;&gt;Table of n, a(n) for n = 1..283086, full sequence&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. De Geest, &lt;a href=&quot;http://www.worldofnumbers.com/index.html&quot;&gt;World!Of Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t={};Do[p=Prime[n];If[Select[Transpose[Tally[IntegerDigits[p]]][[2]],#&gt;1 &amp;]=={},AppendTo[t,p]],{n,77}];t (* _Jayanta Basu_, May 04 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a029743 n = a029743_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a029743_list = filter ((== 1) . a010051) a010784_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Sep 25 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A007810, A010051, A010784, A178788.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,fini,full,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Patrick De Geest_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A103413.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A103413">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,6,6,7,9,9,11,11,13,12,17,15,16,20,21,19,22,22,22,23,25,28,24,26,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 29,32,36,34,35,35,35,36,38,38,39,40,45,42,45,44,44,48,48,49,53,49,51,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 53,56,58,56,57,59,62,63,59,64,64,68,65,65,70,69,69,76,76,71,75,75,80,73</CMP>
+    </assertion><omtext class="name">
+      <CMP> Consider smallest m such that m^2 = x_1^2 + ... + x_n^2 with 0 &lt; x_1 &lt; ... &lt; x_n. Sequence gives value of x_n for lexicographically greatest {x_1,...,x_n}.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A018935, A018936, A018937, A103411, A103412, A103414.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ray Chandler_, Feb 04 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A126767.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A126767">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 52,28,33,63,73,23,56,89</CMP>
+    </omtext><omtext class="name">
+      <CMP> Map the sentence &quot;What is the next number in this sequence?&quot; to numbers by translating each letter to its position in the alphabet (a -&gt; 1, b -&gt; 2, ..., z -&gt; 26) and then adding the numbers corresponding to the letters in each word.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Bogg, &lt;a href=&quot;http://answers.yahoo.com/question/index?qid=20070215040851AAtJxmz&quot;&gt;Answers.yahoo.com&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. Kay, &lt;a href=&quot;http://www.askmehelpdesk.com/mathematics/puzzling-number-sequence-63685.html&quot;&gt;Ask Me Help Desk&lt;/a&gt; Feb 17, 2007.</CMP>
+    </omtext><assertion class="example">
+      <CMP> What -&gt; 23 + 8 + 1 + 20 = 52</CMP>
+    </assertion><assertion class="example">
+      <CMP> is -&gt; 9 + 19 = 28</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> this -&gt; 20 + 8 + 9 + 19 = 56</CMP>
+    </assertion><assertion class="example">
+      <CMP> sequence -&gt; 19 + 5 + 17 +21 +5 + 14 + 3 + 5 = 89.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,dumb,fini,full</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> James R FitzSimons (cherry(AT)getnet.net) and Troy (bassist555774(AT)yahoo.com), Feb 16 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Explanation sent by _R. J. Mathar_, Feb 25 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

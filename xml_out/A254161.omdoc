@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A254161.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A254161">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 512,3036,16240,76832,348032,1511152,6440848,27128324,113712184,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 475820928,1990141264,8325715216,34837433912,145798977252,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 610246788472,2554332033248,10691962218368,44754714079088,187335498849168</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+2)X(1+2) 0..1 arrays with every 3X3 subblock diagonal maximum minus antidiagonal median nondecreasing horizontally, vertically and ne-to-sw antidiagonally</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 1 of A254168</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A254161/b254161.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>15</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>25</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>102</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>350</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>624</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>7</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>426</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>8</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>760</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>9</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2636</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>10</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2924</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>11</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>443</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>12</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3356</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>13</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>5991</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>14</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4955</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>15</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>658</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>16</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3981</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>17</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>5832</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>18</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4144</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>19</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>1408</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>20</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1110</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>21</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2260</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>22</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>1682</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>23</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>1044</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>24</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>360</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>25</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>132</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>26</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>168</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>27</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>192</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>28</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>88</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>29</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>16</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>30</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>16</OMI><OMA>
+      <OMS name="a" cd="A254161"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>32</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..1....1..1..1....1..0..1....0..0..1....1..0..1....0..0..1....1..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..1....0..1..0....0..1..0....1..1..1....1..1..1....1..0..1....1..0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..1....1..0..0....0..1..0....0..1..1....0..0..1....1..0..1....0..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..1....1..1..1....0..1..0....1..1..1....1..1..0....1..1..0....0..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0....0..0..0....0..0..1....0..1..1....1..0..0....0..1..1....0..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..1....0..0..1....1..0..1....1..1..0....0..0..0....1..0..1....0..1..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Jan 26 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

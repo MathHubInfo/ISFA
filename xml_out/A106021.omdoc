@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A106021.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A106021">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,17,23,37,53,73,277,373,457,593,607,907,1223,1327,1447,1607,1753,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1997,2207,2273,2383,2447,2473,2657,2677,2777,2887,2903,3167,3313,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3463,3637,3797,4253,4273,4603,4637,4643,4657,4993,5147,5227,5477,5507,5737</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p such that 32*p +/- 3 are primes.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Prime[Range[400]], PrimeQ[32#+3]&amp;&amp;PrimeQ[32#-3]&amp;]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(10000)| IsPrime(32*p+3) and IsPrime(32*p-3)] [From _Vincenzo Librandi_, Nov 13 2010]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zak Seidov_, May 05 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

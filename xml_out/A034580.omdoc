@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A034580.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A034580">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,16,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 70,267,888,2802,8294,23739,65654,177503,469442,1221107,3126587,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7900677,19716621,48658375,118812940,287263332,687981911,1632907259</CMP>
+    </assertion><omtext class="name">
+      <CMP> Multiplicity of highest weight (or singular) vectors associated with character chi_192 of Monster module.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> K. Harada and M. L. Lung, Modular forms associated with the Monster module, pp. 59-83 of The Monster and Lie Algebras, de Gruyter, 1998.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,33</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

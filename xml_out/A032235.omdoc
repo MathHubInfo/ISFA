@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A032235.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A032235">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,3,6,12,25,52,113,251,560,1268,2896,6680,15527,36301,85364,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 201747,479040,1141953,2732737,6560655,15799567,38154309,92378578,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 224192754,545292987,1328985026,3245140686,7938052589</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of dyslexic rooted compound windmills with n nodes where any 2 submills extending from the same node are different.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Mo#mobiles&quot;&gt;Index entries for sequences related to mobiles&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Shifts left under &quot;DGK&quot; (bracelet, element, unlabeled) transform.</CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Christian G. Bower_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

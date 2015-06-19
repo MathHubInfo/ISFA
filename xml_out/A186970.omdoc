@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A186970.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A186970">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,3,4,3,6,4,8,5,10,7,12,8,9,12,16,11,18,12,14,14,22,9,24,16,18,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 18,28,13,30,16,22,21,25,24,36,24,27,17,40,17,42,30,33,29,46,27,48,32,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 36,36,52,24,42,25,40,37,58,28,60,40,49,48,50,30,66,48,49,35,70,32,72,48,54,54,61,36</CMP>
+    </assertion><omtext class="name">
+      <CMP> The oex analog of the Euler phi-function for the oex prime power factorization of positive integers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Oex divisors d of an integer n are defined in A186443: those divisors d which are either 1 or where d^k || n (the highest power of d dividing n) has odd exponent k.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A positive number is called an oex prime if it has only two oex divisors; since every n&gt;=2 has at least two oex divisors, 1 and n, an oex prime q has only oex divisors 1 and q. A000430 is the sequence of oex primes q, i.e., A186643(q) =2 iff q is an entry in A000430.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A unique factorization, called oex prime power factorization, of integers n is introduced as follows: each factor p^e in the conventional prime power factorization n= product p^e is written as (p^2)^(e/2) if e is even, and as (p^2)^floor(e/2)*p if e is odd. This represents n as a product of oex primes of the type q=p^2, with unconstrained exponents e/2, and of oex primes of the type q=p with exponents 0 or 1. (This is similar to splitting n into its squarefree part A007913(n) times A008833(n), followed by an ordinary prime factorization in both parts separately.)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let n=q_1^a_1*q_2^a_2*... and m=q_1^b_1*q_2^b_2*..., a_i,b_i&gt;=0 be the oex prime power factorizations of n and m. Define the oex GCD of n and m as [n,m] = q_1^min(a_1,b_1) *q_2^min(a_2,b_2)*.... Then a(n) = sum{1&lt;=m&lt;=n: [m,n]=1} 1, the oex analog of the Euler-phi function.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Let <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="core" cd="A186970"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="p_1"/><OMS name="..." cd="arithmetics"></OMS><OMV name="p_r"/></OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A007913"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="core" cd="A186970"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A008833"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q_1"/>
+      <OMV name="c_1"/>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q_t"/>
+      <OMV name="c_t"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMV name="q_i"/>
+      </OMOBJ>are squares of primes .
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      If <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="core" cd="A186970"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,then <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A186970"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="prod" cd="A186970"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>1</OMI>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMV name="r"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="q_i"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>;if <OMOBJ>
+        <OMA>
+      <OMS name="core" cd="A186970"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>tends to <OMOBJ>
+        <OMS name="infty"/>
+      </OMOBJ>,then <OMOBJ>
+        <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A186970"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="core" cd="A186970"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="prod" cd="A186970"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMV name="t"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="q_i"/>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="prod" cd="A186970"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>1</OMI>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMV name="r"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="p_j"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A186970"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A064380"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> The oex prime power factorization of 16 is 4^2.  Since [16,i]=1 for i=1, 2, 3, 5, 6, 7, 9, 10, 11, 13, 14, and 15, a(16)=12.</CMP>
+    </assertion><assertion class="example">
+      <CMP> The oex prime power factorization of 9 is 9. Thus a(9)=8.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> highpp := proc(n,d) local nshf,a ; if n mod d &lt;&gt; 0 then 0; else nshf := n ; a := 0 ; while nshf mod d = 0 do nshf := nshf /d ; a := a+1 ; end do: a; end if; end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> oexgcd := proc(n,m) local a,p,kn,km ; a := 1 ; for p in numtheory[factorset](n) do kn := highpp(n,p) ; km := highpp(m,p) ; if type(kn,'even') = type(km,'even') then ; else kn := 2*floor(kn/2) ; km := 2*floor(km/2) ; end if; a := a*p^min(kn,km) ; end do: a ; end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A186970 := proc(n) local a,i; a := 0 ; for i from 1 to n do if oexgcd(n,i) = 1 then a := a+1 ; end if; end do: a; end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(A186970(n),n=1..80) ; # R. J. Mathar, Mar 18 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000010, A000430, A186443, A186444, A186776, A064380</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Shevelev_, Mar 01 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

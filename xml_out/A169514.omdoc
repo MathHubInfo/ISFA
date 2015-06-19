@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A169514.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A169514">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,21,420,8400,168000,3360000,67200000,1344000000,26880000000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 537600000000,10752000000000,215040000000000,4300800000000000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 86016000000000000,1720320000000000000,34406400000000000000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of reduced words of length n in Coxeter group on 21 generators S_i with relations (S_i)^2 = (S_i S_j)^34 = I.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The initial terms coincide with those of A170740, although the two sequences are eventually different.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Computed with MAGMA using commands similar to those used to compute A154638.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> G.f. (t^34 + 2*t^33 + 2*t^32 + 2*t^31 + 2*t^30 + 2*t^29 + 2*t^28 + 2*t^27 +</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 2*t^26 + 2*t^25 + 2*t^24 + 2*t^23 + 2*t^22 + 2*t^21 + 2*t^20 + 2*t^19 +</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 2*t^18 + 2*t^17 + 2*t^16 + 2*t^15 + 2*t^14 + 2*t^13 + 2*t^12 + 2*t^11 +</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 2*t^10 + 2*t^9 + 2*t^8 + 2*t^7 + 2*t^6 + 2*t^5 + 2*t^4 + 2*t^3 + 2*t^2 +</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 2*t + 1)/(190*t^34 - 19*t^33 - 19*t^32 - 19*t^31 - 19*t^30 - 19*t^29 -</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>28</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>27</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>26</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>25</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>24</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>23</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>22</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>-
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>21</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>20</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>19</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>18</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>17</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>16</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>15</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>-
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>14</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>13</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>12</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>11</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>10</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>9</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>8</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>-
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 19*t^7 - 19*t^6 - 19*t^5 - 19*t^4 - 19*t^3 - 19*t^2 - 19*t + 1)</CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> With[{num=Total[2t^Range[33]]+t^34+1,den=Total[-19 t^Range[33]]+ 190t^34+ 1}, CoefficientList[Series[num/den,{t,0,20}],t]] (* _Harvey P. Dale_, Nov 25 2011 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _John Cannon_ and _N. J. A. Sloane_, Dec 03 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

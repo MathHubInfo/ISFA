@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A202926.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A202926">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 12,352,8460,194636,4439916,100236532,2247406834,50175952564,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1116665770790,24792319092616,549446441126732,12159393350480352,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 268781263257739898,5935782137606108232,130983931680297881360</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX3 0..2 arrays with adjacent row and column sums unequal</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 3 of A202931</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A202926/b202926.txt&quot;&gt;Table of n, a(n) for n = 1..55&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..0....1..1..0....1..1..1....0..0..0....0..0..1....0..0..0....0..0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..1....1..1..1....1..2..1....1..0..1....2..0..1....1..1..0....2..2..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..1....1..2..1....0..2..1....1..1..1....0..2..2....0..2..1....1..2..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2..0....2..0..0....2..1..1....2..2..2....2..0..1....0..0..0....1..2..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Dec 26 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

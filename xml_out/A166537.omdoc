@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A166537.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A166537">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 430,441,2262,2534,2546,4494,4518,6493,6494,6510,6521,6522,6598,6627,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8982,9102,9116,11206,11218,11220,12974,12979,12982,12985,12988,13190,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13197,14969,14974,15078,15092,15182,15194,68758,68764,69030,69042</CMP>
+    </assertion><omtext class="name">
+      <CMP> Integers whose binary digits &quot;1&quot; define, if sorted into a quadrant shape whose right angle lies in a Go board corner, same colored Go stones that surely live all, but not if any stone is omitted</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sensei's Library, &lt;a href=&quot;http://senseis.xmp.net/?CornerShapes&quot;&gt;Corner shapes&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 2534 has the binary expansion 100111100110. Sorting into a quadrant shape (like in A165197, the least-significant digit into the corner) leads to:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0110</CMP>
+    </assertion><assertion class="example">
+      <CMP> 101</CMP>
+    </assertion><assertion class="example">
+      <CMP> 01</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0</CMP>
+    </assertion><assertion class="example">
+      <CMP> If the &quot;0&quot; top left is in a Go board corner and only the 7 digits &quot;1&quot; are Go stones of the same color, then all these 7 stones surely live, no matter where stones or chains of the other color with freedom(s) are. Removal of any of the 7 &quot;1&quot;-stones removes this sureness (for the remaining stones).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Leonhard Kreissig_, Oct 16 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

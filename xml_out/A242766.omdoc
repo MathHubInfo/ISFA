@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A242766.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A242766">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,5,11,26,71,200,602,1904,6317,21886,78911,295259,1143535,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4574143,18859677,80014834,348776576,1559776268,7147792818,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 33526120082,160785623545,787685471322,3938427356614,20082117944245,104349745809073,552166953567228</CMP>
+    </assertion><omtext class="name">
+      <CMP> Floor(sqrt(n!+1)).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A242766/b242766.txt&quot;&gt;Table of n, a(n) for n = 1..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Floor[Sqrt[n! + 1]], {n, 0, 30}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Floor(Sqrt(Factorial(n)+1)): n in [0..30]];</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A163524.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vincenzo Librandi_, May 29 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

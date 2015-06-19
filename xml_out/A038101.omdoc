@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A038101.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A038101">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,4,5,6,8,9,99,141,151,313,343,505,535,585,767,959,1771,6446,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9669,15751,32823,39193,48184,59995,65456,73137,85858,323323,944449,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1081801,1155511,1299921</CMP>
+    </assertion><omtext class="name">
+      <CMP> First location of palindrome a(n) in decimal expansion of Pi is palindromic.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 'location' starts from the first digit after the decimal point and refers to the first digit of the palindrome.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Dave Andersen, &lt;a href=&quot;http://www.angio.net/pi/piquery&quot;&gt;The Pi-Search Page&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. De Geest, &lt;a href=&quot;http://www.worldofnumbers.com/index.html&quot;&gt;World!Of Numbers&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A038099, A038100.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Patrick De Geest_, Feb 15 1999.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

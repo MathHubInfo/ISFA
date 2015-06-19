@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A142324.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A142324">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 23,113,293,383,563,653,743,1013,1103,1193,1283,1373,1553,1733,1823,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1913,2003,2273,2543,2633,2903,3083,3533,3623,3803,4073,4253,4523,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4703,4793,4973,5153,5333,5693,5783,6053,6143,6323,6863,7043,7583,7673,7853,8123</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes congruent to 23 mod 45.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A142324/b142324.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[23, 30000, 90], PrimeQ] (* _Vladimir Joseph Stephan Orlovsky_, Jul 14 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Prime[Range[1200]], MemberQ[{23}, Mod[#, 45]] &amp;] (* _Vincenzo Librandi_, Aug 26 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(10000) | p mod 45 eq 23]; // _Vincenzo Librandi_, Aug 26 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A142322.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Jul 11 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

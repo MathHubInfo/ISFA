@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A104076.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A104076">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,4,3,6,1,8,3,4,1,12,1,14,3,4,3,18,1,20,3,2,1,24,1,6,3,4,1,30,1,32,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,1,6,1,38,3,4,1,42,1,44,3,2,1,48,1,8,1,4,1,54,1,2,1,2,1,60,1,62,3,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3,6,1,68,3,2,1,72,1,74,3,4,1,2,1,80,1,4,1,84,1,2,3,4,1,90,1,4,3,2,1,6,1,98</CMP>
+    </assertion><omtext class="name">
+      <CMP> If k(m) is the m-th divisor (when the divisors are ordered by size) of n, then a(n) = GCD(k(1)+k(2),k(2)+k(3),k(3)+k(4),...,k(j-1)+k(j)), where j is the number of divisors of n.</CMP>
+    </omtext><assertion class="example">
+      <CMP> The divisors of 14 are 1,2,7,14. So a(14) = GCD(1+2,2+7,7+14) = 3.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A104076 := proc(n) local dvs ; dvs := sort(convert(numtheory[divisors](n),list)) ; igcd(seq( op(i,dvs)+op(i+1,dvs), i=1..nops(dvs)-1)) ; end: for n from 2 to 140 do printf(&quot;%d,&quot;,A104076(n)) ; od: [From _R. J. Mathar_, Sep 05 2008]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A143771.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Leroy Quet_, Aug 31 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _R. J. Mathar_, Sep 05 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected definition. - _Leroy Quet_, Sep 21 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

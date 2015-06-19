@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A210649.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A210649">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 9,8,2,9,7,3,0,9,9,6,8,3,9,0,1,7,7,8,2,8,1,9,4,8,8,4,4,8,5,5,1,9,8,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,6,0,9,8,7,2,2,8,7,5,0,6,5,6,3,2,8,7,5,9,9,7,3,8,0,4,5,9,2,0,3,9,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7,8,5,2,5,5,2,2,4,4,2,1,7,4,2,9,6,8,4</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of cos(Pi/17).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This algebraic number is related to the constructibility of the regular heptadecagon (see also A210644), it is a root of the polynomial 256*x^8-128*x^7-448*x^6+192*x^5+240*x^4-80*x^3-40*x^2+8*x+1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The continued fraction expansion of cos(Pi/17) is 0, 1, 57, 1, 2, 1, 2, 2, 8, 9, 2, 3, 1, 1, 1, 1, 1, 2, 2, 13, 5, 1, 7, 84, 1, 1, 1,...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Expressed in terms of radicals, cos(Pi/17) is (1/8)*sqrt(2*(2*sqrt(sqrt((17/2)*(17-sqrt(17))) - sqrt((1/2)*(17-sqrt(17))) - 4*sqrt(2*(17+sqrt(17))) + 3*sqrt(17) + 17) + sqrt(17) + sqrt(2*(17-sqrt(17))) + 15)). - _Jean-François Alcover_, Dec 21 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A210649/b210649.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Heptadecagon.html&quot;&gt;Heptadecagon&lt;/a&gt;.</CMP>
+    </omtext><assertion class="example">
+      <CMP> cos(Pi/17) = 0.9829730996839017782819488448551987160987228750656328...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> RealDigits[Cos[Pi/17], 10, 87][[1]]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) cos(Pi/17)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) fpprec:90; ev(bfloat(cos(%pi/17)));</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A019684, A210644.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Bruno Berselli_, Mar 27 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

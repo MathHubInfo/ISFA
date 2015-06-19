@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A054129.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A054129">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,9,39,134,394,1040,2542,5876,13039,28080,59163,122694,251576,511720,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1035068,2085640,4191629,8409592,16852833,33748170,67549470,135164720,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 270410170,540918620,1081955995,2164054496</CMP>
+    </assertion><omtext class="name">
+      <CMP> T(n,3), array T as in A054126.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>7</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>21</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>35</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>35</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>21</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>7</OMI><OMI>2</OMI></OMA>
+    </OMA></OMA>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

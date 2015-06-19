@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A045196.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A045196">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 75,128,140,200,253,265,325,376,377,379,380,385,395,400,425,475,503,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 515,575,633,638,641,642,644,648,653,665,678,690,701,702,704,705,710,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 720,728,740,753,765,825,878,890,950,1001,1002,1004</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n with property that in base 5 representation the numbers of 0's and 3's are 2 and 1, respectively.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

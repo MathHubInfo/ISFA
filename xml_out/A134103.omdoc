@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A134103.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A134103">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,5,0,4,6,10,15,30,60,180,336,351,720114</CMP>
+    </omtext><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Complete list of solutions to y^2 = x^3 + 225; sequence gives x values.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For corresponding y values and examples see A134102.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) { x: x in Sort([ p[1] : p in IntegralPoints(EllipticCurve([0, 225])) ]) }; /* adapted from A029728 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A134102, A134105, A134107, A029728, A134042, A134074.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,fini,full</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Klaus Brockhaus_, Oct 08 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A163770.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A163770">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,1,1,2,2,3,4,6,9,7,4,0,6,44,35,28,24,24,30,165,121,86,58,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 34,10,20,594,429,308,222,164,130,120,140,2037,1443,1014,706,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 484,320,190,70,70,6824,4787,3344,2330,1624,1140,820,630,560,630</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle interpolating the swinging sub-factorial (A163650) with the swinging factorial (A056040). An analog to the derangement triangle (A068106).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Triangle read by rows. For n &gt;= 0, k &gt;= 0 let</CMP>
+    </omtext><omtext class="comment">
+      <CMP> T(n,k) = sum{i=k..n} (-1)^(n-i)*binomial(n-k,n-i)*i$</CMP>
+    </omtext><omtext class="comment">
+      <CMP> where i$ denotes the swinging factorial of i (A056040).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Peter Luschny, &quot;Divide, swing and conquer the factorial and the lcm{1,2,...,n}&quot;, preprint, April 2008.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Peter Luschny, &lt;a href=&quot;http://www.luschny.de/math/swing/SwingingFactorial.html&quot;&gt; Swinging Factorial&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Z. Spivey and L. L. Steil, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL9/Spivey/spivey7.html&quot;&gt; The k-Binomial Transforms and the Hankel Transform&lt;/a&gt;, J. Integ. Seqs. Vol. 9 (2006), #06.1.1.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 1, 2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2, 3, 4, 6</CMP>
+    </assertion><assertion class="example">
+      <CMP> -9, -7, -4, 0, 6</CMP>
+    </assertion><assertion class="example">
+      <CMP> 44, 35, 28, 24, 24, 30</CMP>
+    </assertion><assertion class="example">
+      <CMP> -165, -121, -86, -58, -34, -10, 20</CMP>
+    </assertion><omtext class="maple">
+      <CMP> DiffTria := proc(f,n,display) local m,A,j,i,T; T:=f(0);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for m from 0 by 1 to n-1 do A[m] := f(m);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for j from m by -1 to 1 do A[j-1] := A[j-1] - A[j] od;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for i from 0 to m do T := T,(-1)^(m-i)*A[i] od;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> if display then print(seq(T[i],i=nops([T])-m..nops([T]))) fi;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> od; subsop(1=NULL,[T]) end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> swing := proc(n) option remember; if n = 0 then 1 elif</CMP>
+    </omtext><omtext class="maple">
+      <CMP> irem(n, 2) = 1 then swing(n-1)*n else 4*swing(n-1)/n fi end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Computes n rows of the triangle.</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A163770 := n -&gt; DiffTria(k-&gt;swing(k),n,true);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A068106 := n -&gt; DiffTria(k-&gt;factorial(k),n,true);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> sf[n_] := n!/Quotient[n, 2]!^2; t[n_, k_] := Sum[(-1)^(n - i)*Binomial[n - k, n - i]*sf[i], {i, k, n}]; Table[t[n, k], {n, 0, 9}, {k, 0, n}] // Flatten (* _Jean-François Alcover_, Jun 28 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Row sums are A163773. Cf. A056040, 163650, A163771, A163772, A068106.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Peter Luschny_, Aug 05 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

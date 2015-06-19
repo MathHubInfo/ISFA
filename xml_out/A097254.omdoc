@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A097254.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A097254">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,7,56,63,448,455,504,511,3584,3591,3640,3647,4032,4039,4088,4095,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 28672,28679,28728,28735,29120,29127,29176,29183,32256,32263,32312,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 32319,32704,32711,32760,32767,229376,229383,229432,229439,229824</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers whose set of base 8 digits is {0,7}.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> n such that there exists a permutation p_1, ..., p_n of 1, ..., n such that i + p_i is a power of 8 for every i.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A097254/b097254.txt&quot;&gt;Table of n, a(n) for n = 1..100&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A097254"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMR xref="A033045"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A097254"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="a" cd="A097254"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A097254"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="a" cd="A097254"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMI>7</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> fQ[n_]:=Union@Join[{0,7},IntegerDigits[n,8]]=={0,7};Select[Range[0,300000],fQ] (* _Vincenzo Librandi_, May 25 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [n: n in [0..250000] | Set(IntegerToSequence(n, 8)) subset {0, 7}]; // _Vincenzo Librandi_, May 25 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) a[1]:0$ a[n]:=8*a[floor((n+1)/2)]+7*(1+(-1)^n)/2$ makelist(a[n], n, 1, 37); /* _Bruno Berselli_, May 25 2012 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001196, A005823, A097251-A097262.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ray Chandler_, Aug 03 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

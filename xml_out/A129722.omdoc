@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A129722.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A129722">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,1,5,6,19,25,65,90,210,300,654,954,1985,2939,5911,8850,17345,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 26195,50305,76500,144516,221016,411900,632916,1166209,1799125,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3283145,5082270,9197455,14279725,25655489,39935214,71293590,111228804</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 0's in even position in all Fibonacci binary words of length n. A Fibonacci binary word is a binary word having no 00 subword.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(2n+1)=a(2n)+a(2n-1) (n&gt;=1). a(2n+1)=A001871(n-1) (n&gt;=1). a(2n)=A129720(2n)=A001870(n-1). a(n)=Sum(k*A129721(n,k), k=0..floor(n/2)).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Moussa Benoumhani, On the Modes of the Independence Polynomial of the Centipede, Journal of Integer Sequences, Vol. 15 (2012), #12.5.1.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .=<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="z"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="z"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(4)=5 because in 1110', 1111, 1101, 10'10', 10'11, 0110', 0111 and 0101 one has altogether five 0's in even position (marked by ').</CMP>
+    </assertion><omtext class="maple">
+      <CMP> G:=z^2/(1-z-z^2)^2/(1+z-z^2): Gser:=series(G,z=0,45): seq(coeff(Gser,z,n),n=0..42);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001870, A001871, A129719, A129720, A129721.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Emeric Deutsch_, May 13 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

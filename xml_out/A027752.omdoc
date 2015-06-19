@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A027752.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A027752">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,4,7,10,19,22,25,34,37,55,70,79,94,100,112,130,139,154,157,160,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 172,175,187,190,217,220,229,232,250,259,262,274,289,295,304,307,322,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 325,334,337,364,367,370,382,397,400,415,439,442,472,475,484</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n^2 + n + 3 is prime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. De Geest, &lt;a href=&quot;http://www.worldofnumbers.com/index.html&quot;&gt;World!Of Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [n: n in [0..1000] |IsPrime(n^2+n+3)] [From Vincenzo Librandi, Nov 20 2010]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Patrick De Geest_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

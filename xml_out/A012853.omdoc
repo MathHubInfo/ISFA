@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A012853.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A012853">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,32,15872,44736512,419730685952,9902996106248192,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 493842960380415967232,46238368375619195682947072,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7458815407441059142195019251712,1941965621570118224758799415904305152,775271967544166063656029248004350271291392,455362758259861772977200568672632329207841554432</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of sec(x)^2+sech(x)^2 in powers of x^4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> log(sec(x)*cosh(x)) = 2/2!*x^2 + 32/6!*x^6 + 15872/10!*x^10...</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A012853"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="B" cd="A012853"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA>
+    </OMA></OMA><OMV name="k"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where Bernoulli numbers <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="B" cd="A012853"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A027641"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA>
+    </OMA><OMA>
+      <OMR xref="A027642"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.That this gives integers follows from <OMOBJ>
+        <OMV name="von"/>
+      </OMOBJ>Staudt's theorem .-_Frank Ellermann_ ,May 14 2001 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      E.g.f .:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sec" cd="A012853"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sech" cd="A012853"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A012853"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="k"/></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="k"/></OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.-_Michael Somos_ ,Mar 06 2004 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      E.g.f .:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="log" cd="A012853"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="cosh" cd="A012853"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="cos" cd="A012853"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A012853"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="k"/></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="k"/></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.-_Michael Somos_ ,Feb 05 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A012853"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A001250"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.-_Michael Somos_ ,Feb 05 2011 
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;0, 0, n=4*n + 2; 2 * (4^n - 2^n) * bernfrac(n) / n)} /* _Michael Somos_, Feb 14 2004 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;0, 0, n*=4; n! * polcoeff( cosh(x + x * O(x^n))^-2 + cos(x + x * O(x^n))^-2, n))} /* _Michael Somos_, Feb 05 2011*/</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Patrick Demichel (patrick.demichel(AT)hp.com)</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected by _N. J. A. Sloane_, Nov 07 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

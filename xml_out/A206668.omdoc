@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A206668.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A206668">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 81,423,423,2286,2691,2286,12477,17844,17844,12477,68253,119727,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 166605,119727,68253,373644,815847,1637151,1637151,815847,373644,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2046027,5593611,16537155,25229685,16537155,5593611,2046027,11205045,38594841</CMP>
+    </assertion><omtext class="name">
+      <CMP> T(n,k)=Number of (n+1)X(k+1) 0..2 arrays with every 2X2 subblock having the number of clockwise edge increases equal to the number of anticlockwise edge increases in its adjacent leftward and upward neighbors</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Table starts</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .......81.......423........2286.........12477...........68253............373644</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ......423......2691.......17844........119727..........815847...........5593611</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .....2286.....17844......166605.......1637151........16537155.........170170494</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ....12477....119727.....1637151......25229685.......404408697........6593653335</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ....68253....815847....16537155.....404408697.....10351091007......269149632948</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ...373644...5593611...170170494....6593653335....269149632948....11143560422013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..2046027..38594841..1770039198..108688211619...7050554283159...464729380449429</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .11205045.267189276.18532885713.1799150533260.185345018259540.19426122492513648</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A206668/b206668.txt&quot;&gt;Table of n, a(n) for n = 1..160&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=4 k=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..2..1....0..2..2..0....1..0..1..2....1..2..2..0....0..1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..0..1....2..2..0..0....0..1..2..0....0..1..0..0....2..2..2..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..2..1....2..0..0..1....1..2..1..2....2..1..0..1....0..1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..2..0....0..0..1..1....2..0..2..0....1..1..1..1....2..1..2..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..1..1....2..0..0..1....0..1..0..1....2..2..2..1....0..0..0..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Feb 11 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A070443.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A070443">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,4,9,16,4,15,7,1,18,16,16,18,1,7,15,4,16,9,4,1,0,1,4,9,16,4,15,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,18,16,16,18,1,7,15,4,16,9,4,1,0,1,4,9,16,4,15,7,1,18,16,16,18,1,7,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 15,4,16,9,4,1,0,1,4,9,16,4,15,7,1,18,16,16,18,1,7,15,4,16,9,4,1,0,1,4,9</CMP>
+    </assertion><omtext class="name">
+      <CMP> n^2 mod 21.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Mod[n^2,21],{n,0,200}] (* _Vladimir Joseph Stephan Orlovsky_, Apr 23 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> PowerMod[Range[0,90],2,21] (* _Harvey P. Dale_, Jan 19 2013 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, May 12 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

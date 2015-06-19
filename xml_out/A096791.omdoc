@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A096791.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A096791">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,0,1,1,1,2,2,3,4,5,6,7,9,11,14,16,19,23,27,32,38,45,52,61,71,83,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 96,111,128,148,170,195,224,256,293,334,380,432,491,556,630,713,805,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 908,1024,1152,1295,1455,1632,1829,2048,2291,2560,2859,3189,3554,3958,4404</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n into distinct parts with even number of even parts.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A096791"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000009"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A010815"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> f[n_] := (PartitionsQ[n] - (-1)^(n + 1)* CoefficientList[ Series[ Product[(1 - x^k), {k, 1, 70}], {x, 0, 70}], x][[n + 1]])/2; Table[ f[n], {n, 0, 60}] (* _Robert G. Wilson v_, Aug 27 2004 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=local(A); if(n&lt;0,0, A=x^n*O(x); polcoeff((eta(x^2+A)/eta(x+A) + eta(-x+A))/2,n)) /* _Michael Somos_, Aug 27 2004 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A067659, A067661, A096792.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladeta Jovovic_, Aug 16 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Robert G. Wilson v_ and _Michael Somos_, Aug 27 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

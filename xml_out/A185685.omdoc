@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A185685.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A185685">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 17,0,37,47,0,67,677,0,0,97,977,107,0,127,1277,137,0,157,167,0,0,197,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,0,227,0,0,257,0,277,2777,0,0,307,317,0,337,347,0,367,3677,0,0,397,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,0,0,0,0,457,467,0,487,4877,0,0,0,0,0,547,5477,557,0,577,587,0,607,617,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Irregular triangle, read by rows, of primes with prefix n and digits &quot;7&quot; appended, otherwise 0.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row n ends when a composite number is found.</CMP>
+    </omtext><assertion class="example">
+      <CMP> for k=1..2 , a(12,k) = {127, 1277} are in the sequence.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory): for n from 1 to 100 do:a0:=n:id:=0:c:=0:for k from 1 to 20</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   while (id=0) do:a1:=a0*10+7:if type(a1,prime)=true then a0:=a1:printf(`%d, `,a0):c:=c+1:else</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   id:=1:fi:od:if c=0 then printf(`%d, `,0):else fi:od:</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Reap[Do[cnt = 0; d = IntegerDigits[n]; While[p = FromDigits[AppendTo[d, 7]]; PrimeQ[p], cnt++; Sow[p]]; If[cnt == 0, Sow[0]], {n, 61}]][[2, 1]]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A185682, A185684.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,less,tabf</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Lagneau_, Feb 10 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

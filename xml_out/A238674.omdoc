@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A238674.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A238674">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,31,47,41,331,523,293,277,191,197,2389,877,811,4111,587,2609,5437,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1481,6673,1483,12809,1907,5689,13331,3677,25939,4457,3593,162973,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6089,38603,33091,26693,16883,65557,19259,5657,49711,23081,25657,480409,17837,21517</CMP>
+    </assertion><omtext class="name">
+      <CMP> Second prime p such that (p+n)^2+n is prime but (p+j)^2+j is not prime for all 0&lt;j&lt;n.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A238674/b238674.txt&quot;&gt;Table of n, a(n) for n = 1..100&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Row n=2 of A238086.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alois P. Heinz_, Mar 02 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

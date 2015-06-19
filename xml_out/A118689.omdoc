@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A118689.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A118689">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,6,9,14,22,25,33,35,55,57,77,91,119,122,123,133,141,155,161,177,213,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 215,217,221,321,371,411,515,517,551,611,713,717,721,731,771,1114,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1119,1133,1135,1137,1141,1157,1177,1191,1271,1313,1315,1317,1351,1371,1411</CMP>
+    </assertion><omtext class="name">
+      <CMP> Semiprimes for which the product of the digits is also a semiprime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harvey P. Dale, &lt;a href=&quot;/A118689/b118689.txt&quot;&gt;Table of n, a(n) for n = 1..300&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 77 is in the sequence because (1 )it is a semiprime and (2) the product of its digits 7*7=49 is also a semiprime.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Select[Range[2000],PrimeOmega[#]==PrimeOmega[Times@@IntegerDigits[#]] == 2&amp;] (* _Harvey P. Dale_, Dec 27 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A007954(n)= { local(resul) ; if(n==0, return(0) ; ) ; resul= 1 ; while(n&gt;0, resul *= n%10 ; n = (n-n%10)/10 ; ) ; return(resul) ; } { for(n=4,2000, if( bigomega(n)==2, if(A007954(n) != 0 &amp;&amp; bigomega(A007954(n)) == 2, print1(n,&quot;,&quot;); ) ; ) ; ) ; } - _R. J. Mathar_, Aug 21 2006</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001358.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Luc Stevens (lms022(AT)yahoo.com), May 20 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

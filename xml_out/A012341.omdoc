@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A012341.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A012341">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,8,248,11328,1091232,148080000,30317577600,8228536780800,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2957031184028160,1336782441018009600,749500660718368634880,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 508063303148296391147520,410659058984740631962951680</CMP>
+    </assertion><omtext class="name">
+      <CMP> arcsin(arcsin(x)*arcsin(x))=2/2!*x^2+8/4!*x^4+248/6!*x^6+11328/8!*x^8...</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A012341"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="sqrt" cd="A012341"/>
+      <OMA>
+      <OMS name="tan" cd="A012341"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="sqrt" cd="A012341"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMS name="Pi"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sin" cd="A012341"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Vaclav Kotesovec_ ,Feb 08 2015 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> nn = 20; Table[(CoefficientList[Series[ArcSin[ArcSin[x]^2], {x, 0, 2*nn}], x] * Range[0, 2*nn]!)[[n]], {n, 1, 2*nn+1, 2}] (* _Vaclav Kotesovec_, Feb 08 2015 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> Patrick Demichel (patrick.demichel(AT)hp.com)</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(0)=0 prepended by _Vaclav Kotesovec_, Feb 08 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

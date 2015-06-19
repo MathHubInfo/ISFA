@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A103162.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A103162">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,9,18,18,9,9,36,9,27,27,9,9,9,9,9,27,9,63,9,9,9,9,27,18,36,9,9,18,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 18,18,9,9,9,9,4941,9,9,9,9,9,9,9,9,9,144,18,9,153,333,63,18,9,27,9,9,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9,9,9,9,9,9,9,9,9,9,9,9,18,18,9,9,18,18,18,9,9,9,9,9,9,9,9,9,81,9,9,9,9,54</CMP>
+    </assertion><omtext class="name">
+      <CMP> GCD of reversed(3^n) and reversed[3^(n+1)].</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A103162"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="GCD" cd="A103162"/>
+      <OMA>
+      <OMR xref="A004167"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A004167"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> These common divisors are always divisible by 3.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> rd[x_] :=FromDigits[Reverse[IntegerDigits[x]]] Table[GCD[rd[3^w], rd[3^(w+1)]], {w, 1, 100}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A004167.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Jan 25 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

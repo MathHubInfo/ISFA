@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A064998.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A064998">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,3,2,17,7,7,3,61,29,167,401,167,19,311,461,97,919,47,71,1483,107,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 13,1571,821,1361,769,239,163,4229,593,373,1571,173,6229,3331,1879,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2837,2633,12329,2311,269,4159,1217,9719,509,3049,8429,307,6121,7919</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = smallest prime p such that p*n! +/- 1 are twin primes.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harry J. Smith, &lt;a href=&quot;/A064998/b064998.txt&quot;&gt;Table of n, a(n) for n=2,...,200&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(6) = 17 because (17*6! = 12240) 12240 + 1 and 12240 -1 are twin primes and there is no prime less than 17 for which this pairing will work.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Do[k = 1; While[ !PrimeQ[ Prime[k]*n! - 1] || !PrimeQ[ Prime[k]*n! + 1], k++ ]; Print[ Prime[k]], {n, 2, 75} ]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) { allocatemem(932245000); for (n=2, 200, f=n!; p=2; while (!isprime(p*f + 1) || !isprime(p*f - 1), p=nextprime(p + 1)); write(&quot;b064998.txt&quot;, n, &quot; &quot;, p) ) } [From _Harry J. Smith_, Oct 03 2009]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A051888, A064983.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Oct 31 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

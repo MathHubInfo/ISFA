@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A079864.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A079864">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,5,12,29,67,160,385,920,2191,5191,12228,28401,64826,143540,303171,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 588027,980723,1256693,1049406,449402,72968,2888,14</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of positions that are exactly n moves from the starting position in the Rashkey Type 2 puzzle.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is the number of positions that can be reached in n moves from the start, but which cannot be reached in fewer than n moves.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A puzzle in the Rubik cube family. The total number of distinct positions is 4961250. Here we consider a move to be a quarter turn of a disc.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jaap Scherphuis, &lt;a href=&quot;http://www.jaapsch.net/puzzles/&quot;&gt;Puzzle Pages&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A079857.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,fini,full</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Feb 21 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

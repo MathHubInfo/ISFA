@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A141682.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A141682">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 16,1,12,29,1,61,81,1,113,131,2,163,50,2,215,233,2,34,285,3,317,335,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 367,182,3,419,72,4,469,489,3,93,539,4,571,591,3,185,641,5,673,131,5,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 725,240,6,148,795,5,827,845,3,877,897,7,929,186,6,338,656,7,240,1049,8,1081,393,5,1133,1151,8,542,245,7,1235,1253</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of isomorphism classes of (2n+1)-reflexive polygons</CMP>
+    </omtext><omtext class="comment">
+      <CMP> There are no l-reflexive polygons for even index l</CMP>
+    </omtext><omtext class="link">
+      <CMP> A.M. Kasprzyk and B. Nill, &lt;a href=&quot;http://arxiv.org/abs/1107.4945&quot;&gt;Reflexive polytopes of higher index and the number 12&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A.M. Kasprzyk and B. Nill, &lt;a href=&quot;http://grdb.lboro.ac.uk/forms/toriclr2&quot;&gt;Graded Ring Database&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(0)=16 equals the number of isomorphism classes of (1-)reflexive polygons</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A090045</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Benjamin Nill_, Jul 02 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

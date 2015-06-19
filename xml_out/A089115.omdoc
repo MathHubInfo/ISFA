@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A089115.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A089115">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 21,65,158,331,626,1098,1817,2871,4367,6435,9230,12935,17764,23965,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 31824,41667,53865,68837,87054,109043,135391,166750,203840,247455,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 298467,357831,426590,505880,596936,701096,819808,954635,1107261</CMP>
+    </assertion><omtext class="name">
+      <CMP> Convoluted convolved Fibonacci numbers G_8^(r).</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Moree, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0311205&quot;&gt;Convoluted convolved Fibonacci numbers&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>12</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>24</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>11</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>60</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>10</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>80</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>9</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>59</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>8</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>20</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>7</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>25</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>62</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>83</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>61</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>21</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>7</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="x"/><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Jul 31 2013 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> with(numtheory): f := z-&gt;1/(1-z-z^2): m := proc(r,j) d := divisors(r): W := (1/r)*z*sum(mobius(d[i])*f(z^d[i])^(r/d[i]),i=1..nops(d)): Wser := simplify(series(W,z=0,80)): coeff(Wser,z^j) end: seq(m(r,8),r=1..50);</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Dec 05 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Emeric Deutsch_, Mar 06 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A210778.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A210778">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,10,36,202,1828,27338,692004,30251722,2320518947,314039061413,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 69808185542089,22148021690928529,8756818568093328161,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3918553907116206319169,1872922535299778812595329,926165546297497921388714241,465979162430464375966575440385</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of 2^n into powers of 2 less than or equal to 512.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A210778/b210778.txt&quot;&gt;Table of n, a(n) for n = 0..120&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_10&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1023, -348502, 50781720, -3439615168, 111842970624, -1761082966016, 13312123207680, -46775146643456, 70300024700928, -35184372088832).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMF dec="5.3737311393598669E17"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>17</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMF dec="6.9197853199905587E17"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>16</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMF dec="1.6049050323255296E17"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>15</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMF dec="5.811316119175168E15"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>14</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMF dec="7.559160124416E13"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>13</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMF dec="4.465138103744E12"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>12</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMF dec="3.652534938428E12"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>11</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMF dec="5.517732454379E12"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>10</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMF dec="1.5802918567958E13"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>9</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMF dec="2.6190980411414E13"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>8</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMF dec="1.0204692593686E13"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>7</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMF dec="1.550660009494E12"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMF dec="1.05163418774E11"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMF dec="3.339435542E9"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>50088798</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>346460</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>1021</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="Product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMI>9</OMI>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="j"/>
+    </OMA><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A210778"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMI>1</OMI></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA><OMI>1</OMI></OMA><OMBIND>
+          <OMA>
+            <OMS name="Product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMI>8</OMI>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="j"/>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> gf:= (1+ (-1021 +(346460 +(-50088798 +(3339435542 +(-105163418774 +(1550660009494 +(-10204692593686 +(26190980411414 +(-15802918567958 +(-5517732454379 +(-3652534938428 +(-4465138103744 +(75591601244160 +(5811316119175168 +(-160490503232552960 +(691978531999055872 -537373113935986688*x) *x) *x) *x) *x) *x) *x) *x) *x) *x) *x) *x) *x) *x) *x) *x) *x)/ mul(2^j*x-1, j=0..9): a:= n-&gt; coeff(series(gf, x, n+1), x, n): seq(a(n), n=0..20);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column k=9 of A152977.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alois P. Heinz_, Mar 26 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

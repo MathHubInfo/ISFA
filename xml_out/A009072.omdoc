@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A009072.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A009072">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,8,216,7552,349568,20281216,1350879232,84211707904,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 286327484416,2529465981566976,1100934401707376640,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 421697958276604264448,165461414536859529248768,69271409331127446269067264</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of cos(tan(x))/cos(x).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Cos[ Tan[ x ] ]/Cos[ x ] (* Even Part *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended with signs Mar 15 1997 by _Olivier Gérard_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

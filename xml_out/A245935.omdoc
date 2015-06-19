@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A245935.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A245935">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,3,5,7,5,7,5,5,12,12,5,12,12,12,17,12,17,12,12,17,12,17,12,17,41,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 29,41,29,29,41,29,41,29,41,29,29,41,29,41,29,29,41,29,41,29,41,29,29,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 41,29,41,29,29,70,70,29,70,70,70,29,70,70,29,70,70,70</CMP>
+    </assertion><omtext class="name">
+      <CMP> Difference sequence of A245934; see Comments.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It appears that every term is a term of A002965.  The sequence A245935 arises from A245933 and A245934, in which the limit-reverse of certain sequences is defined, as follows.  Suppose that S = (s(0),s(1),s(2),...) is an infinite sequence such that every finite block of consecutive terms occurs infinitely many times in S.  (It is assumed that A006337 is such a sequence.)  Let B = B(m,k) = (s(m-k),s(m-k+1),...,s(m)) be such a block, where m &gt;= 0 and k &gt;= 0.  Let m(1) be the least i &gt; m such that (s(i-k),s(i-k+1),...,s(i)) = B(m,k), and put B(m(1),k+1) = (s(m(1)-k-1),s(m(1)-k),...,s(m(1))).  Let m(2) be the least i &gt; m(1) such that (s(i-k-1),s(i-k),...,s(i)) = B(m(1),k+1), and put B(m(2),k+2) = (s(m(2)-k-2),s(m(2)-k-1),...,s(m(2))).  Continuing in this manner gives a sequence of blocks B(m(n),k+n).  Let B'(n) = reverse(B(m(n),k+n)), so that for n &gt;= 1, B'(n) comes from B'(n-1) by suffixing a single term; thus the limit of B'(n) is defined; we call it the &quot;limit-reverse of S with initial block B(m,k)&quot;, denoted by S*(m,k), or simply S*.  (Since Beatty sequences are usually written with offset 1, the above definition is adapted accordingly, so that s(n) = A006337(n+1) for n &gt;= 0.)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence (m(i)), where m(0) = 1, is the &quot;index sequence for limit-reversing S with initial block B(m,k)&quot; or simply the index sequence for S*, as in A245934.</CMP>
+    </omtext><assertion class="example">
+      <CMP> S = A006337 (the Beatty sequence of sqrt(2)), re-indexed to start with s(0) = 1, with B = (s(0)); that is, (m,k) = (0,0)</CMP>
+    </assertion><assertion class="example">
+      <CMP> S = (1,2,1,2,1,1,2,1,2,1,1,2,1,2,1,2,1,1,2,1,2,1,1,2,...)</CMP>
+    </assertion><assertion class="example">
+      <CMP> B'(0) = (1)</CMP>
+    </assertion><assertion class="example">
+      <CMP> B'(1) = (2,1)</CMP>
+    </assertion><assertion class="example">
+      <CMP> B'(2) = (1,2,1)</CMP>
+    </assertion><assertion class="example">
+      <CMP> B'(3) = (1,2,1,1)</CMP>
+    </assertion><assertion class="example">
+      <CMP> B'(4) = (1,2,1,1,2)</CMP>
+    </assertion><assertion class="example">
+      <CMP> B'(5) = (1,2,1,1,2,1)</CMP>
+    </assertion><assertion class="example">
+      <CMP> S* = (1,2,1,1,2,1,2,1,1,2,1,2,1,2,1,1,2,1,...), with index sequence (1,3,5,8,13,20,25,32,37,...), with difference sequence (2,2,3,5,7,5,7,5,5,12,12,...).</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> z = 140; seqPosition2[list_, seqtofind_] := Last[Last[Position[Partition[list, Length[#], 1], Flatten[{___, #, ___}], 1, 2]]] &amp;[seqtofind]; x = Sqrt[2]; s =  Differences[Table[Floor[n*x], {n, 1, z^2}]];  ans = Join[{s[[p[0] = pos = seqPosition2[s, #] - 1]]}, #] &amp;[{s[[1]]}]; cfs = Table[s = Drop[s, pos - 1]; ans = Join[{s[[p[n] = pos = seqPosition2[s, #] - 1]]}, #] &amp;[ans], {n, z}]; q = Accumulate[Join[{1}, Table[p[n], {n, 0, z}]]]  (* A245934 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> q1 = Differences[q]  (* A245935 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A245934, A245933, A245935, A245922.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_ and _Peter J. C. Moses_, Aug 07 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

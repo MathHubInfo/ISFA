@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A211390.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A211390">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,4,6,6,8,8,11,10,12,12,16,14,16,16,20,18,20,20,24,22,24,24,28,26,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 28,28,32,30,32,32,36,34,36,36,40,38,40,40,44,42,44,44,48,46,48,48,52,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 50,52,52,56,54,56,56,60,58,60,60,64,62,64,64,68,66,68,68</CMP>
+    </assertion><omtext class="name">
+      <CMP> The minimum cardinality of an n-qubit unextendible product basis.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> An unextendible product basis (UPB) is a set of mutually orthogonal product states such that there is no product state orthogonal to every member of the set. An n-qubit UPB is a UPB on the space C^2 tensored with itself n times, where C is the field of complex numbers.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. P. DiVincenzo, T. Mor, P. W. Shor, J. A. Smolin, and B. M. Terhal, Unextendible product bases, uncompletable product bases and bound entanglement. Commun. Math. Phys., 238:379-410, 2003.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> K. Feng, Unextendible product bases and 1-factorization of complete graphs. Discrete Appl. Math., 154:942-949, 2006.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. Johnston, &lt;a href=&quot;http://arxiv.org/abs/1302.1604&quot;&gt;The minimum size of qubit unextendible product bases&lt;/a&gt;. In Proceedings of the 8th Conference on the Theory of Quantum Computation, Communication and Cryptography (TQC), 2013. doi: 10.4230/LIPIcs.TQC.2013.93</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_05&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1,0,0,1,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A211390"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>is odd .
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A211390"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="mod" cd="A211390"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>or if <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A211390"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>8</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> a(n) = n + 4 otherwise (i.e., if n &gt;= 12 and n = 0 (mod 4)).</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>12</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>11</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>8</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>7</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Feb 16 2013 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(2) = 4 because there is no nontrivial UPB on two qubits -- any UPB spans the entire 2^2 = 4-dimensional space.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3) = 4 because there is a 4-state UPB in 3-qubit space. If we use &quot;ket&quot; notation from quantum mechanics, then one such UPB is: |0&gt;|0&gt;|0&gt;, |+&gt;|1&gt;|-&gt;, |1&gt;|-&gt;|+&gt;, |-&gt;|+&gt;|1&gt;. This is the &quot;shifts&quot; UPB from the DiVincenzo et al. paper.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> a := proc(n) if(n mod 2 = 1)then return n + 1;elif(n = 4 or n mod 4 = 2)then return n + 2;elif(n = 8)then return 11;else return n + 4; fi: end: seq(a(n), n=1..67);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A229913.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Nathaniel Johnston_, Feb 07 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

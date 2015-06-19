@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A133243.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A133243">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,173,257,263,571,631,887,1579,863,1231,2309,4297,7789,5623,5807,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9533,10243,10691,10853,10987,7591,16223,16319,16381,3041,3463,12329,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 12967,14177,15263,17573,17939,19417</CMP>
+    </assertion><omtext class="name">
+      <CMP> Values of A134204(n) for n in A133242.</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, &lt;a href=&quot;/A133243/b133243.txt&quot;&gt;Table of n, a(n) for n = 1..6148&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, &lt;a href=&quot;/A134204/a134204.cc.txt&quot;&gt;C++ Program&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, &lt;a href=&quot;/A133243/a133243.txt&quot;&gt;Larger file giving first 49344 terms&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A134204, A133242.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert Israel_, Oct 15 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _David Applegate_, Oct 15 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

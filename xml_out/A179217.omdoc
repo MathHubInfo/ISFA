@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A179217.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A179217">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,3,5,6,9,4,8,10,14,15,12,17,20,21,19,28,25,23,30,36,27,7,38,13,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 32,45,35,55,44,47,57,68,54,66,80,93,34,78,43,91,40,49,107,105,65,11,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 59,122,70,120,42,138,51,155,173,136,77,153,192,82,90,212,52,171,95,233,62</CMP>
+    </assertion><omtext class="name">
+      <CMP> Inverse function to A095904.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A permutation of all nonnegative integers.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Will Nicholes, &lt;a href=&quot;http://willnicholes.com/math/primesigmap.htm&quot;&gt;Iterative mapping of prime signatures&lt;/a&gt;.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A095904, A179216, A179218.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Will Nicholes_, Jul 10 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

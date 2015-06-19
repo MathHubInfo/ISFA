@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A104272.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A104272">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,11,17,29,41,47,59,67,71,97,101,107,127,149,151,167,179,181,227,229,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 233,239,241,263,269,281,307,311,347,349,367,373,401,409,419,431,433,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 439,461,487,491,503,569,571,587,593,599,601,607,641,643,647,653,659</CMP>
+    </assertion><omtext class="name">
+      <CMP> Ramanujan primes R_n: a(n) is the smallest number such that if x &gt;= a(n), then pi(x) - pi(x/2) &gt;= n, where pi(x) is the number of primes &lt;= x.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Referring to his proof of Bertrand's postulate, Ramanujan states a generalization: &quot;From this we easily deduce that pi(x) - pi(x/2) &gt;= 1, 2, 3, 4, 5, ..., if x &gt;= 2, 11, 17, 29, 41, ..., respectively.&quot; Since the a(n) are prime (by their minimality), I call them &quot;Ramanujan primes.&quot;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See the additional references and links mentioned in A143227.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 2n log 2n &lt; a(n) &lt; 4n log 4n for n &gt;= 1, and prime(2n) &lt; a(n) &lt; prime(4n) if n &gt; 1. Also, a(n) ~ prime(2n) as n -&gt; infinity.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Shanta Laishram has proved that a(n) &lt; prime(3n) for all n &gt;= 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) - 3n log 3n is sometimes positive, but negative with increasing frequency as n grows since a(n) ~ 2n log 2n. There should be a constant m such that for n &gt;= m we have a(n) &lt; 3n log 3n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A good approximation to a(n) = R_n for n in [1..1000] is A162996(n) = Round(k*n * (log(k*n)+1)), with k = 2.216 determined empirically from the first 1000 Ramanujan primes, which approximates the {k*n}-th prime number which in turn approximates the n-th Ramanujan prime and where Abs(A162996(n) - R_n) &lt; 2 * Sqrt(A162996(n)) for n in [1..1000]. Since R_n ~ prime(2n) ~ 2n * (log(2n)+1) ~ 2n * log(2n), while A162996(n) ~ prime(k*n) ~ k*n * (log(k*n)+1) ~ k*n * log(k*n), A162996(n) / R_n ~ k/2 = 2.216/2 = 1.108 which implies an asymptotic overestimate of about 10% (a better approximation would need k to depend on n and be asymptotic to 2.) - _Daniel Forgues_, Jul 29 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let p_n be the n-th prime. If p_n&gt;=3 is in the sequence, then all integers (p_n+1)/2, (p_n+3)/2, ..., (p_(n+1)-1)/2 are composite numbers. - _Vladimir Shevelev_, Aug 12 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Denote by q(n) the prime which is the nearest from the right to a(n)/2. Then there exists a prime between a(n) and 2q(n). Converse, generally speaking, is not true, i.e., there exist primes outside the sequence, but possess such property (e.g., 109). - _Vladimir Shevelev_, Aug 14 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Mathematica program FasterRamanujanPrimeList uses Laishram's result that a(n) &lt; prime(3n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See sequence A164952 for a generalization we call a Ramanujan k-prime. - _Vladimir Shevelev_, Sep 01 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Jonathan Sondow_, May 22 2010: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> About 46% of primes &lt; 19000 are Ramanujan primes. About 78% of the lesser of twin primes &lt; 19000 are Ramanujan primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> About 15% of primes &lt; 19000 are the lesser of twin primes. About 26% of Ramanujan primes &lt; 19000 are the lesser of twin primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A reason for the jumps is in Section 7 of &quot;Ramanujan primes and Bertrand's postulate&quot; and in Section 4 of &quot;Ramanujan Primes: Bounds, Runs, Twins, and Gaps&quot;.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See Shapiro 2008 for an exposition of Ramanujan's proof of his generalization of Bertrand's postulate. (End)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The (10^n)-th R prime: 2, 97, 1439, 19403, 242057, 2916539, 34072993, 389433437, .... - _Robert G. Wilson v_, May 07 2011, updated Aug 02 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The number of R primes &lt; 10^n: 1, 10, 72, 559, 4459, 36960, 316066, 2760321, .... - _Robert G. Wilson v_, Aug 02 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = R_n = R_{0.5,n} in &quot;Generalized Ramanujan Primes.&quot;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> All Ramanujan primes are in A164368. - _Vladimir Shevelev_, Aug 30 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If n tends to infinity, then limsup(a(n)-A080359(n-1)) = infty; conjecture: also limsup(a(n)-A080359(n)) = infty (cf. A182366). - _Vladimir Shevelev_, Apr 27 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Or the largest prime x such that the number of primes in (x/2,x] equals n. This equivalent definition underlines an important analogy between Ramanujan and Labos primes (cf. A080359). - _Vladimir Shevelev_, Apr 29 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Research questions on R_n - prime(2n) are at A233739, and on n-Ramanujan primes at A225907. - _Jonathan Sondow_, Dec 16 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The questions on R_n - prime(2n) in A233739 have been answered by Christian Axler in &quot;On generalized Ramanujan primes&quot;. - _Jonathan Sondow_, Feb 13 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Srinivasan's Lemma (2014): prime(k-n) &lt; prime(k)/2 if R_n = prime(k) and n &gt; 1. Proof: By the minimality of R_n, the interval (prime(k)/2,prime(k)] contains exactly n primes and so prime(k-n) &lt; prime(k)/2. - _Jonathan Sondow_, May 10 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For some n and k, we see that A168421(k) = a(n) so as to form a chain of primes similar to a Cunningham chain. For example (and the first example), A168421(2) = 7, links a(2) = 11 = A168421(3), links a(3) = 17 = A168421(4), links a(4) = 29 = A168421(6), links a(6) = 47. Note that the links do not have to be of a form like q = 2*p+1 or q = 2*p-1. - _John W. Nicholson_, Feb 22 2015</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Ramanujan, Collected Papers of Srinivasa Ramanujan (Ed. G. H. Hardy, S. Aiyar, P. Venkatesvara and B. M. Wilson), Amer. Math. Soc., Providence, 2000, pp. 208-209.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. N. Shapiro, Ramanujan's idea, Section 9.3B in Introduction to the Theory of Numbers, Dover, 2008.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A104272/b104272.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;https://oeis.org/search?q=A104272&quot;&gt;Sequences related to Ramanujan primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. Amersi, O. Beckwith, S. J. Miller, R. Ronan, J. Sondow, &lt;a href=&quot;http://arxiv.org/abs/1108.0475&quot;&gt;Generalized Ramanujan primes&lt;/a&gt;, arXiv 2011.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. Amersi, O. Beckwith, S. J. Miller, R. Ronan, J. Sondow, &lt;a href=&quot;http://link.springer.com/chapter/10.1007/978-1-4939-1601-6_1&quot;&gt;Generalized Ramanujan primes&lt;/a&gt;, Combinatorial and Additive Number Theory, Springer Proc. in Math. &amp; Stat., CANT 2011 and 2012, Vol. 101 (2014), 1-13</CMP>
+    </omtext><omtext class="link">
+      <CMP> Christian Axler, &lt;a href=&quot;http://docserv.uni-duesseldorf.de/servlets/DocumentServlet?id=26247&quot;&gt;Über die Primzahl-Zählfunktion, die n-te Primzahl und verallgemeinerte Ramanujan-Primzahlen&lt;/a&gt;, Ph.D. thesis 2013, in German, English summary.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Christian Axler, &lt;a href=&quot;http://arxiv.org/abs/1401.7179&quot;&gt;On generalized Ramanujan primes&lt;/a&gt;, arXiv:1401.7179 [math.NT], 2014.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Erdős, &lt;a href=&quot;https://www.renyi.hu/~p_erdos/1934-01.pdf&quot;&gt;A theorem of Sylvester and Schur&lt;/a&gt;, J. London Math. Soc., 9 (1934), 282-288.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Peter Hegarty, &lt;a href=&quot;http://arxiv.org/abs/1201.3847&quot;&gt;Why should one expect to find long runs of (non)-Ramanujan primes?&lt;/a&gt;, arXiv 2012.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Shanta Laishram, &lt;a href=&quot;http://www.isid.ac.in/~shanta/PAPERS/RamanujanPrimes-IJNT.pdf&quot;&gt;On a conjecture on Ramanujan primes&lt;/a&gt;, Int. J. Number Theory, 6 (2010), 1869-1873.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jaban Meher and M. Ram Murty, &lt;a href=&quot;http://www.jstor.org/stable/10.4169/amer.math.monthly.120.07.650&quot;&gt;Ramanujan’s proof of Bertrand’s postulate&lt;/a&gt;, Amer. Math. Monthly, 120 (2013), 650-653.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. B. Paksoy, &lt;a href=&quot;http://arxiv.org/abs/1210.6991&quot;&gt;Derived Ramanujan primes: R'_n&lt;/a&gt;, arXiv 2012.</CMP>
+    </omtext><omtext class="link">
+      <CMP> PlanetMath, &lt;a href=&quot;http://planetmath.org/ramanujanprime&quot;&gt;Ramanujan prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Ramanujan, &lt;a href=&quot;http://ramanujan.sirinudi.org/Volumes/published/ram24.html&quot;&gt;A proof of Bertrand's postulate&lt;/a&gt;, J. Indian Math. Soc., 11 (1919), 181-182.</CMP>
+    </omtext><omtext class="link">
+      <CMP> V. Shevelev, &lt;a href=&quot;http://arXiv.org/abs/0908.2319&quot;&gt;On critical small intervals containing primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> V. Shevelev, &lt;a href=&quot;http://arxiv.org/abs/0909.0715&quot;&gt;Ramanujan and Labos primes, their generalizations and classifications of primes&lt;/a&gt;, arXiv 2009.</CMP>
+    </omtext><omtext class="link">
+      <CMP> V. Shevelev, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL15/Shevelev/shevelev19.html&quot;&gt;Ramanujan and Labos primes, their generalizations, and classifications of primes&lt;/a&gt;, J. Integer Seq. 15 (2012) Article 12.5.4</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vladimir Shevelev, Charles R. Greathouse IV, Peter J. C. Moses, &lt;a href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL16/Moses/moses1.html&quot;&gt;On intervals (kn, (k+1)n) containing a prime for all n&gt;1&lt;/a&gt;, Journal of Integer Sequences, Vol. 16 (2013), Article 13.7.3. &lt;a href=&quot;http://arxiv.org/abs/1212.2785&quot;&gt;arXiv:1212.2785&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Sondow, &lt;a href=&quot;http://arxiv.org/abs/0907.5232&quot;&gt; Ramanujan primes and Bertrand's postulate&lt;/a&gt;, arXiv:0907.5232 [math.NT], 2009-2010.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Sondow, &lt;a href=&quot;http://www.jstor.org/stable/40391170&quot;&gt;Ramanujan primes and Bertrand's postulate&lt;/a&gt;, Amer. Math. Monthly, 116 (2009), 630-635.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Sondow, J. W. Nicholson, and T. D. Noe, &lt;a href=&quot;http://arxiv.org/abs/1105.2249&quot;&gt; Ramanujan Primes: Bounds, Runs, Twins, and Gaps&lt;/a&gt;, J. Integer Seq. 14 (2011) Article 11.6.2</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Sondow, &lt;a href=&quot;http://mathworld.wolfram.com/RamanujanPrime.html&quot;&gt;Ramanujan Prime&lt;/a&gt;, Eric Weisstein's MathWorld.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Sondow and E. Weisstein, &lt;a href=&quot;http://mathworld.wolfram.com/BertrandsPostulate.html&quot;&gt;Bertrand's Postulate&lt;/a&gt;, MathWorld.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Anitha Srinivasan, &lt;a href=&quot;http://www.emis.de/journals/INTEGERS/papers/o19/o19.Abstract.html&quot;&gt;An upper bound for Ramanujan primes&lt;/a&gt;, Integers, 19 (2014), #A19.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;https://en.wikipedia.org/wiki/Bertrand%27s_postulate&quot;&gt;Bertrand's postulate&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Ramanujan_prime&quot;&gt;Ramanujan prime&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n) = 1 + max{k: pi(k) - pi(k/2) = n - 1}.</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A104272"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A080360"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A104272"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A080359"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Vladimir Shevelev_ ,Aug 20 2009 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A193761"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="a" cd="A104272"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A193880"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A104272"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMR xref="A084140"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.-_Jonathan Sondow_ ,Dec 21 2012 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A104272"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="prime" cd="A104272"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMR xref="A233739"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A233822"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A104272"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Jonathan Sondow_ ,Dec 16 2013 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(1) = 2 is Bertrand's postulate: pi(x) - pi(x/2) &gt;= 1 for all x &gt;= 2.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 11 because a(2) &lt; 8 log 8 &lt; 17 and pi(n) - pi(n/2) &gt; 1 for n = 16, 15, ..., 11 but pi(10) - pi(5) = 1.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Consider a(9)=71. Then the nearest prime &gt; 71/2 is 37, and between a(9) and 2*37, that is, between 71 and 74, there exists a prime (73). [_Vladimir Shevelev_, Aug 14 2009] - corrected by _Jonathan Sondow_, Jun 17 2013</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> (RamanujanPrimeList[n_] := With[{T=Table[{k,PrimePi[k]-PrimePi[k/2]}, {k,Ceiling[N[4*n*Log[4*n]]]}]}, Table[1+First[Last[Select[T,Last[ # ]==i-1&amp;]]],{i,1,n}]]; RamanujanPrimeList[54]) (* _Jonathan Sondow_, Aug 15 2009 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (FasterRamanujanPrimeList[n_] := With[{T=Table[{k,PrimePi[k]-PrimePi[k/2]}, {k,Prime[3*n]}]}, Table[1+First[Last[Select[T,Last[ # ]==i-1&amp;]]],{i,1,n}]]; FasterRamanujanPrimeList[54])</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> nn=1000; R=Table[0,{nn}]; s=0; Do[If[PrimeQ[k], s++]; If[PrimeQ[k/2], s--]; If[s&lt;nn, R[[s+1]]=k], {k,Prime[3*nn]}]; R=R+1 (* _T. D. Noe_, Nov 15 2010 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A006992 Bertrand primes, A056171 pi(n) - pi(n/2).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000720, A014085, A060715, A084139, A084140, A143223, A143224, A143225, A143226, A143227, A080360, A080359, A164368, A164288, A164554, A164333, A164294, A164371.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A162996 Round(kn * (log(kn)+1)), with k = 2.216 as an approximation of R_n = n-th Ramanujan Prime.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A163160 Round(kn * (log(kn)+1)) - R_n, where k = 2.216 and R_n = n-th Ramanujan prime.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A178127 Lesser of twin Ramanujan primes, A178128 Lesser of twin primes if it is a Ramanujan prime.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A181671 (number of Ramanujan primes less than 10^n).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A174635 (non-Ramanujan primes), A174602, A174641 (runs of Ramanujan and non-Ramanujan primes).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A189993, A189994 (lengths of longest runs of Ramanujan and non-Ramanujan primes &lt; 10^n).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A190124 (constant of summation: 1/a(n)^2).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A192820 (2- or derived Ramanujan primes R'_n), A192821, A192822, A192823, A192824, A225907.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A193761 (0.25-Ramanujan primes), A193880 (0.75-Ramanujan primes).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A212493, A212541, A233739, A233822.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Not to be confused with the Ramanujan numbers or Ramanujan tau function, A000594.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Sondow_, Feb 27 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A168417.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A168417">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,13,103,109,139,163,181,211,379,457,463,1021,1087,1123,1201,1249,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1303,1381,1579,1597,1609,1699,1861,1873,1987,2011,2029,2053,2143,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2221,2281,2341,2473,2503,2557,2731,2857,3061,3067,3217,3253,3271,3319,3331,3517</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes q for which 1 concatenated with q^3 (A168327) is prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is conjectured that this sequence is infinite.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Harold Davenport, Multiplicative Number Theory, Springer-Verlag New-York 1980</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Leonard E. Dickson: History of the Theory of numbers, vol. I, Dover Publications 2005</CMP>
+    </omtext><assertion class="example">
+      <CMP> (1) &quot;1 3^3&quot;=10^2+3^3=127=prime(31) gives a(1)=3=prime(2)</CMP>
+    </assertion><assertion class="example">
+      <CMP> (2) &quot;1 103^3&quot;=10^7+103^3=11092727=prime(732258) gives a(3)=103=prime(27)</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Select[Prime[Range[500]],PrimeQ[FromDigits[Join[{1},IntegerDigits[ #^3]]]]&amp;] (* _Harvey P. Dale_, Jan 21 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A168147 Primes of the form p = 1 + 10*n^3 for a natural number n</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A168327 Primes of concatenated form p= &quot;1 n^3&quot;</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A168375 Natural numbers n for which the concatenation p= &quot;1 n^3&quot; is prime</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Eva-Maria Zschorn (e-m.zschorn(AT)zaschendorf.km3.de), Nov 25 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited and extended by _Charles R Greathouse IV_, Apr 23 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

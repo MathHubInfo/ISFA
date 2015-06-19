@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A231773.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A231773">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,5,7,9,11,13,14,15,17,19,21,23,25,26,27,29,30,31,33,34,35,37,38,39,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 41,42,43,45,46,47,49,50,51,53,55,56,57,58,59,61,62,63,65,66,67,68,69,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 70,71,73,74,75,76,77,78,79,81,83,85,86,87,89,90,91,93,94,95</CMP>
+    </assertion><omtext class="name">
+      <CMP> A number cannot have n primitive roots for the numbers n listed here; see A231772(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A007617(n) for n &lt;= 16.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) r=95; for(n=2, r, m=0; for(c=2*n+1, n^2+1, if(n%2==1, break); e=eulerphi(c); if(e==lcm(znstar(c)[2])&amp;&amp;eulerphi(e)==n, m=1; break)); if(m==0, print1(n, &quot;, &quot;)));</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007617, A010554, A046144, A231772.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Arkadiusz Wesolowski_, Nov 13 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A051127.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A051127">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,0,0,1,0,1,2,1,0,0,0,2,1,0,1,1,3,2,1,0,0,2,0,3,2,1,0,1,0,1,4,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,1,0,0,1,2,0,4,3,2,1,0,1,2,3,1,5,4,3,2,1,0,0,0,0,2,0,5,4,3,2,1,0,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,3,1,6,5,4,3,2,1,0,0,2,2,4,2,0,6,5,4,3,2,1,0,1,0,3,0,3,1,7,6,5,4,3,2,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Table T(n,k) = k mod n read by antidiagonals (n &gt;= 1, k &gt;= 1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Note that the upper right half of this sequence when formatted as a square array is essentially the same as this whole sequence when formatted as an upper right triangle. Sums of antidiagonals are A004125. - _Henry Bottomley_, Jun 22 2001</CMP>
+    </omtext><omtext class="link">
+      <CMP> Boris Putievskiy, &lt;a href=&quot;http://arxiv.org/abs/1212.2732&quot;&gt;Transformations Integer Sequences And Pairing Functions&lt;/a&gt; arXiv:1212.2732 [math.CO]</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      As a linear array ,the sequence is <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A051127"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A004736"/>
+      <OMV name="n"/>
+    </OMA><OMV name="mod"/><OMA>
+      <OMR xref="A002260"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>or <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A051127"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="t"/><OMV name="t"/></OMA><OMA><OMS name="times"/><OMI>3</OMI><OMV name="t"/></OMA><OMI>4</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA><OMV name="n"/>
+    </OMA><OMV name="mod"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="t"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="t"/><OMI>1</OMI>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="t"/>
+      <OMA>
+      <OMS name="floor" cd="A051127"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A051127"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMV name="n"/></OMA><OMI>7</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-Boris Putievskiy ,Dec 17 2012 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 0  0  0  0  0  0  0  0  0  0 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  0  1  0  1  0  1  0  1  0 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  2  0  1  2  0  1  2  0  1 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  2  3  0  1  2  3  0  1  2 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  2  3  4  0  1  2  3  4  0 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  2  3  4  5  0  1  2  3  4 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  2  3  4  5  6  0  1  2  3 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  2  3  4  5  6  7  0  1  2 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  2  3  4  5  6  7  8  0  1 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  2  3  4  5  6  7  8  9  0 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  2  3  4  5  6  7  8  9 10 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  2  3  4  5  6  7  8  9 10 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  2  3  4  5  6  7  8  9 10 ...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> T[n_, m_] = Mod[n - m + 1, m + 1]; Table[Table[T[n, m], {m, 0, n}], {n, 0, 10}]; Flatten[%] - _Roger L. Bagula_, Sep 04 2008</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Transpose of A051126.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A048158, A051777.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A122750.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,9</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _James A. Sellers_, Dec 11 1999</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

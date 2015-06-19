@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A216109.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A216109">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 42,477,1701,4254,8820,16227,27447,43596,65934,95865,134937,184842,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 247416,324639,418635,531672,666162,824661,1009869,1224630,1471932,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1754907,2076831,2441124,2851350,3311217,3824577,4395426,5027904,5726295</CMP>
+    </assertion><omtext class="name">
+      <CMP> The hyper-Wiener index of the ortho-polyphenyl chain with n hexagons (see the Dou et al. and the Deng references).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Hosoya-Wiener polynomial of the graph is n(6+6t+6t^2+3t^3)+(1+2t+2t^2+t^3)^2*(t^{2n+1}-nt^3+nt-t)/(t^2-1)^2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Y. Dou, H. Bian, H. Gao, and H. Yu, The polyphenyl chains with extremal edge-Wiener indices, MATCH Commun. Math. Comput. Chem., 64, 2010, 757-766.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Deng,  &lt;a href=&quot;http://arxiv.org/abs/1006.5488&quot;&gt;Wiener indices of spiro and polyphenyl hexagonal chains&lt;/a&gt;, arXiv:1006.5488</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (5,-10,10,-5,1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A216109"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>28</OMI><OMA><OMS name="times"/><OMI>123</OMI><OMV name="n"/></OMA><OMA><OMS name="times"/><OMI>127</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>36</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>32</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>95</OMI><OMV name="n"/></OMA><OMI>28</OMI>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>33</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>88</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>89</OMI><OMV name="x"/></OMA><OMI>14</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[_Colin Barker_ ,Oct 29 2012 ]
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> seq(3*n*(4*n^3+20*n^2+43*n-39)*(1/2), n=1..30);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A216108, A216110-A216113.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Emeric Deutsch_, Oct 26 2012</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> First formula corrected by _Colin Barker_, Oct 29 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

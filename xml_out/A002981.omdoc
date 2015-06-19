@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A002981.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A002981">
+          <assertion class="***** TTTT *****">
+      <CMP> M0908</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,3,11,27,37,41,73,77,116,154,320,340,399,427,872,1477,6380,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 26951,110059,150209</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n! + 1 is prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If n + 1 is prime then (by Wilson's theorem) n + 1 divides n! + 1. Thus for n &gt; 2 if n + 1 is prime n is not in the sequence. - _Farideh Firoozbakht_, Aug 22 2003</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n &gt; 2, n! + 1 is prime &lt;==&gt; nextprime((n+1)!) &gt; (n+1)nextprime(n!) and we can conjecture that for n &gt; 2 if n! + 1 is prime then (n+1)! + 1 is not prime. - Mohammed Bouayoun (bouyao(AT)wanadoo.fr), Mar 03 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The prime members are in A093804 (numbers n such that Sum_{d|n} d! is prime) since Sum_{d|n} d! = n! + 1 if n is prime. - _Jonathan Sondow_</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 150209 is also in the sequence, cf. the link to Caldwell's prime pages. - _M. F. Hasler_, Nov 04 2011</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J.-M. De Koninck, Ces nombres qui nous fascinent, Entry 116, p. 40, Ellipses, Paris 2008.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Harvey Dubner, Factorial and primorial primes, J. Rec. Math., 19 (No. 3, 1987), 197-203.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Richard K. Guy, Unsolved Problems in Number Theory, Section A2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Le Lionnais, Les Nombres Remarquables, Paris, Hermann, 1983, p. 100.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Chris K. Caldwell, &lt;a href=&quot;http://www.utm.edu/research/primes/lists/top20/PrimorialFactorial.html&quot;&gt;Primorial and Factorial Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Chris K. Caldwell, &lt;a href=&quot;http://primes.utm.edu/primes/page.php?id=100445&quot;&gt;110059! + 1 on the Prime Pages&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Chris K. Caldwell, &lt;a href=&quot;http://primes.utm.edu/primes/page.php?id=102627&quot;&gt;150209! + 1 on the Prime Pages&lt;/a&gt; (Nov 03 2011).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Chris K. Caldwell and Y. Gallot, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-01-01315-1&quot;&gt;On the primality of n!+-1 and 2*3*5*...*p+-1&lt;/a&gt;, Math. Comp., 71 (2001), 441-448.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. Kuosa, &lt;a href=&quot;http://www.hut.fi/~nkuosa/primeform/&quot;&gt;Source for 6380.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Romeo Mestrovic, &lt;a href=&quot;http://arxiv.org/abs/1202.3670&quot;&gt;Euclid's theorem on the infinitude of primes: a historical survey of its proofs (300 BC--2012) and another new proof&lt;/a&gt;, arXiv preprint arXiv:1202.3670, 2012 - From N. J. A. Sloane, Jun 13 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hisanori Mishima, &lt;a href=&quot;http://www.asahi-net.or.jp/~KC2H-MSM/mathland/matha1/matha104.htm&quot;&gt;Factors of N!+1&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Rudolf Ondrejka, &lt;a href=&quot;http://www.utm.edu/research/primes/lists/top_ten/&quot;&gt;The Top Ten: a Catalogue of Primal Configurations&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Titus Piezas III, 2004. &lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.90.6646&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Solving Solvable Sextics Using Polynomial Decomposition&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/FactorialPrime.html&quot;&gt;Factorial Prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/IntegerSequencePrimes.html&quot;&gt;Integer Sequence Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Fa#factorial&quot;&gt;Index entries for sequences related to factorial numbers&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 3! + 1 = 7 is prime, so 3 is in the sequence.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> v = {0, 1, 2}; Do[If[ !PrimeQ[n + 1] &amp;&amp; PrimeQ[n! + 1], v = Append[v, n]; Print[v]], {n, 3, 29651}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[100], PrimeQ[#! + 1] &amp;] (* _Alonso del Arte_, Jul 24 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=0,1e4,if(ispseudoprime(n!+1),print1(n&quot;, &quot;))) \\ _Charles R Greathouse IV_, Jun 16 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002982 (n!-1 is prime), A064295. A088332 gives the primes.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Equals A090660 - 1.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> See also A002982 (n!-1 is prime).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A093804.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> hard,more,nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Term 6380 sent in by _Jud McCranie_, May 08 2000.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Term 26951 from Ken Davis (kraden(AT)ozemail.com.au), May 24 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Term 110059 found by PrimeGrid around Jun 11 2011, submitted by _Eric W. Weisstein_, Jun 13 2011</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Term 150209 by _Rene Dohmen_, Jun 09 2012.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

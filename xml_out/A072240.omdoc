@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A072240.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A072240">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,1307674368000,25852016738884976640000,403291461126605635584000000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 263130836933693530167218012160000000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 33452526613163807108170062053440751665152000000000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest factorial containing exactly n 6's.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(2)=1307674368000 so 1307674368000 is the smallest factorial containing exactly two 6's.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Shyam Sunder Gupta_, Jul 30 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A236508.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A236508">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,0,1,1,0,2,1,1,2,1,3,2,2,0,2,3,1,2,1,3,3,2,2,1,1,1,3,0,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3,2,1,3,0,2,0,1,1,1,1,2,0,0,0,0,2,2,0,1,0,0,0,0,0,0,0,0,1,1,0,1,1,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = |{0 &lt; k &lt; n-2: p = 2*phi(k) + phi(n-k)/2 - 1, p + 2, p + 6 and prime(p) + 6 are all prime}|, where phi(.) is Euler's totient function.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture: a(n) &gt; 0 for all n &gt; 146.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> We have verified this for n up to 52000.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The conjecture implies that there are infinitely many prime triplets {p, p + 2, p + 6} with {prime(p), prime(p) + 6} a sexy prime pair. See A236509 for such primes p.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Zhi-Wei Sun, &lt;a href=&quot;/A236508/b236508.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(13) = 1 since 2*phi(3) + phi(10)/2 - 1 = 5, 5 + 2 = 7, 5 + 6 = 11 and prime(5) + 6 = 11 + 6 = 17 are all prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(244) = 1 since 2*phi(153) + phi(244-153)/2 - 1 = 2*96 + 72/2 - 1 = 227, 227 + 2 = 229, 227 + 6 = 233 and prime(227) + 6 = 1433 + 6 = 1439 are all prime.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> p[n_]:=PrimeQ[n]&amp;&amp;PrimeQ[n+2]&amp;&amp;PrimeQ[n+6]&amp;&amp;PrimeQ[Prime[n]+6]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[n_,k_]:=2*EulerPhi[k]+EulerPhi[n-k]/2-1</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_]:=Sum[If[p[f[n,k]],1,0],{k,1,n-3}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[a[n],{n,1,100}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000010, A000040, A022004, A023201, A046117, A236464, A236472, A236509.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,11</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zhi-Wei Sun_, Jan 27 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

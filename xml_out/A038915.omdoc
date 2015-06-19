@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A038915.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A038915">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,11,13,17,19,29,31,37,43,53,71,73,79,83,103,109,127,131,137,139,151,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 163,167,173,181,223,233,251,269,283,293,313,317,347,353,373,383,419,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 421,431,439,443,457,467,487,491</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p such that 38 is a square mod p.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A038915/b038915.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Prime[Range[100]], JacobiSymbol[38, #] != -1 &amp;] (* _Vincenzo Librandi_, Sep 07 2012 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

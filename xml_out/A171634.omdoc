@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A171634.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A171634">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,2,8,13,21,38,89,173,302,545,1109,2309,4564,8601,16188,31365,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 62518,125813,251119,493123,956437,1854281,3633938,7218166,14444539,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 28868203,57300450,112921744,221760513,436117749,861764899,1711773936</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of compositions of n such that the number of parts is divisible by the greatest part.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A171634/b171634.txt&quot;&gt;Table of n, a(n) for n = 1..250&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="n"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="divisible" cd="arithemtics">
+        <OMV name="d"/>
+        <OMV name="n"/>
+      </OMS>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          
+        <OMA>
+          <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="d"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMV name="x"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="d"/>
+    </OMA><OMV name="x"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> b:= proc(n,t,g) option remember; `if` (n=0, `if` (irem(t, g)=0, 1, 0), add (b(n-i, t+1, max(i, g)), i=1..n)) end: a:= n-&gt; b(n,0,0): seq (a(n), n=1..40); # _Alois P. Heinz_, Dec 15 2009</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A168659, A171632.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladeta Jovovic_, Dec 13 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Alois P. Heinz_, Dec 15 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

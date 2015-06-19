@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A209515.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A209515">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 598491,181445643,56515446141,17769569448759,5607670578249789,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1772313933013227273,560493388203596285283,177302245070678360735145,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 56092636774113844825575603,17746700710940389030443863763</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+1)X7 0..2 arrays with the number of clockwise edge increases in every 2X2 subblock equal to the number of anticlockwise edge increases</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 6 of A209517</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A209515/b209515.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..2..1..1..1..1..0....0..2..0..1..2..2..1....2..0..1..2..1..0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..2..1..1..1..0....1..0..2..0..1..2..1....1..2..0..1..0..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..2..2..1..1..1..0....2..1..0..2..0..1..0....1..1..2..0..1..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..1..2..1..1..1....2..1..1..0..2..0..0....0..0..1..2..0..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..1..2..1..2..1....1..0..0..0..0..2..2....1..0..0..1..2..2..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Mar 09 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

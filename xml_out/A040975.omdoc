@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A040975.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A040975">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,31,41,61,71,101,131,151,181,191,251,271,281,331,401,421,431,461,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 491,521,571,601,631,641,661,691,701,751,821,881,971,991,1021,1051,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1061,1171,1181,1231,1291,1301,1321</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p such that x^5 = 15 has no solution mod p.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Complement of A040974 relative to A000040. - _Vincenzo Librandi_, Sep 18 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A040975/b040975.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> ok[p_]:= Reduce[Mod[x^5 - 15, p] == 0, x, Integers] == False; Select[Prime[Range[300]], ok] (* _Vincenzo Librandi_, Sep 18 2012  *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(1500) | not exists{x : x in ResidueClassRing(p) | x^5 eq 15} ]; // _Vincenzo Librandi_, Sep 18 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

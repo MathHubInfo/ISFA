@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A193153.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A193153">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1296,82944,9150625,1575296100,391476713761,132821015040000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 59042071787233536,33317165538875522500,23276866101199344597601,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 19729668557004748392960000,19950922411933407541569256321,23731310247317631978185581240644</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers of spanning trees of the (n,n)-torus grid graphs.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Torus grid graphs are defined for n&gt;=3.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A193153/b193153.txt&quot;&gt;Table of n, a(n) for n = 3..80&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/SpanningTree.html&quot;&gt;Spanning Tree&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/TorusGridGraph.html&quot;&gt;Torus Grid Graph&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(LinearAlgebra):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= proc(n) local h, i, M;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       M:= Matrix(2*n, shape=symmetric);</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       for h in [seq(seq([i, j+n], j=1..n), i=1..n),</CMP>
+    </omtext><omtext class="maple">
+      <CMP>                 seq([[i, 1+(i mod n)], [n+i, n+1+(i mod n)]][], i=1..n)]</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       do M[h[]]:= -1 od;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       for i to 2*n do M[i, i]:= -add(M[i, j], j=1..2*n) od;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       Determinant(DeleteColumn(DeleteRow(M, 1), 1))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=3..20);  # _Alois P. Heinz_, Jul 17 2011</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric W. Weisstein_, Jul 16 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

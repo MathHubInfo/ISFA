@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A019689.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A019689">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,2,7,9,9,6,6,6,0,7,2,2,6,3,3,2,9,0,2,1,0,2,9,2,4,4,6,9,4,5,2,2,8,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5,8,3,7,2,5,9,8,6,0,9,0,6,2,5,0,4,8,1,0,0,4,4,3,1,5,6,6,3,2,8,6,7,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8,9,2,7,5,5,8,4,6,4,0,4,5,3,9,2,1,8,3,4,0,1,1,5,1,9,1,4,4,1,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of Pi/22.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ivan Panchenko, &lt;a href=&quot;/A019689/b019689.txt&quot;&gt;Table of n, a(n) for n = 0..999&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Pi/22=0.14279966607226332902102924469452285837259860906250481004431566328671892... [_Vladimir Joseph Stephan Orlovsky_, Dec 02 2009]</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> RealDigits[N[Pi/22,6! ]] (*_Vladimir Joseph Stephan Orlovsky_, Dec 02 2009 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

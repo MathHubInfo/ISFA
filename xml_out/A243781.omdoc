@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A243781.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A243781">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,4,11,34,103,405,1892,12166</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of simple connected graphs on n nodes whose independence number a(g)=2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The independence number of a graph is the cardinality of the largest independent vertex set.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Travis Hoppe and Anna Petrone, &lt;a href=&quot;https://github.com/thoppe/Encyclopedia-of-Finite-Graphs&quot;&gt;Encyclopedia of Finite Graphs&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. Hoppe and A. Petrone, &lt;a href=&quot;http://arxiv.org/abs/1408.3644&quot;&gt;Integer sequence discovery from small graphs&lt;/a&gt;, arXiv preprint arXiv:1408.3644, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/IndependenceNumber.html&quot;&gt;Independence Number&lt;/a&gt;, &lt;a href=&quot;http://mathworld.wolfram.com/MaximumIndependentVertexSet.html&quot;&gt;Maximum Independent Vertex Set&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. Values of a(g) for simple connected graphs, A243781, A243782, A243783, A243784.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Travis Hoppe_ and _Anna Petrone_, Jun 20 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

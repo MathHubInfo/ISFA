@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A089459.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A089459">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,6,30,221,2201,27769,424757,7639190,157969167,3692733181,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 96293669499,2771232779481,87247362424120,2982901522141490,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 110057420712635526,4358745145279372293,184433423940319376323</CMP>
+    </assertion><omtext class="name">
+      <CMP> Shifts 2 places left under the hyperbinomial transform.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A089459"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="sum" cd="A089459"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA><OMV name="n"/><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A089459"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A089459"/>
+      <OMV name="k"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A089459"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A089459"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A088956, A001858.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Nov 04 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

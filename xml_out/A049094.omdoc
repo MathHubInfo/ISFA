@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A049094.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A049094">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,12,18,20,21,24,30,36,40,42,48,54,60,63,66,72,78,80,84,90,96,100,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 102,105,108,110,114,120,126,132,136,138,140,144,147,150,155,156,160,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 162,168,174,180,186,189,192,198,200,204,210,216,220,222,228,231,234,240</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that 2^n - 1 is divisible by a square &gt; 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture: 2^n-1 is squarefree iff gcd(n,2^n-1)=1. If true the conjecture would imply that Mersenne numbers (A001348) are squarefree. - _Vladeta Jovovic_, Apr 12 2002. But the conjecture is not true: counterexamples are n = 364 and n = 1755, i.e. gcd(364,2^364-1) = 1 and (2^364-1) mod 1093^2 = 0 and gcd(1755,2^1755-1) = 1 and (2^1755-1) mod 3511^2 = 0, cf. A001220. - _Vladeta Jovovic_, Nov 01 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If d|n , and if 2^d-1 is not squarefree, then 2^n-1 can not be squarefree, so for example: if 6 is in the sequence 6*d is also in. [_Enrique Pérez Herrero_, Feb 28 2009]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If p(p-1)|n then p^2|2^n-1, where p is odd prime. - _Thomas Ordowski_, Jan 22 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The primitive elements of this sequence are A237043. - _Charles R Greathouse IV_, Feb 05 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Dilcher, Karl, and Larry Ericksen. &quot;The Polynomials of Mahler and Roots of Unity.&quot; The American Mathematical Monthly 122.04 (2015): 338-353. But see Proposition 3.1!</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, Unsolved Problems in Number Theory, A3.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Max Alekseyev, &lt;a href=&quot;/A049094/b049094.txt&quot;&gt;Table of n, a(n) for n = 1..243&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Pérez Herrero, &lt;a href=&quot;http://psychedelic-geometry.blogspot.com/2009/02/mersenne-numbers-teasure-map.html&quot;&gt;MERSENNE NUMBERS TREASURE MAP&lt;/a&gt;, Psych Geom blogspot, 02/17/09</CMP>
+    </omtext><omtext class="link">
+      <CMP> Andy Steward, &lt;a href=&quot;http://www.users.globalnet.co.uk/~aads/faclist.html&quot;&gt;Factorizations of Generalized Repunits&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a[ 2 ]=12 because 2^12-1=4095=5*(3^2)*7*13 is divisible by a square</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Select[Range[240], !SquareFreeQ[2^#-1]&amp;] (* _Vladimir Joseph Stephan Orlovsky_, Mar 18 2011*)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) default(factor_add_primes,1);</CMP>
+    </omtext><omtext class="program">
+      <CMP> is(n)=my(f=factor(n&gt;&gt;valuation(n,2))[,1],N,o); for(i=1,#f,if(n%(f[i]-1) == 0, return(1))); N=2^n-1; fordiv(n,d,f=factor(2^d-1)[,1]; for(i=1,#f, if(d==n,return(!issquarefree(N))); o=valuation(N,f[i]); if(o&gt;1, return(1)); N/=f[i]^o)) \\ _Charles R Greathouse IV_, Feb 02 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) is(n)=!issquarefree(2^n-1) \\ _Charles R Greathouse IV_, Feb 04 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001348, A001220, A014491, A049093, A049096, A049095, A237043.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, Apr 12 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition corrected by _Jonathan Sondow_, Jun 29 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

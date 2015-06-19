@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A215552.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A215552">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,7,104,1748,31000,566618,10559208,199448964,3804949176,73143988775,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1414591812920,27492340515912,536480138597624,10504551860174120,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 206284010045343000,4061109502392133464,80126310234711780600,1583953257985260802200,31365436013686385802048</CMP>
+    </assertion><omtext class="name">
+      <CMP> Binomial(8*n,n)*(6*n+1)/(7*n+1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of standard Young tableaux of shape [7n,n].</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A215552/b215552.txt&quot;&gt;Table of n, a(n) for n = 0..235&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Young_tableau&quot;&gt;Young tableau&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A215552"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A215552"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMV name="n"/></OMA><OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> a:= n-&gt; binomial(8*n,n)*(6*n+1)/(7*n+1):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..20);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Binomial[8n,n] (6n+1)/(7n+1),{n,0,20}] (* _Harvey P. Dale_, Mar 30 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column k=7 of A214776.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alois P. Heinz_, Aug 15 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

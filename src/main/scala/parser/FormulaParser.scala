@@ -75,10 +75,10 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       case (Add(e1), Subber(e2)) => Sub(Add(e1) :: e2 :: Nil)
       case (Sub(e1), Adder(e2)) =>  Add(Sub(e1) :: e2 :: Nil)
       case (Sub(e1), Subber(e2)) => Sub(e1 :+ e2)
-//      case (Func(a,b), right) if a.equals("<=") => Func(a,ArgList(b.args.drop(1) :+ transformSignedTerm(b.args.last, right)))
+      //      case (Func(a,b), right) if a.equals("<=") => Func(a,ArgList(b.args.drop(1) :+ transformSignedTerm(b.args.last, right)))
       case (e1, Subber(e2)) => Sub(e1 :: e2 :: Nil)
       case (e1, Adder(e2)) => Add(e1 :: e2 :: Nil)
-//      case (left, right) => Func("<=",ArgList(left :: right :: Nil))
+      //      case (left, right) => Func("<=",ArgList(left :: right :: Nil))
 
     }
   }
@@ -119,7 +119,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   val exceptionCases: Regex = List("G.f", "[A-Za-z]\\-th").mkString("|").r
 
   lazy val word: Regex = "[A-Za-z\\']+(?![\\(\\[\\{\\<\\=\\>])\\b".r
-  lazy val delim: Regex = "[\t\n\\.\\?\\!\\:\\;\\-\\=\\#\\[\\]\\,]".r
+  lazy val delim: Regex = "([\t\n\\.\\?\\!\\:\\;\\-\\=\\#\\[\\]\\,]|(\\/\\/)|(\\\\\\\\))".r
   lazy val month = "(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)"
 
   /*Month day year*/
@@ -127,8 +127,8 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   lazy val obracket : PackratParser[String] = "(" | "{" | "["
   lazy val cbracket : PackratParser[String] = ")" | "}" | "]"
 
-  lazy val sen_obracket : PackratParser[String] = ("(" | "{" | "[")<~not("-")  // avoid considering expressions of (-exp text ...) as a formula
-  lazy val sen_cbracket : PackratParser[String] = (")" | "}" | "]")<~not("""[\^\+\*\-\/\\]""".r)  // avoid considering expr part of (expr)^exponent as seperate from exponent
+  lazy val sen_obracket : PackratParser[String] = ("(" | "{" | "[")<~not("-")  // avoid considering expressions of (-exp text ...) as a text
+  lazy val sen_cbracket : PackratParser[String] = (")" | "}" | "]")/*<~not("""[\^\+\*\-\/\\]""".r)*/  // avoid considering expr part of (expr)^exponent as seperate from exponent
 
   def isInDictionary(word : String) : Boolean = {
     if(word.isEmpty){
@@ -138,7 +138,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   }
 
   lazy val sentence: PackratParser[Sentence] = {
-    (rep1(sentence_cont)) ^^ { x => Sentence(x.flatten) }
+    (rep1(sentence_cont))^^ { x => Sentence(x.flatten) }
   }
 
   /*Why not do: rep1(rep(words)~rep(formulas)) - BUG (i call) in Scala. It can be easily fixed
@@ -149,9 +149,9 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       case (wordm : List[List[Line]]) ~ (Some(formulam : Expression)) => wordm.flatten :+ formulam
       case (wordm : List[List[Line]]) ~ (None) =>  wordm.flatten
     } |
-    (formulas~rep(words)) ^^ {
-      case (formulam : Expression)~(wordm : List[List[Line]]) => formulam :: wordm.flatten
-    }
+      (formulas~rep(words)) ^^ {
+        case (formulam : Expression)~(wordm : List[List[Line]]) => formulam :: wordm.flatten
+      }
   }
 
   //lazy val dots : PackratParser[String] = "..." | ".."
@@ -163,39 +163,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
         result
     }
 
-  lazy val words: PackratParser[List[Line]] =
-    exceptionCases ~ rep(delim) ^^ {
-      case x~y =>
-        Word(x) :: y.map(x => Delim(x))
-    } |
-    date.r ~ rep(delim) ^^ {
-      case x ~ del =>
-        Date(x.toString) :: del.map(x => Delim(x))
-    } |
-    word ~ rep(delim) ^? {
-      case w1~(del) if isInDictionary(w1) || isInDictionary(w1 + del) =>
-        Word(w1)::del.map(x => Delim(x))
-    } |
-    "[\\w\\.\\-]+".r~("@" |"(AT)")~"[\\w\\.-]+".r ~ rep(delim)^^{
-      case name~sym~dom~dels => Email(name+sym+dom) :: Delim(dels.mkString("")) :: Nil
-    } |
-                      //unicode|
-    "_*[A-Z\\.]+[A-Za-z'[^\\x00-\\x7F]\\.]+(?![\\(\\{])_*(?!\\[\\{\\(])\\b".r ~ rep(delim) ^^ /*human names (not functions)*/ {
-      case x~del =>  Name(x) :: del.map(x => Delim(x))
-    } | // IDK - french names or something of this sort d'Artagon'k
-    "_*[A-Za-z]+'[A-Za-z'[^\\x00-\\x7F]\\.]+(?![\\(\\{])_*(?!\\[\\{\\(])\\b".r ~ rep(delim) ^^ /*human names (not functions)*/ {
-      case x~del =>  Name(x) :: del.map(x => Delim(x))
-    } |
-    sen_obracket~(sentence)~sen_cbracket ^^ { // ex: (fraction continues) //TODO: (-1) //try expr if fail try words
-//      case ob~w~cb =>(Delim(ob) :: w) ::: (s :: Delim(cb) :: Nil)
-      case ob~w~cb => (Delim(ob) :: w :: Nil):+ Delim(cb)
-    } |
-    rep1(delim) ^^{
-      x => x.map( y => Delim(y))
-    }
-
-
-  lazy val words_inbracket: PackratParser[List[Line]] =
+  lazy val words: PackratParser[List[Expression]] =
     exceptionCases ~ rep(delim) ^^ {
       case x~y =>
         Word(x) :: y.map(x => Delim(x))
@@ -212,14 +180,42 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
         case name~sym~dom~dels => Email(name+sym+dom) :: Delim(dels.mkString("")) :: Nil
       } |
       //unicode|
-      "_*[A-Z\\.]+[A-Za-z'[^\\x00-\\x7F]\\.]+(?![\\(\\{])_*(?!\\[\\{\\(])\\b".r ~ rep(delim) ^^ /*human names (not functions)*/ {
+      "_{0,2}[A-Z\\.']+[A-Za-z'[^\\x00-\\x7F]\\.]+(?![\\(\\{])_{0,2}(?![\\[\\{\\(])\\b".r ~ rep(delim) ^^ /*human names (not functions)*/ {
         case x~del =>  Name(x) :: del.map(x => Delim(x))
       } | // IDK - french names or something of this sort d'Artagon'k
-      "_*[A-Za-z]+'[A-Za-z'[^\\x00-\\x7F]\\.]+(?![\\(\\{])_*(?!\\[\\{\\(])\\b".r ~ rep(delim) ^^ /*human names (not functions)*/ {
+      sen_obracket~(sentence)~sen_cbracket ^? { // ex: (fraction continues) //TODO: (-1) //try expr if fail try words
+        //      case ob~w~cb =>(Delim(ob) :: w) ::: (s :: Delim(cb) :: Nil)
+
+        //avoiding expression like (x+3) to be taken as Delim(() x +3  Delim())
+        case ob~w~cb if (w.parts.head.isInstanceOf[Line])=> (Delim(ob) :: w.parts):+ Delim(cb)
+      } |
+      rep1(delim) ^^{
+        x => x.map( y => Delim(y))
+      }
+
+
+  lazy val words_inbracket: PackratParser[List[Expression]] =
+    exceptionCases ~ rep(delim) ^^ {
+      case x~y =>
+        Word(x) :: y.map(x => Delim(x))
+    } |
+      date.r ~ rep(delim) ^^ {
+        case x ~ del =>
+          Date(x.toString) :: del.map(x => Delim(x))
+      } |
+      word ~ rep(delim) ^? {
+        case w1~(del) if isInDictionary(w1) || isInDictionary(w1 + del) =>
+          Word(w1)::del.map(x => Delim(x))
+      } |
+      "[\\w\\.\\-]+".r~("@" | "(AT)")~"[\\w\\.-]+".r ~ rep(delim)^^{
+        case name~sym~dom~dels => Email(name+sym+dom) :: Delim(dels.mkString("")) :: Nil
+      } |
+      //unicode|
+      "_*[A-Z\\.']+[A-Za-z'[^\\x00-\\x7F]\\.]+(?![\\(\\{])_*(?![\\[\\{\\(])\\b".r ~ rep(delim) ^^ /*human names (not functions)*/ {
         case x~del =>  Name(x) :: del.map(x => Delim(x))
       } |
       sen_obracket~words~sentence~sen_cbracket ^^ { // ex: (fraction continues) //TODO: (-1) //try expr if fail try words
-        //      case ob~w~cb =>(Delim(ob) :: w) ::: (s :: Delim(cb) :: Nil)
+        //        case ob~w~cb =>(Delim(ob) :: w) ::: (s :: Delim(cb) :: Nil)
         case ob~w~sen~cb => (Delim(ob) :: w) ::: (sen :: Delim(cb) :: Nil)
       } |
       rep1(delim) ^^{
@@ -228,7 +224,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
 
   lazy val function: PackratParser[String] = not(number)~>( "floor\\b".r | "ceiling\\b".r | "ceil\\b".r | "sqrt\\b".r |"log\\b".r | "sinh\\b".r |"sin\\b".r | "cosh\\b".r | "cos\\b".r |
-    "tan\\b".r |"tg\\b".r | "ctg\\b".r | "deg\\b".r | "binomial\\b".r | "numerator\\b".r | "exp\\b".r | "phi\\b".r | "[A-Z]+[a-z_0-9]*(?=[\\(\\[\\{])\\b".r /*|
+    "tan\\b".r |"tg\\b".r | "ctg\\b".r | "deg\\b".r | "binomial\\b".r | "numerator\\b".r | "exp\\b".r | "phi\\b".r | "If\\b" | "if\\b" | "[A-Za-z']+[A-Za-z_0-9']*(?=[\\(\\[\\{])\\b".r /*|
     "\\w+(?=[\\(\\[\\{])\\b".r*/ /*| "[a-z_]{1}\\b(?!\\d)".r*/)
 
   lazy val constant: PackratParser[String] = "Pi\\b".r | "pi\\b".r | "infinity\\b".r | "infty\\b".r | "Infinity\\b".r | "Infty\\b".r |
@@ -246,10 +242,10 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
   lazy val divisible : PackratParser[(Expression,Expression) => Expression] =
     "(\\|)|(divides)".r ^^ {
-    _ => (x:Expression, y:Expression) => (x,y) match {
-      case (x: Expression, y: Expression) => Divisible(x, y)
+      _ => (x:Expression, y:Expression) => (x,y) match {
+        case (x: Expression, y: Expression) => Divisible(x, y)
+      }
     }
-  }
 
   lazy val unary_plusminus : PackratParser[String] = "+" | "-"
 
@@ -260,12 +256,12 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
         case (x: Expression, y: Expression) => Add(List(x, y))
       }
     } |
-   "-" ^^ {
-     _ => (x:Expression, y:Expression) => (x,y) match {
-       case (x: Sub , y: Expression) => Sub(x.expr :+ y)
-       case (x: Expression, y: Expression) => Sub(List(x, y))
-     }
-    }
+      "-" ^^ {
+        _ => (x:Expression, y:Expression) => (x,y) match {
+          case (x: Sub , y: Expression) => Sub(x.expr :+ y)
+          case (x: Expression, y: Expression) => Sub(List(x, y))
+        }
+      }
 
   lazy val multdiv: PackratParser[(Expression,Expression) => Expression] =
     "(\\*)|(\\bX\\b)|(\\bx\\b)".r ^^{
@@ -274,16 +270,16 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
         case (x: Expression, y: Expression) => Mul(List(x, y))
       }
     } |
-    "/" ^^ {
-      _ => (x:Expression, y:Expression) => (x,y) match {
-        case (x: Div , y: Expression) => Div(x.expr :+ y)
-        case (x: Expression, y: Expression) => Div(List(x, y))
+      "/" ^^ {
+        _ => (x:Expression, y:Expression) => (x,y) match {
+          case (x: Div , y: Expression) => Div(x.expr :+ y)
+          case (x: Expression, y: Expression) => Div(List(x, y))
+        }
       }
-    }
 
 
   lazy val expression : PackratParser[Expression] =
-    (c_expression~rep(comparison~c_expression))^^ {
+    (c_expression~rep(comparison~c_expression)) ^^ {
       case expr~listexpr if listexpr.length != 0 =>
         applyFunctionsInOrder( expr :: listexpr.map(_._2), listexpr.map(_._1) )
       case expr~listexpr => expr
@@ -298,71 +294,76 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   }
 
   lazy val sum_op : PackratParser[((Expression,Expression)=>Expression,Expression)] =
-    plusminus~term~opt("!") ^^ {
-      case func~(fctr : Expression)~Some("!") => func->Factorial(fctr)
-      case func~(fctr : Expression)~None => func->fctr
+    plusminus~term ^^ {
+      case func~(fctr : Expression) => func->fctr
     } |
-    divisible ~ term ~ opt("!") ^^ {
-      case func ~ fctr ~ Some("!") => func -> Factorial(fctr)
-      case func ~ fctr ~ None => func -> fctr
-    }
+      divisible ~ term  ^^ {
+        case func ~ fctr => func -> fctr
+      }
 
 
   lazy val signed_term : PackratParser[Expression] =
-    unary_plusminus~term~opt("!") ^^ {
-      case "-"~(fctr : Expression)~Some("!") => Neg(Factorial(fctr))
-      case "-"~(fctr : Expression)~None => Neg(fctr)
-      case "+"~(fctr : Expression)~Some("!") => Factorial(fctr)
-      case "+"~(fctr : Expression)~None => fctr
+    unary_plusminus~term ^^ {
+      case "-"~(fctr : Expression) => Neg(fctr)
+      case "+"~(fctr : Expression) => fctr
     }|
-    term~opt("!") ^^ {
-      case (a : Expression)~Some("!") => Factorial(a)
-      case (a : Expression)~None => a
-    }
+      term ^^ {
+        case (a : Expression) => a
+      }
 
   lazy val term : PackratParser[Expression] =
+//    term <~ "even\\b".r ^^ {
+//      x => Divisible(x, Num(2))
+//    } |
+    term_no_fact/*~opt("!")*/ ^^ {
+//      case exp~Some("!") => Factorial(exp)
+      case exp/*~None*/ => exp
+    }
+
+
+  lazy val term_no_fact : PackratParser[Expression] =
   //this will fail us on 2n*log for obvious reasons
   /*  number ~ (not(words)~>unsigned_factor)~opt(unsigned_factor) ^^ {
       case (no )~(expr : Expression)~Some(expr1 : Expression) => Mul(Num(no.toDouble)::expr::expr1::Nil)
       case (no )~(expr : Expression)~None => Mul(Num(no.toDouble)::expr::Nil)
     } |*/
-      unsigned_factor~rep(multiply | lazy_multiply) ^^ {
-        case (fctr : Expression)~(divs) if divs.length != 0 =>
-          applyFunctionsInOrder(fctr :: divs.collect({
-            case x : (Any~Expression)  => x._2
-            case x : Expression => x
-          }), funcs = divs.collect({
-            case x: (((Expression, Expression) => Expression) ~ Expression) => x._1
-            case x =>
-              (x: Expression, y: Expression) => (x, y) match {
-                case (x: Var, y: ArgList) => {
-                  addFunc(x.name)
-                  Func(x.name, y)
-                }
-                //In case there is var(var) consider the first var to be a function
-                case (x: Var, y: Var) => {
-                  if (variables.contains(x.name))
-                    Mul(x :: y :: Nil)
-                  else {
-                    addFunc(x.name)
-                    Func(x.name, ArgList(List(y)))
-                  }
-                }
-                case (x: Var, y: Num) => //TODO: cant happen
+    unsigned_factor~rep(multiply | lazy_multiply) ^^ {
+      case (fctr : Expression)~(divs) if divs.length != 0 =>
+        applyFunctionsInOrder(fctr :: divs.collect({
+          case x : (Any~Expression)  => x._2
+          case x : Expression => x
+        }), funcs = divs.collect({
+          case x: (((Expression, Expression) => Expression) ~ Expression) => x._1
+          case x =>
+            (x: Expression, y: Expression) => (x, y) match {
+              case (x: Var, y: ArgList) => {
+                addFunc(x.name)
+                Func(x.name, y)
+              }
+              //In case there is var(var) consider the first var to be a function
+              case (x: Var, y: Var) => {
+                if (variables.contains(x.name))
+                  Mul(x :: y :: Nil)
+                else {
                   addFunc(x.name)
                   Func(x.name, ArgList(List(y)))
-                case (x: Var, y: Expression) =>
-                  if (variables.contains(x.name))
-                    Mul(x :: y :: Nil)
-                  else
-                    Func(x.name, ArgList(List(y)))
-                case (x: Mul, y: Expression) => Mul(x.expr :+ y)
-                case (x: Expression, y: Expression) => Mul(List(x, y))
+                }
               }
-          }))
-        case (fctr : Var)~(divs) => addVar(fctr.name); fctr
-        case (fctr : Expression)~(divs) => fctr
-      }
+              case (x: Var, y: Num) => //TODO: cant happen
+                addFunc(x.name)
+                Func(x.name, ArgList(List(y)))
+              case (x: Var, y: Expression) =>
+                if (variables.contains(x.name))
+                  Mul(x :: y :: Nil)
+                else
+                  Func(x.name, ArgList(List(y)))
+              case (x: Mul, y: Expression) => Mul(x.expr :+ y)
+              case (x: Expression, y: Expression) => Mul(List(x, y))
+            }
+        }))
+      case (fctr : Var)~(divs) => addVar(fctr.name); fctr
+      case (fctr : Expression)~(divs) => fctr
+    }
 
   lazy val multiply : PackratParser[((Expression,Expression)=>Expression)~Expression] =
     multdiv~signed_factor ^^ {x => x}
@@ -373,15 +374,18 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
 
   lazy val signed_factor : PackratParser[Expression] =
-    unary_plusminus~factor~opt("!") ^^ {
-      case "-"~(fctr : Expression)~Some("!") => Neg(Factorial(fctr))
-      case "-"~(fctr : Expression)~None => Neg(fctr)
-      case "+"~(fctr : Expression)~None=> fctr
-      case "+"~(fctr : Expression)~Some("!") => Factorial(fctr)
+    unary_plusminus~unsigned_factor ^^ {
+      case "-"~(fctr : Expression) => Neg(fctr)
+      case "+"~(fctr : Expression) => fctr
     } |
       unsigned_factor ^^ {x=>x}
 
+
+  //acts as factor with suffixes
   lazy val unsigned_factor : PackratParser[Expression] =
+    unsigned_factor<~"even\\b".r ^^ {
+      x => Divisible(x,Num(2))
+    }|
     factor~opt("!") ^^ {
       case (a:Expression)~None => a
       case a ~ Some(b) => Factorial(a)
@@ -401,11 +405,11 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       case (a : ArgList)~None if a.args.length == 1 => a.args.head
       case (a : Expression)~None => a
     } |
-    argument~opt("^"~signed_factor) ^^ {
-      case (a : Expression)~Some("^"~(signed : Expression)) =>{
-        Power(a,signed)
+      argument~opt("^"~signed_factor) ^^ {
+        case (a : Expression)~Some("^"~(signed : Expression)) =>{
+          Power(a,signed)
+        }
       }
-    }
 
   //  lazy val factor_op : PackratParser[Expression] = "^"~signed_factor | ""
 
@@ -444,30 +448,30 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
         case (iter : String)~(on : Expression)~Some(expr) => Iters(iter, Some(on), None, expr)
         case (iter : String)~(on : Expression)~None => Iters(iter, None, None, on)
       } |
-        not(constant)~>not(reference)~>opt(function)~argument ^^ {
-          case Some(a : String)~(b : ArgList)  =>
-            if(variables.contains(a) && b.args.length == 1){
-              Mul(List(Var(a), b.args.head))
-            }else {
-              if(b.args.length > 1){
-                addFunc(a)
-              }
-              Func(a, b)
+      not(constant)~>not(reference)~>opt(function)~argument ^^ {
+        case Some(a : String)~(b : ArgList)  =>
+          if(variables.contains(a) && b.args.length == 1){
+            Mul(List(Var(a), b.args.head))
+          }else {
+            if(b.args.length > 1){
+              addFunc(a)
             }
-          case Some(a : String)~(b : Expression) =>
-            if(variables.contains(a)){
-              Mul(Var(a)::b::Nil)
-            }else {
-              Func(a, ArgList(b :: Nil))
-            }
-          //no other chance - not checking on purpose because if there is a big magnetic field from sun that disturbs it, i'll be the first to know
-          case None~(b: ArgList) if b.args.length == 1 => b.args.head
-          case None~(b: Expression) => b
-        }  |
-        reference~argument ^^{
-          case (ref : String)~(args : ArgList)  => FuncR(SeqReference(ref), args)
-          case (ref : String)~(arg : Expression) => FuncR(SeqReference(ref), ArgList(arg::Nil))
-        } |
+            Func(a, b)
+          }
+        case Some(a : String)~(b : Expression) =>
+          if(variables.contains(a)){
+            Mul(Var(a)::b::Nil)
+          }else {
+            Func(a, ArgList(b :: Nil))
+          }
+        //no other chance - not checking on purpose because if there is a big magnetic field from sun that disturbs it, i'll be the first to know
+        case None~(b: ArgList) if b.args.length == 1 => b.args.head
+        case None~(b: Expression) => b
+      }  |
+      reference~argument ^^{
+        case (ref : String)~(args : ArgList)  => FuncR(SeqReference(ref), args)
+        case (ref : String)~(arg : Expression) => FuncR(SeqReference(ref), ArgList(arg::Nil))
+      } |
       "("~expression ~ rep("," ~> expression) <~opt(")") ^^ {
         case "("~(expr1 : Expression)~(expr : List[Expression]) => ArgList(expr1::expr)
       } |
@@ -483,7 +487,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       value ^^ {case x : Expression => x}
 
   lazy val value : PackratParser[Expression] =
-      reference ^^ {x => SeqReference(x)}|
+    reference ^^ {x => SeqReference(x)}|
       constant ^^ {x => Constant(x)} |
       number ^^ {case x  => Num(x.toDouble)} |
       variable ^^ { case v : String =>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A211118.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A211118">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,5,7,9,15,21,25,27,75,125,23625</CMP>
+    </omtext><omtext class="name">
+      <CMP> One of 17 possible sets of eleven numbers of the form 3^alpha 5^beta 7^gamma whose sum of reciprocals is 1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Burshtein, Nechemia. All the solutions of the equation Sum_{i=1..11}} 1/x_i = 1 in distinct integers of the form x_i = 3^alpha 5^beta 7^gamma. Discrete Math. 308 (2008), no. 18, 4286--4292. MR2427761 (2009e:11061)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> The 17 solutions are given in A211118-A211134. Cf. A201643, A201644, A201646, A201647, A201648, A201649.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,fini,full</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Apr 02 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

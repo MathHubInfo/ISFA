@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A093182.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A093182">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5238,5241,5242,5243,5244,5245,5246,5247,5248,5249,5250,5255,129008,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 129009,129010,129012,129020,129021,129022,129023,129024,129025,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 129026,129027,129028,129029,129030,129031,129032,129033,129058,129059,129060</CMP>
+    </assertion><omtext class="name">
+      <CMP> Counts where both the odd composites (starting from 1) 1 mod 4 and 3 mod 4 are equal.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Run separate counts of odd composites <OMOBJ>
+        <OMA><OMS name="times"/><OMI>1</OMI><OMV name="mod"/><OMI>4</OMI></OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA><OMS name="times"/><OMI>3</OMI><OMV name="mod"/><OMI>4</OMI></OMA>
+      </OMOBJ>.When the count is equal ,record the count 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> At 26829 1 mod 4 and 26835 3 mod 4, the count of odd composites is equal for each run at 5238; so a(1)=5238. [Compare to the prime 26833 1 mod 4 where equality occurs at count 1471 and the first reversal in the race occurs at 26861.]</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A093180, A093181, A007350, A007351, A038691.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Enoch Haga_, Mar 27 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

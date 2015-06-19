@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A021348.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A021348">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,2,9,0,6,9,7,6,7,4,4,1,8,6,0,4,6,5,1,1,6,2,7,9,0,6,9,7,6,7,4,4,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8,6,0,4,6,5,1,1,6,2,7,9,0,6,9,7,6,7,4,4,1,8,6,0,4,6,5,1,1,6,2,7,9,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6,9,7,6,7,4,4,1,8,6,0,4,6,5,1,1,6,2,7,9,0,6,9,7,6,7,4,4,1,8,6</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of 1/344.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Join[{0,0},RealDigits[1/344,10,120][[1]]] (* _Harvey P. Dale_, Sep 19 2011 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

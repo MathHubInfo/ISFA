@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A114820.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A114820">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 138,140,160,190,208,222,230,250,261,285,310,318,345,351,387,388,399,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 402,426,469,470,483,485,488,498,507,508,518,531,534,549,568,596,598,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 632,656,671,678,686,688,703,715,786,788,806,808,844,872,873,874,902</CMP>
+    </assertion><omtext class="name">
+      <CMP> Indices of Fibonacci numbers with 11 prime factors when counted with multiplicity.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Blair Kelly, &lt;a href=&quot;http://mersennus.net/fibonacci/&quot;&gt;Fibonacci and Lucas Factorizations&lt;/a&gt;.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1)=138 because 138th fibonacci number(i.e. 30960598847965113057878492344) consists of 11 prime factors (i.e. 2*2*2*137*139*461*691*829*18077*28657*1485571)</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) n=1;while(n&lt;320,if(bigomega(fibonacci(n))==11,print1(n,&quot;, &quot;));n++)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> hard,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Shyam Sunder Gupta_, Feb 19 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Ryan Propper_, May 24 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

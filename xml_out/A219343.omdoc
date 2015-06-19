@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A219343.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A219343">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,32,3183,650929,226009218,119298668857,89086101638412,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 89480710389500666,116491795770107486363,191172400354899371561288,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 387419202671209086703674709,956322827450633453264262285623,2859815748552720894795327258080881,10430012061189048036456303441601971435</CMP>
+    </assertion><omtext class="name">
+      <CMP>  O.g.f. satisfies: A(x) = Sum_{n&gt;=0} A(n*x)^n * (n^3*x)^n/n! * exp(-n^3*x*A(n*x)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP>  Compare to the LambertW identity:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sum_{n&gt;=0} n^n * x^n * G(x)^n/n! * exp(-n*x*G(x)) = 1/(1 - x*G(x)).</CMP>
+    </omtext><assertion class="example">
+      <CMP>  O.g.f.: A(x) = 1 + x + 32*x^2 + 3183*x^3 + 650929*x^4 + 226009218*x^5 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> where</CMP>
+    </assertion><assertion class="example">
+      <CMP> A(x) = 1 + x*A(x)*exp(-x*A(x)) + 2^6*x^2*A(2*x)^2/2!*exp(-2^3*x*A(2*x)) + 3^9*x^3*A(3*x)^3/3!*exp(-3^3*x*A(3*x)) + 4^12*x^4*A(4*x)^4/4!*exp(-4^3*x*A(4*x)) + 5^15*x^5*A(5*x)^5/5!*exp(-5^3*x*A(5*x)) +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> simplifies to a power series in x with integer coefficients.</CMP>
+    </assertion><omtext class="program">
+      <CMP>  (PARI) {a(n)=local(A=1+x);for(i=1,n,A=sum(k=0,n,k^(3*k)*x^k*subst(A,x,k*x)^k/k!*exp(-k^3*x*subst(A,x,k*x)+x*O(x^n))));polcoeff(A,n)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=0,25,print1(a(n),&quot;, &quot;))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP>  Cf. A219264, A219265, A218681, A218672, A219184, A219342, A217900.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Nov 18 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

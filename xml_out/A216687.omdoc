@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A216687.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A216687">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,13,19,21,25,31,37,41,43,49,51,55,61,71,73,81,85,91,101,103,109,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 111,113,115,121,127,133,141,145,151,153,157,163,181,191,193,199,201,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 205,211,217,221,223,225,229,231,235,241,253,265,267,271,281,289,301,307,309</CMP>
+    </assertion><omtext class="name">
+      <CMP> Odd numbers &gt; 10 that can be written as m*s - m + 1, where s is the sum of their digits and m &gt;= 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The corresponding values of m: 10, 4, 6, 10, 4, 10, 4, 10, 7, 4, 10, 6, 10, 10, 8, 10, 7, 10, 100, 34, 12, 55, 28, 19, 40, 14, 22, 28, 16, 25, 19, 13, 18, 20, 19, 16, 11, 100, 34, 70, 24, 55, 37, 28, 19, 46, 26, 40, 28, 22, 19, 30, 28, 16, 100, 34, 28.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This property seems to be very interesting: some primes have it, some don't (from the first 60 primes bigger than 10, 29 have this property and 31 haven't, which is a surprisingly equal proportion); some odd composite numbers have it, some don't (just less than a third from the first 60 such numbers have it), but most of Carmichael numbers checked have it; the first 20 such numbers will be enumerated, with the corresponding value of n in the brackets: 1105(184), 1729(96), 2465(154), 2821(235), 6601(550), 8911(495), 10585(588), 15841(880), 29341(1630), 41041(4560), 46657(1728), 52633(2924), 62745(2728), 101101(33700), 115921(6440), 126217(7012), 172081(9560), 188461(10470), 252601(16840), 294409(10904).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From the first 25 Carmichael numbers, just 5 of them (561, 63973, 75361, 162401 and 278545) lack this property.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Charles R Greathouse IV, &lt;a href=&quot;/A216687/b216687.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/CarmichaelNumber.html&quot;&gt;Carmichael Number&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) is(n)=n%2 &amp;&amp; n&gt;9 &amp;&amp; Mod(n,sumdigits(n)-1)==1 \\ _Charles R Greathouse IV_, Dec 07 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002997.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Marius Coman_, Sep 14 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

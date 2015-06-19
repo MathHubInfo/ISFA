@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A105370.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A105370">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,5,10,15,15,0,50,175,450,1000,2000,3625,5875,8125,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8125,0,29375,106250,278125,621875,1243750,2250000,3640625,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5031250,5031250,0,18203125,65859375,172421875,385546875,771093750,1394921875,2257031250,3119140625,3119140625,0</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of ((1+x)^4-(1+x)x^3)/((1+x)^5-x^5).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Binomial transform is A105367. Consecutive pair sums of 105369.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_04&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (-5,-10,-10,-5).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>3</OMI><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>5</OMI><OMI>10</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A105370"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>5</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sqrt" cd="A105370"/>
+      <OMI>5</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sqrt" cd="A105370"/>
+      <OMI>5</OMI>
+    </OMA><OMI>10</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="cos" cd="A105370"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMS name="pi"/><OMV name="n"/></OMA><OMI>10</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="sqrt" cd="A105370"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>10</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sqrt" cd="A105370"/>
+      <OMI>5</OMI>
+    </OMA><OMI>50</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="sin" cd="A105370"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMS name="pi"/><OMV name="n"/></OMA><OMI>10</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>5</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sqrt" cd="A105370"/>
+      <OMI>5</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sqrt" cd="A105370"/>
+      <OMI>5</OMI>
+    </OMA><OMI>10</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="cos" cd="A105370"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>9</OMI><OMS name="pi"/><OMV name="n"/></OMA><OMI>10</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="sqrt" cd="A105370"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>10</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sqrt" cd="A105370"/>
+      <OMI>5</OMI>
+    </OMA><OMI>50</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="sin" cd="A105370"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>9</OMI><OMS name="pi"/><OMV name="n"/></OMA><OMI>10</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A105370"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A105370"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A105370"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A105370"/>
+      <OMI>3</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A105370"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="a" cd="A105370"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="a" cd="A105370"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="a" cd="A105370"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="a" cd="A105370"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>From _Harvey <OMOBJ>
+        <OMV name="P"/>
+      </OMOBJ>.Dale_ ,May 23 2012 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> CoefficientList[Series[((1+x)^4-(1+x)x^3)/((1+x)^5-x^5),{x,0,40}],x] (* or *) LinearRecurrence[{-5,-10,-10,-5},{1,-1,1,-2},41]  (* _Harvey P. Dale_, May 23 2012 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Barry_, Apr 01 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

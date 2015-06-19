@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A070720.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A070720">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,11,3,4,8,33,19,5,9,10,2,12,13,14,24,16,17,21,7,32,18,22,23,15,25,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 26,27,37,29,30,34,20,6,31,35,36,28,38,0,1,11,3,4,8,33,19,5,9,10,2,12,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13,14,24,16,17,21,7,32,18,22,23,15,25,26,27,37,29,30,34,20,6,31,35,36</CMP>
+    </assertion><omtext class="name">
+      <CMP> n^7 mod 39.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [power_mod(n,7,39)for n in xrange(0, 76)] # [From _Zerinvary Lajos_, Oct 29 2009]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, May 13 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

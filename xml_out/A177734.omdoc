@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A177734.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A177734">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 22,24,102728,1011849771855214912968404217247,168,288,848874360,528,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 695552,886725671,50641,1680,2359785,10776888210,414839198,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 42176361744,226972,4488,9094138358932,5328,6240</CMP>
+    </assertion><omtext class="name">
+      <CMP> Largest k such that prime(n) divides the numerator of the k-th harmonic number (=A001008(k)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For p = prime(n), Boyd defines J_p to be the set of numbers k such that p divides A001008(k). This sequence gives the largest element of J_p. The smallest element of J_p is given by A072984. The size of J_p is given by A092103.</CMP>
+    </omtext><omtext class="link">
+      <CMP> David W. Boyd, &lt;a href=&quot;http://www.emis.de/journals/EM/expmath/volumes/3/3.html&quot;&gt;A p-adic study of the partial sums of the harmonic series&lt;/a&gt;, Experimental Math., Vol. 3 (1994), No. 4, 287-302.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      For <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA>
+      <OMS name="prime" cd="A177734"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>in <OMOBJ>
+        <OMR xref="A092101"/>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A177734"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMI>2</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A072984, A092103, A092193.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> hard,more,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Max Alekseyev_, May 12 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(5) computed by Boyd.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(8)-a(22) from _Max Alekseyev_, Oct 23 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

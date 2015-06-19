@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A060339.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A060339">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 311,337,1009,1103,1511,1777,3671,3889,4271,4657,5737,6841,7561,9649,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9769,10223,12239,12889,14759,14831,17401,17569,17783,19009,19031,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 20903,21529,22369,22751,23279,24049,24889,25057,26423,28871,30671</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes the sum of two, three and four consecutive composite numbers.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Klaus Brockhaus, &lt;a href=&quot;/A060339/b060339.txt&quot;&gt;Table of n, a(n) for n=1..1000.&lt;/a&gt; [From _Klaus Brockhaus_, Jun 17 2009]</CMP>
+    </omtext><assertion class="example">
+      <CMP> A(2)= 377 is equal to 168+169 = 111+112+114 = 82+84+85+86.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> composite[ n_Integer ] := (k = n + PrimePi[ n ] + 1; While[ k - PrimePi[ k ] - 1 != n, k++ ]; k); a = b = c = {}; Do[ p = Sum[ composite[ n + m ], {m, 0, 1} ]; If[ PrimeQ[ p ], a = Append[ a, p ] ]; p = Sum[ composite[ n + m ], {m, 0, 2} ]; If[ PrimeQ[ p ], b = Append[ b, p ] ]; p = Sum[ composite[ n + m ], {m, 0, 3} ]; If[ PrimeQ[ p ], c = Append[ c, p ] ], {n, 1, 25000} ]; Intersection[ a, b, c ]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A151744. [From _Klaus Brockhaus_, Jun 17 2009]</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Mar 30 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A212073.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A212073">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,30,280,2925,32736,383838,4654320,57887550,734405100,9467075926,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 123648163392,1632743088275,21761329287600,292362576381900,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3955219615609056,53834425161872586,736687428853685400,10129401435828605700,139876690363085200200</CMP>
+    </assertion><omtext class="name">
+      <CMP>  G.f. satisfies: A(x) = (1 + x*A(x)^(3/2))^4.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A212073"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="binomial" cd="A212073"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMV name="n"/></OMA><OMI>4</OMI>
+    </OMA><OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMV name="n"/></OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A212073"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="G" cd="A212073"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="G" cd="A212073"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="G" cd="A212073"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>is the <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .of <OMOBJ>
+        <OMR xref="A002295"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP>  G.f.: A(x) = 1 + 4*x + 30*x^2 + 280*x^3 + 2925*x^4 + 32736*x^5 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> Related expansions:</CMP>
+    </assertion><assertion class="example">
+      <CMP> A(x)^(3/2) = 1 + 6*x + 51*x^2 + 506*x^3 + 5481*x^4 +...+ A002295(n+1)*x^n +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> A(x)^(1/4) = 1 + x + 6*x^2 + 51*x^3 + 506*x^4 +...+ A002295(n)*x^n +...</CMP>
+    </assertion><omtext class="program">
+      <CMP>  (PARI) {a(n)=binomial(6*n+4,n) * 4/(6*n+4)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=0, 40, print1(a(n), &quot;, &quot;))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n)=local(A=1+4*x); for(i=1, n, A=(1+x*A^(3/2))^4+x*O(x^n)); polcoeff(A, n)}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP>  Cf. A002295, A212071, A212072, A130564.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Apr 29 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

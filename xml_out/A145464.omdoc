@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A145464.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A145464">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,64,125,216,729,1000,1331,2744,4096,6859,8000,9261,13824,15625,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 17576,24389,27000,29791,39304,46656,59319,64000,68921,85184,91125,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 97336,117649,125000,132651,157464,175616,205379,216000,226981,262144</CMP>
+    </assertion><omtext class="name">
+      <CMP> Cubes ending in a square.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Corresponding squares are: 0,1,4,25,16,9,0,1,4,4096,9,0,1,4,25,576,9,0,1,4,46656,9,0,1,4,25,36,9,0,1,4,16,9,0,1,4,25,9,0,1,4,9,0,1,4,25,9,0,1,4,36,9,0. Note that sometimes a square coinsides with &quot;parent&quot; cube.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A038678 Squares ending in a (different) square.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zak Seidov_, Oct 11 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

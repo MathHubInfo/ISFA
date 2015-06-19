@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A141408.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A141408">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,13,37,41,61,73,101,157,173,193,257,277,353,373,433,457,461,541,601,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 613,641,653,677,733</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p=A007947(n) such that p+6 is also prime and p + 1 = A007947(n + 1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)==1 (mod 4).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A140862.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Giovanni Teofilatto_, Aug 04 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition clarified, more terms appended - _R. J. Mathar_, Aug 23 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> A-number typo in definition corrected - _R. J. Mathar_, Aug 30 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

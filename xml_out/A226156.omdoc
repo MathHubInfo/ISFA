@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A226156.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A226156">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,0,1,0,1,0,1,0,5,0,691,0,35,0,3617,0,43867,0,1222277,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 854513,0,236364091,0,8553103,0,23749461029,0,8615841276005,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 84802531453387,0,90219075042845,0,26315271553053477373,0,38089920879940267</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = BS(n) * W(n) where BS = sum_{k=0..n} ((-1)^k*k!/(k+1)) S(n, k) and S(n, k) the Stirling subset numbers A048993(n, k). W(n) = product{ p primes &lt;= n+1 such that p divides n+1 or p-1 divides n } = A225481(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)/A225481(n) is a representation of the Bernoulli numbers. This is case m = 1 of the scaled generalized Bernoulli numbers defined as sum_{k=0..n} ((-1)^k*k!/(k+1)) S_{m}(n,k) where S_{m}(n,k) are generalized Stirling subset numbers. A225481(n) can be seen as an analog of the Clausen numbers A141056(n). Reduced to lowest terms a(n)/A225481(n) becomes A027641(n)/A027642(n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Peter Luschny, &lt;a href=&quot;http://www.luschny.de/math/euler/StirlingFrobeniusNumbers.html&quot;&gt;Stirling-Frobenius numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Peter Luschny, &lt;a href=&quot;http://www.luschny.de/math/euler/GeneralizedBernoulliNumbers.html&quot;&gt;Generalized Bernoulli numbers&lt;/a&gt;.</CMP>
+    </omtext><assertion class="example">
+      <CMP> The numerators of 1/1, -1/2, 1/6, 0/2, -1/30, 0/6, 1/42, 0/2, -1/30, 0/10, 5/66, 0/6, -691/2730, 0/14, 35/30, 0/2, -3617/510, 0/6, 43867/798, ... (the denominators are A225481(n)).</CMP>
+    </assertion><omtext class="program">
+      <CMP> (Sage)</CMP>
+    </omtext><omtext class="program">
+      <CMP> @CachedFunction</CMP>
+    </omtext><omtext class="program">
+      <CMP> def EulerianNumber(n, k, m) :   # -- The Eulerian numbers --</CMP>
+    </omtext><omtext class="program">
+      <CMP>     if n == 0: return 1 if k == 0 else 0</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return (m*(n-k)+m-1)*EulerianNumber(n-1, k-1, m) + \</CMP>
+    </omtext><omtext class="program">
+      <CMP>            (m*k+1)*EulerianNumber(n-1, k, m)</CMP>
+    </omtext><omtext class="program">
+      <CMP> @CachedFunction</CMP>
+    </omtext><omtext class="program">
+      <CMP> def SF_BS(n, m):   # -- The scaled Stirling-Frobenius Bernoulli numbers --</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return add(add(EulerianNumber(n, j, m)*binomial(j, n - k) \</CMP>
+    </omtext><omtext class="program">
+      <CMP>            for j in (0..n))/((-m)^k*(k+1)) for k in (0..n))</CMP>
+    </omtext><omtext class="program">
+      <CMP> def A226156(n):    # -- The numerators of SF_BS(n, 1) relative to A225481 --</CMP>
+    </omtext><omtext class="program">
+      <CMP>     C = mul(filter(lambda p: ((n+1)%p == 0) or (n%(p-1) == 0), primes(n+2)))</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return C*SF_BS(n, 1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> [A226156(n) for n in (0..25)]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A225481, A226157.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,frac</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,11</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Peter Luschny_, May 30 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

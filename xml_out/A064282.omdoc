@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A064282.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A064282">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,1,6,12,1,9,33,55,1,12,63,182,273,1,15,102,408,1020,1428,1,18,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 150,760,2565,5814,7752,1,21,207,1265,5313,15939,33649,43263,1,24,273,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1950,9750,35880,98670,197340,246675,1,27,348,2842,16443,71253,237510</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle with a(n,k)=C(3n+3,k)*(n-k+1)/(n+1).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harry J. Smith, &lt;a href=&quot;/A064282/b064282.txt&quot;&gt;Table of n, a(n) for n=0,...,1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064282"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A064282"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="k"/>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="a" cd="A064282"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="a" cd="A064282"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="a" cd="A064282"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>[starting with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064282"/>
+      <OMI>0</OMI><OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064282"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>or <OMOBJ>
+        <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMV name="k"/>
+    </OMA>
+      </OMOBJ>].
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Flatten[Table[Binomial[3n+3,k] (n-k+1)/(n+1),{n,0,10},{k,0,n}]] (* _Harvey P. Dale_, Dec 26 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) { n=-1; for (m=0, 10^9, for (k=0, m, a=binomial(3*m + 3, k)*(m - k + 1)/(m + 1); write(&quot;b064282.txt&quot;, n++, &quot; &quot;, a); if (n==1000, break)); if (n==1000, break) ) } [From _Harry J. Smith_, Sep 11 2009]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Columns include A000012 and A008585. Right hand columns include A001764 and A006630. Row sums are A047099. Triangles A010054 (Triangle Indicator), A007318 (Pascal) and A050166 form a sequence which has this as its next member.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Henry Bottomley_, Sep 24 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A098651.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A098651">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,6,15,30,39,78,105,910,7735,18655,98605</CMP>
+    </omtext><omtext class="name">
+      <CMP> Where A098650 reaches a record.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (* first do *) Needs[&quot;NumberTheory`NumberTheoryFunctions`&quot;] (* then *) PrimeFactors[n_] := Flatten[ Table[ # [[1]], {1} ] &amp; /@ FactorInteger[ n ]]; f[n_] := Block[{k = n + 1}, If[EvenQ[k], k++ ]; While[ PrimeQ[k] || Union[ PowerMod[ PrimeFactors[n], k - 1, k]] != {1}, k += 2]; k]; a = {1}; b = {9}; Do[ If[ SquareFreeQ[n], c = f[n]; If[c &gt; b[[ -1]], AppendTo[a, n]; AppendTo[b, c]; Print[n]]], {n, 2, 145000}]; a</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A098650, A098652.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Sep 18 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

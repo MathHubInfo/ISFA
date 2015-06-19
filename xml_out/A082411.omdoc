@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A082411.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A082411">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 407389224418,76343678551,483732902969,560076581520,1043809484489,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1603886066009,2647695550498,4251581616507,6899277167005,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11150858783512,18050135950517,29200994734029,47251130684546,76452125418575,123703256103121,200155381521696,323858637624817</CMP>
+    </assertion><omtext class="name">
+      <CMP> Second-order linear recurrence sequence with a(n) = a(n-1) + a(n-2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(0) = 407389224418, a(1) = 76343678551. This is a second-order linear recurrence sequence with a(0) and a(1) coprime that does not contain any primes. It was found by John Nicol in 1999.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. L. Graham, Math. Mag. 37, 1964, pp. 322-324.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, Math. Mag. 63, 1990, pp. 21-25.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. S. Wilf, Letters to the Editor, Math. Mag. 63, 1990.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A082411/b082411.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tanya Khovanova, &lt;a href=&quot;http://www.tanyakhovanova.com/RecursiveSequences/RecursiveSequences.html&quot;&gt;Recursive Sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. W. Nicol, &lt;a href=&quot;http://www.combinatorics.org/Volume_6/PostScriptfiles/v6i1r44.ps&quot;&gt;A Fibonacci-like sequence of composite numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1,1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMF dec="4.07389224418E11"/><OMA><OMS name="times"/><OMF dec="3.31045545867E11"/><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[_Colin Barker_ ,Jun 19 2012 ]
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> a:= n-&gt; (&lt;&lt;0|1&gt;, &lt;1|1&gt;&gt;^n. &lt;&lt;407389224418, 76343678551&gt;&gt;)[1, 1]:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..20);  # _Alois P. Heinz_, Apr 04 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000032 (Lucas numbers), A000045 (Fibonacci numbers), A083103, A083104, A083105, A083216.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Harry J. Smith_, Apr 23 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

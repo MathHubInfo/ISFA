@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A200674.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A200674">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,9,61,385,2365,14353,86605,521089,3130909,18798577,112830829,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 677103073,4062972733,24378899281,146276584333,877669071937,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5266043129437,31596344870065,189578327500717,1137470739845281</CMP>
+    </assertion><omtext class="name">
+      <CMP> Eccentricity of Tower of Hanoi graph H_n^{3} (divided by 3).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Andreas M. Hinz and Daniele Parisse, &lt;a href=&quot;http://dx.doi.org/10.1007/s00373-011-1076-4&quot;&gt;The Average Eccentricity of Sierpinski Graphs&lt;/a&gt;, GRAPHS AND COMBINATORICS, 2011. http://www.springerlink.com/content/l573mgj318844572/.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (10,-27,18).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="y" cd="A200674"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="y" cd="A200674"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMS name="y" cd="A200674"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="n"/>
+    </OMA></OMA><OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>0</OMI>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A200674"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="y" cd="A200674"/>
+      <OMV name="n"/>
+    </OMA><OMI>3</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A200674"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>6</OMI>
+      <OMV name="n"/>
+    </OMA></OMA><OMI>45</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>5</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar ,Dec 13 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar ,Dec 13 2011 
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Nov 20 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

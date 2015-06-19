@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A056758.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A056758">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,13,17,19,23,29,31,37,41,43,47,49,53,59,61,65,67,69,71,73,74,77,79,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 82,83,85,86,87,89,91,93,94,95,97,101,103,106,107,109,111,113,115,118,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 119,121,122,123,125,127,129,131,133,134,137,139,141,142,143,145,146</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n for which d[n]^3 &lt; n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The complementary set (d^3&gt;n) is finite, albeit with very large terms. See also d[n]^2&lt;n, A035035.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="d" cd="A056758"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000005"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> n=254, d[n]=4, d^3=64&lt;254</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A035033-A035035, A034884.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Aug 16 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

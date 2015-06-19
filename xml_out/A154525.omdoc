@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A154525.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A154525">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,5,7,19,31,47,89,127,139,2251,3271,4253,4373,4549,5449,13331,37123</CMP>
+    </omtext><omtext class="name">
+      <CMP> Primes p such that LCM[1,2,3,...,p-2,p-1,p] + 1 is prime.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMR xref="A049537"/>
+      <OMV name="INTERSECT"/>
+    </OMA><OMR xref="A000040"/></OMA>
+      </OMOBJ>.-Chandler 
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI) isok(p) = isprime(p) &amp;&amp; (isprime(lcm(vector(p, i, i)) + 1)); \\ _Michel Marcus_, Oct 26 2013, Feb 25 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A056604, A154524, A154526.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lekraj Beedassy_, Jan 11 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Insert a(1)=2 and extend a(8)-a(18) from _Ray Chandler_, Jan 16 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

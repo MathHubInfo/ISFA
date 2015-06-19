@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A128756.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A128756">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,3,14,7,2,11,12,9,1,5,4,15,20,17,26,21,22,23,36,10,19,31,8,13,32,27,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16,29,34,33,48,30,28,39,42,41,44,35,37,43,24,45,52,47,50,51,58,55,25,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 67,56,53,38,63,62,54,64,61,40,77,66,71,68,18,70,59,78,79,74,85,65,46</CMP>
+    </assertion><omtext class="name">
+      <CMP> Permutation sequence, created through the &quot;lucky numbers&quot; (A000959), by swapping n-th natural number by the (n-g)-th sequentially, where g=lucky(n+1)-lucky(n)-1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Similarly to A128754, this sequence also shows the characteristics of an &quot;infinite braid&quot;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ferenc Adorjan, &lt;a href=&quot;/A128756/b128756.txt&quot;&gt;Table of n,a(n) for n=1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {vperm(z)=local(n,m,q,v,x,j,g);</CMP>
+    </omtext><omtext class="program">
+      <CMP> /* Permutation of positive integers so that starting with the sequence of positive integers,</CMP>
+    </omtext><omtext class="program">
+      <CMP> sequentially swap the i-th term with max(i-g(i),1)-th term, where g(i)=z[i+1]-z[i]-1. */</CMP>
+    </omtext><omtext class="program">
+      <CMP> j=matsize(z)[2]-1;n=j-z[j]+z[j-6];v=vector(j);x=vector(n);for(i=1,j,v[i]=i);</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(i=1,j,g=min(z[i+1]-z[i]-1,i-1);q=v[i];v[i]=v[i-g];v[i-g]=q);for(i=1,n,x[i]=v[i]);return(x)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> a=vperm(A000959)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Inverse of A128757, Cf. A128754, A128755 and A000959.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Ferenc Adorjan (fadorjan(AT)freemail.hu or ferencadorjan(AT)gmail.com), Mar 24 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

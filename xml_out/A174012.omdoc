@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A174012.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A174012">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,3,18,6,30,9,42,12,54,15,66,18,78,21,90,24,102,27,114,30,126,33,138,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 36,150,39,162,42,174,45,186,48,198,51,210,54,222,57,234,60,246,63,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 258,66,270,69,282,72,294,75,306,78,318,81,330,84,342,87,354,90,366,93,378,96</CMP>
+    </assertion><omtext class="name">
+      <CMP> 3*A064680(n).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A174012"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A064680"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,similar to <OMOBJ>
+        <OMR xref="A165988"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A174012"/>
+      <OMV name="n"/>
+    </OMA><OMV name="mod"/><OMI>9</OMI></OMA>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMR xref="A080425"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>(period length <OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>).
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A174012"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A017593"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A174012"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A008585"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Curtz_, Mar 05 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

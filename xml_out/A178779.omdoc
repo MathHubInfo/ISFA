@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A178779.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A178779">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,1,2,1,1,0,1,0,1,1</CMP>
+    </omtext><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of the polynomial x^12*(x^6-1)*(x^4-1)*(x^3-1)*(x-1) in increasing powers of x.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> q^24*(q^12-1)*(q^8-1)*(q^6-1)*(q^2-1) is the order of the simple group F_4(q), if q is a prime power.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. L. Griess, Jr., Twelve Sporadic Groups, Springer, 1998; see p. 169.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A008913, A178795.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,fini,full,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,20</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Dec 26 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

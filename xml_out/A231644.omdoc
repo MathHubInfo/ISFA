@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A231644.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A231644">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,35,920,137961,96014413,374409597564,7673178325424236,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 823755531731133088630,468550736330699430524865279</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nXn 0..2 arrays with no element less than a strict majority of its horizontal and vertical neighbors</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Diagonal of A231651</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0....0..2..1....1..1..2....0..0..1....0..2..0....2..0..0....0..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..2....0..1..1....0..0..1....2..0..1....0..0..0....1..0..0....0..2..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..1....0..1..1....0..0..1....1..0..0....0..0..2....1..2..2....0..0..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Nov 12 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

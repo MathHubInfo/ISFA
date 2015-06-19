@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A048811.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A048811">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,3,6,9,17,27,47,78,135,224,384,642,1088,1827,3088,5182,8736,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 14661,24660,41378,69500,116534,195509,327627,549104,919593,1539985,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2577399,4313102,7214374,12064930,20169283,33710370,56324729,94089240</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of rooted trees with n nodes with every leaf at height 6.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A048811/b048811.txt&quot;&gt;Table of n, a(n) for n = 7..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ro#rooted&quot;&gt;Index entries for sequences related to rooted trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Euler transform of <OMOBJ>
+        <OMA>
+      <OMR xref="A048810"/>
+      <OMV name="shifted"/>
+    </OMA>
+      </OMOBJ>right .
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A048808-A048816.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Column k=6 of A244925.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 7,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Christian G. Bower_, Apr 15 1999.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

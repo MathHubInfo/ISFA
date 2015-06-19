@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A051944.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A051944">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,18,65,238,882,3300,12441,47190,179894,688636,2645370,10192588,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 39373700,152443080,591385545,2298248550,8945490510,34867625100,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 136079265630,531693754020</CMP>
+    </assertion><omtext class="name">
+      <CMP> C(n)*(4n+1) where C(n) = Catalan numbers (A000108).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. H. Beiler, Recreations in the Theory of Numbers, Dover, N.Y., 1964, pp. 194-196.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      The Hankel determinant transform is <OMOBJ>
+        <OMA>
+      <OMR xref="A025172"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Michael Somos_ ,Sep 17 2006 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      -<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A051944"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A051944"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Nov 19 2014 
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI) {a(n)=if(n&lt;0, 0, (4*n+1)*binomial(2*n,n)/(n+1))} /* _Michael Somos_, Sep 17 2006 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A016777, A000108, A051924.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Barry E. Williams_, Dec 20 1999</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A063397.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A063397">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,31,111,343,979,2655,6943,17663,43967,107519,259071,616447,1451007,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3383295,7823359,17956863,40943615,92798975,209190911,469237759,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1047789567,2329935871,5161091071,11391729663,25060966399,54962159615</CMP>
+    </assertion><omtext class="name">
+      <CMP> T(4,n) with T(n,m) as in A063394.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Floor van Lamoen_, Jul 16 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

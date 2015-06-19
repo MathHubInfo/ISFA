@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A126701.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A126701">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,4,14,56,283,1738,12457,102492,951651,9830851,111757480,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1385739200,18604785172,268807211509,4157797131788,68538901559776,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1199382039260721,22203590239217092</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = number of primes &lt;= !n, where !n is subfactorial n.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A126701"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000720"/>
+      <OMA>
+      <OMR xref="A000166"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Jens Kruse Andersen_ ,Jul 18 2014 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(5)=14, because !5=44 and the number of primes up to 44 is 14.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000166.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> hard,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Shyam Sunder Gupta_, Feb 11 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(17)-a(20) from _Jens Kruse Andersen_, Jul 18 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

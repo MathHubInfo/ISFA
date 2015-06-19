@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A074816.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A074816">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,3,3,3,9,3,3,3,9,3,9,3,9,9,3,3,9,3,9,9,9,3,9,3,9,3,9,3,27,3,3,9,9,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9,9,3,9,9,9,3,27,3,9,9,9,3,9,3,9,9,9,3,9,9,9,9,9,3,27,3,9,9,3,9,27,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9,9,27,3,9,3,9,9,9,9,27,3,9,3,9,3,27,9,9,9,9,3,27,9,9,9,9,9,9,3,9,9,9</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = sum(d|n, tau(d)*mu(d)^2 ).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Terms are powers of 3.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The inverse Mobius transform of A074823, as the Dirichlet g.f. is product_{primes p} (1+2*p^(-s)) and the Dirichlet g.f. of A074816 is product_{primes p} (1+2*p^(-s))/(1-p^(-s)). - R. J. Mathar, Feb 09 2011</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Zumkeller, &lt;a href=&quot;/A074816/b074816.txt&quot;&gt;Table = of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A074816"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="m"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>is divisible by <OMOBJ>
+        <OMV name="m"/>
+      </OMOBJ>distinct primes .<OMOBJ>
+        <OMV name="i"/>
+      </OMOBJ>.e .<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A074816"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>is in <OMOBJ>
+        <OMR xref="A000961"/>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A074816"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>9</OMI>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>is in <OMOBJ>
+        <OMA>
+      <OMR xref="A007774"/>
+      <OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A074816"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMA>
+      <OMR xref="A001221"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMA>
+      <OMS name="omega" cd="A074816"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.Multiplicative with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A074816"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>.-_Vladeta Jovovic_ ,Sep 09 2002 .
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A074816"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="tau_3" cd="A074816"/>
+      <OMA>
+      <OMS name="rad" cd="A074816"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A007425"/>
+      <OMA>
+      <OMR xref="A007947"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMV name="_Enrique"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>Pérez Herrero_ ,Jun 24 2010 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A074816"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="abs" cd="A074816"/>
+      <OMA>
+      <OMS name="sum" cd="A074816"/>
+      <OMA>
+      <OMS name="divisible" cd="arithemtics">
+        <OMV name="d"/>
+        <OMV name="n"/>
+      </OMS>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMR xref="A000005"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="mu" cd="A074816"/>
+      <OMV name="d"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>[From _Enrique Pérez Herrero_ ,Jun 28 2010 ]
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> A074816[n_]:=3^PrimeNu[n]; [From _Enrique Pérez Herrero_, Jun 28 2010</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001221, A034444, A124508.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,mult</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Benoit Cloitre_, Sep 08 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

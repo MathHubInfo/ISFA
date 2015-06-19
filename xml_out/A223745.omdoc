@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A223745.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A223745">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 39,39,1521,1521,144495,162583,21793395,30730023,6934356117,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9808559487,2895682234887,4474602111861,1576942337224917</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX5 0..2 arrays with every row and column least squares fitting to a zero slope straight line, with a single point array taken as having zero slope</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 5 of A223747</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..2..1..2..2....2..2..1..2..2....2..0..2..0..2....0..0..2..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..1..0..1....1..0..0..2..0....2..0..1..2..1....0..1..1..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..2..1..2..2....2..2..1..2..2....2..0..2..0..2....0..0..2..0..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Mar 27 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

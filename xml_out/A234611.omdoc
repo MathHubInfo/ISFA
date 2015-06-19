@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A234611.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A234611">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 9,729,1027243729,1000000302700030542431027243729,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1000000000000000000003000000302700000000003000000605400030542431000000302700030542431027243729</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n+1) is next smallest cube ending with a(n), initial term is 9.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Next number is 283 decimal digits long.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A050646, A050648, A050650, A234606, A234607, A234608, A234609, A234610, A234605.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Derek Orr_, Dec 28 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

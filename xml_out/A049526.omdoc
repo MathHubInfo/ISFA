@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A049526.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A049526">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,6,22,94,458,2512,15354,103436,758848</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of possible sets {{row sums}, {column sums}} of a 2n X 2n matrix with entries from {0,1,-1} and all row and column sums distinct.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is known that such matrices do not exist of size (2n+1) X (2n+1).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A049475, A049527.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michael Kleber_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

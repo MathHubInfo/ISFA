@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A009331.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A009331">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,12,32,72,152,312,392,632,792,872,1032,1272,1592,1752,1832,2072,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2312,2552,3192,3512,3672,3752,4152,4632,4712,4872,5112,5192,6392,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7032,7352,7512,7592,8312,9272,9432,9512,9752,9992,10232,10392,10472,10952,12392</CMP>
+    </assertion><omtext class="name">
+      <CMP> If a, b in sequence, so is ab+8.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

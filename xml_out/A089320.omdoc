@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A089320.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A089320">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,12,21,12,215,5124,42154,451248,8421543,34512480,84215439,93451248,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 842154391,1934512482,284215439115,51193451248224,422842154391154,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4511934512482248,842284215439115425,5245119345124822480</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(1) = 1, a(n) = smallest multiple of n using nonzero digits beginning with the digit reversal of a(n-1), if n is not == 0 (mod 10), else a(10^r*k) =10^r*{digit Reversal of a(10^r*k-1)}.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A089321.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Nov 03 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _David Wasserman_, Sep 09 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

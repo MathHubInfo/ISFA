@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A172764.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A172764">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,141,95635680,1557850709802421,338059904123009135280850,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 640278723754096114457315005223400,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7745310191767932461627415566004172302489000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 3*n X n 0..3 arrays with row sums 4 and column sums 12</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A172764/b172764.txt&quot;&gt;Table of n, a(n) for n=1..17&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Feb 06 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A098740.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A098740">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,6,7,8,11,14,17,18,19,22,23,24,27,28,29,32,35,38,39,40,43,46,49,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 50,51,54,57,60,61,62,65,66,67,70,71,72,75,78,81,82,83,86,87,88,91,92,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 93,96,99,102,103,104,107,108,109,112,113,114,117,120,123,124,125,128,131</CMP>
+    </assertion><omtext class="name">
+      <CMP> Start with the sequence of natural numbers S(0)={1,2,3,...} and define, for i&gt;0, S(i)=D(i)S(i-1), where D(i)A denotes the operation of deleting the a(1+[i/2])th term of A={a(1),a(2),a(3),...}. E.g. D(3){1,2,4,6,9,10,...} means to delete the (a(1+[3/2])th = 2nd term of {1,2,4,9,10,...}, giving {1,4,9,10,...}. The given sequence is the limit of S(i) as i-&gt;inf.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It appears that the first difference sequence of {a(n)} is A080426.</CMP>
+    </omtext><assertion class="example">
+      <CMP> D(1){1,2,3,4,5,6,...}={2,3,4,5,6,7,...} (delete first term),</CMP>
+    </assertion><assertion class="example">
+      <CMP> D(2){2,3,4,5,6,7,...}={2,3,5,6,7,8,...} (delete 3rd term,</CMP>
+    </assertion><assertion class="example">
+      <CMP> D(3){2,3,5,6,7,8,9,...}={2,3,6,7,8,9,...} (delete 3rd term),</CMP>
+    </assertion><assertion class="example">
+      <CMP> D(4)(2,3,6,7,8,9,10,...}={2,3,6,7,8,10,...}, (delete 6th term},</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> Limiting case: {a(n)}.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A080426.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _John W. Layman_, Oct 29 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

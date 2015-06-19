@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A217242.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A217242">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,7,182,22484,10146841,17541907856</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of triangular nXnXn arrays of occupancy after each element moves to some neighbor and with no occupancy greater than 4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 4 of A217245</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> .....1........2........0........0........0........0........0........0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ....2.0......0.2......0.2......3.2......2.0......1.1......2.0......1.4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...3.1.0....1.0.0....0.1.4....1.1.0....3.0.1....2.0.0....1.4.0....1.0.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0.2.1.0..0.2.2.1..0.2.1.0..0.1.1.1..1.1.2.0..2.0.2.2..0.0.2.1..1.0.2.0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Sep 28 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A005619.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A005619">
+          <assertion class="***** TTTT *****">
+      <CMP> M5020</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 16,240,6448,187184,5474096,160196400,4688357168,137211717424,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4015706384176</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of Boolean functions realized by n-input cascades.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. T. Butler, Tandem networks of universal cells, IEEE Trans. Computers, C-27 (1978), 681-690.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Bo#Boolean&quot;&gt;Index entries for sequences related to Boolean functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A005619:=-16*(1-18*z+20*z**2)/(z-1)/(80*z**2-32*z+1); [Conjectured by _Simon Plouffe_ in his 1992 dissertation.]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

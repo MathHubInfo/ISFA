@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A246965.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A246965">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,5,6,7,11,12,14,15,16,21,25,26,27,29,30,32,34,37,39,40,41,44,46,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 47,49,50,54,55,60,62,65,67,69,71,72,77,81,84,85,89,90,91,92,96,105,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 106,107,111,112,116,117,120,124,127,131,132,134,135,137,145,146</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that 19*n-(n+19) is a prime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jens Kruse Andersen, &lt;a href=&quot;/A246965/b246965.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A246965"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A138918"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 17 = (19*2)-(19+2) is prime, so 2 is a term.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PHP)</CMP>
+    </omtext><omtext class="program">
+      <CMP> for($num=1;$num&lt;x;$num++)</CMP>
+    </omtext><omtext class="program">
+      <CMP> {</CMP>
+    </omtext><omtext class="program">
+      <CMP>     $num2=$i;</CMP>
+    </omtext><omtext class="program">
+      <CMP>     $finalnumber=($num2*19)-($num2+19);</CMP>
+    </omtext><omtext class="program">
+      <CMP>     //gmp_nextprime will find a primenumber greater than the given number</CMP>
+    </omtext><omtext class="program">
+      <CMP>     $prime=gmp_nextprime($finalnumber-1);</CMP>
+    </omtext><omtext class="program">
+      <CMP>     if($prime==$finalnumber)</CMP>
+    </omtext><omtext class="program">
+      <CMP>     {</CMP>
+    </omtext><omtext class="program">
+      <CMP>          $sequence=$sequence.&quot;,&quot;.$prime;</CMP>
+    </omtext><omtext class="program">
+      <CMP>     }</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><omtext class="program">
+      <CMP> echo $sequence;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) lista(nn) = {for (n=1, nn, if (isprime(18*n-19), print1(n, &quot;, &quot;)););} \\ _Michel Marcus_, Sep 09 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [n for n in (2..200) if is_prime(18*n-19)] # _Bruno Berselli_, Sep 09 2014</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Shanmuga Subramanian_, Sep 08 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

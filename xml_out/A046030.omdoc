@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A046030.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A046030">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,4,9,10,11,14,19,40,41,44,49,90,91,94,99,100,101,104,109,110,111,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 114,119,140,141,144,149,190,191,194,199,400,401,404,409,410,411,414,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 419,440,441,444,449,490,491,494,499,900,901,904,909,910,911,914,919</CMP>
+    </assertion><omtext class="name">
+      <CMP> Digits are squares.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Bruno Berselli, &lt;a href=&quot;/A046030/b046030.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/SmarandacheSequences.html&quot;&gt;Smarandache Sequences&lt;/a&gt;.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Union[FromDigits/@Flatten[With[{l={0,1,4,9}},Table[Tuples[l,{i}],{i,3}]],1]]  (* _Harvey P. Dale_, Dec 19 2010 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[0, 999], Intersection[{2, 3, 5, 6, 7, 8}, Union[IntegerDigits[#]]] == {} &amp;] (* _T. D. Noe_, Dec 20 2010 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [n: n in [0..1000] | forall{d: d in Intseq(n) | d in [0,1,4,9]}]; // _Bruno Berselli_, Jan 10 2013</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric W. Weisstein_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

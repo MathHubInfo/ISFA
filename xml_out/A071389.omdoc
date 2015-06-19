@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A071389.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A071389">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,8,32,48,396,72,216,1056,1320,240,480,15936,3072,7344,2016,3024,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9984,22848,3360,13248,9360,4800,9504,9216,23328,7680,53280,12480,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 29376,91200,159744,22464,228960,29952,179200,47040,68544,15840,20736,61440</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least number m such that cardinality of InvPhi[m] = prime(n).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n)=Min{x; Card[InvPhi[x]]=p(n), n-th prime}</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> n=11: p(11)=31, Card[InvPhi[x]]=31 for {240,672,...}; the smallest is 240 = a(11).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000010, A014197, A058277, A063512, A071386-A071388.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, May 23 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 4 more terms from _Emeric Deutsch_, Jul 25 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Max Alekseyev_, Apr 24 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

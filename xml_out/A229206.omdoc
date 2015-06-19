@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A229206.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A229206">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,31,59,79,1117,1303,1733,1913,2347,2963,3169,3769,41017,43003,47017,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 53069,59053,61027,67043,71119,73079,79147,83117,89113,97151,101117,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 103099,107197,109159,113147,127247,131231,137251,139303,149239,151247,157219,163337</CMP>
+    </assertion><omtext class="name">
+      <CMP> n-th prime that begins with prime(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Diagonal of triangle A114009.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) ok(np, dfp) = {dnp = digits(np); xdnp = vector(#dfp, id, dnp[id]); xdnp == dfp;}</CMP>
+    </omtext><omtext class="program">
+      <CMP> findnextp(p, dfp) = {np = nextprime(p+1); while (! ok(np, dfp), np = nextprime(np+1)); np;}</CMP>
+    </omtext><omtext class="program">
+      <CMP> a(n) = {p = fp = prime(n); dfp = digits(fp); for (k = 2, n, p = findnextp(p, dfp);); p;} \\ _Michel Marcus_, Sep 16 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A114009.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Marcus_, Sep 16 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

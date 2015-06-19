@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A195325.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A195325">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,59,71,29,59,149,191,641,149,347,809,461,3371,1487,857,1301,1877,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5849,4721,9239,4271,1619,1481,20507,20981,32117,13337,19379,24977,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 48779,20441,25301,5651,37991,17747,43577,176777,145757,191249,84809,150209,11717</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least n-gap prime: a(n) = least prime p for which there is no prime between n*p and n*q, where q is the next prime after p.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Such a prime always exists.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence is unbounded.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture. For n &gt;= 2, a(n) is a lesser of twin primes (A001359). This implies the twin prime conjecture. - _Vladimir Shevelev_, Sep 15 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If a member of this sequence is not the lesser of a twin prime pair, it is greater than 10^10. - _Charles R Greathouse IV_, Sep 15 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A dual sequence: b(n)= least prime p for which there is no prime between n*q and n*p, where q is the previous prime before p. Evidently, b(n) is the next prime after a(n): 3,61,73,31,..., and for n&gt;=2, by the same conjecture, b(n) is a greater of twin primes.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz and Charles R Greathouse IV, &lt;a href=&quot;/A195325/b195325.txt&quot;&gt;Table of n, a(n) for n = 1..169&lt;/a&gt;, (first 100 terms by Alois P. Heinz)</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= proc(n) local p, q;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       p:= 2; q:= nextprime(p);</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       while nextprime(n*p) &lt; (n*q) do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         p, q:= q, nextprime(q)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       od; p</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq (a(n), n=1..25); # _Alois P. Heinz_, Sep 15 2011</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> pQ[p_, r_] := Block[{q = NextPrime[p]},NextPrime[r*p]&gt; r*q]; f[n_] := Block[{p = 2}, While[ !pQ[p, n], p = NextPrime[p]]; p]; f[1] = 2; Array[f, 42] (* _Robert G. Wilson v_, Sep 18 2011 *) (* Revised by _Zak Seidov_, Sep 19 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A080192, A195270, A195271, A164368, A194658, A164294, A110835, A195465.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Shevelev_, Sep 15 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

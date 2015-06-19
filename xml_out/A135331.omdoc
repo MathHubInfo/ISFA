@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A135331.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A135331">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,5,13,1,36,6,105,27,320,108,1,1011,409,10,3289,1508,65,10957,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5491,347,1,37216,19898,1658,14,128435,72063,7395,119,449142,261436,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 31527,794,1,1588228,951258,130353,4583,18</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle read by rows: T(n,k) is the number of Dyck paths of semilength n having k DUUU's starting at level 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The formula for T(n,k)=l_{n,k} in the reference (p. 2919) does not appear to work (a typo is possible). - _Emeric Deutsch_, Dec 14 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row 0 has 1 term; row n (n&gt;=1) has floor((n+2)/3) terms. Row sums are the Catalan numbers (A000108). Column 0 yields A135337. - _Emeric Deutsch_, Dec 14 2007</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Sapounakis, I. Tasoulas and P. Tsikouras, Counting strings in Dyck paths, Discrete Math., 307 (2007), 2909-2924.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .=<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="G" cd="A135331"/>
+      <OMV name="t"/><OMV name="z"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="zC"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="t"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="C"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="C"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A135331"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="z"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="z"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>is the <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .of the Catalan numbers <OMOBJ>
+        <OMR xref="A000108"/>
+      </OMOBJ>.-_Emeric Deutsch_ ,Dec 14 2007 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5</CMP>
+    </assertion><assertion class="example">
+      <CMP> 13 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 36 6</CMP>
+    </assertion><assertion class="example">
+      <CMP> 105 27</CMP>
+    </assertion><assertion class="example">
+      <CMP> 320 108 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1011 409 10</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3289 1508 65</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10957 5491 347 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> T(5,1)=6 because we have U(DUUU)UDDDD, U(DUUU)DUDDD, U(DUUU)DDUDD, U(DUUU)DDDUD, UDU(DUUU)DDD and UUD(DUUU)DDD (the DUUU's starting at level 1 are shown between parentheses).</CMP>
+    </assertion><omtext class="maple">
+      <CMP> G:=1+z*C^2/(1+(1-t)*z^3*C^4): C:=((1-sqrt(1-4*z))*1/2)/z: Gser:=simplify(series(G,z=0,16)): for n from 0 to 14 do P[n]:=sort(coeff(Gser,z,n)) end do: 1; for n from 0 to 14 do seq(coeff(P[n],t,j),j=0..floor((n-1)*1/3)) end do; # yields sequence in triangular form - _Emeric Deutsch_, Dec 14 2007</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000108, A135337.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabf</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Dec 07 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Emeric Deutsch_, Dec 14 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

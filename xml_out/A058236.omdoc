@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A058236.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A058236">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,8,40,44,56,64,148,200,320,328,400</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers n such that x^n + x^3 + 2 is irreducible over GF(3).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Do[ If[ ToString[ Factor[ x^n + x^3 + 2, Modulus -&gt; 3 ] ] == ToString[ x^n + x^3 + 2 ], Print[ n ] ], {n, 0, 1054} ]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A057461.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Dec 01 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

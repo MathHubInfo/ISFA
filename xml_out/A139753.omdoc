@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A139753.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A139753">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,8,9,27,36,64,81,125,144,216,225,343,361,512,529,729,784,1000,1024,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1331,1369,1728,1764,2197,2209,2744,2809,3375,3481,4096,4225,4913,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5041,5832,5929,6859,6889,8000,8100,9261,9409,10648,10816,12167,12321,13824</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(2n) = next cube after a(2n-1), a(2n+1) = next square after a(2n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Terms with even indices are cubes n^3 with n=2,3,... (all integers &gt;1), while terms with odd indices are square m^3 with m=1,3,6,9,12,15,19,23,28,32,37,42,47,53,59,65,71,77,83,90,97,104,111,118,126,133,141,149,157,165,173,182,190,199,208,217,226,235,244,253,263,273,282,292,302,312,323,333,344,354,365,375,386,397,408,420,431,442,454,465,477,489,501,513,525,537,549,561,574,586,599,611,624,637,650,663,676,689,703,716,730,743,757,770,784,798,812,826,840,854,869,883,897,912,926,941,956,971,986,1001; cf. A077121 Number of integer squares &lt;= n^3.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1)=1 considered as square,</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2)=8 = least cube &gt;a(1);</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3)=9 = least square &gt;a(2),</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4)=27 = least cube &gt;a(3),</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(5)=36 = least square &gt;a(4),</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(6)=64 = least cube &gt;a(5),</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(7)=81 = least square &gt;a(6),</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(8)=125 = least cube &gt;a(7).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A077113, A077121.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zak Seidov_, May 19 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

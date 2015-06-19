@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A124518.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A124518">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,6,15,18,24,27,42,57,60,66,81,102,105,123,129,132,162,195,213,231,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 234,255,273,279,297,300,312,330,333,336,339,354,393,402,405,423,426,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 465,480,501,510,528,552,564,585,588,609,627,630,636,645,657,666,669,678</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that 10n-1 and 10n+1 are twin primes.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[678], And @@ PrimeQ[{-1, 1} + 10# ] &amp;] (*Chandler*)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A040040, A045753, A002822, A124065, A124519-A124522, A063983.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Artur Jasinski_, Nov 04 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

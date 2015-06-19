@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A224380.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A224380">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,19,27,35,51,59,67,99,115,123,131,195,227,243,251,259,387,451,483,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 499,507,515,771,899,963,995,1011,1019,1027,1539,1795,1923,1987,2019,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2035,2043,2051,3075,3587,3843,3971,4035,4067,4083,4091,4099,6147,7171,7683,7939,8067,8131,8163,8179</CMP>
+    </assertion><omtext class="name">
+      <CMP> Table read by anti-diagonals of numbers of form (2^n -1)*2^(m+2) + 3 where n&gt;=1, m&gt;=1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The table has row labels 2^n - 1 and column labels 2^(m+2). The table entry is row*col + 3. A MAGMA program is provided that generates the numbers in a table format. The sequence is read along the anti-diagonals starting from the top left corner. Using the lexicographic ordering of A057555  the sequence is:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A(n) = Table(i,j) with (i,j)=(1,1),(1,2),(2,1),(1,3),(2,2),(3,1)...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> +3  |    8    16    32    64   128    256    512 ...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ----|-------------------------------------------</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1   |   11    19    35    67   131    259    515</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 3   |   27    51    99   195   387    771   1539</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 7   |   59   115   227   451   899   1795   3587</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 15  |  123   243   483   963  1923   3843   7683</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 31  |  251   499   995  1987  3971   7939  15875</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 63  |  507  1011  2019  4035  8067  16131  32259</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 127 | 1019  2035  4067  8131 16259  32515  65027</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> All of these numbers have the following property:</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   let m be a member of A(n),</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   if a sequence B(n) = all i such that i XOR (m - 1) = i - (m - 1), then</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   the differences between successive members of B(n) is an alternating</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   series of 1's and 3's with the last difference in the pattern m.</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   The number of alternating 1's and 3's in the pattern is 2^(j+1) - 1,</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   where j is the column index.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> As an example consider A(1) which is 11,</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   the sequence B(n) where i XOR 10 = i - 10 starts as:</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   10, 11, 14, 15, 26, 27, 30, 31, 42... (A214864)</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   with successive differences of:</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   1, 3, 1, 11.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Main diagonal is A191341, the largest k such that k-1 and k+1 in binary representation have the same number of 1's and 0's</CMP>
+    </omtext><omtext class="link">
+      <CMP> Brad Clardy, &lt;a href=&quot;/A224380/b224380.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A224380"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMR xref="A057555"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A057555"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMI>3</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (MAGMA)</CMP>
+    </omtext><omtext class="program">
+      <CMP> //program generates values in a table form,row labels of 2^i -1</CMP>
+    </omtext><omtext class="program">
+      <CMP> for i:=1 to 10 do</CMP>
+    </omtext><omtext class="program">
+      <CMP>     m:=2^i - 1;</CMP>
+    </omtext><omtext class="program">
+      <CMP>     m, [ m*2^n +1 : n in [1..10]];</CMP>
+    </omtext><omtext class="program">
+      <CMP> end for;</CMP>
+    </omtext><omtext class="program">
+      <CMP> //program generates sequence in lexicographic ordering of A057555, read</CMP>
+    </omtext><omtext class="program">
+      <CMP> //along anti-diagonals from top. Primes in the sequence are marked with *.</CMP>
+    </omtext><omtext class="program">
+      <CMP> for i:=2 to 18 do</CMP>
+    </omtext><omtext class="program">
+      <CMP>     for j:=1 to i-1 do</CMP>
+    </omtext><omtext class="program">
+      <CMP>        m:=2^j -1;</CMP>
+    </omtext><omtext class="program">
+      <CMP>        k:=m*2^(2+i-j) + 3;</CMP>
+    </omtext><omtext class="program">
+      <CMP>        if IsPrime(k) then k, &quot;*&quot;;</CMP>
+    </omtext><omtext class="program">
+      <CMP>           else k;</CMP>
+    </omtext><omtext class="program">
+      <CMP>        end if;;</CMP>
+    </omtext><omtext class="program">
+      <CMP>     end for;</CMP>
+    </omtext><omtext class="program">
+      <CMP> end for;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A057555(lexicographic ordering), A214864(example), A224195</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Rows: A062729(i=1), A147595(2 n&gt;=5), A164285(3 n&gt;=3)</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cols: A168616(j=1 n&gt;=4)</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Diagonal: A191341</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> tabl,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Brad Clardy_, Apr 05 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

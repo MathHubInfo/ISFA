@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A218565.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A218565">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1068,14557,16693,30182,32318,45807,47943,61432,63568,77057,79193,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 92682,94818,108307,110443,123932,126068,139557,141693,155182,157318,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 170807,172943,186432,188568,202057,204193,217682,219818,233307,235443,248932,251068,264557</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n^2 + 1 is divisible by a 6th power.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 1068 is in the sequence because 1068^2+1 = 5^6*73</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1999509 is in the sequence because 1999509^2+1=2 * 13 ^ 6 * 29 * 14281;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 390112 is in the sequence because 390112^2+1=5 * 13 * 17 ^ 6 * 97.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Select[Range[2,27000],Max[Transpose[FactorInteger[#^2+1]][[2]]]&gt;5&amp;]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002522, A049532, A034939, A218562, A218563, A218564.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Lagneau_, Nov 02 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

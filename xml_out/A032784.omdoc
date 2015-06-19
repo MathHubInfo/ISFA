@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A032784.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A032784">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,5,7,8,11,12,17,19,22,26,32,33,35,44,47,55,62,68,77,82,89,107,110,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 116,117,132,143,152,176,187,197,215,242,257,264,278,297,332,341,362,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 407,418,440,467,539,572,602,607,656,737,782,803,845,902,957,1007,1034</CMP>
+    </assertion><omtext class="name">
+      <CMP> n(n+1)(n+2)...(n+12) / n+(n+1)+(n+2)+...+(n+12) is an integer.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A032765-A032798.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Patrick De Geest_, May 15 1998</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

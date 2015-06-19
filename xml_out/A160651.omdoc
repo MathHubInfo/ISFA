@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A160651.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A160651">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,2,3,2,2,4,2,4,2,4,4,2,4,2,4,4,2,4,2,3,6,2,8,2,2,4,4,8,2,2,4,2,4,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,2,8,4,4,2,4,8,2,4,4,4,6,2,4,6,2,4,4,6,4,4,4,4,6,4,2,8,4,4,4,2,8,4,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4,2,2,6,2,4,4,4,4,4,12,2,4,4,2,4,2,2,8,2,8,4,2,8,4,8,4,8,8,2,4,2,2,8,2,6,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = number of triangular nonnegative integers that are each equal to n(n+1)/2 - m(m+1)/2, for some m's where 0 &lt;= m &lt;= n.</CMP>
+    </omtext><assertion class="example">
+      <CMP> For n = 6,we have the values of n(n+1)/2 - m(m+1)/2, 0&lt;=m&lt;=n, equal to: 21,20,18,15,11,6,0. Of these, 21,15,6, and 0 are triangular numbers. So a(6) = 4.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A049777, A049780.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Leroy Quet_, May 21 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Ray Chandler_, Jun 16 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A028700.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A028700">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,0,6,0,0,24,18,0,0,96,44,0,192,216,96,0,384,480,180,512,768,888,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 320,0,1536,1440,552,1536,2112,2448,882,0,3456,3840,1354,3072,5376,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5592,2016,0,7680,8064,2844,6656,10176</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of (theta_3(z)*theta_3(2z)*theta_3(4z)+theta_2(z)*theta_2(2z)*theta_2(4z))^3.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

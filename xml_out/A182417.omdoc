@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A182417.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A182417">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,3,4,6,8,11,10,9,12,16,21,17,22,20,18,23,19,24,31,25,32,41,36,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 46,38,48,61,51,64,81,70,88,79,93,75,90,77,95,73,92,76,96,121,104,115,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 112,109,119,107,114,111,117,105,116,106,113,110,118,108</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(0)=0, a(n+1) = (a(n) XOR floor(a(n)/4)) + 1, where XOR is the bitwise exclusive-or operator.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Para-random values on each interval (2^k,2^(k+1)-1), then jump to the next interval (2^(k+1),2^(k+2)-1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> floor(100*log2(indices of 2^x)):</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 0, 100, 200, 258, 345, 445, 490, 622, 708, 812, 847, 965, 1074, 1170, 1205, 1331, 1372, 1524, 1578, 1697, 1798, 1923, 2013, 2092, 2205, 2323, 2363, 2479, 2535, 2674, 2785, 2904, 2973, 3083, 3174, 3210, 3343, 3468, 3605, 3653, 3774, 3885, 3934, 4021, 4124, 4265, 4344, 4444</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Given a(n), the previous term a(n-1) can be unambiguously reconstructed as in the C program.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> As n -&gt; infinity, a(n) -&gt; infinity.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (C)</CMP>
+    </omtext><omtext class="program">
+      <CMP> #include &lt;stdio.h&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> int main(int argc, char **argv) {</CMP>
+    </omtext><omtext class="program">
+      <CMP>   unsigned long long a=0, p, t, prev;</CMP>
+    </omtext><omtext class="program">
+      <CMP>   while(1) {</CMP>
+    </omtext><omtext class="program">
+      <CMP>     prev = a,   a = (a^(a/4)) + 1;</CMP>
+    </omtext><omtext class="program">
+      <CMP>     printf(&quot;%llu, &quot;, prev);</CMP>
+    </omtext><omtext class="program">
+      <CMP>     // Test reversion:</CMP>
+    </omtext><omtext class="program">
+      <CMP>     p=a-1;</CMP>
+    </omtext><omtext class="program">
+      <CMP>     t=p/4;</CMP>
+    </omtext><omtext class="program">
+      <CMP>     while (t)  p^=t, t/=4;</CMP>
+    </omtext><omtext class="program">
+      <CMP>     if (p!=prev) printf(&quot;Reversion failed!&quot;), exit(1);</CMP>
+    </omtext><omtext class="program">
+      <CMP>   }</CMP>
+    </omtext><omtext class="program">
+      <CMP>   return 0;     // indices of 2^x: see C program of A182310.</CMP>
+    </omtext><omtext class="program">
+      <CMP> }               // from _Alex Ratushnyak_, Apr 27 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> N=100; v=vector(N);</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (n=1, N-1, v[n+1] = bitxor( v[n], v[n] \ 8 ) + 1 );</CMP>
+    </omtext><omtext class="program">
+      <CMP> v /* show terms */</CMP>
+    </omtext><omtext class="program">
+      <CMP> /* Joerg Arndt, Apr 28 2012 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A182310.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alex Ratushnyak_, Apr 27 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

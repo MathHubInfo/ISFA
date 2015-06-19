@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A104590.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A104590">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 560,191520,42058800,7864256400,1407126890400,257752421166240,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 50607986220311520,10995419195575214400,2692773804667509763200,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 747221542837742897724800,233698171655650029030743040,81472765051132560093387934080,31268587126068905034073041062400</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of labeled non-planar non-projective-planar toroidal 2-connected K_{3,3}-subdivision-free graphs with n vertices.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> By empirical evidence, the terms possess a curious prime factor behavior. E.g. 2^7*3^2*5*7*13*17*19 divides a(19)=81472765051132560093387934080.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Gagarin, G. Labelle and P. Leroux, Characterization and enumeration of toroidal K_{3,3}-subdivision-free graphs, &lt;a href=&quot;http://front.math.ucdavis.edu/math.CO/0411356&quot;&gt;0411356.htm&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A104591.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 8,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Valery A. Liskovets_, Mar 22 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

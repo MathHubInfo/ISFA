@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A030103.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A030103">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,3,1,5,9,13,2,6,10,14,3,7,11,15,1,17,33,49,5,21,37,53,9,25,41,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 57,13,29,45,61,2,18,34,50,6,22,38,54,10,26,42,58,14,30,46,62,3,19,35,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 51,7,23,39,55,11,27,43,59,15,31,47,63,1,65,129,193,17,81,145,209,33,97,161</CMP>
+    </assertion><omtext class="name">
+      <CMP> Base 4 reversal of n (written in base 10).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A030103/b030103.txt&quot;&gt;Table of n, a(n) for n = 0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.List (unfoldr)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a030103 n = foldl (\v d -&gt; 4*v + d) 0 $ unfoldr dig n where</CMP>
+    </omtext><omtext class="program">
+      <CMP>     dig x = if x == 0 then Nothing else Just $ swap $ divMod x 4</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Oct 10 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n,b=4)=subst(Polrev(base(n,b)),x,b)) /* where */</CMP>
+    </omtext><omtext class="program">
+      <CMP> base(n,b)={my(a=[n%b]);while(0&lt;n\=b,a=concat(n%b,a));a}  \\ - M. F. Hasler, Nov 04 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MIT/GNU Scheme)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (define (A030103 n) (if (zero? n) n (let ((uplim (+ (A000523 n) (- 1 (modulo (A000523 n) 2))))) (add (lambda (i) (* (bit_i n (+ i (expt -1 i))) (expt 2 (- uplim i)))) 0 uplim))))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (define (bit_i n i) (modulo (floor-&gt;exact (/ n (expt 2 i))) 2))</CMP>
+    </omtext><omtext class="program">
+      <CMP> ;; The functional add implements sum_{i=lowlim..uplim} intfun(i):</CMP>
+    </omtext><omtext class="program">
+      <CMP> (define (add intfun lowlim uplim) (let sumloop ((i lowlim) (res 0)) (cond ((&gt; i uplim) res) (else (sumloop (1+ i) (+ res (intfun i)))))))</CMP>
+    </omtext><omtext class="program">
+      <CMP> ;; _Antti Karttunen_, Oct 30 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A004086, A030101 - A030108, A048703, A055948, A035524.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,look</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

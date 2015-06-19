@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A152835.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A152835">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 22,23,21,24,20,25,19,26,18,27,17,28,16,29,15,30,14,31,13,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 32,12,33,11,34,10,35,9,36,8,37,7,38,6,39,5,40,4,41,3,42,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 43,1,44,0,45,1,46,2,47,3,48,4,49,5,50,6,51,7,52,8,53,9,54,10,55,11,56,12</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(0) = -22; a(n) = n-a(n-1).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Colin Barker, &lt;a href=&quot;/A152835/b152835.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_03&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1,1,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A152835"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>89</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>with <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.-_Paolo <OMOBJ>
+        <OMV name="P"/>
+      </OMOBJ>.Lava_ ,Dec 19 2008 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A152835"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A152835"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A152835"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A152835"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.G.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>22</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>45</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>22</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Oct 28 2014 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> A152835:=n-&gt;(1-89*(-1)^n+2*n)/4: seq(A152835(n), n=0..100); # _Wesley Ivan Hurt_, Oct 28 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> lst={};a=-22;Do[a=n-a;AppendTo[lst,a],{n,0,6!}];lst</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) Vec(-(22*x^2-45*x+22)/((x-1)^2*(x+1)) + O(x^100)) \\ _Colin Barker_, Oct 28 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [(1-89*(-1)^n+2*n)/4 : n in [0..100]]; // _Wesley Ivan Hurt_, Oct 28 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A084964, A152832, A152833.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Joseph Stephan Orlovsky_, Dec 14 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Indices added to definition, offset corrected - _R. J. Mathar_, Jan 08 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Name and Mathematica code corrected by _Colin Barker_, Oct 28 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

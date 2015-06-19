@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A122465.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A122465">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,1683,3678726,22377473783</CMP>
+    </omtext><omtext class="name">
+      <CMP> Smooth Power Quartets: The m-th number in the sequence, n, is part of the minimum quartet of numbers n through n-3 such that the highest prime factor of each number x &lt;= floor(x^(1/m)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These were found by R. Gerbicz.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Fred Schneider and R. Gerbicz, &lt;a href=&quot;http://www.mersenneforum.org/showthread.php?t=5647&quot;&gt;Smooth Power Trios&lt;/a&gt;.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Example: The 2nd term:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1680=2^4*3*5*7, 1681=41^2, 1682=2*29^2, 1683=3^2*11*17,</CMP>
+    </assertion><assertion class="example">
+      <CMP> This satisfies because 7 &lt; floor(1680^(1/2) = 40 and 41 &lt;= floor(1681^(1/2))=41.</CMP>
+    </assertion><omtext class="program">
+      <CMP> Program in C written by R. Gerbicz.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A122463, A122464.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> hard,more,nonn,uned</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Fred Schneider_, Sep 09 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A094571.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A094571">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,1,2,1,4,2,2,4,9,5,2,5,9,25,10,5,5,10,25,64,26,10,8,10,26,64,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 169,65,26,13,13,26,65,169,441,170,65,29,18,29,65,170,441,1156,442,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 170,68,34,34,68,170,442,1156,3025,1157,442,173,73,50,73,173,442,1157,3025</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle of binary sums of squares of Fibonacci numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sums = (0,2,4,12,30,...) = A079472.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Row <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>:<OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="F" cd="A094571"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="F" cd="A094571"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="F" cd="A094571"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="F" cd="A094571"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="F" cd="A094571"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="F" cd="A094571"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,...,<OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="F" cd="A094571"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="F" cd="A094571"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Rows 0,1,2,3,4:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 2 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4 2 2 4</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9 5 2 5 9</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000045.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, May 12 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

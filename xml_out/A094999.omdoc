@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A094999.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A094999">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,1,1,1,1,2,2,2,2,2,3,3,3,4,4,4,5,5,6,6,7,8,8,9,10,11,12,13,14,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16,17,19,21,22,25,27,29,32,35,38,42,45,50,54,59,65,71,77,84,92,100,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 109,119,130,142,155,169,185,201,220,240,262,285,311,340,371,404,441,481</CMP>
+    </assertion><omtext class="name">
+      <CMP> Floor(12^n/11^n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A094999/b094999.txt&quot;&gt;Table of n, a(n) for n = 0..900&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      It appears that <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A094999"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="floor" cd="A094999"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>8</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>[From Yakov Shusterman (yakov(AT)mobli.com ),Dec 07 2008 ]
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Table[ Floor[(12/11)^n], {n, 0, 71}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Floor(12^n / 11^n): n in [0..80]]; // Vincenzo Librandi, Sep 08 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) A094999(n):=floor(12^n/11^n)$ makelist(A094999(n),n,0,60); /*_Martin Ettl_, Oct 25 2012*/</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002379, A094969 - A094500.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,9</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, May 26 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

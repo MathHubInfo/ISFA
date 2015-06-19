@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A136189.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A136189">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,5,3,8,7,4,12,11,10,6,17,16,15,14,9,25,23,22,21,18,13,37,34,32,31,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 27,20,19,54,50,47,45,40,30,24,28,79,73,69,66,58,44,36,26,41,116,107,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 101,97,85,64,53,39,29,60,170,157,148,142,125,94,77,57,43,33,88,249,230</CMP>
+    </assertion><omtext class="name">
+      <CMP> The 3rd order Zeckendorf array, T(n,k), read by antidiagonals.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Rows satisfy this recurrence: T(n,k)=T(n,k-1)+T(n,k-3) for all k&gt;=4. Except for initial terms, (row 1) = A000930 (column 1) = A020942 (column 2) = A064105 (column 3) = A064106. As a sequence, the array is a permutation of the natural numbers. As an array, T is an interspersion (hence also a dispersion).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. Kimberling, &quot;The Zeckendorf array equals the Wythoff array,&quot; Fibonacci Quarterly 33 (1995) 3-8.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Row 1 is the 3rd order Zeckendorf basis, given by initial terms b(1)=1,b(2)=2,b(3)=3 and recurrence b(k)=b(k-1)+b(k-3) for k&gt;=4. Every positive integer has a unique 3-Zeckendorf representation: n=b(i(1))+b(i(2))+...+b(i(p)), where |i(h)-i(j))&gt;=3. Rows of T are defined inductively: T(n,1) is the least positive integer not in an earlier row. T(n,2) is obtained from T(n,1) as follows: if T(n,1)=b(i(1))+b(i(2))+...+b(i(p)), then T(n,k+1)=b(i(1+k))+b(i(2+k))+...+b(i(p+k)) for k=1,2,3... .</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Northwest corner:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 2 3 4 6 9 13 19 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5 8 12 17 25 37 54 79 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7 11 16 23 34 50 73 107 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10 15 22 32 47 69 101 148 ...</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A035513, A134563, A136175.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Dec 20 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

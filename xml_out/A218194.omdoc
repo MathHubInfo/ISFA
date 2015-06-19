@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A218194.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A218194">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 57,4001,260205,16703113,1068969245,68410191725,4378092248621,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 280189181606213,17931584186079329,1147588053510298689,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 73443503055457761265,4700247703823958214433,300807117566919214489057</CMP>
+    </assertion><omtext class="name">
+      <CMP> Hilltop maps: number of nX6 binary arrays indicating the locations of corresponding elements not exceeded by any horizontal or vertical neighbor in a random 0..3 nX6 array</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 6 of A218196</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A218194/b218194.txt&quot;&gt;Table of n, a(n) for n = 1..14&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..1..0..1....0..1..1..1..0..1....0..0..1..1..1..1....0..1..1..0..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..1..0..0..1....0..0..0..0..1..0....1..1..1..1..0..1....1..1..0..0..0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..1..0..0..1....1..0..1..0..1..0....0..1..0..1..0..0....0..0..1..0..1..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Oct 23 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

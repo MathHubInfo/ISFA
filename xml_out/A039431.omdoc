@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A039431.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A039431">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 59,95,159,195,259,295,359,395,459,495,509,519,529,539,549,569,579,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 589,590,591,592,593,594,596,597,598,659,695,759,795,859,895,905,915,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 925,935,945,950,951,952,953,954,956,957,958,965,975,985,1059,1095</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that representation in base 10 has same nonzero number of 5's and 9's.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Olivier Gérard_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

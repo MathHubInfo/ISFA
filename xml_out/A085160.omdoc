@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A085160.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A085160">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,3,4,7,5,6,8,9,17,10,16,18,11,20,12,14,21,13,15,19,22,23,45,24,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 44,46,25,48,26,42,49,27,43,47,50,28,54,29,53,55,30,57,31,37,58,32,38,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 56,59,33,61,34,39,62,35,40,51,63,36,41,52,60,64,65,129,66,128,130</CMP>
+    </assertion><omtext class="name">
+      <CMP> Permutation of natural numbers induced by the gatomorphism gma085160 acting on symbolless S-expressions encoded by A014486/A063171.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This gatomorphism rotates the interpretations (pp)-(rr) of Stanley, using the &quot;rising slope&quot; mapping illustrated in A085161.</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Karttunen, &lt;a href=&quot;http://www.iki.fi/~kartturi/matikka/Nekomorphisms/gatomorf.htm&quot;&gt;Gatomorphisms&lt;/a&gt; (With the complete Scheme source)</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. P. Stanley, &lt;a href=&quot;http://www-math.mit.edu/~rstan/ec/catalan.pdf&quot;&gt;Exercises on Catalan and Related Numbers&lt;/a&gt; (including 66 combinatorial interpretations)</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Per#IntegerPermutationCatAuto&quot;&gt;Index entries for signature-permutations induced by Catalan automorphisms&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Inverse: A085159. a(n) = A085161(A085159(A085161(n))) = A085169(A082316(A085170(n))) = A074684(A082316(A074683(n))) = A085174(A085174(n)). Occurs in A073200. Cf. also A085165-A085168, A086430.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Number of cycles: A054357. Number of fixed points: A046698. (In range [A014137(n-1)..A014138(n-1)] of this permutation, possibly shifted one term left or right).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Antti Karttunen_, Jun 23 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

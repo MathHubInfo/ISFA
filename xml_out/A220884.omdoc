@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A220884.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A220884">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,1,6,8,2,24,58,37,6,120,444,504,204,24,720,3708,6388,4553,1318,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 120,5040,33984,81136,87296,44176,9792,720,40320,341136,1064124,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1582236,1203921,463860,82332,5040,362880,3733920,14602320,28328480,29724000,17164320,5270480,773280,40320,3628800,44339040,210852936,512539012,700870638,557061609,255644668,64621692,8026416,362880</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle read by rows: row n gives coefficients of expansion of Product_{k=2..n} ((n+1-k)*x+k), starting with highest power.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Related to Stirling numbers A008275, A008277.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jean-Christophe Novelli and Jean-Yves Thibon, &lt;a href=&quot;http://arxiv.org/abs/1209.5959&quot;&gt;Duplicial algebras and Lagrange inversion&lt;/a&gt;, arXiv preprint arXiv:1209.5959, 2012.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Triangle begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> [1]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [2, 1]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [6, 8, 2]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [24, 58, 37, 6]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [120, 444, 504, 204, 24]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [720, 3708, 6388, 4553, 1318, 120]</CMP>
+    </assertion><assertion class="example">
+      <CMP> [5040, 33984, 81136, 87296, 44176, 9792, 720]</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A220883, A008275, A008277.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Dec 29 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

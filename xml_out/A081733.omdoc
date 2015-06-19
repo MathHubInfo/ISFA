@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A081733.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A081733">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,0,2,1,2,0,3,1,0,8,0,4,1,16,0,20,0,5,1,0,96,0,40,0,6,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 272,0,336,0,70,0,7,1,0,2176,0,896,0,112,0,8,1,7936,0,9792,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2016,0,168,0,9,1,0,79360,0,32640,0,4032,0,240,0,10,1,353792,0,436480,0,89760,0,7392,0,330,0,11,1,0,4245504,0</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle read by rows, T(n,k) = 2^(n-k)*[x^k] Euler_polynomial(n, x), for n&gt;=0, k&gt;=0.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sum of row n equals Euler(n) (in the sense of the non-official version A122045; R. P. Stanley calls A000111 Euler numbers.)</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A081733"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A081733"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="E_" cd="A081733"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMI>0</OMI></OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="C" cd="A081733"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      </OMOBJ>is the <OMOBJ>
+        <OMA>
+      <OMS name="binomial" cd="A081733"/>
+      <OMV name="coefficient"/>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="E_" cd="A081733"/>
+      <OMV name="m"/>
+    </OMA><OMV name="x"/></OMA>
+      </OMOBJ>are the Euler polynomials .-_Peter Luschny_ ,Jan 25 2009 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Matrix inverse is <OMOBJ>
+        <OMA>
+      <OMR xref="A119468"/>
+      <OMV name="and"/>
+    </OMA>
+      </OMOBJ>central column is <OMOBJ>
+        <OMR xref="A214447"/>
+      </OMOBJ>.-_Peter Luschny_ ,Jul 18 2012 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Let <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="skp" cd="A081733"/>
+      <OMV name="n"/>
+    </OMA><OMV name="x"/></OMA>
+      </OMOBJ>denote the Swiss -Knife polynomials <OMOBJ>
+        <OMR xref="A153641"/>
+      </OMOBJ>.Then <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A081733"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="skp" cd="A081733"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="skp" cd="A081733"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Peter Luschny_ ,Jul 22 2012 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      E.g.f .<OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="exp" cd="A081733"/>
+      <OMA><OMS name="times"/><OMV name="z"/><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="tanh" cd="A081733"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA></OMA>
+      </OMOBJ>.-_Peter Luschny_ ,Aug 01 2012 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> The coefficient lists of the first 5 Euler polynomials are {1}, {-1/2, 1}, {0, -1, 1}, {1/4, 0, -3/2, 1}, {0, 1, 0, -2, 1}. Multiply by 2^(n-k) to get</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> -1,  1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, -2,  1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2,  0, -3,  1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,  8,  0, -4, 1.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> T := (n,k) -&gt; 2^(n-k)*coeff(euler(n,x),x,k):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> T := (n,k) -&gt; 2^(n-k)*binomial(n,k)*euler(n-k,1): # _Peter Luschny_, Jan 25 2009</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[2^n (1/2)^(Range[0, n]) CoefficientList[EulerE[n, x], x], {n, 0, 16}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage)</CMP>
+    </omtext><omtext class="program">
+      <CMP> def A081733(n, k) : return (-2)^(n-k)*binomial(n,k)*euler_polynomial(n-k,1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> # _Peter Luschny_, Jul 18 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002425, A058940, A006519.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wouter Meeussen_, Apr 06 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected T(0,0) = Euler(0) = 1 (was 0), _Peter Luschny_, Sep 30 2010.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> New NAME. _Peter Luschny_, Jul 18 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

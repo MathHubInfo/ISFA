@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A224540.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A224540">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,12,36,106,249,613,1732,8028,23348,69370,210807,634839,1893582,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5686389,17031777,51073675,153185957,459516225,1378707224,4135278456</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of numbers k such that all terms of the Collatz (3x+1) iteration of k are &lt;= 3^n.</CMP>
+    </omtext><assertion class="example">
+      <CMP> For n = 3, the twelve k are 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, and 24.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Collatz[n_] := NestWhileList[If[EvenQ[#], #/2, 3 # + 1] &amp;, n, # &gt; 1 &amp;]; Table[Select[Range[3^n], Max[Collatz[#]] &lt;= 3^n &amp;], {n, 8}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A006884, A006885, A095384, A224538.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _T. D. Noe_, Apr 24 2013</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(20)-a(21) from _Donovan Johnson_, Jun 05 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

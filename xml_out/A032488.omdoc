@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A032488.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A032488">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,10,22,44,58,62,68,82,100,104,118,230,260,440,446,512,700,892,932,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1240,1456,2438,4982,5090,6496,14678,17944,23786,27838,39866,46322,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 52358,61700,68584,78244</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that 223*2^n+1 is prime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ray Ballinger, &lt;a href=&quot;http://www.prothsearch.net/index.html&quot;&gt;Proth Search Page&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ray Ballinger and Wilfrid Keller, &lt;a href=&quot;http://www.prothsearch.net/riesel.html&quot;&gt;List of primes k.2^n + 1 for k &lt; 300&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wilfrid Keller, &lt;a href=&quot;http://www.prothsearch.net/riesel2.html&quot;&gt;List of primes k.2^n - 1 for k &lt; 300&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Pri#riesel&quot;&gt;Index entries for sequences of n such that k*2^n-1 (or k*2^n+1) is prime&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A242684.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A242684">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,2,0,5,0,10,0,20,0,36,0,65,0,110,0,185,0,290,1,461,4,702,11,1066,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 26,1572,57,2311,114,3319,218,4750,400,6673,707,9332,1214,12916,2025,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 17750,3291,24164,5242,32743,8191,44027,12565,58913,18992,78374,28291</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n with difference -8 between the number of odd parts and the number of even parts, both counted without multiplicity.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A242684/b242684.txt&quot;&gt;Table of n, a(n) for n = 72..1000&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column k=-8 of A242618.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 72,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alois P. Heinz_, May 20 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

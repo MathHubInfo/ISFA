@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A137385.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A137385">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8190,7600,2184,6810,7246,2024,994,5956,182,7128,336,1806,448,920,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1932,5068,375,168,330,6578,196,312,274,1579,6250,414,0,821,200,1908,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 244,4246,84,342,878,154,112,301,140,5844,134,182,122,276,168,255,111,1347,125,6248,92,363,104,0,294,715,85,183,75,1758,92,223,0,3492,392,78,70,300,64,864,110,140,63,108,1673,262,28,130,65,5054,0,120,63,160,323,111,51,238,57,168,28,225,77,102,286,1132,74,120,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of errors that occur when choosing n as modulus in French INSEE code (0&lt;n&lt;100).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The most frequent errors are:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> - permutation between 2 ranks</CMP>
+    </omtext><omtext class="comment">
+      <CMP> - error in one rank</CMP>
+    </omtext><omtext class="link">
+      <CMP> Author?, &lt;a href=&quot;http://les-mathematiques.u-strasbg.fr/phorum5/read.php?2,439164,439164#msg-439164&quot;&gt;Les-mathematiques.net&lt;/a&gt; [Broken link?]</CMP>
+    </omtext><assertion class="example">
+      <CMP> Actual n is 97. It generates 74 errors.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Best choices could be 27, 54, 63, 81 or 99 instead of 97.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (Python) # Replace leading dots by spaces</CMP>
+    </omtext><omtext class="program">
+      <CMP> .for cle in range(1,100):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ... n=0</CMP>
+    </omtext><omtext class="program">
+      <CMP> ... for r1 in range(1,14):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....... for r2 in range(r1,14):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ............ur1=cle-(10**(13-r1))%cle</CMP>
+    </omtext><omtext class="program">
+      <CMP> ............ur2=cle-(10**(13-r2))%cle</CMP>
+    </omtext><omtext class="program">
+      <CMP> ............for c1 in range(10):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ............... for c2 in range(10):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ................... if c1==c2:</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........................dif=1</CMP>
+    </omtext><omtext class="program">
+      <CMP> ................... else:</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........................dif=(c1*ur1-c2*ur2)%cle</CMP>
+    </omtext><omtext class="program">
+      <CMP> ................... if dif==0:</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........................n=n+1</CMP>
+    </omtext><omtext class="program">
+      <CMP> ... print cle,':',n</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> fini,full,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Sébastien Dumortier_, Apr 26 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

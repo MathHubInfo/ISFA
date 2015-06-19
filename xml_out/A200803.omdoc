@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A200803.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A200803">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,62,378,2758,21028,152410,1123856,8320912,61313142,452500906,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3340771202,24653586076,181959666062,1343028411144,9912362521336,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 73160174987386,539975059887262,3985391431572110,29414994393633268</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX2 0..2 arrays with no average of any element and its diagonal, antidiagonal, horizontal and vertical neighbors equal to one</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 2 of A200809</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A200803/b200803.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>59</OMI><OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>221</OMI><OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>254</OMI><OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>396</OMI><OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>276</OMI><OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>7</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1752</OMI><OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>8</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>7344</OMI><OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>9</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>13392</OMI><OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>10</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4320</OMI><OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>11</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>3456</OMI><OMA>
+      <OMS name="a" cd="A200803"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>12</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for 3X3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1....1..2....1..1....1..2....0..0....0..2....0..2....1..0....0..0....1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0....2..0....0..0....1..2....0..2....0..0....2..1....2..2....0..2....1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1....0..0....0..1....0..2....0..0....2..1....2..0....2..0....1..2....0..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Nov 22 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

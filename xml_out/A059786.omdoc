@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A059786.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A059786">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,7,11,17,23,29,37,41,47,59,67,79,83,89,97,107,127,127,137,149,149,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 163,167,179,197,211,211,223,223,227,257,263,277,281,307,307,317,331,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 337,347,359,367,383,389,397,401,431,449,457,461,467,479,487,503,521</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest prime after 2*(n-th prime).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A059786"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A117928"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.-_Reinhard Zumkeller_ ,Apr 03 2006 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> n=17, 18, p(17)=59, p(18)=61, after 118 and 122 the next prime is 127, so a(17)=a(18)=127.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory): [seq(nextprime(2*ithprime(k)),k=1..256)];</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A055496, A006992.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Feb 22 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

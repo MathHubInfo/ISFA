@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A134255.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A134255">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 19,25,30,57,70,72,77,90,91,94,105,108,110,112,114,123,134,138,140,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 141,158,173,174,179,180,188,192,201,210,230,246,250,270,291,299,324,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 343,360,375,382,429,431,440,450,454,465,484,490,512,517,518,529,530,531</CMP>
+    </assertion><omtext class="name">
+      <CMP> Positions of 5 after decimal point in decimal expansion of 1/Pi.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A037000, A134203, A134251, A134252, A134253, A134254, A134256, A134257, A134258, A134259, A134260.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Artur Jasinski_, Oct 16 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

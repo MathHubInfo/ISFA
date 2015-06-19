@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A177677.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A177677">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 12,62,147,266,419,607,828,1084,1375,1699,2057,2450,2877,3338,3833,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4362,4926,5523,6155,6821,7521,8256,9024,9827,10664,11535,12440,13379,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 14353,15360,16402,17478,18588,19732,20911,22123,23370,24651,25966,27315</CMP>
+    </assertion><omtext class="name">
+      <CMP> The maximum integer dimension in which the volume of the hypersphere of radius n remains larger than 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The volume of the d-dimensional hypersphere of radius n is V= Pi^(d/2) * n^d / Gamma(1 + d/2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For fixed radius, V -&gt; 0 as d-&gt;infinity, so there is a dimension d for which V(n,d) &gt; 1 but V(n,d+1) &lt; 1, which defines the entry in the sequence.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Anonymous, &lt;a href=&quot;http://en.wikipedia.org/wiki/Hypersphere&quot;&gt;Hypersphere&lt;/a&gt;, Wikipedia.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein, &lt;a href=&quot;http://mathworld.wolfram.com/StirlingsSeries.html&quot;&gt;Stirling Series&lt;/a&gt;, MathWorld.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n) = max {d: Pi^d/2 * n^d / Gamma(1+d/2) &gt; 1}.</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(n=2)=62 because Pi^(62/2) * 2^62/GAMMA(1 + (62/2)) =1.447051 and Pi^(63/2)* 2^63 / Gamma(1 + (63/2)) =0.9103541.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory): n0:=50: T:=array(1..n0): for r from 1 to n0 do: x:=2: for n from 1 to 1000000 while(x&gt;=1) do: x:= floor(evalf((r^n * Pi^(n/2))/GAMMA(1 + n/2))):k:=n:od:T[r]:=k-1:od:print(T):</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A005446 , A005147, A001164, A005146, A005447, A001163</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Lagneau_, May 10 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Use of variables standardized. Definition simplified, comments tightened, unspecific reference and superfluous parentheses removed - _R. J. Mathar_, Oct 20 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A221611.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A221611">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,4,54,811,11344,160999,2286878,32522604,462463456,6575844726,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 93499812718,1329429617150,18902457108916,268763744810865,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3821403968991766,54334437063306418,772551392056456162</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 3Xn arrays of occupancy after each element moves to some horizontal or antidiagonal neighbor, without move-in move-out left turns</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row 3 of A221609</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A221611/b221611.txt&quot;&gt;Table of n, a(n) for n = 1..56&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2..0....0..3..1....0..3..1....0..2..1....0..2..1....1..1..0....1..2..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..3..1....1..1..0....0..1..0....0..2..2....0..3..1....0..3..1....0..2..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..1....1..2..0....2..2..0....0..2..0....1..1..0....1..2..0....1..2..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Jan 20 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A073789.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A073789">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,3,4,5,6,7,170,171,172,173,174,175,176,177,160,161,162,163,164,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 165,166,167,150,151,152,153,154,155,156,157,140,141,142,143,144,145,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 146,147,130,131,132,133,134,135,136,137,120,121,122,123,124,125,126</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers in base -8.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, The Art of Computer Programming. Addison-Wesley, Reading, MA, 1969, Vol. 2, p. 189.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A073789/b073789.txt&quot;&gt;Table of n, a(n) for n = 0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Prepared and presented by Matthew Szudzik of Wolfram Research, &lt;a href=&quot;http://library.wolfram.com/conferences/devconf99/challenge/&quot;&gt;A Mathematica programming contest&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Negabinary.html&quot;&gt;Negabinary&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Negative_base&quot;&gt;Negative base&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> ToNegaBases[i_Integer, b_Integer] := FromDigits[ Rest[ Reverse[ Mod[ NestWhileList[(#1 - Mod[ #1, b])/-b &amp;, i, #1 != 0 &amp;], b]]]]; Table[ ToNegaBases[n, 8], {n, 0, 60}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a073789 0 = 0</CMP>
+    </omtext><omtext class="program">
+      <CMP> a073789 n = a073789 n' * 10 + m where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    (n', m) = if r &lt; 0 then (q + 1, r + 8) else (q, r)</CMP>
+    </omtext><omtext class="program">
+      <CMP>              where (q, r) = quotRem n (negate 8)</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Jul 07 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007094, A039724, A073785, A007608, A073786, A073787, A073788, A073790 &amp; A039723.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Aug 11 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

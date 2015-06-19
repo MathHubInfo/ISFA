@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A094883.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A094883">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,7,4,0,3,2,0,4,8,8,9,7,6,4,2,1,4,1,5,9,8,6,0,2,4,1,0,1,1,1,5,1,0,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,7,5,7,4,9,4,1,6,3,1,9,7,4,1,3,4,3,7,6,8,4,0,4,1,2,5,5,7,4,0,0,9,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,9,8,0,0,8,8,5,6,5,5,9,1,2,4,6,9,3,0,2,8,7,0,2,5,8,2,9,3,6,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of sqrt(2)/phi, where phi = (1+sqrt(5))/2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> An algebraic integer with minimal polynomial x^4 - 6x^2 + 4. - _Charles R Greathouse IV_, Mar 25 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Steven R. Finch, Mathematical Constants, Cambridge University Press, 2003, Section 3.16 Turan's power sums constants, p. 246.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ivan Panchenko, &lt;a href=&quot;/A094883/b094883.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 0.874032048897642...</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) sqrt(3-sqrt(5)) \\ _Charles R Greathouse IV_, Mar 25 2014</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> cons,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Jun 15 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

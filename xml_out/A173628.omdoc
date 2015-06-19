@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A173628.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A173628">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2351,6991,49451,193751,223781,769781,771431,779341,880211,903871,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1064411,1066231,1383191,1447151,1745621,1898371,1974551,1999511,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2015411,2025421,2435831,2476421,2695831,2805911,3531041,3679121</CMP>
+    </assertion><omtext class="name">
+      <CMP> p, p^3+6, p^3+12 and p^3+18 are all prime.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA)[p: p in PrimesUpTo(1000000)|IsPrime(p^3+6) and IsPrime(p^3+12) and IsPrime(p^3+18)][From Vincenzo Librandi, 13 2010]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A176027 p, p^2+6, p^2+12 and p^2+18 are all prime.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zak Seidov_, Nov 09 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A220896.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A220896">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,7,41,312,2784,27917,307943,3690055,47635777,658405747,9695617821,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 151488900012,2502346785164,43560247035581,796828655891895</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of closed lambda-terms of size n with at most 2 free de Bruijn indices.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Katarzyna Grygiel and Pierre Lescanne, &lt;a href=&quot;http://arxiv.org/abs/1210.2610&quot;&gt;Counting and generating lambda-terms&lt;/a&gt;, arXiv preprint arXiv:1210.2610, 2012</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Grygiel and Lescanne give a recurrence .
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Dec 31 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A009401.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A009401">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,3,14,15,136,1197,5776,255,420224,5448003,30166784,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 241437105,8354415616,104019879597,291139373056,17849464279935,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 456381834297344,5108933510880003,26967886768439296,2525823613297136625</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of ln(1+tanh(x)/cosh(x)).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Log[ 1+Tanh[ x ]/Cosh[ x ] ]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> sign,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended with signs Mar 15 1997 by _Olivier Gérard_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

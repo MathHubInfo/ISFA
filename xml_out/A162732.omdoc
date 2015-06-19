@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A162732.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A162732">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,29,435,4494,35931,236901,1340408,6688531,30022569,123054221,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 465973276,1645558368,5461104956,17140618084,51153912696,145821399597,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 398621995827,1048532319201,2661833593149,6538864924476,15579750854262</CMP>
+    </assertion><omtext class="name">
+      <CMP> G.f. is the polynomial (1-x^3) * (1-x^6) * (1-x^9) * (1-x^12) * (1-x^15) * (1-x^18) * (1-x^21) * (1-x^24) * (1-x^27) * (1-x^30) * (1-x^33) * (1-x^36) * (1-x^39) * (1-x^42) * (1-x^45) * (1-x^48) * (1-x^51) * (1-x^54) * (1-x^57) * (1-x^60) * (1-x^63) * (1-x^66) * (1-x^69) * (1-x^72) * (1-x^75) * (1-x^78) * (1-x^81) * (1-x^84) * (1-x^87) / (1-x)^29.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is a row of the triangle in A162499. Only finitely many terms are nonzero.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Dec 02 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

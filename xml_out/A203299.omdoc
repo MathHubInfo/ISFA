@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A203299.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A203299">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,16,37,77,133,223,338,506,710,990,1319,1751,2247,2877,3588,4468,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5448,6636,7945,9505,11209,13211,15382,17902,20618,23738,27083,30891,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 34955,39545,44424,49896,55692,62152,68973,76533,84493,93271,102490</CMP>
+    </assertion><omtext class="name">
+      <CMP> Second elementary symmetric function of the first n terms of (2,2,3,3,4,4,5,5...).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA><OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Aug 15 2014 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> f[k_] := Floor[(k + 3)/2]; t[n_] := Table[f[k], {k, 1, n}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := SymmetricPolynomial[2, t[n]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[a[n], {n, 2, 50}]  (* A203299 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A203246, A203298.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Dec 31 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

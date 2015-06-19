@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A016737.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A016737">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,14,4,1,2,2,8,1,15,1,2,1,8,2,7,1,3,3,1,1,1,2,17,1,4,2,1,2,6,1,2,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5,1,1,2,2,1,1,1,27,3,3,4,1,1,306,2,1,1,2,3,1,1,4,5,1,1,38,1,4,1,6,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11,10,1,9,10,2,5,2,1,3,8,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Continued fraction for ln(9).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harry J. Smith, &lt;a href=&quot;/A016737/b016737.txt&quot;&gt;Table of n, a(n) for n=1,...,20000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Xiao, &lt;a href=&quot;http://wims.unice.fr/~wims/en_tool~number~contfrac.en.html&quot;&gt;Contfrac&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 2.19722457733621938279049047... = 2 + 1/(5 + 1/(14 + 1/(4 + 1/(1 + ...)))) [From _Harry J. Smith_, May 16 2009]</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) { allocatemem(932245000); default(realprecision, 21000); x=contfrac(log(9)); for (n=1, 20000, write(&quot;b016737.txt&quot;, n, &quot; &quot;, x[n])); } [From _Harry J. Smith_, May 16 2009]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A016632 Decimal expansion. [From _Harry J. Smith_, May 16 2009]</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cofr</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

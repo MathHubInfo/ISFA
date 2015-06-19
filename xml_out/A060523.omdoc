@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A060523.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A060523">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,0,1,1,0,3,3,0,0,9,12,3,0,0,45,60,15,0,0,0,225,345,135,15,0,0,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1575,2415,945,105,0,0,0,0,11025,18480,9030,1680,105,0,0,0,0,99225,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 166320,81270,15120,945,0,0,0,0,0,893025,1596105,897750,217350,23625,945,0,0,0,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle T(n,k) = number of degree-n permutations with k even cycles, k=0..n.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> I. P. Goulden and D. M. Jackson, Combinatorial Enumeration, Wiley, N.Y., 1983, p. 189, Exercise 3.3.13.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A060523/b060523.txt&quot;&gt;Rows n = 0..140, flattened&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      E.g.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="y"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="y"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle T(n,k) begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 1, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3, 3, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9, 12, 3, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 45, 60, 15, 0, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 225, 345, 135, 15, 0, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1575, 2415, 945, 105, 0, 0, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11025, 18480, 9030, 1680, 105, 0, 0, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 99225, 166320, 81270, 15120, 945, 0, 0, 0, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 893025, 1596105, 897750, 217350, 23625, 945, 0, 0, 0, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(combinat):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> b:= proc(n, i) option remember; expand(`if`(n=0, 1, `if`(i&lt;1, 0,</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       add(multinomial(n, n-i*j, i$j)*(i-1)!^j/j!*b(n-i*j, i-1)*</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       `if`(irem(i, 2)=0, x^j, 1), j=0..n/i))))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> T:= n-&gt; (p-&gt; seq(coeff(p, x, i), i=0..n))(b(n$2)):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(T(n), n=0..12);  # _Alois P. Heinz_, Mar 09 2015</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> nn = 6; Range[0, nn]! CoefficientList[</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>    Series[(1 - x^2)^(-y/2) ((1 + x)/(1 - x))^(1/2), {x, 0, nn}], {x, y}] // Grid  (*Geoffrey Critzer, Aug 27 2012*)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A060524.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladeta Jovovic_, Apr 01 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

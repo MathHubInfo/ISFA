@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A207830.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A207830">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 12,15,18,21,51,81,102,105,108,111,114,117,120,123,126,129,132,135,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 138,141,144,147,150,153,156,159,162,165,168,171,174,177,180,183,186,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 189,192,195,198,201,210,213,216,219,231,261,291,312,315,318,321,351,381,411,414</CMP>
+    </assertion><omtext class="name">
+      <CMP> Positive multiples of 3 that contain the decimal digit 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> I came across this sequence while working some problems in ALCUMUS from the AoPS site. [Tyler]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A 10-automatic set: members are numbers with decimal expansions matching a regular expression. [_Charles R Greathouse IV_, Feb 20 2012]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> MathCounts 2006 National Target #5</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[3*Range[138], DigitCount[#, 10, 1] &gt; 0 &amp;] (* _Alonso del Arte_, Feb 20 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) is(n)=if(n%3,return(0));n=vecsort(eval(Vec(Str(n))),,8);n[1]==1||(#n&gt;1&amp;&amp;n[2]==1) \\ _Charles R Greathouse IV_, Feb 20 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Seth Tyler_, Feb 20 2012</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(7)-a(55) from _Charles R Greathouse IV_, Feb 20 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A168036.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A168036">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,0,4,1,6,4,3,3,10,4,12,5,7,16,16,3,18,4,11,9,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 22,20,15,11,0,4,28,1,30,48,19,15,23,24,36,17,23,28,40,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 42,4,6,21,46,64,35,5,31,4,52,27,39,36,35,27,58,32,60,29</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Difference between n' and n, where n' is the arithmetic derivative of n (A003415).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let k=n'-n. For k=-1 n is a primary pseudoperfect number (A054377), apart from n=1; For k=0 n is p^p, being p a prime number (A051674); For k=1 n is a Giuga number (A007850).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A168036/b168036.txt&quot;&gt;Table of n, a(n) for n = 0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(numtheory);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A168036:=proc(q)</CMP>
+    </omtext><omtext class="maple">
+      <CMP> local n,p;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for n from 0 to q do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   print(n*add(op(2,p)/op(1,p),p=ifactors(n)[2])-n); od; end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A168036(1000); # _Paolo P. Lava_, Nov 05 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007850, A051674, A054377.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paolo P. Lava_, Nov 17 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

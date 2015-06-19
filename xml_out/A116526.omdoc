@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A116526.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A116526">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,9,17,81,89,153,217,729,737,801,865,1377,1441,1953,2465,6561,6569,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6633,6697,7209,7273,7785,8297,12393,12457,12969,13481,17577,18089,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 22185,26281,59049,59057,59121,59185,59697,59761,60273,60785,64881</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(0)=1, a(1)=1, a(n)=9a(n/2) for n=2,4,6,..., a(n)=8a((n-1)/2)+a((n+1)/2) for n=3,5,7,...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A 9-divide version of A084230.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The interest this one has is in the prime form of even odd 2^n+1, 2^n.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Harborth, H. Number of Odd Binomial Coefficients. Proc. Amer. Math. Soc. 62, 19-22, 1977</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Stolarsky-HarborthConstant.html&quot;&gt;Stolarsky-Harborth Constant&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:=proc(n) if n=0 then 0 elif n=1 then 1 elif n mod 2 = 0 then 9*a(n/2) else 8*a((n-1)/2)+a((n+1)/2) fi end: seq(a(n),n=0..45);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> b[0] := 0 b[1] := 1 b[n_?EvenQ] := b[n] = 9*b[n/2] b[n_?OddQ] := b[n] = 8*b[(n - 1)/2] + b[(n + 1)/2] a = Table[b[n], {n, 1, 25}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A006046, A077465.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_, Mar 15 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _N. J. A. Sloane_, Apr 16 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

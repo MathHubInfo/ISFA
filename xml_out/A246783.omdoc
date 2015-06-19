@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A246783.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A246783">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,67,67,67,67,67,54412,161342,161342,1214143,9915018,9915018,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 68964006,68964006,810832784,19867608968,52415066804,119937255921,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 272007811177</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest number m such that all the n numbers np(m+k-1), 0 &lt; k &lt; n+1 are equal, where np(t) is number of primes p with prime(t) &lt; p &lt; prime(t)^(1+1/t).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> np(n) = A182134(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture: For every n, a(n) exists.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The np values for distinct terms of the sequence are: 1, 5, 11, 11, 16, 14, ... . It is interesting that for n = 1, 5, 11 &amp; 14, np(a(n)) = n. What is the next term of this sequence (1, 5, 11, 14, ?, ... .)?</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence giving the np values of this sequence is A245101.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence {1, 5, 11, 11, 16, 14} commented on above is expanded in A245098.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(23) &gt; 10^12. - _Robert Price_, Nov 12 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The next term of the sequence (1, 5, 11, 14, ?, ... .) commented on above is &gt;22 and corresponds to t&gt;10^12. - _Robert Price_, Nov 12 2014</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(9) = 67, since all the nine numbers np(67), np(67+1), np(67+2), ..., np(67+8) are equal and 67 is the smallest such number. Note that np(67) = 5.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> np[n_]:=Length[Select[Range[Prime[n]+1,Prime[n]^(1+1/n)], PrimeQ]];a[n_]:=(For[m=1,Length[Union[Table[np[m+k-1],{k,n}]]]!=1,m++];m);Do[Print[a[n]],{n,15}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A182134.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Farideh Firoozbakht_, Oct 13 2014</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(16)-a(22) from _Robert Price_, Nov 12 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

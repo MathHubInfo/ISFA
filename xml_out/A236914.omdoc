@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A236914.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A236914">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,3,7,14,27,49,86,146,242,392,623,973,1498,2274,3411,5059,7427,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10801,15572,22267,31602,44533,62338,86716,119918,164903,225566,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 306993,415814,560641,752622,1006132,1339677,1776980,2348384,3092594,4058848,5309608,6923959</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of 2n+1 of type OO (see Comments).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The partitions of n are partitioned into four types:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> EO, even # of odd parts and odd  # of even parts, A236559;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> OE, odd  # of odd parts and even # of even parts, A160786;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> EE, even # of odd parts and even # of even parts, A236913;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> OO, odd  # of odd parts and odd  # of even parts, A236914.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A236559 and A160786 are the bisections of A027193;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A236913 and A236914 are the bisections of A027187.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A236914/b236914.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> The partitions of 5 of type OO are [4,1], [3,2], [2,1,1,1], so that a(2) = 3.</CMP>
+    </assertion><assertion class="example">
+      <CMP> type/k . 1 .. 2 .. 3 .. 4 .. 5 .. 6 .. 7 .. 8 ... 9 ... 10 .. 11</CMP>
+    </assertion><assertion class="example">
+      <CMP> EO ..... 0 .. 1 .. 0 .. 2 .. 0 .. 5 .. 0 .. 10 .. 0 ... 20 .. 0</CMP>
+    </assertion><assertion class="example">
+      <CMP> OE ..... 1 .. 0 .. 2 .. 0 .. 4 .. 0 .. 8 .. 0 ... 16 .. 0 ... 29</CMP>
+    </assertion><assertion class="example">
+      <CMP> EE ..... 0 .. 1 .. 0 .. 3 .. 0 .. 6 .. 0 .. 12 .. 0 ... 22 .. 0</CMP>
+    </assertion><assertion class="example">
+      <CMP> OO ..... 0 .. 0 .. 1 .. 0 .. 3 .. 0 .. 7 .. 0 ... 14 .. 0 ... 27</CMP>
+    </assertion><omtext class="maple">
+      <CMP> b:= proc(n, i) option remember; `if`(n=0, [1, 0$3],</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       `if`(i&lt;1, [0$4], b(n, i-1)+`if`(i&gt;n, [0$4], (p-&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       `if`(irem(i, 2)=0, [p[3], p[4], p[1], p[2]],</CMP>
+    </omtext><omtext class="maple">
+      <CMP>           [p[2], p[1], p[4], p[3]]))(b(n-i, i)))))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; b(2*n+1$2)[4]:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..40);  # _Alois P. Heinz_, Feb 16 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> z = 25; m1 = Map[Length[Select[Map[{Count[#, True], Count[#, False]} &amp;,  OddQ[IntegerPartitions[2 #]]], EvenQ[(*Odd*)First[#]] &amp;&amp; OddQ[(*Even*)Last[#]] &amp;]] &amp;, Range[z]]; m2 = Map[Length[Select[Map[{Count[#, True], Count[#, False]} &amp;,       OddQ[IntegerPartitions[2 # - 1]]], OddQ[(*Odd*)First[#]] &amp;&amp; EvenQ[(*Even*)Last[#]] &amp;]] &amp;, Range[z]]; m3 = Map[Length[Select[Map[{Count[#, True], Count[#, False]} &amp;,</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> OddQ[IntegerPartitions[2 #]]], EvenQ[(*Odd*)First[#]] &amp;&amp; EvenQ[(*Even*)Last[#]] &amp;]] &amp;, Range[z]] ; m4 = Map[Length[Select[Map[{Count[#, True], Count[#, False]} &amp;,</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> OddQ[IntegerPartitions[2 # - 1]]], OddQ[(*Odd*)First[#]] &amp;&amp; OddQ[(*Even*)Last[#]] &amp;]] &amp;, Range[z]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> m1 (* A236559, type EO*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> m2 (* A160786, type OE*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> m3 (* A236913, type EE*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> m4 (* A236914, type OO*) (* _Peter J. C. Moses_, Feb 03 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A236559, A160786, A236913, A027187, A027193, A000041.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Feb 01 2014</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Alois P. Heinz_, Feb 16 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

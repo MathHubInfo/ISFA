@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A010381.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A010381">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,4,5,6,7,9,11,16,17</CMP>
+    </omtext><omtext class="name">
+      <CMP> Squares mod 19.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [quadratic_residues(19)]# [From _Zerinvary Lajos_, May 24 2009]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,fini,full</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

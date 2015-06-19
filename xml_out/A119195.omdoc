@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A119195.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A119195">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,8,11,36,391,816,8563,39183,2594751,12436829803183</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers n such that the n-th triangular number contains only digits {3,6,7}.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Next entry must be greater than 1.4*10^16.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Resta, &lt;a href=&quot;http://www.iit.cnr.it/staff/giovanni.resta/tritri.txt&quot;&gt;Tridigital Triangular Numbers&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000217, A119194. See A119034 for a table of cross-references.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Giovanni Resta_, May 10 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

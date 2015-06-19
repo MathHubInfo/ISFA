@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A065074.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A065074">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 101,10111,101111,11110111,11111101,101111111,101111111111,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 111011111111,111111011111,111111110111,111111111101,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11111111101111111,11111111111111101,101111111111111111,111110111111111111</CMP>
+    </assertion><omtext class="name">
+      <CMP> Near-repunit primes that contain the digit 0.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Chris Caldwell, &lt;a href=&quot;http://primes.utm.edu/glossary/page.php?sort=Repunit&quot;&gt;Repunit&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a = {}; Do[p = IntegerDigits[ (10^n - 1)/9 ]; Do[ If[ q = FromDigits[ ReplacePart[p, 0, i]]; PrimeQ[q], a = Append[a, q]], {i, 2, n} ], {n, 1, 20} ]; a</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A004022, A034093, A065083.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Nov 19 2001</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Name changed by Arkadiusz Wesolowski, Sep 23 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

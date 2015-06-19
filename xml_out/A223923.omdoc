@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A223923.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A223923">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 28,784,12752,139925,1147712,7526024,41334135,196691651,831996762,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3191126598,11273703656,37147879480,115325935123,340079259419,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 958837466287,2598467396144,6797368250655,17222433541791,42380526618210</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 6Xn 0..2 arrays with rows and antidiagonals unimodal and columns nondecreasing</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row 6 of A223918</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A223923/b223923.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A223923"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMF dec="3.560883848331264E19"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>24</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMF dec="5.93480641388544E17"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>23</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMF dec="1.149143998464E16"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>22</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2153</OMI><OMF dec="7.0959641905152E17"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>21</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>219067</OMI><OMF dec="2.43290200817664E18"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>20</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>25141</OMI><OMF dec="1.1058645491712E16"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>19</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>7669183</OMI><OMF dec="1.4938871980032E17"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>18</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2894807</OMI><OMF dec="2.76645777408E15"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>17</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>345585431</OMI><OMF dec="1.757514350592E16"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>16</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>19926331</OMI><OMF dec="5.85838116864E13"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>15</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="1.9845690451E10"/><OMF dec="3.76610217984E15"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>14</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="2.9105209667E10"/><OMF dec="4.7076277248E14"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>13</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="9.676615094071E12"/><OMF dec="1.757514350592E16"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>12</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="3.447815819587E12"/><OMF dec="8.78757175296E14"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>11</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="1.672600520777E12"/><OMF dec="7.510745088E13"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>10</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="4.0399178860907E13"/><OMF dec="3.9943507968E14"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>9</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="5.902479263543591E15"/><OMF dec="1.600593426432E16"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>8</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="8.57508181884829E14"/><OMF dec="8.00296713216E14"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>7</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="1.30947765175858688E18"/><OMF dec="5.3219731428864E17"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>6</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="4.3433412218488136E16"/><OMF dec="9.85550582016E15"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>5</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="4.693314253940149E15"/><OMF dec="7.7806624896E14"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="1.959925243391E12"/><OMF dec="3.2081724675E11"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="1.2456072565753E13"/><OMF dec="2.69853135552E12"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMF dec="3.225389971E9"/><OMI>1784742960</OMI>
+    </OMA><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0....0..0..0....0..2..1....0..1..1....0..0..0....0..1..0....0..2..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..0....2..1..0....1..2..1....0..1..1....0..1..0....0..1..0....0..2..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..2....2..1..0....1..2..1....0..1..1....0..1..0....0..2..2....0..2..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..2....2..1..0....1..2..2....0..1..2....0..1..0....0..2..2....0..2..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..2..2....2..1..0....2..2..2....0..1..2....1..1..0....1..2..2....0..2..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2..2....2..1..0....2..2..2....0..2..2....1..2..1....1..2..2....1..2..2</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Mar 29 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

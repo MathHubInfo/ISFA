@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A196511.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A196511">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 555383,1767407,2103107,2452757,7400567,12836987,14668163,15404867,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16238303,19572647,22796069,25003799,26978663,27370727</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes q for which there are primes b &lt; c &lt; p such that b^p == c^p == 1 (mod q^2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Computed mainly by M. Oakes and D. Broadhurst, cf. link.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For all the listed terms, except for a(4)=2452757 and a(11)=22796069, p=(q-1)/2, which implies that they are &quot;safe primes&quot;, cf. A005385. For a(4) and a(11), p=(q-1)/4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The subsequence of terms of the form q=2p+1 is A196733. As of today it is complete up to its 51st term, ~2e8. - _M. F. Hasler_, Oct 05 2011</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. J. Broadhurst et al., &lt;a href=&quot;http://tech.groups.yahoo.com/group/primenumbers/message/23313&quot;&gt;Re: Square factors of b^p-1&lt;/a&gt; on yahoo group &quot;primenumbers&quot;, Sept.-Oct. 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A196733, A124121, A124122, A005384, A005385.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _M. F. Hasler_, Oct 03 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

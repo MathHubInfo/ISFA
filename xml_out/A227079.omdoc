@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A227079.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A227079">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,49,289,5041,274266721</CMP>
+    </omtext><omtext class="name">
+      <CMP> Solutions n to the Diophantine equation: n = (2*x^2 - 1)^2 = (6*y^2 - 5).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> x = {1, 2, 3, 6, 91} = A180445(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> y = {1, 3, 7, 29, 6761} = A227077(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (sqrt(2*sqrt(n) + 2) - 1)^2 is a Ramanujan-Nagell Square = {1, 9, 25, 121, 32761} = A227078(n).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J.-M. De Koninck, Ces nombres qui nous fascinent, Entry 181, p. 56, Ellipses, Paris 2008.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. J. Mordell, Diophantine Equations, Academic Press, NY, 1969, p. 205.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Richard K. Guy, &lt;a href=&quot;http://www.math.sjsu.edu/~hsu/courses/126/Law-of-Small-Numbers.pdf&quot;&gt;The Strong Law of Small Numbers&lt;/a&gt; (example #29).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/RamanujansSquareEquation.html&quot;&gt;Ramanujan's Square Equation&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A060728, A180445, A227077, A227078.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,fini,full</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Raphie Frank_, Aug 08 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

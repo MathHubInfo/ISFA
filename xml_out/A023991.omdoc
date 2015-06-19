@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A023991.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A023991">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,6,8,8,12,12,13,13,15,17,20,19,22,21,22,21,24,25,26,25,31,30,32,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 30,31,33,33,32,36,34,36,34,36,36,37,36,40,40,42,40,45,48,49,49,51,50,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 52,49,50,50,53,50,56,53,53,53,55,58,60,59,62,60,60,55,58,59,61,60,65,62,65,63,66,69,68</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sum of exponents of primes in multinomial coefficient M(3n; n+1,n,n-1).</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

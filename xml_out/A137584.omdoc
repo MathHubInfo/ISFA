@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A137584.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A137584">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,3,6,13,70,163,379,881,2048,4761,11068,25730,59815,139053,323259,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 751486,1746993,4061266,9441298,21948355,51023735,118615793,275748264,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 641036941,1490230088,3464364646,8053670703,18722512905,43524561955,101182330758,235220381269</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n)=3a(n-1)-2a(n-2)+a(n-3), n &gt; 3.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> LinearRecurrence[{3,-2,1},{0,3,6,13},50] (* _Harvey P. Dale_, Jan 28 2013 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Curtz_, Apr 26 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Harvey P. Dale_, Jan 28 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

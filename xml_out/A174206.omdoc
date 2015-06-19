@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A174206.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A174206">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,1,0,0,1,1,1,1,0,0,0,1,1,0,1,1,0,1,0,1,1,1,1,1,0,0,0,0,1,0,1,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,1,0,0,1,0,1,1,0,1,1,1,0,0,1,0,1,1,0,1,1,1,1,0,1,0,1,1,1,1,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Write natural numbers in base 2 as a stream of digits. Moving left to right, delete even occurrences of digit 0 and 1.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Numbers in base 2: 0, 1, 10, 11, 100, 101, 110, 111, 1000..... Stream of digits: 0110111001011101111000 Delete even occurrences of 0(replaced by ~): 011~1110~10111~11110~0 Delete even occurrences of 1(replaced by ~): 01~~1~10~~01~1~~1~10~0 Left digits: 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0,....</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A174203-A174205, A174207-A174210</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,base,uned</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paolo P. Lava_ and _Giorgio Balzarotti_, Mar 15 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

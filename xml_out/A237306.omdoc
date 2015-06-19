@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A237306.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A237306">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 326262,103860036,22791851729,5924015749908,1470245290038872,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 375668394257449657,95787824535215252184,24644006825337139383504,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6362250185768681012595576,1650548624523988917753379064</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+1)X(6+1) 0..2 arrays with the upper median of every 2X2 subblock equal</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 6 of A237308</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A237306/b237306.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..1..1..0..0..2....0..1..1..1..1..0..2....0..0..1..0..2..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..2..1..1..1..1....1..0..2..0..1..1..1....2..1..0..1..1..1..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Feb 06 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

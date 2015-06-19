@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A077089.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A077089">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,2,1,2,1,1,2,1,1,1,2,3,1,3,1,2,1,2,2,3,2,1,1,1,1,1,3,1,1,1,2,2,2,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3,1,2,2,3,2,2,1,2,1,2,1,1,1,1,2,3,2,2,1,2,2,1,2,3,3,1,3,1,2,2,2,3,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,3,1,1,1,1,1,2,2,1,1,2,2,1,3,3,2,1,2,1,2,2,3,1,2,2,1,2,2,1,1,1,1,1,1,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Quotients when sigma[n+1]/sigma[n] is integer.</CMP>
+    </omtext><assertion class="example">
+      <CMP> n=1: sigma[2]/sigma[1]=3/1=3=a(1); n=14: sigma[15]/sigma[14]=24/24=1=a(2); n=5: sigma[6]/1igma[5]=12/6=2=a(3).</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Do[s=Mod[a=DivisorSigma[1, n+1], b=DivisorSigma[1, n]]; If[Equal[s, 0], Print[a/b]], {n, 1, 10000000}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000203, A002961, A067081, A077086, A077087.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Oct 31 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A031650.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A031650">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3845,48449,78481,80170,117085,118457,217381,218314,223009,279073,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 281189,284378,286514,348461,350825,357965,425545,511754,514618,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 516053,518929,521813,602801,605909,607466,612149,618421,619994,709693,719833,723229</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that continued fraction for sqrt(n) has odd period and central terms 62.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

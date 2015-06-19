@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A002518.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A002518">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,5,4,15,10,7,30,9,40,25,12,55,14,65,20,17,80,19,90,75,22,105,24,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 115,50,27,130,29,140,35,32,155,34,165,150,37,180,39,190,45,42,205,44,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 215,200,47,230,49,240,125,52,255,54,265,60,57,280,59,290,275,62,305</CMP>
+    </assertion><omtext class="name">
+      <CMP> Earliest sequence with a(a(n))=5n.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A002518/b002518.txt&quot;&gt;Table of n, a(n) for n=0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Aa#aan&quot;&gt;Index entries for sequences of the a(a(n)) = 2n family&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A002518"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="a" cd="A002518"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A002518"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="n"/></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A002518"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="n"/></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>25</OMI><OMV name="n"/></OMA><OMI>5</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A002518"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="n"/></OMA><OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="n"/></OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A002518"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="n"/></OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>25</OMI><OMV name="n"/></OMA><OMI>15</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> a[n_] := a[n] = Which[ Mod[n, 5] == 0, 5*a[n/5], Mod[n, 5] == 1, n+1, Mod[n, 5] == 2, 5*(n-2)+5, Mod[n, 5] == 3, n+1, True, 5*(n-4)+15]; a[0] = 0; Table[ a[n], {n, 0, 62}] (* _Jean-François Alcover_, Sep 24 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002516, A002517, A007379.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Colin Mallows_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected description and more terms from _Henry Bottomley_, Apr 27 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

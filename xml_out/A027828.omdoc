@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A027828.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A027828">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,1,1,1,1,1,2,11,11,11,11,11,11,11,11,12,111,111,111,111,111,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 111,111,111,112,1111,1111,1111,1111,1111,1111,1111,1111,1112,11111,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11111,11111,11111,11111,11111,11111,11111,11112,111111,111111,111111</CMP>
+    </assertion><omtext class="name">
+      <CMP> First differences of A010785.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Differences[Union[FromDigits/@Flatten[Table[PadRight[{},i,n],{n,0,9},{i,6}],1]]] (* _Harvey P. Dale_, Jan 16 2013 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,10</CMP>
+    </assertion><assertion class="author">
+      <CMP> Jean-Marc MALASOMA (Malasoma(AT)entpe.fr)</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _James A. Sellers_, May 01 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

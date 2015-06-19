@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A102994.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A102994">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,7,9,14,24,45,49,73,74,232,338,397,504,1063,2817,5305,16768,27060</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers n such that 4*10^n + 6*R_n - 5 is prime, where R_n = 11...1 is the repunit (A002275) of length n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also numbers n such that (14*10^n-17)/3 is prime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Makoto Kamada, &lt;a href=&quot;http://stdkmd.com/nrr/4/46661.htm#prime&quot;&gt;Prime numbers of the form 466...661&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Pri#Pri_rep&quot;&gt;Index entries for primes involving repunits&lt;/a&gt;.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A102994"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A101729"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Do[ If[ PrimeQ[(14*10^n - 17)/3], Print[n]], {n, 0, 10000}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002275, A101729.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> more,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Jan 17 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Addition of a(18)-a(19) from Kamada data by _Robert Price_, Dec 10 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

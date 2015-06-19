@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A089169.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A089169">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,3,4,6,6,5,8,10,12,5,12,14,16,7,9,18,18,8,20,22,7,11,13,24,28,30,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 30,15,10,32,36,14,38,40,9,11,21,42,42,44,46,23,25,48,16,52,54,13,27,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 20,58,60,11,60,62,33,14,66,22,68,70,72,19,35,37,72,74,78,39,80,82,13,16,84</CMP>
+    </assertion><omtext class="name">
+      <CMP> Solutions x for x^2-1 = kp where p is prime and k=1,2...</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) xpm1(n,m,pow) = { for(k=1,m, for(x=1,n, y= x^pow - 1; z=floor(y/k); if(floor(y/k)*k==y, if(isprime(z), print1(x&quot;,&quot;) ) ) ) )</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Cino Hilliard_, Dec 07 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

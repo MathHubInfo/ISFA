@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A204272.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A204272">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,10,50,252,754,3500,8450,34680,89635,309140,700402,2910600,5688370,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 20195500,50706500,160553712,329639810,1248615550,2398289458,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8732957688,19306982500,56865638380,119281100930,461838762000,853941516771</CMP>
+    </assertion><omtext class="name">
+      <CMP>  a(n) = sigma_2(n)*Pell(n), where sigma_2(n) = A001157(n), the sum of squares of divisors of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP>  Compare g.f. to the Lambert series identity: Sum_{n&gt;=1} n^2*x^n/(1-x^n) = Sum_{n&gt;=1} sigma_2(n)*x^n.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="n"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="Pell" cd="A204272"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMR xref="A002203"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="n"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="sigma_2" cd="A204272"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="Pell" cd="A204272"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+        </OMA>
+      </OMBIND>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Pell" cd="A204272"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000129"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMR xref="A002203"/>
+      <OMV name="is"/>
+    </OMA>
+      </OMOBJ>the companion Pell numbers .
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP>  G.f.: A(x) = x + 10*x^2 + 50*x^3 + 252*x^4 + 754*x^5 + 3500*x^6 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> where A(x) = x/(1-2*x-x^2) + 2^2*2*x^2/(1-6*x^2+x^4) + 3^2*5*x^3/(1-14*x^3-x^6) + 4^2*12*x^4/(1-34*x^4+x^8) + 5^2*29*x^5/(1-82*x^5-x^10) + 6^2*70*x^6/(1-198*x^6+x^12) +...+ n^2*Pell(n)*x^n/(1 - A002203(n)*x^n + (-1)^n*x^(2*n)) +...</CMP>
+    </assertion><omtext class="program">
+      <CMP>  (PARI) /* Subroutines used in PARI programs below: */</CMP>
+    </omtext><omtext class="program">
+      <CMP> {Pell(n)=polcoeff(x/(1-2*x-x^2+x*O(x^n)), n)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> {A002203(n)=polcoeff(2*(1-x)/(1-2*x-x^2+x*O(x^n)), n)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n)=sigma(n,2)*Pell(n)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n)=polcoeff(sum(m=1,n,m^2*Pell(m)*x^m/(1-A002203(m)*x^m+(-1)^m*x^(2*m)+x*O(x^n))),n)}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP>  Cf. A203849, A204270, A204271, A204273, A204274, A204275, A001157 (sigma_2), A002203, A000045.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Jan 14 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

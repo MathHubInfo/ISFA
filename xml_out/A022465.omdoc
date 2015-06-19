@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A022465.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A022465">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,31,32,33,34,35,36,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 37,69,73,74,75,76,77,78,79,80,181,191,443,445,1052,2701,2703,6455,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6456,6457,6459,6460,6466,15928,15929,16055,40073,40078,40080,40081,40082</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that prime(n) mod n &lt;= 10.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[41000],Mod[Prime[#],#]&lt;=10&amp;] (* _Harvey P. Dale_, Aug 21 2011 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

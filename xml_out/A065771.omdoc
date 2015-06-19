@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A065771.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A065771">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 16,81,128,625,1024,2187,2401,4096,8192,14641,28561,59049,65536,78125,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 83521,130321,131072,279841,524288,531441,707281,823543,923521,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1594323,1874161,2825761,3418801,4194304,4879681,7890481,9765625,12117361,13845841,16777216</CMP>
+    </assertion><omtext class="name">
+      <CMP> Prime powers n such that both tau(n^2) and sigma(n^2) are composite numbers.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Donovan Johnson, &lt;a href=&quot;/A065771/b065771.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMR xref="A000005"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A025475"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMR xref="A000203"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A025475"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>are composite numbers .
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Do[ s=DivisorSigma[ 0, n^2 ]; y=DivisorSigma[ 1, n^2 ]; If[ Equal[ Length[ FactorInteger[ n ] ], 1 ]&amp;&amp;!PrimeQ[ n ] &amp;&amp;!PrimeQ[ s ]&amp;&amp;!PrimeQ[ y ], Print[ n ] ], {n, 1, 10000000} ]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000005, A000203, A065403-A065405, A028982, A025475.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Nov 19 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

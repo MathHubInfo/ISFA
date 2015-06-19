@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A133509.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A133509">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 105,164,186,194,206,216,231,254,282,285,302,314,324,374,386,402,416,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 456,468,491,504,521,552,588,606,610,615,629,651,656,657,696,759,794,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 830,842,854,870,903,906,954,956,981,998</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that m=1 is the only number for which the sum of digits of m^n equals m.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Farideh Firoozbakht_, Dec 04 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Description improved by _T. D. Noe_, Nov 26 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extension by _T. D. Noe_, Nov 26 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Charles R Greathouse IV_, Aug 02 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

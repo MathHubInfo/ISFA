@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A088210.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A088210">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,17,53,157,449,1253,3433,9273,24765,65529,172061,448853,1164409,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3006157,7728337,19794545,50532469,128621281,326513669,826887693,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2089505841,5269572021,13265211961,33336792745,83648953133,209591807177</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numerators of convergents of the continued fraction with the n+1 partial quotients: [2;2,2,...(n 2's)...,2,n+1], starting with [1], [2;2], [2;2,3], [2;2,2,4], ...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Denominators are A088211. Partial sums form A054459. Second differences form A026937.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. P. Grimaldi, Ternary strings ..., Congressus Numerantium, 205 (2011), 129-149. (See the foot of page 136.)</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Equals P(n-1)+n*P(n) where P() = A000129 are the Pell numbers.</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(3)/A088211(3) = [2;2,2,4] = 53/22.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A088211, A054459, A026937.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> frac,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Sep 23 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

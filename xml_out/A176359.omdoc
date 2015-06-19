@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A176359.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A176359">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 27000,74088,189000,287496,297000,343000,351000,370440,459000,474552,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 513000,621000,783000,814968,837000,963144,999000,1029000,1061208,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1107000,1157625,1161000,1259496,1269000,1323000,1331000,1407672,1431000,1437480,1481544,1593000,1647000,1704024,1809000,1852200,1917000,1971000,2012472,2079000,2133000,2148552</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers with at least three 3s in their prime signature.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In other words, if the canonical prime factorization of n into prime powers is Product p(i)^e(i), then e(i) = 3 for at least three values of i.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 27000=2^3*3^3*5^3,74088=2^3*5^3*7^3,..</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[n_]:=Count[Last/@FactorInteger[n],3]&gt;2; Select[Range[10!],f]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000578, A001235, A176297, A176313, A176350, A109399.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Joseph Stephan Orlovsky_, Dec 07 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Matthew Vandermast_, Dec 09 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

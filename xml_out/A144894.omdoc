@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A144894.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A144894">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,55,485,4380,39570,421800,4265100,49455000,594001800,7784683200,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 107814672000,1624964544000,25881953328000,443107288512000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8028628336512000,154539996629760000,3135393617489280000,67045955961922560000,1503619681171829760000,35321502985569884160000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Third column (m=3) of triangle A144891 (S1hat(5)).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A144894"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A144891"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMI>3</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> A001720 (first column), A144893 (second column).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_ Oct 09 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

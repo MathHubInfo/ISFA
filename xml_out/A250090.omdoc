@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A250090.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A250090">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,3,2,5,6,7,4,9,12,11,10,13,14,15,8,17,24,19,18,21,22,23,20,25,28,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 27,26,29,30,31,16,33,48,35,34,37,38,39,36,41,44,43,42,45,46,47,40,49,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 56,51,50,53,54,55,52,57,60,59,58,61,62,63,32,65,96,67,66,69,70,71,68,73,76,75,74,77,78,79,72,81,88,83,82,85,86,87,84,89,92,91</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(0)=1; for n&gt;0, a(n) is the number not yet used which yields the smallest possible positive sum_{k=0..n} (-1)^(a(k)+1)*a(k).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Odd terms are added, even terms are subtracted. At each step, the next term is chosen among numbers which did not yet occur, as to minimize this sum.</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Angelini, &lt;a href=&quot;http://list.seqfan.eu/pipermail/seqfan/2014-November/013948.html&quot;&gt;Minimizing Q&lt;/a&gt;, SeqFan list, Nov 11 2014.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A250090(n=100,a=1,Q=0,u=[])={for(n=1,n,print1(a&quot;,&quot;);u=setunion(u,Set(a));Q-=(-1)^a*a;forstep(k=2-Q%2,Q,2,setsearch(u,Q-k)&amp;&amp;next;a=Q-k;next(2));forstep(k=1,9e9,2,setsearch(u,k)&amp;&amp;next;a=k;next(2)));a} \\ returns a(n) and prints out a(k) for 0&lt;=k&lt;n.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A250072.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric Angelini_ and _M. F. Hasler_, Nov 11 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

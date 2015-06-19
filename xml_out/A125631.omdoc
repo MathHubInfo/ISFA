@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A125631.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A125631">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,5,11,17,19,27,29,35,41,43,49,57,59,65,69,71,77,79,83,95,101,107,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 125,127,131,137,147,149,153,161,163,169,173,179,189,191,197,201,221,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 227,229,233,239,247,253,259,267,269,275,281,305,311,327,329,347,349,353</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers of the form 2*prime(i) - prime(i+1) + 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A124115 sorted and duplicates removed.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 2*prime(21) - prime(22) + 2 = 2*73 - 79 + 2 = 69, so 69 is in the sequence.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) {p=2;q=3;v=[];while(p&lt;370,v=concat(v,2*p-q+2);p=q; q=nextprime(q+1));v=listsort(List(v),1);for(j=1,#v-1,print1(v[j],&quot;,&quot;))}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A124115.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Klaus Brockhaus_, Nov 28 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A138797.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A138797">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,6,10,6,21,10,36,10,55,21,15,28,15,21,136,45,21,55,21,36,28,78,45,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 28,36,28,406,120,36,136,528,36,55,36,91,190,66,45,55,231,45,253,45,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 55,91,300,153,55,78,66,55,378,55,91,66,78,136,465,66,496,153,66,2080,66,171</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least possible T(k) with T(k)-T(j)=n, where T(i)&gt;0 are the triangular numbers A000217.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For k see A138796, for j see A138798 and for T(j) see A138799.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The number of ways n can be written as difference of two triangular numbers is sequence A136107</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(4)=10 because T(A138796(4))=10.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> T=#(#+1)/2&amp;;T[Min[k/.{ToRules[Reduce[{T[k]-T[j]\[Equal]#,0&lt;j&lt;k},{j,k},Integers]]}]]&amp;/@Range[2,100]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000217, A109814, A118235, A136107, A138796, A138798, A138799.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Peter Pein (petsie(AT)dordos.net), Mar 30, 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

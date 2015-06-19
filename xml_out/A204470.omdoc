@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A204470.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A204470">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,58,676,3486,11963,32134,73294,148718,276373,479632,787986,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1237756,1872809,2745266,3916220,5456444,7447107,9980486,13160678,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 17104314,21941271,27815384,34885162,43324496,53323377,65088604,78844500,94833624,113317483,134577246</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 6-element subsets that can be chosen from {1,2,...,6*n} having element sum 18*n+3.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the number of partitions of 18*n+3 into 6 distinct parts &lt;=6*n.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A204470/b204470.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>32</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>9</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>352</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>8</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>979</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>7</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1370</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1425</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1394</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1072</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>449</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>54</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(2) = 58 because there are 58 6-element subsets that can be chosen from {1,2,...,12} having element sum 39: {1,2,3,10,11,12}, {1,2,4,9,11,12}, ..., {3,5,6,7,8,10}, {4,5,6,7,8,9}.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> a:= n-&gt; (Matrix(11, (i, j)-&gt; `if`(i=j-1, 1, `if`(i=11, [-1, 4, -5, 0, 5, -3, -3, 5, 0, -5, 4][j], 0)))^n. &lt;&lt;0, 1, 58, 676, 3486, 11963, 32134, 73294, 148718, 276373, 479632&gt;&gt;)[1, 1]: seq(a(n), n=0..50);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column k=6 of A204459.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alois P. Heinz_, Jan 16 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

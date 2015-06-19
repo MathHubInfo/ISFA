@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A115669.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A115669">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,11,13,20,30,31,59,61,101,110,112,113,128,130,131,178,200,300,301,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 307,310,311,388,590,599,610,839,854,875,949,989,1003,1010,1021,1031,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1100,1102,1103,1105,1112,1120,1124,1130,1175,1201,1216,1280,1300</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers the reversal of whose square is a brilliant number (A078972).</CMP>
+    </omtext><assertion class="example">
+      <CMP> 3481=59^2 is a square and 1843=19*97 is brilliant.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A078972, A115667, A115668.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Giovanni Resta_, Jan 31 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

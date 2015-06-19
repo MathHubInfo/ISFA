@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A103806.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A103806">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,7,13,19,23,37,47,53,67,73,103,137,157,163,173,193,227,233,277,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 313,347,353,397,443,457,613,733,863,877,983,1087,1153,1213,1327,1447,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1493,1733,1747,1787,1867,2053,2063,2153,2237,2377,2383,2503,2557,2657,2683</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p such that both 2p +/- 33 are primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If, e.g., -29 is not prime (Mathematica considers -prime as prime), then the first four terms should be omitted.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMV name="p"/>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="p"/></OMA><OMI>33</OMI>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="p"/></OMA><OMI>33</OMI>
+    </OMA>
+      </OMOBJ>all are primes .
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Select[Range[2000], PrimeQ[ # ] &amp;&amp; PrimeQ[2# + 33] &amp;&amp; PrimeQ[2# - 33] &amp;]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(3000)| IsPrime(2*p+33) and IsPrime(2*p-33) ] [From Vincenzo Librandi, Jan 28 2011]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A103802, A103803, A103804, A103805.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zak Seidov_, Feb 16 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

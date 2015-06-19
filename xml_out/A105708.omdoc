@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A105708.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A105708">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,11,28,23,38,30,49,50,46,60,54,83,71,81,73,78,90,90,99,97,126,114,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 113,135,121,146,136,145,140,145,154,157,170,164,178,186,180,190,188,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 203,200,211,207,215,221,246,235,231,242,249,247,272,255,269,267,290,274</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest m such that 8 is at the n-th position of the decimal representation of the m-th Fibonacci Number.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A105718(n) = A000045(a(n)).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/FibonacciNumber.html&quot;&gt;Fibonacci Number&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> n=3: a(3)=23, A000045(23)=A105710(3)=28657-&gt;2[8]657;</CMP>
+    </assertion><assertion class="example">
+      <CMP> n=4: a(4)=38, A000045(38)=A105710(4)=39088169-&gt;390[8]8169.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A105701, A072354, A105702, A105703, A105704, A105705, A105706, A105707, A105709.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Apr 18 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

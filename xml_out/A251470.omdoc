@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A251470.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A251470">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 75962,4789458,305835002,19627202794,1260430729632,80982143877530,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5202945849966534,334318881406658424,21480721926534939516,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1380281369290307662180,88688226067972886885132</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+1)X(3+1) 0..5 arrays with every 2X2 subblock summing to a prime</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 3 of A251474</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A251470/b251470.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..1..2....1..1..4..2....5..1..2..2....5..0..1..2....0..3..2..5</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0....5..0..2..3....2..5..5..4....4..2..2..0....5..5..3..3</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Dec 02 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

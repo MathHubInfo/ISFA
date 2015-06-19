@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A243413.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A243413">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,19,70,259,962,3585,13399,50201,188481,709001,2671624,10082895,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 38107919,144214978,546413880,2072553851,7869081412,29904874545,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 113744129791,432969825404,1649313815911,6287005845873,23980562901849,91523321091182,349497990760012</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of Dyck paths of semilength n having exactly 1 occurrence of the consecutive steps UDUUDU (with U=(1,1), D=(1,-1)).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A243413/b243413.txt&quot;&gt;Table of n, a(n) for n = 4..550&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vaclav Kotesovec, &lt;a href=&quot;/A243413/a243413.txt&quot;&gt;Recurrence (of order 10)&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A243413"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="c"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="sqrt" cd="A243413"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="d"/>
+      <OMF dec="3.8821590268628507"/>
+    </OMA>
+      </OMOBJ>...(same as for <OMOBJ>
+        <OMR xref="A243412"/>
+      </OMOBJ>)is the root of the equation <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMI>8</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMI>7</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>12</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMI>5</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>8</OMI><OMV name="d"/></OMA><OMI>3</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMF dec="0.01597638709926029"/>
+    </OMA>
+      </OMOBJ>....-_Vaclav Kotesovec_ ,Jun 05 2014 
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Column k=1 of A243366.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 4,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alois P. Heinz_, Jun 04 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

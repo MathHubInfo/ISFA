@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A003363.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A003363">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,70,133,196,259,322,385,448,735,798,861,924,987,1050,1113,1463,1526,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1589,1652,1715,1778,2191,2254,2317,2380,2443,2919,2982,3045,3108,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3647,3710,3773,4102,4165,4228,4291,4354,4375,4417,4438,4480,4830,4893,4956</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers that are the sum of 7 nonzero 6th powers.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A003363/b003363.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

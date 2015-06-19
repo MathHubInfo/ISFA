@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A143557.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A143557">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,8,32,280,1728,16744,117856,1202552,9044352,95203784,745451168,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8011827928,64459117632,703166465320,5769038826208,63639465830712,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 529889242505984,5896324892061576,49665617425122592,556508207889107096</CMP>
+    </assertion><omtext class="name">
+      <CMP> G.f. satisfies: A(x) = 1 + x*A(x)^4/A(-x)^4.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .satisfies :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A143557"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="A" cd="A143557"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .satisfies :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A143557"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A143557"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A143557"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .satisfies :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A143557"/>
+      <OMV name="x"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="A" cd="A143557"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMI>4</OMI>
+    </OMA><OMV name="x"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A143557"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>12</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A143557"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+      <OMI>12</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A143557"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="G" cd="A143557"/>
+      <OMV name="x"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="G" cd="A143557"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="G" cd="A143557"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="G" cd="A143557"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>is the <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .of <OMOBJ>
+        <OMR xref="A143564"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> G.f. A(x) = 1 + x + 8*x^2 + 32*x^3 + 280*x^4 + 1728*x^5 + 16744*x^6 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> A(x)/A(-x) = 1 + 2*x + 2*x^2 + 50*x^3 + 98*x^4 + 2658*x^5 + 6370*x^6 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> A(x)^3/A(-x)^3 = 1 + 6*x + 18*x^2 + 182*x^3 + 930*x^4 + 10374*x^5 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> where 1 - (1+x^2)/A(x) = x*A(x)^3/A(-x)^3.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) {a(n)=local(A=1+x*O(x^n));for(i=0,n,A=1+x*A^4/subst(A^4,x,-x));polcoeff(A,n)}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A143564, A143555, A143556, A143558, A143559.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Aug 24 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

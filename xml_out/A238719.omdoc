@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A238719.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A238719">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,40,284,11440,296384,43248968,4105077596,2157995166344,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 751193181802392,1429330959153482960,1827061855695075169856</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nXn 0..2 arrays with no element equal to the sum modulo 3 of elements to its left or elements above it</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Diagonal of A238726</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=5</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..2..1..2....2..1..1..2..1....2..1..2..1..1....2..1..1..2..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..0..2..1....1..0..0..0..2....1..0..0..0..2....1..2..2..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..0..1..1..2....2..0..0..1..2....2..0..1..2..1....1..2..2..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..2..2..1....1..0..2..2..0....1..0..2..1..2....2..1..1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..0..0..1..1....1..2..2..0..0....2..0..1..2..1....2..1..1..0..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Mar 03 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

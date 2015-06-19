@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A179258.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A179258">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,4,9,1,2,8,9,5,7,1,2,8,1,6,6,7,5,5,1,9,7,4,1,0,1</CMP>
+    </omtext><omtext class="name">
+      <CMP> Decimal expansion of perimeter variance of uniform random triangles.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Steven Finch, &lt;a href=&quot;http://arxiv.org/abs/1007.0261&quot;&gt;Perimeter Variance of Uniform Random Triangles&lt;/a&gt;, arXiv:1007.0261 [math.PR] Jul 01, 2010.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 0.6491289571281667551974101.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> cons,nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Vos Post_, Jul 05 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

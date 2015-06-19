@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A241997.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A241997">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,4,62,1530,50849,2089719,101470053,5660430287,355970992756,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 24894562936569,1915987357589537,160941576221849622,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 14653841416756810665,1437868649635368258342,151284341822917527109841,16993002921809143802858179,2029842747191877113876104045</CMP>
+    </assertion><omtext class="name">
+      <CMP> G.f. satisfies: A(x)^2 = x + A(x*A(x)^5).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vaclav Kotesovec, &lt;a href=&quot;/A241997/b241997.txt&quot;&gt;Table of n, a(n) for n = 0..250&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A241997"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="c"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>5</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="log" cd="A241997"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="exp" cd="A241997"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="log" cd="A241997"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMF dec="0.2007164067804229"/>
+    </OMA>
+      </OMOBJ>...
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI) {a(n)=local(A=[1, 1], Ax); for(i=1, n, A=concat(A, 0); Ax=Ser(A);</CMP>
+    </omtext><omtext class="program">
+      <CMP> A[#A]=Vec(1+subst(Ax, x, x*Ax^5) - Ax^2)[#A]); A[n+1]}</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=0, 30, print1(a(n), &quot;, &quot;))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A240996 (q=2), A240999 (q=3), A241996 (q=4), A241998 (q=6), A241999 (q=7).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vaclav Kotesovec_, Aug 11 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

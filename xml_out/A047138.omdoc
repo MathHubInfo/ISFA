@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A047138.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A047138">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,14,48,179,656,2394,8744,32791,123188,463211,1744076,6632688,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 25303978,96699766,370030836,1422210560,5479757300,21147107145,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 81707846148,316422360163,1227500661756,4768032430608,18539704936398</CMP>
+    </assertion><omtext class="name">
+      <CMP> T(n,n+3), array T as in A047131.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

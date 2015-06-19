@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A228823.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A228823">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,1,5,2,1,9,5,2,1,17,9,5,2,1,27,17,9,5,2,1,46,27,17,9,5,2,1,69,46,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 27,17,9,5,2,1,108,69,46,27,17,9,5,2,1,158,108,69,46,27,17,9,5,2,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 234,158,108,69,46,27,17,9,5,2,1,331,234,158,108,69</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle read by rows: T(n,k) = total number of parts in all partitions of n that contain k as a part, n&gt;=1, 1&lt;=k&lt;=n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row n lists the first n elements of A093694 in decreasing order.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A228823"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000041"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A006128"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A093694"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2,     1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5,     2,   1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9,     5,   2,   1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 17,    9,   5,   2,  1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 27,   17,   9,   5,  2,  1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 46,   27,  17,   9,  5,  2,  1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 69,   46,  27,  17,  9,  5,  2,  1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 108,  69,  46,  27, 17,  9,  5,  2,  1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 158, 108,  69,  46, 27, 17,  9,  5,  2,  1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 234, 158, 108,  69, 46, 27, 17,  9,  5,  2,  1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 331, 234, 158, 108, 69, 46, 27, 17,  9,  5,  2,  1;</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000041, A006128, A027293, A093694, A182701.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Omar E. Pol_, Sep 25 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A179936.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A179936">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,6,0,540,0,156240,0,96480720,0,104661849600,0,177947471782080,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 439942718370355200,0,1499983925770422892800,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6780179728814814933811200,0,39412342523061395825857920000,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> E.g.f. satisfies: A(A(x))^3 = A(x)^3 * A'(x).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Let <OMOBJ>
+        <OMA>
+      <OMS name="A_n" cd="A179936"/>
+      <OMV name="x"/>
+    </OMA>
+      </OMOBJ>denote the n-th iteration of <OMOBJ>
+        <OMA>
+      <OMS name="A" cd="A179936"/>
+      <OMV name="x"/>
+    </OMA>
+      </OMOBJ>,then 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> . [A_{n+1}(x)]^3 = A(x)^3 * A_n'(x) for all n,</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="A"/>
+      <OMA><OMS name="times"/><OMV name="A"/><OMV name="x"/></OMA>
+    </OMA>
+      </OMOBJ>satisfies :
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      .<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="A"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+      </OMOBJ>;
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      .<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A_n" cd="A179936"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="A"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      where operator <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="D" cd="A179936"/>
+      <OMV name="F"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="d"/><OMV name="dx"/>
+    </OMA><OMV name="F"/></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> E.g.f: A(x) = x + 6*x^3/3! + 540*x^5/5! + 156240*x^7/7! + 96480720*x^9/9! + 104661849600*x^11/11! + 177947471782080*x^13/13! + 439942718370355200*x^15/15! +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> Related expansions:</CMP>
+    </assertion><assertion class="example">
+      <CMP> A(x)^3 = 6*x^3/3! + 360*x^5/5! + 83160*x^7/7! + 43908480*x^9/9! +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> A(A(x)) = x + 12*x^3/3! + 1440*x^5/5! + 509040*x^7/7! + 368686080*x^9/9! +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> A(A(x))^3 = 6*x^3/3! + 720*x^5/5! + 241920*x^7/7! + 165110400*x^9/9! +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> A'(x) = 1 + 6*x^2/2! + 540*x^4/4! + 156240*x^6/6! + 96480720*x^8/8! +...</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) /* Coefficients of A_m(x) = m-th iteration of A(x): */</CMP>
+    </omtext><omtext class="program">
+      <CMP> {a(n,m=1)=local(A=x+x^3,D);for(i=1,n,D=x;A=x+sum(k=1,n,m^k*(D=(A+x*O(x^n))^3*deriv(D))/k!));if(n&lt;1,0,n!*polcoeff(A,n))}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A179497 (variant).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> eigen,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Aug 02 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

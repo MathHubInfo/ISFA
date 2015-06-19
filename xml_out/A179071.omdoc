@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A179071.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A179071">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,1,1,18,4,1,1,70,1,882,32,1,1,182,1,29718,1,1,1068,1,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 500,5604,4030,1,1,8890182,776,1,1,1744,1,113582,1,4832118,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1118,1,1111225770,1,1764132,11018,1,1,1,1,20000849130,23156,1</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Chapman's &quot;evil&quot; determinants I.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Determinant of the (k+1)-by-(k+1) matrix with (i,j)-entry L((j-i)/p), where L(./p) denotes the Legendre symbol modulo p and p = p_n = 2k+1 is the n-th prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Guy says &quot;Chapman has a number of conjectures which concern the distribution of quadratic residues.&quot; One is that if p_n == 3 (mod 4), then a(n) = 1. Chapman also has a conjecture if p_n == 1 (mod 4), involving the fundamental unit and class number of the quadratic field Q(sqrt(p)). (Added Aug 23 2011: Both conjectures have been proved by Vsemirnov.)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It appears that a(n) is negative and even, if p_n == 1 (mod 4); see A179073. (Added Aug 28 2011: This conjecture has also been proved by Vsemirnov.)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Richard Guy, Unsolved Problems in Number Theory, 3rd ed., Springer, 2004, Section F5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Robin Chapman, &lt;a href=&quot;http://dx.doi.org/10.4064/aa115-3-4&quot;&gt;Determinants of Legendre symbol matrices&lt;/a&gt;, Acta Arith. 115 (2004), 231-244.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Robin Chapman, &lt;a href=&quot;http://dx.doi.org/10.1016/j.ejc.2003.02.001&quot;&gt;Steinitz classes of unimodular lattices&lt;/a&gt;, European J. Combin. 25 (2004), 487-493.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Robin Chapman (2009), &lt;a href=&quot;http://secamlocal.ex.ac.uk/people/staff/rjchapma/etc/evildet.pdf&quot;&gt; My evil determinant problem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Maxim Vsemirnov (2011), &lt;a href=&quot;http://arxiv.org/abs/1108.4031&quot;&gt;On R. Chapman's ``evil determinant'': case p=1 (mod 4)&lt;/a&gt;, arXiv:1108.4031 [math.NT], 2011-2012.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Vseminov, &lt;a href=&quot;http://dx.doi.org/10.1016/j.laa.2011.08.039&quot;&gt;On the evaluation of R. Chapman's &quot;evil determinant&quot;&lt;/a&gt;, Linear Algebra Appl. 436(2012), 4101-4106.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Legendre_symbol&quot;&gt; Legendre symbol&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> p_3 = 5 = 2*2+1 and the (2+1)-by-(2+1) matrix (L((j-i)/5)) is</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 1, -1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 0, 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> -1, 1, 0</CMP>
+    </assertion><assertion class="example">
+      <CMP> which has determinant -2, so a(3) = -2.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A179072 (Chapman's &quot;evil&quot; determinants II), A179073 (A179071 for p == 1 (mod 4)), A179074 (A179072 for p == 1 (mod 4)).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Sondow_ and _Wadim Zudilin_, Jun 29 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

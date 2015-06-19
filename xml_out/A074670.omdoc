@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A074670.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A074670">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,30,40,60,42,8,16,24,6,50,4,6,20,6,84,6,24,66,94,14,16,306,168,72,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 20,18,90,30,82,98,100,272,48,10,30,42,158,10,42,14,4,26,16,20,24,10,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 30,6,30,30,38,42,10,74,34</CMP>
+    </assertion><omtext class="name">
+      <CMP> Differences between successive six-digit distinct-digit primes.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1)=8 &amp; a(2)=30 because first three 6-digit distinct-digit primes are 102359, 102367, 102397 and differences between them are 8 and 30.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a=102345; b=a+8000; se6 = Select[Range[a, b, 2], Length[Union[IntegerDigits[ # ]]] == 6 &amp;&amp; PrimeQ[ # ] &amp; ]; Flatten[Table[{se6[[i+1]]-se6[[i]]}, {i, Length[se6]-1}]]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> The first differences of A074669. For 3-digit distinct-digit primes, see A074675, A074676. For 4-digit distinct-digit primes, see A074673, A074674. For 5-digit distinct-digit primes, see A074671, A074672. For 7-digit distinct-digit primes, see A074667, A074668. For 8-digit distinct-digit primes, see A074665, A074666.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> fini,nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zak Seidov_, Aug 30 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

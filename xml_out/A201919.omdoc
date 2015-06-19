@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A201919.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A201919">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,7,8,49,148,344,2401,36016,151264,386561,1764736,5764801,46941952,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 58471553,374712065,1101076992,4802079233,15858967552,139825248256,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 149429406721,1595702681601,2453862488064,14602557997056,42091354378241,127990382747648</CMP>
+    </assertion><omtext class="name">
+      <CMP> Automorphic numbers n^2 ends with n in base 14 (written in base 10).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric M. Schmidt, &lt;a href=&quot;/A201919/b201919.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(3) = 7 = (7)_14 since 7^2 = 49 = (37)_14 ends with 7 in base 14.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4) = 8 = (8)_14 since 8^2 = 64 = (48)_14 ends with 8 in base 14.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(5) = 49 = (37)_14 since 49^2 = 2401 = (C37)_14 ends with 37 in base 14.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (Sage) See A003226. - _Eric M. Schmidt_, Feb 09 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A003226, A201821, A201918, A201921, A201948, A237583.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Martin Renner_, Dec 06 2011</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Eric M. Schmidt_, Feb 09 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

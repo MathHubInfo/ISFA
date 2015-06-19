@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A035990.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A035990">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,3,4,6,8,11,15,20,26,35,45,58,75,96,121,154,193,242,301,374,461,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 570,698,854,1042,1268,1535,1859,2240,2696,3235,3875,4627,5521,6565,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7797,9240,10934,12906,15220,17907,21043,24683,28915,33811,39497</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n into parts not of the form 23k, 23k+2 or 23k-2. Also number of partitions with 1 part of size 1 and differences between parts at distance 10 are greater than 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Case k=11,i=2 of Gordon Theorem.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. E. Andrews, The Theory of Partitions, Addison-Wesley, 1976, p. 109.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Olivier Gérard_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

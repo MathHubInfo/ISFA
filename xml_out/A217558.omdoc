@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A217558.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A217558">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,16,32,48,64,80,96,112,128,144,160,176,192,208,224,240,1,17,33,49,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 65,81,97,113,129,145,161,177,193,209,225,241,2,18,34,50,66,82,98,114,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 130,146,162,178,194,210,226,242,3,19,35,51,67,83,99,115,131,147,163,179,195,211,227,243</CMP>
+    </assertion><omtext class="name">
+      <CMP> Split-and-swap on 8-bit integers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Split-and-swap consists of spliting a binary word into two halves and swapping the parts over to form a new word, for example 11001010 becomes 10101100.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(17)=17 because 17 is 00010001 which is invariant over the SaS rule.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(19)=49 because 00010011 becomes 00110001.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (JavaScript)</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (i=0;i&lt;16;i++)</CMP>
+    </omtext><omtext class="program">
+      <CMP> for (j=0;j&lt;16;j++)</CMP>
+    </omtext><omtext class="program">
+      <CMP> document.write(j*16+i+&quot;, &quot;);</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A217558(n)=[1,16]*divrem(n,16) \\ - _M. F. Hasler_, Oct 07 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,fini,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jon Perry_, Oct 06 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

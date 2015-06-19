@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A128051.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A128051">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 14,490,10290,163268,2184910,26118078,288240050,2997696520,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 29780961966,285300001490,2653572489106,24083839729740,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 214124712999470,1870539234917542,16094233518706770,136653810502199312</CMP>
+    </assertion><omtext class="name">
+      <CMP> (n^3+n)*7^n.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A128051/b128051.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>14</OMI><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>7</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>49</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>7</OMI><OMV name="x"/></OMA>
+    </OMA>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Vincenzo Librandi_ ,Feb 22 2013 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Table[(n^3 + n) * 7^n, {n, 30}] (* or *) CoefficientList[Series[14 (1 + 7 x + 49 x^2)/(1 - 7 x)^4, {x, 0, 20}], x] (* _Vincenzo Librandi_, Feb 22 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [(n^3 + n)*7^n: n in [1..20]]; // _Vincenzo Librandi_, Feb 22 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A128796, A128960, A128985, A129002.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Mohammad K. Azarian_, May 02 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

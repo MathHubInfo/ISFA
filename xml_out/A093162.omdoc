@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A093162.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A093162">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,23,223,22222223,22222222223,222222222222222222222222222222222223</CMP>
+    </omtext><omtext class="name">
+      <CMP> Primes of the form 20*R_n + 3, where R_n is the repunit (A002275) of length n.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Makoto Kamada, &lt;a href=&quot;http://stdkmd.com/nrr/2/22223.htm#prime&quot;&gt;Prime numbers of the form 22...223&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Pri#Pri_rep&quot;&gt;Index entries for primes involving repunits&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A093162"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>20</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>10</OMI>
+      <OMA>
+      <OMR xref="A056656"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA></OMA><OMI>7</OMI>
+    </OMA><OMI>9</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>10</OMI>
+      <OMA>
+      <OMR xref="A096506"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA></OMA><OMI>7</OMI>
+    </OMA><OMI>9</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A002275, A056656 (corresponding n, and count of digits 2 in a(n)), A096506.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Rick L. Shepherd_, Mar 26 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Ray Chandler_, Feb 27 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

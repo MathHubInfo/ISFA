@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A157852.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A157852">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,8,7,6,5,2,3,6,8,9,2,7,6,9,4,3,6,9,8,0,9,3,1,2,4,0,9,3,6,5,4,4,0,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6,4,9,3,9,6,3,7,3,8,4,9,0,3,6,2,2,5,4,1,7,9,5,0,7,1,0,1,0,1,0,7,4,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3,6,6,2,5,3,4,7,8,4,9,3,7,0,6,8,6,2,7,2,9,8,2,4,0,4,9,8,4,6,8,1,8,8,7,3,1,9,2,9,3,3,4,3,3,5,4,6,6,1,2,3,2,8,6</CMP>
+    </assertion><omtext class="name">
+      <CMP> Absolute value of limit_{N -&gt; infinity} Integral_{x=1..2*N} (-1)^x*x^(1/x).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The continuous counterpart of 1^(1/1)-2^(1/2)+3^(1/3)-4^(1/4)...2*integer as n-&gt;infinity.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is hard to integrate and very slow to converge.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Marvin Ray Burns, &lt;a href=&quot;/A157852/b157852.txt&quot;&gt;Table of n, a(n) for n = 0..19999&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. R. Burns, &lt;a href=&quot;http://marvinrayburns.com/latest.html&quot;&gt;Used with other constants to converge closely to rational numbers.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. R. Burns, &lt;a href=&quot;http://www.mapleprimes.com/blog/marvinrayburns/mrbconstantc&quot;&gt; Author's public inquiry 1 &lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. R. Burns, &lt;a href=&quot;http://math2.org/mmb/thread/41959&quot;&gt;Author's public inquiry 2 &lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Marvin Ray Burns, &lt;a href=&quot;/A157852/a157852.nb&quot;&gt;A paper on 20,000 digits in Mathematica&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Marvin Ray Burns, &lt;a href=&quot;/A157852/a157852.pdf&quot;&gt;A paper on 20,000 digits in a PDF&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. J. Mathar, &lt;a href=&quot;http://arxiv.org/abs/0912.3844&quot;&gt;Numerical evaluation of the oscillatory integral over exp(i*pi*x)x^(1/x) between 1 and infinity&lt;/a&gt;, arxiv:0912.3844 [math.CA]</CMP>
+    </omtext><assertion class="example">
+      <CMP> After integrating from 1 to 15 million the absolute value of the integral is approximately 0.687652_7, after integrating from 1 to 20 million approximately 0.687652_6.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a = NIntegrate[ x^(1/x)*Cos[Pi*x], {x, 1, 10^20}, WorkingPrecision -&gt; 30, MaxRecursion -&gt; 70]; b = NIntegrate[ x^(1/x)*Sin[Pi*x], {x, 1, 10^20}, WorkingPrecision -&gt; 30, MaxRecursion -&gt; 70]; RealDigits[ Sqrt[a^2 + b^2], 10, 18] // First (* _Jean-François Alcover_, Feb 14 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Integrating A037077 instead of summing.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Marvin Ray Burns_, Mar 07 2009, Mar 11 2009, Mar 13 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _N. J. A. Sloane_, Mar 13 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and edited by _Marvin Ray Burns_, Apr 03 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 8 more digits from _R. J. Mathar_, Nov 30 2009, 3 more Jan 03 2011, 3 more on Feb 25 2013</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 15 more digits added by _Marvin Ray Burns_, Feb 26 2013</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Many more digits added by _Marvin Ray Burns_, May 11 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

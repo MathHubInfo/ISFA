@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A002633.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A002633">
+          <assertion class="***** TTTT *****">
+      <CMP> M2384 N0946</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,5,3,9,3,51,675,5871,46467,331371,1852227,920295,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 224455293,5571057501,104877816093,1781775072801,28519837563645,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 431525731169061,5994769814117757,68879336771960361</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Related to discordant permutations.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> K. Yamamoto, Structure polynomial of Latin rectangles and its application to a combinatorial problem, Memoirs of the Faculty of Science, Kyusyu University, Series A, 10 (1956), 1-13.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A002633"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A002633"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A002633"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A002633"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> a[ n_ ] := a[ n ]=(2n-5)a[ n-1 ]-(n-1)(n-4)a[ n-2 ]-(n-1)(n-2)a[ n-3 ]; a[ 0 ]=1; a[ 1 ]=-3; a[ 2 ]=5; Table[ a[ n ], {n, 0, 24} ]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> sign,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Wouter Meeussen_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Typo in Mathematica program fixed by _Vaclav Kotesovec_, Mar 20 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

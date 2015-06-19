@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A035337.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A035337">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,11,16,24,32,37,45,50,58,66,71,79,87,92,100,105,113,121,126,134,139,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 147,155,160,168,176,181,189,194,202,210,215,223,231,236,244,249,257,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 265,270,278,283,291,299,304,312</CMP>
+    </assertion><omtext class="name">
+      <CMP> Third column of Wythoff array.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, positions of 3's in A139764, the smallest term in Zeckendorf representation of n. [John W. Layman, Aug 25 2011]</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/classic.html#WYTH&quot;&gt;Classic Sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      It appears that <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A035337"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMR xref="A003622"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[_John <OMOBJ>
+        <OMV name="W"/>
+      </OMOBJ>.Layman_ ,Aug 25 2011 ]
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> [ seq(3*floor((n+1)*t)+2*n,n=0..80) ];</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A139764.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_ and _J. H. Conway_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A146481.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A146481">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,9,6,6,7,5,1,3,4,7,4,3,5,9,1,0,3,4,5,7,0,1,5,5,0,2,0,2,1,9,1,4,2,8,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6,4,8,6,4,8,3,1,5,1,9,1,7,8,9,4,7,8,9,0,8,1,6,7,3,5,7,3,3,1,6,5,9,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6,1,6,2,9,1,5,1,9,6,0,8,8,8,3,6,6,7,4,8,1,6,4,0,2,1,2,6,2,2,1,4,5,4,1,7,7</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of Product_{n=2...infinity} (1-1/(n*(n-1))).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Product of Artin's constant A005596 and the equivalent almost-prime products.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Chamberland, A. Straub, &lt;a href=&quot;http://arxiv.org/abs/1309.3455&quot;&gt;On gamma constants and infinite products&lt;/a&gt;, arXiv:1309.3455</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. J. Mathar, &lt;a href=&quot;http://arxiv.org/abs/0903.2514&quot;&gt;Hardy-Littlewood constants embedded into infinite products over all positive integers&lt;/a&gt;, arXiv:0903.2514 [math.NT], first line Table 3.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      The logarithm is -<OMOBJ>
+        <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="s"/>
+      <OMI>2</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="s"/></OMBVAR>
+        <OMA>
+          <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="floor" cd="A146481"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="s"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="r"/>
+    </OMA>
+    </OMA>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="binomial" cd="A146481"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="s"/><OMA><OMS name="times"/><OMV name="r"/><OMV name="j"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="j"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="Zeta" cd="A146481"/>
+      <OMV name="s"/>
+    </OMA>
+    </OMA></OMA><OMV name="j"/>
+    </OMA>
+        </OMA>
+      </OMBIND>
+        </OMA>
+      </OMBIND>
+      </OMOBJ>at <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="r"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA><OMS name="times"/><OMV name="s"/><OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="floor" cd="A146481"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="s"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="binomial" cd="A146481"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="s"/><OMV name="j"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="j"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMV name="j"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A001610"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="s"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND></OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Equals <OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMBIND>
+          <OMA>
+            <OMS name="product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMI>2</OMI>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Gamma" cd="A146481"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x_k"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sin" cd="A146481"/>
+      <OMR xref="A094886"/>
+    </OMA><OMR xref="A000796"/>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMV name="x_k"/>
+      </OMOBJ>are the <OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>roots of the polynomial <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.[From <OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Feb 20 2009 ]
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 0.2966751347435910345.. = (1-1/2)*(1-1/6)*(1-1/12)*(1-1/20)*..</CMP>
+    </assertion><omtext class="maple">
+      <CMP> phi := (1+sqrt(5))/2; evalf(-sin(Pi*phi)/Pi) ; [From _R. J. Mathar_, Feb 20 2009]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[-Cos[Pi*Sqrt[5]/2]/Pi, 10, 105] // First (* _Jean-François Alcover_, Feb 11 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A005596.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. J. Mathar_, Feb 13 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Jean-François Alcover_, Feb 11 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A090326.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A090326">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,15,54,185,608,1939,6058,18669,57012,173063,523262,1577953,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4750216,14283387,42915666,128878037,386896220,1161212911,3484687270,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 10456158921,31372671024,94126401635,282395982074,847221500605,2541731610628,7625329049559</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of rules of a context-free grammar in Chomsky normal form that generates all permutations of n symbols.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Colin Barker, &lt;a href=&quot;/A090326/b090326.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. R. J. Asveld, &lt;a href=&quot;http://dx.doi.org/10.1016/j.tcs.2005.11.010&quot;&gt;Generating all permutations by context-free grammars in Chomsky normal form&lt;/a&gt;, Theoretical Computer Science 354 (2006) 118-130.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_04&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (7,-17,17,-6).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A090326"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Jan 15 2015 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> S -&gt; AD | DA | BE | EB | CF | FC, D -&gt; BC | CB, E -&gt; AC | CA, F -&gt; AB | BA, A -&gt; a, B -&gt; b, C -&gt; c; so a(3)=15.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[n_] := 3^n - 2^(n + 1) + n + 1; Table[ f[n], {n, 1, 26}] (* _Robert G. Wilson v_, Jan 30 2004 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) Vec(x*(4*x^2-3*x+1)/((x-1)^2*(2*x-1)*(3*x-1)) + O(x^100)) \\ _Colin Barker_, Jan 15 2015</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Peter R. J. Asveld_, Jan 27 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Robert G. Wilson v_, Jan 30 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

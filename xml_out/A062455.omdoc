@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A062455.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A062455">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,7,30,105,336,1001,2841,7733,20309,51720,128170,309980,733390,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1700803,3872770,8670938,19113100,41523358,88995738,188335956,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 393837052,814361551,1666112092,3374591118,6770019118,13459008137</CMP>
+    </assertion><omtext class="name">
+      <CMP> Integer part of ln(n^n)^Sqrt(n).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Floor[Log[n^n]^Sqrt[n]]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A062456.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Olivier Gérard_, Jun 23 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

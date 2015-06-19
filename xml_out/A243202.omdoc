@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A243202.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A243202">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,0,1,2,0,3,4,6,0,16,16,18,24,0,125,100,90,96,120,0,1296,864,648,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 576,600,720,0,16807,9604,6174,4704,4200,4320,5040,0,262144,131072,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 73728,49152,38400,34560,35280,40320,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Coefficients of a particular decomposition of N^N in terms of binomial coefficients.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is an element in the triangle of coefficients c(N,j), N = 0,1,2,3,... denoting a row, and j = 0,1,2,...r, specified numerically by the formula below. For any row N, Sum(j=0..N)(c(N,j)*binomial(N,j)) = N^N. Note that all rows start with 0, which makes them easily recognizable. It is believed that keeping the zero terms is preferable because it makes the summation run over all admissible j's in the binomial.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Stanislav Sykora, &lt;a href=&quot;/A243202/b243202.txt&quot;&gt;Table of n, a(n) for rows 0..100, flattened&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Sykora, &lt;a href=&quot;http://dx.doi.org/10.3247/SL5Math14.002&quot;&gt;A Random Mapping Statistics and a Related Identity&lt;/a&gt;, &lt;a href=&quot;http://ebyte.it/library/Library.html#math&quot;&gt;Stan's Library&lt;/a&gt;, Volume V, June 2014.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="c" cd="A243202"/>
+      <OMV name="N"/><OMV name="j"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="N"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="N"/><OMV name="j"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="j"/><OMV name="N"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="j"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="N"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMV name="j"/>
+    </OMA>
+      <OMV name="N"/>
+    </OMA>
+      </OMOBJ>,and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="c" cd="A243202"/>
+      <OMV name="N"/><OMV name="j"/>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>otherwise .
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> The first rows of the triangle are (first item is the row number N):</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0 0</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 0, 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2 0, 1, 2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3 0, 3, 4, 6</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4 0, 16, 16, 18, 24</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5 0, 125, 100, 90, 96, 120</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6 0, 1296, 864, 648, 576, 600, 720</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7 0, 16807, 9604, 6174, 4704, 4200, 4320, 5040</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8 0, 262144, 131072, 73728, 49152, 38400, 34560, 35280, 40320</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) A243202(maxrow) = {</CMP>
+    </omtext><omtext class="program">
+      <CMP>   my(v,n,j,irow,f);v = vector((maxrow+1)*(maxrow+2)/2);</CMP>
+    </omtext><omtext class="program">
+      <CMP>   for(n=1,maxrow,irow=1+n*(n+1)/2;v[irow]=0;f=1;</CMP>
+    </omtext><omtext class="program">
+      <CMP>   for(j=1,n,f *= j;v[irow+j] = j*f*n^(n-j-1);););</CMP>
+    </omtext><omtext class="program">
+      <CMP>   return(v);}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A243203.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Stanislav Sykora_, Jun 01 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

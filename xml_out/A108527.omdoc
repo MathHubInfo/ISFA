@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A108527.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A108527">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,20,229,3764,80383,2107412,65436033,2347211812,95492023811,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4344109422388,218499395486909,12039757564700644,721239945304498215,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 46669064731537444820,3243864647191662324601,241046155271316751794596</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of labeled mobiles (cycle rooted trees) with n generators.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A generator is a leaf or a node with just one child.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vaclav Kotesovec, &lt;a href=&quot;/A108527/b108527.txt&quot;&gt;Table of n, a(n) for n = 1..250&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Mo#mobiles&quot;&gt;Index entries for sequences related to mobiles&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      E.g.f .satisfies :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>2</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="A" cd="A108527"/>
+      <OMV name="x"/>
+    </OMA></OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI><OMA>
+      <OMS name="log" cd="A108527"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="A" cd="A108527"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A108527"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="c"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="exp" cd="A108527"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="r"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="r"/>
+      <OMF dec="0.2084630619816545"/>
+    </OMA>
+      </OMOBJ>...and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMF dec="0.3060161306524908"/>
+    </OMA>
+      </OMOBJ>...-_Vaclav Kotesovec_ ,Mar 28 2014 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> nmax=20; c[0]=0; A[x_]:=Sum[c[k]*x^k/k!,{k,0,nmax}]; Array[c,nmax]/.Solve[Rest[CoefficientList[Series[x-1-Log[1-A[x]]-(2-x)*A[x],{x,0,nmax}],x]]==0][[1]] (* _Vaclav Kotesovec_, Mar 28 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n)=local(A=x+O(x^n)); for(i=0, n, A=intformal((1-A^2)/(1-x-2*A+x*A)+O(x^n))); n!*polcoeff(A, n)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=1, 20, print1(a(n), &quot;, &quot;)) \\ _Vaclav Kotesovec_, Mar 28 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A108521-A108529, A038037, A032188.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Christian G. Bower_, Jun 07 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

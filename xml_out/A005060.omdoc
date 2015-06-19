@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A005060.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A005060">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,9,61,369,2101,11529,61741,325089,1690981,8717049,44633821,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 227363409,1153594261,5835080169,29443836301,148292923329,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 745759583941,3745977788889,18798608421181,94267920012849</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = 5^n - 4^n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, the number of numbers with at most n digits whose largest digit equals 4. - _M. F. Hasler_, May 03 2015</CMP>
+    </omtext><omtext class="link">
+      <CMP> X. Acloque, &lt;a href=&quot;http://www.fortunecity.fr/polynexus/index.html&quot;&gt;Polynexus Numbers and other mathematical wonders&lt;/a&gt; [broken link]</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_02&quot;&gt;Index entries for sequences related to linear recurrences with constant coefficients&lt;/a&gt;, signature (9,-20).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005060"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMA>
+      <OMS name="a" cd="A005060"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-Xavier Acloque Oct 20 2003 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>5</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.E.g.f .:<OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="e"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="e"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[_Mohammad <OMOBJ>
+        <OMV name="K"/>
+      </OMOBJ>.Azarian_ ,Jan 14 2009 ]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005060"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005060"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005060"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>9</OMI><OMA>
+      <OMS name="a" cd="A005060"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>20</OMI><OMA>
+      <OMS name="a" cd="A005060"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[_Vincenzo Librandi_ ,Jan 28 2011 ]
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> a:=n-&gt;sum(4^(n-j)*binomial(n,j),j=1..n): seq(a(n), n=0..18); # _Zerinvary Lajos_, Jan 04 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[n_]:=5^n-4^n;f[Range[0,60]] (* _Vladimir Joseph Stephan Orlovsky_, Jan 27 2011*)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [lucas_number1(n,9,20) for n in xrange(0, 21)] # _Zerinvary Lajos_, Apr 23 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=5^n-4^n \\ _M. F. Hasler_, May 03 2015</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

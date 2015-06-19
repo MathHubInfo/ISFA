@@ -1,0 +1,429 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A166486.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A166486">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Periodic sequence [0,1,1,1] of length 4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sum_{k&gt;0} a(k)/k/3^k = log(5)/4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Reinhard Zumkeller_, Nov 30 2009: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = 1-A121262(n); characteristic function of numbers that are not multiples of 4; a(A042968(n))=1; a(A008586(n))=0;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A033436(n) = SUM(a(k)*(n-k): 0&lt;=k&lt;=n). (End)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A190621(n) = n * a(n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Somos, &lt;a href=&quot;http://cis.csuohio.edu/~somos/rfmc.html&quot;&gt;Rational Function Multiplicative Coefficients&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ch#char_fns&quot;&gt;Index entries for characteristic functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (0,0,0,1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A166486"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="I"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="I"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="I"/>
+      <OMA>
+      <OMS name="sqrt" cd="A166486"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Multiplicative with a(p^e) = (if p=2 then 0^(e-1) else 1), p prime and e&gt;0. - _Reinhard Zumkeller_, Nov 30 2009</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A166486"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA><OMV name="n"/>
+    </OMA><OMV name="mod"/><OMI>4</OMI></OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Gary Detlefs_ ,Mar 20 2010 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> a(n) = (3*(n mod 4)+(n+1 mod 4)+(n+2 mod 4)-(n+3 mod 4))/8 (cf. forms of modular arithmetic of Paolo P. Lava, i.e., see A146094). - _Bruno Berselli_, Sep 27 2010</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A166486"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="Fibonacci" cd="A166486"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="Fibonacci" cd="A166486"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA>
+    </OMA><OMV name="mod"/><OMI>3</OMI></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Gary Detlefs_ Dec 21 2010 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Euler transform of length <OMOBJ>
+        <OMI>4</OMI>
+      </OMOBJ>sequence [<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>0</OMI>
+      </OMOBJ>,-<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>].-_Michael Somos_ ,Feb 12 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Dirichlet <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .<OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMV name="s"/>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="zeta" cd="A166486"/>
+      <OMV name="s"/>
+    </OMA></OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Feb 19 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A166486"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Fibonacci" cd="A166486"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMV name="mod"/><OMI>3</OMI></OMA>
+    </OMA>
+      </OMOBJ>.-_Gary Detlefs_ ,May 16 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A166486"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="cos" cd="A166486"/>
+      <OMA><OMS name="times"/><OMS name="Pi"/><OMV name="n"/></OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="cos" cd="A166486"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMS name="Pi"/><OMV name="n"/></OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Leonid Bedratyuk_ ,May 13 ,<OMOBJ>
+        <OMI>2012</OMI>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      For the general case :the characteristic function of numbers that are not multiples of <OMOBJ>
+        <OMV name="m"/>
+      </OMOBJ>is <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A166486"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="floor" cd="A166486"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="m"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="floor" cd="A166486"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMV name="m"/>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.-_Boris Putievskiy_ ,May 08 2013 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A166486"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="ceiling" cd="A166486"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="floor" cd="A166486"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Wesley Ivan Hurt_ ,Jun 20 2014 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A166486"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="a" cd="A166486"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for all <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>in <OMOBJ>
+        <OMV name="Z"/>
+      </OMOBJ>.-_Michael Somos_ ,May 05 2015 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> G.f. = x + x^2 + x^3 + x^5 + x^6 + x^7 + x^9 + x^10 + x^11 + x^13 + x^14 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> seq(1/2*((n^3+n) mod 4), n=0..50); # _Gary Detlefs_, Mar 20 2010</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> PadRight[{},120,{0,1,1,1}] (* _Harvey P. Dale_, Jul 04 2013 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Ceiling[n/4] - Floor[n/4], {n, 0, 100}] (* _Wesley Ivan Hurt_, Jun 20 2014 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := Sign[ Mod[n, 4]]; (* _Michael Somos_, May 05 2015 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = !!(n%4)};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Ceiling(n/4)-Floor(n/4) : n in [0..50]]; // _Wesley Ivan Hurt_, Jun 20 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A016628, A152822, A164985, A165132. First difference of A057353.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A168185, A145568, A168184, A168182, A168181, A109720, A097325, A011558, A011655, A000035.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,mult,easy,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jaume Oliver Lafont_, Oct 15 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

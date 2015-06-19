@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A230822.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A230822">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,8,28,46,47,139,146,173,262,526,857,2029,2239,2251,2659,3184,3592,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3793,5209,8777,10124,12872,15439,24979,27241,29314,29416,37652,42589,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 60524,80449,101704,147304,156841,170899,180046,204916,230149,239048,390826,488647,530609,701497</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) is the smallest integer that makes A230762(n) the commonest number of decompositions of 2k into an unordered sum of two odd primes, where 3 &lt;= k &lt;= a(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If making a statistical bar chart with x-axis denoting the number of decompositions of an even number, and y-axis denoting the number of hits of an x-axis value for all 3 &lt;= k &lt;= m, there are one or more commonest x value presenting with highest y value.  Such commonest x values increase when m increases. a(n) is the smallest m value to make A230762(n) one of the commonest number or prime decomposition of 2k in the range of 3 &lt;= k &lt;= m.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Hypothesis: With the increase of m, the commonest number of decompositions of 2k into an unordered sum of two odd primes in the range of 3 &lt;= k &lt;= m ascends.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This hypothesis derives that a(n) is an ascending sequence.  Or say, a(n+1) &gt; a(n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Lei Zhou, &lt;a href=&quot;/A230822/b230822.txt&quot;&gt;Table of n, a(n) for n = 1..45&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> When m=3, k has only one value 3, 2k=6=3+3.  Only one possible decomposition, making a decomposition statistics {{x,y}}={{1,1}}.  So a(1)=3;</CMP>
+    </assertion><assertion class="example">
+      <CMP> When m=4, k gets another value 4, 2k=8=3+5. The decomposition statistics {{x,y}}={{1,2}};...</CMP>
+    </assertion><assertion class="example">
+      <CMP> Thereafter, k=5 makes 2k=10=5+5=3+7, {{x,y}}={{1,2},{2,1}}, the commonest value is still 1.</CMP>
+    </assertion><assertion class="example">
+      <CMP> k=6, 2k=12=5+7, {{x,y}}={{1,3},{2,1}}, commonest x is still 1.</CMP>
+    </assertion><assertion class="example">
+      <CMP> k=7, 2k=14=3+11=7+7, {{x,y}}={{1,3},{2,2}}, commonest x is still 1.</CMP>
+    </assertion><assertion class="example">
+      <CMP> k=8, 2k=16=3+13=5+11, {{x,y}}={{1,3},{2,3}}, except for 1, 2 is now eligible to be the new possible commonest x, so a(2)=8 (the current k value).</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> Counting up to k=28, the decomposition statistics is {{1,3},{2,8},{3,8},{4,5},{5,2}}, 2 and 3 are now the commonest decompositions. It is the first time for 3 to appear.  So a(3)=28 (the current k value).</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> check = 0; ns = {}; mpos = 0; res = {}; sres = 0; s = {}; size = 0; k = 2;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> While[k++; k2 = 2*k; p2 = k - 1; ct = 0;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   While[p2 = NextPrime[p2]; p2 &lt; k2, p1 = k2 - p2;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>    If[PrimeQ[p1], ct++]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   (*Calculate Goldbach decomposition*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   If[ct &gt; size, Do[AppendTo[s, 0], {i, size + 1, ct}]; size = ct];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   (*and construct statistics in array s*)s[[ct]]++; m = Max[s];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   aa = Position[s, m]; la = Length[aa];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   Do[a = aa[[pos, 1]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>    If[a &gt; sres, While[sres &lt; a, AppendTo[res, 0]; sres++];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     res[[a]] = n; goal = Length[res];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     (*Generate list of n values where a new commonest appears*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     If[mpos &lt; goal, mpos = goal; check++; AppendTo[ns, k]]],</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>    (*Compose elements of this sequence into a list*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>    {pos, 1, la}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   check &lt; 16];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> ns</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002375, A230762.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lei Zhou_, Oct 30 2013</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> _Lei Zhou_, Nov 08 2013, uploaded a b-file, extending the known elements to the 45th.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

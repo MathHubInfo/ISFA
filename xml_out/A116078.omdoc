@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A116078.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A116078">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,7,28,117,496,2110,8968,38017,160648,676626,2840872,11892562,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 49650368,206773372,859186768,3562780057,14746127608,60929182282,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 251358948328,1035479267542,4260071237728,17505144024292</CMP>
+    </assertion><omtext class="name">
+      <CMP> Column 0 of triangle A116077.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A116078/b116078.txt&quot;&gt;Table of n, a(n) for n = 0..300&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A116078"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A116078"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A116078"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A116078"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="C" cd="A116078"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Vaclav Kotesovec_ ,Oct 28 2012 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Conjecture :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A116078"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="sum_" cd="A116078"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>1</OMI>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="floor" cd="A116078"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="cos" cd="A116078"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="j"/><OMS name="Pi"/></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA></OMA></OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_L"/>
+      </OMOBJ>.Edson Jeffery_ ,Nov 23 2013 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Flatten[{1,Table[(n+3)*Binomial[2*n-1,n]-2^(2*n-1),{n,1,20}]}] (* _Vaclav Kotesovec_, Oct 28 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n)=local(X=x+x*O(x^n)); polcoeff(1/sqrt(1-4*X)+4*X^2/(1+sqrt(1-4*X))^2/(1-4*X)^(3/2),n,x)}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A116077.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Feb 04 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

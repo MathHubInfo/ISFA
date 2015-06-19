@@ -19,21 +19,22 @@ case class Sentence(parts : List[Expression]) extends Line{
   override def clear: Expression = this
 
   //  override def toString = present
-  override def toNode(implicit theory: String): Elem =
-    <OMOBJ>
-    {parts.map {
-      case a: Sentence => a.toSubNode
+  override def toNode(implicit theory: String): Elem = {
+    <CMP>
+      {parts.map {
       case a: Line => a.present
-      case a: Expression => a.toNode
-      }
-    }
-    </OMOBJ>
+      case a: Expression => <OMOBJ>
+        {a.toNode}
+      </OMOBJ>
+    }}
+    </CMP>
+  }
 
   def toSubNode(implicit theory: String): List[Serializable] = {
     parts.map {
       case a: Sentence => a.toSubNode
       case a: Line => a.present
-      case a: Expression => a.toNode
+      case a: Expression => <OMOBJ>{ a.toNode }</OMOBJ>
     }
   }
 }
@@ -128,7 +129,7 @@ class TextParser extends FormulaParser {
 object TextParserIns extends TextParser{
 
   def main(args : Array[String]): Unit = {
-    val test = "G.f.: anXko + 3x + 4 + a X 4"
+    val test = "sin(2x)"
     println("input : "+ test)
     println(parseAll(sentence, test))
   }

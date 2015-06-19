@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A225956.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A225956">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,0,1,1,1,1,1,2,2,2,2,3,3,3,4,5,5,5,6,7,8,8,10,12,12,13,15,17,18,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 19,22,25,27,28,32,36,38,41,46,51,54,58,64,71,76,81,89,99,105,112,123,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 134,143,153,167,182,194,207,225,244,260,277,301,325,346</CMP>
+    </assertion><omtext class="name">
+      <CMP> McKay-Thompson series of class 92A for the Monster group with a(0) = 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Ramanujan theta functions: f(q) (see A121373), phi(q) (A000122), psi(q) (A010054), chi(q) (A000700).</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Somos, &lt;a href=&quot;http://cis.csuohio.edu/~somos/multiq.pdf&quot;&gt;Introduction to Ramanujan theta functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/RamanujanThetaFunctions.html&quot;&gt;Ramanujan Theta Functions&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Expansion of 1/q * chi(q) * chi(q^23) in powers of q where chi() is a Ramanujan theta function.</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Expansion of <OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="eta" cd="A225956"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="eta" cd="A225956"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>46</OMI>
+    </OMA>
+    </OMA></OMA>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="eta" cd="A225956"/>
+      <OMV name="q"/>
+    </OMA><OMA>
+      <OMS name="eta" cd="A225956"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="eta" cd="A225956"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>23</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="eta" cd="A225956"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>92</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>in powers of <OMOBJ>
+        <OMV name="q"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Euler transform of a period <OMOBJ>
+        <OMI>92</OMI>
+      </OMOBJ>sequence .
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .<OMOBJ>
+        <OMA>
+      <OMS name="A" cd="A225956"/>
+      <OMV name="x"/>
+    </OMA>
+      </OMOBJ>satisfies <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMA>
+      <OMS name="f" cd="A225956"/>
+      <OMA>
+      <OMS name="A" cd="A225956"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="A" cd="A225956"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="f" cd="A225956"/>
+      <OMV name="u"/><OMV name="v"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="u"/><OMV name="v"/></OMA><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="u"/><OMV name="v"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="v"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="v"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMV name="u"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="u"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="u"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMV name="v"/>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .is a period <OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>Fourier series which satisfies <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="f" cd="A225956"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>92</OMI><OMV name="t"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="f" cd="A225956"/>
+      <OMV name="t"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMA>
+      <OMS name="exp" cd="A225956"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMS name="pi"/><OMV name="i"/><OMV name="t"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="Product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>46</OMI><OMV name="k"/></OMA><OMI>23</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A225956"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A112216"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>unless <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A225956"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+      <OMA>
+      <OMR xref="A132322"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 1/q + 1 + q^2 + q^3 + q^4 + q^5 + q^6 + 2*q^7 + 2*q^8 + 2*q^9 + 2*q^10 + ...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ 1/q QPochhammer[ -q, q^2] QPochhammer[ -q^23, q^46], {q, 0, n}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ 1/q Product[ 1 + q^k, {k, 1, n + 1, 2}] Product[ 1 + q^k, {k, 23, n + 1, 46}], {q, 0, n}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A); if( n&lt;-1, 0, n++; A = x * O(x^n); polcoeff( (eta(x^2 + A) * eta(x^46 + A))^2 / (eta(x + A) * eta(x^4 + A) * eta(x^23 + A) * eta(x^92 + A)), n))}</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A); if( n&lt;-1, 0, n++; A = x * O(x^n); polcoeff( prod( k=1, n, 1 + k%2 * x^k, 1 + A) * prod( k=1, n\23, 1 + k%2 * x^(23*k), 1 + A), n))}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A058688, A112216, A132322.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> -1,9</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michael Somos_, May 21 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

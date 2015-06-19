@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A227648.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A227648">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,9,16,25,27,32,36,64,81,100,128,144,169,196,256,324,484,512,529,625,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 729,784,841,1089,1225,2187,2197,2916,3025,3721,5184,5776,6241,6724,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 10816,15129,15876,20164,25921,40401,40804,42025,45369,47524,51984,57600,80656</CMP>
+    </assertion><omtext class="name">
+      <CMP>  Perfect powers equal to the sum of 7 factorial numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(80), if it exists, is larger than 10^100.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Giovanni Resta, &lt;a href=&quot;/A227648/b227648.txt&quot;&gt;Table of n, a(n) for n = 1..79&lt;/a&gt; (terms &lt; 10^100)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Giovanni Resta, &lt;a href=&quot;/A227648/a227648.txt&quot;&gt;Decompositions for a(1)-a(79)&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 83521 = 17^4 = 1! + 6! + 6! + 6! + 6! + 8! + 8!.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A114377, A227644-A227651.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Giovanni Resta_, Jul 19 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A119433.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A119433">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,105,165,195,3003,3927,4389,4641,4845,5187,5313,5865,6555,7395,7905,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8265,8835,9435,10005,10455,10545,10695,10965,11685,11985,12255,12765,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13395,13485,13515,14145,14835,15045,15105,15555,16215,16815,17085</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primitive elements of A119432.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Elements of A119432 such that are not divisible by any smaller element of that sequence.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>followed by odd elements of <OMOBJ>
+        <OMR xref="A119431"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Franklin T. Adams-Watters_, May 19 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

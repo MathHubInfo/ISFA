@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A167308.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A167308">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,28,35,784,49,980,63,21952,1225,1372,91,27440,105,1764,1715,614656,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 133,34300,147,38416,2205,2548,175,768320,2401,2940,42875,49392,217,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 48020,231,17210368,3185,3724,3087,960400,273,4116,3675,1075648,301</CMP>
+    </assertion><omtext class="name">
+      <CMP> Totally multiplicative sequence with a(p) = 7*(p+2) for prime p.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Multiplicative with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A167308"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="p"/><OMI>2</OMI>
+    </OMA></OMA>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.If <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="Product" cd="A167308"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="p" cd="A167308"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="e" cd="A167308"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>then <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A167308"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMBIND>
+          <OMA>
+            <OMS name="Product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  
+                  
+              </OMA>
+          </OMA>
+          
+        <OMA>
+          <OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="p" cd="A167308"/>
+      <OMV name="k"/>
+    </OMA><OMI>2</OMI>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+      <OMA>
+      <OMS name="e" cd="A167308"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A167308"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A165828"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A166590"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>7</OMI>
+      <OMA>
+      <OMS name="bigomega" cd="A167308"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A166590"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>7</OMI>
+      <OMA>
+      <OMR xref="A001222"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A166590"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn,mult</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jaroslav Krizek_, Nov 01 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

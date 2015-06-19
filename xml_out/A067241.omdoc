@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A067241.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A067241">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,5,8,9,21,23,33,39,51,63,65,81,89,95,99,113,131,173,183,191,209,215,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 221,239,245,251,261,281,285,299,303,309,315,341,345,363,369,371,393,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 411,419,431,443,473,495,509,525,543,545,561,575,593,645,659,683,711</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that gcd((2n)!+1, n!+1) &gt; 1.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Benoit Cloitre_, Feb 20 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A068702.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A068702">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,8,9,17,27,32,39,41,56,60,65,66,68,72,78,89,98,108,117,120,128,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 132,159,168,173,176,191,192,194,197,209,212,213,246,248,254,264,272,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 282,288,293,296,302,311,315,324,327,332,341,350,353,360,371,392,425,444</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that concatenation n^2, n and 1 is a prime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A068702/b068702.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 8 is a member, as the concatenation of 8^2, 8 and 1 i.e. 6481 is a prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> 32 is a member as 1024321 (concatenation of 32^2, 32 and 1) is prime.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Select[ Range[457], PrimeQ[ FromDigits[ Join[ IntegerDigits[ #^2], IntegerDigits[ # ], IntegerDigits[ #^0]]]] &amp;]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A088619, A068701.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Mar 04 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Jason Earls (zevi_35711(AT)yahoo.com), Jun 10 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

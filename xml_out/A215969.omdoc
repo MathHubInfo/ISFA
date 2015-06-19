@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A215969.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A215969">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,1,16,64</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of primes of the form 1 + b^32768 for 1 &lt; b &lt; 10^n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Primes 1 + b^32768 are a form of generalized Fermat primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is conjectured that a(n) is asymptotic to 0.000177083*li(10^n)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Yves Gallot, &lt;a href=&quot;http://yves.gallot.pagesperso-orange.fr/primes/results.html&quot;&gt;Status of the smallest base values yielding Generalized Fermat primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Yves Gallot, &lt;a href=&quot;http://yves.gallot.pagesperso-orange.fr/primes/stat.html&quot;&gt;How many prime numbers appear in a sequence ?&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Yves Gallot, &lt;a href=&quot;http://yves.gallot.pagesperso-orange.fr/papers/ccdgfpn.html&quot;&gt;A Problem on the Conjecture Concerning the Distribution of Generalized Fermat Prime numbers (a new method for the search for large primes)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Mersenne Wiki, &lt;a href=&quot;http://mersennewiki.org/index.php/User:Merfighters/listtest&quot;&gt;Table of known GF primes b^n+1 where n (exponent) is at least 8192&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(5) = 1 because the generalized Fermat numbers F_15(b) where b&lt;10^5 are prime only for b = 70906.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) a(n) = sum(b=1, 10^n/2-1, isprime((2*b)^32768 + 1))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A215047, A215048, A215049, A215050, A215051, A215057, A215058, A215698, A215699, A215700.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Henryk Dabrowski_, Aug 29 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

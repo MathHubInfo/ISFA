@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A223439.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A223439">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11664,1180256,179532768,33277934848,6790055219264,1445484467129440,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 313233804577725904,68373044838570536416,14968850924351337707600,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3281073242585313313486816,719543293998612435740651440</CMP>
+    </assertion><omtext class="name">
+      <CMP> Generalized Petersen graph (8,2) coloring a rectangular array: number of nX7 0..15 arrays where 0..15 label nodes of a graph with edges 0,1 0,8 8,14 8,10 1,2 1,9 9,15 9,11 2,3 2,10 10,12 3,4 3,11 11,13 4,5 4,12 12,14 5,6 5,13 13,15 6,7 6,14 7,0 7,15 and every array movement to a horizontal or vertical neighbor moves along an edge of this graph</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 7 of A223440</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A223439/b223439.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..8..0..8.14..8.14..8....8..0..8.14.12.10.12....8..0..8.10.12.14..8</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..8.14..8.10..8.10....0..8.14..8.10.12.14....0..8.10..8.14.12.10</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..8..0..8..0..8.10..2....8..0..8.10..8.10..8....8..0..8.14.12.10..8</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Mar 20 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

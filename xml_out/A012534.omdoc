@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A012534.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A012534">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,8,40,4352,233312,14783360,1406171520,215345283072,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 48522307444224,14515971445110784,5456413300747012096,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2505550929805243777024,1379341726073854089519104</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> sin(sinh(x)*arcsin(x))=2/2!*x^2+8/4!*x^4-40/6!*x^6-4352/8!*x^8...</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Patrick Demichel (patrick.demichel(AT)hp.com)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

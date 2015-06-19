@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A153500.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A153500">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,101,10001,1010101,101101101,10101010101,1010010100101,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 101010101010101,10101101010110101,1010101010101010101,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 101010010101010010101,10101010101010101010101,1010101101010101011010101,101010101010101010101010101,10101010010101010101001010101</CMP>
+    </assertion><omtext class="name">
+      <CMP> First 3 terms coincide with A152756. For n&gt;3, a(n) is the palindromic number formed from concatenation of 1, 0, A147759(n-3), 0, A147759(n-3), 0 and 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is also A153499(n) written in base 2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (101,-1110,102010,-111000,1010000,-1000000).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A153500"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>101</OMI><OMA>
+      <OMS name="a" cd="A153500"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1110</OMI><OMA>
+      <OMS name="a" cd="A153500"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>102010</OMI><OMA>
+      <OMS name="a" cd="A153500"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>111000</OMI><OMA>
+      <OMS name="a" cd="A153500"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>1010000</OMI><OMA>
+      <OMS name="a" cd="A153500"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>1000000</OMI><OMA>
+      <OMS name="a" cd="A153500"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>7</OMI>
+    </OMA>
+      </OMOBJ>.[From <OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Feb 20 2009 ]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>1000000</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1010000</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>10000</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>10100</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>910</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>100</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>1000</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.[_Colin Barker_ ,Sep 17 2013 ]
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> n ............ a(n)</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 ............. 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2 ............ 101</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3 ........... 10001</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4 .......... 1010101</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5 ......... 101101101</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6 ........ 10101010101</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7 ....... 1010010100101</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8 ...... 101010101010101</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9 ..... 10101101010110101</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10 ... 1010101010101010101</CMP>
+    </assertion><assertion class="example">
+      <CMP> ======================================</CMP>
+    </assertion><assertion class="example">
+      <CMP> Another visualization of the structure</CMP>
+    </assertion><assertion class="example">
+      <CMP> ======================================</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 ............. *</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2 ............ /.\</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3 ........... /...\</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4 .......... /.*.*.\</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5 ......... /./|.|\.\</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6 ........ /./.|.|.\.\</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7 ....... /./..|.|..\.\</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8 ...... /./.*.|.|.*.\.\</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9 ..... /././|.|.|.|\.\.\</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10 ... /././.|.|.|.|.\.\.\</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A135577, A138146, A152576, A152764, A153497, A153498, A153499, A144564.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Omar E. Pol_, Dec 27 2008, Feb 18 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _R. J. Mathar_, Feb 20 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Keyword:base added by _Charles R Greathouse IV_, Apr 26 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Colin Barker_, Sep 17 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

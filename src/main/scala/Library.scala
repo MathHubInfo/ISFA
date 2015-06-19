@@ -5,6 +5,7 @@ import java.util.Calendar
 import processor.{TextParserIns}
 
 import scala.io.Source
+import scala.util.Random
 import scala.xml.{Elem, XML}
 import parser.{DocumentParser}
 
@@ -69,7 +70,6 @@ object Library {
       val ioFile = new java.io.File(fileLoc)
       if(ioFile.exists) {
         val file = Source.fromFile(ioFile)
-
         val xml = DocumentParser.fromReaderToXML(file)
 
         if (i % 1000 == 0) {
@@ -131,7 +131,18 @@ object Library {
   def main(args : Array[String]) = {
 //    crawlXMLLocal(1, 3000)
     println(Calendar.getInstance().getTime())
-    crawlXMLLocal(1, 258062)
+    val documents = 5000
+    val max = 255000
+    val scriptPath = "/home/enxhi/github/logs/oeis_sc"
+    println(1 to 1)
+    val rndm = new Random()
+    1 to documents foreach { x =>
+      val n = rndm.nextInt(max) + 1
+      val theory = createID(n.toString)
+      printToFile(new File(scriptPath))( p => "cp ../../oeis/source/oeis_omdoc/" + theory + " ../source/" )
+      crawlXMLLocal(n,n)
+    }
+
     println(TextParserIns.succeded)
     println(TextParserIns.calls)
     println(TextParserIns.exceptions)

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A162087.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A162087">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,205,102251,733861607,83399309397669,161327438675038562165,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5614157616366023545393324521</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nXn 0..4 arrays with rows and columns, considered as 5-ary numbers, in nondecreasing order</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Jun 25 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

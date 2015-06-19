@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A241702.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A241702">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,1,6,110,4125</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of connected graphs on n nodes with chromatic number 7.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A diagonal of triangle in A126736.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Travis Hoppe and Anna Petrone, &lt;a href=&quot;https://github.com/thoppe/Encyclopedia-of-Finite-Graphs&quot;&gt;Encyclopedia of Finite Graphs&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. Hoppe and A. Petrone, &lt;a href=&quot;http://arxiv.org/abs/1408.3644&quot;&gt;Integer sequence discovery from small graphs&lt;/a&gt;, arXiv preprint arXiv:1408.3644, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/ChromaticNumber.html&quot;&gt;Chromatic Number&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,hard,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,8</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Travis Hoppe_ and _Anna Petrone_, Apr 27 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

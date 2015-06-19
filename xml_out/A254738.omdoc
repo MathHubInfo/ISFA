@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A254738.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A254738">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 13504,130554,1209260,9683835,74915756,573664291,4337693061,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 32485851354,242323566366,1802019996233,13373622677425,99124066039543,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 734136734199049,5434315156756094,40213574816124165,297515317687341829</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+2)X(3+2) 0..1 arrays with every 3X3 subblock sum of the two medians of the central row and column minus the sum of the minimums of the diagonal and antidiagonal nondecreasing horizontally and vertically</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 3 of A254743</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A254738/b254738.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..1..0..1....0..0..1..1..1....0..0..1..1..1....0..0..0..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..0..1..0....1..0..0..0..1....0..0..0..1..0....1..0..0..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0..0....0..1..0..1..1....1..0..0..0..0....0..1..0..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..0..1..0....1..1..1..1..1....0..1..0..1..1....0..1..0..0..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Feb 06 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

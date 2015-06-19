@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A125358.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A125358">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,21,169,1101,8369,64671,511957,4108671,33331889,272616609,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2244091579,18568201871,154285123493,1286408940149,10756655080753,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 90159207784161,757192897525073,6369787770505701,53659598197631131,452559057596166759</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of base 21 circular n-digit numbers with adjacent digits differing by 4 or less.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> [Empirical] a(base,n)=a(base-1,n)+A025014(n+1) for base&gt;=4.int(n/2)+1</CMP>
+    </omtext><omtext class="program">
+      <CMP> (S/R) stvar $[N]:(0..M-1) init $[]:=0 asgn $[]-&gt;{*} kill +[i in 0..N-1](($[i]`-$[(i+1)mod N]`&gt;4)+($[(i+1)mod N]`-$[i]`&gt;4))</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Dec 28 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

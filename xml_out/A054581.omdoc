@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A054581.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A054581">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,5,12,39,136,529,2171,9368,41534,188942,874906,4115060,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 19602156,94419351,459183768,2252217207,11130545494,55382155396,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 277255622646,1395731021610,7061871805974,35896206800034,183241761631584</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of unlabeled 2-trees with n nodes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A 2-tree is recursively defined as follows: K_2 is a 2-tree and any 2-tree on n+1 vertices is obtained by joining a vertex to a 2-clique in a 2-tree on n vertices. Care is needed with the term 2-tree (and k-tree in general) because it has at least two commonly used definitions.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A036361 gives the labeled version of this sequence, which has an easy formula analogous to Cayley's formula for the number of trees.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, number of unlabeled 3-gonal 2-trees with n 3-gons.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Andrew Gainer-Dewar, Gamma-Species and the Enumeration of k-Trees, Electronic Journal of Combinatorics, Volume 19 (2012), #P45. - From _N. J. A. Sloane_, Dec 15 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, p. 76, t(x), (3.5.19).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tra#trees&quot;&gt;Index entries for sequences related to trees&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Labelle, C. Lamathe and P. Leroux, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0312424&quot;&gt;Labeled and unlabeled enumeration of k-gonal 2-trees&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1)=a(2)=a(3)=1 because: K_2, K_3 are the only 2-trees on 2 and 3 nodes and on 4 nodes, there is a also unique example obtained by joining a triangle to K_3 along an edge (thus forming K_4\e). The two graphs on 5 nodes are obtained by joining a triangle to K_4\e, either along the shared edge or along one of the non-shared edges.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A036361.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000272 (labeled trees), A036361 (labeled 2-trees), A036362 (labeled 3-trees), A036506 (labeled 4-trees), A000055 (unlabeled trees).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladeta Jovovic_, Apr 11 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Additional comments from _Gordon F. Royle_, Dec 02 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

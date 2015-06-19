@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A146344.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A146344">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,6,8,10,12,18,20,26,34,42,48,50,52,54,60</CMP>
+    </omtext><omtext class="name">
+      <CMP> a(n) = Records in A146326.</CMP>
+    </omtext><omtext class="maple">
+      <CMP> 146326 := proc(n) if not issqr(n) then numtheory[cfrac]( (1+sqrt(n))/2, 'periodic','quotients') ; nops(%[2]) ; else 0 ; fi; end: read(&quot;transforms&quot;) ; a26 := [seq(A146326(n),n=1..1000)] ; RECORDS(a26)[1] ; [From _R. J. Mathar_, Sep 06 2009]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> $MaxExtraPrecision = 300; s = 10; aa = {}; Do[k = ContinuedFraction[(1 + Sqrt[n])/2, 1000]; If[Length[k] &lt; 190, AppendTo[aa, 0], m = 1; While[k[[s ]] != k[[s + m]] || k[[s + m]] != k[[s + 2 m]] || k[[s + 2 m]] != k[[s + 3 m]] || k[[s + 3 m]] != k[[s + 4 m]], m++ ]; s = s + 1; While[k[[s ]] != k[[s + m]] || k[[s + m]] != k[[s + 2 m]] || k[[s + 2 m]] != k[[s + 3 m]] || k[[s + 3 m]] != k[[s + 4 m]], m++ ]; AppendTo[aa, m]], {n, 1, 1024}]; Print[aa]; bb = {}; m = 0; Do[If[aa[[k]] &gt; m, AppendTo[bb, aa[[k]]]; m = aa[[k]]], {k, 1, Length[aa]}]; bb (*Artur Jasinski*)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A000290, A078370, A146326-A146345, A146348-A146360, A146363.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Artur Jasinski_, Oct 30 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 42 inserted by _R. J. Mathar_, Sep 06 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A114511.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A114511">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,1,0,2,0,3,0,0,0,4,0,5,0,0,0,0,1,6,0,7,0,0,0,0,1,0,2,8,0,9,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10,0,11,0,0,0,0,1,0,2,0,3,12,0,13,0,0,0,0,1,0,2,0,3,0,0,0,4,14,0,15,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,16,0,17,0,18,0,0,0,19,0,0,0,0,1,0,2,0,3,0,0,0,4,0,5,20,0,21,0,0,0,0,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(0) = 0. s(0) = {0}. s(n+1) = s(n) U s(a(n)) U {n}, where U represents a concatenation of finite sequences. The sequence {a(n)} is the limit of s(m) as m -&gt; infinity.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of terms in s(n) is A114513(n).</CMP>
+    </omtext><assertion class="example">
+      <CMP> s(1) = {0,0,0}, s(4) = {0,0,0,0,1,0,2,0,3}. s(5) = s(4) U s(a(4)) U {4} =</CMP>
+    </assertion><assertion class="example">
+      <CMP> {0,0,0,0,1,0,2,0,3} U {0,0,0} U {4} = {0,0,0,0,1,0,2,0,3,0,0,0,4}, which are the first 13 terms of {a(n)}.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> s[0] = {0}; s[n_] := s[n] = Flatten[{s[n - 1], s[s[n - 1][[n]]], {n - 1}}]; s[23] (*Chandler*)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A114510, A114513.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Leroy Quet_, Dec 03 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Ray Chandler_, Dec 05 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A021165.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A021165">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,6,2,1,1,1,8,0,1,2,4,2,2,3,6,0,2,4,8,4,4,7,2,0,4,9,6,8,9,4,4,0,9,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9,3,7,8,8,8,1,9,8,7,5,7,7,6,3,9,7,5,1,5,5,2,7,9,5,0,3,1,0,5,5,9,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6,2,1,1,1,8,0,1,2,4,2,2,3,6,0,2,4,8,4,4,7,2,0,4,9,6,8,9,4,4,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of 1/161.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

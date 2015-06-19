@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A136348.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A136348">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,3,3,3,5,5,5,5,3,3,3,3,3,6,6,6,6,6,6,17,17,17,17,17,17,17,2,2,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,2,2,2,2,11,11,11,11,11,11,11,11,11,10,10,10,10,10,10,10,10,10,10,25</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(1)=1. Let m be the number of terms in the longest run of consecutive equal terms from among the first n terms of the sequence. a(n+1) = the number of terms, from among the first n terms of the sequence, that divide m.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Among the first 20 terms of the sequence the run of five 3's (from a(11) to a(15)) is the longest run of consecutive equal terms. (So m = 5.) Among the first 20 terms of the sequence, there are six which divide 5. (a(1),a(2),a(7),a(8),a(9),a(10)) So a(21) = 6.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A136347.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> more,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Leroy Quet_, Dec 25 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

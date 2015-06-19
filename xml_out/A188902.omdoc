@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A188902.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A188902">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,1,2,1,2,3,2,1,3,1,2,2,5,1,3,1,3,2,2,1,4,3,2,2,3,1,4,1,3,2,2,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9,1,2,2,4,1,4,1,3,3,2,1,5,3,3,2,3,1,4,2,4,2,2,1,6,1,2,3,7,2,4,1,3,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4,1,6,1,2,3,3,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numerator of the base n logarithm of the product of the divisors of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Obviously the product of divisors of n (see A007955) is a multiple of n. But often it is also a perfect power of n, a number of the form n^m with m an integer. But if n is a perfect square (A000290), then the logarithm is a rational number but not an integer.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(1) is of course indeterminate since it can be any value desired, whether real, imaginary or complex.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The denominator is A010052(n) + 1.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A188902"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="numerator" cd="A188902"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000005"/>
+      <OMV name="n"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A188902"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A038548"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A056924"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Numerator[Table[FullSimplify[Log[n, Times@@Divisors[n]]], {n, 2, 75}]]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007955, A007956</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,frac</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alonso del Arte_, Apr 19 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

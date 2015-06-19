@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A076333.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A076333">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,3,6,2,6,10,6,5,3,14,2,6,10,22,15,6,7,10,26,6,14,30,21,2,34,6,15,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 38,10,3,42,22,30,46,6,14,33,10,26,6,14,58,39,30,11,62,5,42,2,66,15,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 34,70,6,21,74,30,38,51,78,10,6,82,42,13,57,86,35,22,30,46,94,21,6,14,66</CMP>
+    </assertion><omtext class="name">
+      <CMP> Squarefree kernels of non-squarefree numbers.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A076333"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A007947"/>
+      <OMA>
+      <OMR xref="A013929"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Nov 06 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

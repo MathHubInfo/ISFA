@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A129980.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A129980">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,7,6,3,15,12,18,9,15,24,24,33,24,33,24,33,24,51,42,51,33,51,69,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 51,60,69,60,87,60,60,87,105,87,87,105,87,87,105,114,105,96,141,123,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 123,159,150,159,150,141,141,132,168,159,150,177,159,159,168,195,186,195</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sum of the digits of the sum of n!!, with n&gt;=0.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 0!!=1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1!!=1 -&gt; 1+1=2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2!!=2 -&gt; 2+2=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3!!=3 -&gt; 4+3=7</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4!!=8 -&gt; 7+8=15 -&gt; 1+5=6</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5!!=15 -&gt; 15+15=30 -&gt; 3+0=3</CMP>
+    </assertion><omtext class="maple">
+      <CMP> P:=proc(n) local i,j,k,w,sf; sf:=1; for i from 0 by 1 to n do k:=i; w:=i-2; while w&gt;0 do k:=k*w; w:=w-2; od; sf:=sf+k; w:=0; k:=sf; while k&gt;0 do w:=w+k-(trunc(k/10)*10); k:=trunc(k/10); od; print(w); od; end: P(100);</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paolo P. Lava_ and _Giorgio Balzarotti_, Jun 14 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

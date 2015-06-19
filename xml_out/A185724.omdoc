@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A185724.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A185724">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,7,13,23,29,37,43,71</CMP>
+    </omtext><omtext class="name">
+      <CMP> Primes that are not the sum of distinct primes with prime subscripts.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Same as primes in A213356.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Same as primes &lt; 96 that are not the sum of distinct primes 3, 5, 11, 17, 31, 41, 59, 67, 83 (= terms of A006450 &lt; 96), because Dressler and Parker prove that every integer &gt; 96 is a sum of distinct terms of A006450 (primes with prime subscripts).</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. E. Dressler and S. T. Parker, &lt;a href=&quot;http://dx.doi.org/10.1145/321892.321900&quot;&gt;Primes with a prime subscript&lt;/a&gt;, J. ACM 22 (1975) 380-381.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Prime(Prime(1)) = Prime(2) = 3 and Prime(Prime(2)) = Prime(3) = 5 and Prime(Prime(3)) = Prime(5) = 11, so 2 and 7 are members.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A006450, A185723, A213356, A214296.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,fini,full</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Sondow_, Jul 10 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

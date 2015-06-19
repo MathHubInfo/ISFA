@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A074178.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A074178">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,10,19,21,443,667,1836</CMP>
+    </omtext><omtext class="name">
+      <CMP> Increasing partial quotients of the continued fraction for the product{1 - 2/p2}, p prime &gt;= 2.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A074893 &amp; A065474.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> cofr,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Sep 13 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

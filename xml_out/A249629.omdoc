@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A249629.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A249629">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,4,28,124,532,2164,8788,35284,141628,567004,2269948,9081724,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 36334492,145345564,581412508,2325680284,9302841652,37211487124,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 148846430068,595386201844,2381546731732,9526188851284,38104763100628,152419060098004,609676271166388,2438705115439924,9754820584849588</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of strings of length n over a 4 letter alphabet that begin with a nontrivial palindrome.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A nontrivial palindrome is a palindrome of length 2 or greater. (I.e., &quot;1&quot; is a trivial palindrome, but &quot;11&quot; and &quot;121&quot; are nontrivial palindromes.)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For example, 0032 is a is a string of length 4 over a 4 letter alphabet that begins with a nontrivial palindrome (00).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 4 divides a(n) for all n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of walks of n steps that begin with a palindromic sequence on the complete graph K_4 with loops. (E.g., 0, 1, 1, 0, 3, 1, 2 is a valid walk with 7 steps and begins with the palindromic sequence '0110'.)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> lim n -&gt; infinity a(n)/4^n ~ 0.5415013252744246 is the probability that a random, infinite base-4 string begins with a nontrivial palindrome.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Peter Kagey, &lt;a href=&quot;/A249629/b249629.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A249629"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A249629"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A249629"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="a" cd="A249629"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMA>
+      <OMS name="ceiling" cd="A249629"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A249629"/>
+      <OMA>
+      <OMS name="ceiling" cd="A249629"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> for n=3 the a(3) = 28 solutions are 000, 001, 002, 003, 010, 020, 030, 101, 110, 111, 112, 113, 121, 131, 202, 212, 220, 221, 222, 223, 232, 303, 313, 323, 330, 331, 332, 333.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a249629[n_] := Block[{f},</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   f[0] = f[1] = 0;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   f[x_] := 4*f[x - 1] + 4^Ceiling[x/2] - f[Ceiling[x/2]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[f[i], {i, 0, n}]]; a249629[27] (* _Michael De Vlieger_, Dec 27 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Ruby) seq = [0, 0]; (2..N).each{ |i| seq &lt;&lt; 4 * seq[i-1] + 4**((i+1)/2) - seq[(i+1)/2] }</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Analogous sequences for k letter alphabets: A248122 (k=3), A249638 (k=5), A249639 (k=6), A249640 (k=7), A249641 (k=8), A249642 (k=9), A249643 (k=10).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,walk</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Peter Kagey_, Nov 02 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A091299.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A091299">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,8,144,91392,187499658240</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of (directed) Hamiltonian paths (or Gray codes) on the n-cube.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> More precisely, this is the number of ways of making a list of the 2^n nodes of the n-cube, with a distinguished starting position and a direction, such that each node is adjacent to the previous one. The final node may or may not be adjacent to the first.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Gardner, Knotted Doughnuts and Other Mathematical Entertainments. Freeman, NY, 1986, p. 24.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/HamiltonianPath.html&quot;&gt;Hamiltonian Path&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/HypercubeGraph.html&quot;&gt;Hypercube Graph&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1) = 2: we have 1,2 or 2,1. a(2) = 8: label the nodes 1, 2, ..., 4. Then the 8 possibilities are 1,2,3,4; 1,3,4,2; 2,3,4,1; 2,1,4,3; etc.</CMP>
+    </assertion><omtext class="program">
+      <CMP> # A Python function that calculates A091299[n] from Janez Brank. (Replace leading dots by spaces!)</CMP>
+    </omtext><omtext class="program">
+      <CMP> .def CountGray(n):</CMP>
+    </omtext><omtext class="program">
+      <CMP> .. def Recurse(unused, lastVal, nextSet):</CMP>
+    </omtext><omtext class="program">
+      <CMP> .... count = 0</CMP>
+    </omtext><omtext class="program">
+      <CMP> .... for changedBit in range(0, min(nextSet + 1, n)):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ...... newVal = lastVal ^ (1 &lt;&lt; changedBit)</CMP>
+    </omtext><omtext class="program">
+      <CMP> ...... mask = 1 &lt;&lt; newVal</CMP>
+    </omtext><omtext class="program">
+      <CMP> ...... if unused &amp; mask:</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........ if unused == mask: count += 1</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........ else: count += Recurse(unused &amp; ~mask, newVal,</CMP>
+    </omtext><omtext class="program">
+      <CMP> ............................... max(nextSet, changedBit + 1))</CMP>
+    </omtext><omtext class="program">
+      <CMP> .... return count</CMP>
+    </omtext><omtext class="program">
+      <CMP> .. count = Recurse((1 &lt;&lt; (1 &lt;&lt; n)) - 2, 0, 0)</CMP>
+    </omtext><omtext class="program">
+      <CMP> .. for i in range(1, n + 1): count *= 2 * i</CMP>
+    </omtext><omtext class="program">
+      <CMP> .. return max(1, count)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Equals A006069 + A006070. Divide by 2^n to get A003043. Cf. A003042, A066037, A091302.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Feb 20 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(5) from Janez Brank (janez.brank(AT)ijs.si), Mar 02 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

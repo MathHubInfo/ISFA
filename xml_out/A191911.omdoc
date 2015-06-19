@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A191911.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A191911">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,9,10,15,25,26,34,35,38,49,55,57,69,74,85,87,91,94,95,106,118,119,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 121,123,134,145,161,169,178,183,185,202,206,209,213,215,217,221,254,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 259,265,289,295,298,303,309,314,321,334,339,346,361,362,365,371,377,381,382,393,395,398,407,415,417,437,445,447,451,453,454,458</CMP>
+    </assertion><omtext class="name">
+      <CMP> Semiprimes p*q such that the concatenation p||q is again a semiprime, where p &lt;= q.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1)=4 because 4=2*2 and 22=2*11 are semiprimes.</CMP>
+    </assertion><assertion class="example">
+      <CMP> The semiprime 6=2*3 is not in the sequence, because the concatenation 2||3 = 23 is not a semiprime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2)=9 because 9=3*3 and 33=3*11 are semiprimes.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3)=10 because 10=2*5 and 25=5*5 are semiprimes.</CMP>
+    </assertion><assertion class="example">
+      <CMP> The semiprime 14=2*7 is not in the sequence, because 2||7 = 27 = 3*3*3 is not a semiprime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4)=15 because 15=3*5 and 35=5*7 are semiprimes.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) for(i=1,500,bigomega(i)==2|next;f=factor(i)~;bigomega(eval(Str(f[1,1],f[1,#f])))==2&amp;print1(i&quot;,&quot;))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001358.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _M. F. Hasler_, Jun 19 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

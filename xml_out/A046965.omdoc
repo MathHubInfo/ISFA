@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A046965.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A046965">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,22,355,104348,208341,521030,833719,1146408,5419351,85563208,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 165707065,245850922,657408909,1068966896,3618458675,6167950454,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 21053343141,1804419559672,3587785776203,5371151992734,14330089761671,130796280757852</CMP>
+    </assertion><omtext class="name">
+      <CMP> Cos(n) decreases monotonically to -1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> May be computed found using convergents to the continued fraction for Pi. If cos(a(n)) is near -1, then a(n) is near an odd multiple of Pi. That is, a(n)/(2k+1) is a good rational approximation to Pi with an odd denominator (and continued fractions give good rational approximations).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If a convergent of the continued fraction for Pi has an odd denominator then the corresponding numerator is a term in this sequence. Otherwise add one to the last term in the convergent to get an approximation of Pi with an odd denominator. In this case, we may get a duplicate of the next convergent which we may just ignore.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> To illustrate: [3] = 3/1 -&gt; 3; [3,7] = 22/7 -&gt; 22; [3,7,15] = 333/106; 106 is even -&gt; [3,7,16] = 355/113 -&gt; 355; [3,7,15,1] = 355/113 -&gt; 355 (ignore); [3,7,15,1,292] = 103993/33102 -&gt; [3,7,15,1,293] = 104348/33215 -&gt; 104348</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> z={}; current=1; Timing[ Do[ If[ Cos[ n ]&lt;current, AppendTo[ z, current=Cos[ n ] ] ], {n, 105000} ] ]; z</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001203 for the continued fraction for Pi.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wouter Meeussen_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Michel ten Voorde (seqfan(AT)tenvoorde.org)</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms and comments from Jonathan Cross (jcross(AT)wcox.com), Oct 16, 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

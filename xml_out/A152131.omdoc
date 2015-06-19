@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A152131.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A152131">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,30,3410,2330240,7549603600,118965950703744,9309505329218297280,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3637689729211851543816960,7105314552536912564123328420000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 69388718760088702173445263653542192000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Arises in enumerating irreducible polynomials and pairs of relatively prime polynomials in several variables over finite fields, q = 5 case.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is from Hou and Mullen, p.29, Table 1: I_2(n), q = 5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Xiang-dong Hou and Gary L. Mullen, &lt;a href=&quot;http://arxiv.org/abs/0811.3986&quot;&gt;Number of Irreducible Polynomials and Pairs of Relatively Prime Polynomials in Several Variables over Finite Fields&lt;/a&gt;, Nov 24, 2008.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Apparently <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A152131"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A115465"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.[From <OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Dec 03 2008 ]
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A152128, A152129, A152130, A152132.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Vos Post_, Nov 25 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

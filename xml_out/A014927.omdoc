@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A014927.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A014927">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,25,457,7369,111049,1604041,22505929,309160393,4178995657,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 55776799177,736867805641,9652968253897,125562274081225,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1623467149388233,20882244117621193,267394589311003081</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(1)=1, a(n)=n*12^(n-1)+a(n-1).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A014927/b014927.txt&quot;&gt;Table of n, a(n) for n = 1..900&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A014927"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>121</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>12</OMI>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>11</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,with <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>[From _Paolo <OMOBJ>
+        <OMV name="P"/>
+      </OMOBJ>.Lava_ ,Jan 13 2009 ]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A014927"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A014927"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMI>25</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A014927"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>24</OMI><OMA>
+      <OMS name="a" cd="A014927"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>144</OMI><OMA>
+      <OMS name="a" cd="A014927"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Vincenzo Librandi_ ,Oct 23 2012 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>12</OMI><OMV name="x"/></OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Vincenzo Librandi_ ,Oct 23 2012 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> CoefficientList[Series[1/((1 - x)(1 - 12*x)^2), {x, 0, 30}], x] (* _Vincenzo Librandi_, Oct 23 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) I:=[1, 25]; [n le 2 select I[n] else 24*Self(n-1) - 144*Self(n-2) + 1: n in [1..20]]; // _Vincenzo Librandi_, Oct 23 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Olivier Gérard_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A239790.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A239790">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,41,41,191,402131,6340271501</CMP>
+    </omtext><omtext class="name">
+      <CMP> The smallest multidigit prime of a sequence of n consecutive primes such that their digit sums are also a sequence of n consecutive primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(7), if exists, is larger than 2*10^14. - _Giovanni Resta_, Apr 03 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Cf. A240598.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Números y Algo Más &lt;a href=&quot;http://simplementenumeros.blogspot.mx/2014/03/1290-primos-cuya-suma-digital-dan-primos.html&quot;&gt;Primos cuya suma digital dan primos&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(4)=191 because 191, 193, 197, 199 generates 11, 13, 17, 19.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(5)=402131 because 402131, 402133, 402137, 402139, 402197 generates 11,13,17,19,23.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (UBASIC)</CMP>
+    </omtext><omtext class="program">
+      <CMP>    10   P=7:KM=0:'puzzle 1290, Meller</CMP>
+    </omtext><omtext class="program">
+      <CMP>    20   P=nxtprm(P):if P&gt;2^32-20 then end</CMP>
+    </omtext><omtext class="program">
+      <CMP>    30   gosub *K:if K&lt;=KM then goto 20</CMP>
+    </omtext><omtext class="program">
+      <CMP>    40   print K,P,Q1:KM=K:goto 20</CMP>
+    </omtext><omtext class="program">
+      <CMP>   100   *K</CMP>
+    </omtext><omtext class="program">
+      <CMP>   110   Z=P:gosub *SODZ</CMP>
+    </omtext><omtext class="program">
+      <CMP>   120   if SODZ&lt;&gt;prmdiv(SODZ) then return</CMP>
+    </omtext><omtext class="program">
+      <CMP>   130   K=1:Q=SODZ:Q1=Q</CMP>
+    </omtext><omtext class="program">
+      <CMP>   140   Z=nxtprm(Z):gosub *SODZ</CMP>
+    </omtext><omtext class="program">
+      <CMP>   150   if SODZ&lt;&gt;nxtprm(Q) then return</CMP>
+    </omtext><omtext class="program">
+      <CMP>   160   K=K+1:Q=nxtprm(Q):goto 140</CMP>
+    </omtext><omtext class="program">
+      <CMP>   200   *SODZ:SODZ=0:L=alen(Z)</CMP>
+    </omtext><omtext class="program">
+      <CMP>   210   for I=1 to L:D=val(mid(str(Z),I+1,1))</CMP>
+    </omtext><omtext class="program">
+      <CMP>   220   SODZ=SODZ+D:next I</CMP>
+    </omtext><omtext class="program">
+      <CMP>   230   return</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007953, A046704.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Carlos Rivera_, Mar 26 2014</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(6) from _Giovanni Resta_, Apr 03 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A110692.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A110692">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,29,275,1498,5846,18250,48546,114480,245751,489247,915629,1627418,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2768740,4536884,7195828,11091888,16671645,24502305,35294647,49928714,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 69482402,95263102,128842550,172095040,227239155,296883171,384074289</CMP>
+    </assertion><omtext class="name">
+      <CMP> Kekulé numbers for certain benzenoids.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. J. Cyvin and I. Gutman, Kekulé structures in benzenoid hydrocarbons, Lecture Notes in Chemistry, No. 46, Springer, New York, 1988 (see p. 243, M_n(LLAAAAL)).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A110692"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>155</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>911</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2062</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2122</OMI><OMV name="n"/></OMA><OMI>840</OMI>
+    </OMA></OMA><OMI>5040</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>54</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>71</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>21</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>8</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Alois <OMOBJ>
+        <OMV name="P"/>
+      </OMOBJ>.Heinz_ ,Feb 27 2015 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> a:=n-&gt;(n+1)*(n+2)*(n+3)*(155*n^4+911*n^3+2062*n^2+2122*n+840)/5040: seq(a(n),n=0..31);</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Emeric Deutsch_, Aug 03 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

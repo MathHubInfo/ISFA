@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A123885.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A123885">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,5,7,10,12,14,16,20,21,25,26,30,33,36,37,40,41,46,50,52,53,57,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 60,63,65,69,70,76,77,80,83,85,88,93,95,97,99,105,107,113,114,116,119,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 122,123,128,130,136,138,142,144,147,149,153,156,158,159,168,169,171,176</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(1)=1. a(n) = a(n-1) + (number of earlier terms {ie, terms a(1) through a(n-1)} which divide n).</CMP>
+    </omtext><assertion class="example">
+      <CMP> Among terms a(1) through a(5) there are three terms which divide 6, a(1)=1, a(2)=2 and a(3)=3. So a(6) = a(5) + 3 = 10.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A123885 := proc(maxn) local a,nexta,n,i; a := [1]; for n from 2 to maxn do nexta := op(n-1,a); for i from 1 to n-1 do if n mod op(i,a) = 0 then nexta := nexta +1; fi; od; a := [op(a), nexta]; od; RETURN(a); end: maxn := 100 : alist := A123885(maxn) : for i from 1 to maxn do printf(&quot;%d,&quot;,op(i,alist)); end : - _R. J. Mathar_, Oct 21 2006</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[l_List] := Append[l, Last[l] + Length[Select[l, Mod[Length[l] + 1, # ] == 0 &amp;]]];Nest[f, {1}, 63] (*Chandler*)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A123886.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Leroy Quet_, Oct 17 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Ray Chandler_, Oct 19 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _R. J. Mathar_, Oct 21 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A199634.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A199634">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3265920,534,74,13,8,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of pandigital numbers raised to the n-th power is a number in which each digit appears n times.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Note that a(1) is the number of pandigital numbers, 10! - 9! = 9*9!. For n &gt; 1, it is the number of numbers in A199630, A199631, A114260, A199632, and A199633.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Mathematica code takes many hours to run. The program stops after doing power 186 because the largest pandigital number 9876543210 raised to any greater power does not produce enough digits.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Patrick De Geest, &lt;a href=&quot;http://www.worldofnumbers.com/ninedig4.htm&quot;&gt;The nine digits (page 4) with some ten digit (pandigital) exceptions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Author?, &lt;a href=&quot;http://blue.kakiko.com/mmrmmr/htm/eqtn11.html&quot;&gt;All terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t = {}; perm = Select[Permutations[Range[0, 9]], #[[1]] &gt; 0 &amp;]; len = Length[perm]; Print[{1, len}]; AppendTo[t, len]; pwr = 1; i = 1; While[pwr++; i &lt; len, While[IntegerLength[FromDigits[perm[[i]]]^pwr] &lt; 10*pwr, i++]; cnt = 0; Do[If[Union[DigitCount[FromDigits[perm[[j]]]^pwr]] == {pwr}, cnt++], {j, i, len}]; Print[{pwr, cnt}]; AppendTo[t, cnt]]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A050278 (pandigital numbers).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _T. D. Noe_, Nov 09 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

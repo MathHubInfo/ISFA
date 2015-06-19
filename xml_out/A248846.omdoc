@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A248846.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A248846">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,2,4,8,16,30,50,70,70,3,9,27,81,240,690,1890,4830,11130,22050,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 34650,34650,4,16,64,256,1020,4020,15540,58380,210840,722400,2310000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6745200,17417400,37837800,63063000,63063000,5,25,125,625,3120,15500,76300,370300,1761900,8166900,36613500,157426500,642642000,2459457000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle read by rows: T(m,n) = number of ways of distributing n distinguishable balls into m distinguishable bins of size 4 where empty bins are permitted (m &gt;= 1, 1 &lt;= n &lt;= 4m).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Marko R. Riedel, &lt;a href=&quot;http://math.stackexchange.com/questions/975503&quot;&gt;Distinguishable balls into distinguishable boxes with a maximum capacity&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> E.g.f. for row m: (sum(k=0..s) z^k/k!)^m, s=4.</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle T(n, m) is</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 1, 1, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2, 4, 8, 16, 30, 50, 70, 70;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3, 9, 27, 81, 240, 690, 1890, 4830, 11130, 22050, 34650, 34650;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4, 16, 64, 256, 1020, 4020, 15540,58380, 210840, 722400, 2310000, 6745200, 17417400, 37837800, 63063000, 63063000;</CMP>
+    </assertion><omtext class="maple">
+      <CMP> P := proc(n, m, s) n!*coeftayl(add(z^k/k!, k=0..s)^m, z=0, n); end;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,tabf</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Marko Riedel_, Oct 15 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

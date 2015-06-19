@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A073772.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A073772">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,0,0,1,1,1,0,1,1,1,0,1,1,1,1,0,1,1,1,1,1,2,2,1,1,1,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,2,1,2,2,1,1,1,1,1,1,2,1,2,2,1,2,2,2,1,1,2,1,2,1,2,2,1,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2,2,1,1,2,2,2,1,2,3,1,1,2,2,2,1,1,1,1,1,1,1,1,3,3,3,3,1,1,2,2,2,1,1,1,1,3,3,3,3</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of highly composite numbers (HCNs) between the n-th highly composite number k and 2*k if 2*k is a highly composite number, or -1 if 2*k is not a highly composite number.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If 2*A002182(n) = A002182(m) then a(n) = m - n - 1; if 2*A002182(n) is not a highly composite number then a(n) = -1. The zero terms correspond to the terms of A072938, the negative terms correspond to the terms of A073771. The terms were determined by means of A. Flammenkamp's list (cf. Links).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Achim Flammenkamp &lt;a href=&quot;http://www.uni-bielefeld.de/~achim/highly.html&quot;&gt;Highly Composite Numbers&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(3) = -1 since 4 is the third highly composite number and 2*4 = 8 is not a highly composite number; a(6) = 1 since 24 is the sixth highly composite number, 2*24 = 48 is the eighth highly composite number and the highly composite number 36 is between them; a(13) = 0 since 360 is the 13th highly composite number, 2*360 = 720 is the 14th highly composite number and there is no highly composite number between them.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A002182, A072938, A073771.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,24</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Klaus Brockhaus_, Aug 19 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

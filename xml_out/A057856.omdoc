@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A057856.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A057856">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,1,1,2,1,1,32,1,2,4,1,1,4,2,1,2,1,1,2,1,2,2,1,4</CMP>
+    </omtext><omtext class="name">
+      <CMP> Least k such that (n+1)^k + n^k is a prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Note: k must be of the form 2^m (see A058064 for the m values).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture: For all pairs of relative prime numbers (x, y) there exists at least one number n=2^m and one prime number p such p=x^n+y^n. This sequence show one case of this conjecture where y=x+1. - _Tomas Xordan_, Jun 02 2007</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(101)=16 because 101^16+102^16 = 254536435001431070450581794495937</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Do[ k = 0; While[ !PrimeQ[ (n + 1)^(2^k) + n^(2^k) ], k++ ]; Print[ 2^k ], {n, 1, 60} ].</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A130536.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> hard,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Nov 14 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A006887.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A006887">
+          <assertion class="***** TTTT *****">
+      <CMP> M4478</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,8,45,297,2322,2728,4445,4544,4949,5049,5455,5554,7172,27100,44443,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 55556,60434,77778,143857,208494,226071,279720,313390,324675,329967,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 346060,368928,395604,422577,427868,461539,472823,478115,488214,494208</CMP>
+    </assertion><omtext class="name">
+      <CMP> Kaprekar triples: q such that q=x+y+z and q^3=x*10^2n + y*10^n + z, where z &lt; 10^n and n is the number of digits in q. q is not a power of 10 (except q=1)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Douglas E. Iannucci and Bertrum Foster, Kaprekar Triples, Journal of Integer Sequences, Vol. 8 (2005), Article 05.4.8.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Wells, The Penguin Dictionary of Curious and Interesting Numbers. Penguin Books, NY, 1986, 151.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Douglas E. Iannucci and Bertrum Foster, &lt;a href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL8/Iannucci/iannucci45.html&quot;&gt;Kaprekar Triples&lt;/a&gt;, Journal of Integer Sequences, Vol. 8 (2005), Article 05.4.8.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Munafo, &lt;a href=&quot;http://www.mrob.com/pub/math/seq-kaprekar.html&quot;&gt;Kaprekar Sequences&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert Munafo_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Entry revised by Larry Reeves (larryr(AT)acm.org), Apr 25 2001 and Dec 08, 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

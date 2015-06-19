@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A136603.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A136603">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 176,191,194,196,209,213,215,217,223,237,253,259,263,272,274,275,289,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 290,292,293,295,305,307,308,353,361,367,379,380,381,382,386,392,399,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 401,405,415,416,418,419,427,443,461,463,467,475,477,479,481,490,491</CMP>
+    </assertion><omtext class="name">
+      <CMP> Positive numbers having a unique representation by inserting minus and plus-signs in 123456789.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A066957(a(n)) = 1; subsequence of A136601;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> the sequence is finite with 869 terms.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Zumkeller, &lt;a href=&quot;/A136603/b136603.txt&quot;&gt;Table of n, a(n) for n = 1..869&lt;/a&gt; (full sequence)</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1) = 176 = 1 - 2 + 34 + 56 + 78 + 9;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 191 = 123 + 4 + 56 + 7 - 8 + 9;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3) = 194 = 1 - 2 + 34 + 5 + 67 + 89;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4) = 196 = -1 + 2 + 34 + 5 + 67 + 89;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(5) = 209 = 1 + 234 + 56 + 7 - 89;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(6) = 213 = 123 + 4 + 5 - 6 + 78 + 9;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(7) = 215 = 123 + 4 - 5 + 6 + 78 + 9;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(8) = 217 = 123 - 4 + 5 + 6 + 78 + 9;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(9) = 223 = -1 + 23 + 45 + 67 + 89;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(10) = 237 = -123 + 456 - 7 - 89;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(11) = 253 = -1 + 2 + 345 - 6 - 78 - 9;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(12) = 259 = -1 + 234 - 56 - 7 + 89;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(869) = 123456789 = A136602(1715).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,fini,full,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Jan 12 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

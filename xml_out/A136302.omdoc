@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A136302.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A136302">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,6,15,35,81,188,437,1016,2362,5491,12765,29675,68986,160373,372822,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 866706,2014847,4683951,10888865,25313540,58846841,136802308,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 318026782,739322571,1718716457,3995531011,9288482690,21593102505,50197873146</CMP>
+    </assertion><omtext class="name">
+      <CMP> Transform of A000027 by the T_{1,1} transformation (see link).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Richard Choulet, &lt;a href=&quot;http://www.apmep.asso.fr/spip.php?article2176&quot;&gt;Curtz-like transformation&lt;/a&gt;.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="f" cd="A136302"/>
+      <OMV name="z"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA><OMS name="times"/><OMI>6</OMI><OMV name="z"/></OMA><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>3</OMI><OMV name="z"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A136302"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="a" cd="A136302"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A136302"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A136302"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Richard Choulet_ ,Apr 07 2009 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> a:= n-&gt; (Matrix([6,2,1]). Matrix([[3,1,0],[ -2,0,1],[1,0,0]])^n)[1,3]: seq(a(n), n=1..40); # _Alois P. Heinz_, Aug 14 2008</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Richard Choulet_, Mar 22 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Alois P. Heinz_, Aug 14 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

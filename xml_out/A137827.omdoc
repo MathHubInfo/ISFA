@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A137827.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A137827">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,7,13,16,19,25,31,37,43,49,61,64,67,73,79,97,103,109,121,127,139,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 151,157,163,169,181,193,199,211,223,229,241,256,271,277,283,289,307,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 313,331,337,343,349,361,367,373,379,397,409,421,433,439,457,463,487,499</CMP>
+    </assertion><omtext class="name">
+      <CMP> Prime powers congruent to 1 (mod 3).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/CyclotomicGraph.html&quot;&gt;Cyclotomic Graph&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[ Range[4, 500], (Mod[#, 3] == 1 &amp;&amp; Mod[#, # - EulerPhi[#]] == 0)&amp; ] (* _Jean-François Alcover_, Oct 26 2012 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric W. Weisstein_, Feb 12, 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

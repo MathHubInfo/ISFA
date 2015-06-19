@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A245291.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A245291">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,32,27648,258473984,34924795002880,73692421593384353792,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2475385863878910456755126272,1329190247836700110425361699261382656,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11417938846687390120116281062224453749176270848,1569274711573306070659025854469940650153499575743856771072</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of normalized graph Laplacian matrices of nonempty labeled graphs of 2n vertices that are entangled in C^2 x C^n as density matrices in quantum mechanics.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Since entanglement is not invariant under graph isomorphism, all 2^(n(2n-1))-1 nonzero Laplacian matrices are treated as different.  A nonzero Laplacian matrix not equal to the complete graph is entangled in C^2 x C^n if and only if its complement is.  Since the complete graph is not entangled, this means that a(n) is even for all n.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. W. Wu, &lt;a href=&quot;http://dx.doi.org/10.1016/j.physleta.2005.10.049&quot;&gt;Conditions for separability in generalized Laplacian matrices and diagonally dominant matrices as density matrices&lt;/a&gt;, Physics Letters A, 351 (2006), 18-22.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. W. Wu, &lt;a href=&quot;http://arxiv.org/abs/1407.5663&quot;&gt;Graphs whose normalized Laplacian matrices are separable as density matrices in quantum mechanics&lt;/a&gt;, arXiv:1407.5663, 2014.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A245290"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A245291"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A245291"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMR xref="A229865"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A245290, A229865.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Chai Wah Wu_, Jul 16 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A159888.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A159888">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 29,39,41,43,45,55,57,59,93,103,105,107,109,119,121,251,285,295,297,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 299,301,311,313,315,349,359,361,363,365,375,377,507,541,551,553,555,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 557,567,569,571,605,615,617,619,621,631,633,763,797,807,809,811,813,823,825</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers congruent to {-5,29,39,41,43,45,55,57,59,93,103,105,107,109,119,121} mod 256 .</CMP>
+    </omtext><omtext class="comment">
+      <CMP> When will this first differ from A159887?</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A159888/b159888.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[900],MemberQ[{29, 39, 41, 43, 45, 55, 57, 59, 93, 103, 105, 107, 109, 119, 121, 251}, Mod[#, 256]]&amp;] (* _Harvey P. Dale_, Mar 09 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [n: n in [1..1000] | n mod 256 in [-5,29,39,41, 43,45,55,57,59,93,103,105,107,109,119,121,251]]; // _Vincenzo Librandi_, Mar 11 2014</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Philippe Deléham_, Apr 25 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected by _Harvey P. Dale_, Mar 09 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

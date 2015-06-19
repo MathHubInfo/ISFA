@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A045949.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A045949">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,6,38,116,262,496,840,1314,1940,2738,3730,4936,6378,8076,10052,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 12326,14920,17854,21150,24828,28910,33416,38368,43786,49692,56106,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 63050,70544,78610,87268,96540,106446,117008,128246,140182,152836,166230</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of equilateral triangles formed out of matches that can be found in a hexagonal chunk of side length n in hexagonal array of matchsticks.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Mohammad K. Azarian, A Trigonometric Characterization of  Equilateral Triangle, Problem 336, Mathematics and Computer Education, Vol. 31, No. 1, Winter 1997, p. 96.  Solution published in Vol. 32, No. 1, Winter 1998, pp. 84-85.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Mohammad K. Azarian, Equating Distances and Altitude in an Equilateral Triangle, Problem 316, Mathematics and Computer Education, Vol. 28, No. 3, Fall 1994, p. 337.  Solution published in Vol. 29, No. 3, Fall 1995, pp. 324-325.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A045949/a045949.jpg&quot;&gt;Illustration of a(1)=6&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (3,-2,-2,3,-1). [From _R. J. Mathar_, Sep 03 2010]</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A045949"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>9</OMI><OMV name="n"/></OMA><OMI>2</OMI>
+    </OMA></OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A045949"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="a" cd="A045949"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A045949"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A045949"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="a" cd="A045949"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A045949"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>3</OMI><OMA><OMS name="times"/><OMI>10</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A045949"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>9</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>8</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMI>8</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Sep 03 2010 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> LinearRecurrence[{3,-2,-2,3,-1},{0,6,38,116,262},40] (* or *) CoefficientList[Series[(2*x*(x*(x+2)*(x+5)+3))/((x-1)^4*(x+1)),{x,0,40}],x] (* _Harvey P. Dale_, Jun 11 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) A045949(n):=floor(n*(14*n^2+9*n+2)/4)$</CMP>
+    </omtext><omtext class="program">
+      <CMP> makelist(A045949(n),n,0,30); /* _Martin Ettl_, Nov 03 2012 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (R) floor(1:25*(14*(1:25)^2+9*(1:25)+2)/4) #_Christian N. K. Anderson_, Apr 27 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> See A008893 for a related sequence.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. K. Guy_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _N. J. A. Sloane_, May 29 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

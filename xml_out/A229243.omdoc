@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A229243.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A229243">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,1,1,1,1,2,1,1,1,10,5,1,1,1,76,166,15,1,1,1,764,12644,3795,52,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,1,1,9496,1680592,3305017,112124,203,1,1,1,140152,341185496,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6631556521,1245131903,4163743,877,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number A(n,k) of set partitions of {1,...,k*n} into sets of size at most n; square array A(n,k), n&gt;=0, k&gt;=0, read by antidiagonals.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A229243/b229243.txt&quot;&gt;Antidiagonals n = 0..30, flattened&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A229243"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMV name="k"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMV name="k"/></OMA>
+    </OMA><OMA>
+      <OMS name="exp" cd="A229243"/>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="j"/>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A229243"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A229223"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMV name="k"/></OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Square array A(n,k) begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,  1,      1,          1,              1,                   1, ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,  1,      1,          1,              1,                   1, ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,  2,     10,         76,            764,                9496, ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,  5,    166,      12644,        1680592,           341185496, ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 15,   3795,    3305017,     6631556521,      25120541332271, ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 52, 112124, 1245131903, 41916097982471, 3282701194678476257, ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> G:= proc(n, k) option remember; local j; if k&gt;n then G(n, n)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       elif n=0 then 1 elif k&lt;1 then 0 else G(n-k, k);</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       for j from k-1 to 1 by -1 do %*(n-j)/j +G(n-j, k) od; % fi</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A:= (n, k)-&gt; G(n*k, n):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(seq(A(n, d-n), n=0..d), d=0..10);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> G[n_, k_] := G[n, k] = Module[{j, g}, Which[k &gt; n, G[n, n], n == 0, 1, k &lt; 1, 0, True, g = G[n-k, k]; For[j = k-1, j &gt;= 1, j--, g = g*(n-j)/j + G[n-j, k] ]; g ] ]; A[n_, k_] := G[n*k, n]; Table[Table[A[n, d-n], {n, 0, d}], {d, 0, 10}] // Flatten (* _Jean-François Alcover_, Dec 23 2013, translated from Maple *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Columns k=0-3 give: A000012, A000110, A229228, A229413.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Rows n=0+1, 2-3 give: A000012, A066223, A229414.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Main diagonal gives: A229229.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A229223.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,9</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alois P. Heinz_, Sep 17 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

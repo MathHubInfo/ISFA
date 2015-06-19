@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A073324.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A073324">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,1,2,8,3,242,4,245,100,8313,10,50190,23,8338,3390,12,24,308926,13,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 49,25,15,26</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest x such that Mod[p(x), c(x)]=n, where p(j) is the j-th prime, c(j) is the j-th composite number.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n)=Min{x; Mod[A000040(x), A002808(x)]=n} =Min{x; A065859[x]=n}</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> x=10: p(10)=29,c(10)=18, Mod[29,18]=11 appears first here, so a(11)=10.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[x_] := Mod[Prime[x], FixedPoint[x+PrimePi[ # ]+1&amp;, x]] t=Table[0, {256}]; Do[s=f[n]; If[s&lt;257&amp;&amp;t[[s]]==0, t[[s]]=n], {n, 1, 400000}]; t</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A002808, A065859, A073325, A073326.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Jul 30 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

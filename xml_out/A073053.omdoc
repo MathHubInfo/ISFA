@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A073053.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A073053">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,101,11,101,11,101,11,101,11,112,22,112,22,112,22,112,22,112,22,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 202,112,202,112,202,112,202,112,202,112,112,22,112,22,112,22,112,22,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 112,22,202,112,202,112,202,112,202,112,202,112,112,22,112,22</CMP>
+    </assertion><omtext class="name">
+      <CMP> Apply DENEAT operator to n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> DENEAT(n): concatenate number of even digits in n, number of odd digits and total number of digits. E.g. 25 -&gt; 1.1.2 = 112 (Digits: Even, Not Even, And Total). Leading zeros are then omitted.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Repeated application of the DENEAT operator reduces all numbers to 123. This is easy to prove. Compare A100961. - _N. J. A. Sloane_ Jun 18 2005</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Ecker, Caution: Black Holes at Work, New Scientist (Dec. 1992)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. J. Halm, Blackholing, Mpossibilities 69, (Jan 01 1999), p. 2.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1) = 0.1.1 -&gt; 11.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(10000000000) = 10111 because 10000000000 has 10 even digits, 1 odd digit and 11 total digits</CMP>
+    </assertion><assertion class="example">
+      <CMP> DENEAT(1356)-&gt; &quot;1&quot; even (6), &quot;3&quot; odd (1,3,5), &quot;4&quot; total digits -&gt;134.</CMP>
+    </assertion><assertion class="example">
+      <CMP> DENEAT(1490)-&gt; &quot;2&quot; even (0 is considered even,4), &quot;2&quot; odd (1,9), &quot;4&quot; total digits -&gt; 224. _Paolo P. Lava_, Mar 05 2010</CMP>
+    </assertion><omtext class="maple">
+      <CMP> read(&quot;transforms&quot;) :</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A073053 := proc(n)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     local e,o,L ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     if n = 0 then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         0 ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     else</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         e := A196563(n) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         o := A196564(n) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         L := [e,o,e+o] ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         digcatL(L) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> end proc: # _R. J. Mathar_, Jul 13 2012</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[n_] := Block[{id = IntegerDigits[n]}, FromDigits[ Join[ IntegerDigits[ Length[ Select[id, EvenQ[ # ] &amp;]]], IntegerDigits[ Length[ Select[id, OddQ[ # ] &amp;]]], IntegerDigits[ Length[ id]] ]]]; Table[ f[n], {n, 0, 55}] (from _Robert G. Wilson v_, Jun 09 2005)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> s={};Do[id=IntegerDigits[n];ev=Select[id, EvenQ];ne=Select[id, OddQ];fd=FromDigits[{Length[ev], Length[ne], Length[id]}]; s=Append[s, fd], {n, 81}];SameQ[newA073053-s] (Zak Seidov)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A008577, A072420, A073054, A100961.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michael Joseph Halm_, Aug 16 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited and corrected by Jason Earls (zevi_35711(AT)yahoo.com) and _Robert G. Wilson v_, Jun 03 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

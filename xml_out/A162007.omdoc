@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A162007.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A162007">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,270,36096,4766048,704357760,120536980224,24060789342208,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5590122715250688,1503080384197754880,464520829174515630080,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 163839204411117787938816,65500849343294249018327040</CMP>
+    </assertion><omtext class="name">
+      <CMP> Third left hand column of the EG1 triangle A162005</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A162007"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="m"/><OMI>1</OMI>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="p"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="m"/><OMV name="p"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA><OMV name="p"/>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="q"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="q"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A162007"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="q"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="m"/><OMV name="p"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A094665"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="q"/>
+    </OMA><OMA>
+      <OMR xref="A156919"/>
+      <OMV name="q"/><OMV name="p"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="m"/>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> nmax := 14; mmax := nmax: imax := nmax: T1(0, x) := 1: T1(0, x+1) := 1: for i from 1 to imax do T1(i, x) := expand((2*x+1)*(x+1)*T1(i-1, x+1) - 2*x^2*T1(i-1, x)): dx := degree(T1(i, x)): for k from 0 to dx do c(k) := coeff(T1(i, x), x, k) od: T1(i, x+1) := sum(c(j1)*(x+1)^(j1), j1 = 0..dx): od: for i from 0 to imax do for j from 0 to i do A083061(i, j) := coeff(T1(i, x), x, j) od: od: for n from 0 to nmax do for k from 0 to n do A094665(n+1, k+1) := A083061(n, k) od: od: A094665(0, 0) := 1: for n from 1 to nmax do A094665(n, 0) := 0 od: for m from 1 to mmax do A156919(0, m) := 0 end do: for n from 0 to nmax do A156919(n, 0) := 2^n end do: for n from 1 to nmax do for m from 1 to mmax do A156919(n, m) := (2*m+2)*A156919(n-1, m) + (2*n-2*m+1) * A156919(n-1, m-1) end do end do: m:=3; for n from m to nmax do a(n, m) := sum((-1)^(m-p1-1)*sum(2^(n-q-1)*binomial(n-q-1, m-p1-1) * A094665(n-1, q) * A156919(q, p1), q=1..n-m+p1), p1=0..m-1) od: seq(a(n, m), n = m..nmax);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # Maple program edited by _Johannes W. Meijer_, Sep 25 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Third left hand column of the EG1 triangle A162005.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Other left hand columns are A000182 and A162006.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Related to A094665, A083061 and A156919.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A000079, A036289 and A100381 appear in the a(n, 3) formula.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A001789, A003472, A054849, A002409, A054851, A140325 and A140354 (scaled by 2^(m-1)) appear one by one in the a(n, m) formulae for m= 4 and higher .</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Johannes W. Meijer_, Jun 27 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

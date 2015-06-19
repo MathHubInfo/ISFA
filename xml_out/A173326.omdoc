@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A173326.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A173326">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,8,32,1344,2016,2025,2376,3375,3528,4032,4224,4704,4752,5292,5376,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5625,6084,6804,7128,9408,9504,10125,10206,10935,12100,12348,12672,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 16875,16896,20412,21384,23814,26136,28512,29952,30375,31944,32832,42768,46464,48114</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that phi(tau(n)) = sopf(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> sopf = A008472 is the sum of the distinct primes dividing n. tau = A000005 is the number of divisors of n. phi = A000010 is Euler's totient function.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. A. MacMahon, Divisors of numbers and their continuations in the theory of partitions, Proc. London Math. Soc., 19 (1919), 75-113.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Donovan Johnson, &lt;a href=&quot;/A173326/b173326.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Bogomolny, &lt;a href=&quot;http://www.cut-the-knot.org/blue/Euler.shtml&quot;&gt;Euler Function and Theorem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Sierpinski, &lt;a href=&quot;http://matwbn.icm.edu.pl/ksiazki/mon/mon42/mon4204.pdf&quot;&gt;Number Of Divisors And Their Sum&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> {n: A163109(n) = A008472(n)}.</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 4 is in the sequence because tau(4) = 3, phi(3) = 2 and sopf(4) = 2.</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8 is in the sequence because tau(8) = 4, phi(4) = 2 and sopf(8) = 2.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A008472 := proc(n) add(p,p= numtheory[factorset](n)) ; end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A163109 := proc(n) numtheory[phi](numtheory[tau](n)) ; end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for n from 1 to 40000 do if A008472(n) = A163109(n) then printf(&quot;%d,&quot;,n); end if; end do: # R. J. Mathar, Sep 02 2011</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[2,50000],EulerPhi[DivisorSigma[0,#]]==Total[ Transpose[ FactorInteger[#]][[1]]]&amp;] (* _Harvey P. Dale_, Nov 15 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A173320, A062069, A001414, A008472, A001222.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Lagneau_, Feb 16 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and edited by _Michel Lagneau_, Apr 25 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

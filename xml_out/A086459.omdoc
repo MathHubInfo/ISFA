@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A086459.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A086459">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,49,3375,923521,992436543,4195872914689,70110209207109375,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4649081944211090042881,1227102111503512992112190463,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1291749870339606615892191271170049,5429914198235566686555216227881787109375</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Determinant of the circulant matrix whose rows are formed by successively rotating the vector (1,2,4,8,..2^(n-1)) right.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Note that if the rows are rotated left instead of right, the sign of the terms for which n = 0 or 3 (mod 4) is reversed. The n eigenvalues of these circulant matrices lie on the circle of radius 2(2^n - 1)/3 centered at x=(2^n - 1)/3, y=0. This sequence can be generalized to bases other than 2 and similar results are true.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Richard Bellman, Introduction to Matrix Analysis, Second Edition, SIAM, 1970, pp. 242-3.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Philip J. Davis, Circulant Matrices, Second Edition, Chelsea, 1994.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/CirculantMatrix.html&quot;&gt;Circulant Matrix&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A086459"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      See formulas in <OMOBJ>
+        <OMR xref="A180602"/>
+      </OMOBJ>,an unsigned version of this sequence with offset <OMOBJ>
+        <OMI>0</OMI>
+      </OMOBJ>.[From _Paul <OMOBJ>
+        <OMV name="D"/>
+      </OMOBJ>.Hanna_ ,Sep 11 2010 ]
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(3) = determinant of the matrix ((1,2,4),(4,1,2),(2,4,1)) = 49. [Corrected by _T. D. Noe_, Jan 22 2008]</CMP>
+    </assertion><omtext class="maple">
+      <CMP> restart:with (combinat):a:=n-&gt;mul(-stirling2(n,2), j=3..n): seq(a(n), n=2..19);[From _Zerinvary Lajos_, Jan 01 2009]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[x=2^Range[0, n-1]; m=Table[RotateRight[x, i-1], {i, n}]; Det[m], {n, 12}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A048954 (circulant of binomial coefficients), A052182 (circulant of natural numbers), A066933 (circulant of prime numbers).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A180602 (unsigned, offset 0). [From _Paul D. Hanna_, Sep 11 2010]</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _T. D. Noe_, Jul 21 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

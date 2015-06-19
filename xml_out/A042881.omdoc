@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A042881.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A042881">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,6,11,17,130,797,927,3578,4505,66648,71153,280107,351260,2387667,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 17064929,19452596,36517525,55970121,316368130,19670794181,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 98670339035,118341133216,217011472251,335352605467,2564479710520,15722230868587,18286710579107</CMP>
+    </assertion><omtext class="name">
+      <CMP> Denominators of continued fraction convergents to sqrt(972).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A042881/b042881.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A042881"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMF dec="1.9726764302E10"/><OMA>
+      <OMS name="a" cd="A042881"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>20</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="a" cd="A042881"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>40</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>39</OMI>
+    </OMA>
+      </OMOBJ>.-_Vincenzo Librandi_ ,Jan 31 2014 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Denominator[Convergents[Sqrt[972], 30]] (* _Vincenzo Librandi_, Jan 31 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A042880, A040940.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,frac,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vincenzo Librandi_, Jan 31 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A234440.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A234440">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6272,66228,666880,7165920,72539432,790261148,8028682984,88710949848,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 904037477472,10133236760728,103526333639528,1177176079902156,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 12050136543826616,138970750405944768,1424578896164786720</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+1)X(5+1) 0..2 arrays with every 2X2 subblock having its diagonal sum differing from its antidiagonal sum by 1 (constant stress 1X1 tilings)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 5 of A234443</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A234440/b234440.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..2..1..1..1....1..1..1..0..0..0....1..2..2..1..2..2....2..1..0..0..2..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..2..2..2..1..2....0..1..0..0..1..2....0..0..1..1..1..0....1..1..1..0..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2..1..2..0..0....1..1..1..0..0..2....1..0..0..1..2..2....2..1..0..0..2..2</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Dec 26 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A152508.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A152508">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,42,1836695,10530242387,29832986150825,60695128902586540</CMP>
+    </omtext><omtext class="name">
+      <CMP> 1/10 of the number of permutations of 4 indistinguishable copies of 1..n with exactly 6 local maxima.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Dec 06 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

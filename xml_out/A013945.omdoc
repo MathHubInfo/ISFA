@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A013945.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A013945">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,2,11,5,27,10,51,17,83,26,123,37,171,50,227,65,291,82,363,101,443,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 122,531,145,627,170,731,197,843,226,963,257,1091,290,1227,325,1371,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 362,1523,401,1683,442,1851,485,2027,530,2211,577,2403,626,2603,677,2811</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least d such that period of continued fraction for sqrt(d) contains n (n^2+2 if n odd, (n/2)^2+1 if n even).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A013945/b013945.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (0,3,0,-3,0,1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="x" cd="A013945"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMI>3</OMI></OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_N"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="A"/>
+      </OMOBJ>.Sloane_ ,Jun 12 2004 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(3) = 11 because the continued fraction for the square root of 11 is 3, {3, 6}.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Table[If[OddQ[n], n^2 + 2, (n/2)^2 + 1], {n, 100}] (* _T. D. Noe_, Feb 28 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Bisections: A164897, A002522.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

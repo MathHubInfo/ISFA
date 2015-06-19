@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A135139.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A135139">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,12,24,68,144,388,856,2228,5056,12852,29736,74372,174384,431332,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1020664,2505428,5965984,14568468,34840776,84774308,203340816,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 493553092,1186252696,2874447092,6918369664,16744740852,40340742504,97560443588</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n)=5a(n-2)+2a(n-3).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harvey P. Dale, &lt;a href=&quot;/A135139/b135139.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      O.g.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>2</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA></OMA>
+    </OMA></OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A135139"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMR xref="A078343"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>7</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A135138"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMR xref="A135138"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMR xref="A135138"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Feb 15 2008 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A135139"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>4</OMI><OMI>7</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A135139"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>7</OMI>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A135139"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A135139"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>7</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>4</OMI><OMI>7</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A135139"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>7</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A135139"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A135139"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,with <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>0</OMI><OMA>
+      <OMS name="_Paolo" cd="A135139"/>
+      <OMV name="P"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.Lava_ ,Jun 09 2008 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> a = {1, 2, 4}; Do[AppendTo[a, 5*a[[ -2]] + 2*a[[ -3]]], {40}]; a - _Stefan Steinerberger_, Feb 15 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> LinearRecurrence[{0,5,2},{1,2,4},30] (* _Harvey P. Dale_, May 25 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A135138.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Curtz_, Feb 13 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _R. J. Mathar_ and _Stefan Steinerberger_, Feb 15 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

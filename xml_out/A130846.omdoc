@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A130846.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A130846">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,23,4,235,35,26,347,237,58,2359,349,2610,311,235711,45712,2313,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3813,2614,345915,235915,716,2371017,3417,2561118,3581119,2319,41220,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 237921,35791321,2561322,3423,23101423,824,2351525,3457111525,2671126,391627</CMP>
+    </assertion><omtext class="name">
+      <CMP> Replace n by the concatenation of its anti-divisors.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of anti-divisors concatenated to form a(n) is A066272(n). We may consider prime values of the concatenated anti-divisor sequence and we may iterate it, i.e. n, a(n), a(a(n)), a(a(a(n))) which leads to questions of trajectory, cycles, fixed points.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A066272 for definition of anti-divisor.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Primes in this sequence are at n=3,4,5,10,14,16,40,46,100,145,149,... - _R. J. Mathar_, Jul 24 2007</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jon Perry, &lt;a href=&quot;/A066272/a066272a.html&quot;&gt;The Anti-Divisor&lt;/a&gt;, cached copy.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. V. Post, &lt;a href=&quot;/A130846/a130846.txt&quot;&gt;Factors of first 62 terms&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 3: 2, so a(3) = 2.</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4: 3, so a(4) = 3.</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5: 2, 3, so a(5) = 23.</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6: 4, so a(6) = 4.</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7: 2, 3, 5, so a(7) = 235.</CMP>
+    </assertion><assertion class="example">
+      <CMP> 17: 2, 3, 5, 7, 11, so a(17) = 235711</CMP>
+    </assertion><omtext class="maple">
+      <CMP> antiDivs := proc(n) local resul,odd2n,r ; resul := {} ; for r in ( numtheory[divisors](2*n-1) union numtheory[divisors](2*n+1) ) do if n mod r &lt;&gt; 0 and r&gt; 1 and r &lt; n then resul := resul union {r} ; fi ; od ; odd2n := numtheory[divisors](2*n) ; for r in odd2n do if ( r mod 2 = 1) and r &gt; 2 then resul := resul union {2*n/r} ; fi ; od ; RETURN(resul) ; end: A130846 := proc(n) cat(op(antiDivs(n))) ; end: seq(A130846(n),n=3..80) ; - _R. J. Mathar_, Jul 24 2007</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A037278, A066272, A120712, A106708, A130799.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Vos Post_, Jul 20 2007, Jul 22 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _R. J. Mathar_, Jul 24 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

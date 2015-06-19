@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A136144.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A136144">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,7,11,13,17,19,179,181,191,193,197,199,809,811,821,823,827,829,3359,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3361,3371,3373,3389,3391,4217,4219,4229,4231,4241,4243,6761,6763,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6779,6781,6791,6793,9419,9421,9431,9433,9437,9439,9431,9433,9437,9439</CMP>
+    </assertion><omtext class="name">
+      <CMP> Six consecutive primes with three sets of twin primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Could be called unrestricted prime sextets.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Harry J. Smith_, Dec 16 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

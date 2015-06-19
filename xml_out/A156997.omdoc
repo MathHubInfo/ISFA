@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A156997.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A156997">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,6,9,12,18,24,27,36,48,54,56,60,72,81,96,108,112,120,144,162,180,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 192,216,224,240,243,288,300,319,324,360,384,392,399,432,448,480,486,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 504,540,576,600,638,648,720,728,729,768,784,798,864,896,900,957,972,1008,1152,1176,1276,1296,1400,1456,1458</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smaller of a and b if a^2+b^2=c^2 and the sum of the distinct prime divisors of a and b is the sum of the distinct prime divisors of c.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 15 divides abc. Since we define a=2mu and b=m^2-b^2, the order of the triple that generates a(n) can have the first term greater than the second term. For this reason I chose to list the smaller of a and b. The idea for this sequence comes from a post in the Yahoo group mathforfun which is in the link.</CMP>
+    </omtext><omtext class="link">
+      <CMP> MathForFun, &lt;a href=&quot;http://tech.groups.yahoo.com/group/mathforfun/message/13635&quot;&gt;Pythagorean triple digital sums&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Let a,b,c, m &gt; u,k be positive integers. If a^2 + b^2 = c^2 then</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      a =<OMOBJ>
+        <OMA><OMS name="times"/><OMV name="k"/><OMI>2</OMI></OMA>
+      </OMOBJ>mu ,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="b"/>
+      <OMA><OMS name="times"/><OMV name="k"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="m"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="u"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMA><OMS name="times"/><OMV name="k"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="m"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="u"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 360^2+319^2=481^2. 360=2^3*3^2*5,319=11*29 and 481=13*37. 2+3+5+11+29=13+37.</CMP>
+    </assertion><assertion class="example">
+      <CMP> So 319 is in the sequence.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) pythsum(n) =</CMP>
+    </omtext><omtext class="program">
+      <CMP> {</CMP>
+    </omtext><omtext class="program">
+      <CMP> local(v,x,a,b,cm,k,u,s,ct=0);</CMP>
+    </omtext><omtext class="program">
+      <CMP> v=vector(400);</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(m=1,n+n,</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(u=1,n,</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(k=1,n,</CMP>
+    </omtext><omtext class="program">
+      <CMP> a=2*m*u*k;</CMP>
+    </omtext><omtext class="program">
+      <CMP> if(u&gt;m,b=k*(u^2-m^2),b=k*(m^2-u^2));</CMP>
+    </omtext><omtext class="program">
+      <CMP> c=k*(m^2+u^2);</CMP>
+    </omtext><omtext class="program">
+      <CMP> fa=ifactord(a);</CMP>
+    </omtext><omtext class="program">
+      <CMP> fb=ifactord(b);</CMP>
+    </omtext><omtext class="program">
+      <CMP> fc=ifactord(c);</CMP>
+    </omtext><omtext class="program">
+      <CMP> s=0;</CMP>
+    </omtext><omtext class="program">
+      <CMP> s2=0;</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(a1=1, length(fa), s+=fa[a1]);</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(b1=1, length(fb), s+=fb[b1]);</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(c1=1, length(fc), s2+=fc[c1]);</CMP>
+    </omtext><omtext class="program">
+      <CMP> if(s==s2&amp;&amp;b&gt;0,</CMP>
+    </omtext><omtext class="program">
+      <CMP> \\print(m&quot;,&quot;u&quot;,&quot;k&quot;,&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot; fa&quot; + &quot;fb&quot; = &quot;fc);</CMP>
+    </omtext><omtext class="program">
+      <CMP> ct++;</CMP>
+    </omtext><omtext class="program">
+      <CMP> if(a&lt;b,v[ct]=a,v[ct]=b)</CMP>
+    </omtext><omtext class="program">
+      <CMP> )</CMP>
+    </omtext><omtext class="program">
+      <CMP> )</CMP>
+    </omtext><omtext class="program">
+      <CMP> )</CMP>
+    </omtext><omtext class="program">
+      <CMP> );</CMP>
+    </omtext><omtext class="program">
+      <CMP> y=vecsort(v);</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(x=1,399,if(y[x]&gt;0&amp;&amp;y[x]&lt;&gt;y[x+1],print1(y[x]&quot;,&quot;)));</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><omtext class="program">
+      <CMP> ifactord(n) = /* The vector of the distinct integer factors of n. */</CMP>
+    </omtext><omtext class="program">
+      <CMP> {</CMP>
+    </omtext><omtext class="program">
+      <CMP> local(f,j,k,flist);</CMP>
+    </omtext><omtext class="program">
+      <CMP> flist=[];</CMP>
+    </omtext><omtext class="program">
+      <CMP> f=Vec(factor(n));</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(j=1,length(f[1]),</CMP>
+    </omtext><omtext class="program">
+      <CMP> flist = concat(flist,f[1][j])</CMP>
+    </omtext><omtext class="program">
+      <CMP> );</CMP>
+    </omtext><omtext class="program">
+      <CMP> return(flist)</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Cino Hilliard_, Feb 20 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Based on suggestions from _Robert G. Wilson v_, corrected sequence, definition, comments, formula and Pari program. - _Cino Hilliard_, Apr 03 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

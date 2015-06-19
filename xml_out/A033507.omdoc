@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A033507.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A033507">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,71,823,10012,120465,1453535,17525619,211351945,2548684656,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 30734932553,370635224561,4469527322891,53898461609719,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 649966808093412,7838012982224913,94519361817920403,1139818186429110279,13745178487929574337,165754445655292452448</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of matchings in graph P_{4} X P_{n}.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Hosoya and A. Motoyama, An effective algorithm for obtaining polynomials for dimer statistics. Application of operator technique on the topological index to two- and three-dimensional rectangular and torus lattices, J. Math. Phys., 26(1985), 157-167.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A033507/b033507.txt&quot;&gt;Table of n, a(n) for n = 0..500&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Per Hakan Lundow, &lt;a href=&quot;http://www.theophys.kth.se/~phl/Text/1factors.pdf&quot;&gt;Computation of matching polynomials and the number of 1-factors in polygraphs&lt;/a&gt;, Research report, No 12, 1996, Department of Math., Umea University, Sweden.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Per Hakan Lundow, &lt;a href=&quot;http://www.theophys.kth.se/~phl/Text/1factors2.ps.gz&quot;&gt;Enumeration of matchings in polygraphs&lt;/a&gt;, 1998.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_09&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (9, 41, -41, -111, 91, 29, -23, -1, 1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      From _Sergey Perepechko_ ,Apr 24 2013 :(Start )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A033507"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>9</OMI><OMA>
+      <OMS name="a" cd="A033507"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>41</OMI><OMA>
+      <OMS name="a" cd="A033507"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>41</OMI><OMA>
+      <OMS name="a" cd="A033507"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>111</OMI><OMA>
+      <OMS name="a" cd="A033507"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>91</OMI><OMA>
+      <OMS name="a" cd="A033507"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>29</OMI><OMA>
+      <OMS name="a" cd="A033507"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>23</OMI><OMA>
+      <OMS name="a" cd="A033507"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>7</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="a" cd="A033507"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>8</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A033507"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>9</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>18</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>12</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>9</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>41</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>41</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>111</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>91</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>29</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>23</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>7</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>8</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>9</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.(End )
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(1) = 5: the graph is</CMP>
+    </assertion><assertion class="example">
+      <CMP> . o-o-o-o</CMP>
+    </assertion><assertion class="example">
+      <CMP> and the five matchings are</CMP>
+    </assertion><assertion class="example">
+      <CMP> . o o o o</CMP>
+    </assertion><assertion class="example">
+      <CMP> . o-o o o</CMP>
+    </assertion><assertion class="example">
+      <CMP> . o o-o o</CMP>
+    </assertion><assertion class="example">
+      <CMP> . o o o-o</CMP>
+    </assertion><assertion class="example">
+      <CMP> . o-o o-o</CMP>
+    </assertion><omtext class="maple">
+      <CMP> a:=array(0..20,[1, 5, 71, 823, 10012, 120465, 1453535, 17525619, 211351945]):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for j from 9 to 20 do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   a[j]:=9*a[j-1]+41*a[j-2]-41*a[j-3]-111*a[j-4]+91*a[j-5]+</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         29*a[j-6]-23*a[j-7]-a[j-8]+a[j-9]</CMP>
+    </omtext><omtext class="maple">
+      <CMP> od:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> convert(a,list);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # _Sergey Perepechko_, Apr 24 2013</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> LinearRecurrence[{9,41,-41,-111,91,29,-23,-1,1},{1,5,71,823,10012,120465,1453535,17525619,211351945},30] (* _Harvey P. Dale_, Mar 27 2015 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column 4 of triangle A210662. Row sums of A100265.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> For perfect matchings see A005178.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A033508-A033511.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Per H. Lundow_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _N. J. A. Sloane_, Nov 15 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

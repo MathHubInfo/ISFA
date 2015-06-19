@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A129045.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A129045">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,0,1,1,3,7,16,44,134,433,1483,5196,18795,68845</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of n-node triangulations of the projective plane N_1 in which every node has degree &gt;= 5.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Ringel, Wie man die geschlossenen nichtorientierbaren Flaechen in moeglichst wenig Dreiecke zerlegen kann, Math. Ann. 130 (1955), 317-326.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Thom Sulanke, &lt;a href=&quot;http://hep.physics.indiana.edu/~tsulanke/graphs/surftri/&quot;&gt;Generating triangulations of surfaces (surftri)&lt;/a&gt;, (also subpages).</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 5,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, May 13 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

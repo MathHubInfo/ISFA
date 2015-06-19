@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A245651.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A245651">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,1,8,7,7,6,6,2,5,9,2,5,0,2,9,6,7,5,4,8,0,0,8,1,7,6,9,7,7,8,0,1,3,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8,1,9,7,2,1,2,4,1,8,6,7,8,7,8,7,0,1,7,0,1,9,7,5,4,9,6,8,1,7,8,9,5,7,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3,2,3,4,2,6,0,2,2,9,9,0,0,6,4,0,9,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of eta/xi = A086318/A086317, a coefficient associated with the asymptotics of the number of weakly binary trees.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Steven R. Finch, Mathematical Constants, Cambridge University Press, 2003, Section 5.6 Otter's Tree Enumeration Constants, p. 297.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A245651/b245651.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's MathWorld, &lt;a href=&quot;http://mathworld.wolfram.com/WeaklyBinaryTree.html&quot;&gt;Weakly binary tree&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 0.31877662592502967548008176977801318197212418678787017019754968178957323426...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> digits = 103; Clear[c, k]; c[0] = 2; c[n_] := c[n] = c[n-1]^2 + 2; k[n_] := k[n] = (Sqrt[c[n]^2^(-n)]*Sqrt[3 + Sum[1/Product[c[j], {j, 1, k}], {k, 1, n}]])/(c[n]^2^(-n)*(2*Sqrt[Pi])); k[5]; k[n = 10]; While[RealDigits[k[n], 10, digits] != RealDigits[k[n-5], 10, digits], n = n+5]; RealDigits[k[n], 10, digits] // First</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A086317, A086318.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jean-François Alcover_, Jul 28 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

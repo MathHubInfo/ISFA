@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A144946.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A144946">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,1,1,8,21,5,4,4,4,32,4,16,7,9,1,14,5,32,22,35,6,21,11,22,3,72,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 48,20,1,8,1,36,30,32,6,26,14,2,22,32,6,48,37,2,58,1,74</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least a(n) such that p(n)#*(p(n)#+a(n))-1 is prime with p(i)#=i-th primorial.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> As n increases sum(a(i)) for i=1 to n tends to e^gamma/2*n*(n+1)/2, notice that n*(n+1)/2 is triangular number. [From _Pierre CAMI_, Oct 16 2008]</CMP>
+    </omtext><omtext class="link">
+      <CMP> Pierre CAMI, &lt;a href=&quot;/A144946/b144946.txt&quot;&gt;Table of n, a(n) for n = 1..500&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 2*(2+1)-1=5 prime so a(1)=1 6*(6+1)-1=41 prime so a(2)=1 30*(31)-1=929 prime so a(3)=1.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A144947</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Pierre CAMI_, Sep 26 2008, Oct 16 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

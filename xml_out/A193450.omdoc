@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A193450.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A193450">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,0,2,2,2,3,6,6,0,4,12,16,8,4,5,20,35,30,15,0,6,30,66,78,54,18,6,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 42,112,168,154,84,28,0,8,56,176,320,368,272,128,32,8,9,72,261,558,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 774,720,450,180,45,0,10,90,370,910,1480,1660,1300,700,250,50,10</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle of a binomial convolution sum related to Jacobsthal numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sum is A193449(n) = A001045(n+1)*n.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A193450"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="k"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="j"/>
+    </OMA><OMV name="n"/><OMA>
+      <OMS name="C" cd="A193450"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMV name="j"/>
+    </OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> T(n,k) = n*C(n, k)*2F1( (1, -k); -n )(-1).</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle starts:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2, 2, 2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3, 6, 6, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4, 12, 16, 8, 4;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5, 20, 35, 30, 15, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) T(n,k) = sum(j=0, k, (-1)^j*n*binomial(n-j,k-j)); \\ _Michel Marcus_, Jun 04 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A193451.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Olivier Gérard_, Jul 26 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

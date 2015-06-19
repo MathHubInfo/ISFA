@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A249138.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A249138">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,1,1,2,4,1,1,6,5,7,1,1,6,18,8,10,1,1,24,26,46,12,14,1,1,24,96,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 58,86,16,18,1,1,120,154,326,118,156,21,23,1,1,120,600,444,756,198,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 246,26,28,1,1,720,1044,2556,1152,1692,324,384,32,34,1,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangular array read by rows: row n gives the coefficients of the polynomial p(n,x) defined in Comments.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The polynomial p(n,x) is the numerator of the rational function given by f(n,x) = x + floor((n+1)/2))/f(n-1,x), where f(0,x) = 1.  (Sum of numbers in row n) = A056952(n) for n &gt;= 0.  (Column 1) is essentially A091123 (repeated factorials).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Clark Kimberling, &lt;a href=&quot;/A249138/b249138.txt&quot;&gt;Rows 0..100, flattened&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> f(0,x) = 1/1, so that p(0,x) = 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> f(1,x) = (1 + x)/1, so that p(1,x) = 1 + x;</CMP>
+    </assertion><assertion class="example">
+      <CMP> f(2,x) = (2 + x + x^2)/(1 + x), so that p(2,x) = 2 + x + x^2).</CMP>
+    </assertion><assertion class="example">
+      <CMP> First 6 rows of the triangle of coefficients:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1    1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2    1    1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2    4    1    1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6    5    7    1    1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6    18   8    10   1   1</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> z = 15; p[x_, n_] := x + Floor[(n+1)/2]/p[x, n - 1]; p[x_, 1] = 1;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t = Table[Factor[p[x, n]], {n, 1, z}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u = Numerator[t]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> TableForm[Table[CoefficientList[u[[n]], x], {n, 1, z}]] (* A249138 array *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[CoefficientList[u, x]] (* A249138 sequence *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A056952, A091123, A249128.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Oct 22 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

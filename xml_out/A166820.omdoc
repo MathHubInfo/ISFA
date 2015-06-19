@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A166820.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A166820">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,51,586,3372,13564,43626,120168,295100,662914,1386373,2733412,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5128640</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX3 1..4 arrays containing at least one of each value, all equal values connected, rows considered as a single number in nondecreasing order, and columns considered as a single number in increasing order.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.4.4...1.1.4...1.1.1...1.2.2...1.1.2...1.2.3...2.4.4...1.4.4...1.1.2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.4.4...3.4.4...1.1.3...2.2.2...1.4.2...2.2.3...3.1.1...2.2.4...1.2.2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...3.2.4...3.4.4...2.3.3...3.2.4...1.4.2...2.4.3...3.1.3...3.2.4...2.2.2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...3.3.3...4.4.2...4.3.3...3.2.4...3.4.2...4.4.4...3.3.3...3.4.4...4.3.2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ------</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.1.1...1.1.2...2.2.3...1.2.2...1.2.2...1.1.4...1.4.4...1.1.4...1.1.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.2.3...3.3.3...2.3.3...1.2.4...2.2.4...1.1.4...2.3.4...1.2.4...1.1.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.2.3...3.3.4...2.3.3...2.2.3...2.2.4...1.3.2...3.3.4...3.2.3...1.4.4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...4.2.2...3.4.4...4.3.1...2.3.3...3.3.3...1.3.2...4.4.4...3.3.3...2.3.4</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Oct 21 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

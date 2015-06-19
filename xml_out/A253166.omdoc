@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A253166.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A253166">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 599921326,1107778868,2011251698,3589612642,4811175086,6153188512</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers n such that n^k+15, with k=1..7, are all prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> No term (yet) with n^8 + 15 prime.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Subsequence of A252783.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A253143, A253142, A086303, A121982.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zak Seidov_, Dec 28 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A056624.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A056624">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,1,1,1,1,2,1,1,2,1,1,1,2,1,2,1,2,1,1,1,1,2,1,1,2,1,1,1,1,1,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,4,1,1,1,1,1,1,1,2,2,1,1,2,2,2,1,2,1,1,1,1,1,1,1,2,1,1,2,2,1,1,1,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,1,2,1,1,2,2,1,1,1,2,2,1,1,2,1,1,1,1,1,2,1,2,1,1,1,1,1,2,2,4,1,1,1,1,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of unitary square divisors of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Unitary analogue of A046951.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A056624"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="r"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMV name="r"/>
+      </OMOBJ>is the number of prime factors of the largest unitary square divisor of <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Multiplicative with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A056624"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="e" cd="A056624"/>
+      <OMV name="mod"/>
+    </OMA><OMI>2</OMI></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Vladeta Jovovic_ ,Dec 13 2002 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> n=256, it has 5 square divisors of which only 2,{1,256} are unitary,3 divisors are not; n=124 has 2 (1 and 4) square divisors, both of them unitary a(124)=2. n=108 has 12 divisors,4 square divisors: {1,4,9,36} of which 1 and 4 are unitary, 9 and 36 are not.So a(108)=2. The largest ubutary square divisor of 108 is 4 with 1 prime divisor so a(108)=2^1=2.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A046952, A034444, A000188, A008833, A055229.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,mult</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Aug 08 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, Dec 13 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

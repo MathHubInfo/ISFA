@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A088487.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A088487">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,10,8,8,13,8,8,24,8,8,19,8,8,22,8,8,42,8,8,28,8,8,31,8,8,86,8,8,37,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8,8,40,8,8,78,8,8,46,8,8,49,8,8,96,8,8,55,8,8,58,8,8,167,8,8,64,8,8,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 67,8,8,132,8,8,73,8,8,76,8,8,150,8,8,82,8,8,85,8,8,328,8,8,91,8,8,94,8,8</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = Sum_{k=1..8} floor(A254864(n,k)/A254864(n-1,k)), where A254864(n,k) = n! / (n-floor(n/3^k))!.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A self-similar Sierpinski-type chaotic sequence with rate three at eight levels. [The original name of the sequence.]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A true fractal has an infinite number of levels, but usually only six are visible.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Antti Karttunen, &lt;a href=&quot;/A088487/b088487.txt&quot;&gt;Table of n, a(n) for n = 2..10000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A088487"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMI>8</OMI>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="floor" cd="A088487"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A254864"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMR xref="A254864"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A254864"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="floor" cd="A088487"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> p[n_, k_]=n!/Product[i, {i, 1, n-Floor[n/3^k]}] digits=200 f[n_]=Sum[Floor[p[n, k]/p[n-1, k]], {k, 1, 8}] at=Table[f[n], {n, 2, digits}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> A254864bi(n,k) = prod(i=(1+(n-(n\(3^k)))),n,i);</CMP>
+    </omtext><omtext class="program">
+      <CMP> A088487(n) = sum(k=1,8,(A254864bi(n,k)\A254864bi(n-1,k)));</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=2, 10000, write(&quot;b088487.txt&quot;, n, &quot; &quot;, A088487(n)));</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Scheme)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (define (A088487 n) (add (lambda (k) (floor-&gt;exact (/ (A254864bi n k) (A254864bi (- n 1) k)))) 1 8)) ;; Code for A254864bi given in A254864.</CMP>
+    </omtext><omtext class="program">
+      <CMP> ;; The following function implements sum_{i=lowlim..uplim} intfun(i)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (define (add intfun lowlim uplim) (let sumloop ((i lowlim) (res 0)) (cond ((&gt; i uplim) res) (else (sumloop (1+ i) (+ res (intfun i)))))))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A254864, A088488.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_, Nov 09 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Antti Karttunen_, Feb 09 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

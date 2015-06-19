@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A162180.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A162180">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,1,5,2,3,1,2,1,19,2,4,2,23,3,4,2,3,1,2,1,5,3,31,4,8,4,5,1,2,1,149,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,3,1,2,1,307,2,4,2,311,3,4,2,3,1,2,1,13,2,4,2,5,3,6,4,13,11,22,11,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 19,14,22,20,28,14,83,15,18,9,11,2,4,2,653,3,6,4,17,13,14,12,13,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Let a(n) = d[m(n),i] the i-th divisor of the integer m(n) and the index j  such that d[m(n),i] = d[m(n+1),j], m(n+1) is the first integer &gt; m(n). The sequence a(n), starting with m(1) = 1, i = 1 is given by the conditions: a(1) = 1 and a(n+1) is the first predecessor of a(n) if n even, or the first successor of a(n) if n odd.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture : the sequence is the union of an infinity subsets of the form : {1, 2}, {1, 5, 2, 3}, …{1, p,….,q}, ... where the number 1 is the first element of each subset.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The corresponding values of m(n) are : {1, 2, 4, 5, 10, 12, 15, 16, 18, 19, 38, 40, 44, 46, 69, 72, 76, 78, 81, 82, 84, 85, 90, 93, 124,...}.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1) = 1 ;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 2 because the divisors of 2 are {1, 2} and 2 is the first successor of 1 ;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3) = 1 because the divisors of 3 are {1, 3} and 1 is the first predecessor of 2 ;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4) = 5 because the divisors of 5 are {1, 5} and 5 is the first successor of 1 ;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(5) = 2 because the divisors of 10 are {1, 2, 5, 10} and 2 is the first predecessor of 5 ;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(6) = 3 because the divisors of 12 are {1, 2, 3, 4, 6, 12} and 3 is the first successor of 2.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory):T:=array(1..162):T[1]:=1:d:=1:i:=2:for n from 2 to 5000 do:x:=divisors(n):n1:=nops(x):j:=0:for m from 1 to n1 while(j=0) do:if x[m]= d then z:=x[m+((-1)^i)]:T[i]:=z:d:=z:i:=i+1:j:=1:else fi:od:od:print(T):</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Lagneau_, Sep 10 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A168103.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A168103">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 10,15,21,28,36,45,54,63,72,81,90,99,108,117,126,135,144,153,162,171,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 180,189,198,207,216,225,234,243,252,261,270,279,288,297,306</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = sum of natural numbers m such that n - 4 &lt;= m &lt;= n + 4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = a(n-1) + 9 for n &gt;= 5. Generalization: If a(n,k) = sum of natural numbers m such that n - k &lt;= m &lt;= n + k (k &gt;= 1) then a(n,k) = (k + n)*(k + n + 1)/2 = A000217(k+n) for 0 &lt;= n &lt;= k, a(n,k) = a(n-1,k) +2k + 1 = ((k + n - 1)*(k + n)/2) + 2k + 1 = A000217(k+n-1) +2k +1 for n &gt;= k + 1 (see, e.g., A008486). a(n) = (4 + n)*(5 + n)/2 = A000217(4+n) for 0 &lt;= n &lt;= 4, a(n) = a(n-1) + 9 for n &gt;= 5.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jaroslav Krizek_, Nov 18 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

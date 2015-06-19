@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A235412.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A235412">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3249,62070,1623115,48788187,1561049902,48150637857,1547599117420,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 44262446103282,1328377496969266,34333220990606470,936029519726732770,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 21814340948244417848</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+1)X(7+1) 0..1 arrays with 2X2 subblock sums lexicographically nondecreasing rowwise and nonincreasing columnwise</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 7 of A235413</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..1..0..1..0..1..0....0..1..0..0..0..1..0..0....0..0..1..1..1..1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..0..0..0..0..0..0....1..0..1..1..1..0..0..0....1..1..0..0..0..0..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..1..1..1..1..1..1....1..1..0..0..0..1..0..0....1..0..1..1..0..1..1..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Jan 10 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A234836.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A234836">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 204618,1558794,11986548,97872942,915484978,8821627260,87612133394,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 926179309422,9948121533382,107880679447788,1199073024950554,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13408866291240062,150045749563515090,1696279899803212684</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+2) X (3+2) 0..2 arrays with each 3 X 3 subblock having the sum of its 72 absolute element differences equal to 34.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 3 of A234838.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A234836/b234836.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=1:</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..0..0..0....0..2..0..2..1....0..2..0..2..2....1..1..0..2..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..0..1..2....0..1..2..2..2....0..0..1..0..0....1..2..2..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..2..2..1..0....0..1..0..2..1....2..0..1..0..1....0..2..2..0..2</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Dec 31 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

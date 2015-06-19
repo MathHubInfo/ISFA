@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A098021.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A098021">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,10,17,22,29,34,39,46,51,58,63,68,75,80,87,92,99,104,109,116,121,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 128,133,138,145,150,157,162,169,174,179,186,191,198,203,208,215,220,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 227,232,237,244,249,256,261,268,273,278,285,290,297,302,307,314,319,326</CMP>
+    </assertion><omtext class="name">
+      <CMP> Irrational rotation of the square root of 2 as an implicit sequence with an uneven Cantor cartoon.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture: A098021 is the sequence of positions of 0 in the zero-one sequence [nr+2r]-[nr]-[2r], where r=sqrt(2) and [ ]=floor; see A187967.  [From Clark Kimberling, Mar 17 2011 ]</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> f(n)= n*sqrt(2) (mod 1), g(x)=-1 if 0&lt;=x&lt;=1/3, g(x)=0 if 1/3&lt;x&lt;=2/3 &amp; g(x)=1 if 1/3&lt;x&lt;=1, a(n)=n If f[n+2]-2*f[n+1]+f[n]-g[f[n+1]]=0.</CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> f[n_] := Mod[Sqrt[2]*n, 1]; g[x_] := -1 /; 0 &lt;= x &lt;= 1/3; g[x_] := 0 /; 1/3 &lt; x &lt;= 2/3; g[x_] := 1 /; 2/3 &lt; x &lt;= 1; a = Delete[ Union[ Table[ If [Simplify[f[n + 2] - 2*f[n + 1] + f[n]] - g[f[n + 1]] == 0, n, 0], {n, 330}]], 1]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>  ListPlot[a, PlotJoined-&gt; True]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A187967.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_, Sep 09 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited and extended by _Robert G. Wilson v_, Sep 25 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

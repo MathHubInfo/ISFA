@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A110188.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A110188">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,18,27,30,42,50,66,70,78,98,102,105,110,114,125,130,138,154,170,174,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 182,186,190,195,222,230,231,238,242,246,255,258,266,282,285,286,290,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 310,318,322,338,343,354,357,366,370,374,402,406,410,418,426,429,430</CMP>
+    </assertion><omtext class="name">
+      <CMP> 3-almost primes p * q * r not relatively prime to p+q+r.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A110187 is the converse, 3-almost primes p * q * r which are relatively prime to p+q+r.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1) = 8 because 8 = 2^3, which has a prime factor 2 in common with prime 2 + 2 + 2 = 6.</CMP>
+    </assertion><assertion class="example">
+      <CMP> 30 is in the sequence, since 30 = 2 * 3 * 5, which is in fact divisible by 2 + 3 + 5 = 10.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A014612, A110187, A110227, A110228, A110229, A110230, A110231, A110232, A110289, A110290, A110296, A110297.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Vos Post_, Jul 15 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Ray Chandler_, Jul 20 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

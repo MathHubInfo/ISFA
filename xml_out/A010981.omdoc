@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A010981.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A010981">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,29,435,4495,35960,237336,1344904,6724520,30260340,124403620,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 472733756,1676056044,5586853480,17620076360,52860229080,151532656696,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 416714805914,1103068603890,2818953098830,6973199770790,16735679449896,39049918716424,88749815264600</CMP>
+    </assertion><omtext class="name">
+      <CMP> Binomial coefficient C(n,28).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A010981/b010981.txt&quot;&gt;Table of n, a(n) for n = 28..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A010981"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="C" cd="A010981"/>
+      <OMV name="n"/><OMI>28</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>28</OMI>
+    </OMA>
+      </OMOBJ>.G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>29</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[_Zerinvary Lajos_ ,Aug 18 2008 ]
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> seq(binomial(n,28),n=28..53); # _Zerinvary Lajos_, Aug 18 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Binomial[n,28],{n,28,60}] (* _Vladimir Joseph Stephan Orlovsky_, Apr 26 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Binomial(n, 28): n in [28..60]]; // _Vincenzo Librandi_, Jun 12 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A010980.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 28,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

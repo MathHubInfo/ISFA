@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A025216.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A025216">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,5,8,13,19,26,34,44,56,68,82,98,115,134,154,176,200,225,251,280,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 310,341,375,410,446,485,525,566,610,655,702,751,801,853,907,963,1020,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1079,1140,1203,1267,1334,1402,1472,1543,1617,1692,1769,1848,1929,2011,2095,2182,2270</CMP>
+    </assertion><omtext class="name">
+      <CMP> [ Sum (s(j) - s(i))^2 ], 1 &lt;= i &lt; j &lt;= n, where s(k) = 1 + 1/2 + ... + 1/k.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

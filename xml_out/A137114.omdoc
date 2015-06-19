@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A137114.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A137114">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,25,925,2585,2925,22925,25665,25865,28685,28686,228685,256565,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 258565,828665,925525,925665,926565,962585,2286685,2299686,2925525,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2926925,9266565,22866685,22866925,22925865,22955585,22955665,25662585,28686685,29266925,29296585,29825865,29882585,29926565,82882585,92566565,92895565,96259685</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n and the square of n use only the digits 2, 5, 6, 8 and 9.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Generated with DrScheme</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jonathan Wellons, &lt;a href=&quot;/A137114/b137114.txt&quot;&gt;Table of n, a(n) for n=1..230&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Wellons, &lt;a href=&quot;http://jonathanwellons.com/shared-digits/&quot;&gt;Tables of Shared Digits&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 829629856598686^2 = 688285698959956296296856926596</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Jonathan Wellons (wellons(AT)gmail.com), Jan 22 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

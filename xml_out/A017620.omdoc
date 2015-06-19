@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A017620.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A017620">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4096,160000,1048576,3748096,9834496,21381376,40960000,71639296,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 116985856,181063936,268435456,384160000,533794816,723394816,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 959512576,1249198336,1600000000,2019963136,2517630976</CMP>
+    </assertion><omtext class="name">
+      <CMP> (12n+8)^4.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

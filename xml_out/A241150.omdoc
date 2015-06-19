@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A241150.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A241150">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,1,3,1,1,2,3,2,4,2,4,1,2,6,5,1,1,4,5,8,3,2,3,8,10,4,5,4,10,13,5,9,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,2,13,17,8,14,1,1,6,12,22,10,22,3,2,2,19,27,11,32,5,5,4,21,33,15,43,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9,10,4,20,44,21,57,10,19,1,5,28,50,20,77,20</CMP>
+    </assertion><omtext class="name">
+      <CMP> Irregular triangle read by rows T(n,k) = number of partitions of degree k in the partition graph G(n), for n &gt;= 2; G(n) is defined in Comments.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The partition graph G(n) of n has the partitions of n as nodes, and nodes p and q have an edge if one of them can be obtained from the other by a substitution x -&gt; x-1,1 for some part x.  G(n) is nonplanar for n &gt;= 8. Column 1: divisors of n, A000005(n), for n &gt;= 2. A000041(n) = sum of numbers in row n, for n &gt;= 2 (counting the top row as row 2). Number of numbers in row n (i.e., maximal degree in G(n)): A241151(n), n &gt;= 2. Last term in row n (the number of partitions having maximal degree): A241153(n), n &gt;= 2. Maximal number in row n: A241152(n), n &gt;= 2. Let u(n,k) be the array at A029205 (where n &gt;= 0, k=0..n). Then u(n,k) is the number of edges in G(n+2) between partitions of n+2 that having length k+1 and those having length k+2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Clark Kimberling, &lt;a href=&quot;/A241150/b241150.txt&quot;&gt;Table of n, a(n) for n = 1..500&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> The first 12 rows:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2 ... 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3 ... 1 ... 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2 ... 3 ... 2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4 ... 2 ... 4 ... 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2 ... 6 ... 5 ... 1 ... 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4 ... 5 ... 8 ... 3 ... 2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3 ... 8 ... 10 .. 4 ... 5</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4 ... 10 .. 13 .. 5 ... 9 ... 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2 ... 13 .. 17 .. 8 ... 14 .. 1 ... 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6 ... 12 .. 22 .. 10 .. 22 .. 3 ... 2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2 ... 19 .. 27 .. 11 .. 32 .. 5 ... 5</CMP>
+    </assertion><assertion class="example">
+      <CMP> The graph can is represented by these transformations:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6 -&gt; 51, 51 -&gt; 411, 42 -&gt; 321, 42 -&gt; 411, 411 -&gt; 3111, 33 -&gt; 321, 321 -&gt; 2211, 321 -&gt; 3111, 3111 -&gt; 21111, 222 -&gt; 2211, 2211 -&gt; 21111, 21111 -&gt; 111111.  These 4 partitions p have degree 1 (i.e., number of arrows to or from p): 6, 33, 222, 111111; these 2 have degree 2: 51, 42; these 4 have degree 3: 411, 3111, 2211, 21111; the remaining partition, 321, has degree 4. So, row 6 of the array is 4 2 4 1.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> z = 25; spawn[part_] := Map[Reverse[Sort[Flatten[ReplacePart[part, {# - 1, 1}, Position[part, #, 1, 1][[1]][[1]]]]]] &amp;, DeleteCases[DeleteDuplicates[part], 1]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     unspawn[part_] := If[Length[Cases[part, 1]] &gt; 0, Map[ReplacePart[Most[part], Position[Most[part], #, 1, 1][[1]][[1]] -&gt; # + 1] &amp;, DeleteDuplicates[Most[part]]], {}]; m = Map[Last[Transpose[Tally[Map[#[[2]] &amp;, Tally[Flatten[{Map[unspawn, #], Map[spawn, #]}, 2] &amp;[IntegerPartitions[#]]]]]]] &amp;, 1 + Range[z]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     Column[m]  (* A241150 as an array *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     Flatten[m] (* A241150 as a sequence *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     Table[Length[m[[n]]], {n, 1, z}] (* A241151 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     Table[Max[m[[n]]], {n, 1, z}]    (* A241152 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     Table[Last[m[[n]]], {n, 1, z}]   (* A241153 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     (* Next, show the graph G(k) *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     k = 8; graph = Flatten[Table[part = IntegerPartitions[k][[n]]; Map[FromDigits[part] -&gt; FromDigits[#] &amp;, spawn[part]], {n, 1, PartitionsP[k]}]]; Graph[graph, VertexLabels -&gt; &quot;Name&quot;, ImageSize -&gt; 500, ImagePadding -&gt; 20] (* _Peter J. C. Moses_, Apr 15 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A241151, A241152, A241153, A029205, A000041.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,tabf</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_ and _Peter J. C. Moses_, Apr 17 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

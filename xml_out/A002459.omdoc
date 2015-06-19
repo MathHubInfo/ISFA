@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A002459.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A002459">
+          <assertion class="***** TTTT *****">
+      <CMP> M1223 N0470</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,10,27,74,202,548,1490,4052,11013,29937,81377,221207,601302,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1634509,4443055,12077476,32829985,89241150,242582598,659407867,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1792456423,4872401723,13244561065,36002449669,97864804714,266024120301,723128532146,1965667148572</CMP>
+    </assertion><omtext class="name">
+      <CMP> Nearest integer to cosh(n).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> K. Hayashi, Sieben- und Mehrstellige Tafeln der Kreis- und Hyperbelfunktionen und deren Produkte Sowie der Gammafunktion. Springer-Verlag, Berlin, 1926.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. V. Lebedev and R. M. Fedorova, A Guide to Mathematical Tables. Pergamon, Oxford, 1960, p. 93.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A002459/b002459.txt&quot;&gt;Table of n, a(n) for n=0..150&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A002459"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A000495"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.[From <OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Oct 28 2008 ]
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> Digits := 50: [ seq( round(evalf(cosh(n))), n=0..35) ];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Round[Cosh[Range[0,40]]] (* _Harvey P. Dale_, Jan 08 2014 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Harvey P. Dale_, Jan 08 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

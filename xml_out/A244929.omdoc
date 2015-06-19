@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A244929.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A244929">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,3,4,5,3,7,5,8,5,3,1,2,3,4,1,1,4,6,7,5,9,0,3,8,6,2,7,7,4,3,9,3,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,0,4,8,8,2,6,7,8,3,7,7,2,5,0,9,9,3,5,4,0,1,6,3,0,0,5,4,0,1,8,4,4,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8,0,1,0,3,4,5,3,6,3,3,5,0,7,6,4,5,3,6,9,0,1,6,5,4,4,1,7,1,8,3,7,9,7,1,4,4</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of Ti_2(2+sqrt(3)), where Ti_2 is the inverse tangent integral function.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Steven R. Finch, Mathematical Constants, Cambridge University Press, 2003, Section 1.7.6 Inverse Tangent Integral, p. 57.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's MathWorld, &lt;a href=&quot;http://mathworld.wolfram.com/InverseTangentIntegral.html&quot;&gt;Inverse Tangent Integral&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's MathWorld, &lt;a href=&quot;http://mathworld.wolfram.com/Polylogarithm.html&quot;&gt;Polylogarithm&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2</OMI><OMI>3</OMI>
+    </OMA><OMV name="G"/></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMS name="Pi"/></OMA><OMI>12</OMI>
+    </OMA><OMA>
+      <OMS name="log" cd="A244929"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="Sqrt" cd="A244929"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMV name="G"/>
+      </OMOBJ>is Catalan's number .
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Also equals <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="i"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="polylog" cd="A244929"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMV name="i"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="sqrt" cd="A244929"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="polylog" cd="A244929"/>
+      <OMI>2</OMI><OMA><OMS name="times"/><OMV name="i"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="sqrt" cd="A244929"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA></OMA>
+      </OMOBJ>,with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMA>
+      <OMS name="sqrt" cd="A244929"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 2.3345375853123411467590386277439330048826783772509935401630054018441801...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> 2/3*Catalan + 5*Pi/12*Log[2 + Sqrt[3]] // RealDigits[#, 10, 105]&amp; // First</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A006752, A244928.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> cons,easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jean-François Alcover_, Jul 08 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A215357.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A215357">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,5,19,23,41,43,59,61,79,97,137,157,173,193,211,233,251,269,271,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 307,347,383,401,421,439,461,479,499,593,613,631,727,743,821,839,857,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 859,877,953,971,991,1009,1031,1049,1069,1087,1123,1163,1181,1201</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes congruent to {0, 2, 3, 4, 5} mod 19.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A215357/b215357.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Prime[Range[400]],MemberQ[{0,2,3,4,5},Mod[#,19]]&amp;]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(1500) | p mod 19 in [0, 2, 3, 4, 5]];</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A042989.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vincenzo Librandi_, Aug 09 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

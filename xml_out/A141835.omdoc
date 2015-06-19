@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A141835.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A141835">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,7,154,10787,1029567,105714126,10363989636,1027216680497,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 102184086890270,10205609904879424,1020424310227628614,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 102049428685193293045,10204479595989795520404,1020425244837350504933851,102041179796115463104759635,10204085511291024760949778376</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = Sum of terms in A062901 which are below 10^n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) rapidly approaches 10^(2n)/98.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Calculating these terms appears in several places on the Internet as a sample interview problem.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Wellons, &lt;a href=&quot;/A141835/b141835.txt&quot;&gt;Table of n, a(n) for n = 0..300&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Wellons, &lt;a href=&quot;http://wellons.wordpress.com/2008/07/08/divisible-by-7-both-ways/&quot;&gt;An Algorithm to Compute these Terms very Efficiently&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> The elements of A062901 less than 1000 are 0, 7, 70, 77, 161, 168, 252, 259, 343, 434, 525, 595, 616, 686, 700, 707, 770, 777, 861, 868, 952 and 959. Their sum is a(3) = 10787.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A062901</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> Jonathan Wellons (wellons(AT)gmail.com), Jul 09 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

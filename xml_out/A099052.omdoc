@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A099052.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A099052">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 828,18281,818,28182,8281828,828,353,747,66,2662,77,757,99,999,99,959,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 595,66,9669,696,676,77,2772,66,303,353,535,525,66,66,919,39193,99,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 181,66,33,595,323,232,434,94349,323,33,88,525,101,11,383,99</CMP>
+    </assertion><omtext class="name">
+      <CMP> All palindromes of length greater than 1 ending at the n-th decimal place of the decimal expansion of e. Multiple terms ending at the same position are ordered by the starting position of the palindrome.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Matthew Howells (mathmatt(AT)gmail.com), Nov 13 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

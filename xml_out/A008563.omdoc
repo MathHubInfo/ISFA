@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A008563.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A008563">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,80,38400,77875200,449711308800,5935407169536000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 155268186793574400000,7282309435397819596800000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 568366274740400734548787200000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Coefficients of series arising in solution of Riccati equation y' = y^2 + x^2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. N. Watson, Bessel Functions, p. 2.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A008563"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="b" cd="A008563"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="b" cd="A008563"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A008563"/>
+      <OMI>3</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A008563"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="Sum" cd="A008563"/>
+      <OMA>
+      <OMS name="C" cd="A008563"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="b" cd="A008563"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="b" cd="A008563"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="r"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A008563"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="b" cd="A008563"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, tony(AT)mantis.co.uk (Tony Lezard)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

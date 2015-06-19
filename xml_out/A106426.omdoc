@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A106426.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A106426">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 61,6,63,60,612,64,648,640,6048,6400,6912,6144,62208,61440,602112,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 65536,663552,655360,6029312,6553600,60162048,6291456,63700992,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 62914560,616562688,67108864,679477248,603979776,6115295232,6039797760</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest number beginning with 6 and having exactly n prime divisors counted with multiplicity.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(4) = 60 = 2^2*3*5.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A077326-A077334, A106411-A106419, A106421-A106429.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ray Chandler_, May 02 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

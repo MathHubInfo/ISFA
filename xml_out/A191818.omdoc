@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A191818.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A191818">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,3,1,4,3,0,1,1,0,3,4,3,4,3,0,3,1,0,1,1,0,1,1,0,3,1,4,3,0,3,4,3,4,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,3,4,3,4,3,0,3,1,4,3,0,1,1,0,3,1,0,1,1,0,1,1,0,3,1,0,1,1,0,1,1,0,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,4,3,0,1,1,0,3,4,3,4,3,0,3,1,4,3,0,3,4,3,4,3,0,3,4,3,4,3,0,3,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> A sum-square avoiding sequence; fixed point of the map 0 -&gt; 03; 1 -&gt; 43; 3 -&gt; 1; 4 -&gt; 01</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A &quot;sum square&quot; means two consecutive blocks of the same length and same sum.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Michel Rigo, Formal Languages, Automata and Numeration Systems, 2 vols., Wiley, 2014. Mentions this sequence - see &quot;List of Sequences&quot; in Vol. 2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Cassaigne, J. D. Currie, L. Schaeffer and J. Shallit,</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;http://arxiv.org/abs/1106.5204&quot;&gt;Avoiding Three Consecutive Blocks of the Same Size and Same Sum&lt;/a&gt;, preprint, 2011.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Fixed point of the map <OMOBJ>
+        <OMA>
+      <OMS name="-&gt;" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="-&gt;" cd="arithmetic"/>
+      <OMI>1</OMI>
+      <OMI>43</OMI>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="-&gt;" cd="arithmetic"/>
+      <OMI>3</OMI>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="-&gt;" cd="arithmetic"/>
+      <OMI>4</OMI>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jeffrey Shallit_, Jun 28 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

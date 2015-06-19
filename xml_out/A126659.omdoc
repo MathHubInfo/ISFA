@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A126659.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A126659">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,5,3,3,5,3,3,7,17,3,11,3,0,7,109,5,11,5,3,17,5,103,5,7,3,21943,3,53,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 17,7,3,19,3,11,5,7,5,37,3,3,19,167,7,13,3,89,43</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least number k&gt;0 such that ((2n-1)^k + 1)/(2n) is prime, or 0 if no such prime exists.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> All terms are odd primes.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Dubner and T. Granlund, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/index.html&quot;&gt;Primes of the Form (b^n+1)/(b+1)&lt;/a&gt;, J. Integer Sequences, 3 (2000), #P00.2.7.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Repunit.html&quot;&gt;Repunit&lt;/a&gt;.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A126659"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A084742"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A084741, A084742, A125954, A125958.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> hard,more,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alexander Adamchuk_, Feb 09 2007, Feb 10 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

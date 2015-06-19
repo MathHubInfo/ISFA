@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A077475.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A077475">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,11,14,25,28,30,37,39,41,43,46,48,51,54,57,60,64,66,71,76,78,80,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 82,84,90,95,101,103,106,110,113,115,117,127,133,135,140,146,152,157,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 160,162,165,167,170,173,179,181,185,189,196,200,203,206,209,212,215,220</CMP>
+    </assertion><omtext class="name">
+      <CMP> Greedy powers of (8/13): sum_{n=1..inf} (8/13)^a(n) = 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The n-th greedy power of x, when 0.5 &lt; x &lt; 1, is the smallest integer exponent a(n) that does not cause the power series sum_{k=1..n} x^a(k) to exceed unity.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A heuristic argument suggests that the limit of a(n)/n is m - sum_{n=m..inf} log(1 + x^n)/log(x) = 3.8170308430..., where x=8/13 and m=floor(log(1-x)/log(x))=1. - _Paul D. Hanna_, Nov 16 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> By the time you reach sum_{n=1..59} (8/13)^a(n), the difference between that sum and 1 is only 1.6*10^-47.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A077475"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="floor" cd="A077475"/>
+      <OMV name="g_k"/>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="g_1"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="g_" cd="A077475"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="log_x" cd="A077475"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="frac" cd="A077475"/>
+      <OMV name="g_n"/>
+    </OMA>
+    </OMA><OMV name="x"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>at <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>8</OMI><OMI>13</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="frac" cd="A077475"/>
+      <OMV name="y"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="y"/><OMA>
+      <OMS name="floor" cd="A077475"/>
+      <OMV name="y"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="a" cd="A077475"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>seems to be asymptotic to <OMOBJ>
+        <OMA><OMS name="times"/><OMV name="c"/><OMV name="n"/></OMA>
+      </OMOBJ>with <OMOBJ>
+        <OMV name="c"/>
+      </OMOBJ>around <OMOBJ>
+        <OMF dec="3.7"/>
+      </OMOBJ>...-_Benoit Cloitre_ 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(3)=11 since (8/13) +(8/13)^2 +(8/13)^11 &lt; 1 and (8/13)+(8/13)^2+(8/13)^10 &gt;1.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> s = 0; a = {}; Do[ If[s + (8/13)^n &lt; 1, s = s + (8/13)^n; a = Append[a, n]], {n, 1, 250}]; a</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> heuristiclimit[x_] := (m=Floor[Log[x, 1-x]])+1/24+Log[x, Product[1+x^n, {n, 1, m-1}]/DedekindEta[I Log[x]/-Pi]*DedekindEta[ -I Log[x]/2/Pi]]; N[heuristiclimit[8/13], 20]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A077468, A077469, A077470, A077471, A077472, A077473, A077474.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Nov 06 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited and extended by _Robert G. Wilson v_, Nov 08 2002. Also extended by _Benoit Cloitre_, Nov 06 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A239044.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A239044">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 90,6524,432705,28827920,1916936295,126785422189,8374355016629,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 552972642874139,36495962765384251,2408028908123414830,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 158867999243856672296,10480609337583170118054,691383558921685626557165</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX5 0..3 arrays with no element equal to one plus the sum of elements to its left or one plus the sum of elements above it, modulo 4</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 5 of A239047</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A239044/b239044.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..3..2..3..0..3....0..0..0..3..3....0..3..2..3..3....0..0..3..3..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..1..0..3....2..0..2..2..2....3..3..0..1..2....0..0..2..2..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Mar 09 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

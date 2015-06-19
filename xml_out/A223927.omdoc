@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A223927.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A223927">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 9,54,218,698,1915,4690,10511,21919,43045,80334,143496,246728,410255,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 662242,1041133,1598477,2402305,3541126,5128614,7309062,10263683,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 14217842,19449307,26297611,35174621,46576414,61096564,79440948</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX2 0..2 arrays with rows, columns and antidiagonals unimodal and diagonals nondecreasing</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 2 of A223933</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A223927/b223927.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A223927"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>10080</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>8</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>504</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>7</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>40</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>6</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>109</OMI><OMI>720</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>5</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>379</OMI><OMI>480</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>317</OMI><OMI>144</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>8027</OMI><OMI>2520</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>691</OMI><OMI>420</OMI>
+    </OMA><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1....0..0....1..1....1..0....0..0....0..0....1..2....0..0....2..1....0..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..2....1..0....1..2....0..2....1..2....0..2....2..2....0..2....0..2....0..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2....2..2....2..1....0..1....0..1....1..0....2..2....0..0....0..0....0..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Mar 29 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

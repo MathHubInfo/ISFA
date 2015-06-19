@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A147735.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A147735">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,6,24,120,624,4176,31564,271972,2654974,28246094,317407978,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4017408038,52647146188</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of permutations of 0..n-1 with all sums of 2 through 6 adjacent terms squared respectively unique.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Nov 11 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

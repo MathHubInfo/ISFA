@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A245652.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A245652">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,6,5,5,9,9,1,8,7,8,6,6,0,0,6,4,3,2,3,6,0,3,4,3,6,6,1,4,0,9,5,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4,4,7,3,4,3,8,2,2,8,7,5,0,3,4,3,8,3,3,2,6,1,6,7,2,6,3,8,1,5,6,8,4,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,4,7,2,4,7,9,4,4,7,9,4,8,7,4,8</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of a coefficient associated with the asymptotics of the average distance between a vertex and the root of a random rooted tree.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Steven R. Finch, Mathematical Constants, Cambridge University Press, 2003, Section 5.6 Otter's Tree Enumeration Constants, p. 304.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's MathWorld, &lt;a href=&quot;http://mathworld.wolfram.com/Tree.html&quot;&gt; Tree &lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Average distance for n vertices ~ (1/2)*(2*Pi/beta)^(1/3)*n^(1/2).</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 1.1365599187866006432360343661409534473438228750343833261672638156843...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> beta = 0.53494960614230701455037971105206839814311651405699009397707681023752321788064067239783; (* after A086308 and _Vaclav Kotesovec_'s computation *) RealDigits[(1/2)*(2*Pi/beta)^(1/3), 10, 85] // First</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A086308, A245653.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jean-François Alcover_, Jul 28 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

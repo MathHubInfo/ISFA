@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A008358.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A008358">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,61,853,5577,23673,76389,204205,476113,1000753,1939405,3520837,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6058009,9966633,15785589,24199197,36061345,52421473,74552413,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 103980085,142515049,192285913,255774597,335853453</CMP>
+    </assertion><omtext class="name">
+      <CMP> Crystal ball sequence for D_6 lattice.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A008358/b008358.txt&quot;&gt;Table of n, a(n) for n=0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Cor#crystal_ball&quot;&gt;Index entries for crystal ball sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. H. Conway and N. J. A. Sloane, Low-Dimensional Lattices VII: Coordination Sequences, Proc. Royal Soc. London, A453 (1997), 2369-2389 (&lt;a href=&quot;http://neilsloane.com/doc/ldl7.txt&quot;&gt;Abstract&lt;/a&gt;, &lt;a href=&quot;http://neilsloane.com/doc/ldl7.pdf&quot;&gt;pdf&lt;/a&gt;, &lt;a href=&quot;http://neilsloane.com/doc/ldl7.ps&quot;&gt;ps&lt;/a&gt;).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>54</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>447</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>852</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>447</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>54</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>7</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[Colin Barker ,Mar 16 2012 ]
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> 116/45*n^6+116/15*n^5+136/9*n^4+52/3*n^3+554/45*n^2+74/15*n+1;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_ and _J. H. Conway_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

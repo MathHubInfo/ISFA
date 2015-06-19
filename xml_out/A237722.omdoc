@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A237722.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A237722">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 81,2152,122940,15828110,4174594857,2309067655254,2784288129137988,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7531980120186764378</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+1)X(n+1) 0..2 arrays with the maximum plus the upper median minus the lower median of every 2X2 subblock differing from its horizontal and vertical neighbors by exactly one</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Diagonal of A237730</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..1..1....1..0..1..1....1..2..2..2....0..2..1..1....0..1..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..0..0....2..0..1..1....0..2..1..0....2..0..2..0....0..1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..1..0....1..1..1..2....0..2..1..0....1..2..0..1....2..0..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..2..2..1....1..0..0..2....2..1..1..1....2..2..1..0....0..0..0..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Feb 12 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

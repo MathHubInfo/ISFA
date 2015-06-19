@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A099126.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A099126">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,666,295240,503167995,2629770332904,35773664992355004,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1119582594247762626696,73241437035618231162682185,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9277639855710782695858431981840,2137918570337064383107929197622033920</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of orbits of the wreath product of S_n with S_n on n X n matrices over {0,1,2,3,4,5,6,7}.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A099121, A099122, A099123, A099124, A099125, A099127, A099128.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Sascha Kurz_, Oct 11 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

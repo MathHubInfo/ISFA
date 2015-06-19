@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A034121.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A034121">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,16,17,43,44,45,46,92,93,94,95,96,97,167,168,169,170,171,172,173,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 174,175,275,276,277,278,279,280,281,282,283,284,285,286,287,422,423,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,615,616,617</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal part of cube root of a(n) starts with digit 5.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A034131.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Patrick De Geest_, Sep 15 1998.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A010972.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A010972">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,20,210,1540,8855,42504,177100,657800,2220075,6906900,20030010,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 54627300,141120525,347373600,818809200,1855967520,4059928950,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8597496600,17672631900,35345263800,68923264410,131282408400,244662670200,446775310800,800472431850</CMP>
+    </assertion><omtext class="name">
+      <CMP> Binomial coefficient C(n,19).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In this sequence there are no primes - _Artur Jasinski_, Dec 02 2007</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A010972/b010972.txt&quot;&gt;Table of n, a(n) for n = 19..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A010972"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>18</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>7</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>8</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>9</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>10</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>11</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>12</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>13</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>14</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>15</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>16</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>17</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>18</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>19</OMI>
+    </OMA>
+    </OMA><OMV name="_Artur"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>Jasinski_ ,Dec 02 2007 ,<OMOBJ>
+        <OMV name="R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar ,Jul 07 2009 .
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Gf .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>19</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>20</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[From _Zerinvary Lajos_ ,Aug 04 2008 ,<OMOBJ>
+        <OMV name="R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar ,Jul 07 2009 ]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A010972"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>19</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A010972"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>19</OMI>
+    </OMA>
+      </OMOBJ>.-Vincenzo Librandi ,Mar 26 2011 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> (Maple) seq(binomial(n,19),n=19..39); [From _Zerinvary Lajos_, Aug 04 2008]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Binomial[n,19],{n,19,50}] (* _Vladimir Joseph Stephan Orlovsky_, Apr 22 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [ Binomial(n,19): n in [19..80]]; - Vincenzo Librandi, Mar 26 2011</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 19,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

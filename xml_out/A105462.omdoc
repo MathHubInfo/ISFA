@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A105462.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A105462">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 37,67,233,467,1307,4637,15601,54437,184279,616391,2009011,6568217</CMP>
+    </omtext><omtext class="name">
+      <CMP> The 3^n-th irregular prime.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> ip={ the list of irregular primes to 12 million }; Table[ ip[[3^n]], {n, 0, 11}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A038833, A105458, A105467.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> hard,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Apr 07 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

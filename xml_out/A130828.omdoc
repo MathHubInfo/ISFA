@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A130828.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A130828">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,11,19,29,37,43,89,97,113,139,269,311,337,359,367,433</CMP>
+    </omtext><omtext class="name">
+      <CMP> Primes p such that the sum of the digits of p^p is a prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Computed by Emeric Deutsch.</CMP>
+    </omtext><assertion class="example">
+      <CMP> For 5^5=625, 6+2+5=13 which is a prime.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> sd := proc (n) options operator, arrow: add(convert(n, base, 10)[j], j = 1 .. nops(convert(n, base, 10))) end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a := proc (n) if isprime(sd(ithprime(n)^ithprime(n))) = true then ithprime(n) else end if end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n = 1 .. 90); - _Emeric Deutsch_, Jul 19 2007</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A051674, A066588.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,less</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _J. M. Bergot_, Jul 17 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

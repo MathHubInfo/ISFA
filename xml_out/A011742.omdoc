@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A011742.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A011742">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,1,1,0,1,1,1,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,1,0,1,1,1,0,1,1,1,0,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> A binary m-sequence: expansion of reciprocal of x^29+x^2+1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. W. Golomb, Shift-Register Sequences, Holden-Day, San Francisco, 1967.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. D. Lueke, Korrelationssignale, Springer 1992, pp. 43-48.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. J. MacWilliams and N. J. A. Sloane, The Theory of Error-Correcting Codes, Elsevier/North Holland, 1978, p. 408.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

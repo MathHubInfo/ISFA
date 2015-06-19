@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A131987.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A131987">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,1,3,4,2,5,1,6,3,7,8,4,9,2,10,5,11,1,12,6,13,3,14,7,15,16,8,17,4,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 18,9,19,2,20,10,21,5,22,11,23,1,24,12,25,6,26,13,27,3,28,14,29,7,30,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 15,31,32,16,33,8,34,17,35,4,36,18,37,9,38,19,39,2,40,20,41,10,42,21,43</CMP>
+    </assertion><omtext class="name">
+      <CMP> Representation of a dense para-sequence.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A fractal sequence. The para-sequence may be regarded as a sort of &quot;limit&quot; of the concatenated segments. The para-sequence (itself not a sequence) is dense in the sense that every pair of terms i and j are separated by another term (and hence separated by infinitely many terms).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The para-sequence accounts for positions of dyadic rational numbers in the following way: Label 1/2 as 1; label 1/4, 3/4 as 2 and 3; label 1/8, 3/8, 5/8, 7/8 as 4,5,6,7, etc. Then, for example, the ordering 1/8 &lt; 1/4 &lt; 3/8 &lt; 1/2 &lt; 5/8 &lt; 3/4 &lt; 7/8 matches the labels 4,2,5,1,6,3,7, which is the 3rd segment of A131987. The n-th segment consists of labels for rationals having denominators 2, 4, 8, ..., 2^n.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. Kimberling, Proper self-containing sequences, fractal sequences and para-sequences, preprint, 2007.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Start with <OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>and isolate it using <OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>like this :<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>.Then isolate those using <OMOBJ>
+        <OMI>4</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>5</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>6</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>7</OMI>
+      </OMOBJ>,like this :<OMOBJ>
+        <OMI>4</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>5</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>6</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>7</OMI>
+      </OMOBJ>.Continue and concatenate .
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> The next segment, to be concatenated after 4,2,5,1,6,3,7, is</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8,4,9,2,10,5,11,1,12,6,13,3,14,7,15.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Flatten@NestList[Riffle[Range[Length[#] + 1, 2 Length[#] + 1], #] &amp;, {1}, 4] (* _Birkas Gyorgy_, Mar 11 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A133108.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Aug 05 2007, Sep 12 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

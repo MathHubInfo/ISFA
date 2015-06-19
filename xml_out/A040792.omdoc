@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A040792.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A040792">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 28,1,1,1,7,1,1,10,1,13,2,2,2,1,1,1,1,2,2,2,13,1,10,1,1,7,1,1,1,56,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,1,7,1,1,10,1,13,2,2,2,1,1,1,1,2,2,2,13,1,10,1,1,7,1,1,1,56,1,1,1,7,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,10,1,13,2,2,2,1,1,1,1,2,2,2,13,1,10,1,1,7,1,1,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Continued fraction for sqrt(821).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Con#confC&quot;&gt;Index entries for continued fractions for constants&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(numtheory): Digits := 300: convert(evalf(sqrt(821)),confrac);</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,cofr,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A114262.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A114262">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,7,11,13,17,31,41,37,37,41,47,43,47,67,73,61,83,83,79,83,89,97,97,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 107,103,107,151,137,127,131,139,151,191,157,179,167,173,223,199,181,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 191,193,197,211,227,233,227,241,257,277,307,251,313,277,283,271,293,281</CMP>
+    </assertion><omtext class="name">
+      <CMP> p is the smallest prime that is greater than prime(n) such that prime(n)+2*p is a prime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A114262/b114262.txt&quot;&gt;Table of n, a(n) for n = 2..10000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> n=2: prime[2]=3; 3+2*5=13 is prime, so a(2)=5;</CMP>
+    </assertion><assertion class="example">
+      <CMP> n=3: prime[3]=5; 5+2*7=19 is prime, so a(3)=7;</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> n=7: prime[7]=17; 17+2*19=55 is not prime</CMP>
+    </assertion><assertion class="example">
+      <CMP> 17+2*23=63 is not prime</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 17+2*31=79 is prime, so a(7)=31.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Table[p1 = Prime[n1]; n2 = 1; p2 = Prime[n1 + n2]; While[cp = p1 + 2* p2; ! PrimeQ[cp], n2++; p2 = Prime[n1 + n2]]; p2, {n1, 2, 201}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a114262 n = head [q | let (p:ps) = drop (n - 1) a000040_list,</CMP>
+    </omtext><omtext class="program">
+      <CMP>                       q &lt;- ps, a010051 (p + 2 * q) == 1]</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Oct 29 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A114227, A114230, A073703, A114235.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000040, A010051.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lei Zhou_, Nov 20 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited definition to conform to OEIS style. - _Reinhard Zumkeller_, Oct 31 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

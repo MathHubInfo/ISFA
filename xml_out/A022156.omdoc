@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A022156.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A022156">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,3,9,11,1,3,33,43,1,3,1,11,1,3,129,171,1,3,1,11,1,3,1,43,1,3,1,11,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3,513,683,1,3,1,11,1,3,1,43,1,3,1,11,1,3,1,171,1,3,1,11,1,3,1,43,1,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,11,1,3,2049,2731,1,3,1,11,1,3,1,43,1,3,1,11,1,3,1,171,1,3,1,11,1,3,1,43,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Difference sequence of A020991.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Brillhart and P. Morton, A case study in mathematical research: the Golay-Rudin-Shapiro sequence, Amer. Math. Monthly, 103 (1996) 854-869.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

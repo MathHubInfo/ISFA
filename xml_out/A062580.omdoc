@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A062580.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A062580">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,11,83,461,659,1129,3797,83869</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers n such that 14^n - 13^n is prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Terms greater than 1000 may correspond to (unproven) strong pseudo-primes.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000043, A057468, A059801, A059802, A062572-A062666.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Mike Oakes_, May 18 2001, May 19 2001</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> New term 83869 found by Jean-Louis Charton corresponding to a probable prime with 96125 digits. _Jean-Louis Charton_, Sep 02 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _M. F. Hasler_, Sep 16 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

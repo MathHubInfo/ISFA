@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A217754.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A217754">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,1,1,2,2,4,3,4,4,4,4,5</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of different kinds of polygonal regions with finite area in the exterior of a regular n-gon with all diagonals drawn.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(7) = 1 since the 35 exterior regions of the regular heptagon built by all diagonals consist of one kind of polygon (with finite area), i. e. 1 triangle (7 times), and three different regions with infinite area (two 7 times, one 14 times).</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(8) = 1 since the 64 exterior regions of the regular octagon built by all diagonals consist of one kind of polygon (with finite area), i. e. 2 triangles (one 8 times, one 16 times), and three different regions with infinite area (one 8 times, two 16 times).</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(9) = 2 since the 117 exterior regions of the regular 9-gon (nonagon) built by all diagonals consist of two different kinds of polygons (with finite area), i. e. 3 triangles (one 9 times, two 18 times) and 2 quadrilaterals (each 9 times), and four different regions with infinite area (two 9 times, two 18 times).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A187782, A217746, A217749, A217750, A217751, A217752, A217753.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Martin Renner_, Mar 23 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

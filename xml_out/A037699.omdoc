@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A037699.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A037699">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,10,83,664,5313,42506,340051,2720408,21763265,174106122,1392848979,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 11142791832,89142334657,713138677258,5705109418067,45640875344536,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 365127002756289,2921016022050314</CMP>
+    </assertion><omtext class="name">
+      <CMP> Base 8 digits are, in order, the first n terms of the periodic sequence with initial period 1,2,3,0.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

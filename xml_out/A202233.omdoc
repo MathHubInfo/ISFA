@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A202233.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A202233">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,6,24,119,708,4915,38992,347980,3450572,37637545,447857256,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5773243451,80146549212,1192100892680,18913413488544,318827489139059,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5690693361661052,107215038571876213,2126290615269312536,44277066284532913066,965913951460006237612</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of permutations avoiding the consecutive pattern 45231.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the number of permutations on [n] that avoid the consecutive pattern 45231. It is the same as the number of permutations which avoid 13254, 21435 or 53412.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ray Chandler, &lt;a href=&quot;/A202233/b202233.txt&quot;&gt;Table of n, a(n) for n = 1..40&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Baxter, B. Nakamura, and D. Zeilberger. &lt;a href=&quot;http://www.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/auto.html&quot;&gt;Automatic generation of theorems and proofs on enumerating consecutive Wilf-classes&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A177523, A202213-A202236.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ray Chandler_, Dec 15 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

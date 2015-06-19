@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A171490.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A171490">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,7,12,14,16,29,51,56,58,60,64,65,67,74,75,78,83,87,90,100,102,104,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 106,109,115,118,119,122,128,130,132,134,141,142,147,161,166,173,176,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 187,188,200,212,219,221,231,234,239,241,251,259,264,293,313,314,316</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers a(n) where smallest number of steps to reach 1 in &quot;3x+1&quot; (or Collatz) problem is a prime p(k).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Positions of primes in A033491. [From _R. J. Mathar_, Nov 01 2010]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, &quot;Collatz's Sequence&quot; in Unsolved Problems in Number Theory, 2nd ed. New York: Springer-Verlag, pp. 215-218, 1994</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. C. Lagarias, &quot;The 3x+1 Problem and its Generalizations.&quot; Amer. Math. Monthly 92, 3-23, 1985</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Clifford A. Pickover, Wonders of Numbers, Oxford University Press, pp. 116-118, 2001</CMP>
+    </omtext><assertion class="example">
+      <CMP> (1) 1st Collatz sequence with a(1)=1 step starts with 2=prime(1): 2-1</CMP>
+    </assertion><assertion class="example">
+      <CMP> (2) 1st Collatz sequence with a(3)=7 steps starts with 3=prime(2): 3-10-5-16-8-4-2-1</CMP>
+    </assertion><assertion class="example">
+      <CMP> (3) prime(6)=13 has Collatz sequence with 9 steps: 13-40-20-10-5-16-8-4-2-1, so has the smaller composite 12 &lt; 13: 12-6-3-10-5-16-8-4-2-1 =&gt; 9 no term of sequence</CMP>
+    </assertion><assertion class="example">
+      <CMP> (4) 1st Collatz sequence with a(5)=14 steps starts with 11=prime(5): 11-34-17-52-26-13-40-20-10-5-16-8-4-2-1</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A070905, A033491, A088975, A126727, A060565</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> Ulrich Krug (leuchtfeuer37(AT)gmx.de), Dec 10 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Terms &gt; 187 from _R. J. Mathar_, Nov 01 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

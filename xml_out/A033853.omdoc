@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A033853.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A033853">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,15,56,102,228,234,384,408,510,864,936,1092,1140,1170,1920,2040</CMP>
+    </omtext><omtext class="name">
+      <CMP> j(n)*d(n)=phi(n), j(n) = A033831.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Naohiro Nomoto_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

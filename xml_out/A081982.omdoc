@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A081982.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A081982">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,23,101,113,131,167,211,233,311,431,863,1013,1021,1031,1061,1103,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1201,1217,1223,1259,1301,1601,1619,1637,1721,1823,2003,2011,2111,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2687,3011,3023,3203,4111,4703,6011,6047,6101,6173,6263,6911,7013</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p such that p+1 is divisible by the digital product ( of nonzero digits) of p.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 167 is a member as 168 is divisible by 1*6*7 = 42.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A081981, A081983, A081984, A081986, A081987.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Apr 04 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Antonio G. Astudillo (afg_astudillo(AT)lycos.com), Apr 06 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

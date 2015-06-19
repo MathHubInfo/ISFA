@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A090839.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A090839">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 290,550,850,1060,2650,3035,3245,5015,8935,10615,11890,12925,13485,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 13905,14850,15215,15985,17560,17600,18105,19925,20135,21780</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that 6*n+1, 6*n+7, 6*n+13, 6*n+19 are consecutive primes.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 6*290+1=1741, 6*290+7=1747, 6*290+13=1753, 6*290+19=1759 and 1741,1747,1753,1759 are consecutive primes, so 290 is a term.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A033451, A090832, A090833, A090834, A090835, A090836, A090837, A090838.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Pierre CAMI_, Dec 09 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

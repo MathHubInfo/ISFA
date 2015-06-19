@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A022199.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A022199">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,9841,72636421,494894285941,3287582741506063,21658948312410865183,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 142299528422960399756323,934054234760012359481199283,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6129263888495201102915629695046,40216143252770054194345243936096486,263862583736385343242102717216527933566</CMP>
+    </assertion><omtext class="name">
+      <CMP> Gaussian binomial coefficients [ n,8 ] for q = 3.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. J. MacWilliams and N. J. A. Sloane, The Theory of Error-Correcting Codes, Elsevier-North Holland, 1978, p. 698.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [gaussian_binomial(n,8,3) for n in xrange(8,19)] # [From _Zerinvary Lajos_, May 25 2009]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

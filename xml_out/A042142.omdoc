@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A042142.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A042142">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 24,49,122,293,415,708,1123,7446,16015,23461,227164,2749429,24972025,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 27721454,80414933,510211052,590625985,1100837037,1691463022,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4483763081,10658989184,25801741449,1249142578736</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numerators of continued fraction convergents to sqrt(596).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A042142/b042142.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Numerator[Convergents[Sqrt[596], 30]] (* _Vincenzo Librandi_, Nov 18 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A042143.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cofr,frac,easy,less</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

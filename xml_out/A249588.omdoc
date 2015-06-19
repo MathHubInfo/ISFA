@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A249588.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A249588">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,5,49,856,22376,842536,42409480,2782192064,229357803456,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 23289083584704,2851295406197184,414855423241758720,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 70695451937596732416,13958230719814052097024,3159974451734082088897536,813380358295803762813321216,236172126115504055456155975680</CMP>
+    </assertion><omtext class="name">
+      <CMP> E.g.f.: Product_{n&gt;=1} 1/(1 - x^n/n^2).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Paul D. Hanna, &lt;a href=&quot;/A249588/b249588.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A249588"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="b" cd="A249588"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A249588"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A249588"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="divisible" cd="arithemtics">
+        <OMV name="d"/>
+        <OMV name="k"/>
+      </OMS>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          
+        <OMA>
+          <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="d"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMV name="d"/>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A249588"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>(after Vladeta Jovovic in <OMOBJ>
+        <OMR xref="A007841"/>
+      </OMOBJ>).
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> E.g.f.: A(x) = 1 + x + 5*x^2/2!^2 + 49*x^3/3!^2 + 856*x^4/4!^2 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> where</CMP>
+    </assertion><assertion class="example">
+      <CMP> A(x) = 1/((1-x)*(1-x^2/4)*(1-x^3/9)*(1-x^4/16)*(1-x^5/25)*...).</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) {a(n)=n!^2*polcoeff(prod(k=1, n, 1/(1-x^k/k^2 +x*O(x^n))),n)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=0,20,print1(a(n),&quot;, &quot;))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) /* Using logarithmic derivative: */</CMP>
+    </omtext><omtext class="program">
+      <CMP> {b(k) = sumdiv(k,d, d^(1-2*k/d))}</CMP>
+    </omtext><omtext class="program">
+      <CMP> {a(n) = if(n==0,1,sum(k=1,n, n!*(n-1)!/(n-k)!^2 * b(k) * a(n-k)))}</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=0,20,print1(a(n),&quot;, &quot;))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A249590, A249607, A007841, A249593, A249592.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Nov 01 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A004456.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A004456">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0,31,30,29,28,27,26,25,24,23,22,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 21,20,19,18,17,16,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,63,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 62,61,60,59,58,57,56,55,54</CMP>
+    </assertion><omtext class="name">
+      <CMP> Nimsum n + 15.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. R. Berlekamp, J. H. Conway and R. K. Guy, Winning Ways, Academic Press, NY, 2 vols., 1982, see p. 60.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. H. Conway, On Numbers and Games. Academic Press, NY, 1976, pp. 51-53.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ni#Nimsums&quot;&gt;Index entries for sequences related to Nim-sums&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A004456"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>8</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMV name="Mitchell"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>Harris ,Jan 10 2005 
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A006454.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A006454">
+          <assertion class="***** TTTT *****">
+      <CMP> M3004</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,3,15,120,528,4095,17955,139128,609960,4726275,20720703,160554240,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 703893960,5454117903,23911673955,185279454480,812293020528,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6294047334435,27594051024015,213812329916328,937385441796000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Solution to a Diophantine equation: each term is a triangular number and each term + 1 is a square.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Alternative definition: a(n) is triangular and a(n)/2 is the harmonic average of consecutive triangular numbers. See comments and formula section of A005563, of which this sequence is a subset. - _Raphie Frank_, Sep 28 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> As with the Sophie Germain triangular numbers (A124174), then 35 = (a(n) - a(n-6))/(a(n-2) - a(n-4)). - _Raphie Frank_, Sep 28 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sophie Germain triangular numbers of the second kind as defined in A217278. - _Raphie Frank_, Feb 02 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers m such that m+1 and 8m+1 are both squares. - _Bruno Berselli_, Jul 15 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Edward J. Barbeau, Pell's Equation. New York: Springer-Verlag (2003), p. 17, Exercise 1.2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. J. Gottlieb, How four dogs meet in a field, etc., Technology Review, Jul/August 1973 pp. 73-74.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Jeffrey Shallit, personal communication.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A006454/b006454.txt&quot;&gt;Table of n, a(n) for n = 0..60&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A006454"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A006451"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A006451"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A006454"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A006452"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Joerg Arndt_ ,Mar 04 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A006454"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>35</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A006454"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A006454"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="a" cd="A006454"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Raphie Frank_ ,Sep 28 2012 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      From _Raphie Frank_ ,Feb 01 2013 :(Start )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A006454"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A006454"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>,and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A006454"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMI>3</OMI><OMV name="y"/></OMA><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMI>4</OMI><OMV name="y"/></OMA><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMI>4</OMI><OMV name="y"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sqrt" cd="A006454"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="a" cd="A006454"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A006451"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A216134"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A216134"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="y"/>
+      <OMA>
+      <OMS name="sqrt" cd="A006454"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A006454"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A006452"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A216134"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A216134"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Note that <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A216134"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMV name="y"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A216134"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMI>3</OMI><OMV name="y"/></OMA><OMI>1</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMI>4</OMI><OMV name="y"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMI>7</OMI><OMV name="y"/></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMR xref="A216134"/>
+      <OMV name="gives"/>
+    </OMA>
+      </OMOBJ>the indices of the Sophie Germain triangular numbers .(End )
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> From _Raphie Frank_, Sep 28 2012: (Start)</CMP>
+    </assertion><assertion class="example">
+      <CMP> 35*(528 - 15) + 0 = 17955 = a(6),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 35*(4095 - 120) + 3 = 139128 = a(7),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 35*(17955 - 528) + 15 = 609960 = a(8),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 35*(139128 - 4095) + 120 = 4726275 = a(9). (End)</CMP>
+    </assertion><assertion class="example">
+      <CMP> From _Raphie Frank_, Feb 02 2013: (Start)</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(7) = 139128 and a(9) = 4726275.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(9) = (2*(sqrt(8*a(7) + 1) - 1)/2 + 3*sqrt(a(7) + 1) + 1)^2 - 1 = (2*(sqrt(8*139128 + 1) - 1)/2 + 3*sqrt(139128 + 1) + 1)^2 - 1 = 4726275.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(9) = 1/2*((3*(sqrt(8*a(7) + 1) - 1)/2 + 4*sqrt(a(7) + 1) + 1)^2 + (3*(sqrt(8*a(7) + 1) - 1)/2 + 4*sqrt(a(7) + 1) + 1)) = 1/2*((3*(sqrt(8*139128 + 1) - 1)/2 + 4*sqrt(139128 + 1) + 1)^2 + (3*(sqrt(8*139128 + 1) - 1)/2 + 4*sqrt(139128 + 1) + 1)) = 4726275. (end)</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A006454:=-3*z*(1+4*z+z**2)/(z-1)/(z**2-6*z+1)/(z**2+6*z+1); # Conjectured (correctly) by _Simon Plouffe_ in his 1992 dissertation.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Clear[a]; a[0] = a[1] = 1; a[2] = 2; a[3] = 4; a[n_] := 6a[n - 2] - a[n - 4]; Array[a, 40]^2 - 1 (* _Vladimir Joseph Stephan Orlovsky_, Mar 03 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. sqrt(a(n) + 1) = A006452(n + 1) = A216162(2n + 2) and (sqrt(8a(n) + 1) - 1)/2 = A006451.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A217278, A124174, A216134. - _Raphie Frank_, Feb 02 2013</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Subsequence of A182334.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A245031.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Jeffrey Shallit_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Better description from _Harvey P. Dale_, Jan 28 2001</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Larry Reeves (larryr(AT)acm.org), Feb 07 2001</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Minor edits by _N. J. A. Sloane_, Oct 24 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

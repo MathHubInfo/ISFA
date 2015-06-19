@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A023752.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A023752">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20,21,24,25,26,27,28,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 29,30,31,32,36,37,38,39,40,41,42,43,48,49,50,51,52,53,54,60,61,62,63,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 64,65,72,73,74,75,76,84,85,86,87,96,97,98,108,109,120</CMP>
+    </assertion><omtext class="name">
+      <CMP> Plaindromes: numbers whose digits in base 11 are in nondecreasing order.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harvey P. Dale, &lt;a href=&quot;/A023752/b023752.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[0,250],And@@NonNegative/@Differences[IntegerDigits[#,11]]&amp;] (* _Harvey P. Dale_, Oct 20 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[0,120],LessEqual@@IntegerDigits[#,11]&amp;] (* _Ray Chandler_, Jan 06 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A023746-A023757. - Omar E. Pol, Oct 20 2011</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Olivier Gérard_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Change offset to 1 by _Ray Chandler_, Jan 06 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A252994.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A252994">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,26,52,78,104,130,156,182,208,234,260,286,312,338,364,390,416,442,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 468,494,520,546,572,598,624,650,676,702,728,754,780,806,832,858,884,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 910,936,962,988,1014,1040,1066,1092,1118,1144,1170,1196,1222,1248,1274,1300,1326,1352,1378</CMP>
+    </assertion><omtext class="name">
+      <CMP> Multiples of 26.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Richard A. Mollin, Codes: The Guide to Secrecy From Ancient to Modern Times. Chapman and Hall/CRC (2005): 12.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Anne L. Young, Mathematical Ciphers: From Caesar to RSA. American Mathematical Society (2006): 23.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A252994"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>26</OMI><OMV name="n"/></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> 26 Range[0, 51]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A008595, A244633.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alonso del Arte_, Dec 25 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

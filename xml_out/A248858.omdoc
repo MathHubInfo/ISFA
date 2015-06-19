@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A248858.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A248858">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,5,7,10,14,14,16,17,42,24,47,25,29,39,31,40,41,45,40,69,46,65,807,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 128,67,89,55,217,87,76,74,72,99,70,75,144,78,213,96,233,114,103,457,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 108,156,163,140,97,127,270,109,127,167,135,128,131,196,133,309,138,148,140,813,169,135,148,235,7235</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) is number of digits of the smallest term of the sequence A248857 which is of the form 4^n*(5^(2n-1)*10^m-1).</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1) = number of digits of 1996 = 4.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = number of digits of 19984 = 5.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3) = number of digits of 1999936 = 7 and</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(68)=7235, because smallest prime of the form 5^(2*68-1)*10^m -1 is 5^135*10^7099-1 and 4^68(5^135*10^7099-1) has 7235 digits.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A248857.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Farideh Firoozbakht_, Jan 06 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

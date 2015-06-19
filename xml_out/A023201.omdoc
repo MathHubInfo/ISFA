@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A023201.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A023201">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,7,11,13,17,23,31,37,41,47,53,61,67,73,83,97,101,103,107,131,151,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 157,167,173,191,193,223,227,233,251,257,263,271,277,307,311,331,347,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 353,367,373,383,433,443,457,461,503,541,557,563,571,587,593,601,607,613,641,647</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n and n + 6 are both prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also known as sexy primes. - _John W. Nicholson_, Mar 23 2015</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A023201/b023201.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/SexyPrimes.html&quot;&gt;Sexy Primes&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/TwinPrimes.html&quot;&gt;Twin Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A023201 := proc(n)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     option remember;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     if n = 1 then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         5;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     else</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         for a from procname(n-1)+2 by 2 do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             if isprime(a) and isprime(a+6) then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>                 return a;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         end do:</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> end proc: # _R. J. Mathar_, May 28 2013</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[10^2], PrimeQ[ # ]&amp;&amp;PrimeQ[ #+6] &amp;] (* _Vladimir Joseph Stephan Orlovsky_, Apr 29 2008 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [n: n in [0..40000] | IsPrime(n) and IsPrime(n+6)] // _Vincenzo Librandi_, Aug 04 2010</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a023201 n = a023201_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a023201_list = filter ((== 1) . a010051 . (+ 6)) a000040_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Feb 25 2013</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) is(n)=isprime(n+6)&amp;&amp;isprime(n) \\ _Charles R Greathouse IV_, Mar 20 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A031924 and A007529 together give A023201.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A046117, A098428, A000040, A010051, A006489 (subsequence).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

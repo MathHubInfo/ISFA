@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A177945.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A177945">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,7,13,37,79,163,349,757,1567,3163,6547,13099,26497,52999,106273,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 212557,426889,855427,1710853,3421903,6845869,13691767,27385087,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 54771007,109542907,219096259,438203677,876417229</CMP>
+    </assertion><omtext class="name">
+      <CMP> Record values in A177942.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From the construction of A177941, this is a subsequence of A023200.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A177941, A177942, A177943, A023200, A177929, A177930, A177931, A177932.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Shevelev_, May 15 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Sequence extended by _R. J. Mathar_, Jun 30 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

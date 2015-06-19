@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A201200.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A201200">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,30,256,2356,22384,215640,2090176,20315536,197702464,1925042400,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 18749072896,182629124416,1779030655744,17330352562560,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 168824779580416,1644626142474496,16021353180980224,156074394613317120,1520422660926324736</CMP>
+    </assertion><omtext class="name">
+      <CMP> Total number of round trips of length n on the closed Laguerre graph Lc_4 divided by 4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For the general array and triangle for the total number of round trips of length L on closed Laguerre graphs Lc_N see A201199. Here a(n)=w(4,L=n)/4, n&gt;=0, the fourth row of this array divided by 4. In the corresponding triangle a(n) = A201199(n+3,4)/4, n&gt;=0.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For a sketch of the closed Laguerre graph Lc_4 see Figure 4 of the given W. Lang link. The o.g.f. is also found there.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> By definition the number of length 0 round trips for a vertex is put to 1 in order to count vertices.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The average number of round trips of length n on a closed Laguerre graph Lc_N is in general a fraction. Therefore A201199 tabulates the total number of round trips.</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Lang, &lt;a href=&quot;http://www-itp.particle.uni-karlsruhe.de/~wl/EISpub/A201198.pdf&quot;&gt;Counting walks on Jacobi graphs: an application of orthogonal polynomials.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_04&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (16,-68,64,44).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A201200"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A201199"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMI>4</OMI>
+    </OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> O.g.f.: (8*x-1)*(2*x^2-4*x+1) ) / ( (22*x^2-12*x+1)*(2*x^2+4*x-1) ).</CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A201199, A201198 (open Laguerre graphs). A199579 (open L_4 graph).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,walk</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_, Dec 02 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

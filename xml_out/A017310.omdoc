@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A017310.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A017310">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 729,4826809,148035889,1291467969,6321363049,22164361129,62523502209,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 151334226289,326940373369,646990183449,1194052296529,2081951752609,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3462825991689,5534900853769,8550986578849</CMP>
+    </assertion><omtext class="name">
+      <CMP> (10*n+3)^6.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A017310/b017310.txt&quot;&gt;Table of n, a(n) for n = 0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [(10*n+3)^6: n in [0..20]]; // Vincenzo Librandi, Jul 31 2011</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

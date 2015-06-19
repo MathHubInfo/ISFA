@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A076544.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A076544">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,0,0,1,0,2,0,1,1,2,0,1,0,2,2,1,0,1,0,1,2,2,0,1,1,2,1,1,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,0,1,2,2,2,1,0,2,2,1,0,0,0,1,1,2,0,1,1,1,2,1,0,1,2,1,2,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,1,0,2,1,1,2,0,0,1,2,0,0,1,0,2,1,1,2,0,0,1,1,2,0,1,2,2,2,1,0,1,2,1,2,2,2,1,0,1,1,1</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> mu(n)+sqf(n): mu(n) is Moebius function; sqf(n)=1 if n is squarefree, sqf(n)=-1 otherwise.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> ms[n_]:=MoebiusMu[n]+If[SquareFreeQ[n],1,-1]; Array[ms,100] (* _Harvey P. Dale_, Feb 22 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Absolute values give A007423.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zak Seidov_, Oct 19 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

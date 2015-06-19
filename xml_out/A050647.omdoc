@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A050647.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A050647">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,11,10011,10000000010011,10000000000000000000000000010000000010011</CMP>
+    </omtext><omtext class="name">
+      <CMP> a(n+1)^3 is next smallest cube ending with a(n)^3, initial term is 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Frank Ellermann conjectures (Jun 11 2001) that if b(n) = 10^(3^n -1), i.e., 1, 100, 100000000, etc. then a(n) = concatenation b( n-2 ) || a( n-1 ) for n &gt; 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(6) is too large to include (contains 122 digits).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A050647"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="i"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>10</OMI>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="i"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.-_Max Alekseyev_ ,Jan 07 2015 
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A050646, A048564, A050641.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Patrick De Geest_, Jul 15 1999</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Ulrich Schimke (ulrschimke(AT)aol.com), Nov 06 2001, who remarks that a(6) = 10^121+a(5) = concat (10^80, a(5)) and a(7) = 10^364+a(6) = concat (10^242, a(6)), which supports Ellermann's conjecture</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

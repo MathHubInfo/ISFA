@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A135302.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A135302">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,0,1,1,0,1,1,1,0,1,4,1,1,0,1,13,4,1,1,0,1,62,26,4,1,1,0,1,311,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 168,26,4,1,1,0,1,1822,1416,243,26,4,1,1,0,1,11593,13897,2451,243,26,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4,1,1,0,1,80964,153126,29922,2992,243,26,4,1,1,0,1,608833,1893180,420841</CMP>
+    </assertion><omtext class="name">
+      <CMP> Square array of numbers A(n,k) (n&gt;=0, k&gt;=0) of transitive reflexive early confluent binary relations R on n labeled elements where |{y : xRy}| &lt;= k for all x, read by antidiagonals.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> R is early confluent iff (xRy and xRz) implies (yRz or zRy) for all x, y, z.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. P. Heinz (1990). Analyse der Grenzen und Möglichkeiten schneller Tableauoptimierung. PhD Thesis, Albert-Ludwigs-Universität Freiburg, Freiburg i. Br., Germany.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A135302/b135302.txt&quot;&gt;Antidiagonals n = 0..44, flattened&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      E.g.f .of column <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="t_0" cd="A135302"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMV name="e"/>
+      </OMOBJ>.g.f .of column <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="t_k" cd="A135302"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="exp" cd="A135302"/>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="m"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="k"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="m"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="m"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="m"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="t_" cd="A135302"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMV name="m"/>
+    </OMA>
+    </OMA><OMV name="x"/></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A135302"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="k"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="i"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMR xref="A135313"/>
+      <OMV name="n"/><OMV name="i"/>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Table A(n,k) begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 1,   1,    1,    1,    1, ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 1,   1,    1,    1,    1, ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 1,   4,    4,    4,    4, ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 1,  13,   26,   26,   26, ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 1,  62,  168,  243,  243, ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 1, 311, 1416, 2451, 2992, ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> t:= proc(k) option remember; `if`(k&lt;0, 0,</CMP>
+    </omtext><omtext class="maple">
+      <CMP>        unapply(exp(add(x^m/m! *t(k-m)(x), m=1..k)), x))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A:= proc(n, k) option remember;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       coeff(series(t(k)(x), x, n+1), x, n) *n!</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(seq(A(d-i, i), i=0..d), d=0..15);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t[0, _] = 1; t[k_, x_] := t[k, x] = Exp[Sum[x^m/m!*t[k-m, x], {m, 1, k}]]; a[0, 0] = 1; a[_, 0] = 0; a[n_, k_] := SeriesCoefficient[t[k, x], {x, 0, n}]*n!; Table[a[n-k, k], {n, 0, 11}, {k, 0, n}] // Flatten (* _Jean-François Alcover_, Dec 06 2013, after Maple *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Columns k=0-10 give: A000007, A000012, A135312, A210911, A210912, A210913, A210914, A210915, A210916, A210917, A210918.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Diagonal gives: A052880.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A(n,n)-A(n,n-1) gives: A000670.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A135313.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,13</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alois P. Heinz_, Dec 04 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

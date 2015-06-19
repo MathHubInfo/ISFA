@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A058696.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A058696">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,5,11,22,42,77,135,231,385,627,1002,1575,2436,3718,5604,8349,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 12310,17977,26015,37338,53174,75175,105558,147273,204226,281589,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 386155,526823,715220,966467,1300156,1741630,2323520,3087735,4087968</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of ways to partition 2n into positive integers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A bisection of A000041, the other one is A058695.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Ramanujan theta functions: f(q) (see A121373), phi(q) (A000122), psi(q) (A010054), chi(q) (A000700). - _Michael Somos_, Feb 16 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = number of partitions of 3n-2 having n as a part, for n &gt;=1.  Also, a(n+1) is the number of partitions of 3n having n as a part, for n &gt;= 1.  - _Clark Kimberling_, Mar 02 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Somos, &lt;a href=&quot;http://cis.csuohio.edu/~somos/multiq.pdf&quot;&gt;Introduction to Ramanujan theta functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/RamanujanThetaFunctions.html&quot;&gt;Ramanujan Theta Functions&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Expansion of f(x^3, x^5) / f(-x)^2 in powers of x where f() is a Ramanujan theta function. - _Michael Somos_, Feb 16 2014</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Euler transform of period <OMOBJ>
+        <OMI>16</OMI>
+      </OMOBJ>sequence [<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,...].-_Michael Somos_ ,Apr 25 2003 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A058696"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000041"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Convolution of <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMR xref="A000041"/>
+      <OMV name="and"/>
+    </OMA><OMR xref="A035294"/></OMA>
+      </OMOBJ>.-_Michael Somos_ ,Feb 16 2014 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> G.f. = 1 + 2*x + 5*x^2 + 11*x^3 + 22*x^4 + 42*x^5 + 77*x^6 + 135*x^7 + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> G.f. = q^-1 + 2*q^47 + 5*q^95 + 11*q^143 + 22*q^191 + 42*q^239 + 77*q^287 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(combinat): with(numtheory): a := proc(n) c := 1: l := sort(convert(divisors(n), list)): for i from 1 to nops(l) do c := numbpart(l[i]*2) od: RETURN(c): end: for j from 0 to 61 do printf(`%d, `, a(j)) od: - _Zerinvary Lajos_, Apr 14 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> nn=100;Table[CoefficientList[Series[Product[1/(1-x^i),{i,1,nn}],{x,0,nn}],x][[2i-1]],{i,1,nn/2}] (* _Geoffrey Critzer_, Sep 28 2013 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (* also *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[PartitionsP[2 n], {n, 0, 40}] (* _Clark Kimberling_, Mar 02 2014 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (* also *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Count[IntegerPartitions[3 n - 2], p_ /; MemberQ[p, n]], {n, 20}]   (* _Clark Kimberling_, Mar 02 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;0, 0, polcoeff( 1 / eta(x + O(x^(2*n + 1))), 2*n))} /* _Michael Somos_, Apr 25 2003 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Mupad) combinat::partitions::count(2*i) $i=0..54 - _Zerinvary Lajos_, Apr 16 2007</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n) = numbpart(2*n); \\ _Michel Marcus_, Sep 28 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000041, A035294, A058695.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Dec 31 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

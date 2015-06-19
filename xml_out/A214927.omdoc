@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A214927.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A214927">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,2,2,2,2,4,4,6,6,10,10,16,16,26,26,42,42,68,68,110,110,178,178,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 288,288,466,466,754,754,1220,1220,1974,1974,3194,3194,5168,5168,8362,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8362,13530,13530,21892,21892,35422,35422,57314,57314,92736,92736,150050,150050,242786,242786,392836,392836,635622,635622</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of n-digit numbers N that do not end with 0 and are such that the reversal of N divides N but is different from N.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For the actual numbers, see A031877 and their reversals in A008919. See especially the comments in A008919.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. W. R. Ball and H. S. M. Coxeter. Mathematical Recreations and Essays, Macmillan, New York, 1939, page 13; Dover, New York, 13th ed. 1987, pp. 14-15.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Camous, Jouer Avec Les Maths, &quot;Cardinaux Reversibles&quot;, Section I, Problem 6, pp. 27, 37-38; Les Editions D'Organisation, Paris, 1984.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Heinrich Dörrie, Mathematische Miniaturen, Ferdinand Hirt, Breslau, Germany, 1943; see pages 337-339.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Gardner, Mathematical Magic Show, Vintage Books, 1978, pp. 203, 204, 211, 212.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. A. Grimm and D. W. Ballew, Reversible multiples, J. Rec. Math. 8 (1975-1976), 89-91.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Jonesco (proposer), E.-N. Barisien and [no initials given] Welsch (solvers), Problem 1622, L'Intermédiaire des mathématiciens, XV (1908), 132-133, 278-279.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Wells, The Penguin Dictionary of Curious and Interesting Numbers. Penguin Books, London, 1986, Entry 1089.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A214927/b214927.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. H. Hardy, &lt;a href=&quot;http://www.math.ualberta.ca/mss/misc/A%20Mathematician&amp;#39;s%20Apology.pdf&quot;&gt;A Mathematician's Apology&lt;/a&gt;, Cambridge Univ. Press, 1940, reprinted 2000, pp. 24-25.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. J. Kaczynski, &lt;a href=&quot;http://www.jstor.org/stable/2689056&quot;&gt;Note on a Problem of Alan Sutcliffe&lt;/a&gt;, Math. Mag., 41 (1968), 84-86.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Leonard F. Klosinski and Dennis C. Smolarski, &lt;a href=&quot;http://www.jstor.org/stable/2688542&quot;&gt;On the Reversing of Digits&lt;/a&gt;, Math. Mag., 42 (1969), 208-210.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Lara Pudwell, &lt;a href=&quot;http://faculty.valpo.edu/lpudwell/papers/mm005281.pdf&quot;&gt;Digit Reversal Without Apology&lt;/a&gt;, Mathematics Magazine, Vol. 80 (2007), pp. 129-132. Also arXiv:0511366, 2005.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;http://arxiv.org/abs/1307.0453&quot;&gt;2178 And All That&lt;/a&gt;, Fib. Quart., 52 (2014), 99-120.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alan Sutcliffe, &lt;a href=&quot;http://www.jstor.org/stable/2689015&quot;&gt;Integers That Are Multiplied When Their Digits Are Reversed&lt;/a&gt;, Mathematics Magazine, 39 (1966), 282-287.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Anne Ludington Young, &lt;a href=&quot;http://www.fq.math.ca/30-2.html&quot;&gt;k-Reverse multiples&lt;/a&gt;, Fib. Q., 30 (1992), 126-132.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Anne Ludington Young, &lt;a href=&quot;http://www.fq.math.ca/30-2.html&quot;&gt;Trees for k-reverse multiples&lt;/a&gt;, Fib. Q., 30 (1992), 166-174.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A214927"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="Fibonacci" cd="A214927"/>
+      <OMA>
+      <OMS name="floor" cd="A214927"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Empirical <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Dec 31 2013 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> The smallest examples of such numbers are 8712 and 9801 (so a(n)=0 for n &lt; 4, a(4) = 2); 87912 and 98901 (so a(5) = 2); and 879912 and 989901 (so a(6) = 2).</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Join[{0}, Table[2 Fibonacci[Floor[(n - 2) / 2]], {n, 2, 60}]] (* _Vincenzo Librandi_, Jun 18 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [0] cat [2*Fibonacci(Floor((n-2)/2)): n in [2..60]]; // _Vincenzo Librandi_, Jun 18 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000045, A001232, A008918, A008919, A031877, A222809, A222810, A222811, A222812.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> See also A222817-A222820.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Gregory A. Rosenthal_, Mar 10 2013</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Formula, more terms and additional references and links from _N. J. A. Sloane_, Mar 11 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

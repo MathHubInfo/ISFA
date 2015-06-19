@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A106503.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A106503">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,9,15,16,25,28,25,36,39,49,45,49,64,51,66,81,72,64,81,84,100,91,104,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 121,88,100,121,115,144,120,121,169,121,144,169,135,196,153,170,169,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 168,145,225,169,198,196,225,190,169,256,209,217,192,220,196,289,225,231</CMP>
+    </assertion><omtext class="name">
+      <CMP> Middle side of primitive integer-sided triangle having an angle twice another, sorted on perimeter (A106499).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Triple is (A106502, A106503, A106504).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A106499-A106506, A106410, A106420, A106430.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lekraj Beedassy_, May 04 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _Ray Chandler_, May 09 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A086422.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A086422">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,0,0,1,1,1,2,5,7,9,24,19,35,46,86,134,187,259,450,616,823</CMP>
+    </omtext><omtext class="name">
+      <CMP> Duplicate of A046880.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> dead</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 30,9</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

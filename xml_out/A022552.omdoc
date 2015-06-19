@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A022552.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A022552">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,15,22,23,39,55,70,71,78,87,94,103,111,115,119,120,139,167,211,254,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 263,267,279,286,302,311,312,331,335,342,391,403,435,454,455,470,475,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 499,518,559,590,595,598,622,643,659,691,695,715,727,771</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers that are not the sum of 2 squares and a nonnegative cube.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. Jagy and I. Kaplansky: Sums of Squares, Cubes and Higher Powers; Experimental Mathematics, vol. 4 (1995) pp. 169-173.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Su#ssq&quot;&gt;Index entries for sequences related to sums of squares&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Experimental Mathematics, &lt;a href=&quot;http://www.emis.de/journals/EM/&quot;&gt;Home Page&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Will Jagy_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

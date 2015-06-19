@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A105239.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A105239">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,1,4,3,4,1,2,1,3,4,3,2,1,2,3,4,3,1,2,1,4,3,4,1,2,1,2,1,2,3,4,3,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,2,4,3,4,1,2,1,4,3,4,2,1,2,3,4,3,2,1,2,1,2,1,4,3,4,1,2,1,3,4,3,2,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2,3,4,3,1,2,1,4,3,4,1,2,1,4,3,4,1,2,1,4,3,4,2,1,2,3,4,3,2,1,2,4,3,4,1,2,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Trajectory of 1 under the morphism 1 -&gt; 121, 2 -&gt; 434, 3 -&gt; 212, 4 -&gt; 343.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Dekking substitution for the Peano space filling set: characteristic polynomial=x^4-3*x^3-3*x+9.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This substitution is useful for computing the Peano set by bb = aa /. 1 -&gt; {1, 0} /. 2 -&gt; {0, 1} /. 3 -&gt; {-1, 0} /. 4 -&gt; {0, -1}; ListPlot[FoldList[Plus, {0, 0}, bb], PlotRange -&gt; All, PlotJoined -&gt; True, Axes -&gt; False];</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. M. Dekking, &quot;Recurrent Sets&quot;, Advances in Mathematics, vol. 44, no.1, 1982, page 85, section 4.1</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[ Nest[ Flatten[ # /. {1 -&gt; {1, 2, 1}, 2 -&gt; {4, 3, 4}, 3 -&gt; {2, 1, 2}, 4 -&gt; {3, 4, 3}} &amp;], {1}, 5]]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_, Apr 29 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

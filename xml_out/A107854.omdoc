@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A107854.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A107854">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,3,3,5,8,11,19,29,42,67,99,149,232,347,531,813,1226,1875,2851,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4325,6600,10027,15251,23229,35306,53731,81763,124341,189224,287867,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 437907,666317,1013642,1542131,2346275,3569413,5430536,8261963,12569363</CMP>
+    </assertion><omtext class="name">
+      <CMP> G.f. x*(x^2+1)*(x^3-x-1)/((2*x^3+x^2-1)*(x^4+1)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence A078028 is given by 1em[I* ]forzapseq and is from the same &quot;batch&quot; (i.e., corresponding to the same floretion and symmetry settings) as A107849, A107850, A107851, A107852, A107853 and (a(n)).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_07&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (0,1,2,-1,0,1,2).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A107854"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A159284"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A014017"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> Floretion Algebra Multiplication Program, FAMP Code: 1dia[I]forzapseq[(.5i' + .5j' + .5'ki' + .5'kj')*(.5'i + .5'j + .5'ik' + .5'jk')], 1vesforzap = A000004</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A107849, A107850, A107851, A107852, A107853, A078028.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Creighton Dement_, May 25 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A132907.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A132907">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2357111317,35711131719,571113171923,7111317192329,11131719232931,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 13171923293137,17192329313741,19232931374143,23293137414347,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 29313741434753,31374143475359,37414347535961,41434753596167</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers formed by concatenating 7 consecutive prime numbers.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Prime numbers: A000040. Cf. A007795, A045533, A059932, A091762.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Omar E. Pol_, Sep 04 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

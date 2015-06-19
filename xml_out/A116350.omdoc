@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A116350.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A116350">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 33,64,45211541,54788456,78317868,72388446037855609175404258,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 73247326752475247326752673,75267524732673267524732473,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 76126405447292905676080888,42053270820132695893502981749304</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n times n+4 gives the concatenation of two numbers m and m+9.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 78317868 * 78317872 = 61336887//61336896, where // denotes concatenation.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A116187, A116337, A116349, A116351.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Giovanni Resta_, Feb 06 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

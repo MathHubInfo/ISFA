@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A199139.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A199139">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,9,122,1701</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of assembly graphs with n rigid vertices and assembly number 2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jonathan Burns, &lt;a href=&quot;http://shell.cas.usf.edu/~saito/DNAweb/SimpleAssemblyTable.txt&quot;&gt;Assembly Graph Words - Single Transverse Component (Counts)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jonathan Burns, Egor Dolzhenko, Natasa Jonoska, Tilahun Muche, and Masahico Saito, &lt;a href=&quot;http://jtburns.myweb.usf.edu/assembly/papers/Graphs_and_DNA_Recomb_2011.pdf&quot;&gt;Four-Regular Graphs with Rigid Vertices Associated to DNA Recombination&lt;/a&gt;, May 23, 2011.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Nov 03 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

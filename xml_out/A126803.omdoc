@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A126803.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A126803">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,10,11,14,18,20,31,48,50,81,83,87,88,101,118,122,127,144,148,155,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 157,161,174,181,188,191,199,202,205,206,208,218,221,222,228,245,247,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 248,274,278,284,285,295,302,304,305,308,309,312,313,315,323,327,331,342</CMP>
+    </assertion><omtext class="name">
+      <CMP> Integers that die when submitted to the rules of the Game of Life. Design of the digits is shown below.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Here's the font that's used; a single empty column is used between adjacent digits. The same digit design was selected 39 years ago by _Jonathan Vos Post_.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ooo.o.ooo.ooo.o.o.ooo.ooo.ooo.ooo.ooo</CMP>
+    </omtext><omtext class="comment">
+      <CMP> o.o.o...o...o.o.o.o...o.....o.o.o.o.o</CMP>
+    </omtext><omtext class="comment">
+      <CMP> o.o.o.ooo.ooo.ooo.ooo.ooo...o.ooo.ooo</CMP>
+    </omtext><omtext class="comment">
+      <CMP> o.o.o.o.....o...o...o.o.o...o.o.o...o</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ooo.o.ooo.ooo...o.ooo.ooo...o.ooo.ooo</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence is infinite; e.g., any number whose decimal expansion begins and ends with 14 and contains only the digits 1, 4 and 8 dies in 9 generations. It has density zero, because any number containing the digit string 14405930 emits a lightweight spaceship which can't be stopped by whatever the rest of the number produces.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Angelini and Dean Hickerson, Feb 22 2007, &lt;a href=&quot;/A126803/b126803.txt&quot;&gt;Table of n, a(n) for n = 1..111&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Angelini, &lt;a href=&quot;http://www.cetteadressecomportecinquantesignes.com/GOLife.htm&quot;&gt;Game of Life Integers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Dean Hickerson, &lt;a href=&quot;http://www.math.ucdavis.edu/~dean/RLE/digits.html&quot;&gt;Digits in Life&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Game of Life applet and description by Paul Callahan, &lt;a href=&quot;http://www.math.com/students/wonders/life/life.html&quot;&gt;The World of Math Online&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric Angelini_ and _Dean Hickerson_, Feb 22 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Dean Hickerson_, Mar 02 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

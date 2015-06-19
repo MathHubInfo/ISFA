@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A146960.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A146960">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7735,11305,13845,17255,20615,21945,22015,23919,25935,26565,28595,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 31535,33495,33915,35105,35805,36465,39767,39865,40755,41041,41055,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 42315,42665,42735,45885,46189,46655,47355,47957,49665,50505,51051,51765</CMP>
+    </assertion><omtext class="name">
+      <CMP> Odd squarefree numbers n such that the cyclotomic polynomial Phi(n,x) is not coefficient convex.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Gallot and Moree say that a cyclotomic polynomial is coefficient convex if the union of the coefficients is a range of consecutive integers. They prove that if n is ternary (the product of three distinct odd primes), then Phi(n,x) is coefficient convex. All numbers in this sequence have more than three odd prime factors.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A146960/b146960.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Yves Gallot and Pieter Moree, &lt;a href=&quot;http://arxiv.org/abs/0810.5496&quot;&gt;Neighboring ternary cyclotomic coefficients differ by at most one&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _T. D. Noe_, Nov 03 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected definition. - _T. D. Noe_, Nov 16 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

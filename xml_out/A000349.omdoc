@@ -26,31 +26,187 @@
       <CMP> Alois P. Heinz, &lt;a href=&quot;/A000349/b000349.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
     </omtext><omdoc:p class="formula">
         <CMP>
-         Coefficient of<OMOBJ>
-      <OMA>
+      Coefficient of <OMOBJ>
+        <OMA>
       <OMS name="power" cd="arithmetics"/>
       <OMV name="t"/>
       <OMI>2</OMI>
     </OMA>
-    </OMOBJ> in<OMOBJ>
-      <OMA><OMS name="times"/><OMA>
+      </OMOBJ>in <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
       <OMS name="S" cd="A000349"/>
       <OMV name="n"/>
     </OMA><OMV name="t"/></OMA>
-    </OMOBJ> defined in<OMOBJ>
-      <OMR xref="A002464"/>
-    </OMOBJ>, divided by<OMOBJ>
-      <OMI>2</OMI>
-    </OMOBJ>.
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
+      </OMOBJ>defined in <OMOBJ>
+        <OMR xref="A002464"/>
+      </OMOBJ>,divided by <OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
         <CMP>
-         Recurrence: (n-3)*(n-2)*(n-4)^3*a(n) = (n-3)*(n^4-9*n^3+23*n^2-4*n-29)*(n-4)*a(n-1) - (n-1)*(n^4-12*n^3+57*n^2-125*n+104)*(n-4)*a(n-2) - (n-2)*(n-1)*(n^4-15*n^3+83*n^2-198*n+169)*a(n-3) + (n-3)^3*(n-2)^2*(n-1)*a(n-4). - _Vaclav Kotesovec_, Aug 10 2013
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
-        <CMP>
-        <OMOBJ>
+      Recurrence :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
       <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A000349"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>9</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>23</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA><OMI>29</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A000349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>12</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>57</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>125</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>104</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A000349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>15</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>83</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>198</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>169</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A000349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A000349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Vaclav Kotesovec_ ,Aug 10 2013 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
       <OMS name="~" cd="arithmetic"/>
       <OMA>
       <OMS name="a" cd="A000349"/>
@@ -80,9 +236,9 @@
     </OMA>
     </OMA>
     </OMA>
-    </OMOBJ>. - _Vaclav Kotesovec_, Aug 10 2013
-      </CMP>
-      </omdoc:p><omtext class="maple">
+      </OMOBJ>.-_Vaclav Kotesovec_ ,Aug 10 2013 
+    </CMP>
+    </omdoc:p><omtext class="maple">
       <CMP> S:= proc(n) option remember; `if`(n&lt;4, [1, 1, 2*t, 4*t+2*t^2]</CMP>
     </omtext><omtext class="maple">
       <CMP>        [n+1], expand((n+1-t)*S(n-1) -(1-t)*(n-2+3*t)*S(n-2)</CMP>

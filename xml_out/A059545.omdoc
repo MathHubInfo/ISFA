@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A059545.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A059545">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,6,9,11,13,16,18,20,23,25,27,29,32,34,36,39,41,43,46,48,50,52,55,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 57,59,62,64,66,69,71,73,75,78,80,82,85,87,89,92,94,96,99,101,103,105,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 108,110,112,115,117,119,122,124,126,128,131,133,135,138,140,142,145,147</CMP>
+    </assertion><omtext class="name">
+      <CMP> Beatty sequence for log(10).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harry J. Smith, &lt;a href=&quot;/A059545/b059545.txt&quot;&gt;Table of n, a(n) for n=1,...,2000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Aviezri S. Fraenkel, Jonathan Levitt, Michael Shimshoni, &lt;a href=&quot;http://dx.doi.org/10.1016/0012-365X(72)90012-X&quot;&gt;Characterization of the set of values f(n)=[n alpha], n=1,2,...&lt;/a&gt;, Discrete Math. 2 (1972), no.4, 335-345.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/BeattySequence.html&quot;&gt;Beatty Sequence.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Be#Beatty&quot;&gt;Index entries for sequences related to Beatty sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A059545"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="floor" cd="A059545"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="log" cd="A059545"/>
+      <OMI>10</OMI>
+    </OMA></OMA>
+    </OMA><OMV name="_Stefan"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>Steinerberger_ ,May 09 2006 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Table[Floor[Log[10]n], {n, 1, 100}] - _Stefan Steinerberger_, May 09 2006</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) { default(realprecision, 100); b=log(10); for (n = 1, 2000, write(&quot;b059545.txt&quot;, n, &quot; &quot;, floor(n*b)); ) } \\ _Harry J. Smith_, Jun 28 2009</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Beatty complement is A059546.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A002392 (log(10)).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Mitch Harris_, Jan 22 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

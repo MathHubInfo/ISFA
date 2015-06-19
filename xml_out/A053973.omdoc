@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A053973.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A053973">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 9,676,69696,97969,9696996,9697699776769,77797697969777769,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 776797677679677696,6776696769676669969,9767769967769766976,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 97667999767779769677969</CMP>
+    </assertion><omtext class="name">
+      <CMP> Squares composed of digits {6,7,9}.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. De Geest, &lt;a href=&quot;http://www.worldofnumbers.com/threedigits.htm&quot;&gt;Squares containing at most three distinct digits, Index entries for related sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Author?, &lt;a href=&quot;http://blue.kakiko.com/mmrmmr/htm/eqtn06.html&quot;&gt;Source&lt;/a&gt;, (&lt;a href=&quot;http://blue.kakiko.com/mmrmmr/txt/eqtn06.txt&quot;&gt;txt&lt;/a&gt;)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[Table[Select[FromDigits/@Tuples[{6,7,9},i],IntegerQ[Sqrt[#]]&amp;],{i,23}]] (* _Harvey P. Dale_, Dec 07 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A053972.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Patrick De Geest_, Mar 15 2000.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from C. Ronaldo (aga_new_ac(AT)hotmail.com), Jan 14 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

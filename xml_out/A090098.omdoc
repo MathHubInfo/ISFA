@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A090098.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A090098">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,18,24,32,43,51,68,74,76,99,124,126,132,151,168,174,176,182,207,218,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 232,243</CMP>
+    </assertion><omtext class="name">
+      <CMP> Bases such that the smallest prime-power-pseudoprime is belonging to equals 25.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Solutions to Min{x; Mod[ -1+x^(25-1)}. Values of x such that A090096[x]=25.</CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A007535, A090086, A090096, A090097.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Dec 01 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,658 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A207349.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A207349">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 16,256,912,3130,9668,27022,71344,185624,468864,1161400,2852224,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6916298,16671332,39941518,95248116,226432852,536715552,1269630570,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2998466126,7071955846,16663461012,39231375166,92308270414,217088644132</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 5Xn 0..1 arrays avoiding 0 0 0 and 0 1 1 horizontally and 0 0 0 and 1 1 1 vertically</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row 5 of A207346</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A207349/b207349.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>12</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>75</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>97</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>205</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>555</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>7</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>14</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>8</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1409</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>9</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1451</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>10</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>1221</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>11</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3928</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>12</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2021</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>13</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4180</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>14</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>7443</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>15</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>136</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>16</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>10578</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>17</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>8876</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>18</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>9381</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>19</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>17267</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>20</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>47</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>21</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>26796</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>22</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>17618</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>23</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>19686</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>24</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>52655</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>25</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>22921</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>26</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>32001</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>27</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>77172</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>28</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>42796</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>29</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4315</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>30</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>59068</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>31</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>45371</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>32</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>44803</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>33</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1115</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>34</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2056</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>35</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>45799</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>36</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>27605</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>37</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>49741</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>38</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>6727</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>39</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>9559</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>40</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>36146</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>41</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>938</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>42</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>43008</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>43</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>1665</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>44</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>28535</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>45</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>30007</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>46</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>6052</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>47</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>33073</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>48</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>10480</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>49</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>25569</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>50</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>12393</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>51</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>12011</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>52</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>22288</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>53</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>389</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>54</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>15172</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>55</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>6379</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>56</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>891</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>57</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>8129</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>58</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1046</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>59</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3202</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>60</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>667</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>61</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>92</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>62</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1830</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>63</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1077</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>64</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1243</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>65</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>118</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>66</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>192</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>67</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>879</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>68</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>258</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>69</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>280</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>70</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>247</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>71</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>87</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>72</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>179</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>73</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>17</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>74</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>75</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>44</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>76</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>77</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>78</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>79</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>80</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A207349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>81</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>83</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..1..0....1..1..0..1....0..1..0..0....1..0..0..1....1..0..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..0..1....1..0..1..0....0..1..0..1....0..0..1..0....1..1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..0..1....0..0..1..0....1..0..1..0....0..1..0..0....0..1..0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..1..0....1..1..0..1....1..0..0..1....1..1..0..1....1..0..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..0..1....1..0..1..0....0..1..0..1....1..0..1..0....0..1..0..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Feb 17 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

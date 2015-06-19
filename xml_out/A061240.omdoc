@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A061240.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A061240">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,23,41,59,113,131,149,167,239,257,293,311,347,383,401,419,491,509,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 563,599,617,653,743,761,797,887,941,977,1013,1031,1049,1103,1193,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1229,1283,1301,1319,1373,1409,1427,1481,1499,1553,1571,1607,1697,1733,1787</CMP>
+    </assertion><omtext class="name">
+      <CMP> Prime numbers == 5 (mod 9).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A010888(a(n)) = 5. - _Reinhard Zumkeller_, Feb 25 2005</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A061240/b061240.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[ Range[ 2500 ], PrimeQ[ # ] &amp;&amp; Mod[ #, 9 ] == 5 &amp; ]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA)[ p: p in PrimesUpTo(2000) | p mod 9 in {5} ]; [From Vincenzo Librandi, Dec 25 2010]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) select(p-&gt;p%9==5,primes(1000)) \\ _Charles R Greathouse IV_, Sep 26 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A061237-A061242.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Apr 23 2001</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Robert G. Wilson v_, May 10 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

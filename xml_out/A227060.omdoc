@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A227060.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A227060">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,10,10,20,40,20,35,124,124,35,56,329,643,329,56,84,777,2934,2934,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 777,84,120,1673,11810,24511,11810,1673,120,165,3341,42295,183000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 183000,42295,3341,165,220,6269,136553,1202223,2625106,1202223,136553,6269,220</CMP>
+    </assertion><omtext class="name">
+      <CMP> T(n,k)=Number of nXk -2..2 arrays of 2X2 subblock diagonal sums minus antidiagonal sums for some (n+1)X(k+1) binary array with rows and columns of the latter in lexicographically nondecreasing order</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Table starts</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ...4....10......20........35..........56............84..............120</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..10....40.....124.......329.........777..........1673.............3341</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..20...124.....643......2934.......11810.........42295...........136553</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..35...329....2934.....24511......183000.......1202223..........6979049</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..56...777...11810....183000.....2625106......33345171........371484306</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..84..1673...42295...1202223....33345171.....836488605......18470742252</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .120..3341..136553...6979049...371484306...18470742252.....818230288186</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .165..6269..402898..36211854..3651371505..358194085953...31887670171357</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .220.11164.1099681.170079551.32017940207.6148026957082.1096628939510030</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A227060/b227060.txt&quot;&gt;Table of n, a(n) for n = 1..143&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical for column <OMOBJ>
+        <OMV name="k"/>
+      </OMOBJ>:
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A227060"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>6</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>11</OMI><OMI>6</OMI>
+    </OMA><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>2</OMI>
+    </OMA>
+      </OMOBJ>:[polynomial of degree <OMOBJ>
+        <OMI>7</OMI>
+      </OMOBJ>]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>:[polynomial of degree <OMOBJ>
+        <OMI>15</OMI>
+      </OMOBJ>]
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=3 k=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..0.-1....0..1.-2..0....0..0..1.-2....1.-2..0..1....0..1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0.-2..0..0....0.-2..1..1....0..1.-2..2....0..0..1.-1....1.-2..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..1.-1....0..1..0.-1....0..0..1.-1...-1..1.-1..0...-2..1.-1..1</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Column 1 is A000292(n+1)</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Jun 30 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

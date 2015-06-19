@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A067663.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A067663">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,5,11,7,19,11,13,17,19,43,23,401,29,31,67,37,41,43,47,53,59,61,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 131,67,71,73,79,163,83,89,179,97,101,103,107,109,113,227,127,131,137,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 139,149,151,157,163,167,173,347,179,181,191,193,197,199,419,211,443,223</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sequence gives values of GCD(k!+1,k^k-1) when not equal to 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sequence appears to contain each prime number once or twice.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      For some even <OMOBJ>
+        <OMV name="k"/>
+      </OMOBJ>:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="GCD" cd="A067663"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="k"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="k"/>
+      <OMV name="k"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>for some odd <OMOBJ>
+        <OMV name="k"/>
+      </OMOBJ>:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="GCD" cd="A067663"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="k"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="k"/>
+      <OMV name="k"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>but for <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMA><OMS name="times"/><OMI>25</OMI><OMA>
+      <OMS name="GCD" cd="A067663"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="k"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="k"/>
+      <OMV name="k"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>16</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>or <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMA><OMS name="times"/><OMI>788</OMI><OMA>
+      <OMS name="GCD" cd="A067663"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="k"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="k"/>
+      <OMV name="k"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Benoit Cloitre_, Feb 03 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

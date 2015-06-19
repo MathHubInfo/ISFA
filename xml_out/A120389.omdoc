@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A120389.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A120389">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,15,33,90,129,227,288,429,694,798,1149,1417,1565,1879,2399,2993,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3201,3879,4365,4623,5429,6002,6920,8245,8948,9314,10067,10457,11245,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 14251,15184,16627,17130,19711,20253,21919,23653,24845,26687,28604</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) is such that the a(n)-th composite number is (n-th prime)^2.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A120389"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A065855"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000040"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(1)=1 because the 1st composite is 4 = 2^2 = (1st prime)^2.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4)=33 because the 33rd composite is 49 = 7^2 = (4th prime)^2;</CMP>
+    </assertion><omtext class="maple">
+      <CMP> c:=proc(n) if isprime(n)=false then n else fi end: C:=[seq(c(n),n=2..53000)]: a:=proc(n) local ct,i: ct:=0: for i from 1 while C[i]&lt;=ithprime(n)^2 do ct:=ct+1: od: end: seq(a(n),n=1..50); # _Emeric Deutsch_, Jul 26 2006</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002808.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Leroy Quet_, Jun 30 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Emeric Deutsch_, Jul 26 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

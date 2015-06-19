@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A061807.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A061807">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,6,4,20,6,28,8,288,20,22,24,26,28,60,48,68,288,228,20,42,22,46,24,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 200,26,486,28,406,60,62,64,66,68,280,288,222,228,468,40,82,42,86,44,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2880,46,282,48,686,200,204,208,424,486,220,224,228,406,826,60,244,62</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest positive multiple of n containing only even digits.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Paul Tek, &lt;a href=&quot;/A061807/b061807.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(7) = 28 because among the multiples of 7, that is, 7, 14, 21, 28,... 28 is the smallest multiple with only even digits.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Table[k = n; While[Length[Intersection[{1, 3, 5, 7, 9}, IntegerDigits[k]]] &gt; 0, k = k + n]; k, {n, 100}] (* _T. D. Noe_, Jun 03 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A067044.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, May 28 2001</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by Larry Reeves (larryr(AT)acm.org), May 29 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

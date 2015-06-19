@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A067686.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A067686">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,15,127,15247,232364287,53993160246468367,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2915261353400811631533974206368127,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8498748758632331927648392184620600167779995785955324343380396911247</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = a(n-1) * a(n-1) - B * a(n-1) + B, a(0) = 1 + B for B = 7.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is the special case k=7 of sequences with exact mutual k-residues. In general, a(1)=k+1 and a(n)=min{m | m&gt;a(n-1), mod(m,a(i))=k, i=1,...,n-1}. k=1 gives Sylvester's sequence A000058 and k=2 Fermat sequence A000215. - _Seppo Mustonen_, Sep 04 2005</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. W. Golomb, On certain nonlinear recurring sequences, Amer. Math. Monthly 70 (1963), 403-405.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A067686/b067686.txt&quot;&gt;Table of n, a(n) for n = 0..10&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. V. Aho and N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/doubly.html&quot;&gt;Some doubly exponential sequences&lt;/a&gt;, Fib. Quart., 11 (1973), 429-437.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Stanislav Drastich, &lt;a href=&quot;http://arxiv.org/abs/math/0202010&quot;&gt;Rapid growth sequences&lt;/a&gt; (2002).</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. Mustonen, &lt;a href=&quot;http://www.survo.fi/papers/resseq.pdf&quot;&gt;On integer sequences with mutual k-residues&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Aa#AHSL&quot;&gt;Index entries for sequences of form a(n+1)=a(n)^2 + ...&lt;/a&gt;.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A067686"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="c"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="c"/>
+      <OMF dec="3.3333858371760194"/>
+    </OMA>
+      </OMOBJ>....-_Vaclav Kotesovec_ ,Dec 17 2014 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> RecurrenceTable[{a[0]==8, a[n]==a[n-1]*(a[n-1]-7)+7}, a, {n, 0, 10}] (* _Vaclav Kotesovec_, Dec 17 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. B=1: A000058 (Sylvester's sequence), B=2: A000215 (Fermat numbers), B=3: A000289, B=4: A000324, B=5: A001543, B=6: A001544.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Column k=7 of A177888.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Drastich Stanislav (drass(AT)spas.sk), Feb 05 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

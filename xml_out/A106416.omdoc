@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A106416.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A106416">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 61,6,66,690,6006,62790,690690,60138078,606996390,6469693230,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 600319429710,60007743265470,600277546959090,60039293728424010,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 614889782588491410,60865792091025932010,6000526229622444289770</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest number beginning with 6 that is the product of exactly n distinct primes.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(3) = 66 = 2*3*11.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A077326-A077334, A106411-A106419, A106421-A106429.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ray Chandler_, May 02 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

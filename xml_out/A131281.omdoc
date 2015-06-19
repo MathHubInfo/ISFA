@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A131281.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A131281">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,2,6,18,70,310,1582,9058,57678,403878,3085478,25535378,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 227589206,2173314806,22137209694,239580726978,2745392996254,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 33207657441094,422813028038230,5652593799727858,79168165551184422,1159200449070638742,17711278225214739086</CMP>
+    </assertion><omtext class="name">
+      <CMP> E.g.f.: 2*(x-1)*tan(x/2+Pi/4)-x^2+2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Y. Sano, The principal numbers of K. Saito for the types A_l, D_l and E_l, Discr. Math., 307 (2007), 2636-2642.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      E.g.f .<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="E" cd="A131281"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="tan" cd="A131281"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMS name="Pi"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Q" cd="A131281"/>
+      <OMI>0</OMI>
+    </OMA><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Q" cd="A131281"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="k"/></OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="Q" cd="A131281"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>;(continued fraction ,<OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="step"/>
+    </OMA>
+      </OMOBJ>).-Sergei <OMOBJ>
+        <OMV name="N"/>
+      </OMOBJ>.Gladkovskii ,Jun 22 2012 
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Essentially the same as 2*A034428.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Oct 30 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

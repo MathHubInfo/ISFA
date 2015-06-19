@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A101614.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A101614">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,0,2,0,1,1,0,0,1,0,2,0,2,0,1,0,1,0,2,0,1,1,0,0,1,1,0,0,1,0,2,0,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,2,0,1,1,0,0,1,0,2,0,2,0,1,0,1,0,2,0,2,0,1,0,1,0,2,0,1,1,0,0,1,0,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,1,1,0,0,1,0,2,0,2,0,1,0,1,0,2,0,1,1,0,0,1,1,0,0,1,0,2,0,1,0,2,0,1,1,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Fixed point of morphism 0 -&gt; 01, 1 -&gt; 02, 2 -&gt; 10.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A101614"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A101614"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A101614"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A101614"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMV name="mod"/><OMI>3</OMI></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Nest[ Function[ l, {Flatten[(l /. {0 -&gt; {0, 1}, 1 -&gt; {0, 2}, 2 -&gt; {1, 0}})]}], {0}, 7] (from Robert G. Wilson v Feb 26 2005)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ralf Stephan_, Dec 11 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

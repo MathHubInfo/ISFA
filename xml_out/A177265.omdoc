@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A177265.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A177265">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,4,12,57,321,2176,17008,150505,1485465,16170036,192384876,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2483177809,34554278857,515620794592,8212685046336,139062777326001,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2494364438359953,47245095998005060,942259727190907180</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of permutations of {1,2,...,n} having exactly one string of consecutive fixed points (including singletons).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A177265"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>[<OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>]<OMOBJ>
+        <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="d" cd="A177265"/>
+      <OMV name="j"/>
+    </OMA>
+        </OMA>
+      </OMBIND>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="d" cd="A177265"/>
+      <OMV name="j"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000166"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>are the derangement numbers .
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(4,1) = 12 because we have (the string of consecutive fixed points is between square brackets): [1]342, [1]423, [12]43, [1234], 3[2]41, 4[2]13, 4[23]1, 24[3]1, 41[3]2, 21[34], 231[4], and 312[4].</CMP>
+    </assertion><omtext class="maple">
+      <CMP> d := proc (n) options operator, arrow: factorial(n)*(sum((-1)^i/factorial(i), i = 0 .. n)) end proc: a := proc (n) options operator, arrow: 1/2-(1/2)*(-1)^n+add(d(j), j = 1 .. n) end proc; seq(a(n), n = 1 .. 22);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[0] = 1; a[n_] := a[n] = n*a[n - 1] + (-1)^n; f[n_] := Sum[(n - k) a[n - k - 1], {k, 0, n - 1}]; Array[f, 20] (* _Robert G. Wilson v_, Apr 01 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000166.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Emeric Deutsch_, May 25 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

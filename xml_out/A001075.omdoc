@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A001075.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A001075">
+          <assertion class="***** TTTT *****">
+      <CMP> M1769 N0700</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,7,26,97,362,1351,5042,18817,70226,262087,978122,3650401,13623482,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 50843527,189750626,708158977,2642885282,9863382151,36810643322,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 137379191137,512706121226,1913445293767,7141075053842,26650854921601,99462344632562,371198523608647</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(0) = 1, a(1) = 2, a(n) = 4a(n-1) - a(n-2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Chebyshev's T(n,x) polynomials evaluated at x=2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> x = 2^n - 1 is prime if and only if x divides a(2^(n-2)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Any k in the sequence is succeeded by 2*k + sqrt{3*(k^2 - 1)}. - _Lekraj Beedassy_, Jun 28 2002</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This sequence gives the values of x in solutions of the Diophantine equation x^2 - 3*y^2 = 1; the corresponding values of y are in A001353. The solution ratios a(n)/A001353(n) are obtained as convergents of the continued fraction expansion of sqrt(3): either as successive convergents of [2;-4] or as odd convergents of [1;1,2]. - _Lekraj Beedassy_, Sep 19 2003 [edited by _Jon E. Schoenfield_, May 04 2014]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is half the central value in a list of three consecutive integers, the lengths of the sides of a triangle with integer sides and area. - Eugene McDonnell (eemcd(AT)mac.com), Oct 19 2003</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(3+6k)-1 and a(3+6k)+1 are consecutive odd powerful numbers. See A076445. - _T. D. Noe_, May 04 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The intermediate convergents to 3^(1/2), beginning with 3/2, 12/7, 45/26, 168/97, comprise a strictly increasing sequence; essentially, numerators=A005320, denominators=A001075. - _Clark Kimberling_, Aug 27 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The upper principal convergents to 3^(1/2), beginning with 2/1, 7/4, 26/15, 97/56, comprise a strictly decreasing sequence; numerators=A001075, denominators=A001353. - _Clark Kimberling_, Aug 27 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n+1) is the Hankel transform of A000108(n)+A000984(n)=(n+2)*Catalan(n). - _Paul Barry_, Aug 11 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, numbers such that floor[a(n)^2/3] is a square: base 3 analog of A031149, A204502, A204514, A204516, A204518, A204520, A004275, A001541. - _M. F. Hasler_, Jan 15 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Pisano period lengths:  1, 2, 2, 4, 3, 2, 8, 4, 6, 6, 10, 4, 12, 8, 6, 8, 18, 6, 5, 12,... - _R. J. Mathar_, Aug 10 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Except for the first term, positive values of x (or y) satisfying x^2 - 4xy + y^2 + 3 = 0. - _Colin Barker_, Feb 04 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Except for the first term, positive values of x (or y) satisfying x^2 - 14xy + y^2 + 48 = 0. - _Colin Barker_, Feb 10 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Serge Lang, Introduction to Diophantine Approximations, Addison-Wesley, New York, 1966.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Mcdonnell, Eugene, &quot;Heron's Rule and Integer-Area Triangles&quot;, Vector 12.3 (January 1996) pp. 133-142</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P.-F. Teilhet, Reply to Query 2094, L'Intermédiaire des Mathématiciens, 10 (1903), 235-238.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A001075/b001075.txt&quot;&gt;Table of n, a(n) for n=0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Banderier and D. Merlini, &lt;a href=&quot;http://algo.inria.fr/banderier/Papers/infjumps.ps&quot;&gt;Lattice paths with an infinite set of jumps&lt;/a&gt;, FPSAC02, Melbourne, 2002.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Brocard, &lt;a href=&quot;http://resolver.sub.uni-goettingen.de/purl?PPN598948236_0004/DMDLOG_0053&quot;&gt;Notes élémentaires sur le problème de Peel [sic]&lt;/a&gt;, Nouvelle Correspondance Mathématique, 4 (1878), 337-343.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Chris Caldwell, &lt;a href=&quot;http://www.utm.edu/research/primes/prove/prove3_2.html&quot;&gt;Primality Proving&lt;/a&gt;, Arndt's theorem.</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. I. Emerson, &lt;a href=&quot;http://www.fq.math.ca/Scanned/7-3/emerson.pdf&quot;&gt;Recurrent Sequences in the Equation DQ^2=R^2+N&lt;/a&gt;, Fib. Quart., 7 (1969), pp. 231-242.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tanya Khovanova, &lt;a href=&quot;http://www.tanyakhovanova.com/RecursiveSequences/RecursiveSequences.html&quot;&gt;Recursive Sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Clark Kimberling, &lt;a href=&quot;http://dx.doi.org/10.1007/s000170050020&quot;&gt;Best lower and upper approximates to irrational numbers&lt;/a&gt;, Elemente der Mathematik, 52 (1997) 122-126.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. V. Waugh and M. W. Maxfield, &lt;a href=&quot;http://www.jstor.org/stable/2688511&quot;&gt;Side-and-diagonal numbers&lt;/a&gt;, Math. Mag., 40 (1967), 74-83.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ch#Cheby&quot;&gt;Index entries for sequences related to Chebyshev polynomials.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Tu#2wis&quot;&gt;Index entries for two-way infinite sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_02&quot;&gt;Index entries for sequences related to linear recurrences with constant coefficients&lt;/a&gt;, signature (4,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> For all elements x of the sequence, 12*x^2 -12 is a square. Lim. as n-&gt; Inf. a(n)/a(n-1) = 2 + sqrt(3) = (4 + sqrt(12))/2 which preserves the kinship with the equation &quot;12*x^2 - 12 is a square&quot; where the initial &quot;12&quot; ends up appearing as a square root. - _Gregory V. Richardson_, Oct 10 2002</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="S" cd="A001075"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="S" cd="A001075"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMI>4</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="T" cd="A001075"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,with <OMOBJ>
+        <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="S" cd="A001075"/>
+      <OMV name="n"/><OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="U" cd="A001075"/>
+      <OMV name="n"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="S" cd="A001075"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA><OMV name="x"/>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="S" cd="A001075"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="U"/>
+      </OMOBJ>,<OMOBJ>
+        <OMV name="resp"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="T"/>
+      </OMOBJ>,are Chebyshev's polynomials of the second ,<OMOBJ>
+        <OMV name="resp"/>
+      </OMOBJ>.first ,kind .<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="S" cd="A001075"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMI>4</OMI>
+    </OMA>
+      <OMA>
+      <OMR xref="A001353"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.See <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMR xref="A049310"/>
+      <OMV name="and"/>
+    </OMA><OMR xref="A053120"/></OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A001353"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMR xref="A001353"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="binomial" cd="A001075"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="k"/>
+    </OMA></OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMR xref="A086645"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="k"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND></OMA>
+    </OMA>
+        </OMA>
+      </OMBIND></OMA>
+    </OMA>
+      </OMOBJ>.-_Philippe Deléham_ ,Mar 01 ,<OMOBJ>
+        <OMI>2004</OMI>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="sqrt" cd="A001075"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="sqrt" cd="A001075"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="ceiling" cd="A001075"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="sqrt" cd="A001075"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="cosh" cd="A001075"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="log" cd="A001075"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="sqrt" cd="A001075"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> a(n) = sum{k=0..floor(n/2); C(n, 2k)2^(n-2k)3^k }. - _Paul Barry_, May 08 2003</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.E.g.f .:<OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="exp" cd="A001075"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="cosh" cd="A001075"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="sqrt" cd="A001075"/>
+      <OMI>3</OMI>
+    </OMA><OMV name="x"/></OMA>
+    </OMA></OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3</OMI><OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="k"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Philippe Deléham_ ,Mar 03 2004 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMR xref="A001353"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Lekraj Beedassy_ ,Jul 21 2006 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMV name="left"/>
+    </OMA>
+      </OMOBJ>term of <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="M"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS cd="set1" name="set">
+        <OMI>1</OMI><OMI>0</OMI>
+      </OMS>
+    </OMA></OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="M"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="the" cd="A001075"/>
+      <OMI>2</OMI>
+    </OMA><OMI>2</OMI></OMA>
+    </OMA>
+      </OMOBJ>matrix [<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>;<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>].Right term =<OMOBJ>
+        <OMA>
+      <OMR xref="A001353"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>.Example :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMI>4</OMI>
+    </OMA>
+      <OMI>97</OMI>
+    </OMA>
+      </OMOBJ>since <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="M"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS cd="set1" name="set">
+        <OMI>1</OMI><OMI>0</OMI>
+      </OMS>
+    </OMA></OMA>
+      <OMA>
+      <OMS cd="set1" name="set">
+        <OMA>
+      <OMR xref="A001075"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMR xref="A001353"/>
+      <OMI>4</OMI>
+    </OMA>
+      </OMS>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS cd="set1" name="set">
+        <OMI>97</OMI><OMI>56</OMI>
+      </OMS>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Gary <OMOBJ>
+        <OMV name="W"/>
+      </OMOBJ>.Adamson_ ,Dec 27 2006 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Binomial transform of <OMOBJ>
+        <OMR xref="A026150"/>
+      </OMOBJ>:<OMOBJ>
+        <OMA>
+      <OMS cd="set1" name="set">
+        <OMI>1</OMI><OMI>1</OMI><OMI>4</OMI><OMI>10</OMI><OMI>28</OMI><OMI>76</OMI><OMS name="..." cd="arithmetics"></OMS>
+      </OMS>
+    </OMA>
+      </OMOBJ>.-_Gary <OMOBJ>
+        <OMV name="W"/>
+      </OMOBJ>.Adamson_ ,Nov 23 2007 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      First differences of <OMOBJ>
+        <OMR xref="A001571"/>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_N"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="A"/>
+      </OMOBJ>.Sloane_ ,Nov 03 2009 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Sequence satisfies -<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMI>3</OMI>
+      <OMA>
+      <OMS name="f" cd="A001075"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="f" cd="A001075"/>
+      <OMV name="u"/><OMV name="v"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="u"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="v"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="u"/><OMV name="v"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Michael Somos_ ,Sep 19 2008 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMV name="k"/>
+                  <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMV name="k"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+              </OMA>
+          </OMA>
+          
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMR xref="A201730"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="k"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.-_Philippe Deléham_ ,Dec 06 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="G" cd="A001075"/>
+      <OMI>0</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="G" cd="A001075"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="k"/></OMA><OMI>4</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="G" cd="A001075"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>;(continued fraction ).-_Sergei <OMOBJ>
+        <OMV name="N"/>
+      </OMOBJ>.Gladkovskii_ ,May 28 2013 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001075"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMR xref="A238731"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.-_Philippe Deléham_ ,Mar 05 2014 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 2^6 -1 = 63 does not divide a(2^4) = 708158977, therefore 63 is composite. 2^5 -1 = 31 divides a(2^3) = 18817, therefore 31 is prime.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A001075:=-(-1+2*z)/(1-4*z+z**2); # _Simon Plouffe_ in his 1992 dissertation</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[ Ceiling[(1/2)*(2 + Sqrt[3])^n], {n, 0, 24}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[x_] := (1-2*x) / (1-4*x+x^2); CoefficientList[ Series[ f[x], {x, 0, 24}], x] (* _Jean-François Alcover_, Dec 21 2011, after _Simon Plouffe_ *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a=1;b=1;Join[{1,2},Table[c=(b=b+a)+(a=a+b*2),{n,0,30}]] (* _Vladimir Joseph Stephan Orlovsky_, Jan 29 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=subst(poltchebi(abs(n)),x,2)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=real((2+quadgen(12))^abs(n))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=polsym(1-4*x+x^2,abs(n))[1+abs(n)]/2</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [lucas_number2(n,4,1)/2 for n in xrange(0, 25)] # _Zerinvary Lajos_, May 14 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a001075 n = a001075_list !! n</CMP>
+    </omtext><omtext class="program">
+      <CMP> a001075_list =</CMP>
+    </omtext><omtext class="program">
+      <CMP>    1 : 2 : zipWith (-) (map (4 *) $ tail a001075_list) a001075_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Aug 11 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage)</CMP>
+    </omtext><omtext class="program">
+      <CMP> def a(n):</CMP>
+    </omtext><omtext class="program">
+      <CMP>     Q = QuadraticField(3, 't')</CMP>
+    </omtext><omtext class="program">
+      <CMP>     u = Q.units()[0]</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return (u^n).lift().coeffs()[0]  # _Ralf Stephan_, Jun 19 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A065918, A071954. a(n) = sqrt(1+3*A001353(n)) (cf. Richardson comment).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A001353, A001571, A001834, A003500, A016064, A082840.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Bisections are A011943 and A094347.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A001353.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A026150.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _James A. Sellers_, Jul 10 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Chebyshev comments from _Wolfdieter Lang_, Oct 31 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

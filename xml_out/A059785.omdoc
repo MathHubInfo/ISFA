@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A059785.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A059785">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,7,47,2207,4870843,23725111530599,562880917139361624513298747,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 316834926879648887020732217199607668221645859671769857</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n+1) = prevprime(a(n)^2). Largest prime prior to the square of previous prime. Initial value = 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The next term is too large to show here - see the b-file.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Franklin T. Adams-Watters, &lt;a href=&quot;/A059785/b059785.txt&quot;&gt;Table of n, a(n) for n = 1..12&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n) = ceiling(1.2720196331921934958697353209119288376375630826996476481322580415487532...^(2^n)). - _Franklin T. Adams-Watters_, Jul 30 2009</CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A006992, A055496, A005384, A005385, A059784.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Feb 22 2001</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Offset and some values corrected by _Franklin T. Adams-Watters_, Jul 30 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

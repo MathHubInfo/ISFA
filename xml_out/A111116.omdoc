@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A111116.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A111116">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,4,7,8,9,24,27,28,32,33,42,52,53,58,59,67,77,88,89,93,202,203,258,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 284,303,324,329,377,383,422,669,818,832,843,878,882,887,949,2027,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2042,2673,3144,3222,3253,3302,3308,3737,3773,3953,3979,3983,4779,5353,5669</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that digits of n are not present in n^4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The number of k-digit numbers for which this occurs is: 6,15,18,32,21,14,20,...</CMP>
+    </omtext><omtext class="link">
+      <CMP> Chai Wah Wu, &lt;a href=&quot;/A111116/b111116.txt&quot;&gt;Table of n, a(n) for n = 1..136&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Intersection( the digits of A000027, the digits of A000583) is null.</CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Select[Range[6000], Intersection[IntegerDigits[ # ], IntegerDigits[ #^4]] == {} &amp;] (*Chandler*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> fQ[n_] := Intersection[ Union[ IntegerDigits[n]], Union[ IntegerDigits[n^4]]] == {}; Select[ Range[ 5887], fQ[ # ] &amp;] (* _Robert G. Wilson v_ *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Python)</CMP>
+    </omtext><omtext class="program">
+      <CMP> A111116_list = [n for n in range(1,10**6) if set(str(n)) &amp; set(str(n**4)) == set()]</CMP>
+    </omtext><omtext class="program">
+      <CMP> # _Chai Wah Wu_, Jan 05 2015</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A029783, A029785.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> For the corresponding n^4, see A113316.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lekraj Beedassy_, Oct 15 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _Robert G. Wilson v_ and _Ray Chandler_, Oct 17 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A169768.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A169768">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,4,0,0,0,24,0,24,0,276,0,176,0,2604,0,1876,0,25736,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 17384,0,248816,0,173064,0,2424608,0,1668712,0,23581056,0,16317480,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 229513584,0,158435296,0,2233386048,0,1543447264,0,21733496960</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of geometrically distinct closed knight's tours of a 3xn chessboard that have twofold symmetry.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. E. Knuth, Long and skinny knight's tours, in Selected Papers on Fun and Games, to appear, 2010.</CMP>
+    </omtext><omtext class="link">
+      <CMP> George Jelliss, &lt;a href=&quot;http://www.ktn.freeuk.com/3a.htm&quot;&gt;Open knight's tours of three-rank boards&lt;/a&gt;, Knight's Tour Notes, note 3a (21 October 2000).</CMP>
+    </omtext><omtext class="link">
+      <CMP> George Jelliss, &lt;a href=&quot;http://www.ktn.freeuk.com/3b.htm&quot;&gt;Closed knight's tours of three-rank boards&lt;/a&gt;, Knight's Tour Notes, note 3b (21 October 2000).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A169768"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A169765"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A169765"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A169767"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A169768"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>unless <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="n" cd="A169768"/>
+      <OMV name="mod"/>
+    </OMA><OMI>2</OMI></OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Generating function: (4*z^10 + 24*z^16 - 124*z^18 + 32*z^20 + 212*z^22 - 716*z^24 + 1248*z^26 - 336*z^28 - 5120*z^30 + 7896*z^32 - 4928*z^34 - 3432*z^36 + 41280*z^38 - 32616*z^40 + 22224*z^42 + 39888*z^44 - 140608*z^46 + 47968*z^48 - 151680*z^50 - 143424*z^52 + 189952*z^54 - 15552*z^56 + 413056*z^58 + 181376*z^60 - 50432*z^62 + 78080*z^64 - 121344*z^66 + 44288*z^68 - 141312*z^70 - 112640*z^72 - 337920*z^74 - 227328*z^76 + 49152*z^78 + 98304*z^80 + 163840*z^82 + 32768*z^84 + 65536*z^86)/</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>64</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>8</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>200</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>12</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>1000</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>16</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>3016</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>20</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3488</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>24</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>24256</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>28</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>23776</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>32</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>104168</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>36</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>203408</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>40</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>184704</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>44</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>443392</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>48</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>14336</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>52</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>151296</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>56</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>145920</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>60</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>263424</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>64</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>317440</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>68</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>36864</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>72</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>966656</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>76</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>573440</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>80</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>131072</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>84</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A070030, A169696, A169764-A169777.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 4,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, May 10 2010, based on a communication from D. E. Knuth, Apr 28 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A089124.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A089124">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,7,3,19,7,13,13,67,7,103,31,7,43,199,19,37,73,109,13,31,37,487,19,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 193,157,97,61,787,211,43,241,79,13,61,307,433,7,1447,127,229,421,31,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 463,277,13,163,79,769,601,2503,31,2707,37,139,757,73,271,37,67,1201,19</CMP>
+    </assertion><omtext class="name">
+      <CMP> Largest prime factor of numbers of the form A^2 + 3.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Rademacher, Lectures on Elementary Number Theory, pp. 33-38.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) largeasqp3(m) = { for(a=1,m, y=a^2 + 3; f = factor(y); v = component(f,1); v1 = v[length(v)]; print1(v1&quot;,&quot;)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A049423.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Cino Hilliard_, Dec 05 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

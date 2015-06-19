@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A105442.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A105442">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 55,215,407,1403,1681,3223,3362,3415,6724,13448,13655,15487,25751,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 80089,146621,160178,218455,237169,320356,445663,464711,474338,873815,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 948676,1662743,1897352,1932377,1975531,2484187,3223001,3410639,3872639</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers with at least two odd prime factors (not necessarily distinct) such that in binary representation all divisors of n are contained in n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Intersection of A093641 and A105441;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A087436(a(n)) &gt; 1.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A093642, A093641.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Apr 09 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

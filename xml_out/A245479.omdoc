@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A245479.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A245479">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,6,7,14,21,42,49,98,147,294,343,686,1029,2058,2401,4802,7203,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 14406,16807,33614,50421,100842,117649,235298,352947,705894,823543,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1647086,2470629,4941258,5764801,11529602,17294403,34588806,40353607,80707214,121060821</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that the n-th cyclotomic polynomial has a root mod 7.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers of the form d*7^j for d = 1,2,3,6.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Trygve Nagell, Introduction to Number Theory. New York: Wiley, 1951, pp. 164-168.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric M. Schmidt, &lt;a href=&quot;/A245479/b245479.txt&quot;&gt;Table of n, a(n) for n = 1..500&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein, &lt;a href=&quot;http://mathworld.wolfram.com/CyclotomicPolynomial.html&quot;&gt;Cyclotomic Polynomial&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (0,0,0,7).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A245479"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="a" cd="A245479"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.G.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Jul 30 2014 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> The 3rd cyclotomic polynomial x^2 + x + 1 considered modulo 7 has a root x = 2, so 3 is in the sequence.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (Sage) def A245479(n) : return [6,1,2,3][n%4]*7^((n-1)//4)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=1,10^6,if(#polrootsmod(polcyclo(n),7),print1(n,&quot;, &quot;))) /* by definition; rather inefficient. - _Joerg Arndt_, Jul 28 2014 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) Vec(-x*(2*x+1)*(3*x^2+1)/(7*x^4-1) + O(x^100)) \\ _Colin Barker_, Jul 30 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A018379, A038754, A245478, A245480, A245481.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric M. Schmidt_, Jul 23 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

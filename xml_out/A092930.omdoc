@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A092930.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A092930">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,8,12,12,14,22,26,22,24,36,40,32,34,50,39,41,43,45,66,70,53,55,57,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 59,86,64,66,96,100,74,76,110,81,83,85,87,126,92,94,96,98,142,146,106,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 108,110,112,162,117,119,172,176,127,129,131,133,192,138,140,202,145,147</CMP>
+    </assertion><omtext class="name">
+      <CMP> n-th partial arithmetic mean is equal to the n-th composite number.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A092929.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Mar 19 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Ray Chandler_, Mar 23 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

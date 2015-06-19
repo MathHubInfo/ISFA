@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A077770.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A077770">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,4,12,16,20,28,32,44,52,52,56,60,76,80,84,84,92,104,116,116,112,140,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 132,136,148,148,164,160,164,180,176,204,196,204,216,196,228,216,252,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 236,224,260,260,284,272,260,292,288,308,300,316,312,300,332,320,364</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of ordered pairs of integers (x,y) with n^2 &lt; x^2 + y^2 &lt; (n+1)^2; number of lattice points between circles of radii n and n+1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Note that 2*A077768(n)-a(n)/4 is the characteristic sequence for the Beatty sequence A001951(n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/GausssCircleProblem.html&quot;&gt;Gauss's Circle Problem&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A077770"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A051132"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A000328"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Table[Sum[SquaresR[2, k], {k, n^2 + 1, (n + 1)^2 - 1}], {n, 0, 100}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000328, A001951, A051132, A077768.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _T. D. Noe_, Nov 20 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

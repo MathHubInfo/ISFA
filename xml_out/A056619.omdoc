@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A056619.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A056619">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,2,0,2,11,2,3,0,7,2,5,2,3,2,0,2,5,2,3,2,5,2,7,0,3,2,5,2,11,2,3,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 19,2,0,2,3,2,7,2,5,2,3,2,11,2,5,0,3,2,5,2,7,2,3,2,5,2,19,2,3,2,0,2,7,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2,3,2,19,2,5,2,3,2,13,2,5,2,3,0,5,2,11,2,3,2,5,2,11,2,3,2,7,2,7,2,3,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest prime with primitive root of n or 0 if no such prime exists.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = 0 only for perfect squares, A000290.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Here the primitive root may be larger than the prime, whereas in A023049 in may not be.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A001122, A001913, A019334-A019421.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Aug 07 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _Jud McCranie_, Mar 21, 2002.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

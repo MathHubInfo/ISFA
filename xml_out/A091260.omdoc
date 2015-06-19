@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A091260.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A091260">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,5,21,13,25,25,17,91,65,61,15,85,125,65,11,145,455,181,13,125,305,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 265,85,651,425,41,525,421,325,481,455,305,725,325,1911,685,181,425,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 17,841,625,925,427,169,1325,1105,55,817,1085,725,255,1405,205,793,425,181</CMP>
+    </assertion><omtext class="name">
+      <CMP> Denominator of sigma[3,n]/sigma[2,n].</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harvey P. Dale, &lt;a href=&quot;/A091260/b091260.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Denominator[Table[DivisorSigma[3,n]/DivisorSigma[2,n],{n,60}]] (* _Harvey P. Dale_, Nov 03 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001158, A001157, A000203, A091258-A091261.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,frac</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Feb 12 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

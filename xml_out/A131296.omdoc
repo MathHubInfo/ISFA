@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A131296.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A131296">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,3,5,4,5,5,2,3,5,4,5,5,2,3,5,4,5,5,2,3,5,4,5,5,2,3,5,4,5,5,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3,5,4,5,5,2,3,5,4,5,5,2,3,5,4,5,5,2,3,5,4,5,5,2,3,5,4,5,5,2,3,5,4,5,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5,2,3,5,4,5,5,2,3,5,4,5,5,2,3,5,4,5,5,2,3,5,4,5,5,2,3,5,4,5,5,2,3</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n)=ds_5(a(n-1))+ds_5(a(n-2)), a(0)=0, a(1)=1; where ds_5=digital sum base 5.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The digital sum analogue (in base 5) of the Fibonacci recurrence.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> When starting from index n=3, periodic with Pisano period A001175(4)=6.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) and Fib(n)=A000045(n) are congruent modulo 4 which implies that (a(n) mod 4) is equal to (Fib(n) mod 4)=A079343(n). Thus (a(n) mod 4) is periodic with the Pisano period A001175(4)=6 too.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, a(n)==A004090(n) modulo 4 (A004090(n)=digital sum of Fib(n)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For general bases p&gt;2, the inequality 2&lt;=a(n)&lt;=2p-3 holds for n&gt;2. Actually, a(n)&lt;=5=A131319(5) for the base p=5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Coi#Colombian&quot;&gt;Index entries for Colombian or self numbers and related sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="floor" cd="A131296"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>5</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="floor" cd="A131296"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMI>5</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="floor" cd="A131296"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>5</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="floor" cd="A131296"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMI>5</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMV name="mod"/><OMI>5</OMI></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMV name="mod"/><OMI>5</OMI></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A002266"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A002266"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A010874"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A010874"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Fib" cd="A131296"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMI>1</OMI>
+      <OMV name="k"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="Fib" cd="A131296"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="floor" cd="A131296"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A131296"/>
+      <OMV name="k"/>
+    </OMA><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Fib" cd="A131296"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000045"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(10)=3, since a(8)=5=10(base 5), ds_5(5)=1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(9)=2, ds_5(2)=2 and so a(10)=1+2.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000045, A010073, A010074, A010075, A010076, A010077, A131294, A131295, A131297, A131318, A131319, A131320.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Hieronymus Fischer_, Jun 27 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

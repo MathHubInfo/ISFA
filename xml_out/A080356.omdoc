@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A080356.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A080356">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,1,1,1,1,1,2,2,2,1,1,1,2,2,2,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,3,3,3,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4,4,4,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,6,6,6,7,7,7,6,6,6,6</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of twin primes between n and 2n. Only smaller of twins (terms of A001359) are counted.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A080356/b080356.txt&quot;&gt;Table of n, a(n) for n=1..10000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> n=36, between 36 and 72 the twin numbers are {41,59,71}, so a(36)=3.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Table[Count[Table[PrimeQ[j]&amp;&amp;PrimeQ[j+2], {j, n, 2*n}], True], {n, 1, 1000}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001359.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Feb 19 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

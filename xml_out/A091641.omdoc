@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A091641.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A091641">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,16,100,680,4773,34992,266823,2079512,16503238,132852644,1081509855,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8885472675,73563855306</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of primes less than 10^n which do not contain the digit 7.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Number of primes less than <OMOBJ>
+        <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>10</OMI>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>after removing any primes with at least one digit <OMOBJ>
+        <OMI>7</OMI>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A091641"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A006880"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A091708"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(2) = 16 because of the 25 primes less than 10^2, 9 have at least one digit 7; 25-9=16.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> NextPrim[n_] := Block[{k = n + 1}, While[ !PrimeQ[k], k++ ]; k]; c = 0; p = 1; Do[ While[ p = NextPrim[p]; p &lt; 10^n, If[ Position[ IntegerDigits[p], 7] == {}, c++ ]]; Print[c]; p--, {n, 1, 8}] (* _Robert G. Wilson v_, Feb 02 2004 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A091634, A091635, A091636, A091637, A091638, A091639, A091640, A091642, A091643.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> more,nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Enoch Haga_, Jan 30 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited and extended by _Robert G. Wilson v_, Feb 02 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(9)-a(12) from _Donovan Johnson_, Feb 14 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(13) from _Robert Price_, Nov 08 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

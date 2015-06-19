@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A043141.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A043141">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 13,43,62,91,111,141,160,190,209,239,258,288,301,337,356,386,405,434,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 454,484,503,533,552,582,601,631,637,699,729,748,777,797,827,846,876,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 895,925,944,974,987,1023,1042,1072,1091,1120</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that 1 and 6 occur juxtaposed in the base 7 representation of n but not of n-1.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

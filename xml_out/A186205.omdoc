@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A186205.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A186205">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,61,887,9887,39887,339887,1618033,65638117,398874989,1772030917,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 38622235369,803398874989,1618033988749,61803398874989,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 586834365638117,8343656381177203,69317931800607667,484754088075386891</CMP>
+    </assertion><omtext class="name">
+      <CMP> The first n-digit prime in the decimal expansion of the golden ratio.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Golden ratio is (1+sqrt(5))/2 = 1.618033988749894848204586834....</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Digits := 10000: p0 := evalf((1+sqrt(5))/2):for d from 1 to 20 do: id:=0:for</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   i from 0 to 50000 while(id=0) do :q0:=trunc(p0*10^(i+d-1)): x:= irem(q0,10^d):</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   if type(x,prime)=true and length(x)=d then printf(`%d, `,x):id:=1: else fi:od:od:</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001622.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Lagneau_, Feb 15 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

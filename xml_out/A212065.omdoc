@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A212065.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A212065">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,12,57,185,459,974,1830,3168,5158,7957,11766,16830,23378,31689,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 42041,54774,70218,88757,110720,136558,166715,201620,241761,287646,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 339854,398829,465198,539557,622513,714762,816892,929637,1053742</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (w,x,y,z) with all terms in {1,...,n} and w^2&lt;=x*y*z.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)+A212066(n)=n^4.  For a guide to related sequences, see A211795.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t = Compile[{{n, _Integer}}, Module[{s = 0},</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (Do[If[w^2 &lt;= x*y*z, s = s + 1],</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> {w, 1, #}, {x, 1, #}, {y, 1, #}, {z, 1, #}] &amp;[n]; s)]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Map[t[#] &amp;, Range[0, 50]] (* A212065 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (* Peter Moses, Apr 13 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A211795.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Apr 30 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

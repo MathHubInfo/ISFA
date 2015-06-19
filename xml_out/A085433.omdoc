@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A085433.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A085433">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,63,448,2945,18648,114751,691712,4104513</CMP>
+    </omtext><omtext class="name">
+      <CMP> Resultant of the polynomial x^3-1 and the Chebyshev polynomial of the second kind U_n(x).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A085640.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Yuval Dekel (dekelyuval(AT)hotmail.com), Aug 18 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

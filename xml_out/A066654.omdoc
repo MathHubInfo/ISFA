@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A066654.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A066654">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,1,2,1,6,5,1,2,2,1,12,1,2,12,1,6,5,2,36,4,1,1,2,1,2,4,14,4,6,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,12,2,3,5,28,1,2,3,3,1,2,1,24,1,29,6,1,11,1,1,2,9,3,5,5,4,3,1,5,3,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,1,3,15,4,10,1,7,1,1,5,1,6,5,2,1,1,8,1,2,1,1,13,22,1,2,2,1,2,1,1,1,6</CMP>
+    </assertion><omtext class="name">
+      <CMP> Continued fraction for the Hardy-Littlewood constant product(1-(3*p-1)/(p-1)^3, p prime &gt;= 5).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A065418.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cofr</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> Randall L. Rathbun, Jan 16 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

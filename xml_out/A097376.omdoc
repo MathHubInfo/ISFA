@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A097376.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A097376">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 24,26,28,36,39,42,62,63,82,93,116,148,149,168,189,204,206,208,240,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 244,246,248,260,264,266,268,280,284,286,288,306,309,360,366,369,384,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 390,396,399,402,411,414,419,420,424,426,428,441,442,462,465,482,491,498</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that there is exactly one prime in a sequence formed from the t digits of n where the latter terms are given by rule b(i)=sum of t previous terms and the primes are counted from initial t digits up to the largest term &lt; n^2; where ones are located in A098598.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 148 is in the sequence because</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,4,8,13,25,46,84,155,285,524,964,1773,3261,5998,11032,20291 contains one prime.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A098598.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Jason Earls (zevi_35711(AT)yahoo.com), Sep 18 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

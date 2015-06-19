@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A084060.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A084060">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,5,9,11,15,17,21,23,27,29,33,35,39,41,45,47,51,53,57,59,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 63,65,69,71,75,77,81,83,87,89,93,95,99,101,105,107,111,113,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 117,119,123,125,129,131,135,137,141,143,147,149,153,155,159,161,165,167,171,173,177,179</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n)=1/2+(1-6*n)*(-1)^n/2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> abs(a(n+1))=A047270(n)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A084060/b084060.txt&quot;&gt;Table of n, a(n) for n = 0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (-1,1,1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Unsigned version is sum of alternate terms of A032766 (numbers congruent to {0,1,3} mod 4): (1, 3, 4, 6, 7, 9, 10, 12,...) such that a(n) = A032766(n-1) + A032766(n+1). - _Gary W. Adamson_, Sep 13 2007</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar ,Oct 25 2011 
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (MAGMA) [1/2+(1-6*n)*(-1)^n/2: n in [0..60]]; // Vincenzo Librandi, Oct 26 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A084056.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A032766.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Barry_, May 11 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

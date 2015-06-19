@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A003626.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A003626">
+          <assertion class="***** TTTT *****">
+      <CMP> M4769</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,13,17,19,31,37,53,59,71,73,79,97,113,131,137,139,151,157,173,179,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 191,193,197,199,211,233,239,251,257,271,277,293,311,313,317,331,337,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 353,359,373,379,397,419,431,433,439,457,479,491,499,557,571,577,593,599</CMP>
+    </assertion><omtext class="name">
+      <CMP> Inert rational primes in Q(sqrt(-5)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Primes congruent to 11, 13, 17, 19 (mod 20). - _Michael Somos_, Aug 14 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Hasse, Number Theory, Springer-Verlag, NY, 1980, p. 498.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A003626/b003626.txt&quot;&gt;Table of n, a(n) for n = 1..5000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Prime[Range[1000]],MemberQ[{11,13,17,19},Mod[#,20]]&amp;] (* _Vincenzo Librandi_, Aug 20 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local( cnt, m ); if( n&lt;1, return( 0 )); while( cnt &lt; n, if( isprime( m++) &amp;&amp; kronecker( -20, m )==-1, cnt++ )); m} /* _Michael Somos_, Aug 14 2012 */</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Mira Bernstein_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

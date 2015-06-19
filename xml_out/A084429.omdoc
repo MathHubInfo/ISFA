@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A084429.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A084429">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 14,15,23,25,37,39,44,54,55,70,79,88,90,98,102,118,123,134,136,143,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 144,151,174,182,202,209,215,226,230,232,245,254,256,257,258,262,264,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 267,272,284,287,297,300</CMP>
+    </assertion><omtext class="name">
+      <CMP> Integers m such that the base-10 digit concatenation 4//m//3//m//2//m//1 is prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> I have defined and named this sequence by f4i and defined other similar sequences {fni} in comments of A083660. fni(m) is the m-th nonnegative integer k such that the concatenation fi(n, k) = n//k//n-1//k// ...//3//k//2//k//1 is prime. By this definition f2i = A032702.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(3)=23 because 23 is the third nonnegative integer m such that fi(4,m)= (fi(4,23)=4 // 23 // 3 // 23 // 2 // 23 //1=4233232231 is prime.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Do[If[PrimeQ[FromDigits[Join[{4}, IntegerDigits[n], {3}, IntegerDigits[n], {2}, IntegerDigits[n], {1}]]], v=Insert[v, n, -1]], {n, 300}]; v</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A083660, A032702.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Farideh Firoozbakht_, Jun 27 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

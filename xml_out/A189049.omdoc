@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A189049.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A189049">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 24,24,960,160,8064,896,30720,4608,337920,22528,67092480,106496,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 688128,491520,267386880,2228224,1882718208,9961472,3460300800,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 44040192,6366953472,192937984,549621596160,838860800</CMP>
+    </assertion><omtext class="name">
+      <CMP> Denominators of expansion of Sum_{k=1..n} 1/k - log(n(1+1/(2n)) - gamma.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. Chlebus, A recursive scheme for improving the original rate of convergence to the Euler-Mascheroni constant, Amer. Math. Mnthly, 118 (2011), 268-274.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 1/(24n^2) - 1/(24n^3) + 23/(960*n^4) - 1/(160n^5) - 11/(8064*n^6) - 1/(896n^7) + 143/(30720*n^8) + ...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> s = Sum[1/k, {k, 1, n}] - Log[n*(1 + 1/(2*n))] - EulerGamma; CoefficientList[ Series[s, {n, Infinity, 25}], 1/n][[3 ;; -1]] // Denominator (* _Jean-François Alcover_, Sep 12 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A189048.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,frac</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Apr 16 2011</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Jean-François Alcover_, Sep 12 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A199342.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A199342">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,23,43,223,233,433,443,2243,2333,2423,3323,3343,3433,4243,4423,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 22343,22433,23333,24223,24443,32233,32323,32423,32443,33223,33343,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 42223,42323,42433,42443,43223,222323,223243,223423,224233,224423,224443,232333,232433,233323,233423,234323,234343,242243,243233,243343,243433,244243,244333</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes having only the (decimal) digits 2, 3 and 4.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n, list=0, L=[2, 3, 4], reqpal=0)={my(t); for(d=1, 1e9, u=vector(d, i, 10^(d-i))~; forvec(v=vector(d, i, [1+(i==1&amp;!L[1]), #L]), isprime(t=vector(d, i, L[v[i]])*u)|next; reqpal &amp; !isprime(A004086(t)) &amp; next; list &amp; print1(t&quot;, &quot;); n--|return(t)))}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A020449 - A020472, A199325 - A199329.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _M. F. Hasler_, Nov 05 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

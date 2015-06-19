@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A188970.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A188970">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,0,1,1,0,0,1,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,1,1,0,1,0,0,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,0,1,0,0,1,0,0,1,1,1,0,0,1,1,0,1,1,0,0,1,1,1,0,0,0,0,1,1,0,1,0,1,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,0,1,1,1,0,0,0,0,1,1,1,0,1,0,0,1,1,0,1,0,0,1,1,1,1,0,0,0,0,1,1,0,1,1,0,1,0,0,1,1,0,1,1,1,0,0,1,0,0,1,1,1,0,0,0,0,0,1,1,0,1,1,0,1,0,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Zero-one sequence based on (4n-3): a(A016813(k))=a(k); a(A004772(k))=1-a(k); a(1)=0.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let u=A016813 and v=A004772, so that u(n)=4n-3 and v=complement(u) for n&gt;=1.  Then a is a self-generating zero-one sequence with initial value a(1)=0 and a(u(k))=a(k); a(v(k))=1-a(k).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u[n_] := 4n - 3;  (*A016813*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[1] = 0; h = 128;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> c = (u[#1] &amp;) /@ Range[h];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> d = (Complement[Range[Max[#1]], #1] &amp;)[c]; (*A004772*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[a[d[[n]]] = 1 - a[n], {n, 1, h - 1}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[a[c[[n]]] = a[n], {n, 1, h}]   (*A188970*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[Position[%, 0]]  (*A188971*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[Position[%%, 1]] (*A188972*)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A188971, A188972.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Apr 14 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

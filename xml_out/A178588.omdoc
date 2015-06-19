@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A178588.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A178588">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 14741,22727,23327,28277,63541,65761,85453,1217171,1221221,1227271,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1243421,1245421,1253521,1261571,1271671,1283771,1327231,1338331,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1347481,1359581,1363631,1371731,1415191,1489841,1513151,1514101</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes that are the average of the members of exactly 2 emirp pairs.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 23327 is the prime arithmetic mean of emirp pair (10853, 35801) as well as of emirp pair (15803, 30851), and no other.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A178581, A178587, A178589.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lekraj Beedassy_, May 29 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Ray Chandler_, Jul 05 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(8)-a(26) from _Donovan Johnson_, Jul 06 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

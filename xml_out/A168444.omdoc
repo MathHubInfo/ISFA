@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A168444.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A168444">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,0,1,5,21,91,422,2103,11226,63879,385691,2461004,16535820,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 116628147,861033654,6637143698,53297137552,444940442553,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3854539901147,34592812084693,321125878230123,3079144039478532,30457076370822777,310407099470429818,3255972198123974137,35114803641531204063</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of the set {1,2,...,n} such that no block is a sequence of consecutive integers (including 1-element blocks)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Some similar results appear in M. Klazar, Bell numbers, their relatives, and algebraic differential equations, J. Combin. Theory, Ser. A 102 (2003), 53-87.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Richard Stanley, Enumerative Combinatorics, volume 1, second edition, Cambridge Univ Press, 2011, page 192, solution 111.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A168444/b168444.txt&quot;&gt;Table of n, a(n) for n = 0..500&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Ordinary g.f.: (1-x)F(x(1-x)), where F(x) = sum_{n&gt;=0} B(n)x^n (the ordinary g.f. for the Bell numbers)</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A168444"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="b" cd="A168444"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="b" cd="A168444"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A168444"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="if" cd="A168444"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>then <OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>else <OMOBJ>
+        <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMA>
+      <OMS name="ceiling" cd="A168444"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="binomial" cd="A168444"/>
+      <OMV name="k"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="B" cd="A168444"/>
+      <OMV name="k"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+      </OMOBJ>.-_Vladimir Kruchinin_ ,Sep 09 2010 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> For n=5 the a(5) = 5 partitions are 13-245, 14-235, 24-135, 25-135, 35-124.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(combinat): y:=sum(bell(n)*x^n,n=0..20): z:=(1-x)*subs(x=x*(1-x),y): taylor(z,x=0,21);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> nn = 20; b := Sum[BellB[n] (x - x^2)^n, {n, 0, nn}]; CoefficientList[ Series[ (1-x) b, {x, 0, nn}], x] (* _Geoffrey Critzer_, Jun 01 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) b(n):=if n=0 then 1 else sum(binomial(k,n-k)*(-1)^(n-k)*belln(k),k,ceiling(n/2),n); a(n):=if n=0 then 1 else b(n)-b(n-1); [_Vladimir Kruchinin_, Sep 09 2010]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> N=66;  x = 'x+O('x^N);</CMP>
+    </omtext><omtext class="program">
+      <CMP> B = serlaplace(exp(exp(x)-1));</CMP>
+    </omtext><omtext class="program">
+      <CMP> gf = (1-x)*subst(B,'x, x*(1-x));</CMP>
+    </omtext><omtext class="program">
+      <CMP> Vec(gf) \\ _Joerg Arndt_, Jun 01 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column k=0 of A177254.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Richard Stanley_, Nov 25 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Added more terms, _Joerg Arndt_, Jun 01 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

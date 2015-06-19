@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A189070.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A189070">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 256,65536,3450100,112065936,4978704008,287687887135,15741481568133,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 784513337393283,38847888577030583,1976954458226489324,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 101442818681363216652,5172132737293384995985,262697289178376867663383</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 8Xn binary arrays without the pattern 0 1 0 antidiagonally or horizontally</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row 8 of A189064</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A189070/b189070.txt&quot;&gt;Table of n, a(n) for n = 1..200&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for 8X3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0....0..0..0....0..0..0....0..0..0....0..0..0....0..0..0....0..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0....0..0..1....0..0..0....0..0..1....0..0..0....0..0..0....0..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..1....0..0..1....0..1..1....0..0..1....0..1..1....1..0..0....0..0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0....1..1..1....1..1..0....1..1..0....1..1..1....1..0..0....0..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..1....1..1..1....0..0..0....1..0..0....1..0..1....0..1..1....1..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..0....0..0..0....1..1..1....0..0..1....1..0..0....1..0..1....1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..0....1..0..1....1..1..1....0..0..1....1..0..0....1..1..1....1..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..1....1..0..1....1..0..1....1..0..0....1..0..0....1..1..0....1..0..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Apr 16 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

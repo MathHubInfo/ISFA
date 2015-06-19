@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A217251.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A217251">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,16,149,2196,47887,1503874,66909705,4169455768,362532436091,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 43987829285214,7442339208497437,1752526591489955620,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 573506919224762378871,260490696017559308642506,163929335780245427253134993,142635351437113204426676060976,171300311626537525852633862663155</CMP>
+    </assertion><omtext class="name">
+      <CMP>  E.g.f. satisfies: A(x) = Sum_{n&gt;=0} x^n * exp(n*x*A(n*x)) / n!.</CMP>
+    </omtext><omtext class="comment">
+      <CMP>  Compare to: W(x) = Sum_{n&gt;=0} x^n * exp(n*x*W(x)) / n! where W(x) = Sum_{n&gt;=0} (n+1)^(n-1)*x^n/n!.</CMP>
+    </omtext><assertion class="example">
+      <CMP>  E.g.f.: A(x) = 1 + x + 3*x^2/2! + 16*x^3/3! + 149*x^4/4! + 2196*x^5/5! +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> where</CMP>
+    </assertion><assertion class="example">
+      <CMP> A(x) = 1 + x*exp(x*A(x)) + x^2*exp(2*x*A(2*x))/2! + x^3*exp(3*x*A(3*x))/3! + x^4*exp(4*x*A(4*x))/4! +...</CMP>
+    </assertion><omtext class="program">
+      <CMP>  (PARI) {a(n)=local(A=1+x); for(i=1, n, A=sum(m=0, n, x^m/m!*exp(m*x*subst(A,x,m*x)+x*O(x^n)))); n!*polcoeff(A, n)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=0, 20, print1(a(n), &quot;, &quot;))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP>  Cf. A214933, A000272.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Mar 16 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

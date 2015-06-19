@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A079092.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A079092">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,4,8,12,36,24,32,48,64,144,216,120,160,216,216,240,480,384,432,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 576,384,432,1008,1344,768,864,720,1440,1152,1280,1320,1056,1200,1440,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2808,3120,1920,2016,2016,1728,2304,3072,5760,2400,4160,4992,3456,3168,6336</CMP>
+    </assertion><omtext class="name">
+      <CMP> Euler's totient of (prime(n)+1)*(prime(n+1)+1)/4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)=A000010(A079079(n)).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A079092/b079092.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a079092 = a000010 . a079079  -- _Reinhard Zumkeller_, Oct 09 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Dec 22 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

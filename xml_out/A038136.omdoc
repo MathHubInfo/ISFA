@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A038136.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A038136">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,11,101,181,1181,1811,18181,108881,110881,118081,120121,121021,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 121151,150151,151051,151121,180181,180811,181081,188011,188801,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1008001,1022201,1028011,1055501,1058011,1082801,1085801,1088081</CMP>
+    </assertion><omtext class="name">
+      <CMP> Erroneous version of A134996.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> dead</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

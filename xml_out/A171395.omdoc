@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A171395.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A171395">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 665,666,678,683,684</CMP>
+    </omtext><omtext class="name">
+      <CMP> Solutions to the equation M(n)=-12 (M = Mertens function A002321)).</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Neven Juric (neven.juric(AT)apis-it.hr), Sep 28, 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

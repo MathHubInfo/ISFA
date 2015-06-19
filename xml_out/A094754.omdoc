@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A094754.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A094754">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Middle coefficient of cyclotomic polynomial Phi_n(x).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = 0 if n is a power of 2, otherwise a(n) is odd.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. P. Dresden, On the middle coefficient of a cyclotomic polynomial, Amer. Math. Monthly, 111 (No. 6, 2004), 531-533.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A094754/b094754.txt&quot;&gt;Table of n, a(n) for n=1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(numtheory); t1:=[0,0]; for n from 3 to 120 do t2:=cyclotomic(n, x); t3:=degree(t2, x); t1:=[op(t1),coeff(t2, x,floor(t3/2))]; od: t1;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A095877 (n such that the middle coefficient of Phi_n(x) has a value not obtained for smaller n).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Jun 10 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

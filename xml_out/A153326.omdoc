@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A153326.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A153326">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,8,9,25,27,35,39,55,65,119,125,185,203,219,235,237,289,305,319,341,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 415,417,437,515,535,597,649,655,671,685,749,755,905,935,959,979,989,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1003,1043,1079,1111,1119,1165,1227,1247,1285,1299,1315,1343,1355,1465,1469,1565,1649,1681,1735,1739,1829</CMP>
+    </assertion><omtext class="name">
+      <CMP> Composite numbers n such that n+1+d is prime for all nontrivial divisors d which divide n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 4 and 8 are the only even numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers in the sequence which are not semiprimes: 8, 27, 125, 935, 1859, 2849 etc. - R. J. Mathar, Jan 06 2009</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> {n: n+1+d in A000040 for all 1&lt;d&lt;n with d|n}.</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> For n=8, the nontrivial divisors are 2 and 4 and (8+1)+2 = 11 and (8+1)+4 = 13 are both prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> For 35 the nontrivial divisors are 5 and 7. With (35+1) + 5=41 and (35+1) + 7 = 43, both sums are primes.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _J. M. Bergot_, Dec 23 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Added 4, replaced 121 by 125, extended, simplified definition, added non-semiprime examples. _R. J. Mathar_, Jan 06 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

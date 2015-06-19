@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A120938.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A120938">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,5,10,13,26,52,65,130,143,273,416,426,569,1138,1707,3414,3983,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7966,11949,13087,26174,38123,76246,152492,190615,381230,571845,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1143690,1181813,2325503,4651006,9302012,11627515,20929527,32557042,65114084</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(0)=1. a(n) = a(n-1) + (largest integer occurring among {a(0),a(1),a(2),..a(n-1)} which is coprime to n).</CMP>
+    </omtext><assertion class="example">
+      <CMP> Among the terms {a(0),a(1),a(2),a(3),a(4),a(5)}, a(5) = 13 is the largest term which is coprime to 6. So a(6) = a(5) + 13 = 26.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A120938 := proc(nmax) local a,cpr,n,i; a := [1,2]; for n from 3 to nmax do cpr := 0; for i from 1 to n-1 do if gcd(n-1,a[i]) = 1 and a[i] &gt; cpr then cpr := a[i]; fi; od; a := [op(a), a[n-1]+cpr]; od: RETURN(a); end: nmax := 100 : a := A120938(nmax) : for n from 1 to nops(a) do printf(&quot;%d,&quot;,a[n]); od; - _R. J. Mathar_, Aug 17 2006</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {m=37;print1(a=1,&quot;,&quot;);v=[a];for(n=1,m,a=0;for(j=1,n,if(gcd(v[j],n)==1&amp;&amp;a&lt;v[j],a=v[j]));print1(a=a+v[n],&quot;,&quot;);v=concat(v,a))} - (Klaus Brockhaus, Aug 16 2006)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A120939.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Leroy Quet_, Jul 17 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Klaus Brockhaus_, Aug 16 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _R. J. Mathar_, Aug 17 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

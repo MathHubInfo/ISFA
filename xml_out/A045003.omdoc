@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A045003.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A045003">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 512,548,560,564,656,668,672,704,708,720,809,917,953,965,969,1241,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1277,1289,1293,1385,1397,1401,1433,1437,1449,1511,1529,1535,1537,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1565,1601,1613,1617,1637,1643,1645,1655,1667,1671</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n with property that in base 3 representation the numbers of 0's and 2's are 2 and 4, respectively.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[2000],DigitCount[#,3,0]==2&amp;&amp;DigitCount[#,3,2]==4&amp;] (* _Harvey P. Dale_, Apr 07 2014 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

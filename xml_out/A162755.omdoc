@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A162755.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A162755">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,9,72,540,4032,29988,223020,1658160,12328596,91662732,681510816,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5067014148,37673118252,280098623952,2082525799284,15483523651596,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 115119584685504,855911035979748,6363675682412076,47313758657548656</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of reduced words of length n in Coxeter group on 9 generators S_i with relations (S_i)^2 = (S_i S_j)^3 = I.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The initial terms coincide with those of A003951, although the two sequences are eventually different.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> First disagreement at index 3: a(3) = 540, A003951(3) = 576. - _Klaus Brockhaus_, Jun 15 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Computed with MAGMA using commands similar to those used to compute A154638.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="t"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>28</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>7</OMI><OMV name="t"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A162755"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A162755"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>9</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A162755"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMI>72</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A162755"/>
+      <OMI>3</OMI>
+    </OMA>
+      <OMI>540</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A162755"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="a" cd="A162755"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="a" cd="A162755"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>28</OMI><OMA>
+      <OMS name="a" cd="A162755"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Harvey <OMOBJ>
+        <OMV name="P"/>
+      </OMOBJ>.Dale_ ,Jun 15 2011 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Join[{1},LinearRecurrence[{7,7,-28},{9,72,540},50]] (* or *) CoefficientList[ Series[(t^3+2t^2+2t+1)/(28t^3-7t^2-7t+1),{t,0,50}],t] (* _Harvey P. Dale_, Jun 15 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A003951 (G.f.: (1+x)/(1-8*x).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _John Cannon_ and _N. J. A. Sloane_, Dec 03 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

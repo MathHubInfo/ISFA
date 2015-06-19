@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A003247.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A003247">
+          <assertion class="***** TTTT *****">
+      <CMP> M0539</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,4,6,7,8,9,10,11,12,13,15,16,17,18,19,21,22,23,24,25,26,27,28,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 30,31,32,33,34,36,37,38,40,41,42,43,44,46,47,48,49,50,51,52,53,55,56,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 57,58,59,61,62,63,64,65,66,67,68,70,71,72,73,74,75,76,77</CMP>
+    </assertion><omtext class="name">
+      <CMP> Complement of A003248.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers n such that A003234(n) equals the image of some x by A000201(A001950()) (see 1.20 p.339 of Carlitz link). - _Michel Marcus_, Feb 02 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is the function named t in [Carlitz]. - _Eric M. Schmidt_, Aug 14 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> L. Carlitz, R. Scoville and T. Vaughan, &lt;a href=&quot;http://www.fq.math.ca/Scanned/11-4/carlitz.pdf&quot;&gt;Some arithmetic functions related to Fibonacci numbers&lt;/a&gt;, Fib. Quart., 11 (1973), 337-386.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A000201(n) = floor(n*(sqrt(5)+1)/2);</CMP>
+    </omtext><omtext class="program">
+      <CMP> A001950(n) = floor(n*(sqrt(5)+3)/2);</CMP>
+    </omtext><omtext class="program">
+      <CMP> A003231(n) = floor(n*(sqrt(5)+5)/2);</CMP>
+    </omtext><omtext class="program">
+      <CMP> is003234(n) = A003231(A001950(n)) == A001950(A003231(n)) - 1;</CMP>
+    </omtext><omtext class="program">
+      <CMP> lista(nn) = {vab = vector(nn, i, A000201(A001950(i))); v003234 = select(n-&gt;is003234(n), vector(nn, i, i)); for (n=1, #v003234, if (vecsearch(vab, v003234[n]), print1(n, &quot;, &quot;)););} \\ _Michel Marcus_, Feb 02 2014</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Michel Marcus_, Feb 02 2014</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> New definition from _Eric M. Schmidt_, Aug 14 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

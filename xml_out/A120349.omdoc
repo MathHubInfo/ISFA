@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A120349.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A120349">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 36,3600,8100,10000,22500,26244,32400,90000,142884,202500,396900,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 518400,656100,810000,980100,1285956,1368900,1587600,1679616,2286144,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2340900,2624400,2924100</CMP>
+    </assertion><omtext class="name">
+      <CMP> Refactorable numbers such that the number of odd divisors r is odd, the number of even divisors s is even and both r and s are divisors of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In general, since n is even, r is always a multiple of s and even if both r and s are divisors of n, the sum t=r+s may not be. For example, if n=144, then r=3, s=12 and t=r+s=15.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A120349"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="th"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>number such that <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>is even ,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="r"/>
+      <OMV name="number"/>
+    </OMA>
+      </OMOBJ>of odd divisors of <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="s"/>
+      <OMV name="number"/>
+    </OMA>
+      </OMOBJ>of even divisors of <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="t"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="r"/><OMV name="s"/>
+    </OMA>
+    </OMA>
+      <OMV name="number"/>
+    </OMA>
+      </OMOBJ>of divisors of <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>,are all divisors of <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>and <OMOBJ>
+        <OMV name="r"/>
+      </OMOBJ>is odd ,<OMOBJ>
+        <OMV name="s"/>
+      </OMOBJ>is even .
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(1)=36 since r=3(odd), s=6(even) and t=r+s=9 are all divisors.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory); T := proc(n::posint) local x, y, S; S:=divisors(n); x:=nops( select(z-&gt;type(z,odd),S) ); y:=nops( select(z-&gt;type(z,even),S) ); return [x,y] end; RF:=[]: N:=12^6/2: CNT:=12^4: for w to 1 do for k from 1 to N do n:=2*k; if k mod CNT = 0 then print((N-k)/CNT) fi; r:=T(n)[1]; s:=T(n)[2]; t:=r+s; if type(s,even) and type(r,odd) and andmap(z -&gt; n mod z = 0, [r,s,t]) then RF:=[op(RF),n]; print(n,r,s,t); fi; od od; RF;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A033950, A049439, A057265.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Walter Kehowski_, Jun 24 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

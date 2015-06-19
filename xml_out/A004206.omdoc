@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A004206.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A004206">
+          <assertion class="***** TTTT *****">
+      <CMP> M2381</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,4,25,108,735,5248,40824,362000,3628185,39045888,478988081,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6227101888,87146087625,1314459353088,20922788404479,355737629952000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6402373698206889,121479069952000000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of permutations of length n with spread 2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Graham, R. L.; Lehmer, D. H. On the permanent of Schur's matrix. J. Austral. Math. Soc. Ser. A 21 (1976), no. 4, 487-497.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Graham, R. L.; Lehmer, D. H., &lt;a href=&quot;http://www.math.ucsd.edu/~sbutler/ron/76_07_schurs_matrix.pdf&quot;&gt;On the Permanent of Schur's Matrix&lt;/a&gt;, Jour. Australian Math. Soc. 21 (series A) (1976), 487-497.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Herman Jamke (hermanjamke(AT)fastmail.fm), May 17 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

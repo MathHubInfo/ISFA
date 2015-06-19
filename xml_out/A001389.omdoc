@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A001389.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A001389">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,12,1112,10112,11102112,10110122112,1110211011222112,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10110122110211022112,1110211011222110122110222112,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 10110122110211022110112221101022112,11102110112221101221102221102110221101110222112</CMP>
+    </assertion><omtext class="name">
+      <CMP> To get the 6th term, for example, note that 5th term has three (10 in ternary!) 1's, one (1) 0, etc., giving 10 1 1 0 1 2 2 1 1 2.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Thomas L. York_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sean A. Irvine_, Jul 04 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

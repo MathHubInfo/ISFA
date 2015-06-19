@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A174622.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A174622">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,10,22,45,90,177,348,684,1350,2670,5298,10531,20974,41815,83452,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 166639,332926,665329,1329964,2658898,5316430,10630828,21258958,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 42513898,85022458,170036950,340063306,680110785,1360200510,2720369517</CMP>
+    </assertion><omtext class="name">
+      <CMP> Partial sums of A005256.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Partial sums of number of weighted voting procedures. The subsequence of primes in this partial sum begins: 10531, no more through a(32).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A174622"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="SUM" cd="A174622"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>..n ]<OMOBJ>
+        <OMA>
+      <OMR xref="A005256"/>
+      <OMV name="i"/>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A005256.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Vos Post_, Mar 24 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

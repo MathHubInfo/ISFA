@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A094983.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A094983">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,2,2,2,3,4,5,6,7,8,10,12,15,18,22,26,31,38,46,55,66,79,95,114,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 137,164,197,237,284,341,410,492,590,708,850,1020,1224,1469,1763,2116,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2539,3047,3657,4388,5266,6319,7583,9100,10920,13104,15725,18870,22644</CMP>
+    </assertion><omtext class="name">
+      <CMP> Floor(6^n/5^n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A094983/b094983.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[ Floor[(6/5)^n], {n, 0, 30}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Floor(6^n / 5^n): n in [0..60]]; // Vincenzo Librandi, Sep 08 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002379, A094969 - A094500.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, May 26 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

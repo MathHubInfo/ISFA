@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A075600.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A075600">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,1117,211177,12111773,1121117731,1112111773139,811121117731399,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 18111211177313993,5181112111773139933,351811121117731399339,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 63518111211177313993399,11635181112111773139933991</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(1) = 11 and then the smallest prime that is obtained by placing digits on both sides of the previous term. Or smallest prime that encompasses a(n-1).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A075595, A075596, A075597, A075598, A075599, A075601, A075602.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Sep 28 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sascha Kurz_, Jan 20 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

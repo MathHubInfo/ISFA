@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A224479.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A224479">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,2,2,24,24,384,3456,276480,276480,955514880,955514880,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 428070666240,866843099136000,1775294667030528000,1775294667030528000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 331312591939905257472000,331312591939905257472000,339264094146462983651328000000</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = product_{1 &lt;= k &lt;= n} product_{1 &lt;= i &lt; k} GCD(k,i).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The order of the primes in the prime factorization of a(n) is given by</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ord_{p}(a(n)) = (1/2)*sum(i&gt;0, floor(n/p^i)*(floor(n/p^i)-1)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Product of all entries of lower-left (excluding main diagonal) triangular submatrix of GCDs. Also the product of all entries of upper-right (excluding main diagonal) triangular submatrix of GCDs, since the matrix is symmetric. - _Daniel Forgues_, Apr 14 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)^2 * n! gives A092287(n), where n! is the product of the main diagonal entries of the matrix. - _Daniel Forgues_, Apr 14 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> Charles R Greathouse IV, &lt;a href=&quot;/A224479/b224479.txt&quot;&gt;Table of n, a(n) for n = 0..97&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> OEIS Wiki, &lt;a href=&quot;/wiki/Generalizations_of_the_factorial#Formulae_for_GCD_matrix_generalization_of_the_factorial&quot;&gt;Generalizations of the factorial&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n) = product_{k in 1..n} product_{d divides k, d &lt; k} d^phi(k/d).</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A224479"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+      <OMA>
+      <OMR xref="A092287"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A224479"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A224479"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A051190"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A224479"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="sqrt" cd="A224479"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A092287"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Daniel Forgues_ ,Apr 14 2013 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> A224479 := proc(n) local h, k, d;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> mul(mul(d^phi(k/d), d = divisors(k) minus {k}), k = 1..n) end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(A224479(i), i = 0..20);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := Product[ d^EulerPhi[k/d], {k, 1, n}, {d, Divisors[k] // Most}]; Table[a[n], {n, 0, 20}] (* _Jean-François Alcover_, Jun 27 2013, after Maple *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) def A224479(n):</CMP>
+    </omtext><omtext class="program">
+      <CMP>     R = 1;</CMP>
+    </omtext><omtext class="program">
+      <CMP>     for p in primes(n):</CMP>
+    </omtext><omtext class="program">
+      <CMP>         s = 0; r = n</CMP>
+    </omtext><omtext class="program">
+      <CMP>         while r &gt; 0 :</CMP>
+    </omtext><omtext class="program">
+      <CMP>             r = r//p</CMP>
+    </omtext><omtext class="program">
+      <CMP>             s += r*(r-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP>         R *= p^(s/2)</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return R</CMP>
+    </omtext><omtext class="program">
+      <CMP> [A224479(i) for i in (0..20)]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=prod(k=1,n,my(s=1);fordiv(k,d,d&lt;k &amp;&amp; s*=d^eulerphi(k/d));s) \\ _Charles R Greathouse IV_, Jun 27 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A051190, A092287.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Peter Luschny_, Apr 07 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

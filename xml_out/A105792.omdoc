@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A105792.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A105792">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,7,13,19,23,31,37,43,47,53,61,67,73,79,83,89,97,103,109,113,127,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 131,139,151,157,163,167,173,181,193,199,211,223,229,233,241,251,257,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 263,271,277,283,293,307,313,317,331,337,349,353,359,367,373,379,383,389</CMP>
+    </assertion><omtext class="name">
+      <CMP> Largest prime &lt;= numbers congruent (2,4) mod 6 (duplicates removed).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Except for the first terms, largest prime p is at least &lt; two numbers congruent (2,4) mod 6.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 7 is in the sequence because 7 is the largest prime &lt; 8 which is a number congruent (2,4) mod 6.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> pp[n_] := Block[{k = n},While[ ! PrimeQ[k], k-- ];k];Union[pp /@ Select[Range[400], MemberQ[{2, 4}, Mod[ #, 6]] &amp;]] (*Chandler*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Union[Abs[NextPrime[#,-1]&amp;/@Select[Range[400],MemberQ[{2,4}, Mod[ #,6]]&amp;]]]  _Harvey P. Dale_, May 17 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A105399, A105575.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Giovanni Teofilatto_, May 05 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Ray Chandler_, Oct 17 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

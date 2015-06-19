@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A120168.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A120168">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,13,17,21,26,33,41,51,64,80,100,125,156,195,244,305,381,476,595,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 744,930,1163,1453,1817,2271,2839,3548,4435,5544,6930,8663,10828,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13535,16919,21149,26436,33045,41306,51633,64541</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(1)=11; a(n)=floor((44+sum(a(1) to a(n-1)))/4).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A073941, A112088, A072493.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Graeme McRae_, Jun 10 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

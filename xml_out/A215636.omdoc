@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A215636.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A215636">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,3,24,135,660,3003,13104,55689,232500,958617,3916440,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 15890355,64127700,257698347,1032023136,4121456625,16421256420,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 65301500577,259259758056,1027901275131,4070632899300,16104283594083,63657906293520,251447560563465,992593021410900</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = - 12*a(n-1) - 54*a(n-2) - 112*a(n-3) - 105*a(n-4) - 36*a(n-5) - 2*a(n-6) with a(0)=a(1)=a(2)=0, a(3)=-3, a(4)=24, a(5)=-135.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Berndt-type sequence number 4 for the argument 2Pi/9 defined by the relation: X(n) = b(n) + a(n)*sqrt(2), where X(n) := ((cos(Pi/24))^(2*n) + (cos(7*Pi/24))^(2*n) + ((cos(3*Pi/8))^(2*n))*(-4)^n. We have b(n)=A215635(n) (see also section &quot;Example&quot; below). For more details - see comments to A215635, A215634 and Witula-Slota's reference.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Witula, D. Slota, On modified Chebyshev polynomials, J. Math. Anal. Appl., 324 (2006), 321-343.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_06&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (-12, -54, -112, -105, -36, -2).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>12</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>9</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>12</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>54</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>112</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>105</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>36</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> We have X(1)=-6, X(2)=18 and X(3)=-60-3*sqrt(2), which implies the equality: (cos(Pi/24))^6 + (cos(7*Pi/24))^6 + ((cos(3*Pi/8))^6 = (60+3*sqrt(2))/64.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> LinearRecurrence[{-12,-54,-112,-105,-36,-2}, {0,0,0,-3,24,-135}, 50]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A215455, A215634, A215635, A215664, A215885, A215665, A215666, A215829, A215831, A215917, A215919, A215945, A216034, A215948, A216757.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roman Witula_, Aug 18 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

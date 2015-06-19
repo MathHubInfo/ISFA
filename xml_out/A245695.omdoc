@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A245695.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A245695">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,0,4,25,42,49,88,207,170,121,12,377,938,285,688,391,558,703,1780,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 609,682,713,2328,3275,1066,1593,28,1943,6690,3317,4064,2607,1258,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3395,2196,4847,38,1677,3880,2173,42,4171,3124,2115,10994,4747,11184,2597,4150,3111,14092,2809,3834,12265,3976,8493,6206,16697,17580,16531,47678,8253,17344,4355,12738,18961,4964,5727,9170,9869,61704,7373</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least number k &gt;= 0 such that (n!+k)/n is prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = M*n for some integer M &gt;= 0.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = n times least m &gt;= 0 such that (n-1)!+m is prime. - _Jens Kruse Andersen_, Jul 30 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jens Kruse Andersen, &lt;a href=&quot;/A245695/b245695.txt&quot;&gt;Table of n, a(n) for n = 1..2001&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A245695"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMR xref="A033932"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,except <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A245695"/>
+      <OMI>3</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMR xref="A033932"/>
+      <OMV name="demands"/>
+    </OMA>
+      </OMOBJ>positive values .-_Jens Kruse Andersen_ ,Jul 30 2014 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> (4!+0)/4 = 6 is not prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> (4!+1)/4 = 25/4 is not prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> (4!+2)/4 = 26/4 is not prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> (4!+3)/4 = 27/4 is not prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> (4!+4)/4 = 7 is prime. Thus a(4) = 4.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a(n)=for(k=0,10^6,s=(n!+k)/n;if(floor(s)==s,if(ispseudoprime(s),return(k))))</CMP>
+    </omtext><omtext class="program">
+      <CMP> n=1;while(n&lt;100,print1(a(n),&quot;, &quot;);n++)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A033932, A245696, A245697.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Derek Orr_, Jul 29 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

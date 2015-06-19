@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A027295.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A027295">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,15,52,195,676,2555,8976,34098,121448,463067,1669340,6384287,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 23251620,89157557,327523680,1258803182,4658150520,17940605163,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 66803546472,257777882894,965023761064</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = Sum{T(n,k)*T(n,k+1)}, 0&lt;=k&lt;=m-1, where m=n for n=0,1 and m=[ (n+3)/2 ] for n &gt;= 2, T given by A026022.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

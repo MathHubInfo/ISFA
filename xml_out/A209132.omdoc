@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A209132.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A209132">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,3,0,4,5,0,4,12,11,0,4,20,36,21,0,4,28,76,92,43,0,4,36,132,244,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 228,85,0,4,44,204,508,716,540,171,0,4,52,292,916,1732,1972,1252,341,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,4,60,396,1500,3564,5436,5196,2844,683,0,4,68,516,2292,6564</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle of coefficients of polynomials v(n,x) jointly generated with A209131; see the Formula section.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For a discussion and guide to related arrays, see A208510.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> As triangle T(n,k) with 0&lt;=k&lt;=n, it is (0, 4/3, -1/3, 0, 0, 0, 0, 0, 0, 0, ...) DELTA (3, -4/3, -2/3, 0, 0, 0, 0, 0, 0, 0, 0, ...) where DELTA is the operator defined in A084938. - _Philippe Deléham_, Mar 21 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sums are powers of 3 (A000244). - _Philippe Deléham_, Mar 21 2012</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="u" cd="A209132"/>
+      <OMV name="n"/><OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="u" cd="A209132"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="x"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="v" cd="A209132"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="x"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="v" cd="A209132"/>
+      <OMV name="n"/><OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/><OMA>
+      <OMS name="u" cd="A209132"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="x"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="v" cd="A209132"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="x"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="u" cd="A209132"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="v" cd="A209132"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A209132"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="T" cd="A209132"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="T" cd="A209132"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="T" cd="A209132"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="T" cd="A209132"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A209132"/>
+      <OMI>1</OMI><OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A209132"/>
+      <OMI>2</OMI><OMI>0</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A209132"/>
+      <OMI>2</OMI><OMI>1</OMI>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A209132"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>or if <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>.-_Philippe Deléham_ ,Mar 21 2012 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> First five rows:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0...3</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0...4...5</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0...4...12...11</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0...4...20...36...21</CMP>
+    </assertion><assertion class="example">
+      <CMP> First three polynomials v(n,x): 1, 3x, 4x + 5x^2.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> u[1, x_] := 1; v[1, x_] := 1; z = 16;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u[n_, x_] := u[n - 1, x] + (x + 1)*v[n - 1, x];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> v[n_, x_] := 2 x*u[n - 1, x] + x*v[n - 1, x];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Expand[u[n, x]], {n, 1, z/2}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Expand[v[n, x]], {n, 1, z/2}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> cu = Table[CoefficientList[u[n, x], x], {n, 1, z}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> TableForm[cu]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[%]    (* A209131 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Expand[v[n, x]], {n, 1, z}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> cv = Table[CoefficientList[v[n, x], x], {n, 1, z}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> TableForm[cv]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[%]    (* A209132 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A209131, A208510.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Mar 05 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

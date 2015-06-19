@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A095814.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A095814">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,3,4,6,8,11,15,21,28,39,51,68,88,116,149,193,245,314,396,501,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 628,788,979,1218,1505,1859,2283,2802,3421,4175,5072,6155,7442,8989,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 10819,13008,15593,18669,22292,26587,31631,37588,44567,52779,62377</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nonisomorphic partitions of n on the Ferrers diagram.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Partitions of n into at most ceil(n/2) parts and with at least 1 part greater than or equal to n-floor(n/2)</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A095814"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000041"/>
+      <OMV name="n"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMR xref="A000041"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>is even and <OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000041"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMR xref="A000041"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>is odd .
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(5) is given by 5,41,32,311</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jon Perry_, Jul 13 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A114657.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A114657">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1373989,3296581,3771211,4014739,4073371,5191033,15188731,19461661,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 23108101,27478621,27945061,39242701,40393051,48942661,51113941,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 60043411,62362411,66868621,71443531,73572181,94008091,103767691</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes with 40 as smallest positive primitive root.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (* first load *) &lt;&lt; NumberTheory`NumberTheoryFunctions` (* then *) Select[ Prime@Range@6354000, PrimitiveRoot@# == 40 &amp;]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001122-A001126, A061323-A061335, A061730-A061741, A114657-A114686.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Dec 21 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

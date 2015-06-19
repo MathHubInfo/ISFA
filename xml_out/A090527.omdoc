@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A090527.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A090527">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,11,29,11,137,79,149,13,17,181,7,71,41,53,541,197,61,149,149,19,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 541,1663,829,229,599,13,563,113,137,13,1129,421,1759,683,389,919,877,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 233,1933,2137,97,331,881,1753,193,137,521,1063,59</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest prime p such that floor[(n^n)/p] is prime, or 0 if no such number exists.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture: No term is zero.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> As long as p(j+1)/p(j) &lt; 2 for all j, then for any integer n &gt;= 4, there exists at least one p such that p, floor(n/p) are both prime. (I do not know a proof for the premise above; however, it seems quite weak compared to other conjectures and theorems about primes. It may be that it follows from the results about the &quot;Smarandache constant&quot;, e.g. described in sequence A038458.) In fact, there exists a prime p such that either floor(n/p) = 2 or floor(n/p) = 3. Outline of proof: (1) If p is a prime number, then for all n with 2p &lt;= n &lt; 3p, floor(n/p) = 2, which is prime. (2) In addition, for all n with 3p &lt;= n &lt; 4p, floor(n/p) = 3, which is prime. So for any n&gt;=4, consider the largest prime, p, with 2p &lt;= n. (3) floor(n/p) can't be less than 2, since 2 &lt;= n/p. (4) If floor(n/p) = 2, then p and floor(n/p) are both prime, so we are done. (5) Similarly, if floor(n/p) = 3, we are done. The only remaining case is that 4p &lt;= n. Let p_1 be the next prime after p. (6) p_n must not meet 2(p_1) &lt;= n, since p is the largest that does. Therefore 2(p_1) &gt; n. (7) 4p &lt;= n &lt; 2(p_1) (8) (p_1 / p) &gt; 2 (9) As long as p(j+1)/p(j) &lt; 2 for all j, the case of 4p &lt;= n is not possible. - Weston Markham (WMarkham(AT)paradigmgenetics.com), Jun 15 2004</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> &lt;&lt;NumberTheory`; Do[p = n^n; i = 1; While[ !ProvablePrimeQ[Floor[p/Prime[i]]], i++ ]; Print[Prime[i]], {n, 2, 100}] (Propper)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A090525, A090526, A090528.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Dec 07 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Weston Markham (WMarkham(AT)paradigmgenetics.com), Jun 15 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Ryan Propper_, Aug 02 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

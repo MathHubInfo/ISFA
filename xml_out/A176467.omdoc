@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A176467.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A176467">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,4,1,1,17,17,1,1,62,196,62,1,1,207,1528,1528,207,1,1,660,9893,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 22154,9893,660,1,1,2053,57991,247913,247913,57991,2053,1,1,6298,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 320818,2388134,4474228,2388134,320818,6298,1,1,19163,1712906,20919938</CMP>
+    </assertion><omtext class="name">
+      <CMP> A symmetrical triangle:q=2;c(n,q)=Product[1 - q^i, {i, 1, n}];t(n,m,q)=A060187(n,m)-c(n,q)/(c(m,q)*c(n-m,q))+1</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sums are:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> {1, 2, 6, 36, 322, 3472, 43262, 615916, 9904730, 177511112, 3486135606,...}.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMI>2</OMI>
+    </OMA>
+      </OMOBJ>;
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="c" cd="A176467"/>
+      <OMV name="n"/><OMV name="q"/>
+    </OMA>
+      <OMA>
+      <OMS name="Product" cd="A176467"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMV name="i"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS cd="set1" name="set">
+        <OMV name="i"/><OMI>1</OMI><OMV name="n"/>
+      </OMS>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>;
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="t" cd="A176467"/>
+      <OMV name="n"/><OMV name="m"/><OMV name="q"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A060187"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="c" cd="A176467"/>
+      <OMV name="n"/><OMV name="q"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="c" cd="A176467"/>
+      <OMV name="m"/><OMV name="q"/>
+    </OMA><OMA>
+      <OMS name="c" cd="A176467"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA><OMV name="q"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> {1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 4, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 17, 17, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 62, 196, 62, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 207, 1528, 1528, 207, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 660, 9893, 22154, 9893, 660, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 2053, 57991, 247913, 247913, 57991, 2053, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 6298, 320818, 2388134, 4474228, 2388134, 320818, 6298, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 19163, 1712906, 20919938, 66103548, 66103548, 20919938, 1712906, 19163, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 58016, 8941891, 171953190, 853179296, 1417870818, 853179296, 171953190, 8941891, 58016, 1}</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> (*A060187*);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> p[x_, n_] = (1 - x)^(n + 1)*Sum[(2*k + 1)^n*x^k, {k, 0, Infinity}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[n_, m_] := CoefficientList[FullSimplify[ExpandAll[p[x, n]]], x][[m + 1]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> c[n_, q_] = Product[1 - q^i, {i, 1, n}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t[n_, m_, q_] := f[n, m] - c[n, q]/(c[m, q]*c[n - m, q]) + 1;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Flatten[Table[Table[t[n, m, q], {m, 0, n}], {n, 0, 10}]], {q, 2, 12}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A060187</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl,uned</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_, Apr 18 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

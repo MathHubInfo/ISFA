@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A024992.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A024992">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,10,16,30,49,77,100,138,181,214,247,320,406,436,478,561,649,731,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 808,900,991,1054,1174,1301,1459,1510,1549,1716,1921,2072,2200,2304,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2413,2488,2743,3002,3169,3172,3280,3546,3859,4070,4207,4353,4489,4597</CMP>
+    </assertion><omtext class="name">
+      <CMP> Coordination sequence T7 for Zeolite Code MWW.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. W. Grosse-Kunstleve, &lt;a href=&quot;/A005897/a005897.html&quot;&gt;Coordination Sequences and Encyclopedia of Integer Sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> International Zeolite Association, &lt;a href=&quot;http://www.iza-structure.org/databases/&quot;&gt;Database of Zeolite Structures&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> rwgk(AT)cci.lbl.gov (R.W. Grosse-Kunstleve)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

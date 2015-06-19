@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A163740.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A163740">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,26,473,2589,17897,146347</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of nX9 binary arrays with all 1s connected, all corners 1, and no 1 having more than two 1s adjacent</CMP>
+    </omtext><assertion class="example">
+      <CMP> All solutions for n=2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.0.0.0.0.0.0.0.1...1.1.1.0.0.0.0.0.1...1.1.1.1.0.0.0.0.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.1.1.1.1.1.1.1.1...1.0.1.1.1.1.1.1.1...1.0.0.1.1.1.1.1.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ------</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.1.1.1.1.0.0.0.1...1.1.1.1.1.1.0.0.1...1.1.1.1.1.1.1.0.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.0.0.0.1.1.1.1.1...1.0.0.0.0.1.1.1.1...1.0.0.0.0.0.1.1.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ------</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.1.1.1.1.1.1.1.1...1.0.1.1.1.0.0.0.1...1.0.0.1.1.1.0.0.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.0.0.0.0.0.0.0.1...1.1.1.0.1.1.1.1.1...1.1.1.1.0.1.1.1.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ------</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.0.1.1.1.1.0.0.1...1.0.0.0.1.1.1.0.1...1.0.0.1.1.1.1.0.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.1.1.0.0.1.1.1.1...1.1.1.1.1.0.1.1.1...1.1.1.1.0.0.1.1.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ------</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.0.1.1.1.1.1.0.1...1.0.0.0.0.0.1.1.1...1.0.0.0.0.1.1.1.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.1.1.0.0.0.1.1.1...1.1.1.1.1.1.1.0.1...1.1.1.1.1.1.0.0.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ------</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.0.0.0.1.1.1.1.1...1.0.0.1.1.1.1.1.1...1.0.1.1.1.1.1.1.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.1.1.1.1.0.0.0.1...1.1.1.1.0.0.0.0.1...1.1.1.0.0.0.0.0.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ------</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.1.1.0.1.1.1.0.1...1.1.1.0.0.0.1.1.1...1.1.1.1.0.0.1.1.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.0.1.1.1.0.1.1.1...1.0.1.1.1.1.1.0.1...1.0.0.1.1.1.1.0.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ------</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.1.1.1.1.0.1.1.1...1.1.1.0.0.1.1.1.1...1.1.1.1.0.1.1.1.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.0.0.0.1.1.1.0.1...1.0.1.1.1.1.0.0.1...1.0.0.1.1.1.0.0.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ------</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.1.1.0.1.1.1.1.1...1.0.1.1.1.0.1.1.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.0.1.1.1.0.0.0.1...1.1.1.0.1.1.1.0.1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Aug 03 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

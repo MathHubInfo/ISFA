@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A178367.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A178367">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,49,58,59,67,68,76,77,85,86,94,95,199,289,298,299,379,388,389,397,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 398,399,469,478,479,487,488,489,496,497,498,559,568,569,577,578,579,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 586,587,588,595,596,597,649,658,659,667,668,669,676,677,678,685,686,687</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers with rounded up arithmetic mean of digits = 7.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A004427(a(n)) = 7;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A000027 = union of A178361, A178362, A178363, A178364, A178365, A178366, A178368, A178369, and this sequence.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Zumkeller, &lt;a href=&quot;/A178367/b178367.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, May 27 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

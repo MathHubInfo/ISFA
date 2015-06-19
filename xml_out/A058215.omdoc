@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A058215.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A058215">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,6,12,30,60,120,240,510,1020,2040,4080,8160,16320,32640,65280,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 131070,262140,524280,1048560,2097120,4194240,8388480,16776960,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 33553920,67107840,134215680,268431360,536862720,1073725440,2147450880,4294901760,8589934590</CMP>
+    </assertion><omtext class="name">
+      <CMP> Largest solution of phi(x) = 2^n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The ratio of adjacent terms is 2 except for five terms (if there are exactly five Fermat primes). - _T. D. Noe_, Jun 21 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A058215/b058215.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Assuming there are only <OMOBJ>
+        <OMI>5</OMI>
+      </OMOBJ>Fermat primes <OMOBJ>
+        <OMR xref="A019434"/>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A058215"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>30</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMI>32</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>31</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> For n=6, 2^n=64; the solutions of phi(x)=64 are {85,128,136,160,170,192,204,240}; the largest is a(6)=240.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> phiinv[ n_, pl_ ] := Module[ {i, p, e, pe, val}, If[ pl=={}, Return[ If[ n==1, {1}, {} ] ] ]; val={}; p=Last[ pl ]; For[ e=0; pe=1, e==0||Mod[ n, (p-1)pe/p ]==0, e++; pe*=p, val=Join[ val, pe*phiinv[ If[ e==0, n, n*p/pe/(p-1) ], Drop[ pl, -1 ] ] ] ]; Sort[ val ] ]; phiinv[ n_ ] := phiinv[ n, Select[ 1+Divisors[ n ], PrimeQ ] ]; Table[ phiinv[ 2^n ][ [ -1 ] ], {n, 0, 30} ] (* phiinv[ n, pl ] = list of x with phi(x)=n and all prime divisors of x in list pl. phiinv[ n ] = list of x with phi(x)=n *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000010, A001317, A003401, A004729, A019434, A045544, A047999, A053576, A054432, A058213, A058214.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Nov 30 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Dean Hickerson_, Jan 25 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

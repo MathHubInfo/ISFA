@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A016317.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A016317">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,20,284,3520,40656,450240,4851904,51315200,535521536,5534172160,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 56773377024,579187015680,5883496124416,59567968993280,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 601543751942144,6062350015528960,60998800124215296,612990400993689600</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of 1/((1-2x)(1-8x)(1-10x)).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A016317/b016317.txt&quot;&gt;Table of n, a(n) for n = 0..900&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/Sindx_Rea.html#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (20,-116, 160).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Contribution by Vincenzo Librandi ,Oct 09 2011 :(Start )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A016317"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>75</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>10</OMI>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>8</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMI>12</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A016317"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>18</OMI><OMA>
+      <OMS name="a" cd="A016317"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>80</OMI><OMA>
+      <OMS name="a" cd="A016317"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A016317"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>20</OMI><OMA>
+      <OMS name="a" cd="A016317"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>116</OMI><OMA>
+      <OMS name="a" cd="A016317"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>160</OMI><OMA>
+      <OMS name="a" cd="A016317"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>.(End )
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (Sage) [((10^n - 2^n)/8-(8^n - 2^n)/6)/2 for n in xrange(2,20)] # [From _Zerinvary Lajos_, Jun 05 2009]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [((75*10^n + 2^n -8^(n+2))/12) : n in [0..20]]; // Vincenzo Librandi, Oct 09 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) Vec(1/((1-2*x)*(1-8*x)*(1-10*x))+O(x^99)) \\ _Charles R Greathouse IV_, Sep 26 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A101803.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A101803">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,2,3,4,4,5,6,6,7,7,8,9,9,10,11,11,12,12,13,14,14,15,15,16,17,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 17,18,19,19,20,20,21,22,22,23,23,24,25,25,26,27,27,28,28,29,30,30,31,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 32,32,33,33,34,35,35,36,36,37,38,38,39,40,40,41,41,42,43,43,44,44,45,46</CMP>
+    </assertion><omtext class="name">
+      <CMP> Nearest integer to n*(phi-1), where phi is golden ratio 1.618033988749895... (A001622).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ron Knott, &lt;a href=&quot;http://www.mcs.surrey.ac.uk/Personal/R.Knott/Fibonacci/fib.html&quot;&gt;Fibonacci Numbers, the Golden Section and the Golden String&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/GoldenRatio.html&quot;&gt;Golden Ratio &lt;/a&gt;.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A101803"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="round" cd="A101803"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMV name="phi"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>where phi is the smaller golden ratio value ,.<OMOBJ>
+        <OMF dec="6.18033988749895E14"/>
+      </OMOBJ>....
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A007067, A001622, A099267, A029922.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Casey Mongoven_, Jan 27 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

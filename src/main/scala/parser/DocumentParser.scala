@@ -240,13 +240,11 @@ object DocumentParser {
 
   def formulaWrap(line : String, theory : String ) : Elem = {
     <omdoc:p class="formula">
-      <CMP>
         {TextParserIns.parseLine(line, theory) match {
           case Some(a) => a.toNode(theory)
-          case None => line
+          case None => <CMP>{line}</CMP>
           }
         }
-      </CMP>
     </omdoc:p>
   }
 

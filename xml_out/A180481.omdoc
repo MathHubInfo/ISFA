@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A180481.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A180481">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,23,11,67,3119,19,941,739,29,41,79,127,5507,1399,191,56873,1193,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16657,49411,30059,10453,373,719,18773,12277,1031,1489,131,823,1283,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 14251,317,10631,313,191,16987,70381,229,8447,3539,1019,3499,2777,301579,587,241,6229,229,11657,571,2969,701,1627,20327,467,2069,863</CMP>
+    </assertion><omtext class="name">
+      <CMP> The smallest prime q &gt; p = prime(n) such that p*(q-p)+q, p*(q-p)-q, q*(q-p)+p and q*(q-p)-p are simultaneously prime, or 0 if no such q exists.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is conjectured that a(n) &gt; 0 for all n, and for infinitely many terms, a(n) = prime(n+1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = prime(n+1) for n = 9, 100, 508, 627, 752, 835, 889, ... (that is, for p = 23, 541, 3631, 4643, 5711, 6421, 6911, ...) - _Derek Orr_, Aug 25 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> We have a(n) - prime(n) == 0 (mod 6) for all n &gt; 2. Indeed, suppose p = 6k + 1, then q - p = 6n + 2 would imply that q is divisible by 3, and q - p = 6n + 4 would imply that p*(q-p)+q is divisible by 3. A similar reasoning applies for p = 6k - 1: here q - p = 6n + 4 entails 3|q, and q - p = 6n + 2 yields 3 | p*(q-p)-q.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Chai Wah Wu, &lt;a href=&quot;/A180481/b180481.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Sindelar, &lt;a href=&quot;http://tech.groups.yahoo.com/group/primenumbers/message/22455&quot;&gt;Certain Pairs of Consecutive Prime Numbers&lt;/a&gt;, in yahoo group &quot;primenumbers&quot;, Jan 20 2011.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A180481"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000040"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMR xref="A180476"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for all <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI) A180481(p)={ forprime( q=1+p=prime(p), default(primelimit), isprime(p*(q-p)+q)|next; isprime(p*(q-p)-q)|next; isprime(q*(q-p)+p)|next; isprime(q*(q-p)-p)|next; return(q)) }</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Python)</CMP>
+    </omtext><omtext class="program">
+      <CMP> from sympy import prime, isprime</CMP>
+    </omtext><omtext class="program">
+      <CMP> def A180481(n):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....p = prime(n)</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....n += 1</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....q = prime(n)</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....while q &lt; 10**14: # note: search limit</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........if isprime(p*(q-p)+q) and isprime(p*(q-p)-q) and isprime(q*(q-p)+p) and isprime(q*(q-p)-p):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ............return(q)</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........n += 1</CMP>
+    </omtext><omtext class="program">
+      <CMP> ........q = prime(n)</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....return(0) # limit in search for q was reached. A180481(n) may be &gt; 0</CMP>
+    </omtext><omtext class="program">
+      <CMP> # _Chai Wah Wu_, Aug 24 2014</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _M. F. Hasler_, Jan 20 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

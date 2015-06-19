@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A184941.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A184941">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,6,1,16,0,59,2,265,2,1544,12,10778,31,88168,220,805491,1606,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8037418,16828,86221634,193900,985870522,2452818,11946487647,32670330,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,152808063181,456028474,2,2056692014474,6636066099,8,28566273166527,100135577747,131</CMP>
+    </assertion><omtext class="name">
+      <CMP> Irregular triangle C(n,g) counting the connected 4-regular simple graphs on n vertices with girth at least g.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The first column is for girth at least 3. The row length sequence starts: 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4. The row length is incremented to g-2 when n reaches A037233(g).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jason Kimberley, &lt;a href=&quot;/wiki/User:Jason_Kimberley/C_k-reg_girth_ge_g_index&quot;&gt;Index of sequences counting connected k-regular simple graphs with girth at least g&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 16, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 59, 2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 265, 2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1544, 12;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10778, 31;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 88168, 220;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 805491, 1606;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8037418, 16828;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 86221634, 193900;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 985870522, 2452818;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11946487647, 32670330, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 152808063181, 456028474, 2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2056692014474, 6636066099, 8;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 28566273166527, 100135577747, 131;</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Connected 4-regular simple graphs with girth at least g: this sequence (triangle); chosen g: A006820 (g=3), A033886 (g=4), A058343 (g=5), A058348 (g=6).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Connected 4-regular simple graphs with girth exactly g: A184940 (triangle); chosen g: A184943 (g=3), A184944 (g=4), A184945 (g=5), A184946 (g=6).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Triangular arrays C(n,g) counting connected simple k-regular graphs on n vertices with girth at least g: A185131 (k=3), this sequence (k=4), A184951 (k=5), A184961 (k=6), A184971 (k=7), A184981 (k=8).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,tabf</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 5,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jason Kimberley_, Jan 10 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

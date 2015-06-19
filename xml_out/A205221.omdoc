@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A205221.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A205221">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 52,132,328,824,2072,5176,13032,32488,81816,203864,513256,1279208,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3218968,8026968,20187368,50370024,126607000,316079576,794071656,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1983434984,4980636824,12446080472,31241340648,78097719912,195970301464</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+1)X4 0..1 arrays with the number of equal 2X2 subblock diagonal pairs and equal antidiagonal pairs differing from each horizontal or vertical neighbor, and new values 0..1 introduced in row major order</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 3 of A205226</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A205221/b205221.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A205221"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A205221"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>12</OMI><OMA>
+      <OMS name="a" cd="A205221"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>11</OMI><OMA>
+      <OMS name="a" cd="A205221"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>47</OMI><OMA>
+      <OMS name="a" cd="A205221"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>40</OMI><OMA>
+      <OMS name="a" cd="A205221"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>64</OMI><OMA>
+      <OMS name="a" cd="A205221"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>48</OMI><OMA>
+      <OMS name="a" cd="A205221"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>7</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="a" cd="A205221"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>8</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>9</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0....0..1..1..1....0..1..0..1....0..1..1..0....0..0..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..1..0....0..1..0..0....0..1..1..0....0..0..0..1....1..0..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..1..0....0..0..1..0....0..0..0..0....1..1..0..1....0..1..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..0..0....1..1..1..0....1..1..0..0....0..1..0..0....0..0..0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..0..0....1..0..0..0....1..0..1..0....0..1..1..1....1..1..0..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Jan 23 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

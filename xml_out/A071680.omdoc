@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A071680.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A071680">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,37,53,67,157,173,211,257,263,277,373,479,563,593,607,613,631,653,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 733,809,947,977,1009,1103,1123,1187,1223,1297,1367,1471,1511,1607,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1663,1721,1747,1753,1783,1867,1901,1907,1931,1993,2137,2287,2377,2411,2417</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes which are the arithmetic mean of their prime predecessor and another prime.</CMP>
+    </omtext><assertion class="example">
+      <CMP> A000040(12)=37, A000040(12-1)=31, 37=(31+43)/2, therefore 37 is a term.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> p = q = 2; lst = {}; Do[q = Prime@n; If[PrimeQ[2q - p], AppendTo[lst, q]]; p = q, {n, 2, 400}]; lst (* _Robert G. Wilson v_, Mar 22 2007 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A071681, A006562 is a subsequence.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, May 31 200; revised Jul 16 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Thanks to Sven Simon for noticing errors in the original version.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

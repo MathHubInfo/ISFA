@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A197220.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A197220">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,34,37,71,108,179,1003,1182,12823,39651,369682,409333,1188348,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 28929685,4109203618,12356540539,16465744157,61753773010,263480836197,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 325234609207,2214888491439,2540123100646,14915503994669,32371131089984,79657766174637,112028897264621</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numerators of convergents to e + 1/e.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Numerator[Convergents[E + 1/E, 40]]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A137204 (decimal), A197221 (denominators).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _T. D. Noe_, Oct 12 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

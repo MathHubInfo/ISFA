@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A203531.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A203531">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,1,2,1,4,3,1,1,3,1,2,1,1,3,3,1,4,1,2,1,4,3,1,4,1,2,1,1,3,3,1,1,3,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,1,4,3,1,1,3,1,2,1,1,3,3,1,1,3,1,2,1,4,3,1,4,1,2,1,1,3,3,1,4,1,2,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4,3,1,1,3,1,2,1,1,3,3,1,4,1,2,1,4,3</CMP>
+    </assertion><omtext class="name">
+      <CMP> Run lengths in Golay-Rudin-Shapiro sequence A020985.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(2*n) = length of n-th run of 1s; a(2*n+1) = length of n-th run of -1s.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A203531/b203531.txt&quot;&gt;Table of n, a(n) for n = 0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Rudin-ShapiroSequence.html&quot;&gt;Rudin-Shapiro Sequence&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.List (group)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a203531 n = a203531_list !! n</CMP>
+    </omtext><omtext class="program">
+      <CMP> a203531_list = map length $ group a020985_list</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Jan 02 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

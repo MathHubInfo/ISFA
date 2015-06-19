@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A073097.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A073097">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Let x(n) denote the number of 4's among the n first elements of the continued fraction for sum k&gt;=0 1/2^(2^k) (A007400 ), y(n) the number of 6's and z(n) the number of 2's. Then a(n)=x(n)-y(n)-z(n)-1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The positive sequence has a(n)=mod(A000120(A047849(n)),2)=mod(A000120(A078008(2n)),2) - _Paul Barry_, Jan 13 2005</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Cosh(1) in 'reflected factorial' base is 1.10101010101010101010101010101010101010101010... - see A091337 for Sinh(1) (from _Robert G. Wilson v_, May 04 2005)</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      It seems that <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A073097"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      The positive sequence (assuming the pattern continues )has <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A073097"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>1</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>0</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="mod" cd="A073097"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMR xref="A001045"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="mod" cd="A073097"/>
+      <OMR xref="A005578"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.The partial sums are <OMOBJ>
+        <OMA>
+      <OMR xref="A008619"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Paul Barry_ ,Apr 28 2004 
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A007400.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Benoit Cloitre_, Aug 18 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

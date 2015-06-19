@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A108667.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A108667">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 20,34,57,48,80,112,62,103,144,185,76,126,176,226,276,90,149,208,267,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 326,385,104,172,240,308,376,444,512,118,195,272,349,426,503,580,657,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 132,218,304,390,476,562,648,734,820,146,241,336,431,526,621,716,811</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle read by rows: T(n,k) = 9k*n + 14(n+k) + 20 (0 &lt;= k &lt;= n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Kekulé numbers for certain benzenoids. T(n,n) = 9n^2 + 28n + 20 = A051872(n+2).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. J. Cyvin and I. Gutman, Kekulé structures in benzenoid hydrocarbons, Lecture Notes in Chemistry, No. 46, Springer, New York, 1988 (p. 102).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>20</OMI><OMA><OMS name="times"/><OMI>6</OMI><OMV name="z"/></OMA><OMA><OMS name="times"/><OMI>3</OMI><OMV name="t"/><OMV name="z"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>16</OMI><OMV name="t"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="t"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="z"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMV name="t"/><OMV name="z"/></OMA>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 20;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 34,57;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 48,80,112;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 62,103,144,185;</CMP>
+    </assertion><omtext class="maple">
+      <CMP> T:=proc(n,k) if k&lt;=n then 9*k*n+14*(n+k)+20 else 0 fi end: for n from 0 to 10 do seq(T(n,k),k=0..n) od; # yields sequence in triangular form</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A051872.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Emeric Deutsch_, Jun 14 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

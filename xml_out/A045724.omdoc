@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A045724.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A045724">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,15,142,1083,7266,44758,259356,1435347,7663898,39761282,201483204,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1001098462,4891910100,23565178380,112118316088,527674017411,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2459747256138,11368724035210,52145629874100,237541552456362</CMP>
+    </assertion><omtext class="name">
+      <CMP> Convolution of Catalan numbers A000108 with A020918.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also convolution of A001700 with A038845; also convolution of A029887 with A000302 (powers of 4); also convolution of A042941 with A000984 (central binomial coefficients).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A045724"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="binomial" cd="A045724"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA><OMI>3</OMI>
+    </OMA><OMA>
+      <OMR xref="A000984"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMR xref="A000984"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A000984"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="binomial" cd="A045724"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>;G.f .<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="c" cd="A045724"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>7</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="c" cd="A045724"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="c" cd="A045724"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMV name="g"/>
+    </OMA>
+      </OMOBJ>.f .for Catalan numbers .
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

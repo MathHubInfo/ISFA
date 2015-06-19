@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A109383.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A109383">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 112,120,162,300,304,378,392,396,408,520,552,567,592,612,630,656,675,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 680,688,696,700,750,780,918,924,944,952,980,990,1044,1100,1116,1136,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1140,1160,1168,1170,1242,1264,1272,1300,1323,1352,1372,1380,1386,1416,1470</CMP>
+    </assertion><omtext class="name">
+      <CMP> 5-almost primes of the form semiprime + 1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Charles R Greathouse IV, &lt;a href=&quot;/A109383/b109383.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="a" cd="A109383"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>is in this sequence iff <OMOBJ>
+        <OMA>
+      <OMS name="a" cd="A109383"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>is in <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMR xref="A014614"/>
+      <OMV name="and"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A109383"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA>
+      </OMOBJ>is in <OMOBJ>
+        <OMR xref="A001358"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(1) = 112 because (3*37)+1 = (2^4) * 7 = 112.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 120 because (7*17)+1 = (2^3) * 3 * 5 = 120.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3) = 162 because (7*23)+1 = 2 * (3^4) = 162.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[n_] := Plus @@ Last /@ FactorInteger[n];Select[Range[1500], f[ # ] == 5 &amp;&amp; f[ # - 1] == 2 &amp;] (*Chandler*)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) v=vector(10000);i=0; for(n=1,9e99, if(issemi(n)&amp;bigomega(n+1)==5, v[i++]=n+1;if(i==#v, return))); v \\ _Charles R Greathouse IV_, Feb 14 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Primes are in A000040. Semiprimes are in A001358. 5-almost primes are in A014614.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Primes of the form semiprime + 1 are in A005385 (safe primes).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Semiprimes of the form semiprime + 1 are in A109373.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> 3-almost primes of the form semiprime + 1 are in A109067.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> 4-almost primes of the form semiprime + 1 are in A109287.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> 5-almost primes of the form semiprime + 1 are in this sequence.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Least n-almost prime of the form semiprime + 1 are in A128665.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A077065, A079148, A092307.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Vos Post_, Aug 25 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Ray Chandler_, Mar 20 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

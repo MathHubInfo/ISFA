@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A129881.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A129881">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,6,6,22,24,90,100</CMP>
+    </omtext><omtext class="name">
+      <CMP> Sequence i_{s_n} arising in enumeration of arrays of directed blocks (see Quaintance reference for precise definition), where i_n = A129876, s_n = A129873.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Jocelyn Quaintance, Combinatoric Enumeration of Two-Dimensional Proper Arrays, Discrete Math., 307 (2007), 1844-1864.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      See Quaintance reference for generating functions that produce <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMR xref="A129872"/><OMR xref="A129886"/>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, May 26 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

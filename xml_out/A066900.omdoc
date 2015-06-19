@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A066900.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A066900">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,6,2,12,3,18,2,30,5,22,3,42,7,10,9,60,3,54,5,66,11,46,15,90,13,6,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 58,5,62,2,120,21,14,3,126,19,30,5,150,7,98,11,138,27,94,3,210,5,34,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13,106,33,162,7,174,29,118,35,198,31,14,39,240,11</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n)=max( k : phi(k)=n mod(k)).</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Benoit Cloitre_, Jan 24 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

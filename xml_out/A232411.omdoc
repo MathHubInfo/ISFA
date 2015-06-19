@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A232411.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A232411">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 46713,18073053,7049296087,2832909399671,1137726954093673,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 456432801562470697,183153958944323007479,73496260172305511346339,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 29492333619878516891667341,11834588542996205189252608141</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+1)X(5+1) 0..2 arrays with every element both &gt;= and &lt;= some horizontal, diagonal or antidiagonal neighbor</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 5 of A232414</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A232411/b232411.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..2..0..2..1..1....1..1..2..2..0..0....2..2..1..0..0..2....0..0..2..0..0..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..0..2..2..2..1....2..2..1..2..2..1....2..1..0..0..2..0....0..0..2..2..2..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Nov 23 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

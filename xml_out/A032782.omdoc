@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A032782.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A032782">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,3,6,9,13,18,20,27,36,48,63,69,90,117,118,153,198,216,279,360,363,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 468,603,657,846,1098,1413,1818,1980,2547,3303,4248,5949,9918,12753,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 17856,29763,89298</CMP>
+    </assertion><omtext class="name">
+      <CMP> n(n+1)(n+2)...(n+9) / n+(n+1)+(n+2)+...+(n+9) is an integer.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[0,10^5],IntegerQ[(Times@@(#+Range[0,9]))/(10#+45)]&amp;](* _Harvey P. Dale_, Mar 18 2015 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A032781, A032783.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Patrick De Geest_, May 15 1998</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

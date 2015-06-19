@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A254957.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A254957">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,3,6,10,136,231,300,3160,3741,4371,5565,5995,6328,6555,10011,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10440,10731,13366,13530,14196,18528,19900,20301,21115,23220,25200,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 25651,30135,30628,30876,32385,34716,37401,42778,43071,46971,47278,53301,60031,60378,63903,64620,69378,74691,86320,89253,90525</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangular numbers n with digits d_1, d_2, ..., d_k such that d_1*(d_1+1)/2 + ... + d_k*(d_k+1)/2 is a triangular number.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) istri(n)=for(k=0,n+1,if(k*(k+1)/2==n,return(1)));0</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=0,10^3,N=n*(n+1)/2;d=digits(N);s=0;for(i=1,#d,s+=d[i]*(d[i]+1)/2);if(istri(s),print1(N,&quot;, &quot;)))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000217, A254956.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Derek Orr_, Feb 11 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

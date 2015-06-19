@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A122729.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A122729">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,19,31,59,71,83,89,97,101,109,127,131,157,181,199,227,233,241,251,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 257,269,281,283,293,307,331,347,349,353,373,379,409,421,431,433,443,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 449,461,487,499,503,523,541,557,563,569,587,593,599,601,619,631,647</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes that are the sum of 5 positive cubes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> By parity, there must be an odd number of odds in the sum. Hence this sequence is the union of primes which are the sum of five odd cubes (such as 5 = 1^3 + 1^3 + 1^3 + 1^3 + 1^3); primes which are the sum of the cube of two even numbers and the cubes of three odd numbers (such as 19 = 1^3 + 1^3 + 1^3 + 2^3 + 2^3); and the primes which are the sum of the cube of an odd number and the cubes of four even numbers (such as 59 = 3^3 + 2^3 + 2^3 + 2^3 + 2^3). A subset of this sequence is the primes which are the sum of the cubes of five distinct primes (i.e. of the form p^3 + q^3 + r^3 + s^3 + t^3 for p, q, r, s, t distinct odd primes) such as 105649 = 3^3 + 5^3 + 7^3 + 11^3 + 47^3. No prime can be the sum of two cubes (by factorization of the sum of two cubes).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Charles R Greathouse IV, &lt;a href=&quot;/A122729/b122729.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMR xref="A000040"/>
+      <OMV name="INTERSECTION"/>
+    </OMA><OMR xref="A003328"/></OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(1) = 5 = 1^3 + 1^3 + 1^3 + 1^3 + 1^3.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 19 = 1^3 + 1^3 + 1^3 + 2^3 + 2^3.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3) = 1^3 + 1^3 + 1^3 + 1^3 + 3^3.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4) = 59 = 3^3 + 2^3 + 2^3 + 2^3 + 2^3.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> q = 10; lst = {}; Do[Do[Do[Do[Do[p = a^3 + b^3 + c^3 + d^3 + e^3; If[PrimeQ[p], AppendTo[lst, p]], {e, q}], {d, q}], {c, q}], {b, q}], {a, q}]; Take[Union[lst], 80] (* _Vladimir Joseph Stephan Orlovsky_, Jul 15 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) list(lim)=my(ta,tb,tc,td,te,v=List());for(a=1,(lim/5)^(1/3),ta=a^3;for(b=a,((lim-ta)/4)^(1/3),tb=ta+b^3;for(c=b,((lim-tb)/3)^(1/3),tc=tb+c^3;for(d=c,((lim-tc)/2)^(1/3),td=tc+d^3;forstep(e=if(td%2==d%2,d+1,d),(lim-td)^(1/3),2,te=td+e^3;if(ispseudoprime(te),listput(v,te)))))));vecsort(Vec(v),,8) \\ _Charles R Greathouse IV_, Jul 15 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A003328.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Vos Post_, Sep 23 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

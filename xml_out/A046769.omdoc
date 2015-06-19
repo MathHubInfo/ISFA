@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A046769.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A046769">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,0,1,0,1,0,2,0,4,0,4,0,11,0,9,0,26,0,21,0,55,0,49,0,110,0,109,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 212,0,231,0,397,0,471,0,729,0,920,0,1320,0,1741,0,2357,0,3198,0,4160,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,5734,0,7258,0,10058,0,12518,0,17329,0,21346,0,29364,0,35998,0,49063</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n with equal number of parts congruent to each of 1, 2 and 3 (mod 4).</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,9</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

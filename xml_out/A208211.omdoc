@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A208211.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A208211">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,5,401,50250313,13058251494934169005517674,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2711319949800838662068317571116321157238013748056632969662193456875554487084437</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n)=(a(n-1)^2*a(n-2)^4+1)/a(n-3) with a(0)=a(1)=a(2)=1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is the case a=4, b=2, y(0)=y(1)=y(2)=1 of the recurrence shown in the Example 3.2 of &quot;The Laurent phenomenon&quot; (see Link lines, p. 10).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The next term, a(9), has 250 digits. - _Harvey P. Dale_, May 12 2015</CMP>
+    </omtext><omtext class="link">
+      <CMP> Sergey Fomin and Andrei Zelevinsky, &lt;a href=&quot;http://arxiv.org/abs/math/0104241&quot;&gt;The Laurent phenomenon&lt;/a&gt;, arXiv:math/0104241v1 [math.CO] (2001), Advances in Applied Mathematics 28 (2002), 119-144.</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:=proc(n) if n&lt;3 then return 1: fi: return (a(n-1)^2*a(n-2)^4+1)/a(n-3): end: seq(a(i),i=0..10);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RecurrenceTable[{a[0]==a[1]==a[2]==1,a[n]==(a[n-1]^2*a[n-2]^4+1)/a[n-3]},a,{n,9}] (* _Harvey P. Dale_, May 12 2015 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A005246, A208204, A208210, A208212.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Matthew C. Russell_, Apr 23 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

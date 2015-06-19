@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A091009.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A091009">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,1,0,0,0,0,0,3,0,0,1,0,0,2,0,0,0,0,0,5,0,0,0,1,0,4,0,0,0,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,6,0,0,0,1,0,2,0,0,3,0,0,7,0,0,0,0,0,3,0,2,0,0,0,11,0,0,0,0,0,3,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,0,0,10,0,0,2,0,0,2,0,2,0,0,0,9,0,0,0,0,0,10,1,0,0,0,0,9,0,0,0,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of triples (u,v,w) of divisors of n with v-u = w-v.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(A091014(n))=n and a(m)&lt;&gt;n for m&lt;=A091014(n);</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(A091010(n))=0; a(A091011(n))&gt;0; a(A091012(n))=1; a(A091013(n))&gt;1.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(30)=4, as there are exactly 4 triples of divisors with the defining property: (1,2,3), (1,3,5), (2,6,10) and (5,10,15).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,12</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Dec 13 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

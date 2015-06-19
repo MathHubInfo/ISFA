@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A215877.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A215877">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,4,16,64,254,1000,3913,15248,59263,229996,892033,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3459544,13421784,52104416,202436819,787231328,3064347392,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11940020992,46569416006,181808493296,710442293743,2778591945620,10876271461745,42606078512048</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = (A(n) - A215817(n))/sqrt(7), where A(n) = (6-sqrt(7))A(n-1) - (12-4*sqrt(7))A(n-2) + (8-3*sqrt(7))A(n-3), with A(0)=3, A(1)=6-sqrt(7), and A(2)=19-4*sqrt(7).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Berndt-type sequence number 15 for the argument 2Pi/7 defined by requiring sqrt(7)*a(n) to be the irrational part of the trigonometric sum A(n) := c(1)^(2*n) + c(2)^(2*n) + c(4)^(2*n), where c(j) := 2*cos(Pi/4 + 2*Pi*j/7) = 2*cos((7+8*j)*Pi/28).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> We note that A(n)-sqrt(7)*a(n)= A215817(n). For more facts on A(n) - see comments to A215817.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Roman Witula and Damian Slota, &lt;a href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL10/Slota/witula13.html&quot;&gt;New Ramanujan-Type Formulas and Quasi-Fibonacci Numbers of Order 7&lt;/a&gt;, Journal of Integer Sequences, Vol. 10 (2007), Article 07.5.6</CMP>
+    </omtext><omtext class="link">
+      <CMP> Roman Witula, &lt;a href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL12/Witula/witula17.html&quot;&gt;Ramanujan Type Trigonometric Formulas: The General Form for the Argument 2*Pi/7&lt;/a&gt;, Journal of Integer Sequences, Vol. 12 (2009), Article 09.8.5</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="sqrt" cd="A215877"/>
+      <OMI>7</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A215877"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+      <OMV name="to"/>
+    </OMA>
+      </OMOBJ>the irrational part of <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="c" cd="A215877"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="c" cd="A215877"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="c" cd="A215877"/>
+      <OMI>4</OMI>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="s" cd="A215877"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="s" cd="A215877"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="s" cd="A215877"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="c" cd="A215877"/>
+      <OMV name="j"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="cos" cd="A215877"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>7</OMI><OMA><OMS name="times"/><OMI>8</OMI><OMV name="j"/></OMA>
+    </OMA><OMS name="Pi"/></OMA><OMI>28</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="s" cd="A215877"/>
+      <OMV name="j"/>
+    </OMA>
+      <OMA>
+      <OMS name="sin" cd="A215877"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMS name="Pi"/><OMV name="j"/></OMA><OMI>7</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Empirical <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>24</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>86</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>104</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>53</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>12</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Jun 01 2013 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> We have a(2)/a(1) = a(3)/a(2) = a(4)/a(3) = 4, but a(5)-4*a(4)=2 and a(6)=4*(a(5)-a(2)). Moreover it follows</CMP>
+    </assertion><assertion class="example">
+      <CMP> the relations: 4*A(1)-A(2) = 5 = (3+s(1))*(1-s(1)) + (3+s(2))*(1-s(2)) + (3+s(4))*(1-s(4)), 4*A(2)-A(3) = 10 =  (3+s(1))*(1-s(1))^2 + (3+s(2))*(1-s(2))^2 + (3+s(4))*(1-s(4))^2, 4*A(3)-A(4) = 27 = (3+s(1))*(1-s(1))^3 + (3+s(2))*(1-s(2))^3 + (3+s(4))*(1-s(4))^3, whereas 4*A(4)-a(5) = 82-2*sqrt(7) = (3+s(1))*(1-s(1))^4 + (3+s(2))*(1-s(2))^4 + (3+s(4))*(1-s(4))^4.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A215493, A215494, A215143, A215510, A094429, A215817.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roman Witula_, Aug 25 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

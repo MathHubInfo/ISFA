@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A227050.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A227050">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,2,1,4,88,0,976,22277,22365,376002,3172018,5821944,10222624,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 424452210</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of essentially different ways of arranging numbers 1 through 2n around a circle so that the sum and absolute difference of each pair of adjacent numbers are prime</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See a similar problem, but for the set of numbers {0 through (n-1)}. - _Stanislav Sykora_, May 30 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Gary Antonick, &lt;a href=&quot;http://wordplay.blogs.nytimes.com/2013/06/17/primes-circle/?_r=0&quot;&gt;Numberplay: Bernardo Recamán’s Primes in a Circle Puzzle&lt;/a&gt;, June 17, 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> Stanislav Sykora, &lt;a href=&quot;http://dx.doi.org/10.3247/SL5Math14.002&quot;&gt;On Neighbor-Property Cycles&lt;/a&gt;, &lt;a href=&quot;http://ebyte.it/library/Library.html#math&quot;&gt;Stan's Library&lt;/a&gt;, Volume V, 2014; Table III.</CMP>
+    </omtext><assertion class="example">
+      <CMP> For n = 6 the a(6) = 2 solutions are (1, 4, 9, 2, 5, 12, 7, 10, 3, 8, 11, 6) and (1, 6, 11, 8, 3, 10, 7, 4, 9, 2, 5, 12) because abs(1 - 4) = 3 and 1 + 4 = 5 are prime, etc.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (C++) // Listed in the Sykora link.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. similar sequences: A051252 (with sums of neighbors prime), A242527 (with sums of neighbors prime), A228626 (with differences of neighbors prime), A242528 (with sums and differences of neighbors prime).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Tim Cieplowski_, Jun 29 2013</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(15)-a(18) added by _Tim Cieplowski_, Jan 04 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

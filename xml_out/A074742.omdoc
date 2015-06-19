@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A074742.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A074742">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,7,15,28,47,73,107,150,203,267,343,432,535,653,787,938,1107,1295,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1503,1732,1983,2257,2555,2878,3227,3603,4007,4440,4903,5397,5923,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6482,7075,7703,8367,9068,9807,10585,11403,12262,13163,14107,15095,16128,17207,18333</CMP>
+    </assertion><omtext class="name">
+      <CMP> (n^3 + 6n^2 - n + 12)/6.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Schultze, Advanced Algebra, Macmillan, London, 1910; p. 552.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A074742/b074742.txt&quot;&gt;Table of n, a(n) for n = 0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (4,-6,4,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA><OMS name="times"/><OMI>5</OMI><OMI>7</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A074742"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A027965"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.[From <OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Sep 23 2008 ]
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Table[(n^3 + 6n^2 - n + 12)/6, {n, 0, 49}] (* _Alonso del Arte_, Jan 13 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=n*(n^2+6*n-1)/6+2 \\ _Charles R Greathouse IV_, Jan 13 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [(n^3 + 6*n^2 - n + 12)/6: n in [0..50]]; // Vincenzo Librandi, Jan 13 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Susanna Cuyler_, Sep 06 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

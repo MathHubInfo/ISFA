@@ -1,0 +1,533 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A185410.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A185410">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,0,1,2,0,1,10,4,0,1,36,60,8,0,1,116,516,296,16,0,1,358,3508,5168,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1328,32,0,1,1086,21120,64240,42960,5664,64,0,1,3272,118632,660880,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 900560,320064,23488,128,0,1,9832,638968,6049744,14713840,10725184,2225728,95872,256,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> A decomposition of the double factorials A001147.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sums are A001147. Reversal of A185411.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Peter Bala_, Jul 24 2012: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is the case k = 2 of the 1/k—Eulerian polynomials introduced by Savage and Viswanathan. They give a combinatorial interpretation of the triangle in terms of an ascent statistic on sets of inversion sequences and a geometric interpretation in terms of lecture hall polytopes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row reverse of A156919.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (End)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Triangle T(n,k), 0&lt;=k&lt;=n, given by (1, 0, 3, 0, 5, 0, 7, 0, 9, 0, ...) DELTA (0, 2, 0, 4, 0, 6, 0, 8, 0, 10, 0, ...) where DELTA is the operator defined in A084938. - _Philippe Deléham_, Feb 12 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> S.-M. Ma, T. Mansour, &lt;a href=&quot;http://arxiv.org/abs/1409.6525&quot;&gt;The 1/k-Eulerian polynomials and k-Stirling permutations&lt;/a&gt;, arXiv preprint arXiv:1409.6525, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. D. Savage, G. Viswanathan, &lt;a href=&quot;http://www.combinatorics.org/ojs/index.php/eljc/article/view/v19i1p9&quot;&gt;The 1/k-Eulerian polynomials&lt;/a&gt;, Elec. J. of Comb., Vol. 19, Issue 1, #P9 (2012).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="xy"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="xy"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMV name="xy"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMV name="xy"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.(continued fraction ).
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      From _Peter Bala_ ,Jul 24 2012 :(Start )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A185410"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="k"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMV name="j"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMV name="j"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="C" cd="A185410"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMV name="j"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="C" cd="A185410"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="j"/></OMA><OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="j"/></OMA><OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Recurrence equation :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A185410"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="T" cd="A185410"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="T" cd="A185410"/>
+      <OMV name="n"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      E.g.f .:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="sqrt" cd="A185410"/>
+      <OMA>
+      <OMS name="E" cd="A185410"/>
+      <OMV name="x"/><OMA><OMS name="times"/><OMI>2</OMI><OMV name="z"/></OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="z"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>10</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="E" cd="A185410"/>
+      <OMV name="x"/><OMV name="z"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="exp" cd="A185410"/>
+      <OMA><OMS name="times"/><OMV name="z"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>is the <OMOBJ>
+        <OMV name="e"/>
+      </OMOBJ>.g.f .for the Eulerian numbers (version <OMOBJ>
+        <OMR xref="A173018"/>
+      </OMOBJ>).Cf .<OMOBJ>
+        <OMR xref="A156919"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Row polynomial <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="R" cd="A185410"/>
+      <OMV name="n"/><OMV name="x"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="C" cd="A185410"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="Stirling2" cd="A185410"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="R" cd="A185410"/>
+      <OMV name="n"/><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A185410"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="k"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.The sequence of rational functions <OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="R" cd="A185410"/>
+      <OMV name="n"/><OMV name="x"/>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS cd="set1" name="set">
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      </OMS>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>conjecturally occurs in the first column of <OMOBJ>
+        <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="I"/><OMA><OMS name="times"/><OMV name="x"/><OMR xref="A112857"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="R" cd="A185410"/>
+      <OMV name="n"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+      </OMOBJ>gives the n-th row polynomial of <OMOBJ>
+        <OMR xref="A186695"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Row sums <OMOBJ>
+        <OMR xref="A001147"/>
+      </OMOBJ>.Alt .row sums <OMOBJ>
+        <OMR xref="A202038"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      (End )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A185410"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMR xref="A102365"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Philippe Deléham_ ,Feb 12 2013 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,    0,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,    2,      0,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,   10,      4,       0,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,   36,     60,       8,        0,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,  116,    516,     296,       16,        0,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,  358,   3508,    5168,     1328,       32,       0,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 1086,  21120,   64240,    42960,     5664,      64,     0,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 3272, 118632,  660880,   900560,   320064,   23488,   128,   0,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 9832, 638968, 6049744, 14713840, 10725184, 2225728, 95872, 256, 0,</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> In the Savage-Viswanathan paper, the coefficients appear as</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 10 4</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 36 60 8</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 116 516 296 16</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 358 3508 5168 1328 32</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 1086 21120 64240 42960 5664 64</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A156919.  A001147 (row sums), A112857, A173018, A186695, A202038 (alt. row sums).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Barry_, Jan 26 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

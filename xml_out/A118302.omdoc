@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A118302.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A118302">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,1,1,2,3,3,4,5,6,8,9,11,14,16,19,23,27,32,38,45,52,61,71,82,96,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 111,128,148,170,195,224,256,292,334,380,432,491,556,630,713,805,908,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1024,1152,1295,1455,1632,1829,2048,2291,2560,2859,3189,3554,3959,4404</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n into distinct parts with largest part not congruent to n modulo 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(2*n) = A026837(2*n), a(2*n+1) = A026838(2*n+1);</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A000009(n) - A118301(n),</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(A090864(n)) = A118303(n)/2 = A000009(A090864(n))/2.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(11) = #{10+1,8+3,8+2+1,6+5,6+4+1,6+3+2} = 6;</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(12) = #{11+1,9+3,9+2+1,7+5,7+4+1,7+3+2,5+4+3,5+4+2+1} = 8.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000701.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Apr 22 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

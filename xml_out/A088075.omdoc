@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A088075.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A088075">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,11,131,1429,77141,1456729,117048931,10326137821,1110819807371,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 140734085123059,11639258217451019</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest number sandwiched between two numbers having exactly n prime divisors.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)=m is the smallest number sandwiched between m-1 and m+1 such that both m+1 and m-1 have n distinct prime-factors. No restrictions are imposed for {m-1,m+1} flanker numbers.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n)=Min{x; A001221[x-1]=A001221[x+1]=n}</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> n = 3: a(3) = 131, 130 = 2*5*13 and 132 = 2^2*3*11 both have three prime divisors.</CMP>
+    </assertion><assertion class="example">
+      <CMP> n = 6: a(6) = 1456729 = 103.14143 is between 1456728 = 8.3.7.13.23.29 and 1456730 = 2.5.11.17.19.41.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A088076, A088077, A001221.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> more,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Sep 22 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Labos Elemer_, Sep 30 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Ray Chandler_, Oct 07 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(8) and a(9) from _Donovan Johnson_, Jun 19 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(10)-a(11) from _Donovan Johnson_, Feb 18 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

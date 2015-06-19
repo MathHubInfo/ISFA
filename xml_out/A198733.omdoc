@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A198733.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A198733">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,6,9,0,3,6,1,8,0,3,9,5,3,9,4,1,7,1,9,1,6,9,5,6,7,7,6,7,6,7,7,3,0,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4,6,0,8,9,1,1,5,1,8,4,1,9,4,7,9,0,9,4,7,4,6,2,8,4,8,4,5,2,7,3,5,0,9,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7,4,8,1,2,8,1,4,2,9,3,3,6,6,4,3,5,8,7,8,4,2,0,4,9,5,7,9,1,4,6</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of the absolute minimum of sin(x)+sin(2x)+sin(3x)+sin(4x)+sin(5x)+sin(6x).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A198677 for a guide to related sequences.</CMP>
+    </omtext><assertion class="example">
+      <CMP> x=5.924356380456046882352862563376763567376562...</CMP>
+    </assertion><assertion class="example">
+      <CMP> min=-4.690361803953941719169567767677307460891...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> n = 6; f[t_] = Sin[t]; s[t_] := Sum[f[k*t], {k, 1, n}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> x = N[Minimize[s[t], t], 110]; u = Part[x, 1]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> v = t /. Part[x, 2]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[u]  (* A198733 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[v] (* A198734 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Plot[s[t], {t, -3 Pi, 3 Pi}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A198677.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Oct 29 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

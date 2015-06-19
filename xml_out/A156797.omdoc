@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A156797.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A156797">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 22,59,103,140,184,221,265,302,346,383,427,464,508,545,589,626,670,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 707,751,788,832,869,913,950,994,1031,1075,1112,1156,1193,1237,1274,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1318,1355,1399,1436,1480,1517,1561,1598,1642,1679,1723,1760,1804,1841,1885</CMP>
+    </assertion><omtext class="name">
+      <CMP> n^2+2=0 mod (9^2)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers n such that n is 22 or 59 mod 81. [_Charles R Greathouse IV_, Dec 23 2011]</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A156797/b156797.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1,1,-1).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[2000],PowerMod[#,2,81]==79&amp;] (* _Harvey P. Dale_, Jun 30 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> LinearRecurrence[{1,1,-1},{22,59,103},50] (* _Vincenzo Librandi_, Feb 09 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=n\2*81-22*(-1)^n \\ _Charles R Greathouse IV_, Dec 23 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) I:=[22, 59, 103]; [n le 3 select I[n] else Self(n-1)+Self(n-2)-Self(n-3): n in [1..50]]; // Vincenzo Librandi, Feb 09 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vincenzo Librandi_, Feb 16 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A027337.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A027337">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,2,4,5,8,10,15,19,27,34,47,59,79,99,130,162,209,259,330,407,512,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 628,783,956,1181,1435,1760,2129,2594,3124,3784,4539,5468,6534,7834,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9327,11132,13208,15701,18568,21989,25923,30592,35960,42297,49579,58139,67967</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n that do not contain 3 as a part.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is also the number of partitions of n with less than three 1's. - _Geoffrey Critzer_, Jun 20 2014</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="Product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="m"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="m"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="m"/>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND></OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A027337"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000041"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A000041"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> nn=49;CoefficientList[Series[(1-x^3)Product[1/(1-x^i),{i,1,nn}],{x,0,nn}],x] (* _Geoffrey Critzer_, Jun 20 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;0,0,polcoeff((1-x^3)/eta(x+x*O(x^n)),n))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000041, A027336, A027338.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

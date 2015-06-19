@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A120380.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A120380">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,11,77,627,5604,53174,526823,5392783,56634173,607163746,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6620830889,73232243759,819876908323,9275102575355,105882246722733,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1218374349844333,14118662665280005,164637479165761044,1930656072350465812,22755290216580025259,269435605212954994471</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n*(n+1).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Henry Bottomley, &lt;a href=&quot;http://www.se16.info/js/partitions.htm&quot;&gt;Partition and composition calculator&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. P. Michon, &lt;a href=&quot;http://numericana.com/data/partition.htm&quot;&gt;Partition Function&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(2)=11 because the number of partitions of 6 is 11.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(combinat); [seq(numbpart(n*(n+1)),n=1..20)];</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(combinat): seq(numbpart(n*(n+1)),n=0..21);</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=numbpart(n^2+n) /* _Michael Somos_, Jul 24 2006 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A003107, A002378.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zerinvary Lajos_, Jun 29 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Michael Somos_, _Emeric Deutsch_ and _N. J. A. Sloane_, Jul 23 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

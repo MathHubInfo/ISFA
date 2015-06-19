@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A250923.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A250923">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11693,628146,34521887,1887760064,102912852059,5613563039740,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 306543548743117,16748448512897363,915164303259406892,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 50004735900048261227,2732197085743121738233,149282831158760473142819</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+1)X(4+1) 0..2 arrays with no 2X2 subblock having its minimum diagonal element less than its minimum antidiagonal element</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 4 of A250927</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A250923/b250923.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A250923/a250923.txt&quot;&gt;Empirical recurrence of order 81&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical recurrence of order <OMOBJ>
+        <OMI>81</OMI>
+      </OMOBJ>(see link above )
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2..2..0..0....1..0..0..2..1....0..0..1..1..0....2..2..0..1..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..2..1..2....0..1..0..0..0....0..0..2..2..1....1..2..0..0..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Nov 28 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

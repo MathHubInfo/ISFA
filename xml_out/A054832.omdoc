@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A054832.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A054832">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2939,13499,13921,14983,15401,15413,21433,21577,21893,28297,30911,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 33247,35617,37747,42257,42611,45841,55681,64693,64951,64969,68227,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 68239,68917,68927,73973,74231,78623,83137,85549,87359,88037,90947</CMP>
+    </assertion><omtext class="name">
+      <CMP> Fifth term of weak prime sextet: p(m-3)-p(m-4) &lt; p(m-2)-p(m-3) &lt; p(m-1)-p(m-2) &lt; p(m)-p(m-1) &lt; p(m+1)-p(m).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A051635, A054800-A054840.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Henry Bottomley_, Apr 10 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

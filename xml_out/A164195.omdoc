@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A164195.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A164195">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,8,16,30,56,106,200,376,710,1348,2564,4888,9350,17936,34480,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 66428,128256,248100,480742,933040,1813616,3530112,6879940,13424492,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 26223496,51277484,100363318,196610708,385475044,756340880,1485076216,2917892036</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of binary strings of length n with equal numbers of 00001 and 00101 substrings</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A164195/b164195.txt&quot;&gt;Table of n, a(n) for n=0..500&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Aug 11 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

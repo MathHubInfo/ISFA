@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A234343.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A234343">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 604,9076,9076,120838,411064,120838,1709528,15724414,15724414,1709528,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 23776684,661471100,1496150656,661471100,23776684,333289866,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 27487124788,175175798418,175175798418,27487124788,333289866,4661112720</CMP>
+    </assertion><omtext class="name">
+      <CMP> T(n,k)=Number of (n+1)X(k+1) 0..7 arrays with every 2X2 subblock having the sum of the absolute values of the edge differences equal to 14</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Table starts</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ......604........9076.........120838...........1709528.............23776684</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .....9076......411064.......15724414.........661471100..........27487124788</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ...120838....15724414.....1496150656......175175798418.......19543858001838</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..1709528...661471100...175175798418....60505646102284....19887302525171296</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .23776684.27487124788.19543858001838.19887302525171296.18579337567646047716</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A234343/b234343.txt&quot;&gt;Table of n, a(n) for n = 1..60&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical for column <OMOBJ>
+        <OMV name="k"/>
+      </OMOBJ>:
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>:[linear recurrence of order <OMOBJ>
+        <OMI>13</OMI>
+      </OMOBJ>]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>2</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>77</OMI>
+      </OMOBJ>]
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=1 k=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..0..0..5....0..0..5..0..5....0..1..0..0..3....0..0..0..6..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..4..7..0..7..6....7..2..7..2..0....1..7..7..7..4....7..7..7..7..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Dec 23 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A214203.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A214203">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,5,14,26,100,333,1110,3742,12764,44258,154636,544660,1932360,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6900029,24780390,89445174,324326060,1180834390,4315287140,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 15823305516,58200045432,214672363410,793883691004,2942917457772,10933569255832,40704185771812,151826357818840,567322837830824,2123429246035600,7960199797453213,29884582184913542</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of rooted planar binary unlabeled trees with n leaves and caterpillar index &lt;= 5.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Filippo Disanto, Unbalanced subtrees in binary rooted ordered and un-ordered trees, Seminaire Lotharingien de Combinatoire, 68 (2013), Article B68b.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Filippo Disanto, &lt;a href=&quot;http://arxiv.org/abs/1202.5668&quot;&gt;The size of the biggest Caterpillar subtree in binary rooted planar trees&lt;/a&gt;, arXiv preprint arXiv:1202.5668, 2012</CMP>
+    </omtext><omtext class="maple">
+      <CMP> C:=(1-sqrt(1-4*x))/2; # A000108 with a different offset</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # F-(k): gives A025266, A025271, A214200, A214203</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Fm:=k-&gt;(1/2)*(1-sqrt(1-4*x+2^(k+1)*x^(k+1)));</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Sm:=k-&gt;seriestolist(series(Fm(k),x,50));</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # F+(k): gives A00018, A214198, A214201, A214204</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Fp:=k-&gt;C-Fm(k-1);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Sp:=k-&gt;seriestolist(series(Fp(k),x,50));</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # F(k): gives A025266, A214199, A214202, A214205</CMP>
+    </omtext><omtext class="maple">
+      <CMP> F:=k-&gt;Fm(k)-Fm(k-1);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> S:=k-&gt;seriestolist(series(F(k),x,50));</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A025266, A000108, A025271, A214198-A214205.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Jul 07 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

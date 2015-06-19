@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A084547.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A084547">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,25,29,34,50,53,58,59,83,89,101,106,107,113,121,125,131,137,149,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 166,167,173,178,179,197,202,214,226,227,233,250,251,257,263,269,274,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 281,289,293,298,317,334,346,347,353,358,359</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n that have primitive roots less than n that are nonnegative perfect cubes.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 89 is in the sequence because 27 is a primitive root of 89 and 27 is three cubed.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A084548, A084549, A084550.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Hauke Worpel (hw1(AT)email.com), May 30 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

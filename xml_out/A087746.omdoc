@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A087746.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A087746">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,10,22,34,48,60,78,84,90,114,144,120,168,180,234,246,288,240,210,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 324,300,360,474,330,528,576,390,462,480,420,570,510,672,792,756,876,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 714,798,690,1038,630,1008,930,780,960,870,924,900,1134,1434,840,990,1302</CMP>
+    </assertion><omtext class="name">
+      <CMP> Erroneous version of A023036.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A001172(n) for n &gt; 1. - _Reinhard Zumkeller_, Oct 18 2004</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Go#Goldbach&quot;&gt;Index entries for sequences related to Goldbach conjecture&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,dead</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lekraj Beedassy_, Oct 02 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Reinhard Zumkeller_, Oct 18 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Marked dead by _Franklin T. Adams-Watters_, Mar 14 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

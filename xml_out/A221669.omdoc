@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A221669.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A221669">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 139129,83521,319225,360721,180625,529,42025,277729,222121</CMP>
+    </omtext><omtext class="name">
+      <CMP> 3 x 3 magic square containing seven squares, read by rows.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Apart from trivial modifications, this is the only known 3 x 3 magic square containing seven squares. No 3 x 3 magic square containing eight or nine squares is known.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The seven integer square roots are A221670.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Bremner, On squares of squares. II, Acta Arith. 99 (2001), 289-308.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> John P. Robertson, Magic squares of squares, Math. Mag., 69 (1996), 289-293.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Zentralblatt, &lt;a href=&quot;http://www.zentralblatt-math.org/zmath/en/advanced/?q=an:01680967&amp;amp;type=pdf&amp;amp;format=complete&quot;&gt;Review of &quot;On squares of squares. II&quot; by A. Bremner&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Mag#magic&quot;&gt;Index entries for sequences related to magic squares&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A221669"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>139129</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>373</OMI>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A221669"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMI>83521</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>289</OMI>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A221669"/>
+      <OMI>3</OMI>
+    </OMA>
+      <OMI>319225</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>565</OMI>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A221669"/>
+      <OMI>5</OMI>
+    </OMA>
+      <OMI>180625</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>425</OMI>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A221669"/>
+      <OMI>6</OMI>
+    </OMA>
+      <OMI>529</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>23</OMI>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A221669"/>
+      <OMI>7</OMI>
+    </OMA>
+      <OMI>42025</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>205</OMI>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A221669"/>
+      <OMI>8</OMI>
+    </OMA>
+      <OMI>277729</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>527</OMI>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> [139129 83521 319225</CMP>
+    </assertion><assertion class="example">
+      <CMP> 360721 180625 529</CMP>
+    </assertion><assertion class="example">
+      <CMP> 42025 277729 222121]</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A221670.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl,fini,full</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Sondow_, Jan 21 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

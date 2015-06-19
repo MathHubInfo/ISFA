@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A204137.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A204137">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,1,13,10,9,47,34,24,15,197,150,116,92,77,11,186,36,80,12,65,29,18,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 168,132,52,40,25,443,414,396,228,96,44,4,21,397,46,368,28,200,104,60,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 56,35,1321,924,878,510,482,282,178,118,62,27,4831,3510,2586</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle T[r+1,c]=|T[r,c]-T[r,c+1]| of positive integers such that T[r,c] is prime iff r=1 and no number occurs twice.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For each n&gt;0, T[1,n]=A203985(n) is the smallest prime such that the constraints are satisfied for r+c &lt;= n+1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is conjectured that the first row of the table is a permutation of the primes and the whole table, i.e., this sequence, a permutation of the positive integers.</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. Angelini, &lt;a href=&quot;http://www.cetteadressecomportecinquantesignes.com/PrimeArray.htm&quot;&gt;An array of naturals&lt;/a&gt;, Jan 07 2012</CMP>
+    </omtext><assertion class="example">
+      <CMP> The triangle starts</CMP>
+    </assertion><assertion class="example">
+      <CMP> r=1:  2 3  13  47 ...   &lt;- primes</CMP>
+    </assertion><assertion class="example">
+      <CMP> r=2:   1 10  34 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> r=3:    9  24 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> r=4:     15 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> which is the smallest solution as can be seen from the fact that the first column contains so far the smallest odd non-primes. This does not remain true for subsequent rows, the triangle is determined by imposing minimality of the elements of the first row.</CMP>
+    </assertion><assertion class="example">
+      <CMP> See the link for more data.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) table_by_antidiagonals(a)={my(u=[]); for(i=1, #a, u=concat(u, a[i]); forstep(j=i-1, 1, -1, u=concat(u, a[j]=abs(a[j]-a[j+1])))); u}</CMP>
+    </omtext><omtext class="program">
+      <CMP> A204137=table_by_antidiagonals( A203985 ) \\  M. F. Hasler, Jan 11 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A203985.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric Angelini_, Jan 07 2012</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Computed up to a(70*71/2) by Jean-Marc Falcoz, Jan 09 2012.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

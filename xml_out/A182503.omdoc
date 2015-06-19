@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A182503.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A182503">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,3,4,5,15,17,66,196,233,284,375,1613,2131,3574,14122,24171,49097,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 56871,69361,193406,243145,289951,682749,14501588,21191773,121635191,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 810759781,1292785381,136110231377,294401497761</CMP>
+    </assertion><omtext class="name">
+      <CMP> Engel expansion of the Dottie number, A003957.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Dottie number = 1/2 + 1/2/3 + 1/2/3/3 + 1/2/3/3/4 + 1/2/3/3/4/5 + 1/2/3/3/4/5/15 +...</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/EngelExpansion.html&quot;&gt;Engel Expansion&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/DottieNumber.html&quot;&gt;Dottie Number&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/El#Engel&quot;&gt;Index entries for sequences related to Engel expansions&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> EngelExp[A_, n_] := Join[Array[1 &amp;, Floor[A]], First@Transpose@NestList[{Ceiling[1/Expand[#[[1]] #[[2]] - 1]], Expand[#[[1]] #[[2]] - 1]} &amp;, {Ceiling[1/(A - Floor[A])], A - Floor[A]}, n - 1]]; z = FindRoot[x == Cos[x], {x, 1}, WorkingPrecision -&gt; 10000][[1, -1]]; EngelExp[z, 30]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A003957, A006784.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ben Branman_, May 02 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A242481.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A242481">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,1,1,1,2,1,2,1,1,1,2,1,2,1,1,1,1,1,2,1,1,1,2,1,1,1,1,1,2,1,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,2,1,2,1,1,1,1,1,2,1,2,1,2,1,2,1,2,1,1,1,1,1,2,1,2,1,2,1,2,1,1,1,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,1,2,1,2,1,2,1,1,1,1,1,2,1,2,1,2,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = ((n*(n+1)/2) mod n + sigma(n) mod n + antisigma(n) mod n) / n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(1) = 0. If there is no odd multiply-perfect number then a(n) = 1 or 2 for n &gt;= 2. See A242482 = numbers m such that a(n) = 1, A242483 = numbers m such that a(n) = 2. If there are any odd multiply-perfect numbers m &gt; 1 then a(m) = 0.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jaroslav Krizek, &lt;a href=&quot;/A242481/b242481.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A242481"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A142150"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A054024"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A229110"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A000217"/>
+      <OMV name="n"/>
+    </OMA><OMV name="mod"/><OMV name="n"/></OMA><OMA><OMS name="times"/><OMA>
+      <OMR xref="A000203"/>
+      <OMV name="n"/>
+    </OMA><OMV name="mod"/><OMV name="n"/></OMA><OMA><OMS name="times"/><OMA>
+      <OMR xref="A024816"/>
+      <OMV name="n"/>
+    </OMA><OMV name="mod"/><OMV name="n"/></OMA>
+    </OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A242481"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A242480"/>
+      <OMV name="n"/>
+    </OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(8) = [(8*(8+1)/2) mod 8 + sigma(8) mod 8 + antisigma(8) mod 8] / 8 = (36 mod 8 + 15 mod 8 + 21 mod 8) / 8 = (4 + 7 + 5 ) / 8 = 2.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (MAGMA) [((n*(n+1)div 2 mod n + SumOfDivisors(n) mod n + (n*(n+1)div 2-SumOfDivisors(n)) mod n))div n: n in [1..1000]]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A242480, A242482, A242483, A242484, A242485, A242486.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jaroslav Krizek_, May 16 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

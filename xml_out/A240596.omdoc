@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A240596.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A240596">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 107,4201,18181981,29884303,72147193,81927499,208506511,383148631,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 402473443,1106558899,1391119621,1459314919,1498299289,1945171369,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4593570199,7908301729,8052037969,9970592521,10594343761,11304695329,14119758703,15111907009,23157107803</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes of the form p*q*r + 2 where p, q and r are consecutive primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> All the terms in the sequence, except a(1), are congruent to 1 mod 6.</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. D. Bajpai, &lt;a href=&quot;/A240596/b240596.txt&quot;&gt;Table of n, a(n) for n = 1..3525&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 107 is prime and appears in the sequence because 107 = (3*5*7)+2.</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4201 is prime and appears in the sequence because 4201 = (13*17*19)+2.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> KD := proc() local a, b; a:=ithprime(n)*ithprime(n+1)*ithprime(n+2); b:=a+2; if isprime(b) then RETURN (b); fi; end: seq(KD(), n=1..1000);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Table[Prime[k]*Prime[k+1]*Prime[k+2]+2,{k,1,300}],PrimeQ]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) s=[]; for(k=1, 1000, t=prime(k)*prime(k+1)*prime(k+2)+2; if(isprime(t), s=concat(s, t))); s \\ _Colin Barker_, Apr 09 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A048880, A051507.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _K. D. Bajpai_, Apr 08 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

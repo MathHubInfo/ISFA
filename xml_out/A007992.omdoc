@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A007992.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A007992">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6160,12220,23500,68908,249424,425500,434784,649990,660825,1017856,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1077336,1238380,1252216,1568260,1754536,2166136,2362360,2482536,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2537220,2876445,3957525,4177524,4287825,5224660,5559510,5641552</CMP>
+    </assertion><omtext class="name">
+      <CMP> Augmented amicable pairs (smaller member of each pair).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let f(n) = 1 + sum of aliquot divisors of n; these are pairs (n,m) with f(n)=m, f(m)=n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> m cannot equal n.  From _Harvey P. Dale_, May 18 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Moews, &lt;a href=&quot;http://xraysgi.ims.uconn.edu/augmented.fmtlist&quot;&gt;Augmented amicable pairs&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. O. M. Pedersen, &lt;a href=&quot;http://amicable.homepage.dk/tables.htm&quot;&gt;Tables of Aliquot Cycles&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> aapQ[n_]:=Module[{c=DivisorSigma[1,n]+1-n},c!=n&amp;&amp;DivisorSigma[ 1,c]+1-c == n]; Transpose[Union[Sort[{#,DivisorSigma[1,#]+1-#}]&amp;/@Select[Range[ 6000000],aapQ]]] [[1]] _Harvey P. Dale_, May 18 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A015630.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

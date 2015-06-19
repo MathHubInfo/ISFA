@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A187136.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A187136">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 12609,1853892,99203418,7020258336,440941355208,29716252404984,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1928394629936928,127632346709629266,8355847987373669514,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 550355304750006790962,36131509292425042328892,2376245166849996273772092</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+1)X6 0..2 arrays with every 2X2 subblock trace equal to exactly one or two horizontal and vertical neighbor 2X2 subblock traces</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 5 of A187140</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A187136/b187136.txt&quot;&gt;Table of n, a(n) for n = 1..28&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for 4X6</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..0..1..2..1....0..0..0..1..2..0....1..1..0..2..1..2....0..0..1..1..0..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..1..1..2..1....0..0..1..2..1..0....0..0..0..0..1..2....0..0..1..2..1..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0..2..2....0..0..1..1..1..2....0..0..1..0..0..2....0..0..1..2..1..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..1..1..2....0..0..0..0..0..2....0..0..0..0..1..1....0..0..0..1..0..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Mar 05 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

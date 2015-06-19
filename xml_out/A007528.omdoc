@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A007528.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A007528">
+          <assertion class="***** TTTT *****">
+      <CMP> M3809</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,11,17,23,29,41,47,53,59,71,83,89,101,107,113,131,137,149,167,173,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 179,191,197,227,233,239,251,257,263,269,281,293,311,317,347,353,359,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 383,389,401,419,431,443,449,461,467,479,491,503,509,521,557,563,569,587</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes of form 6n-1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For values of n see A024898.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also primes p such that p^q - 2 is not prime where q is an odd prime. These numbers cannot be prime because the binomial p^q = (6n-1)^q expands to 6h-1 some h. Then p^q-2 = 6h-1-2 is divisible by 3 thus not prime. - _Cino Hilliard_, Nov 12 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A211890(3,n-1) for n &lt;= 4. - _Reinhard Zumkeller_, Jul 13 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 870.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A007528/b007528.txt&quot;&gt;Table of n, a(n) for n=1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., &lt;a href=&quot;http://www.nrbook.com/abramowitz_and_stegun/&quot;&gt;Handbook of Mathematical Functions&lt;/a&gt;, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy].</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> A003627 \ {2}. [From _R. J. Mathar_, Oct 28 2008]</CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> a={};Do[x=6*n-1;If[PrimeQ[x],AppendTo[a,x]],{n,10^2}];a - _Vladimir Joseph Stephan Orlovsky_, Apr 29 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[6Range[100]-1,PrimeQ]  (* _Harvey P. Dale_, Feb 14 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) forprime(p=2,1e3,if(p%6==5,print1(p&quot;, &quot;))) \\ _Charles R Greathouse IV_, Jul 15 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a007528 n = a007528_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a007528_list = [x | k &lt;- [0..], let x = 6 * k + 5, a010051' x == 1]</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Jul 13 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A132231, A117047, A214360, A010051.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

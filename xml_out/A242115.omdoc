@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A242115.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A242115">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 159,895,2047,4607,10239,49151,4718591,20971519,838860799,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 137438953471,5085241278463,21440476741631,340010386766614455386111,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 96714065569170333976494079,3288278229351791355200798719,111414603535684224740921180159,15370263527767281493147526365183</CMP>
+    </assertion><omtext class="name">
+      <CMP> Woodall semiprimes:  Semiprimes of the form n*2^n - 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The n-th Woodall number Wn = n*2^n - 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If Wn is semiprime, it is in the sequence.</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. D. Bajpai, &lt;a href=&quot;/A242115/b242115.txt&quot;&gt;Table of n, a(n) for n = 1..26&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1) = 159 = (5*2^5 - 1) is 5th Woodall Number and 159 = 3 * 53 which is semiprime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 895 = (7*2^7 - 1) is 7th Woodall Number and 895 = 5 * 179 which is semiprime.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory): A242115:= proc(); if bigomega(x*2^x-1)=2 then RETURN (x*2^x-1); fi; end: seq(A242115 (),x=1..200);</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=1, 1000, if(bigomega(n*2^n-1)==2, print1(n*2^n-1, &quot;, &quot;))) \\ _Colin Barker_, May 07 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001358, A002234, A003261, A050918.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _K. D. Bajpai_, May 04 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

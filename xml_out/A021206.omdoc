@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A021206.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A021206">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4,9,5,0,4</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of 1/202.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A021206"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMA><OMS name="times"/><OMV name="n"/><OMV name="mod"/><OMI>4</OMI></OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="mod"/><OMI>4</OMI></OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMV name="mod"/><OMI>4</OMI></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>8</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMV name="mod"/><OMI>4</OMI></OMA></OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>5</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A021206"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMV name="n"/>
+    </OMA><OMV name="mod"/><OMI>2</OMI></OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,with <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>[From _Paolo <OMOBJ>
+        <OMV name="P"/>
+      </OMOBJ>.Lava_ ,Sep 24 2009 ]
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

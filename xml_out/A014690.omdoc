@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A014690.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A014690">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,7,10,15,18,23,26,31,38,41,48,53,56,61,68,75,78,85,90,93,100,105,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 112,121,126,129,134,137,142,157,162,169,172,183,186,193,200,205,212,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 219,222,233,236,241,244,257,270,275,278,283,290,293,304,311,318,325,328</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = n + prime(n+1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In sequence of odd primes add 1 to first prime, add 2 to 2nd prime, add 3 to 3rd prime and so on.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_]:=Prime[n+1]+n (_Zak Seidov_, May 05 2005)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Mohammad K. Azarian_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Erich Friedman_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

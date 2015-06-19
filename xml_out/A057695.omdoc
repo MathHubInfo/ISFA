@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A057695.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A057695">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 672,484,4072,30816,12672,13204,66236,355056,95040,1222048,798660</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of 5-card poker hands with deuces wild of 5-of-a-kind, royal flush, straight flush, 4-of-a-kind, full house, flush, straight, 3-of-a-kind, two pairs, one pair, no pair.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> &quot;The Complete Guide To Winning Poker&quot;, Albert Morehead, chap 8.</CMP>
+    </omtext><assertion class="example">
+      <CMP> There are 672 ways to get five-of-a-kind with deuces wild.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> fini,full,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jud McCranie_, Oct 21 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

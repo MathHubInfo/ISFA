@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A219815.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A219815">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 28,91,1588,22017,283334,3967857,59065976,864699568,12174420630,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 164256040933,2133182509213</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX7 arrays of the minimum value of corresponding elements and their horizontal, vertical or diagonal neighbors in a random, but sorted with lexicographically nondecreasing rows and nonincreasing columns, 0..2 nX7 array</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 7 of A219816</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..0..0..0..0..0....0..0..0..0..0..0..0....2..2..2..2..0..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..1..0..0..0..0....0..0..0..0..0..0..0....2..2..2..2..2..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..2..1..1..1..1..0....2..0..0..1..0..0..0....2..2..2..2..2..0..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Nov 28 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

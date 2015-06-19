@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A213055.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A213055">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,4,1,9,2,6,0,7,0,1,3,9,2,8,9,0,0,8,7,4,4,5,6,1,3,6,4,8,2,9,6,3,6,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,6,0,6,9,0,9,2,0,9,4,8,4,2,6,0,9,8,1,6,8,5,0,0,0,6,6,1,1,0,1,5,8,9,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4,3,1,5,9,9,4,4,5,6,0,4,9,3,3,5,9,7,0,1,5,2,1,5,7,3,4,2,4,1,9,6,3,0,2,4,8</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of second Chandrasekhar's nearest neighbor constant.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> When n pointlike particles are distributed uniformly randomly in a unit volume, the most probable distance between any of them and its nearest neighbor is C/n^(1/3).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For the mean distance, see A213054.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Chandrasekhar, Stochastic Problems in Physics and Astronomy, Reviews of Modern Physics, 15 (1943), 1-89.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="C"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMS name="Pi"/></OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 0.5419260701392890087445613648296367260...</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A213054.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Stanislav Sykora_, Jun 03 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

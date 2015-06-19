@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A254103.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A254103">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,3,5,4,8,6,14,9,11,7,23,13,17,10,41,22,26,15,32,18,20,12,68,36,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 38,21,50,27,29,16,122,63,65,34,77,40,44,24,95,49,53,28,59,31,35,19,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 203,103,107,55,113,58,62,33,149,76,80,42,86,45,47,25,365,184,188,96,194,99,101,52,230,117,119,61,131,67,71,37,284,144,146,75,158,81,83,43</CMP>
+    </assertion><omtext class="name">
+      <CMP> Permutation of natural numbers: a(0) = 0, a(2n) = (3*a(n))-1, a(2n+1) = floor((3*(1+a(n)))/2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This sequence can be represented as a binary tree. Each child to the left is obtained by multiplying the parent by three and subtracting one, and each child to the right is obtained by adding one to parent, multiplying by three, and then halving the result (discarding a possible remainder):</CMP>
+    </omtext><omtext class="comment">
+      <CMP>                                      0</CMP>
+    </omtext><omtext class="comment">
+      <CMP>                                      |</CMP>
+    </omtext><omtext class="comment">
+      <CMP>                   ...................1...................</CMP>
+    </omtext><omtext class="comment">
+      <CMP>                  2                                       3</CMP>
+    </omtext><omtext class="comment">
+      <CMP>        5......../ \........4                   8......../ \........6</CMP>
+    </omtext><omtext class="comment">
+      <CMP>       / \                 / \                 / \                 / \</CMP>
+    </omtext><omtext class="comment">
+      <CMP>      /   \               /   \               /   \               /   \</CMP>
+    </omtext><omtext class="comment">
+      <CMP>     /     \             /     \             /     \             /     \</CMP>
+    </omtext><omtext class="comment">
+      <CMP>   14       9          11       7          23       13         17       10</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 41  22   26 15      32  18   20 12      68  36   38  21     50  27   29  16</CMP>
+    </omtext><omtext class="comment">
+      <CMP> etc.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Antti Karttunen, &lt;a href=&quot;/A254103/b254103.txt&quot;&gt;Table of n, a(n) for n = 0..8191&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Per#IntegerPermutation&quot;&gt;Index entries for sequences that are permutations of the natural numbers&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A254103"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A254103"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A016789"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A254103"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A254103"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A032766"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="a" cd="A254103"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A254103"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A254103"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="a" cd="A254103"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A254103"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="floor" cd="A254103"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="a" cd="A254103"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Other identities :
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A254103"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A007051"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>for all <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.[<OMOBJ>
+        <OMV name="A"/>
+      </OMOBJ>property shared with <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMR xref="A048673"/>
+      <OMV name="and"/>
+    </OMA><OMR xref="A183209"/></OMA>
+      </OMOBJ>.]
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (Scheme, with memoizing macro definec)</CMP>
+    </omtext><omtext class="program">
+      <CMP> ;; First a stand-alone version for MIT/GNU Scheme:</CMP>
+    </omtext><omtext class="program">
+      <CMP> (definec (A254103 n) (cond ((zero? n) n) ((even? n) (+ -1 (* 3 (A254103 (/ n 2))))) (else (floor-&gt;exact (/ (* 3 (+ 1 (A254103 (/ (- n 1) 2)))) 2)))))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (definec (A254103 n) (cond ((&lt; n 1) n) ((even? n) (A016789 (- (A254103 (/ n 2)) 1))) (else (A032766 (+ 1 (A254103 (/ (- n 1) 2))))))) ;; Above represented with A-numbers.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Inverse: A254104.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A007051, A016789, A032766, A140263, A191450, A246207.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Similar permutations: A048673, A183209.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Antti Karttunen_, Jan 25 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

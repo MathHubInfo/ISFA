@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A215383.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A215383">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,19,29,41,53,67,71,79,97,107,131,149,157,197,211,223,227,263,313,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 331,353,367,379,383,409,419,431,443,457,461,487,509,521,523,547,587,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 599,601,613,617,643,653,677,691,743,757,769,773,809,821,859,877,887</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes congruent to {1, 2, 3, 6} mod 13.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A215383/b215383.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Prime[Range[300]],MemberQ[{1,2,3,6},Mod[#,13]]&amp;]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(1000) | p mod 13 in [1, 2, 3, 6]];</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A045340.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vincenzo Librandi_, Aug 10 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

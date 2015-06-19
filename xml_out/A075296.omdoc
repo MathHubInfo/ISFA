@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A075296.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A075296">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 42,105,231,399,483,861,987,1113,1281,1491,1869,2121,2247,2667,2751,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3129,3423,5649,5691,5817,7539,8169,8421,8589,9807,10563,10689,10983,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11361,13881,14511,14889,15519,17031,17409,18627,19761,20391,21189</CMP>
+    </assertion><omtext class="name">
+      <CMP> Interprimes which are of the form s*prime, s=21.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Interprimes of the form s*prime are in A075277-A075296 ( s = 2 - 21 ). Case s=1 is impossible.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 231 is an interprime and 231/21 = 11 is prime.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> s=21; Select[Table[(Prime[n+1]+Prime[n])/2, {n, 2, 14000}], PrimeQ[ #/s]&amp;]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A075277-A075296.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zak Seidov_, Sep 12 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

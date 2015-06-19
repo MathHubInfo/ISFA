@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A007259.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A007259">
+          <assertion class="***** TTTT *****">
+      <CMP> M4504</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,8,28,64,134,288,568,1024,1809,3152,5316,8704,13990,22208,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 34696,53248,80724,121240,180068,264448,384940,556064,796760,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1132544,1598789,2243056,3127360,4333568,5971922,8188096,11170160,15163392,20491033,27572936</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of Product (1+q^m)^(-8); m=1..inf.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Ramanujan theta functions: f(q) (see A121373), phi(q) (A000122), psi(q) (A010054), chi(q) (A000700).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> McKay-Thompson series of class 6F for the Monster group.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. J. I'a. Bromwich, Introduction to the Theory of Infinite Series, Macmillan, 2nd. ed. 1949, p. 118, Problem 24.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. H. Conway and S. P. Norton, Monstrous Moonshine, Bull. Lond. Math. Soc. 11 (1979) 308-339.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. McKay and H. Strauss, The q-series of monstrous moonshine and the decomposition of the head characters. Comm. Algebra 18 (1990), no. 1, 253-278.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. Ford, J. McKay and S. P. Norton, &lt;a href=&quot;http://dx.doi.org/10.1080/00927879408825127&quot;&gt;More on replicable functions&lt;/a&gt;, Commun. Algebra 22, No. 13, 5175-5193 (1994).</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Somos, &lt;a href=&quot;http://cis.csuohio.edu/~somos/multiq.pdf&quot;&gt;Introduction to Ramanujan theta functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/RamanujanThetaFunctions.html&quot;&gt;Ramanujan Theta Functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Mat#McKay_Thompson&quot;&gt;Index entries for McKay-Thompson series for Monster simple group&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Expansion of chi(-q)^8 in powers of q where chi() is a Ramanujan theta function. - _Michael Somos_, Aug 18 2007</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Expansion of <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS cd="set1" name="set">
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="eta" cd="A007259"/>
+      <OMV name="q"/>
+    </OMA><OMA>
+      <OMS name="eta" cd="A007259"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMS>
+    </OMA>
+      <OMI>8</OMI>
+    </OMA></OMA>
+      </OMOBJ>in powers of <OMOBJ>
+        <OMV name="q"/>
+      </OMOBJ>.-_Michael Somos_ ,Aug 18 2007 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Euler transform of period <OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>sequence [-<OMOBJ>
+        <OMI>8</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>0</OMI>
+      </OMOBJ>,...].-_Michael Somos_ ,Aug 18 2007 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Given <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .<OMOBJ>
+        <OMA>
+      <OMS name="A" cd="A007259"/>
+      <OMV name="x"/>
+    </OMA>
+      </OMOBJ>,then <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="B" cd="A007259"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A007259"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA><OMV name="x"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>satisfies <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMA>
+      <OMS name="f" cd="A007259"/>
+      <OMA>
+      <OMS name="B" cd="A007259"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="B" cd="A007259"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="f" cd="A007259"/>
+      <OMV name="u"/><OMV name="v"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="v"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="u"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="v"/></OMA><OMA><OMS name="times"/><OMI>16</OMI><OMV name="u"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Michael Somos_ ,Aug 18 2007 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .is a period <OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>Fourier series which satisfies <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="f" cd="A007259"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="t"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>16</OMI><OMA>
+      <OMS name="f" cd="A007259"/>
+      <OMV name="t"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMA>
+      <OMS name="exp" cd="A007259"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMS name="pi"/><OMV name="i"/><OMV name="t"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Michael Somos_ ,Aug 18 2007 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMBIND>
+          <OMA>
+            <OMS name="Product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>8</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A007259"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A014705"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A007259"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMR xref="A022573"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A007259"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A007263"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 1 - 8*x + 28*x^2 - 64*x^3 + 134*x^4 - 288*x^5 + 568*x^6 - 1024*x^7 + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> T6F = 1/q - 8q^2 + 28q^5 - 64q^8 + 134q^11 - 288q^14 + 568q^17 + ...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ QPochhammer[ q, q^2]^8, {q, 0, n}] (* _Michael Somos_, Jul 11 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ Product[ 1 - q^k, {k, 1, n, 2}]^8, {q, 0, n}] (* _Michael Somos_, Jul 11 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ Product[ 1 + q^k, {k, n}]^-8, {q, 0, n}] (* _Michael Somos_, Jul 11 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A); if( n&lt;0, 0, A = x * O(x^n); polcoeff( (eta(x + A) / eta(x^2 + A))^8, n))}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007263, A014705, A022573.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

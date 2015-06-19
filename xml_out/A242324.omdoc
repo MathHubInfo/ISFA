@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A242324.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A242324">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,5,7,8,11,13,14,15,18,39,42,46,128,319,501,645,749,785,924,1786,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1810,3032,3053,3913,4444,5611,6290,20526,20850,23431,44281,45981,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 103816,133938</CMP>
+    </assertion><omtext class="name">
+      <CMP> Indices of primes in the tribonacci-like sequence A214827.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(37) &gt; 2*10^5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tony D. Noe and Jonathan Vos Post, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL8/Noe/noe5.html&quot;&gt;Primes in Fibonacci n-step and Lucas n-step Sequences&lt;/a&gt;, J. of Integer Sequences, Vol. 8 (2005), Article 05.4.4</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a={1,5,5}; Print[1];Print[2]; For[n=3, n&lt;=1000, n++, sum=Plus@@a; If[PrimeQ[sum], Print[n]]; a=RotateLeft[a]; a[[3]]=sum]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001590, A100683, A231574, A231575, A232542, A214899, A230607, A020992, A232498, A214727, A081172, A214752, A141523,A214825, A235862, A214827.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert Price_, May 10 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

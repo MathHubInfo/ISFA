@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A046765.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A046765">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,0,0,0,1,0,0,3,0,0,7,0,0,13,0,0,25,0,0,43,0,0,77,0,0,130,0,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 222,0,0,365,0,0,603,0,0,966,0,0,1546,0,0,2425,0,0,3783,0,0,5813,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8884,0,0,13411,0,0,20130,0,0,29922,0,0,44217,0,0,64814,0,0,94485,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n with equal number of parts congruent to each of 0, 1 and 2 (mod 3).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Length[Select[Last /@ Transpose /@ Tally /@ Mod[IntegerPartitions[n], 3], Length[#] == 3 &amp;&amp; Length[Union[#]] == 1 &amp;]], {n, 50}] (* _Jayanta Basu_, Jun 28 2013 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,10</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

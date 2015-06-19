@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A048967.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A048967">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,0,3,2,3,0,7,6,7,4,9,6,7,0,15,14,15,12,17,14,15,8,21,18,19,12,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 21,14,15,0,31,30,31,28,33,30,31,24,37,34,35,28,37,30,31,16,45,42,43,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 36,45,38,39,24,49,42,43,28,45,30,31,0,63,62,63,60,65,62,63,56,69,66,67</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of even entries in row n of Pascal's triangle (A007318).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In rows 2^k - 1 all entries are odd.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = 0 (all the entries in the row are odd) iff n = 2^m - 1 for some m &gt;= 0 and then n belongs to sequence A000225. - Avi Peretz (njk(AT)netvision.net.il), Apr 21 2001</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also number of zeros in n-th row of Sierpiński's triangle (cf. A047999): a(n) = A023416(A001317(n)). - _Reinhard Zumkeller_, Nov 24 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = row sums in A219463 = A000120(A219843(n)). - _Reinhard Zumkeller_, Nov 30 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A249304(n+1) = a(n+1) + a(n). - _Reinhard Zumkeller_, Nov 14 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A048967/b048967.txt&quot;&gt;Table of n, a(n) for n=0..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A048967"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMR xref="A001316"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMR xref="A000120"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A048967"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMV name="mod"/><OMI>2</OMI></OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="C" cd="A048967"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMV name="mod"/><OMI>2</OMI></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A048967"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A048967"/>
+      <OMV name="n"/>
+    </OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A048967"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A048967"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Ralf Stephan_ ,Oct 07 2003 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Row 4 is 1 4 6 4 1 with 3 even entries so a(4)=3.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Table[n + 1 - Sum[ Mod[ Binomial[n, k], 2], {k, 0, n} ], {n, 0, 100} ]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;1,0,if(n%2==0,a(n/2)+n/2,2*a((n-1)/2)))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.List (transpose)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a048967 n = a048967_list !! n</CMP>
+    </omtext><omtext class="program">
+      <CMP> a048967_list = 0 : xs where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    xs = 0 : concat (transpose [zipWith (+) [1..] xs, map (* 2) xs])</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Nov 14 2014, Nov 24 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007318, A001316, A000120, A000225.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A249304.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> Brian L. Galebach (sequence(AT)ProbabilitySports.com)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

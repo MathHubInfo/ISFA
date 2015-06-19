@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A098357.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A098357">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,0,1,1,1,1,1,1,1,1,1,1,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,2,1,2,2,2,2,2,1,2,1,2,2,2,2,2,1,2,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2,1,2,1,1,1,2,2,3,2,2,2,2,1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,2,2,2,2,3,3</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = A061017(n) - pi(n+1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) &gt;= 0 for all n &gt;= 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The old entry with this sequence number was a duplicate of A058071.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A companion to A052511. Cf. A061017, A006218, A088526.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,38</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David Applegate_ and _N. J. A. Sloane_, Oct 22 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

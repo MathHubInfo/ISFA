@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A146948.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A146948">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,9,21,33,57,65,69,77,85,93,121,129,141,177,185,201,209,213,217,221,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 237,253,265,289,301,309,321,329,365,381,393,417,437,445,453,469,481,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 497,501,517,533,545,553,581,589,597,633,669,681,689,697,713,717,753</CMP>
+    </assertion><omtext class="name">
+      <CMP> Semiprimes n such that n+1 and n+2 are squarefree.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Terms computed by _Zak Seidov_.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[800],PrimeOmega[#]==2&amp;&amp;And@@SquareFreeQ/@(#+{1,2})&amp;] (* _Harvey P. Dale_, Oct 30 2013 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,less</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Giovanni Teofilatto_, Nov 03 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

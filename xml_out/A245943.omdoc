@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A245943.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A245943">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,6,4,3,4,3,5,12,7,18,10,6,4,3,6,4,3,7,18,10,6,4,3,8,5,12,7,18,10,6,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4,3,9,24,13,36,19,54,28,15,42,22,12,7,18,10,6,4,3,10,6,4,3,11,30,16,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9,24,13,36,19,54,28,15,42,22,12,7,18,10,6,4,3</CMP>
+    </assertion><omtext class="name">
+      <CMP> Irregular triangle read by rows of a variation of the Collatz iteration with signature (1,2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is conjectured that the trajectory of this Collatz-like iteration arrives at 3 in a finite number of steps for any initial value x, (x&gt;2). The iterative step is divide by 2 and add 1 if even, or multiply by 3 and subtract 3 if odd. For any initial value the number of steps in the trajectory is the same as the number of steps in the Collatz trajectory starting with (x-2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is one of a subset of Collatz like variations with parameters a = 1 and b = (any positive or negative even integer). The halting value h for type(a=1,b:even) is given by h = a + b. Any odd halting value can be chosen by selecting the appropriate value for b. For any sequence the halting value is arrived at in the same number of steps as the Collatz trajectory starting with (x-b). The iterative function for subset type(a=1,b:even) is x -&gt; (x/2+b/2) if x is even or x -&gt; (3*x-2*b+1) if x is odd.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Two variations belong to the same subset if their (a) parameters are the same and their (b) parameters have the same parity. It is conjectured that any variations belonging to the same subset have equal row lengths. Members of the same subset share other properties. For example the trajectory of any variation of subset type(a=1,b:even) can be mapped to a Collatz trajectory by b from each element of the trajectory.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The variation with signature type(1,0) belongs to this subset and is in fact the classic Collatz sequence.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The subset is part of a wider class of Collatz variations uniquely identified by two parameters (a,b) where a or b can be any integer. The general formula for the halting value is h = 6^(b%2)*a+b+b%2; The general formula for the iterative mapping function is x -&gt; (x/2+ceil(b/2)) if x is even and x -&gt; (3*x-2*b+a^(a%2)) if x is odd. The minimum starting value is b+1+b%2 for a = 1 or a = 2. Values of a other than 1 or 2 are not always &quot;well behaved&quot;.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some initial rows of the irregular array (r,j):</CMP>
+    </assertion><assertion class="example">
+      <CMP> r: j = (1, 2, 3... )</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1: (3, 6, 4, 3),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2: (4, 3),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3: (5, 12, 7, 18, 10, 6, 4, 3),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4: (6, 4, 3),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5: (7, 18, 10, 6, 4, 3),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6: (8, 5, 12, 7, 18, 10, 6, 4, 3),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7: (9, 24, 13, 36, 19, 54, 28, 15, 42, 22, 12, 7, 18, 10, 6, 4, 3),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8: (10, 6, 4, 3),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9: (11, 30, 16, 9, 24, 13, 36, 19, 54, 28, 15, 42, 22, 12, 7, 18, 10, 6, 4, 3),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10: (12, 7, 18, 10, 6, 4, 3),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11: (13, 36, 19, 54, 28, 15, 42, 22, 12, 7, 18, 10, 6, 4, 3),</CMP>
+    </assertion><assertion class="example">
+      <CMP> 12: (14, 8, 5, 12, 7, 18, 10, 6, 4, 3)</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) {for(n=3, 14, x=n; print1(x,&quot;, &quot;); until(x==3, if(x%2,x=x*3-3,x=x/2+1);print1(x,&quot;, &quot;)))} \\ Prints flattened triangle.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) variation(a,b) = {if(!(a==1||a==2), print(&quot;Enter a=1 or a=2&quot;), h=6^(b%2)*a+b+b%2; c=ceil(b/2); d=2*-b+a^(a%2); for(r=1,12, x=r+b+b%2; print1(r,&quot;: (&quot;,x); until(x==h, if(x%2, x=3*x+d, x=x/2+c); print1(&quot;, &quot;,x)); print(&quot;),&quot;)))} \\ Generalised version.</CMP>
+    </omtext><omtext class="program">
+      <CMP> {variation(1,2)} \\ Prints first 12 rows of this irregular array.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A245942 for variation type (a=2,b:odd).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A245944 for variation type (a=2,b:even).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A242030 for variation type (a=1,b:odd).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabf</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _K. Spage_, Aug 11 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

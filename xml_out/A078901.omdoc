@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A078901.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A078901">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 17,97,257,337,881,1921,3697,6497,6817,10657,16561,24641,35377,49297,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 65537,66977,72097,89041,116161,149057,188497,235297,290321,354481,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 428737,456161,514097,611617,722401,847601,988417,1146097,1321937</CMP>
+    </assertion><omtext class="name">
+      <CMP> Generalized Fermat numbers of the form (k+1)^2^m + k^2^m, with m&gt;1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It can be shown that, like the Fermat numbers, two of these generalized Fermat numbers are coprime if they have the same base k. However, unlike the Fermat numbers (which are conjectured to be squarefree), these generalized Fermat numbers are not necessarily squarefree for k &gt; 1. Riesel tabulates some prime factors of generalized Fermat numbers for k &lt;= 5.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For k=1, these are the Fermat numbers A000215. See A078900 for the case m&gt;0, which includes the sum of consecutive squares. By Legendre's theorem (Riesel, p. 165), the prime factors of a generalized Fermat number are of the form 1 + f 2^(m+1) for some integer f. See A078902 for generalized Fermat primes.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> H. Riesel, &quot;Prime numbers and computer methods for factorization,&quot; Second Edition, Progress in Mathematics, Vol. 126, Birkhauser, Boston, 1994, pp. 417-425.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;http://www.sspectra.com/math/GenFermat.txt&quot;&gt;Factorizations of Generalized Fermat Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/GeneralizedFermatNumber.html&quot;&gt;Generalized Fermat Number&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> mx=10^7; maxK=Ceiling[Sqrt[mx/2]]; maxM=Ceiling[Log[2, Log[2, mx]]]; lst={}; Do[gf=(k+1)^2^m+k^2^m; If[gf&lt;mx, AppendTo[lst, gf]], {k, maxK}, {m, 2, maxM}]; lst2=Union[lst]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000215, A078900, A078902.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _T. D. Noe_, Dec 12 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

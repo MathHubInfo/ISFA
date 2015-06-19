@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A229719.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A229719">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,6,28,76,256,374,948,1024,2264,2166,4396,3912</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of arrays of length 3 that are sums of n consecutive elements of length 3+n-1 permutations of 0..3+n-2, and no two consecutive rises or falls in the latter permutation</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row 3 of A229717</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> .10...12...10....8....9....8...10....8....8....8....9...10...10...10...13....7</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..8....9...11...11...11....7....7...12...11...10...11...11...13...12...10...10</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..9....7....9...14...10...10....8...14...13...11...12...10...12...11....8...12</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Sep 27 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

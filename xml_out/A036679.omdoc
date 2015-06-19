@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A036679.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A036679">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,2,21,232,3005,45936,818503,16736896,387057609,9996371200,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 285271753811,8915621446656,302868879571453,11111919647266816,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 437892582706491375,18446723150919663616,827239906198908668177,39346401672922831847424</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = n^n - n!.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = |non-injective functions [n]-&gt;[n]| = |non-surjective functions [n]-&gt;[n]|.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Fit a polynomial f of degree n-1 to the first n n-th powers of nonnegative integers. Then a(n) = f(n). - _Franklin T. Adams-Watters_, Dec 28 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> n^n &gt; n! for n &gt;= 3. [Mitrinovic]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. S. Mitrinovic, Analytic Inequalities, Springer-Verlag, 1970; p. 193, 3.1.22.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe and Vincenzo Librandi, &lt;a href=&quot;/A036679/b036679.txt&quot;&gt;Table of n, a(n) for n = 0..300&lt;/a&gt; [T. D. Noe computed terms 0-50, May 11 2007; Vincenzo Librandi computed the first 300 terms, Aug 22 2011]</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      E.g.f .:<OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="T" cd="A036679"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="T" cd="A036679"/>
+      <OMV name="x"/>
+    </OMA>
+      </OMOBJ>is the <OMOBJ>
+        <OMV name="e"/>
+      </OMOBJ>.g.f .for <OMOBJ>
+        <OMR xref="A000169"/>
+      </OMOBJ>.-_Geoffrey Critzer_ ,Dec 10 2012 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> lst={};Do[AppendTo[lst, n^n-n! ], {n, 3*4!}];lst (* _Vladimir Joseph Stephan Orlovsky_, Nov 20 2008 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Join[{0},Table[n^n-n!,{n,20}]] (* _Harvey P. Dale_, Oct 11 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [(n^n-Factorial(n)): n in [0..20] ]; // _Vincenzo Librandi_, Aug 22 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=n^n-n! \\ _Charles R Greathouse IV_, Aug 22 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A126130.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _G. L. Honaker, Jr._</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

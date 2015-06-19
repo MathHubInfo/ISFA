@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A236971.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A236971">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,2,2,3,3,6,7,8,11,19,21,26,31,52,66,76,88,134,169,215,251,358,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 412,517,639,899</CMP>
+    </assertion><omtext class="name">
+      <CMP> The number of partitions of n into at least 4 parts from which we can form every partition of n into 4 parts by summing elements</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The corresponding partitions with 2 in the definition instead of 3 are the complete partitions, which A126796 counts.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The qualifier 'into at least 4 parts' is only relevant for n = 1, 2 or 3. It is included because otherwise the condition would be vacuously true for all partitions of 1, 2 and 3. It seems neater to consider that there are no partitions of 1, 2 or 3 of this form.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> What is the limit for large n of the proportion of partitions of n for which this holds, or this sequence divided by A000041?</CMP>
+    </omtext><assertion class="example">
+      <CMP> The valid partitions of 7 are (2, 2, 1, 1, 1), (2, 1, 1, 1, 1, 1) and (1, 1, 1, 1, 1, 1, 1). Given any partition of 7 into 4 parts, we can express these four parts as disjoint sums of elements from these partitions. For the third one this is trivial, for the second one because one element of the partition must be at least 2, for the third because in fact two elements of the partition must be at least 2. So a(7) = 3</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A000041 counts partitions, A126796 counts complete partitions - the case for partitions into 2 instead of 4, A236970 and A236972 are the cases for 3 and 5 respectively.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jack W Grahl_, Feb 02 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

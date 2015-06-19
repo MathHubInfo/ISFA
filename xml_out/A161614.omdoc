@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A161614.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A161614">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 41,43,89,127,137,157,193,211,233,241,251,271,283,317,331,353,389,401,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 419,461,487,503,521,547,557,613,619,751,787,827,857,919,929,937,941,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 953,1009,1013,1021,1033,1069,1097,1103,1163,1171,1193,1229,1361,1367</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p such that 2*p+100280245065 is also a prime number.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The large constant is constructed from 3*5*7*11*13*17*19*23*29*31 = 100280245065.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A161614/b161614.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> The prime 41 is in the sequence because 2*41+100280245065 = 100280245147 is also prime.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a=3*5*7*11*13*17*19*23*29*31;c=0;lst={};Do[p=Prime[n];If[PrimeQ[2*p+a], AppendTo[lst,p],c++ ],{n,6!}];lst</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> With[{c=Times@@Prime[Range[2,11]]},Select[Prime[Range[250]], PrimeQ[ 2#+c]&amp;]] (* _Harvey P. Dale_, Nov 01 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Prime[Range[300]], PrimeQ[2 # + 100280245065]&amp;] (* _Vincenzo Librandi_, Apr 15 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(1400) | IsPrime(2*p + 100280245065)]; // _Vincenzo Librandi_, Apr 15 2013</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,less</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Joseph Stephan Orlovsky_, Jun 14 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition reworded by _R. J. Mathar_, Oct 02 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

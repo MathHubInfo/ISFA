@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A175215.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A175215">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 71,1031,1151,1229,3299,3371,3389,3467,3851,7457,7949,9011,9437,10007,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10067,10457,10889,11159,11699,11717,11777,11969,12071,12107,13709,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13757,14447,14549,14591,15731,16451,17207,17681,17747,17909,18911,19421,19541</CMP>
+    </assertion><omtext class="name">
+      <CMP> The smaller member of a twin prime pair in which both primes are emirps.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Subsequence of A001359 and of A006567.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Green, Prime Curios, &lt;a href=&quot;http://primes.utm.edu/curios/page.php?curio_id=20903&quot;&gt;Entry 71&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> read(&quot;transforms&quot;) ; isA001359 := proc(n) isprime(n) and isprime(n+2) ; end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> isA006567 := proc(n) local r ; r := digrev(n) ; isprime(n) and isprime(r) and n&lt;&gt; r ; end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> isA175215 := proc(n) isA001359(n) and isA006567(n) and isA006567(n+2) ; end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for i from 1 to 10000 do p := ithprime(i) ; if isA175215(p) then printf(&quot;%d,&quot;,p) ; end if; end do: # R. J. Mathar</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001359, A006567</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lekraj Beedassy_, Mar 06 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 11699 inserted, 14921 -&gt; 19421 corrected by _R. J. Mathar_, Mar 16 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

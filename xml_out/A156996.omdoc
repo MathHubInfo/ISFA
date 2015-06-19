@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A156996.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A156996">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,0,0,2,1,0,3,2,2,8,4,8,2,13,30,40,20,15,2,80,192,210,152,60,24,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 579,1344,1477,994,469,140,35,2,4738,10800,11672,7888,3660,1232,280,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 48,2,43387,97434,104256,70152,32958,11268,2856,504,63,2,439792,976000</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> A triangle sequence from polynomial coefficients: p(x,n)=If[n == 0, 1, Sum[Binomial[2*n - m, m]*(n - m)!*(2*n/(2*n - m))*(x - 1)^m, {m, 0, n}]].</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sums are:n! ;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600,...}.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These polynomials are hit polynomials for the reduced ménage problem from Riordan.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This first version didn't check with Riordans's table :</CMP>
+    </omtext><omtext class="comment">
+      <CMP> I used x^m instead of (x-1)^m.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, pp. 197-199</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="t" cd="A156996"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA>
+      <OMA>
+      <OMS name="coefficients" cd="A156996"/>
+      <OMA>
+      <OMS name="p" cd="A156996"/>
+      <OMV name="x"/><OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="p" cd="A156996"/>
+      <OMV name="x"/><OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="If" cd="A156996"/>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA><OMI>1</OMI><OMA>
+      <OMS name="Sum" cd="A156996"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="Binomial" cd="A156996"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMV name="m"/>
+    </OMA><OMV name="m"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMV name="m"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMV name="m"/>
+    </OMA></OMA><OMA>
+      <OMS cd="set1" name="set">
+        <OMV name="m"/><OMI>0</OMI><OMV name="n"/>
+      </OMS>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>;
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> {1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {-1, 2},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {0, 0, 2},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 0, 3, 2},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {2, 8, 4, 8, 2},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {13, 30, 40, 20, 15, 2},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {80, 192, 210, 152, 60, 24, 2},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {579, 1344, 1477, 994, 469, 140, 35, 2},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {4738, 10800, 11672, 7888, 3660, 1232, 280, 48, 2},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {43387, 97434, 104256, 70152, 32958, 11268, 2856, 504, 63, 2},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {439792, 976000, 1036050, 695760, 328920, 115056, 30300, 6000, 840, 80, 2},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {4890741, 10749024, 11338855, 7603266, 3614490, 1284360, 349734, 73260, 11649, 1320, 99, 2},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {59216642, 129103992, 135494844, 90758872, 43341822, 15596208, 4351368, 951984, 162558, 21208, 1980, 120, 2}</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Table[CoefficientList[If[n == 0, 1, Sum[Binomial[2*n - m, m]*(n - m)!*(2*n/(2*n - m))*(x - 1)^m, {m, 0, n}]], x], {n, 0, 12}]; Flatten[%]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A094314.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,tabl,uned</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_, Feb 20 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

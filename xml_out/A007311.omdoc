@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A007311.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A007311">
+          <assertion class="***** TTTT *****">
+      <CMP> M0676</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,5,7,14,11,66,127,992,5029,30899,193321,1285300,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8942561,65113125,494605857,3911658640,32145949441,274036507173,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2419502677445,22093077575496,208364964369913,2027216779571754,20323053380033763,209715614081160850</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Reversion of o.g.f. for Bell numbers (A000110) omitting a(0)=1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Res#revert&quot;&gt;Index entries for reversions of series&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> read transforms; A := series(exp(exp(x)-1),x,60); SERIESTOLISTMULT(%); subsop(1=NULL,%); REVERT(%);</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;1,0,polcoeff(serreverse(-1+serlaplace(exp(exp(x+x*O(x^n))-1))),n))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000110.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Mira Bernstein_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Signs corrected Dec 24 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

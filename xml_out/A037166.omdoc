@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A037166.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A037166">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,12,30,70,132,208,306,418,644,870,1116,1480,1722,1978,2444,3074,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3540,4026,4690,5112,5694,6478,7304,8544,9700,10302,10918,11556,12208,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 14238,16510,17816,18906,20572,22350,23556,25434,27058,28724,30794,32220</CMP>
+    </assertion><omtext class="name">
+      <CMP> Prime(n)*prime(n+1)-prime(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A000040(n) * A006093(n+1). - _Reinhard Zumkeller_, Nov 10 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A037166/b037166.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Times@@#-#[[1]]&amp;/@Partition[Prime[Range[50]],2,1] (* _Harvey P. Dale_, Apr 15 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a037166 n = a037166_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a037166_list = zipWith (*) a000040_list $</CMP>
+    </omtext><omtext class="program">
+      <CMP>                            map (subtract 1) $ tail a000040_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Nov 10 2013</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Armand Turpel armandt(AT)unforgettable.com</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A110341.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A110341">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,15,32,65,48,161,152,207,190,473,216,689,434,555,704,1003,486,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1577,920,1281,1166,2047,1032,2225,1534,2133,1736,4321,1170,4247,2656,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2673,3196,4585,2736,5291,3268,4407,4240,8651,2436,8471,4972,5355,5474,8413</CMP>
+    </assertion><omtext class="name">
+      <CMP> Right diagonal of triangle in A110339.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A110339, A110340.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Jul 20 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _David Wasserman_, Nov 19 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

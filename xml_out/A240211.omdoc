@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A240211.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A240211">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,4,6,8,12,18,25,36,48,66,87,117,152,204,262,344,438,562,713,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 906,1133,1430,1781,2223,2754,3411,4197,5170,6318,7726,9402,11434,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13834,16747,20179,24301,29166,34976,41805,49940,59469,70763,83986,99578,117784</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions p of n such that median(p) &gt;= multiplicity(max(p)).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A240211"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A240209"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A240210"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A240211"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A240207"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A000041"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(6) counts these 8 partitions:  6, 51, 42, 411, 33, 321, 3111, 21111.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> z = 60; f[n_] := f[n] = IntegerPartitions[n];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t1 = Table[Count[f[n], p_ /; Median[p] &lt; Count[p, Max[p]]], {n, 0, z}]  (* A240207 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t2 = Table[Count[f[n], p_ /; Median[p] &lt;= Count[p, Max[p]]], {n, 0, z}] (* A240208 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t3 = Table[Count[f[n], p_ /; Median[p] == Count[p, Max[p]]], {n, 0, z}] (* A240209 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t4 = Table[Count[f[n], p_ /; Median[p] &gt; Count[p, Max[p]]], {n, 0, z}] (* A240210 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t5 = Table[Count[f[n], p_ /; Median[p] &gt;= Count[p, Max[p]]], {n, 0, z}] (* A240211 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A240207, A240208, A240209, A240210, A000041.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Apr 03 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

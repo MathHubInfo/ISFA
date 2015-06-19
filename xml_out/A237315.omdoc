@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A237315.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A237315">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 256,1352,1352,7398,12690,7398,42474,120650,120650,42474,246644,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1218584,1928204,1218584,246644,1457838,12256598,33313192,33313192,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 12256598,1457838,8652288,126084160,564748168,1008893682,564748168,126084160</CMP>
+    </assertion><omtext class="name">
+      <CMP> T(n,k)=Number of (n+1)X(k+1) 0..3 arrays with the maximum plus the lower median minus the minimum of every 2X2 subblock equal</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Table starts</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ........256..........1352............7398.............42474.............246644</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .......1352.........12690..........120650...........1218584...........12256598</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .......7398........120650.........1928204..........33313192..........564748168</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ......42474.......1218584........33313192........1008893682........29705879570</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .....246644......12256598.......564748168.......29705879570......1497953660532</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ....1457838.....126084160......9923274434......921202878454.....81336374507888</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ....8652288....1291478032....171975075815....28008850432408...4273223840276532</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ...51729960...13373871324...3048207305436...882133454021878.236863001850227620</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..309766574..138091649434..53496852362572.27361616605419182</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .1861078542.1434854215354.954253356186506</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A237315/b237315.txt&quot;&gt;Table of n, a(n) for n = 1..84&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical for column <OMOBJ>
+        <OMV name="k"/>
+      </OMOBJ>:
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>:[linear recurrence of order <OMOBJ>
+        <OMI>37</OMI>
+      </OMOBJ>]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>2</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>99</OMI>
+      </OMOBJ>]
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=2 k=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..2..2..2..2....0..0..0..2..1....0..2..1..2..2....0..0..3..2..3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2..3..3..3....3..0..3..0..2....0..3..1..0..1....0..3..0..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..2..3..3..3....0..0..0..3..0....0..3..1..2..1....0..0..3..3..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Feb 06 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A110518.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A110518">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,0,3,1,0,18,6,1,0,135,45,9,1,0,1134,378,81,12,1,0,10206,3402,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 756,126,15,1,0,96228,32076,7290,1296,180,18,1,0,938223,312741,72171,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13365,2025,243,21,1,0,9382230,3127410,729729,138996,22275,2970,315,24,1,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Riordan array (1, x*c(3x)), c(x) the g.f. of A000108.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sums are C(3;n), A064063. Inverse is A110517. Diagonal sums are A110525.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Number triangle <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A110518"/>
+      <OMI>0</OMI><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>0</OMI>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A110518"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="k"/><OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="C" cd="A110518"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMV name="k"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>;
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A110518"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A106566"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Philippe Deléham_ ,Nov 08 2007 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Triangle <OMOBJ>
+        <OMA>
+      <OMS name="T" cd="A110518"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMV name="k"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>,read by rows ,given by <OMOBJ>
+        <OMA>
+      <OMS cd="set1" name="set">
+        <OMI>0</OMI><OMI>3</OMI><OMI>3</OMI><OMI>3</OMI><OMI>3</OMI><OMI>3</OMI><OMI>3</OMI><OMI>3</OMI><OMS name="..." cd="arithmetics"></OMS>
+      </OMS>
+    </OMA>
+      </OMOBJ>DELTA <OMOBJ>
+        <OMA>
+      <OMS cd="set1" name="set">
+        <OMI>1</OMI><OMI>0</OMI><OMI>0</OMI><OMI>0</OMI><OMI>0</OMI><OMI>0</OMI><OMI>0</OMI><OMI>0</OMI><OMS name="..." cd="arithmetics"></OMS>
+      </OMS>
+    </OMA>
+      </OMOBJ>where DELTA is the operator defined in <OMOBJ>
+        <OMR xref="A084938"/>
+      </OMOBJ>.-_Philippe Deléham_ ,Sep 23 2014 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Rows begin</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,3,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,18,6,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,135,45,9,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,1134,378,81,12,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> Production matrix begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 3, 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 9, 3, 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 27, 9, 3, 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 81, 27, 9, 3, 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 243, 81, 27, 9, 3, 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ... - _Philippe Deléham_, Sep 23 2014</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Barry_, Jul 24 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

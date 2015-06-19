@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A078494.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A078494">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 97,113,127,149,181,211,241,293,307,367,397,419,421,457,479,487,557,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 587,631,661,683,691,719,727,743,773,787,797,809,811,839,863,877,907,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 929,937,953,967,983,1009,1021,1049,1051,1087,1117,1163,1171,1193,1201,1249</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes occurring only once in their decade.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A078494/b078494.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A078494"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="log" cd="A078494"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.In particular ,most primes are in this sequence .-_Charles <OMOBJ>
+        <OMV name="R"/>
+      </OMOBJ>Greathouse IV_ ,Sep 07 2012 
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI) decade1pr(n1,n2) = { forstep(x=n1,n2,10, if(isprime(x+1) &amp;&amp; !isprime(x+3) &amp;&amp; !isprime(x+7) &amp;&amp; !isprime(x+9), print1(x+1&quot; &quot;);); if(isprime(x+3) &amp;&amp; !isprime(x+1) &amp;&amp; !isprime(x+7) &amp;&amp; !isprime(x+9), print1(x+3&quot; &quot;);); if(isprime(x+7) &amp;&amp; !isprime(x+1) &amp;&amp; !isprime(x+3) &amp;&amp; !isprime(x+9), print1(x+7&quot; &quot;);); if(isprime(x+9) &amp;&amp; !isprime(x+1) &amp;&amp; !isprime(x+3) &amp;&amp; !isprime(x+7), print1(x+9&quot; &quot;);); ); }</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) &amp;cat [PrimesInInterval(10*n+1, 10*n+9): n in [0..150] | IsOne(#PrimesInInterval(10*n+1, 10*n+9))]; // _Bruno Berselli_, Sep 05 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A078500.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Cino Hilliard_, Jan 04 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

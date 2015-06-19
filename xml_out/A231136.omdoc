@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A231136.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A231136">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 120,3688,124644,4066129,137063228,4509445997,151928497692,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5001540387953,168507419403536,5547511896771810,186902346005124780,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6153112021568081647,207305819737090195456,6824826623169051569950,229936709033952423239528</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+1)X(6+1) black-square subarrays of 0..2 arrays with no element equal to a strict majority of its diagonal and antidiagonal neighbors, with values 0..2 introduced in row major order</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 6 of A231137</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A231136/b231136.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A231136/a231136.txt&quot;&gt;Empirical recurrence of order 90&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical recurrence of order <OMOBJ>
+        <OMI>90</OMI>
+      </OMOBJ>(see link above )
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..x..0..x..1..x..1..x....x..0..x..1..x..1..x....x..0..x..1..x..0..x</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..x..2..x..2..x..0....1..x..0..x..1..x..0....0..x..2..x..2..x..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..x..2..x..0..x..1..x....x..2..x..2..x..2..x....x..1..x..1..x..0..x</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Nov 04 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

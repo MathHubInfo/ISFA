@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A061872.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A061872">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,14,25,30,36,41,47,52,58,63,69,74,85,96,102,113,124,135,140,146,151,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 157,162,168,173,179,184,195,201,212,223,234,245,250,256,261,267,272,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 278,283,289,294,300,311,322,333,344,355,360,366,371,377,382,388,393</CMP>
+    </assertion><omtext class="name">
+      <CMP> |First digit - second digit + third digit - fourth digit ...| = 3.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harvey P. Dale, &lt;a href=&quot;/A061872/b061872.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Do[ a = IntegerDigits[ n ]; l = Length[ a ]; e = o = {}; Do[ o = Append[ o, a[ [ 2k - 1 ] ] ], {k, 1, l/2 + .5} ]; Do[ e = Append[ e, a[ [ 2k ] ] ], {k, 1, l/2} ]; If[ Abs[ Apply[ Plus, o ] - Apply[ Plus, e ] ] == 3, Print[ n ] ], {n, 1, 1000} ]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> fdsdQ[n_]:=Module[{idn=IntegerDigits[n],o,e},o=Take[idn,{1,-1,2}];e= Take[ idn,{2,-1,2}];Abs[Total[o]-Total[e]]==3]; Select[Range[400],fdsdQ] (* _Harvey P. Dale_, Nov 01 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A008593, A060978-A060980, A060982, A061470-A061479, A061870-A061882.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, May 10 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

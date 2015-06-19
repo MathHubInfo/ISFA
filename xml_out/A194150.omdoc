@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A194150.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A194150">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,15,30,50,76,107,143,184,231,283,340,402,470,543,621,704,793,887,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 986,1090,1199,1314,1434,1559,1689,1825,1966,2112,2263,2420,2582,2749,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2921,3099,3282,3470,3663,3861,4065,4274,4488,4707,4932,5162,5397</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sum{floor(j*(3+sqrt(5)) : 1&lt;=j&lt;=n}; n-th partial sum of Beatty sequence for (3+sqrt(5).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> c[n_] := Sum[Floor[j*(3+Sqrt[5])], {j, 1, n}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> c = Table[c[n], {n, 1, 90}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf.  A001962 (Beatty sequence for 3+sqrt(5)).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Aug 17 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

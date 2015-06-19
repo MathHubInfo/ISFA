@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A162208.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A162208">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,14,30,54,85,120,155,185,205,212,205,185,155,120,85,54,30,14,5,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of reduced words of length n in the Weyl group D_5.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Computed with MAGMA using commands similar to those used to compute A161409.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. Bourbaki, Groupes et alg. de Lie, Chap. 4, 5, 6. (The group is defined in Planche IV.)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. E. Humphreys, Reflection Groups and Coxeter Groups, Cambridge, 1990. See under Poincare polynomial.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .for <OMOBJ>
+        <OMV name="D_m"/>
+      </OMOBJ>is the polynomial <OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="f" cd="A162208"/>
+      <OMV name="n"/>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="Product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="i"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="f" cd="A162208"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="i"/></OMA>
+    </OMA>
+        </OMA>
+      </OMBIND></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="f" cd="A162208"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="f" cd="A162208"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.Only finitely many terms are <OMOBJ>
+        <OMV name="nonzero"/>
+      </OMOBJ>.This is a row of the triangle in <OMOBJ>
+        <OMR xref="A162206"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _John Cannon_ and _N. J. A. Sloane_, Dec 01 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

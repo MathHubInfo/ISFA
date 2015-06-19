@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A141004.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A141004">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,28,258,2892,37778,560124,9256010,168182044,3325057826,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 70934634236,1621828212826,39517131361884,1021237022557682,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 27877344103738940,800976143703407210,24148078430008534428</CMP>
+    </assertion><omtext class="name">
+      <CMP> E.g.f. exp(sum_{d|M} (exp(d*x)-1)/d), M=6.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A141004/b141004.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u[0,j_]:=1;u[k_,j_]:=u[k,j]=Sum[Binomial[k-1,i-1]Plus@@(u[k-i,j]#^(i-1)&amp;/@Divisors[j]),{i,k}]; Table[u[n,6],{n,0,12}] [From _Wouter Meeussen_, Dec 06 2008]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> u[n,j] generates for j=1, A000110 Bell numbers; j=2, A002872 &quot;Sorting numbers&quot;; j=3, A002874 &quot;Sorting numbers&quot;; j=4, A141003 (Mathar); j=5, A036075 &quot;Sorting numbers&quot;; j=6, A141004 (Mathar); j=7, A036077 &quot;Sorting numbers&quot; [From _Wouter Meeussen_, Dec 06 2008]</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. J. Mathar_, Jul 11 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

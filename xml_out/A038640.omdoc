@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A038640.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A038640">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 49,62,85,134,153,161,177,185,338,388,423,433,434,442,443,473,482,493,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 523,543,579,657,685,792,801,871,875,949,1001,1014,1124,1148,1151,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1205,1280,1309,1337,1416,1432,1488,1499,1549,1615,1688,1757,1796,1799,1838</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n-th and (n+1)st term of A038593 differ by 9.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jeff Burch_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

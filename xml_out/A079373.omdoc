@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A079373.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A079373">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,5,17,29,31,37,53,97,211,1489,1531,1741,4217,12373,12953,14939,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 34667,180797</CMP>
+    </assertion><omtext class="name">
+      <CMP> Records in A079372.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> RECORDS transform of A079372.</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/transforms.txt&quot;&gt;Transforms&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A079372, A079374, A079366-A079368.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Feb 16 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(10) - a(18) from _Nathaniel Johnston_, Apr 25 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

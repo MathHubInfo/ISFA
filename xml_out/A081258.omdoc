@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A081258.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A081258">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 16,18,22,30,49,67,68,74,79,81,87,100,102,121,135,137,146,149,154,158,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 159,163,165,169,172,178,181,191,211,221,229,230,235,256,262,263,269,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 273,277,291,292,301,305,313,315,324,326,334,352,361,372,373,380,393</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n^3-1 (or equivalently n^2+n+1) has no prime factor greater than n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> One might also include the 1 here. - R. J. Mathar, Oct 11 2011</CMP>
+    </omtext><assertion class="example">
+      <CMP> 16^3-1 = 4095 = 3*3*5*7*13</CMP>
+    </assertion><omtext class="maple">
+      <CMP> isA081258 := proc(n)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         numtheory[factorset](n^3-1) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         if max(op(%)) &lt;= n then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>                 true;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         else</CMP>
+    </omtext><omtext class="maple">
+      <CMP>                 false;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> end proc;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for n from 1 to 400 do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         if isA081258(n) then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>                 printf(&quot;%d,&quot;,n);</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> end do: # R. J. Mathar, Oct 11 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A081256, A081257.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Jan Fricke (fricke(AT)mathematik.uni-siegen.de), Mar 14 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

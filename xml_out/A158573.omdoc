@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A158573.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A158573">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,3,4,5,9,10,11,12,13,15,16,18,19,20,24,25,26,29,30,31,32,33,36,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 37,41,43,44,48,52,53,54,55,58,59,62,66,67,71,76,78,79,81,82,85,87,88,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 89,90,92,93,95,96,97,101,102,106,107,110,115,117,118,120,121,123,124,128</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that 30*n + 7 is prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Encoded primes with LSD 7 and (SOD-1)/3 integer, (LSD, least significant digit; SOD, sum of digits). Divide any such number by 30, if the whole number portion of the quotient is in the sequence, the number is prime.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A158573"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A132231"/>
+      <OMV name="n"/>
+    </OMA><OMI>7</OMI>
+    </OMA><OMI>30</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="Floor" cd="A158573"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A132231"/>
+      <OMV name="n"/>
+    </OMA><OMI>30</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-Chandler 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Example: 3877, with LSD 7 and (SOD-1)/3 = 23 (integer); Then 3877/30 = 129.233, or 129, which is in the sequence, and thus 3877 is prime.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A111175, A158614, A158648, A158746, A158791, A158806, A158850.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ki Punches_, Mar 21 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Ray Chandler_, Apr 07 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

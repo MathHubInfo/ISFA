@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A225949.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A225949">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,0,17,23,0,31,0,41,0,49,47,0,0,0,71,0,73,0,89,0,97,79,0,103,0,119,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 127,0,113,0,137,0,0,0,161,119,0,151,0,0,0,191,0,199,0,161,0,193,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 217,0,233,0,241,167,0,0,0,239,0,263,0,0,0,287,0,217,0,257,0,289,0,313,0,329,0,337,223,0,271,0,311,0,0,0,367,0,383,0,391</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle for sum of the two legs (catheti) of primitive Pythagorean triangles.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For primitive Pythagorean triples (x,y,z) see the Niven et al. reference, Theorem 5.5, p. 232, and the Hardy-Wright reference, Theorem 225, p. 190.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Here a(n,m) = 0 for non-primitive Pythagorean triangles.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> There is a one to one correspondence between the values n and m of this number triangle for which a(n,m) does not vanish and primitive solutions of x^2 + y^2 = z^2 with y even, namely x = n^2 - m^2, y = 2*n*m and z = n^2 + m^2. The mirror triangles with x even are not considered here. Therefore a(n,m) = n^2 - m^2 + 2*n*m (for these solutions).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The number of non-vanishing entries in row n is A055034(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence of the main diagonal is 2*n^2-1 = A056220(n), n&gt;= 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence of the main diagonal is j^2 + k^2 - 2 or 2*j*k if n&gt;=2 and j = n + sqrt(2)/2 and k = n - sqrt(2)/2. - _Avi Friedlich_, Mar 30 2015</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If the 0 entries are eliminated and the numbers are ordered increasingly (keeping multiple entries) the sequence becomes A198441(n-1), n&gt;=2. If multiple entries are recorded only once this becomes A058529 (a proper sub-sequence of A118905). Note that all leg sums &lt;= N are certainly reached if one considers rows n = 2, ..., floor(-1 + sqrt(N+2)).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. H. Hardy and E. M. Wright, An Introduction to the Theory of Numbers, Fifth Edition, Clarendon Press, Oxford, 2003.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Ivan Niven, Herbert S. Zuckerman and Hugh L. Montgomery, An Introduction to the Theory Of Numbers, Fifth Edition, John Wiley and Sons, Inc., NY 1991.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n,m) = (n+m)^2 -2*m^2 if n &gt; m &gt;= 1, gcd(n,m) = 1, and n and m are integers of opposite parity (i.e., (-1)^(n+m) = -1); otherwise a(n,m) = 0.</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> The triangle a(n,m) begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> n\m   1   2   3   4   5   6    7    8    9   10   11 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2:    7</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3:    0  17</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4:   23   0  31</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5:    0  41   0  49</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6:   47   0   0   0  71</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7:    0  73   0  89   0  97</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8:   79   0 103   0 119   0  127</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9:    0 113   0 137   0   0    0  161</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10: 119   0 151   0   0   0  191    0  199</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11:   0 161   0 193   0 217    0  233    0  241</CMP>
+    </assertion><assertion class="example">
+      <CMP> 12: 167   0   0   0 239   0  263    0    0    0  287</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> ---------------------------------------------------------</CMP>
+    </assertion><assertion class="example">
+      <CMP> The primitive triangle for (n,m) = (2,1) is (x,y,z) = (3,4,5), with a(2,1) = 3 + 4 = 7.</CMP>
+    </assertion><assertion class="example">
+      <CMP> The primitive triangle for (n,m) = (7,4) is (x,y,z) = (33,56,65), with a(7,4) = 33 + 56 = 89.</CMP>
+    </assertion><assertion class="example">
+      <CMP> The primitive triangle for (n,m) = (8,1) is (x,y,z) = (63,16,65), with a(8,1) = 63 + 16 = 79.</CMP>
+    </assertion><assertion class="example">
+      <CMP> All primitive Pythagorean triangles with leg sums &lt;= 167 are certainly covered by this triangle (rows n = 2..12), and the multiplicities are also correct, e.g., 119 appears twice.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A222946 (hypotenuses), A222951 (perimeters), A056220 (main diagonal), A198441 (no zeros, ordered).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_, May 21 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

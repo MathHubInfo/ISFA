@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A187610.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A187610">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,96,711,2083,4758,8979,14434,21526,29978,39790,50962,63494,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 77386,92638,109250,127222,146554,167246,189298,212710,237482,263614,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 291106,319958,350170,381742,414674,448966,484618,521630,560002,599734,640826</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 6-step one space for components leftwards or up, two space for components rightwards or down asymmetric quasi-bishop's tours (antidiagonal moves become knight moves) on a nXn board summed over all starting positions</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row 6 of A187606</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A187610/b187610.txt&quot;&gt;Table of n, a(n) for n = 1..50&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A187610"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>680</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>7188</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>18314</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>9</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for 5X5</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0..1....0..0..0..0..0....0..6..0..0..0....0..0..5..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..6..0..0....0..0..6..0..0....0..0..5..0..0....4..0..0..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..5..0..0..2..0....2..0..0..5..0....1..0..0..4..0....0..3..0..0..6</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..4..0..0..0....0..1..0..0..4....0..0..0..0..3....0..0..2..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..3..0..0....0..0..3..0..0....0..0..2..0..0....0..0..0..0..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Mar 11 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A088784.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A088784">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 53,5347,5953,6761,137131,179173,211199,223211,239233,263257,359353,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 541523,593587,613607,631619,653647,659653,757751,809797,977971,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 997991,1009997,11091103,11291123,12371231,13991381,15591553,17831777,19311913,19791973,19931987,23092297</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes formed by concatenating a prime with the preceding prime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. D. Bajpai, &lt;a href=&quot;/A088784/b088784.txt&quot;&gt;Table of n, a(n) for n = 1..10300&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> If isprime(p(n) and p(n-1)) then sequence.add(p(n)&amp; p(n-1)).</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(2) = 5347 because 5347 is 53 (a prime) concatenated with 47 (the preceding prime).</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> concatpr[n_]:=FromDigits[Join[IntegerDigits[n],IntegerDigits[ NextPrime[ n,-1]]]]; Select[concatpr/@Prime[Range[400]],PrimeQ] (* _Harvey P. Dale_, May 12 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=1,10^3,p=prime(n);q=concat(Str(p),Str(precprime(p-1)));if(isprime(eval(q)),print1(q,&quot;, &quot;))) \\ _Derek Orr_, Aug 14 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A088712.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Chuck Seggelin (barkeep(AT)plasteredDragon.com), Oct 15 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Terms a(30), a(31) and a(32) added by _K. D. Bajpai_, Aug 14 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

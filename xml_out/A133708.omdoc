@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A133708.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A133708">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,69,1694,22932,208152,1413720,7697052,35194302,139687119,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 493127635,1577331756,4637757488,12679063488,32529562560,78917794128,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 182184724908,402332471541,853769650041,1747606106554,3462012537060,6656436729800,12452933493000</CMP>
+    </assertion><omtext class="name">
+      <CMP> First differences of A047835.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A133708/b133708.txt&quot;&gt;Table of n, a(n) for n = 1..1003&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      In terms of Vandermonde determinants ,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A133708"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>864</OMI>
+    </OMA><OMV name="sum"/><OMA>
+      <OMS cd="set1" name="set">
+        <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMI>1</OMI>
+      <OMV name="x_1"/>
+    </OMA><OMV name="x_2"/><OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMV name="x_3"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMS>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x_1"/><OMV name="x_2"/><OMV name="x_3"/></OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="det" cd="A133708"/>
+      <OMA>
+      <OMS name="V" cd="A133708"/>
+      <OMV name="x_1"/><OMV name="x_2"/><OMV name="x_3"/>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>864</OMI>
+    </OMA><OMV name="sum"/><OMA>
+      <OMS cd="set1" name="set">
+        <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMI>1</OMI>
+      <OMV name="i"/>
+    </OMA><OMV name="j"/><OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMS>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="i"/><OMV name="j"/><OMV name="k"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="i"/><OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="i"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="j"/><OMV name="k"/>
+    </OMA></OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="V" cd="A133708"/>
+      <OMV name="x_1"/><OMV name="x_2"/><OMV name="x_3"/>
+    </OMA>
+      </OMOBJ>is the Vandermonde matrix of order <OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A133708"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="n"/><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA></OMA><OMI>108864000</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Empirical G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>8</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>52</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>7</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>658</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2890</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4810</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2890</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>658</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>52</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>16</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[_Colin Barker_ ,Jun 06 2012 ]
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A040977, A047819, A047835, A107915.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Peter Bala_, Sep 21 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

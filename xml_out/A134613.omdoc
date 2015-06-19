@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A134613.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A134613">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1512,337365,375360,523809,1177176,1255254,1380918,1549431,2277345,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2286144,2816883,3320713,3340428,3838185,4378333,6726969,7043655,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8311212,10281284,10323390,10666227,10708544,12333468,14185724,15883803,21432000,25760763,27111825</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers such that the root mean cube of their prime factors is a nonprime integer (where the root mean cube of c and d is ((c^3+d^3)/2)^(1/3)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The prime factors are taken with multiplicity.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numbers included in A134611, but not in A134612.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n &gt; 1, also numbers included in A134614, but not in A134615; a(2) = 1512 is the minimal number with this property.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> No prime number and no power (&gt; 1) of a prime number can be a term.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hieronymus Fischer, &lt;a href=&quot;/A134613/b134613.txt&quot;&gt;Table of n, a(n) for n = 1..411&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1) = 1, since 1 has no prime factors, and so the cube mean is zero (by definition of empty sums).</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 1512, since 1512 = 2*2*2*3*3*3*7 and ((3*2^3+3*3^3+7^3)/7)^(1/3) = 64^(1/3) = 4.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) a(n) = {sc = 0; nb = 0; f = factor(n); for (i=1, #f~, sc += f[i, 2]*f[i,1]^3; nb += f[i, 2];); return (type(quot = sc/nb) == &quot;t_INT&quot; &amp;&amp; ispower(quot, 3, &amp;cr) &amp;&amp; (! isprime(cr)));} \\ _Michel Marcus_, Jul 15 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001597, A025475, A134333, A134344, A134376.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A134600, A134602, A134605, A134608, A134617, A134619, A134621.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Hieronymus Fischer_, Nov 11 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended, edited and added initial term a(1) = 1 by _Hieronymus Fischer_, May 30 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

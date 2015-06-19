@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A080826.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A080826">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 122,12,1122,11212212,1121221122121122,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 11212211221211212212112211212212,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1121221122121121221211221121221122121122112122121121221122121122</CMP>
+    </assertion><omtext class="name">
+      <CMP> Successive factors of the Thue-Morse word defined by sequence A001285.</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Melancon, &lt;a href=&quot;http://www.lirmm.fr/~melancon/&quot;&gt;Home page&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> G. Melancon, &lt;a href=&quot;http://citeseer.ist.psu.edu/114959.html&quot;&gt;Lyndon Factorization of Infinite Words&lt;/a&gt; STACS 96 (Grenoble, 1996), 147-154, Lecture Notes in Comput. Sci., 1046, Springer, Berlin, 1996.</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A080826:= proc(n) option remember: local l,i: if n = 0 then RETURN([1,2,2]) else l:=A080826(n-1):l := subsop(nops(l)=NULL,l):RETURN([op(l),seq(op(A080826(i)),i=0..n-2)]) fi:end; ds:=s-&gt;add(s[j]*10^(nops(s)-j),j=1..nops(s)); seq(ds(A080826(n)),n=0..7); (C. Ronaldo)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Mar 28 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from C. Ronaldo (aga_new_ac(AT)hotmail.com), Dec 19 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> The next term is too large to include.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

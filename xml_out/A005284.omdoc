@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A005284.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A005284">
+          <assertion class="***** TTTT *****">
+      <CMP> M4178</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,6,27,111,440,1717,6655,25728,99412,384320,1487262,5762643,22357907,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 86859412,337879565,1315952428,5131231668,20029728894,78265410550,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 306109412100,1198306570554,4694809541046,18407850118383</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of permutations of (1,...,n) having n-6 inversions (n&gt;=6).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sequence is a diagonal of the triangle A008302 (number of permutations of (1,...,n) with k inversions; see Table 1 of the Margolius reference). - _Emeric Deutsch_, Aug 02 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. R. Finch, Mathematical Constants, Cambridge, 2003, Section 5.14., p.356.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, personal communication.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. Netto, Lehrbuch der Combinatorik. 2nd ed., Teubner, Leipzig, 1927, p. 96.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. H. Margolius, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL4/MARGOLIUS/inversions.html&quot;&gt;Permutations with inversions&lt;/a&gt;, J. Integ. Seqs. Vol. 4 (2001), #01.2.4.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Moritz and R. C. Williams, &lt;a href=&quot;http://www.jstor.org/stable/2690326&quot;&gt;A coin-tossing problem and some related combinatorics&lt;/a&gt;, Math. Mag., 61 (1988), 24-29.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005284"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>7</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A005284"/>
+      <OMA><OMS name="times"/><OMS name="Pi"/><OMV name="n"/></OMA>
+    </OMA>
+    </OMA><OMV name="Q"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="O" cd="A005284"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMV name="Q"/>
+      </OMOBJ>is a digital search tree constant ,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="Q"/>
+      <OMF dec="0.2887880951"/>
+    </OMA>
+      </OMOBJ>...(see <OMOBJ>
+        <OMR xref="A048651"/>
+      </OMOBJ>).-corrected by _Vaclav Kotesovec_ ,Mar 16 2014 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(7)=6 because we have 2134567, 1324567, 1243567, 1235467, 1234657 and 1234576.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> g := proc(n,k) option remember; if k=0 then return(1) else if (n=1 and k=1) then return(0) else if (k&lt;0 or k&gt;binomial(n,2)) then return(0) else g(n-1,k)+g(n,k-1)-g(n-1,k-n) end if end if end if end proc; seq(g(j+6,j),j=0..30);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[SeriesCoefficient[Product[(1-x^j)/(1-x),{j,1,n}],{x,0,n-6}],{n,6,25}] (* _Vaclav Kotesovec_, Mar 16 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A008302, A000707, A001892, A001893, A001894, A005283, A005285, A048651.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 6,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms, Maple code, asymptotic formula from Barbara Haas Margolius (margolius(AT)math.csuohio.edu), May 31 2001</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition clarified by _Emeric Deutsch_, Aug 02 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

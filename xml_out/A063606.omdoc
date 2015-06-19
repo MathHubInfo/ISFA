@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A063606.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A063606">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,9,13,25,55,39,41,45,70,69,65,75,107,109,134,167,142,156,196,157,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 205,214,180,213,183,162,251,263,276,268,290,306,295,369,313,332,293,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 353,340,357,387,367,476,334,509,363,474,454,488,453</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest power of 7 having just n 0's in its decimal representation.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a = {}; Do[k = 1; While[ Count[ IntegerDigits[7^k], 0] != n, k++ ]; a = Append[a, k], {n, 0, 50} ]; a</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Aug 10 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

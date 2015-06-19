@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A234943.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A234943">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,3,7,3,4,10,13,11,5,12,19,22,17,6,15,24,32,34,25,7,19,30,41,49,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 51,34,8,22,36,51,64,72,70,44,9,24,42,60,79,94,100,94,55,10,27,48,71</CMP>
+    </assertion><omtext class="name">
+      <CMP> Array read by anti-diagonals: T(i,j) = size of optimal difference triangle set M(i,j).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> CRC Handbook of Combinatorial Designs, 1996, p. 315. (But beware errors!)</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. B. Shearer, &lt;a href=&quot;http://www.research.ibm.com/people/s/shearer/dtsopt.html&quot;&gt;Difference Triangle Sets: Known optimal solutions&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. B. Shearer, &lt;a href=&quot;http://www.research.ibm.com/people/s/shearer/dtslb.html&quot;&gt;Difference Triangle Sets: Discoverers&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Array begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> j\i| 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,</CMP>
+    </assertion><assertion class="example">
+      <CMP> -------------------------------------------------------</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1  | 1,  2,   3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15,  (A000027)</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2  | 3,  7,  10, 12, 15, 19, 22, 24, 27, 31, 34, 36, 39, 43, 46,  (A013574)</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3  | 6,  13, 19, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90,  (A013575)</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4  | 11, 22, 32, 41, 51, 60, 71, 80, 91, 100, 111, 120, 131, 140, 151, (A013576)</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5  | 17, 34, 49, 64, 79,  (A013577)</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6  | 25, 51, 72, 94,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7  | 34, 70, 100,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8  | 44, 94,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9  | 55, 121,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10 | 72,</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11 | 85</CMP>
+    </assertion><assertion class="example">
+      <CMP> 12 | 106</CMP>
+    </assertion><assertion class="example">
+      <CMP> 13 | 127</CMP>
+    </assertion><assertion class="example">
+      <CMP> 14 | 151</CMP>
+    </assertion><assertion class="example">
+      <CMP> 15 | 177</CMP>
+    </assertion><assertion class="example">
+      <CMP>   A003022 A010896 A010898</CMP>
+    </assertion><assertion class="example">
+      <CMP>        A010895 A010897 A010899</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Rows and columns give A000027, A013574, A013575, A013576, A013577; A003022, A010895, A010896, A010897, A010898, A010899.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> For the number of different optimal triangle difference sets see the corresponding array in A234947.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Jan 08 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

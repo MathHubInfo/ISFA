@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A138443.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A138443">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 15,180,3900,29400,442860,1206660,6034320,11761380,37008840,148705620,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 221875680,641431260,1187525640,1580340300,2694803280,5541089580,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 10545132540,12880092660,22614594420,32025069720,37833555240</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = ((n-th prime)^6-(n-th prime^2))/4.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a = {}; Do[p = Prime[n]; AppendTo[a, (p^6 - p^2)/4], {n, 1, 50}]; a</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) forprime(p=2,1e3,print1((p^6-p^2)/4&quot;, &quot;)) \\ _Charles R Greathouse IV_, Jul 15 2011</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Artur Jasinski_, Mar 19 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

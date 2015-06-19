@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A124618.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A124618">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,14,42,118,310,779,1876,4382,9948,22057,47850,101844,212946,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 438118,887814,1773827,3496850,6806682,13089748,24882962,46778368,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 87005834,160168440,291935815,527013208,942571346,1670669524,2935415726,5114032028,8836476737</CMP>
+    </assertion><omtext class="name">
+      <CMP> Poincare series P(T_{6,2}; x).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Dragomir Z. Djokovic, &lt;a href=&quot;http://arXiv.org/abs/math.AC/0609262&quot;&gt;Poincare series of some pure and mixed trace algebras of two generic matrices&lt;/a&gt;. See Table 4.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="f"/><OMV name="g"/>
+    </OMA>
+      </OMOBJ>where 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> f = x^60-3*x^59+4*x^58-4*x^57+4*x^56+3*x^55-6*x^54+11*x^53-12*x^52+12*x^51+12*x^50+x^49+55*x^48-22*x^47+82*x^46+</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 77*x^44+119*x^43+84*x^42+234*x^41+160*x^40+227*x^39+312*x^38+207*x^37+507*x^36+301*x^35+612*x^34+469*x^33+</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 517*x^32+593*x^31+426*x^30+593*x^29+517*x^28+469*x^27+612*x^26+301*x^25+507*x^24+207*x^23+312*x^22+227*x^21+</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> 160*x^20+234*x^19+84*x^18+119*x^17+77*x^16+82*x^14-22*x^13+55*x^12+x^11+12*x^10+12*x^9-12*x^8+11*x^7-6*x^6+3*x^5+</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="g"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>7</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMI>6</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+      <OMI>9</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA>
+      <OMI>7</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA>
+    </OMA>
+      <OMI>5</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Dec 21 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

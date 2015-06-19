@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A123973.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A123973">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,1,1,1,1,1,2,1,0,3,0,3,1,1,2,5,2,4,1,1,2,7,6,5,5,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,5,0,15,5,9,6,1,1,3,12,9,25,1,14,7,1,1,3,15,18,29,35,7,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 20,8,1,0,7,0,42,14,63,42,20,27,9,1</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sequence of tridiagonal matrices with one center zero terminal that give a triangular sequence from the characteristic polynomials based on the 3 X 3 matrix type: {{1, -1, 0}, {-1, 1, -1}, {0, -1, 0}}.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Matrices: {{0}}, {{1, -1}, {-1, 0}}, {{1, -1, 0}, {-1, 1, -1}, {0, -1, 0}}, {{1, -1, 0, 0}, {-1, 1, -1, 0}, {0, -1, 1, -1}, {0, 0, -1, 0}}, {{1, -1, 0, 0, 0}, {-1, 1, -1, 0, 0}, {0, -1, 1, -1, 0}, {0, 0, -1, 1, -1}, {0, 0, 0, -1, 0}}, {{1, -1, 0, 0, 0, 0}, {-1, 1, -1, 0, 0, 0}, {0, -1, 1, -1, 0, 0}, {0, 0, -1, 1, -1, 0}, { 0, 0, 0, -1, 1, -1}, {0, 0, 0, 0, -1, 0}} Determinants ( not all Sl(3,Z) and invertable): Table[Det[M[d]], {d, 1, 10}] {0, -1, -1, 0, 1, 1, 0, -1, -1, 0}</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> t(n,m,d)=If[ n == m &amp;&amp; n &lt; d &amp;&amp; m &lt; d, 1, If[n == m - 1 || n == m + 1, -1, If[n == m == d, 0, 0]]]</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> {0},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {0, -1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {-1, -1, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {-1, 1, 2, -1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {0, 3, 0, -3, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 2, -5, -2, 4, -1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, -2, -7, 6, 5, -5, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {0, -5, 0, 15, -5, -9, 6, -1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {-1, -3, 12, 9, -25, 1, 14, -7, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {-1, 3, 15, -18, -29, 35,7, -20, 8, -1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {0, 7, 0, -42, 14, 63, -42, -20, 27, -9, 1}</CMP>
+    </assertion><assertion class="example">
+      <CMP> Some of the polynomials are Steinbach.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> T[n_, m_, d_] := If[ n == m &amp;&amp; n &lt; d &amp;&amp; m &lt; d, 1, If[n == m - 1 || n == m + 1, -1, If[n == m == d, 0, 0]]] M[d_] := Table[T[n, m, d], {n, 1, d}, {m, 1, d}] Table[M[d], {d, 1, 10}] Table[Det[M[d]], {d, 1, 10}] Table[Det[M[d] - x*IdentityMatrix[d]], {d, 1, 10}] a = Join[M[1], Table[CoefficientList[Det[M[ d] - x*IdentityMatrix[d]], x], {d, 1, 10}]] Flatten[a] MatrixForm[a]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> uned,tabl,sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,9</CMP>
+    </assertion><assertion class="author">
+      <CMP> Gary Adamson and _Roger L. Bagula_, Oct 30 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Looking at the triangle suggests that the very first term should be 1, not 0. - _N. J. A. Sloane_, Nov 01, 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

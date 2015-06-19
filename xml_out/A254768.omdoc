@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A254768.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A254768">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 512,11321,295516,14533460,1209604111,208503958572,66029963150922,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 36926711851435570,39182636472055684103,75157581979007926362907,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 260790701639951359653998352</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+2)X(n+2) 0..1 arrays with every 3X3 subblock sum of the two maximums of the central row and the central column and the two medians of the diagonal and antidiagonal nondecreasing horizontally, vertically and ne-to-sw antidiagonally</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Diagonal of A254775</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..1..1....1..0..0..0....1..0..0..1....1..1..1..0....0..0..0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..1..0....1..1..1..0....1..0..0..1....1..1..1..1....0..1..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..1..1....1..1..1..1....1..0..0..1....1..1..1..0....0..1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..0..1....1..1..1..1....1..1..0..0....1..0..1..1....0..1..0..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Feb 07 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A228851.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A228851">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,23,157,839,3449,5939,13417,73951,453991,500471,6949309,8282063,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 26332367,30345169,259778821,272282191,438571597,859046141,1037917517,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3321660649,398296179,12252989773</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) is the smallest prime which ends a record-length of &quot;alternating&quot; consecutive prime gaps.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See COMMENTS at the companion sequence A228850 for detail on the definition and more.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The PROGRAM at A229056 is written to print in the format 'A229056(n): A228850(n), A228851(n)'.</CMP>
+    </omtext><assertion class="example">
+      <CMP> See A228850.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000040, A001223, A228850, A229056.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _James G. Merickel_, Sep 05 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

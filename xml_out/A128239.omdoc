@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A128239.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A128239">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,2,9,28,107,376,1457,5733,24385,110240,540400,2867847</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of n-node (unlabeled) graphs with girth 6.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (NAUTY) geng -tfq $n | countg -qg6 --ng # _Martin Fuller_, May 03 2015</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A128041, A128042, A128236-A128243.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> Keith M. Briggs, May 05 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _Martin Fuller_, May 01 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

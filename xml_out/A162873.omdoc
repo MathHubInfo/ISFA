@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A162873.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A162873">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 197,199,4229,4231,6761,6763,11549,11551,23201,23203,26261,26263,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 31769,31771,43397,43399,50021,50023,51059,51061,62189,62191,63197,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 63199,63647,63649,70949,70951,75401,75403,79397,79399,81197,81199,84869</CMP>
+    </assertion><omtext class="name">
+      <CMP> Twin primes p and r such that p-1, p+1 and r+1 are not squarefree.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> FactorInteger[197-1]={{2,2},{7,2}},FactorInteger[197+1]={{2,1},{3,2},{11,1}},FactorInteger[199+1]={{2,3},{5,2}},..</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[n_]:=Module[{a=m=0},Do[If[FactorInteger[n][[m,2]]==2,a=1],{m,Length[FactorInteger[n]]}];a]; lst={};Do[p=Prime[n];r=p+2;If[PrimeQ[r],If[f[p-1]==1&amp;&amp;f[p+1]==1&amp;&amp;f[r+1]==1,AppendTo[lst,p];AppendTo[lst,r]]],{n,8!}];lst</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A089194, A097375, A162870, A162872</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Joseph Stephan Orlovsky_, Jul 15 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

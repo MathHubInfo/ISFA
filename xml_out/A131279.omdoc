@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A131279.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A131279">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,25,453,677,839,1015,3735,4175,4413,10369,14239,43311,452567,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1274185,14102849,37801813,71271705,93524231,386557609,2151748733</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n divides Sum[ Prime[k]^19, {k,1,n} ].</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(21) &gt; 4*10^10. - _Robert Price_, Dec 15 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> OEIS Wiki, &lt;a href=&quot;https://oeis.org/wiki/Sums_of_primes_divisibility_sequences&quot;&gt;Sums of powers of primes divisibility sequences&lt;/a&gt;.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> s = 0; Do[s = s + Prime[n]^19; If[ Mod[s, n] == 0, Print[n]], {n, 50000}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A085450 = smallest m &gt; 1 such that m divides Sum_{k=1..m} prime(k)^n.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A007504, A045345, A171399, A128165, A233523, A050247, A050248.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A024450, A111441, A217599, A128166, A233862, A217600, A217601.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alexander Adamchuk_, Jun 25 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Ryan Propper_, Oct 09 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(19)-a(20) from _Robert Price_, Dec 15 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

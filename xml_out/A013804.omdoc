@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A013804.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A013804">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 16,1048576,68719476736,4503599627370496,295147905179352825856,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 19342813113834066795298816,1267650600228229401496703205376,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 83076749736557242056487941267521536,5444517870735015415413993718908291383296</CMP>
+    </assertion><omtext class="name">
+      <CMP> 16^(4*n+1).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A013804/b013804.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tanya Khovanova, &lt;a href=&quot;http://www.tanyakhovanova.com/RecursiveSequences/RecursiveSequences.html&quot;&gt;Recursive Sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [16^(4*n+1): n in [0..15]]; // Vincenzo Librandi, Jul 06 2011</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

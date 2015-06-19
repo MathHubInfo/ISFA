@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A054911.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A054911">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,1,1,1,1,1,1,2,2,2,3,3,4,5,6,9,13,16,28,40,68,117,273,665</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of n-dimensional odd unimodular lattice (or quadratic forms).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. H. Conway and N. J. A. Sloane, &quot;Sphere Packings, Lattices and Groups&quot;, Springer-Verlag, p. 49.</CMP>
+    </omtext><omtext class="link">
+      <CMP> S. R. Finch, &lt;a href=&quot;http://www.people.fas.harvard.edu/~sfinch/&quot;&gt;Minkowski-Siegel mass constants&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A005134, A054907-A054909.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,10</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, May 23 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

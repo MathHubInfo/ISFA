@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A182207.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A182207">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1729,2821,41041,63973,101101,126217,172081,188461,294409,399001,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 488881,512461,670033,748657,838201,852841,997633,1033669,1050985,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1082809,1461241,2100901,2113921,2628073,4463641,4909177,7995169,8341201,8719309,9890881</CMP>
+    </assertion><omtext class="name">
+      <CMP> Carmichael numbers of the form C = p*(2p-1)*(n*(2p-2)+p), where p and 2p-1 are prime numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture: Any Carmichael number C divisible by p and 2p-1 (where p and 2p-1 are prime numbers) can be written as C = p*(2p-1)*(n*(2p-2)+p).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Checked for the first 30 Carmichael numbers divisible by p and 2p-1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Note: we can see how easy is to obtain Carmichael numbers with this formula:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> for n = 1 we get p*(2p-1)*(3p-2) and Carmichael numbers 1729, 172081, 294409 etc.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> for n = 2 we get p*(2p-1)*(5p-4) and Carmichael numbers 2821, 63973, 488881 etc.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> for n = 3 we get p*(2p-1)*(7p-6) and Carmichael numbers 399001, 53711113 etc.</CMP>
+    </omtext><omtext class="link">
+      <CMP> E. W. Weisstein, &lt;a href=&quot;http://mathworld.wolfram.com/CarmichaelNumber.html&quot;&gt;Carmichael Number&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) Korselt(n)=my(f=factor(n));for(i=1,#f[,1],if(f[i,2]&gt;1||(n-1)%(f[i,1]-1),return(0)));1</CMP>
+    </omtext><omtext class="program">
+      <CMP> list(lim)=my(v=List(),q,t);forprime(p=3,round(solve(x=1,lim,6*x^3-7*x^2+2*x-lim)),for(n=1,(lim\(2*p^2-p)-p)\(2*p-2),if(isprime(q=2*p-1)&amp;&amp;Korselt(t=p*q*(n*q-n+p)),listput(v,t))));vecsort(Vec(v),,8)</CMP>
+    </omtext><omtext class="program">
+      <CMP> \\ _Charles R Greathouse IV_, Oct 02 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Marius Coman_, Apr 18 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

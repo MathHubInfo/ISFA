@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A115122.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A115122">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,1,2,1,4,1,7,3,16,1,49,1,129,17,415,1,1408,1,4659,130,16081,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 56858,15,200171,1367</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of imprimitive (periodic) 2n-bead black-white complementable necklaces with n black beads.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(p)=1 for prime p.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A115122"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A045629"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A045632"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Valery A. Liskovets_, Jan 17 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

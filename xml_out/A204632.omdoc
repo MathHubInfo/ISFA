@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A204632.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A204632">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 34,30,37,28,27,28,27,39,34,34,36,36,35,27,30,34,25,34,31,30,27,29,27,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 30,33,35,34,44,31,37,25,32,33,28,33,36,26,30,35,28,29,32,31,30,28,27,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 29,38,30,27,25,35,33,29,36,33,37,32,34,28,29,33,26,22,29</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least k such that n*k!! contains every digit at least once.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A property of this sequence: the arithmetic mean s(x) = (1/x) *Sum_{k = 1..x} a(k) is very slowly decreasing when x increases. For example, s(100) = 30.89; s(1000) = 29.795 ; s(10000) = 28.1319 ; s(100000) = 26.53411. For almost all n, a(n) = 0 (see A204598).</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(2) = 30 because 2*30!! =  2* 42849873690624000 = 85699747381248000 contains every digit at least once.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Table[k=1;While[!Length[Union[IntegerDigits[n*k!!]]]==10,k++];k,{n,1,60}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A006882, A204598.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Lagneau_, Jan 17 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

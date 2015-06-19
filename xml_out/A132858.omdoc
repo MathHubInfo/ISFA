@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A132858.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A132858">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,6,8,9,10,14,15,16,18,20,21,22,25,26,27,28,32,33,34,35,38,39,42,44,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 46,49,50,51,52,54,55,57,58,62,64,65,66,68,69,74,75,76,77,78,81,82,85,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 86,87,88,91,92,93,94,95,98,99,100,102,104,106,110,111,114,115,116,117,118</CMP>
+    </assertion><omtext class="name">
+      <CMP> Composite &quot;antimutinous&quot; numbers. An antimutinous number is an integer m &gt; 1 where m/p^k &lt; p, where p is the largest prime divisor of m and p^k is the largest power of p dividing m.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> {a(k)-1} is the complement of sequence A056077. In other words, {a(k)} contains precisely those positive integers m where A001142(m-1) (= product{k=1 to m-1} k^(2k-m)) is not divisible by all primes &lt;= m-1.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A027855, A132982, A027854, A056077, A001142.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Leroy Quet_, Nov 21 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Ray Chandler_, Nov 17 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

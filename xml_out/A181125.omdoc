@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A181125.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A181125">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,63,665,728,3367,4032,4095,11529,14896,15561,15624,31031,42560,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 45927,46592,46655,70993,102024,113553,116920,117585,117648,144495,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 215488,246519,258048,261415,262080,262143,269297,413792,468559,484785,515816</CMP>
+    </assertion><omtext class="name">
+      <CMP> Difference of two positive 6th powers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> No term is a prime number.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A181125/b181125.txt&quot;&gt;Table of n, a(n) for n=1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> nn=10^10; p=6; Union[Reap[Do[n=i^p-j^p; If[n&lt;=nn, Sow[n]], {i,Ceiling[(nn/p)^(1/(p-1))]}, {j,i}]][[2,1]]]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A024352 (squares), A181123 (cubes), A147857 (4th powers), A181124-A181128 (5th to 9th powers).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A022522 (a subsequence, except its first term). - _Mathew Englander_, Jun 01 2014</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _T. D. Noe_, Oct 06 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

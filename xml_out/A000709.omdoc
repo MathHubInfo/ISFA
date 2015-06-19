@@ -23,21 +23,8 @@
     </omtext><omtext class="link">
       <CMP> &lt;a href=&quot;/index/Qua#quadpop&quot;&gt;Index entries for sequences related to populations of quadratic forms&lt;/a&gt;</CMP>
     </omtext><omdoc:p class="formula">
-        <CMP>
-         a(n) = int<OMOBJ>
-      <OMA>
-      <OMS name="divide" cd="arithmetics"/>
-      <OMI>1</OMI><OMA>
-      <OMS name="sqrt" cd="A000709"/>
-      <OMA>
-      <OMS name="log" cd="A000709"/>
-      <OMV name="u"/>
-    </OMA>
-    </OMA>
-    </OMA>
-    </OMOBJ>, u=1..2^(n-1))))). - Based on _Alois P. Heinz_'s Maple program, _Alonso del Arte_, Oct 24 2014
-      </CMP>
-      </omdoc:p><omtext class="maple">
+        <CMP> a(n) = int (1/sqrt(log(u)), u=1..2^(n-1))))). - Based on _Alois P. Heinz_'s Maple program, _Alonso del Arte_, Oct 24 2014</CMP>
+    </omdoc:p><omtext class="maple">
       <CMP> Digits := 500:</CMP>
     </omtext><omtext class="maple">
       <CMP> a:= n-&gt; `if`(n=1, 1, round(evalf(int(1/sqrt(ln(u)), u=1..2^(n-1))))):</CMP>

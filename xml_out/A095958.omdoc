@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A095958.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A095958">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 35,57,1113,1719,2931,4143,5961,7173,101103,107109,137139,149151,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 179181,191193,197199,227229,239241,269271,281283,311313,347349,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 419421,431433,461463,521523,569571,599601,617619,641643,659661</CMP>
+    </assertion><omtext class="name">
+      <CMP> Twin prime pairs concatenated in decimal representation.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) mod 3 = 0 for n&gt;1, proof: A007953(a(n)) = 2*A007953(A001359(n)+1) and A007953(A001359(n)) mod 3 = 2 for n&gt;1, therefore A007953(a(n)) mod 3 = 0.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A095958/b095958.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 29 = A001359(5), 29 + 2 = 31 = A006512(5): a(5) = 2931.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> concat[{a_,b_}]:=FromDigits[Flatten[IntegerDigits/@{a,b}]]; concat/@ Select[Partition[Prime[Range[150]],2,1],#[[2]]-#[[1]]==2&amp;] (* _Harvey P. Dale_, Apr 20 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a095958 n = a095958_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a095958_list = f $ map show a077800_list :: [Integer] where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    f (t:t':ts) = read (t ++ t') : f ts</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Apr 20 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A045533, A001359, A006512.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A077800, subsequence of A045533.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Jul 14 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

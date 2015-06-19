@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A212529.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A212529">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,10,1101,1100,1111,1110,1001,1000,1011,1010,110101,110100,110111,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 110110,110001,110000,110011,110010,111101,111100,111111,111110,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 111001,111000,111011,111010,100101,100100,100111,100110,100001,100000,100011,100010,101101,101100,101111,101110,101001,101000,101011,101010,11010101</CMP>
+    </assertion><omtext class="name">
+      <CMP> Negative numbers in base -2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A039724(-n). - _Reinhard Zumkeller_, Feb 05 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joerg Arndt, &lt;a href=&quot;/A212529/b212529.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joerg Arndt, &lt;a href=&quot;http://www.jjj.de/fxt/#fxtbook&quot;&gt;Matters Computational (The Fxtbook)&lt;/a&gt;, p. 58-59</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= proc(n) local d, i, l, m;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       m:= n; l:= NULL;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       for i from 0 while m&gt;0 do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         d:= irem(m, 2, 'm');</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         if d=1 and irem(i, 2)=0 then m:= m+1 fi;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         l:= d, l</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       od; parse(cat(l))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=1..100);  # _Alois P. Heinz_, May 20 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a212529 = a039724 . negate  -- _Reinhard Zumkeller_, Feb 05 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A039724 (nonnegative numbers in base -2).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A007608 (nonnegative numbers in base -4), A212526 (negative numbers in base -4).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A005352.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Joerg Arndt_, May 20 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A007759.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A007759">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,17,576,665857,886731088896,1572584048032918633353217,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4946041176255201878775086487573351061418968498176,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 48926646634423881954586808839856694558492182258668537145547700898547222910968507268117381704646657</CMP>
+    </assertion><omtext class="name">
+      <CMP> Knopfmacher expansion of sqrt(2): a(2n)=2(a(2n-1)+1)^2 - 1, a(2n+1)=2a(2n)^2 - 2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. Knopfmacher and J. Knopfmacher, &quot;An alternating product representation for real numbers&quot;, in Applications of Fibonacci numbers, Vol. 3 (Kluwer 1990), pp. 209-216.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001601.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Arnold Knopfmacher [ ARNOLDK(AT)gauss.cam.wits.ac.za ]</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Christian G. Bower_, Jan 06 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A141525.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A141525">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,1,1,1,2,2,3,4,4,4,8,8,8,16,24,24,40,40,64,80,80,80,160,160,160,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 320,480,480,800,800,1280,1600,1600,1600,3200,3200,3200,6400,9600</CMP>
+    </assertion><omtext class="name">
+      <CMP> A low average ratio switched sequence: a(n)=If[Mod[n, 3] == 0, a(n - 2) + a(n - 3), If(Mod[n, 4) == 0, a(n - 1) + a(n - 4), a(n - 1), a(n - 2)]].</CMP>
+    </omtext><omtext class="comment">
+      <CMP> While appearing to be an &quot;even&quot; output or maybe a &quot;regular&quot; sequence the average ratio limit( using &lt;&gt; as expectation value):</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Limit[&lt;a(n+1)/a(n)&gt;,n-&gt;Infinity]=1.324717957244746;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> real root of x^3-x-1 ( Padovan/ minimal Pisot root).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> I got this by accident I meant to type in:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a[n] = If[Mod[n, 3] == 0, a[n - 2] + a[n - 3], If[Mod[n, 4] == 0, a[n - 1] + a[n - 4], a[n - 1] + a[n - 2]]];</CMP>
+    </omtext><omtext class="comment">
+      <CMP> which gives a different result!</CMP>
+    </omtext><omtext class="reference">
+      <CMP> .</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A141525"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="If" cd="A141525"/>
+      <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Mod" cd="A141525"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A141525"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A141525"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMA>
+      <OMS name="If" cd="A141525"/>
+      <OMA>
+      <OMS name="Mod" cd="A141525"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A141525"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A141525"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A141525"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A141525"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>].
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Clear[a] a[0] = 0; a[1] = 1; a[2] = 1; a[3] = 1; a[n_] := a[n] = If[Mod[n, 3] == 0, a[n - 2] + a[n - 3], If[Mod[n,4] == 0, a[n - 1] + a[n - 4], a[n - 1], a[n - 2]]]; Table[a[n], {n, 0, 40}]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,uned,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_, Aug 11 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

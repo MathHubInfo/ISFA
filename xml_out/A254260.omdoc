@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A254260.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A254260">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 512,2812,2812,12616,14681,12616,54236,72644,59531,54236,236024,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 382316,268900,223357,236024,1021428,1989857,1420232,718226,888391,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1021428,4351908,10193041,7815717,2983064,2192422,3647288,4351908,18369164</CMP>
+    </assertion><omtext class="name">
+      <CMP> T(n,k)=Number of (n+2)X(k+2) 0..1 arrays with every 3X3 subblock sum of the two maximums of the diagonal and antidiagonal minus the sum of the minimums of the central row and column nondecreasing horizontally, vertically and ne-to-sw antidiagonally</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Table starts</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .......512.......2812.....12616......54236.....236024.....1021428......4351908</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ......2812......14681.....72644.....382316....1989857....10193041.....52034327</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .....12616......59531....268900....1420232....7815717....43088793....240716320</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .....54236.....223357....718226....2983064...12249828....49369118....197326142</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ....236024.....888391...2192422....9308828...35691048...159041102....742483152</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ...1021428....3647288...6729896...29231312...87535036...325742026...1249946456</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ...4351908...15380009..21120938...98883824..214982444...933774220...3756830312</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..18369164...65954108..68298122..378114160..718305580..3391678348..14833693096</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..77344420..284203166.216717474.1430424048.1845854060..9927463676..43837197480</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .325241108.1230877185.690324184.5564609520.5194299052.34363573228.151675299240</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A254260/b254260.txt&quot;&gt;Table of n, a(n) for n = 1..638&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical for column <OMOBJ>
+        <OMV name="k"/>
+      </OMOBJ>:
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>:[linear recurrence of order <OMOBJ>
+        <OMI>17</OMI>
+      </OMOBJ>]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>2</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>21</OMI>
+      </OMOBJ>]for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>25</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>13</OMI>
+      </OMOBJ>]for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>19</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>4</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>12</OMI>
+      </OMOBJ>]for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>18</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>5</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>14</OMI>
+      </OMOBJ>]for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>21</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>6</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>12</OMI>
+      </OMOBJ>]for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>20</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>7</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>17</OMI>
+      </OMOBJ>]for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>25</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Empirical for row <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>:
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>:[same linear recurrence of order <OMOBJ>
+        <OMI>17</OMI>
+      </OMOBJ>]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>32</OMI>
+      </OMOBJ>]for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>37</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>41</OMI>
+      </OMOBJ>]for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>47</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>4</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>41</OMI>
+      </OMOBJ>]for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>50</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>5</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>47</OMI>
+      </OMOBJ>]for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>58</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>6</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>53</OMI>
+      </OMOBJ>]for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>67</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>7</OMI>
+    </OMA>
+      </OMOBJ>:[order <OMOBJ>
+        <OMI>65</OMI>
+      </OMOBJ>]for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>82</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=2 k=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..1..1..0..1....0..1..0..0..1..0....1..0..0..1..0..0....0..0..1..1..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..1..0..1..1....1..0..0..0..0..1....1..0..0..0..0..1....0..0..1..0..0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..1..0..0..0....0..0..0..1..0..0....0..0..0..0..1..1....1..1..0..1..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..0..1..1..1....1..1..1..1..1..1....0..1..1..0..0..0....0..1..1..1..0..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Jan 27 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

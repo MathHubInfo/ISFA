@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A087242.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A087242">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,2,3,2,5,0,3,2,3,2,5,0,3,2,3,2,5,0,3,2,7,0,5,0,3,2,3,2,7,0,5,0,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,5,0,3,2,3,2,5,0,3,2,7,0,5,0,3,2,7,0,5,0,3,2,3,2,7,0,5,0,3,2,5,0,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2,3,2,7,0,5,0,3,2,5,0,3,2,7,0,5,0,3,2,13,0,7,0,5,0,3,2,5,0,3,2,3,2,5,0,3,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest prime number p such that n+p = q is also a prime, or 0 if no such prime number exists.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n) = Min{x; n+x is prime}.</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(n)=0, i.e. no solution exists if n is a special prime, namely n is not a lesser-twin-prime; e.g. if n=7, then neither 7+2=9 nor 7+(odd prime) is a prime, thus no p prime exits such that 7+p was also a prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> If n=lesser-twin-prime then a(n)=2 is a solution because n+a(n]=n+2=larger-twin-prime satisfying condition.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) a(n) = {if (n % 2, if (isprime(n+2), p = 2, p = 0);, p = 2; while (!isprime(n+p), p = nextprime(p+1));); p;} \\ _Michel Marcus_, Dec 26 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A087243.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Sep 04 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A180394.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A180394">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,19,1784,55092,952640,11346508,103655440,774656344,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4940080352,27682462431</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of permutations of 1..n with both permutation and its inverse having exactly 4 maxima</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Sep 01 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

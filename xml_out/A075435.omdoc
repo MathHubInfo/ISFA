@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A075435.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A075435">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,6,4,20,24,8,70,116,72,16,252,520,456,192,32,924,2248,2496,1504,480,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 64,3432,9520,12624,9728,4480,1152,128,12870,39796,60792,56400,33440,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 12480,2688,256,48620,164904,283208,304704,218720,105600,33152,6144</CMP>
+    </assertion><omtext class="name">
+      <CMP> T(n,k) = right- or upward-moving paths connecting opposite corners of a n*n chessboard, visiting the diagonal at k points between start and finish.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If it is required that the paths stay at the same side of the diagonal between intermediate points, then the count of intermediate points becomes an exact count of crossings and one gets table A039598. Row sums give A075436.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> G.f. [2*x*c(x)/(1-x*c(x))]^m=sum(n&gt;=m T(n,m)*x^n) where c(x) is the g.f. of A000108, also T(n,m)=sum(k=m..n, k/n*binomial(2*n-k-1,n-1)*2^k*binomial(k-1,m-1)), n&gt;=m&gt;0. [From _Vladimir Kruchinin_, Mar 30 2011]</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> {2}, {6, 4}, {20, 24, 8}, {70, 116, 72, 16}, {252, 520, 456, 192, 32}, ...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Table[Table[Plus@@Apply[Times, Compositions[n-1-k, k]+1 /. i_Integer-&gt;Binomial[2i, i], {1}], {k, 1, n-1}], {n, 2, 12}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima)</CMP>
+    </omtext><omtext class="program">
+      <CMP> T(n,m):=sum(k/n*binomial(2*n-k-1,n-1)*2^k*binomial(k-1,m-1),k,m,n);</CMP>
+    </omtext><omtext class="program">
+      <CMP> [From _Vladimir Kruchinin_, Mar 30 2011]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A075436, A039598.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wouter Meeussen_, Sep 15 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

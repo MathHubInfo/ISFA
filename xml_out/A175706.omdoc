@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A175706.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A175706">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,6,10,14,15,22,38,57,58,62,69,82,85,123,129,142,158,178,194,202,203,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 205,214,218,221,254,274,295,303,327,339,346,365,411,413,422,437,478,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 482,485,519,543,545,551,622,626,635,694,723,734,745,753,794,813,893</CMP>
+    </assertion><omtext class="name">
+      <CMP> Semiprimes of the form m*p such that k*p=(m*p)-th semiprime.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1)=4 because 5*2=(2*2)-th semiprime, a(2)=6 because 5*3=(2*3)-th semiprime, a(3)=10 because 13*2=(5*2)-th semiprime, a(4)=14 because 19*2=(7*2)-th semiprime, a(5)=15 because 13*3=(5*3)-th semiprime, a(6)=22 because 31*2=(11*2)-th semiprime.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> Contribution from _R. J. Mathar_, Aug 10 2010: (Start)</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A001358 := proc(n) option remember; local a; if n = 1 then 4; else for a from procname(n-1)+1 do if numtheory[bigomega](a) = 2 then return a; end if; end do: end if; end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for i from 1 to 300 do mp := A001358(i) ; kp := A001358(mp) ; p := igcd(mp,kp) ; if isprime(p) then printf(&quot;%d,&quot;,mp) ; end if; end do: (End)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> SemiPrimeQ[n_Integer] := If[Abs[n]&lt;2, False, (2==Plus@@Transpose[FactorInteger[Abs[n]]][[2]])]; sp=Select[Range[10000], SemiPrimeQ]; sp2=Select[sp, #&lt;Length[sp]&amp;]; Select[sp2, GCD[ #,sp[[ # ]]]&gt;1&amp;] [From _T. D. Noe_, Aug 11 2010]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A001358.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,less</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Juri-Stepan Gerasimov_, Aug 10 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _R. J. Mathar_ and _T. D. Noe_, Aug 11 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

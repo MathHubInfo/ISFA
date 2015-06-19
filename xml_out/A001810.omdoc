@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A001810.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A001810">
+          <assertion class="***** TTTT *****">
+      <CMP> M5019 N2163</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,16,200,2400,29400,376320,5080320,72576000,1097712000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 17563392000,296821324800,5288816332800,99165306240000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1952793722880000,40311241850880000,870722823979008000,19645683716026368000,462251381553561600000,11325158848062259200000</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = n!*n*(n-1)*(n-2)/36.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the total number of 3-2-1 patterns in all permutations on [n]. This is because there are n! permutations, binom(n,3) triples in each one and the probability that a given triple of entries in a random permutation form a 3-2-1 pattern (or any other specified pattern of length 3) is 1/6. - _David Callan_, Oct 26 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Old name was &quot;Coefficients of Laguerre polynomials&quot;.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 799.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. Lanczos, Applied Analysis. Prentice-Hall, Englewood Cliffs, NJ, 1956, p. 519.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A001810/b001810.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., &lt;a href=&quot;http://www.nrbook.com/abramowitz_and_stegun/&quot;&gt;Handbook of Mathematical Functions&lt;/a&gt;, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy].</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/La#Laguerre&quot;&gt;Index entries for sequences related to Laguerre polynomials&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001810"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMR xref="A021009"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001810"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>.E.g.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      If we define <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="f" cd="A001810"/>
+      <OMV name="n"/><OMV name="i"/><OMV name="x"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMV name="i"/>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMV name="i"/>
+    </OMA>
+                  <OMV name="k"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="binomial" cd="A001810"/>
+      <OMV name="k"/><OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="stirling1" cd="A001810"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="stirling2" cd="A001810"/>
+      <OMV name="j"/><OMV name="i"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMV name="j"/>
+    </OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>then <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A001810"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="f" cd="A001810"/>
+      <OMV name="n"/><OMI>3</OMI><OMA>
+      <OMS name="unary_minus"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA>
+      </OMOBJ>.-_Milan Janjic_ ,Mar 01 2009 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> G.f. = x^3 + 16*x^4 + 200*x^5 + 2400*x^6 + 29400*x^7 + 376320*x^8 + ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> [seq(n!*n*(n-1)*(n-2)/36,n=0..30)];</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(combstruct):ZL:=[st, {st=Prod(left, right), left=Set(U, card=r+1), right=Set(U, card&lt;r), U=Sequence(Z, card&gt;=1)}, labeled]: subs(r=2, stack): seq(count(subs(r=2, ZL), size=m), m=0..20) ; - _Zerinvary Lajos_, Feb 07 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[n! n*(n-1)*(n-2)/36, {n, 0, 20}] (* _T. D. Noe_, Aug 10 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [factorial(m)*binomial(m,3)/6 for m in xrange (0,22)] # _Zerinvary Lajos_, Jul 05 2008</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A053495.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _N. J. A. Sloane_, Apr 12 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

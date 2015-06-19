@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A005537.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A005537">
+          <assertion class="***** TTTT *****">
+      <CMP> M0803</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,3,6,14,15,39,201,249,885,1005,1254,1635,3306,3522,9602,19785,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 72698</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that 4*3^n + 1 is prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(20) &gt; 2*10^5. - _Robert Price_, Nov 23 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Primes resulting from a(1)-a(19) are confirmed primes (not probable primes) using BLS (N-1/N+1) test in pfgw. - _Robert Price_, Nov 23 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, &lt;a href=&quot;http://www.utm.edu/research/primes/&quot;&gt;The Prime Pages&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Douglas E. Iannucci, Deng Moujie and Graeme L. Cohen, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/https://cs.uwaterloo.ca/journals/JIS/VOL6/Cohen2/cohen50.html&quot;&gt;On Perfect Totient Numbers&lt;/a&gt;, J. Integer Sequences, 6 (2003), #03.4.5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Loomis, M. Plytage and J. Polhill, &lt;a href=&quot;http://www.jstor.org/stable/27646564&quot;&gt;Summing up the Euler 'phi' function&lt;/a&gt;, The College Mathematics Journal, vol. 39 (2008), pp. 34-42.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. C. Williams and C. R. Zarnke, &lt;a href=&quot;http://www.jstor.org/stable/2005886&quot;&gt;Some prime numbers of the forms 2*3^n+1 and 2*3^n-1&lt;/a&gt;, Math. Comp., 26 (1972), 995-998.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n) = isprime(4*3^n + 1) \\ _Michel Marcus_, Jul 12 2013</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Chris K. Caldwell_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(15)-a(17) from Douglas Burke (dburke(AT)nevada.edu)</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(18) from Mohammed Bouayoun (Mohammed.Bouayoun(AT)sanef.com), Jan 26 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(19) from _Robert Price_, Nov 23 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

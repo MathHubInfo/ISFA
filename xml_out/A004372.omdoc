@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A004372.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A004372">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,35,861,18424,367290,7028847,131115985,2404808340,43595145594,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 783768050065,14005614014756,249145778809200,4416904685676756,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 78098259661387182,1378095785451705375,24278663343508481600</CMP>
+    </assertion><omtext class="name">
+      <CMP> Binomial coefficient C(7n,n-4).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 828.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Abramowitz and I. A. Stegun, eds., &lt;a href=&quot;http://www.nrbook.com/abramowitz_and_stegun/&quot;&gt;Handbook of Mathematical Functions&lt;/a&gt;, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy].</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 4,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

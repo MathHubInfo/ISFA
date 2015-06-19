@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A081358.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A081358">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,8,32,184,1104,8448,67584,648576,6485760,74972160,899665920,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 12174658560,170445219840,2643856588800,42301705420800,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 740051782041600,13320932076748800,259500083163955200,5190001663279104000</CMP>
+    </assertion><omtext class="name">
+      <CMP> E.g.f.: log((1+x) / (1-x)) / (2*(1-x)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of cycles of odd cardinality in all permutations of [n]. Example: a(3)=8 because among (1)(2)(3), (1)(23), (12)(3), (13)(2), (132), (123) we have eight cycles of odd length. - _Emeric Deutsch_, Aug 12 2004</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is a function of the harmonic numbers. a(n)=n!*h(n)-n!/2 * h(floor(n/2)), where h(n) = sum(1/k,k=1..n). - _Gary Detlefs_, Aug 06 2010</CMP>
+    </omtext><omtext class="reference">
+      <CMP> I. P. Goulden and D. M. Jackson, Combinatorial Enumeration, Wiley, N.Y., 1983, Exercise 3.3.13</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A081358/b081358.txt&quot;&gt;Table of n, a(n) for n = 0..30&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. A. Kuperschmidt, &lt;a href=&quot;http://www.sm.luth.se/~norbert/home_journal/electronic/72brev3.ps&quot;&gt;... And free lunch for all.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> B. A. Kuperschmidt, Journal of Non linear Mathematical Physics 2000 v.7 no.2, &lt;a href=&quot;http://arXiv.org/abs/math.HO/0004188&quot;&gt;A Review of Bruce C.Berndt's Ramanujan's Notebooks parts I-V&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      E.g.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="log" cd="A081358"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A081358"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="sum" cd="A081358"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>..n ,<OMOBJ>
+        <OMV name="k"/>
+      </OMOBJ>odd ]<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="k"/>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A081358"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Psi" cd="A081358"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="ceil" cd="A081358"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMV name="gamma"/><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="ln" cd="A081358"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Vladeta Jovovic_ ,Oct 20 2003 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A081358"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A081358"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA></OMA><OMV name="k"/>
+    </OMA>
+        </OMA>
+      </OMBIND></OMA>
+    </OMA>
+      </OMOBJ>.-_Vladeta Jovovic_ ,Aug 12 2005 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A081358"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="a" cd="A081358"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Gary Detlefs_ ,Aug 06 2010 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A081358"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000254"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A092691"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Gary Detlefs_ ,Aug 06 2010 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A081358"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="log" cd="A081358"/>
+      <OMV name="n"/>
+    </OMA><OMV name="gamma"/><OMA>
+      <OMS name="log" cd="A081358"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,where gamma is the Euler -Mascheroni constant <OMOBJ>
+        <OMR xref="A001620"/>
+      </OMOBJ>.-_Vaclav Kotesovec_ ,Oct 05 2013 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A081358"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A049034"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> G.f. = x + 2*x^2 + 8*x^3 + 32*x^4 + 184*x^5 + 1104*x^6 + 8448*x^7 + ...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> nn = 20; Range[0, nn]! CoefficientList[</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   D[Series[(1 - x^2)^(-1/2) ((1 + x)/(1 - x))^(y/2), {x, 0, nn}], y] /. y -&gt; 1, x]  (* _Geoffrey Critzer_, Aug 27 2012 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := If[ n &lt; 0, 0, n! Sum[ 1/k, {k, 1, n, 2}]]; (* _Michael Somos_, Jan 06 2015 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[ n_] := If[ n &lt; 0, 0, n! SeriesCoefficient[ Log[ (1 + x) / (1 - x)] / (2 (1 - x)), {x, 0, n}]]; (* _Michael Somos_, Jan 06 2015 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;1, 0, n! * polcoeff( log(1 + 2 / (-1 + 1 / (x + x * O(x^n)))) / (2 * (1-x)), n))};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = if( n&lt;0, 0, n! * sum(k=1, n, (k%2)/k))}; /* _Michael Somos_, Sep 19 2006 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000254, A001640, A049034, A092691, A151884.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michael Somos_, Mar 18 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

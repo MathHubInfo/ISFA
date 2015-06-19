@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A215887.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A215887">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,1,1,1,1,1,1,1,0,2,2,2,2,2,2,2,2,2,0,2,2,2,2,2,2,2,2,2,0,2,2,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,2,2,2,2,2,0,2,2,2,2,2,2,2,2,2,0,2,2,2,2,2,2,2,2,2,0,2,2,2,2,2,2,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2,2,0,2,2,2,2,2,2,2,2,2,0,2,2,2,2,2,2,2,2,2,0,2,2,2,2,2,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> Written in base 10, n ends in a(n) consecutive nonzero digits.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sequences A215879, A215883 and A215884 are the base 3, 4 and 5 analogs, while the base 2 analog of this sequence coincides (up to a shift in the index) with the 2-adic valuation A007814, see comments there.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Numbers which are a multiple of 10 have no nonzero digit at their (right) end, thus a(10k)=0.</CMP>
+    </assertion><assertion class="example">
+      <CMP> If numbers are congruent to 1,...,9 mod 100, then they end in a nonzero digit, but do not have more than 1 concatenated nonzero digits at their right end: Thus, a(100k+m)=1 for 0&lt;m&lt;10.</CMP>
+    </assertion><assertion class="example">
+      <CMP> In the same way, a(k*10^(e+1)+m) = e if 10^e &gt; m &gt; 10^(e-1).</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) a(n,b=10)= n=divrem(n,b); for(c=0,9e9, n[2] || return(c); n=divrem(n[1],b))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=my(k);while(n%10, n\=10; k++); k \\ _Charles R Greathouse IV_, Sep 26 2013</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,12</CMP>
+    </assertion><assertion class="author">
+      <CMP> _M. F. Hasler_, Aug 25 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

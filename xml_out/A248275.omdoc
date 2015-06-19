@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A248275.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A248275">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,15,228,65875,47908261511,2667718882316939409472,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10322125191786944152031025720794295875480056,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2674110852900041212107591350675026110499276180787546409661407265673151668416641308455602</CMP>
+    </assertion><omtext class="name">
+      <CMP>  Egyptian fraction representation of the sqrt(50) (A010503) using a greedy function.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>  Egyptian[nbr_] := Block[{lst = {IntegerPart[nbr]}, cons = N[ FractionalPart[ nbr], 2^20], denom, iter = 8}, While[ iter &gt; 0, denom = Ceiling[ 1/cons]; AppendTo[ lst, denom]; cons -= 1/denom; iter--]; lst]; Egyptian[ Sqrt[ 50]]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP>  Cf. Egyptian fraction rep. for the Sqrts: A006487, A224231, A248235 - A248322,</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. Egyptian fraction rep. for the Cbrts: A129702, A132480 - A132574.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Oct 04 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

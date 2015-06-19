@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A083880.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A083880">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,27,155,929,5725,35883,227155,1446241,9237845,59114907,378678635,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2427143489,15561826285,99793962603,640017621475,4104915074881,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 26328745454885,168874407826587,1083182932803515,6947717948023649</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(0)=1, a(1)=5, a(n)=10a(n-1)-23a(n-2), n&gt;=2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Binomial transform of A083879.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Inverse binomial transform of A147957 . 5th binomial transform of A077957 . [From _Philippe Deléham_, Nov 30 2008]</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_02&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (10,-23).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> G.f.: (1-5x)/(1-10x+23x^2). E.g.f.: exp(5x)cosh(x*sqrt(2)). a(n)=((5-sqrt(2))^n+(5+sqrt(2))^n)/2; a(n)=Sum{k=0..n; C(n, 2k)5^(n-2k)2^k }.</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A083880"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMV name="k"/>
+                  <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMV name="k"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+              </OMA>
+          </OMA>
+          
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMR xref="A098158"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[From _Philippe Deléham_ ,Nov 30 2008 ]
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;0,0,polsym(23-10*x+x^2,n)[n+1]/2)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [ n eq 1 select 1 else n eq 2 select 5 else 10*Self(n-1)-23*Self(n-2): n in [1..21] ]; [From _Klaus Brockhaus_, Dec 16 2008]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A083878, A006012.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Barry_, May 08 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Typo in definition corrected by Klaus Brockhaus, Dec 16 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

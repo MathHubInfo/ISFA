@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A050312.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A050312">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,9,1,36,9,1,39,27,9,1,114,3,27,9,1,264,117,12,27,9,1,81,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 111,81,12,27,9,1,429,192,108,90,12,27,9,1,69,153,30,144,90,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 12,27,9,1,284,387,39,27,135,90,12,27,9,1,364,101,234,123,63</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Matrix 9th power of inverse partition triangle A038498.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 1; -9,1; 36,-9,1; -39,27,-9,1; ...</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A050305-A050313.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Christian G. Bower_, Aug 15 1999.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

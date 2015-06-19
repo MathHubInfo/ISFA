@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A137534.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A137534">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,6,23,104,530,2959</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of permutations in S_n avoiding 352{bar 4}1 (i.e. every occurrence of 3521 is contained in an occurrence of a 35241).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Comment from _Lara Pudwell_, Oct 23 2008 (Start):</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A permutation p avoids a pattern q if it has no subsequence that is order-isomorphic to q. For example, p avoids the pattern 132 if it has no subsequence abc with a&lt;c&lt;b.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Barred pattern avoidance considers permutations that avoid a pattern except in a special case. Given a barred pattern q, we may form two patterns, q1 = the sequence of unbarred letters of q and q2 = the sequence of all letters of q.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A permutation p avoids barred pattern q if every instance of q1 in p is embedded in a copy of q2 in p. In other words, p avoids q1, except in the special case that a copy of q1 is a subsequence of a copy of q2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For example, if q=5{bar 1}32{bar 4}, then q1=532 and q2 = 51324. p avoids q if every for decreasing subsequence acd of length 3 in p, one can find letters b and e so that the subsequence abcde of p has b&lt;d&lt;c&lt;e&lt;a. (End)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Lara Pudwell, &lt;a href=&quot;http://faculty.valpo.edu/lpudwell/papers/pudwell_thesis.pdf&quot;&gt;Enumeration Schemes for Pattern-Avoiding Words and Permutations&lt;/a&gt;, Ph. D. Dissertation, Math. Dept., Rutgers University, May 2008.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lara Pudwell_, Apr 25 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

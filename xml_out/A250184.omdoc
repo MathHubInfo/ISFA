@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A250184.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A250184">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,13,14,18,31,44,59,62,75,80,104,109,145,185,213,273,282,309,321,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 337,379,399,405,411,430,452,464,470,522,535,560,566,586,593,597,653,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 654,688,702,704,727,728,744,746,780,805,806,816,822,829,846,856</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that Phi(33,n) is prime, where Phi is the cyclotomic polynomial.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[900], PrimeQ[Cyclotomic[33, #]] &amp;] (* _Vincenzo Librandi_, Jan 17 2015 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) isok(n) = isprime(polcyclo(30, n)); \\ _Michel Marcus_, Jan 17 2015</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A246392.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. J. Mathar_, Jan 12 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

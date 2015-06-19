@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A157551.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A157551">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,9,114,3810,103185,2729181,69340908,1835068068,46949243445,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1072699180795,22440539853666,442180822802082,8348531623530553,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 152424934237053765,2702148696449820840,46523455154624265192</CMP>
+    </assertion><omtext class="name">
+      <CMP> Half the number of length n integer sequences with sum zero and sum of squares 722.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A157551/b157551.txt&quot;&gt;Table of n, a(n) for n=2..50&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      [cache enabling ]<OMOBJ>
+        <OMA>
+      <OMS name="-&gt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="count" cd="A157551"/>
+      <OMV name="n"/><OMV name="s"/><OMV name="ss"/>
+    </OMA>
+      <OMA>
+      <OMS name="count" cd="A157551"/>
+      <OMV name="n"/><OMV name="t"/><OMV name="tt"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="t"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="s" cd="A157551"/>
+      <OMV name="mod"/>
+    </OMA><OMV name="n"/></OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="t"/><OMV name="s"/>
+    </OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="tt"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="ss"/><OMA><OMS name="times"/><OMI>2</OMI><OMV name="q"/><OMV name="s"/></OMA><OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="count" cd="A157551"/>
+      <OMV name="n"/><OMV name="t"/><OMV name="tt"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="i"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMV name="tt"/>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          
+        <OMA>
+          <OMA>
+      <OMS name="count" cd="A157551"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="t"/><OMV name="i"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="tt"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="i"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A157551"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="count" cd="A157551"/>
+      <OMV name="n"/><OMI>0</OMI><OMI>722</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Mar 02 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

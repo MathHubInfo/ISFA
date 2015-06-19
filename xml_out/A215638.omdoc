@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A215638.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A215638">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,16,255,1824,875,279040,5019777,34163200,822579021,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 35005820928,598199789759,1612679634944,456446015789595,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 15087057004396544,168732823928006145,8490541860738957312,560665092239473776157,14661549133472721797120</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> E.g.f.: Series_Reversion( x/(cos(x) + sin(x)) ).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Lim sup n-&gt;infinity (|a(n)|/n!)^(1/n) = 1.991787... - _Vaclav Kotesovec_, Jan 22 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vaclav Kotesovec, &lt;a href=&quot;/A215638/b215638.txt&quot;&gt;Table of n, a(n) for n = 1..400&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      E.g.f .satisfies :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A215638"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="cos" cd="A215638"/>
+      <OMA>
+      <OMS name="A" cd="A215638"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="sin" cd="A215638"/>
+      <OMA>
+      <OMS name="A" cd="A215638"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A215638"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="cos" cd="A215638"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="sin" cd="A215638"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A215638"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMR xref="A215639"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> E.g.f.: A(x) = x + 2*x^2/2! + 3*x^3/3! - 16*x^4/4! - 255*x^5/5! - 1824*x^6/6! +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> where A(x/(cos(x) + sin(x))) = x and A(x) = x*(cos(A(x)) + sin(A(x))).</CMP>
+    </assertion><assertion class="example">
+      <CMP> Related expansions:</CMP>
+    </assertion><assertion class="example">
+      <CMP> cos(A(x)) = 1 - x^2/2! - 6*x^3/3! - 23*x^4/4! + 40*x^5/5! + 2159*x^6/6! + 26656*x^7/7! + 114577*x^8/8! +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> sin(A(x)) = x + 2*x^2/2! + 2*x^3/3! - 28*x^4/4! - 344*x^5/5! - 2034*x^6/6! + 8224*x^7/7! + 443176*x^8/8! +...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Rest[CoefficientList[InverseSeries[Series[x/(Sqrt[2]*Cos[Pi/4-x]),{x,0,20}],x],x]*Range[0,20]!] (* _Vaclav Kotesovec_, Jan 22 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n)=local(X=x+x^2*O(x^n)); n!*polcoeff(serreverse(x/(cos(X)+sin(X))), n)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n)=local(X=x+x^2*O(x^n)); n!*polcoeff(x*(cos(X)+sin(X))^n/n, n)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n)=local(A=x+x^2*O(x^n)); for(i=1,n,A=x*(cos(A)+sin(A)));n!*polcoeff(A, n)}</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=1, 31, print1(a(n), &quot;, &quot;))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A215368, A215639.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Aug 18 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

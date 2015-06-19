@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A211151.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A211151">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 24,196,784,2304,5324,10964,19756,33772,53496,81396,118452,168324,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 229964,310132,407964,527644,670888,844896,1045916,1286220,1560508,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1879548,2244404,2664180,3130076,3663856,4260240,4927920,5665992</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 2x2 matrices having all terms in {-n,...,0,..,n} and determinant &gt; n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For a guide to related sequences, see A210000.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a = -n; b = n; z1 = 30;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t[n_] := t[n] = Flatten[Table[w*z - x*y, {w, a, b}, {x, a, b}, {y, a, b}, {z, a, b}]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> c[n_, k_] := c[n, k] = Count[t[n], k]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> c1[n_, m_] := c1[n, m] = Sum[c[n, k], {k, -2*n^2, m}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[c1[n,2*n^2]-c1[n,n-1],{n,1,z1}] (*A211151*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> %/4  (* integers *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A210000.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Apr 04 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A231739.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A231739">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2775,11100,24975,34125,44400,69375,99900,135975,136500,177600,224775,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 277500,307125,335775,399600,468975,543900,546000,624375,710400,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 801975,853125,899100,1001775,1110000,1223775,1228500,1343100,1467975,1598400,1672125,1734375</CMP>
+    </assertion><omtext class="name">
+      <CMP> Integer areas of the Lucas Central triangles of integer-sided triangles.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Consider a reference triangle ABC and externally inscribe a square on the side BC. Now join the new vertices S_AB and S_AC of this square with the vertex A, marking the points of intersection Q_ABC and Q_ACB. Next, draw lines perpendicular to the side BC through each of Q_ABC and Q_ACB. These points cross the sides AB and AC at Q_AB and Q_AC, respectively, resulting in an inscribed square Q_ABC Q_ACB Q_AB Q_AC. The circumcircle through A, Q_AB, and Q_AC is then known as the Lucas A-circles (Panakis 1973, p. 458; Yiu and Hatzipolakis 2001), and repeating the process for other sides gives the corresponding B- and C-circles.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Lucas central triangle is the triangle L1 L2 L3 formed by the centers of the Lucas circles of a given reference triangle ABC.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Lucas central triangle has side lengths</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a' = 2*R*(a*b*c+b^2*R+c^2*R)*a/((a*c+2*b*R)*(a*b+2*c*R));</CMP>
+    </omtext><omtext class="comment">
+      <CMP> b' = 2*R*(a*b*c+a^2*R+c^2*R)*b/((b*c+2*a*R)*(a*b+2*c*R));</CMP>
+    </omtext><omtext class="comment">
+      <CMP> c' = 2*R*(a*b*c+a^2*R+b^2*R)*c/((b*c+2*a*R)*(a*c+2*b*R)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Its area is given by</CMP>
+    </omtext><omtext class="comment">
+      <CMP> S’ = a*b*c*R^2*sqrt(u)/v where:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> u=3*a^2*b^2*c^2+4*a*b*c*(a^2+b^2+c^2)*R+4*(a^2*b^2+a^2*c^2+b^2*c^2)*R^2 ;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> v=(b*c+2*a*R)*(a*c+2*b*R)*(a*b+2*c*R);</CMP>
+    </omtext><omtext class="comment">
+      <CMP> R = a*b*c/ sqrt((a+b+c)*(b+c-a)*(c+a-b)*(a+b-c)) = a*b*c/(4*S) where R is the circumradius of the reference triangle ABC and S its area.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Properties of this sequence:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The side lengths of the Lucas central triangles are rational numbers, sometimes integers, for example a(n) = 136500,...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The primitive Lucas central triangles are 2775, 34125,...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The non-primitive triangles of areas 4*a(n),9*a(n),...,p^2*a(n),... are is the sequence.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The following table gives the first values (S’, S, a, b, c, a’, b’, c’) where S’ is the area of the Lucas central triangles, S is the area of the initial triangles ABC, a, b, c are the integer sides of ABC and a’, b’, c’ are the sides of the Lucas central triangles.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ------------------------------------------------------------------------</CMP>
+    </omtext><omtext class="comment">
+      <CMP> |   S’   |      S  |   a  |   b  |   c  |    a’    |    b’   |   c’    |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ------------------------------------------------------------------------</CMP>
+    </omtext><omtext class="comment">
+      <CMP> |   2775 |    8214 |  111 |  148 |  185 |  975/14  |  580/7  |  185/2  |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> |  11100 |   32856 |  222 |  296 |  370 |  975/7   |  1160/7 |  185    |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> |  24975 |   73926 |  333 |  444 |  555 |  2925/14 |  1740/7 |  555/2  |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> |  34125 |  115248 |  490 |  490 |  588 |  545/2   |   545/2 |  300    |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> |  44400 |  131424 |  444 |  592 |  740 |  1950/7  |  2320/7 |  370    |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> |  69375 |  205350 |  555 |  740 |  925 |  4875/14 |  2900/7 |  925/2  |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> |  99900 |  295704 |  666 |  888 | 1110 |  2925/7  |  3480/7 |  555    |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> | 135975 |  402486 |  777 | 1036 | 1295 |   975/2  |   580   | 1295/2  |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> | 136500 |  460992 |  980 |  980 | 1176 |   545    |   545   |  600    |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> | 177600 |  525696 |  888 | 1184 | 1480 |  3900/7  |  4640/7 |  740    |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> | 224775 |  665334 |  999 | 1332 | 1665 |  8775/14 |  5220/7 | 1665/2  |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> | 277500 |  821400 | 1110 | 1480 | 1850 | 48755/7  |  5800/7 |  925    |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> | 307125 | 1037232 | 1470 | 1470 | 1764 |  1635/2  |  1635/2 |  900    |</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .....................................................................</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Moses, &lt;a href=&quot;http://forumgeom.fau.edu/FG2005volume5/FG200513index.html&quot;&gt;Circles and Triangle Centers Associated with the Lucas Circles&lt;/a&gt;, Forum Geom. 5, 97-106, 2005.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wolfram MathWorld, &lt;a href=&quot;http://mathworld.wolfram.com/LucasCentralTriangle.html&quot;&gt;Lucas Central Triangle&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wolfram MathWorld, &lt;a href=&quot;http://mathworld.wolfram.com/LucasCircles.html&quot;&gt;Lucas Circles&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Yiu and A. P. Hatzipolakis, &lt;a href=&quot;http://www.jstor.org/stable/2695801&quot;&gt;The Lucas Circles of a Triangle&lt;/a&gt;, Amer. Math. Monthly 108, 444-446, 2001.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 2775 is in the sequence. We use two ways:</CMP>
+    </assertion><assertion class="example">
+      <CMP> First way: from the initial triangle (111, 148, 185) the formula in the comments gives directly the area of the Lucas central triangle: S’ = a*b*c*R^2*sqrt(u)/v where:</CMP>
+    </assertion><assertion class="example">
+      <CMP> R = a*b*c/4S = a*b*c/(4*sqrt(s(s-a)(s-b)(s-c))=111*148*185/4*sqrt(222(222-111)(222-148)(222-185))=111*148*185/(4*8214) = 185/2 with S=8214.</CMP>
+    </assertion><assertion class="example">
+      <CMP> sqrt(u)=sqrt(3*a^2*b^2*c^2+4*a*b*c*(a^2+b^2+c^2)*R+4*(a^2*b^2+a^2*c^2+b^2*c^2)*R^2) = sqrt(154007727700225) = 12409985.</CMP>
+    </assertion><assertion class="example">
+      <CMP> v=(b*c+2*a*R)*(a*c+2*b*R)*(a*b+2*c*R)= 116291549487925</CMP>
+    </assertion><assertion class="example">
+      <CMP> And S’ = 111*148*185*(185/2)^2*12409985/116291549487925 = 2775.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Second way: by calculation of the sides a’, b’, c’ and by use the Heron’s formula. With the formulas given in the link, we find</CMP>
+    </assertion><assertion class="example">
+      <CMP> a’ = 975/14;</CMP>
+    </assertion><assertion class="example">
+      <CMP> b’ = 580/7;</CMP>
+    </assertion><assertion class="example">
+      <CMP> c’ = 185/2.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Now, we use the Heron’s formula with (a’,b’,c’). We find A’=sqrt(s1*(s1-a’)*(s1-b’)*(s1-c’))with:</CMP>
+    </assertion><assertion class="example">
+      <CMP> s1 =(a’+b’+c’)/2 = (975/14+ 580/7+ 185/2)/2 = 245/2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> We find S’= 2775.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> nn=2000;lst={};Do[s =(a + b + c)/2;area2=s (s-a)(s-b)(s-c);If[area2&gt;0,R = a*b*c /(4*Sqrt[area2]);u = a*b*c*R^2 * Sqrt[3*a^2*b^2*c^2 + 4*a*b*c*(a^2 + b^2 + c^2)*R + 4*(a^2*b^2 + a^2*c^2 + b^2*c^2)*R^2];v = (b*c + 2*a*R)*(a*c + 2*b*R)*(a*b + 2*c*R);If[IntegerQ[u/v], AppendTo[lst, u/v]]],{a,nn},{b,a},{c,b}];Union[lst]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A188158.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Lagneau_, Nov 13 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

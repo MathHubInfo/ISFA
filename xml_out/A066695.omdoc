@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A066695.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A066695">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 252,273,315,364,399,468,481,532,546,630,651,665,684,693,741,756,777,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 793,798,855,868,903,945,949,962,988,1001,1036,1071,1085,1116,1204,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1209,1261,1281,1287,1302,1330,1332,1386,1395,1404,1407,1417,1449,1463</CMP>
+    </assertion><omtext class="name">
+      <CMP> Euler phi(n) / Carmichael lambda(n) = 12.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {cmf(f)=if( ((f[1]==2)&amp;&amp;(f[2]&gt;2)),eulerphi(f[1]^f[2])/2, eulerphi(f[1]^f[2])) } {cl(f)= k=factor(f); l=1; for(x=1,omega(f),l=lcm(l,cmf([k[x,1], k[x,2]]))); l } {A0(n)=eulerphi(n)/cl(n)} for(x=1,10001, if(A0(x)==12,print1(x,&quot;,&quot;)))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Continuation of A062373-A062377</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Randall L. Rathbun, Jan 12 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

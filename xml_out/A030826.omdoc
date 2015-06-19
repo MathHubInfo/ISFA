@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A030826.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A030826">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,6,27,136,820,5742,45937,413437,4134377,45478153,545737843,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7094591965,99324287514,1489864312718,23837829003495,405243093059417,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7294375675069511,138593137826320724,2771862756526414499</CMP>
+    </assertion><omtext class="name">
+      <CMP> [ exp(3/23)*n! ].</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Simon Plouffe_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

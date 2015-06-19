@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A009846.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A009846">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,11,22,40,64,89,120,160,203,248,305,364,422,488,563,638,721,808,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 909,1000,1102,1211,1321,1435,1559,1690,1828,1961,2099,2252,2395,2557,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2724,2889,3072,3240,3418,3610,3794,3994,4206,4406,4634,4841,5056,5293</CMP>
+    </assertion><omtext class="name">
+      <CMP> Coordination sequence T1 for Zeolite Code -CHI.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> W. M. Meier, D. H. Olson and Ch. Baerlocher, Atlas of Zeolite Structure Types, 4th Ed., Elsevier, 1996</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. W. Grosse-Kunstleve, &lt;a href=&quot;/A005897/a005897.html&quot;&gt;Coordination Sequences and Encyclopedia of Integer Sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. W. Grosse-Kunstleve, G. O. Brunner and N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/ac96cs/&quot;&gt;Algebraic Description of Coordination Sequences and Exact Topological Densities for Zeolites&lt;/a&gt;, Acta Cryst., A52 (1996), pp. 879-889.</CMP>
+    </omtext><omtext class="link">
+      <CMP> International Zeolite Association, &lt;a href=&quot;http://www.iza-structure.org/databases/&quot;&gt;Database of Zeolite Structures&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> rwgk(AT)cci.lbl.gov (R.W. Grosse-Kunstleve)</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

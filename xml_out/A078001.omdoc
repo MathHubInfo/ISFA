@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A078001.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A078001">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,0,2,5,8,9,5,7,28,54,73,64,1,135,335,536,602,333,472,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1879,3619,4887,4276,46,9071,22464,35903,40271,22175,31824,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 126094,242539,327160,285687,1675,609497,1506356,2404890,2693927,1476608,2145601,8461737,16254481,21901624</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of (1-x)/(1-2*x+x^2+x^3).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A078001"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="floor" cd="A078001"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A078001"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.-_Vladeta Jovovic_ ,Feb 10 2003 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A078001"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A078001"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A078001"/>
+      <OMV name="n"/>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="a" cd="A078001"/>
+      <OMV name="k"/>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Alex Ratushnyak_ ,May 03 2012 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A078001"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A078001"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A078001"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A078001"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A078001"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="a" cd="A078001"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A078001"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Harvey <OMOBJ>
+        <OMV name="P"/>
+      </OMOBJ>.Dale_ ,Nov 03 2013 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> CoefficientList[Series[(1-x)/(1-2x+x^2+x^3),{x,0,50}],x] (* or *) LinearRecurrence[{2,-1,-1},{1,1,1},50] (* _Harvey P. Dale_, Nov 03 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Python)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a = [1]*1000</CMP>
+    </omtext><omtext class="program">
+      <CMP> for n in range(55):</CMP>
+    </omtext><omtext class="program">
+      <CMP> .    print a[n],</CMP>
+    </omtext><omtext class="program">
+      <CMP> .    sum=0</CMP>
+    </omtext><omtext class="program">
+      <CMP> .    for k in range(n-1):</CMP>
+    </omtext><omtext class="program">
+      <CMP> .    .    sum+=a[k]</CMP>
+    </omtext><omtext class="program">
+      <CMP> .    a[n+1] = a[n]-sum</CMP>
+    </omtext><omtext class="program">
+      <CMP> # from _Alex Ratushnyak_, May 03 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) Vec((1-x)/(1-2*x+x^2+x^3)+O(x^99)) \\ _Charles R Greathouse IV_, Sep 26 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A005251, A077856.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Nov 17 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

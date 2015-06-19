@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A147304.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A147304">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 28,17576,43308802158650,8610524734277600186228691452,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 121374542758943982922417964798154019940274699584207321286055873543631298,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8126392396649531937838689708830356413772063825711016912849229977138431439363305375418692100492504264</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = Sum_{k=1..prime(n)^2-1} binomial(2k,k).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Callan, Problem A11292 and A11307, Amer. Math. Monthly, 116 (2009), 468-470.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Sum[Binomial[2k,k],{k,Prime[n]^2-1}],{n,7}] (* _Harvey P. Dale_, Dec 26 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A146977, A066796, A147291.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Apr 25 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

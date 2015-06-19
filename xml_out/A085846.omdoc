@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A085846.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A085846">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,9,3,1,6,6,2,8,7,4,1,1,8,6,1,0,3,1,5,0,8,0,2,8,2,9,1,2,5,0,8,0,5,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8,6,4,3,7,2,2,5,7,2,9,0,3,2,7,1,2,1,2,4,8,5,3,7,7,1,0,3,9,6,1,6,8,5,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,6,4,8,8,0,0,9,1,5,7,7,4,3,6,2,9,0,4,2,0,1,3,8,0,4,8,2,8,2,5,6,6,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of root of x = (1+1/x)^x.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equivalently, the root of x^(x+1) = (x+1)^x.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Contribution from _Cino Hilliard_, Sep 13 2008: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also a root of 1/(x^(1/x)-1) - x = 0 and 1/(x^(1/x)-1/x-1) - x = 0 which also contains</CMP>
+    </omtext><omtext class="comment">
+      <CMP> the root 5.50798565277317825758902... 1/(x^(1/x)-1) ~ Pi(x) and</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1/(x^(1/x)-1/x-1) ~ Pi(x) which is a much better approximation. These roots also</CMP>
+    </omtext><omtext class="comment">
+      <CMP> can be computed by the recurrences x = 1/(x^(1/x)-1) and x = 1/(x^(1/x)-1/x-1). (End)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/FoiasConstant.html&quot;&gt;Foias Constant&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS cd="set1" name="set">
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      </OMS>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMV name="x"/>
+      </OMOBJ>equals <OMOBJ>
+        <OMF dec="2.2931662"/>
+      </OMOBJ>....-_Marco Matosic_ ,Nov 25 2005 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 2.2931662874118610315080282912508058643722572903271212485377103961...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> RealDigits[ FindRoot[x^(1/x) - (x + 1)^(1/(x + 1)) == 0, {x, 2}, WorkingPrecision -&gt; 128][[1, 2]], 10, 111][[1]] (* _Robert G. Wilson v_ *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) solve(x=2,3,(1+1/x)^x-x) \\ _Charles R Greathouse IV_, Apr 14 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A021002, A169862.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric W. Weisstein_, Jul 05, 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

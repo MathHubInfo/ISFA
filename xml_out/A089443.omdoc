@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A089443.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A089443">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,7,19,37,47,83,103,107,109,137,149,167,173,179,197,223,263,293,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 307,313,337,347,349,379,433,439,463,487,509,547,569,587,593,607,613,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 617,673,683,709,719,727,743,769,809,859,863,887,929,937,967,1019,1033,1049</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p such that 12*p + 13 is prime.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) diff2p(n,a,b) = { forprime(x=3,n, y=(x-a)/b; if(y==floor(y), if(isprime(y), print1(y&quot;,&quot;)) ) ) }</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(5000)| IsPrime(12*p+13)] [From Vincenzo Librandi, Jan 30 2011]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Cino Hilliard_, Dec 28 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition corrected by Zak Seidov, May 06 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A087795.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A087795">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 27,121,221,529,1139,1369,3293,6413,6707,17009,17279,34207,40171,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 75301,113423,141109,203513</CMP>
+    </assertion><omtext class="name">
+      <CMP> Minimal last term of an n-tuple of pairwise coprime composites in A.P.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For the corresponding common difference see next sequence.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> C. R. J. Singleton, &quot;Composite AP&quot;, Solution to Problem 2479, Journal of Recreational Mathematics, 31(1) 82 2002-3 Baywood NY.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A087796.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lekraj Beedassy_, Oct 09 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

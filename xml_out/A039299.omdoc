@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A039299.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A039299">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 9,19,39,51,54,56,58,59,63,69,81,91,109,114,116,118,119,121,133,139,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 153,163,189,199,219,231,234,236,238,239,243,249,273,291,303,306,308,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 310,311,315,321,324,326,328,329,333,336,338,340,341,343,348,350,352</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that representation in base 6 has same nonzero number of 1's and 3's.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Olivier Gérard_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

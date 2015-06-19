@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A196468.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A196468">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,53,255,1231,5943,28695,138551,668983,3230135,15596471,75306423,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 363611575,1755671991,8477134263,40931225015,197633437111,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 954258648503,4607568342455,22247307963831,107419505225143,518667252755895,2504347031924151,12092057138720183</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sequence defined by a(1)=11; for n&gt;1, a(n)=floor((2+sqrt(8))*a(n-1)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Contains only odd numbers.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A196468/b196468.txt&quot;&gt;Table of n, a(n) for n = 1..150&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (5,0,-4).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>11</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A196468"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA><OMS name="times"/><OMI>33</OMI><OMA>
+      <OMR xref="A057087"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>20</OMI><OMA>
+      <OMR xref="A057087"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMI>14</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar ,Oct 04 2011 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> NestList[Floor[(2+Sqrt[8])#]&amp;,11,30] (* or *) LinearRecurrence[{5,0,-4},{11,53,255},30] (* _Harvey P. Dale_, Nov 18 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) I:=[11,53,255]; [n le 3 select I[n] else 5*Self(n-1)-4*Self(n-3): n in [1..30]]; // Vincenzo Librandi, Oct 05 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A086843, A086844.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Philippe Deléham_, Oct 02 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

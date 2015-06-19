@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A095215.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A095215">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,11,67,3301,670001,670001,2816573,1962598272385996001,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 13135299156148920427,8195631610270280813458231,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 252695623634706646276208461875953169850197045066143207,381219345970368698157410442059827141986617742456355454248317851</CMP>
+    </assertion><omtext class="name">
+      <CMP> Beginning with 2, greatest prime divisor of the concatenation of all previous terms.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Greatest prime divisor of 22 is 11, 2211 is 67.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,more,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Jun 10 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Robert Gerbicz_, Jun 09 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Offset corrected and a(12)-a(13) from _Donovan Johnson_, Feb 19 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

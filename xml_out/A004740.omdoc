@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A004740.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A004740">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,8000000000,8000000008,8000000018,8000000080,8000000088,8000000085</CMP>
+    </omtext><omtext class="name">
+      <CMP> Integers in alphabetical order in U.S. English.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Jasper Mulder, Jan 25 2010, comments that this sequence is ill-defined, since there are an infinite number of cardinal numbers that start with a 'd', namely all those powers of 10 named decillion, duodecillion and so on (see http://en.wikipedia.org/wiki/English_numerals). [Obviously Smarandache did not take such numbers into account. - _N. J. A. Sloane_, Jan 25 2010.]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> However, it would seem then that 'billion' and 'centillion' also precede these, while it is standard (and systematic for this sequence) to refer to such numbers as 'one billion', 'one decillion' etc. - Yasiru Ratnayake, May 03 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Smarandache, Sequences of Numbers Involved in Unsolved Problems, Hexis, Phoenix, 2006.</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Smarandache, &lt;a href=&quot;http://www.gallup.unm.edu/~smarandache/Sequences-book.pdf&quot;&gt;Sequences of Numbers Involved in Unsolved Problems&lt;/a&gt;.</CMP>
+    </omtext><assertion class="example">
+      <CMP> The list begins &quot;eight&quot;, &quot;eight billion&quot;, &quot;eight billion and eight&quot;, ...</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A019440, A026081. See A108067 for another version.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A073327, A152611, A075831.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> word,nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, _Neil Fernandez_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

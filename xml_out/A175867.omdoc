@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A175867.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A175867">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,11,23,47,95,19,39,13,27,9,3,7,15,5,11,23,47,95,19,39,13,27,9,3,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 15,5,11,23,47,95,19,39,13,27,9,3,7,15,5,11,23,47,95,19,39,13,27,9,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7,15,5,11,23,47,95,19,39,13,27,9,3,7,15,5,11,23,47,95,19,39,13,27,9,3,7</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(0) = 2; a(n) = a(n - 1) * 2 + 1 if a(n - 1) is prime, or a(n - 1) / (smallest prime factor) if it is composite.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) repeats itself after 14 iterations. Peak is a(5) = 95.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The function is similar in nature to Collatz's 3x+1 problem, except that it deals with primality instead of parity.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/en/wiki/Divisor&quot;&gt;Divisor&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/en/wiki/Prime_number&quot;&gt;Prime number&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(0) = 2</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(1) = 2 * 2 + 1 = 5, because a(0) was prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 5 * 2 + 1 = 11, because a(1) was prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(6) = 95 / 5 = 19, because the smallest prime factor of a(5) was 5.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (Python) import math, pyecm</CMP>
+    </omtext><omtext class="program">
+      <CMP> # pyecm can be obtained from pyecm.sourceforge.net</CMP>
+    </omtext><omtext class="program">
+      <CMP> a = [2]</CMP>
+    </omtext><omtext class="program">
+      <CMP> while not a[ -1] in a[:-1]:</CMP>
+    </omtext><omtext class="program">
+      <CMP> .if pyecm.isprime(a[ -1]):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ..a.append(a[ -1] * 2 + 1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> .else:</CMP>
+    </omtext><omtext class="program">
+      <CMP> ..for div in xrange(2, int(math.sqrt(a[ -1])) + 1):</CMP>
+    </omtext><omtext class="program">
+      <CMP> ...if not a[ -1] % div:</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....a.append(a[ -1] / div)</CMP>
+    </omtext><omtext class="program">
+      <CMP> ....break</CMP>
+    </omtext><omtext class="program">
+      <CMP> print a</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Grant Garcia_, Sep 30 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A053641.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A053641">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,1,5,3,7,1,9,3,11,5,13,7,15,1,17,3,19,5,21,7,23,9,25,11,27,13,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 29,15,31,1,33,3,35,5,37,7,39,9,41,11,43,13,45,15,47,17,49,19,51,21,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 53,23,55,25,57,27,59,29,61,31,63,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Rotate one binary digit to the right, calculate, then rotate one binary digit to the left.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A053641"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A006257"/>
+      <OMA>
+      <OMR xref="A038572"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,=<OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>if <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>odd ,=<OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="k"/>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="divisible" cd="arithemtics">
+        <OMV name="n"/>
+        <OMI>2</OMI>
+      </OMS>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="k"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(60)=29 because starting with 111100 the right rotation produces 011110 written as 11110 (i.e. 30) and the left rotation produces 11101 (i.e. 29)</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A006257, A038572.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Henry Bottomley_, Mar 22 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

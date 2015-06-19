@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A165778.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A165778">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,6,7,8,10,16,19,22,28,43,46,56,58,62,67,74,82,140,160,316,346,376,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 454,458,487,580,607,1018,1579,1739,1870,2006,3014,3056</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that |2^n-57| is prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If p=2^n-57 is prime, then 2^(n-1)*p is in A101260, i.e., a solution to sigma(x)-2x = 56 = 2^3*(2^3-1) = 2*A000396(2).</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(3)=6 since 2^6-57 = 7 is prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> For exponents a(1)=2 and a(2)=4, we get 2^a(k)-57 = -53 and -41 which are negative, but which are prime in absolute value.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A096818, A165779, A165780.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _M. F. Hasler_, Oct 11 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

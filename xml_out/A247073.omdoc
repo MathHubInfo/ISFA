@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A247073.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A247073">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,1,4,1,1,6,2,1,1,11,3,2,1,1,18,4,2,1,1,1,31,5,3,2,1,1,1,54,6,3,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,1,1,1,97,8,4,2,2,1,1,1,1,172,11,4,3,2,2,1,1,1,1,309,14,5,3,2,2,1,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,1,564,18,6,4,3,2,2,1,1,1,1,1,1028,24,8,4,3,2,2,2,1,1,1,1,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle read by rows: T(n,k) is the number of k-th prime powers up to 2^n, for k = 1 to n.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A247073/b247073.txt&quot;&gt;Rows n = 1..20 of triangle, flattened&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Up to 16, there are 6 primes (2, 3, 5, 7, 11, 13), 2 squared primes (4,9), 1 cube (8), and 1 fourth power (16), so 4th row is 6, 2, 1, 1.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Triangle starts:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4, 1, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6, 2, 1, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11, 3, 2, 1, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 18, 4, 2, 1, 1, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) tabl(nn) = {for (n=1, nn, v = vector(2^n, i, i); vr = vector(n); for (k=1, #v, if (pp = isprimepower(v[k]), vr[pp] ++);); for (k=1, n, print1(vr[k], &quot;, &quot;);); print(););}</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.List (sort, groupBy); import Data.Function (on)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a247073 n k = a247073_tabl !! (n-1) !! (k-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a247073_tabl = map a247073_row [1..]</CMP>
+    </omtext><omtext class="program">
+      <CMP> a247073_row n = map length $ groupBy ((==) `on` fst) $ sort $</CMP>
+    </omtext><omtext class="program">
+      <CMP>    takeWhile ((&lt;= 2^n). snd) $ tail $ zip a025474_list a000961_list</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Nov 18 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000961 (prime powers), A007053 (first column), A060967 (second column).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A025474.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Marcus_, Nov 18 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

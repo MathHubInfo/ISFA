@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A240098.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A240098">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,4,1,432,1,16384,19683,800000,1,5159780352,1,3373232128,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5189853515625,281474976710656,1,499751156776108032,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 52428800000000000000,262757514534242203161,299170970322599936,1,48239864614087244084529856512,2910383045673370361328125</CMP>
+    </assertion><omtext class="name">
+      <CMP> Product of the greatest common divisors of n and k! over k=0..n-1.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A240098"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="gcd" cd="A240098"/>
+      <OMV name="n"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A058067"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A240098"/>
+      <OMV name="p"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>for primes <OMOBJ>
+        <OMV name="p"/>
+      </OMOBJ>.-_Joerg Arndt_ ,Apr 01 2014 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A240098"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMA><OMS name="times"/><OMV name="p"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="p"/></OMA><OMI>3</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for primes <OMOBJ>
+        <OMV name="p"/>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Apr 02 2014 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> A240098 := proc(n)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     mul( igcd(n,k!),k=0..n-1) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> end proc:</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Times@@Table[GCD[i,n!],{n,0,i-1}],{i,30}] (* _Harvey P. Dale_, Feb 23 2015 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. J. Mathar_, Apr 01 2014</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Harvey P. Dale_, Feb 23 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

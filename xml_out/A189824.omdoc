@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A189824.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A189824">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,1,1,8,8,6,4,3,1,5,0,9,5,8,0,1,1,1,0,8,5,0,3,2,0,6,7,7,9,9,3,2,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3,9,4,1,5,8,5,1,8,1,0,0,7,8,2,4,7,5,4,2,8,6,7,9,8,8,8,4,2,0,9,0,8,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4,3,2,4,7,7,2,3,5,6,1,3,0,8,4,5,3,8,5,1,0,0,8,8,7,7,7,9,6,9,5,9,1,9,1,6,9</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of Pogson's ratio 100^(1/5).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Ratio appearing in the definition of the astronomical magnitude (brightness) scale.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/PogsonsRatio.html&quot;&gt;Pogson's Ratio&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 2.511886431509580111085032067799...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> First[RealDigits[100^(1/5), 10, 200]]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) 10^.4 \\ _Charles R Greathouse IV_, Jan 15 2015</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric W. Weisstein_, Apr 28 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

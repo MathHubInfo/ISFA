@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A122559.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A122559">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 13,22,5,13,10,19,21,14</CMP>
+    </omtext><omtext class="name">
+      <CMP> Position of first letter of n-th planet (in English) in alphabet.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> M, V, E, M, J, S, U and N are the first letters of each of the 8 Planets (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune) in the Solar System in order from the sun. Due to a resolution by the International Astronomical Union (IAU) on August 24 2006, Pluto is no longer considered a planet but a 'dwarf planet'(term which resolution makes clearly distinct from that of &quot;planet&quot;). The definition currently applies only to the Sun's solar system and to the English language.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Paul Cooijmans, &lt;a href=&quot;http://web.archive.org/web/20050302174449/http://members.chello.nl/p.cooijmans/gliaweb/tests/odds.html&quot;&gt;Odds&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Dwarf_planet&quot;&gt;Dwarf planet&lt;/a&gt;.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,word</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Herman Jamke (hermanjamke(AT)fastmail.fm), Sep 20 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

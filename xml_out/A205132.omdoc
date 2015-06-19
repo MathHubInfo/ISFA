@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A205132.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A205132">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,15,15,45,6,45,15,153,15,45,28,66,28,15,45,561,45,91,66,66,66,28,91,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 231,91,231,28,231,120,45,153,2145,153,378,120,153,190,66,45,325,231,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 276,276,45,91,91,325,630,153,378,66,276,378,120,231,325,120</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least s(k) such that n divides s(k)-s(j) for some j&lt;k, where s(j)=2*j^2-j, the j-th hexagonal number.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For a guide to related sequences, see A204892.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (See the program at A205130.)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A205130, A204892.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Jan 25 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

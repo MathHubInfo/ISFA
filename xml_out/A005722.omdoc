@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A005722.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A005722">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,16,36,100,144,256,324,484,784,900,1296,1600,1764,2116,2704,3364,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3600,4356,4900,5184,6084,6724,7744,9216,10000,10404,11236,11664,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 12544,15876,16900,18496,19044,21904</CMP>
+    </assertion><omtext class="name">
+      <CMP> (prime(n) - 1)^2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A005722/b005722.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005722"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A192134"/>
+      <OMA>
+      <OMR xref="A095874"/>
+      <OMA>
+      <OMR xref="A001248"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Reinhard Zumkeller_ ,Jun 26 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005722"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A006093"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Wesley Ivan Hurt_ ,Mar 27 2014 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> A005722:=n-&gt;(ithprime(n)-1)^2; seq(A005722(n), n=1..40); # _Wesley Ivan Hurt_, Mar 27 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[(Prime[n] - 1)^2, {n, 40}] (* _Vincenzo Librandi_, Mar 27 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [(p-1)^2: p in PrimesUpTo(200)]; // _Vincenzo Librandi_, Mar 27 2014</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> Scorpion(AT)aol.com</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

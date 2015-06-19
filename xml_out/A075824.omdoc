@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A075824.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A075824">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 9,11,17,19,21,25,27,33,35,39,41,43,45,49,51,53,57,59,65,67,69,71,73,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 75,77,79,81,83,85,87,89,91,93,95,97,99,103,105,107,109,111,113,115,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 117,121,123,129,131,133,135,137,139,141,143,145,147,149,151,153,155,157</CMP>
+    </assertion><omtext class="name">
+      <CMP> Odd numbers that cannot be expressed as 2^n-3^m where n and m are integers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> All listed terms can be certified by considering 2^n-3^m modulo 2552550. [From _Max Alekseyev_, Feb 08 2010]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, Unsolved Problems in Number Theory, D9.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. N. Shorey and R. Tijdeman, Exponential Diophantine Equations, Cambridge University Press, 1986.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. Metsankyla, &lt;a href=&quot;http://www.ams.org/bull/2004-41-01/S0273-0979-03-00993-5/home.html&quot;&gt;Catalan's Conjecture : Another old Diophantine problem solved&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://www.wikipedia.org/wiki/Catalan%27s_conjecture&quot;&gt;Catalan's conjecture&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 5 doesn't belong to the sequence because it can be expressed as 2^3-3^1</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Complement of A192110 in the odd integers.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A074981.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Felice Russo_, Oct 14 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Inserted &quot;odd&quot; in definition. - _N. J. A. Sloane_, Jan 30 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> _Jon E. Schoenfield_ observed that 49 was missing, Jan 30 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Max Alekseyev_, Feb 08 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A093569.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A093569">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,2,0,0,0,0,2,0,2,0,2,0,2,0,2,0,0,0,0,0,0,2,0,0,0,6,0,0,0,2,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,0,0,0,0,2,0,0,0,0,0,2,0,0,4,0,0,0,0,0,2,0,2,2,0,0,0,0,0,0,2,0,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2,0,2,0,0,0,2,0,0,2,2,2,0,2,0,2,2,0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> For p = prime(n), the number of integers k &lt; p-1 such that p divides A001008(k), the numerator of the harmonic number H(k).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is well-known that prime p &gt;= 3 divides the numerator of H(p-1). For primes p in A092194, there are integers k &lt; p-1 for which p divides the numerator of H(k). Interestingly, if p divides A001008(k) for k &lt; p-1, then p divides A001008(p-k-1). Hence the terms of this sequence are usually even. The only exceptions are the two known Wieferich primes 1093 and 3511, A001220, which have 3 values of k &lt; p-1 for which p divides A001008(k), one being k = (p-1)/2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A093569/b093569.txt&quot;&gt;Table of n, a(n) for n=1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/HarmonicNumber.html&quot;&gt;Harmonic Number&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/WieferichPrime.html&quot;&gt;Wieferich Prime&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(5) = 2 because 11 = prime(5) and there are 2 values, k = 3 and 7, such that 11 divides A001008(k).</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> len=500; Table[p=Prime[i]; cnt=0; k=1; While[k&lt;p-1, If[Mod[Numerator[HarmonicNumber[k]], p]==0, cnt++ ]; k++ ]; cnt, {i, len}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001008, A001220, A092194.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _T. D. Noe_, Apr 01 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A018123.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A018123">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,3,4,5,6,9,12,16,21,27,36,48,64,84,111,147,194,256,337,445,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 588,776,1024,1351,1782,2352,3104,4096,5404,7131,9410,12416,16384,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 21618,28526,37640,49667,65536,86475</CMP>
+    </assertion><omtext class="name">
+      <CMP> Powers of fifth root of 4 rounded down.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A011082.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A011082">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,0,8,8,5,9,0,6,1,9,3,8,7,6,6,1,1,7,3,9,4,2,0,5,7,9,1,8,6,9,1,4,4,6,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,9,0,1,8,0,7,3,7,5,4,9,5,4,1,9,3,0,1,6,2,9,7,2,6,4,1,7,3,8,8,6,4,9,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5,1,3,2,6,5,4,6,3,5,0,0,5,0,4,4,2,3,1,4,0,6,3,8,8,2,7,7,4,9,9</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of 4th root of 91.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ivan Panchenko, &lt;a href=&quot;/A011082/b011082.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[Power[91, (4)^-1],10,120][[1]]  (* _Harvey P. Dale_, Apr 12 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) sqrtn(91,4) \\ _Charles R Greathouse IV_, Apr 16 2014</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

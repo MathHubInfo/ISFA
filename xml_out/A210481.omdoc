@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A210481.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A210481">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,1,2,2,1,1,4,2,2,4,3,2,4,3,4,3,4,4,6,3,4,5,3,5,5,4,3,6,4,7,5,4,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6,5,7,9,7,5,6,5,6,6,8,5,7,9,5,6,7,5,7,7,9,10,3,11,8,11,6,9,8,12,8,9,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7,10,9,7,8,8,6,14,8,10,11,11,12,11,7,7</CMP>
+    </assertion><omtext class="name">
+      <CMP> Given n-th prime p, a(n) = number of primes of the form p * q - 2 where q is any prime &lt; p.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Very similar to A103960. - _T. D. Noe_, Apr 18 2013</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[p = Prime[n]; c = 0; Do[If[PrimeQ[p*Prime[i] - 2], c = c + 1], {i, n - 1}]; c, {n, 82}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A103960, A224748.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jayanta Basu_, Apr 18 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

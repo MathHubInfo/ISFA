@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A253896.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A253896">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,3,7,13,22,34,48,62,81,99,121,143,170,196,226,256,291,325,363,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 401,444,486,532,578,629,679,733,787,846,904,966,1028,1095,1161,1231,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1301,1376,1450,1528,1606,1689,1771,1857,1943,2034,2124,2218,2312,2411,2509,2611</CMP>
+    </assertion><omtext class="name">
+      <CMP> Total number of either concave decagons or concave hexadecagons in two variants of an octagon expansion after n iterations: either &quot;side-to-side&quot; or &quot;vertex-to-vertex&quot;, respectively.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Inspired by A061777 and A179178 which are &quot;vertex-to-vertex&quot; and &quot;side-to-side&quot; versions of equilateral triangle expansion, respectively.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In these octagon expansions, there is allowed only an expansion obeying &quot;two sides separated by one side&quot; or one by obeying &quot;two vertices separated by one vertex&quot; for the &quot;side-to-side&quot; or &quot;vertex-to-vertex&quot; versions, respectively.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Two star-shaped hexadecagons (16-gons) and a 4-star appear when n = 8 for the &quot;side-to-side&quot; version, and in the &quot;vertex-to-vertex&quot; version there appears an irregular star-shaped icositetragons (24-gons). Rare type of polygons also appear for  n &gt; 8. See illustrations.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Kival Ngaokrajang, &lt;a href=&quot;/A253896/a253896_2.pdf&quot;&gt;Illustration of initial terms&lt;/a&gt;, &lt;a href=&quot;/A253896/a253896_3.pdf&quot;&gt;Rare type polygons&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>10</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>9</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>8</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>7</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMV name="x"/><OMI>1</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Jan 17 2015 
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> {</CMP>
+    </omtext><omtext class="program">
+      <CMP> a=0;d1=0;p=1;print1(&quot;0, 0, 0, &quot;,p,&quot;, &quot;);\\8s2a1</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=2,100,</CMP>
+    </omtext><omtext class="program">
+      <CMP>    if(n&lt;5,d1=2,</CMP>
+    </omtext><omtext class="program">
+      <CMP>      if(n&lt;7,d1=3,</CMP>
+    </omtext><omtext class="program">
+      <CMP>        if(n&lt;8,d1=2,</CMP>
+    </omtext><omtext class="program">
+      <CMP>          if(Mod(n,4)==0,d1=0,</CMP>
+    </omtext><omtext class="program">
+      <CMP>            if(Mod(n,4)==1,d1=5,</CMP>
+    </omtext><omtext class="program">
+      <CMP>              if(Mod(n,4)==2,d1=-1,d1=4</CMP>
+    </omtext><omtext class="program">
+      <CMP>              )</CMP>
+    </omtext><omtext class="program">
+      <CMP>            )</CMP>
+    </omtext><omtext class="program">
+      <CMP>          )</CMP>
+    </omtext><omtext class="program">
+      <CMP>        )</CMP>
+    </omtext><omtext class="program">
+      <CMP>      )</CMP>
+    </omtext><omtext class="program">
+      <CMP>    );</CMP>
+    </omtext><omtext class="program">
+      <CMP>    a=a+d1;p=p+a;</CMP>
+    </omtext><omtext class="program">
+      <CMP>    print1(p,&quot;, &quot;)</CMP>
+    </omtext><omtext class="program">
+      <CMP> )</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A253895, A061777 (Triangle expansion, vertex-to-vertex, 3 vertices), A179178 (Triangle expansion, side-to-side, 2 sides), A253687 (Pentagon expansion, side-to-side, 2 consecutive sides and 1 isolated side), A253688 (Pentagon expansion, vertex-to-vertex, 2 consecutive vertices and 1 isolated vertex), A253547 (Hexagon expansion, vertex-to-vertex, 2 vertices separated by 1 vertex).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Kival Ngaokrajang_, Jan 17 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

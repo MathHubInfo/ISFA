@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A246923.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A246923">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,25,1089,60025,3690241,241025625,16359689025,1140463805625,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 81081830657025,5852177325225625,427465780890020929,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 31528177440967935225,2344153069158724611841,175473167541934734763225,13211212029033949825064769,999630716942846408773325625</CMP>
+    </assertion><omtext class="name">
+      <CMP> G.f.:  1 / AGM(1-9*x, sqrt((1-x)*(1-81*x))).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In general, the g.f. of the squares of coefficients in g.f. 1/sqrt((1-p*x)*(1-q*x)) is given by</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1/AGM(1-p*q*x, sqrt((1-p^2*x)*(1-q^2*x))) = Sum_{n&gt;=0} x^n*[Sum_{k=0..n} p^(n-k)*((q-p)/4)^k*C(n,k)*C(2*k,k)]^2,</CMP>
+    </omtext><omtext class="comment">
+      <CMP> and consists of integer coefficients when 4|(q-p).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Here AGM(x,y) = AGM((x+y)/2,sqrt(x*y)) is the arithmetic-geometric mean.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A246923"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A084771"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="C" cd="A246923"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="C" cd="A246923"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMV name="k"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="AGM" cd="A246923"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>9</OMI><OMV name="x"/></OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>9</OMI><OMV name="x"/></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="n"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="a" cd="A246923"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> G.f.: A(x) = 1 + 16*x + 324*x^2 + 7744*x^3 + 206116*x^4 + 5875776*x^5 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> where the square-root of the terms yields A084771:</CMP>
+    </assertion><assertion class="example">
+      <CMP> [1, 5, 33, 245, 1921, 15525, 127905, 1067925, ...],</CMP>
+    </assertion><assertion class="example">
+      <CMP> the g.f. of which is 1/sqrt((1-x)*(1-9*x)).</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) {a(n,p=1,q=9)=polcoeff( 1 / agm(1-p*q*x, sqrt((1-p^2*x)*(1-q^2*x) +x*O(x^n))), n) }</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=0, 20, print1(a(n), &quot;, &quot;))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n,p=1,q=9)=polcoeff( 1 / sqrt((1-p*x)*(1-q*x) +x*O(x^n)), n)^2 }</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=0, 20, print1(a(n), &quot;, &quot;))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n,p=1,q=9)=sum(k=0,n,p^(n-k)*((q-p)/4)^k*binomial(n,k)*binomial(2*k,k))^2 }</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(n=0, 20, print1(a(n), &quot;, &quot;))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A246467, A248167, A246906, A084771.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Sep 07 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A068780.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A068780">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,9,14,15,20,21,24,25,26,27,32,33,34,35,38,39,44,45,48,49,50,51,54,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 55,56,57,62,63,64,65,68,69,74,75,76,77,80,81,84,85,86,87,90,91,92,93,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 94,95,98,99,104,105,110,111,114,115,116,117,118,119,120,121,122,123,124</CMP>
+    </assertion><omtext class="name">
+      <CMP> Composite numbers n such that n+1 is also composite.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For all primes p, neither p nor p-1 is in the sequence. - _Jon Perry_, Oct 12 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Stauduhar, &lt;a href=&quot;/A068780/b068780.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[ Range[2, 200], !PrimeQ[ # ] &amp;&amp; !PrimeQ[ # + 1] &amp;]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [n: n in [1..200] | not IsPrime(n) and not IsPrime(n+1)]; // _Vincenzo Librandi_, Oct 17 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001359.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Equals A005381(n) - 1.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Mar 04 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Definition reworded by _N. J. A. Sloane_, Aug 24 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

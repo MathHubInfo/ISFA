@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A156658.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A156658">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,5,7,11,23,29,41,47,53,59,83,89,107,113,131,167,173,179,191,227,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 233,239,251,263,281,293,347,359,383,419,431,443,467,479,491,503,509,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 563,587,593,641,653,659,683,719,743,761,809,839,863,887,911,953,983,1013</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p such that also 2*p+1 or (p-1)/2 is prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Union of A005384 and A005385;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A156660(a(n)) + A156659(a(n)) &gt; 0;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> primes occuring in Cunningham chains of the first kind.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A156876 gives the number of these numbers &lt;= n. [From _Reinhard Zumkeller_, Feb 18 2009]</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Sophie_Germain_prime&quot;&gt;Sophie Germain prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Safe_prime&quot;&gt;Safe prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Cunningham_chain&quot;&gt;Cunningham chain&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A059500.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Feb 13 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

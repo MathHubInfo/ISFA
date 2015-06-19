@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A130040.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A130040">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,20,1600,6400,409600,204800000,16384000000,327680000000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 83886080000000,67108864000000,671088640000000000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13421772800000000000,4294967296000000000000,17179869184000000000000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Denominators of partial sums of a series for the inverse of the arithmetic-geometric mean (agM) of 2/sqrt(5) and 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See the references and the W. Lang link under A130039.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Mohammad K. Azarian, AM - GM Strikes Again, Problem 451, College Mathematics Journal, Vol. 22, No. 3, May 1991, p. 255.  Solution published in Vol. 23, No. 3, May 1992, pp. 248-249.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Mohammad K. Azarian, An Application of the Inequality on the Means, Problem B-635, Fibonacci Quarterly, Vol. 27, No. 1, Feb. 1989, p.87.  Solution published in Vol. 28, No. 1, Feb. 1990, pp. 86-87.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n) = denom(sum((((2*j)!/(j!^2))^2) *((1/(5*2^4))^j),j=0..n)), n&gt;=0.</CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn,frac,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_ Jun 01 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

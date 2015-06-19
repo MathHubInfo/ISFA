@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A093979.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A093979">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,5,106,2048,27522,328066,3607750,37931633,386726111,3862450797</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of prime pairs below 10^n having a difference of 50.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Count prime pairs below <OMOBJ>
+        <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>10</OMI>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>having a difference of <OMOBJ>
+        <OMI>50</OMI>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(5)=5 because there are 5 prime gaps of 50 below 10^5</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Enoch Haga_, Apr 24 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(10)-a(13) from _Washington Bomfim_, Jun 22 2012.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

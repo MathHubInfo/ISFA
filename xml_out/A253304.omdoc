@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A253304.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A253304">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,22,77,1376,4785,85302,296605,5287360,18384737,327731030,1139557101,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 20314036512,70634155537,1259142532726,4378178086205,78046522992512,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 271376407189185,4837625283003030,16820959067643277,299854721023195360,1042628085786694001</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that the sum of the heptagonal numbers H(n) and H(n+1) is equal to the octagonal number O(m) for some m.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also positive integers x in the solutions to 5*x^2-3*y^2+2*x+2*y+1 = 0, the corresponding values of y being A253305.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Colin Barker, &lt;a href=&quot;/A253304/b253304.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_05&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1,62,-62,-1,1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A253304"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A253304"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>62</OMI><OMA>
+      <OMS name="a" cd="A253304"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>62</OMI><OMA>
+      <OMS name="a" cd="A253304"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="a" cd="A253304"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A253304"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>21</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>8</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>8</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 1 is in the sequence because H(1)+H(2) = 1+7 = 8 = O(2).</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) Vec(x*(3*x^3+7*x^2-21*x-1)/((x-1)*(x^2-8*x+1)*(x^2+8*x+1)) + O(x^100))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000566, A000567, A253305.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Colin Barker_, Dec 30 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

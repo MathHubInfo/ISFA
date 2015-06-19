@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A245887.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A245887">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 9,4,5,3,0,8,7,2,0,4,8,2,9,4,1,8,8,1,2,2,5,6,8,9,3,2,4,4,4,8,6,1,0,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6,4,1,5,8,6,9,3,0,4,3,2,6,5,2,7,3,1,3,5,0,4,7,3,6,4,1,5,4,5,8,8,2,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9,3,5,1,7,8,1,8,8,3,8,3,0,0,6,6,6,4,0,3,5,0,2,6,0,5,5,7,1,5,4,8,8,8,6,5</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of Gamma(-5/2), where Gamma is Euler's gamma function.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's MathWorld, &lt;a href=&quot;http://mathworld.wolfram.com/GammaFunction.html&quot;&gt;Gamma Function&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Particular_values_of_the_Gamma_function&quot;&gt;Particular values of the Gamma function&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="Gamma" cd="A245887"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>5</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>8</OMI><OMI>15</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A245887"/>
+      <OMS name="Pi"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 0.945308720482941881225689324448610764158693043265273135...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> RealDigits[Gamma[-5/2], 10, 104] // First</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A019707, A245886.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jean-François Alcover_, Aug 05 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

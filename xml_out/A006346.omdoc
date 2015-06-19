@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A006346.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A006346">
+          <assertion class="***** TTTT *****">
+      <CMP> M0126</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,1,3,1,1,3,2,1,6,3,2,1,3,1,1,6,3,2,4,1,1,3,2,1,3,1,6,4,2,1,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4,3,1,8,3,2,1,6,3,2,1,3,1,1,6,3,2,4,1,1,3,2,1,3,1,30,6,3,2,4,1,1,3,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,3,1,6,4,2,1,2,4,3,1,8,3,2,1,6,3,2,1,3,1,1,6,3,2,4,1,1,3,2,1,3,1,6,4,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> The Sally sequence: the length of repetition avoided in A006345.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Comment from T. D. Noe, Oct 14 2006: In the first 1000 terms, only patterns of lengths 0, 1, 2, 3, 4, 6, 8, 24, 30 and 108 are avoided.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. S. Hellerstein, personal communication to _N. J. A. Sloane_.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A006346/b006346.txt&quot;&gt;Table of n, a(n) for n=1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A006345/a006345.html&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/SallySequence.html&quot;&gt;Sally Sequence.&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A006345.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Naohiro Nomoto_, May 21 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

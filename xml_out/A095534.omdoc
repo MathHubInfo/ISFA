@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A095534.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A095534">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11111111111111111111111111111111111111111111111111111111111111111111111,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1000111,2122,1013,241,155,131,107,78,71,65</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = 71 written in base n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The next term contains a non-decimal digit.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Jun 04 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A128659.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A128659">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,4,5,6,7,9,13,14,20,30,40,44,86,101,135,152,171,205,4404</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers n such that p(n+1)#-p(n)#-p(n-1)#-1 is prime where p(i)#=product of first i primes=A002110(i).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[Position[Partition[Rest[FoldList[Times,1,Prime[Range[210]]]],3,1],_?(PrimeQ[#[[3]]-#[[2]]-#[[1]]-1]&amp;),{1},Heads-&gt;False]]+1 (* This generates the first 18 terms of the sequence.  To generate the 19th term, change the Range constant to 4410, but it will take a very long time to run. *) (* _Harvey P. Dale_, Apr 23 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002110, A128420, A128421, A128657, A128658, A128660, A128661, A128662.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Pierre CAMI_, Mar 19 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

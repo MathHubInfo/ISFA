@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A080191.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A080191">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,61,67,73,79,83,89,97,103,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 109,113,127,131,137,139,151,157,163,167,173,179,181,191,193,197,199,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 211,223,227,229,233,239,241,251,257,269,271,277,281,283,293,307,313</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p such that p is the largest of all prime factors of the numbers between the prime preceding 2*p and the next prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Complement of A080192 relative to A000040.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="f" cd="A080191"/>
+      <OMA>
+      <OMS name="precprime" cd="A080191"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="p"/></OMA>
+    </OMA>
+    </OMA>
+      <OMV name="p"/>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMV name="f"/>
+      </OMOBJ>is the mapping defined by <OMOBJ>
+        <OMR xref="A052248"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 5 is a term since 7 is the prime preceding 2*5, 11 is the next prime and 5 is the largest of all prime factors of 8, 9 and 10.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) {forprime(k=2,317,p=precprime(2*k); q=nextprime(p+1); m=0; for(j=p+1,q-1,f=factor(j); a=f[matsize(f)[1],1]; if(m&lt;a,m=a)); if(m==k,print1(k,&quot;,&quot;)))}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A080192, A052248.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Klaus Brockhaus_, Feb 10 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

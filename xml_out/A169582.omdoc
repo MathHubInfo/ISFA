@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A169582.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A169582">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,6,8,10,15,17,18,19,21,28,30,32,34,36,39,42,45,47,49,50,51,53,55,66,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 68,69,70,72,74,75,76,78,91,93,95,97,98,99,101,103,105,108,110,111,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 114,115,117,120,122,124,126,128,130,132,134,136,153,155,156,157,159,161</CMP>
+    </assertion><omtext class="name">
+      <CMP> Complement of A169581.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A054521(a(n)) = 0;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> GCD(A002260(a(n)),A002024(a(n))) = A050873(a(n)) &gt; 1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Zumkeller, &lt;a href=&quot;/A169582/b169582.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Dec 02 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

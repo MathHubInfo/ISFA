@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A229727.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A229727">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,20,256,4832,42496,1467392,62836736,42790912,2535587840,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 170851041280,3070050172928,256460544016384,4697678227177472,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 52001663422038016,5598478396465086464,647670579588837146624,2427980359983876276224,9138219784535816536064,1277040945143933271277568</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numerator of Sum_{k=1..2n+1} 2^k/k.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 2, 20/3, 256/15, 4832/105, 42496/315, 1467392/3465, 62836736/45045, 42790912/9009, 2535587840/153153, 170851041280/2909907, 3070050172928/14549535, 256460544016384/334639305, 4697678227177472/1673196525, 52001663422038016/5019589575, ...</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A229726, A108866.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,frac</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Sep 28 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A032400.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A032400">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,9,17,21,27,39,45,47,71,95,117,123,143,173,387,389,513,633,827,971,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1103,3767,3831,7695,8871,9809,10011,17513,17873,22841,25401,84369,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 95315,168983,382407,488039,534891,687897,715503,1142981</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that 101*2^n+1 is prime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ray Ballinger, &lt;a href=&quot;http://www.prothsearch.net/index.html&quot;&gt;Proth Search Page&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ray Ballinger and Wilfrid Keller, &lt;a href=&quot;http://www.prothsearch.net/riesel.html&quot;&gt;List of primes k.2^n + 1 for k &lt; 300&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Y. Gallot, &lt;a href=&quot;http://www.utm.edu/research/primes/programs/gallot/index.html&quot;&gt;Proth.exe: Windows Program for Finding Large Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wilfrid Keller, &lt;a href=&quot;http://www.prothsearch.net/riesel2.html&quot;&gt;List of primes k.2^n - 1 for k &lt; 300&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Pri#riesel&quot;&gt;Index entries for sequences of n such that k*2^n-1 (or k*2^n+1) is prime&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _James R. Buddenhagen_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Hugo Pfoertner_, Jun 20 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms (from http://www.prothsearch.net/riesel.html), _Joerg Arndt_, Apr 07 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

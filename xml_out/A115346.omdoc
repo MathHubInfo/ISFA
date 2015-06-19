@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A115346.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A115346">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,0,1,2,0,1,2,4,0,1,2,4,7,0,1,2,4,7,12,0,1,2,4,7,12,20,0,1,2,4,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 12,20,33,0,1,2,4,7,12,20,33,54,0,1,2,4,7,12,20,33,54,88,0,1,2,4,7,12,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 20,33,54,88,143,0,1,2,4,7,12,20,33,54,88,143,232</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangular solutions to a Fibonacci A000045 Modular root group with limiting element A000071.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A proof/ derivation: The Fibonacci Markov Matrices can be defined as: M[0]={{F[0],F[1]},{F[1],F[2}} M[1]={{F[1],F[2]},{F[2],F[3}} ... M[n]={{F[n],F[n+1]},{F[n+1],F[n+2}} And Det[M[n]]=1. So that you can form the Poincare bilinear/ Moebius function: f(z)=(F[n]*x+F[n+1])/(F[n+1]*x+F(n+2])</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Now the 2*m modular group function is known to be: M[(F[n]*x+F[n+1])/(F[n+1]*x+F(n+2])]=(F[n+1]*x+F(n+2])^(2*m)*M[x] It is also a fact that if M is an elliptical invariant that: M[(F[n]*x+F[n+1])/(F[n+1]*x+F(n+2])]=M[x] Or equivalently: (F[n+1]*x+F(n+2])^(2*m)-1=0 Expanding F[n+2]=F[n]+F[n+1] And dividing through by F[n+1]^(2*m): (F[n+1]*(x+1)+F[n])^(2*m)-1=0 ((x+1-F[n]/F[n+1])^(2*m)-1/F[n+1]^(2*m]=0 That gives the limit: Limit[((x+1-F[n]/F[n+1])^(2*m)-1/F[n+1]^(2*m],n-&gt;Infinity]=(x+1+1/Phi)=0 xLimitRoot=-1-1/Phi</CMP>
+    </omtext><omtext class="comment">
+      <CMP> So not only can we form a Modular group in SPL(2,Z) using the Fibonacci numbers, but we can find solutions for all the points up to a limiting point at infinity. And the 2*m polynomial start with the Pascal's triangle like : (x+1)^(2*m)-1=0 If we set: y=F[n+1]*(x+1)+F[n]= F[n+1]*x+F(n+2]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The roots of y^(2*m)-1=0 are the even cyclotomic group roots: yroot[k,m]=Exp[i*2*Pi*k/(2*m)]=F[n+1]*(x+1)+F[n] Solving for x gives general solution: xroot[k,m,n]=(Exp[i*2*Pi*k/(2*m)]-F[n])/F[n+1]-1</CMP>
+    </omtext><omtext class="reference">
+      <CMP> The modular form of weight 2*m defined: McKean and Moll, Elliptic Curves, Function Theory,Geometry, Arithmetic, Cambridge University Press, New York, 199, page 172</CMP>
+    </omtext><omtext class="reference">
+      <CMP> The elliptical invariant definition is in: Harry Hochstadt, The Functions of Mathematical Physics, Dover, New York, 1986, page 124</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="F" cd="A115346"/>
+      <OMV name="n_"/>
+    </OMA>
+      <OMA>
+      <OMS name="F" cd="A115346"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="F" cd="A115346"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="F" cd="A115346"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="xroot" cd="A115346"/>
+      <OMV name="k_"/><OMV name="m_"/><OMV name="n_"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Exp" cd="A115346"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="I"/><OMI>2</OMI><OMS name="Pi"/><OMV name="k"/></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="m"/></OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="F" cd="A115346"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="F" cd="A115346"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="a" cd="A115346"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="Abs" cd="A115346"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="F" cd="A115346"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="xroot" cd="A115346"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="m"/></OMA><OMV name="m"/><OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> {0},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {0, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {0, 1, 2},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {0, 1, 2, 4},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {0, 1, 2, 4, 7},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {0, 1, 2, 4, 7, 12}</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> F[0] = 0; F[1] = 1; F[n_] := F[n] = F[n - 1] + F[n - 2] a = Table[F[n], {n, 0, 50}]; xroot[k_, m_, n_] := (Exp[I*2*Pi*k/(2*m)] - a[[n]])/a[[n + 1]] - 1 aout = Table[Table[Abs[a[[n + 1]]*xroot[2*m, m, n]], {n, 1, m}], {m, 1, 12}] b = Flatten[aout]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000071, A000045.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl,uned</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_, Mar 07 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A128824.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A128824">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,7,11,13,17,19,23,37,29,31,47,37,41,43,47,61,53,67,59,61,227,67,71,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 73,89,79,83,97,89,103,107,97,101,103</CMP>
+    </assertion><omtext class="name">
+      <CMP> First prime which is 2k greater than the product of lesser twin primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In the example, 37 is the only number possible for 2k=22. Twinl#(1)= 3 and 3+22 = 25, not prime. Twinl#(n), n&gt;2, is a multiple of 11 so adding 22 will always result in a multiple of 11 and not prime. If k is a multiple of a lesser twin prime, then the number of primes in twinl#(n)+2k is finite.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Define <OMOBJ>
+        <OMV name="twinl"/>
+      </OMOBJ>#<OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>as the product of the first <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>lesser twin primes .Then if <OMOBJ>
+        <OMV name="twinl"/>
+      </OMOBJ>#<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/><OMV name="k"/></OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>...is prime ,list it .
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Twinl#(2) + 2*11 = 37, the first prime 22 greater than twinl#(2).</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) twiprimesl(n,a) = { local(pr,x,y,j); for(j=1,n, pr=1; for(x=1,j, pr*=twinl(x); ); y=pr+a; if(ispseudoprime(y), print1(y&quot;,&quot;) ) ) } twinl(n) = \The n-th lower twin prime { local(c,x); c=0; x=1; while(c&lt;n, if(isprime(prime(x)+2),c++); x++; ); return(prime(x-1)) }</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Cino Hilliard_, May 08 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A185335.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A185335">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,0,0,1,2,9,49,455,5784,90940,1620491,31478651,656784488,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 14621878339,345975756388</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of not necessarily connected 3-regular simple graphs on 2n vertices with girth at least 5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jason Kimberley, &lt;a href=&quot;/wiki/User:Jason_Kimberley/E_k-reg_girth_ge_g_index&quot;&gt;Index of sequences counting not necessarily connected k-regular simple graphs with girth at least g&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      This sequence is the Euler transformation of <OMOBJ>
+        <OMR xref="A014372"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> 3-regular simple graphs with girth at least 5: A014372 (connected), A185235 (disconnected), this sequence (not necessarily connected).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Not necessarily connected 3-regular simple graphs with girth *at least* g: A005638 (g=3), A185334 (g=4), this sequence (g=5), A185336 (g=6).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Not necessarily connected 3-regular simple graphs with girth *exactly* g: A185133 (g=3), A185134 (g=4), A185135 (g=5), A185136 (g=6).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Not necessarily connected k-regular simple graphs with girth at least 5: A185315 (any k), A185305 (triangle); specified degree k: A185325 (k=2), this sequence (k=3).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jason Kimberley_, Jan 28, 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

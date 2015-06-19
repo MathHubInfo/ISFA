@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A230775.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A230775">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,2,2,3,3,3,3,3,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7,7,7,7,7,7,7,7,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,11,11,11,11,11,11,11,11,11,11,11,11,11,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest prime number greater than or equal to the square root of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Or repeat prime(k) (prime(k)^2-prime(k-1)^2) times, with prime(0) set to 0 for k=1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jean-Christophe Hervé, &lt;a href=&quot;/A230775/b230775.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A230775"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000040"/>
+      <OMA>
+      <OMR xref="A230774"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Repeat <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="prime" cd="A230775"/>
+      <OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="prime" cd="A230775"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+      </OMOBJ>times ;for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,repeat <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMR xref="A000040"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMR xref="A050216"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+      </OMOBJ>times (that is ,repeat <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="prime" cd="A230775"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="prime" cd="A230775"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="prime" cd="A230775"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+      </OMOBJ>times ).
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(5)=a(6)=a(7)=a(8)=a(9)=3 because prime(1)= 2 &lt; sqrt(5 to 9) &lt;= prime(2) = 3.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A230774, A050216, A056813.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jean-Christophe Hervé_, Nov 01 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

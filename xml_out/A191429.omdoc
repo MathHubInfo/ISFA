@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A191429.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A191429">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,2,6,4,5,10,7,9,8,16,11,14,13,12,24,17,21,20,18,15,35,26,31,30,27,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 23,19,51,38,45,44,40,34,28,22,74,55,65,64,58,50,41,33,25,106,79,93,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 92,84,72,59,48,37,29,151,113,133,132,120,103,85,69,54,43,32,215,161,190,188,171,147,122,99,78,62,47,36</CMP>
+    </assertion><omtext class="name">
+      <CMP> Dispersion of ([n*sqrt(2)+2]), where [ ]=floor, by antidiagonals.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Background discussion:  Suppose that s is an increasing sequence of positive integers, that the complement t of s is infinite, and that t(1)=1.  The dispersion of s is the array D whose n-th row is (t(n), s(t(n)), s(s(t(n)), s(s(s(t(n)))), ...).  Every positive integer occurs exactly once in D, so that, as a sequence, D is a permutation of the positive integers.  The sequence u given by u(n)=(number of the row of D that contains n) is a fractal sequence.  Examples:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (1) s=A000040 (the primes), D=A114537, u=A114538.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (2) s=A022343 (without initial 0), D=A035513 (Wythoff array), u=A003603.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (3) s=A007067, D=A035506 (Stolarsky array), u=A133299.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> More recent examples of dispersions: A191426-A191455.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Northwest corner:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1...3...6...10..16</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2...4...7...11..17</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5...9...14..21..31</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8...13..20..30..44</CMP>
+    </assertion><assertion class="example">
+      <CMP> 12..18..27..40..58</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> (* Program generates the dispersion array T of increasing sequence f[n] *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> r = 40; r1 = 12;  (* r=# rows of T to compute, r1=# rows to show *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> c = 40; c1 = 12;   (* c=# cols to compute, c1=# cols to show *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> x = Sqrt[2];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[n_] := Floor[n*x + 2] (* f(n) is complement of column 1 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> mex[list_] :=</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> NestWhile[#1 + 1 &amp;, 1, Union[list][[#1]] &lt;= #1 &amp;, 1,</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   Length[Union[list]]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> rows = {NestList[f, 1, c]};</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Do[rows = Append[rows, NestList[f, mex[Flatten[rows]], r]], {r}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t[i_, j_] := rows[[i, j]];  (* the array T *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> TableForm[</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[t[i, j], {i, 1, 10}, {j, 1, 10}]] (* A191429 array *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[Table[</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   t[k, n - k + 1], {n, 1, c1}, {k, 1, n}]] (* A191429 sequence *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (* Program by _Peter J. C. Moses_, Jun 01 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A114537, A035513, A035506.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Jun 03 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

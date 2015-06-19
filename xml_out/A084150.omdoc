@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A084150.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A084150">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,3,14,50,199,749,2892,11028,42301,161799,619706,2372006,9081955,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 34767953,133109592,509594856,1950956857,7469077707,28594853414,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 109473250778,419110475455,1604533706357,6142840740900,23517417426300</CMP>
+    </assertion><omtext class="name">
+      <CMP> A Pell related sequence.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Binomial transform of expansion of (sinh(sqrt(2)x))^2/4=(0,0,1,0,8,0,64,..). Inverse binomial transform of A006668.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (3,5,-7)</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A084150"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A084150"/>
+      <OMI>8</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A084150"/>
+      <OMI>8</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA><OMI>16</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>;E.g.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="exp" cd="A084150"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sinh" cd="A084150"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="sqrt" cd="A084150"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="x"/></OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA><OMI>4</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar ,Feb 05 2011 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Join[{a=0,b=0},Table[c=2*b+7*a+1;a=b;b=c,{n,60}]] (* _Vladimir Joseph Stephan Orlovsky_, Feb 05 2011*)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A006646.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Barry_, May 16 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

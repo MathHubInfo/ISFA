@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A103546.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A103546">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,4,8,6,3,4,3,7,6,4,9,5,9,0,7,9,6,6,5,2,6,7,1,9,5,3,3,0,9,7,0,7,2,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,2,0,1,4,0,9,0,3,8,5,2,5,9,2,7,0,5,8,1,9,7,6,4,9,9,4,0,3,3,2,9,9,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,8,5,4,0,0,1,1,4,7,3,0,5,5,1,5,5,9,0,9,1,0,4,6,9,2,8,0,8,0,1,7,2,3,1,7</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of the negated value of the smallest real root of the quintic equation x^5 + 2*x^4 - 2*x^3 - x^2 + 2*x -1 = 0.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is an approximation to the Feigenbaum reduction parameter.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The other two real roots are 0.76660865407289... and -1.16317291980104...</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/FeigenbaumConstant.html&quot;&gt;Feigenbaum Constant&lt;/a&gt;.</CMP>
+    </omtext><assertion class="example">
+      <CMP> The real roots are (roughly) -2.486343765, -1.163172920, 0.7666086541.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> RealDigits[ FindRoot[x^5 + 2x^4 - 2x^3 - x^2 + 2x - 1 == 0, {x, -3}, WorkingPrecision -&gt; 2^7][[1, 2]]][[1]] (* _Robert G. Wilson v_, Mar 26 2005 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Root[#^5 + 2#^4 - 2#^3 - #^2 + 2# - 1&amp;, 1] // RealDigits[#, 10, 105]&amp; // First (* _Jean-François Alcover_, Feb 27 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) -polrootsreal(x^5 + 2*x^4 - 2*x^3 - x^2 + 2*x -1)[1] \\ _Charles R Greathouse IV_, Apr 14 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A006891, A103616.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> cons,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Jun Mizuki (suzuki32(AT)sanken.osaka-u.ac.jp), Mar 23 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

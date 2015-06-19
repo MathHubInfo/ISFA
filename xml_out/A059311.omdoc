@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A059311.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A059311">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,5,11,13,19,23,29,37,43,53,59,61,67,83,89,101,107,109,131,139,149,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 157,163,173,179,181,197,199,211,227,229,251,269,277,283,293,307,317,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 331,347,349,353,373,379,389,397,419,421,443,461,463,467,491,499,509</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p such that x^22 = 2 has no solution mod p.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Complement of A049554 relative to A000040.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A059311/b059311.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> ok[p_] := Reduce[Mod[x^22 - 2, p] == 0, x, Integers] == False; Select[Prime[Range[100]], ok] (* _Vincenzo Librandi_, Sep 20 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(600) | not exists{x: x in ResidueClassRing(p) | x^22 eq 2}]; // _Vincenzo Librandi_, Sep 20 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A049554.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Klaus Brockhaus_, Jan 25 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

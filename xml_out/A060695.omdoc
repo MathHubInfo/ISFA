@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A060695.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A060695">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,4,5,6,7,8,9,10,11,12,13,14,30,16,17,18,19,20,21,22,23,24,25,26,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 27,28,29,60,31,32,33,34,70,36,37,38,39,40,41,42,43,44,90,46,47,48,49,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 50,51,52,53,54,55,56,57,58,59,60,61,62,126,64,65,66,67,68,69,140,71</CMP>
+    </assertion><omtext class="name">
+      <CMP> GCD[2n, A060766(2n)].</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="Table" cd="A060695"/>
+      <OMA>
+      <OMS name="GCD" cd="A060695"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="w"/></OMA><OMA>
+      <OMS name="Apply" cd="A060695"/>
+      <OMV name="LCM"/><OMA>
+      <OMS name="dd" cd="A060695"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="w"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS cd="set1" name="set">
+        <OMV name="w"/><OMI>1</OMI><OMI>512</OMI>
+      </OMS>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="dd" cd="A060695"/>
+      <OMV name="x"/>
+    </OMA>
+      </OMOBJ>is the first difference set of divisors of <OMOBJ>
+        <OMV name="x"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(n)=a(2k) is either n=2k or n/2=k. a(n)=n/2 seems regular, a(n)=n seems &quot;anomalous&quot;. n=30:D={1, 2, 3, 5, 6, 10, 15, 30}, dD={1, 1, 2, 1, 4, 5, 15}={1, 2, 4, 5, 15}, LCM[dD]=60, GCD[n, LCM[dD[n]]]=GCD[30, 60]=30=n n=36:D={1, 2, 3, 4, 6, 9, 12, 18, 36}, dD={1, 1, 1, 2, 3, 3, 6, 18}={1, 2, 3, 6, 18}, LCM[dD]=18, GCD[n, LCM[dD[n]]]=GCD[36, 18]=18=n/2</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A060680-A060685, A060741, A060742, A060763-A060766, A000005.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Apr 25 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

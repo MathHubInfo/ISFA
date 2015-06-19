@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A063939.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A063939">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 41,251,991,1471,2551,3301,4211,4721,4931,5167,5581,5791,7351,8317,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8581,9157,9781,11701,12517,13093,15541,16741,16927,17341,18301,18397,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 19121,19231,20411,22571,23911,24151,25741,26293,26317,26681,27031</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers p from A001125 such that 2*p-3 is prime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harry J. Smith, &lt;a href=&quot;/A063939/b063939.txt&quot;&gt;Table of n, a(n) for n=1,...,1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) j=[]; forprime(p=3,40000, if(znprimroot(p)==6, if(isprime(2*p- 3),j=concat(j,p)))); j</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) { n=0; p=0; for (m=1, 10^9, p=nextprime(p+1); if (znprimroot(p)==6 &amp;&amp; isprime(2*p - 3), write(&quot;b063939.txt&quot;, n++, &quot; &quot;, p); if (n==1000, break)) ) } [From _Harry J. Smith_, Sep 03 2009]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001125.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Jason Earls (zevi_35711(AT)yahoo.com), Aug 31 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

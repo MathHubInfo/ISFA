@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A104271.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A104271">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,6,42,21,75,91,186,378,3051,987,1670,4182,6531,1494,8435,9705,22161,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5166,16110,16869,154709,57099,31658,52394,401481,176811,101350,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 105573,678357,241883,501717,393818,284003,685542,1437354,1751297,3225579</CMP>
+    </assertion><omtext class="name">
+      <CMP> First element of first run of exactly n consecutive numbers not of form x^2+y^2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Gives the position of the start of the first run of exactly n consecutive zeros in A004018.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hugo Pfoertner, &lt;a href=&quot;/A104271/b104271.txt&quot;&gt;Table of n, a(n) for n = 1..81&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A022544, A004018.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_, Feb 26 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

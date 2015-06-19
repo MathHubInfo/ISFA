@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A077293.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A077293">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 12,34,567,8,910,111213141516,17181920,2122232425262728,293031,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 323334353637383940,41424344454647,48,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 49505152535455565758596061626364,6566,676869707172737475,767778798081828384,85,868788</CMP>
+    </assertion><omtext class="name">
+      <CMP> Partition the concatenation 1234567...of natural numbers into successive strings nontrivially (a(n) is not equal to n) such that the n-th string is a multiple of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(1) = 12, a(n) = smallest concatenation of next successive natural numbers that is a multiple of n, or 0 if no such concatenation exists.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(1) = 1 would have given a trivial sequence 1,2,3,4,5....</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Every partial concatenation is a left substring of the concatenation of natural numbers.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(2) = 34 = 2*17; a(7) = 17181920 = 7*2454560.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A077294, A088597, A088598.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Nov 03 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _Ray Chandler_, Oct 18 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

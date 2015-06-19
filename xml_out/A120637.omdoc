@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A120637.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A120637">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,5,7,11,13,17,19,23,29,37,43,47,53,59,61,67,71,79,83,89,97,103,113,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 127,137,139,149,163,167,173,181,191,193,197,199,211,227,233,239,251,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 257,263,269,271,277,293,307,313,317,331,337,347,349,353,367,373,383</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes such that their triple is 2 away from a prime number.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This sequence is a variation of the sequence in the reference. However, this sequence should have an infinite number of terms.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Crandall and C. Pomerance, Prime Numbers A Computational Perspective, Springer Verlag 2002, p. 49, exercise 1.18.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Union of <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMR xref="A023208"/>
+      <OMV name="and"/>
+    </OMA><OMR xref="A088878"/></OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 19 is a prime and 19*3 = 57 which is two away from 59 which is prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> 31 is not in the table because 31*3 = 93 which is 2 away from 91 and 95, both not prime.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Select[Prime[Range[200]],PrimeQ[3#+2]||PrimeQ[3#-2]&amp;] (* _Harvey P. Dale_, Aug 10 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) primepm2(n,k) { local(x,p1,p2,f1,f2,r); if(k%2,r=2,r=1); for(x=1,n, p1=prime(x); p2=prime(x+1); if(isprime(p1*k+r)||isprime(p1*k-r), print1(p1&quot;,&quot;) ) ) }</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A125272.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Cino Hilliard_, Aug 17 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

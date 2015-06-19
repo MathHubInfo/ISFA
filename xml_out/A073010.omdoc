@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A073010.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A073010">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,0,4,5,9,9,7,8,8,0,7,8,0,7,2,6,1,6,8,6,4,6,9,2,7,5,2,5,4,7,3,8,5,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4,4,0,9,4,6,8,8,7,4,9,3,6,4,2,4,6,8,5,8,5,2,3,2,9,4,9,7,8,4,6,2,7,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7,7,2,7,0,4,2,1,1,7,9,6,1,2,2,8,0,4,1,6,6,2,7,3,7,3,5,3,3,8,9,6,1,8,7,4,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of Pi/sqrt(27).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Original name: Decimal expansion of sum(1/(n*binomial(2*n,n)), n=1..infinity).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This appears to be pi/sqrt(27). See A111510. - _Marco Matosic_, Feb 27 2008</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This is Pi*sqrt(3)/9 = A019676*A002194, see eq (12) in D. H. Lehmer, Am. Math. Monthly 92 (1985) 449. - _R. J. Mathar_, Mar 04 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Value of the Dirichlet L-series of the non-principal character modulo m=3 (A102283) at s=1. - _R. J. Mathar_, Oct 03 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Construct the largest possible circle inside a given equilateral triangle. This constant is the ratio of the area of the circle to the area of the triangle (A245670 is analogous square in triangle). - _Rick L. Shepherd_, Jul 29 2014</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Jolley, Summation of Series, Dover (1961) eq (81) page 16.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A073010/b073010.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. M. Borwein, R. Girgensohn, &lt;a href=&quot;http://dx.doi.org/10.1007/s00010-005-2774-x&quot;&gt;Evaluations of binomial series&lt;/a&gt;, Aequat. Math. 70 (2005) 25-36</CMP>
+    </omtext><omtext class="link">
+      <CMP> Courtney Moen, &lt;a href=&quot;http://www.jstor.org/stable/A2690456&quot;&gt;Infinite series with binomial coefficients&lt;/a&gt;, Math. Mag. 64 (1) (1991) 53-55.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.worldwideschool.org/library/books/sci/math/MiscellaneousMathematicalConstants/chap86.html&quot;&gt;Sum(1/(n*binomial(2*n,n)), n=1..infinity)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/CentralBinomialCoefficient.html&quot;&gt;Central Binomial Coefficient&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> -Pi/(3*sqrt(3)) = Sum_{n=0..infinity} (1/(6*n+1) - 2/(6*n+2) - 3/(6*n+3) - 1/(6*n+4) + 2/(6*n+5) + 3/(6*n+6)). - _Mats Granvik_, Sep 08 2013</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Also equals integral_{0..infinity} 2*x/((x^2+1)*(x^4+x^2+1)) dx. [_Jean-François Alcover_, Sep 10 2013]</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      From _Peter Bala_ ,Feb 16 2015 :(Start )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Pi/sqrt(27) = Sum {n &gt;= 0} 1/((3*n + 1)*(3*n + 2)) = 1 - 1/2 + 1/4 - 1/5 + 1/7 - 1/8 + ....</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Continued fraction :<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>1</OMI>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>4</OMI>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA><OMI>2</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Pi/sqrt(27) = int {t = 0 .. 1/2} 1/(t^2 - t + 1) dt = int {t = 0 .. 1/2} (1 + t - t^3 - t^4)/(1 - t^6) dt.</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Pi/sqrt(27) = 1/4*Sum {n &gt;= 0} (-1)^n*(9*n + 5)/( (3*n + 1)*(3*n + 2)*8^n ).</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      BBP -type formulas :
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Pi/sqrt(27) = Sum {n &gt;= 0} (1/64)^(n+1)*( 32/(6*n + 1) + 16/(6*n + 2) - 4/(6*n + 4) - 2/(6*n + 5) ) follows from the above integral representation.</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Pi/sqrt(27) = Sum {n &gt;= 0} (-1)^n*(1/27)^(n+1)*( 9/(6*n + 1) + 9/(6*n + 2) + 6/(6*n + 3) + 3/(6*n + 4) + 1/(6*n + 5) ) follows from the result: Pi/3 = int {t = 0 .. 1/sqrt(3)} 1/(1 - sqrt(3)*t + t^2) dt. (End)</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 0.60459978807807261686469275254738524409468...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> RealDigits[ N [Sum[1/(n*Binomial[2n, n]), {n, 1, Infinity}], 110]] [[1]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[Pi/(3*Sqrt[3]), 10, 105][[1]] (* _T. D. Noe_, Sep 11 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) Pi/sqrt(27) \\ _Charles R Greathouse IV_, Sep 11 2013</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> cons,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Aug 03 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A154295.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A154295">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 26,17,170,485,962,1601,2402,3365,4490,5777,7226,8837,10610,12545,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 14642,16901,19322,21905,24650,27557,30626,33857,37250,40805,44522,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 48401,52442,56645,61010,65537,70226,75077,80090,85265,90602,96101,101762</CMP>
+    </assertion><omtext class="name">
+      <CMP> 81n^2 - 90n + 26.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The identity (81n^2+72n+17)^2-(9n^2+8n+2)*(27n+12)^2=1 can be written as a(n+1)^2-A154262(n+1)*A154266(n)^2=1. - Vincenzo Librandi, Feb 03 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A154295/b154295.txt&quot;&gt;Table of n, a(n) for n = 0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/Sindx_Rea.html#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (3,-3,1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A154295"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A002522"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>9</OMI><OMV name="n"/></OMA><OMI>5</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar ,Jan 07 2009 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>26</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>61</OMI><OMV name="x"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>197</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-Vincenzo Librandi ,Feb 03 2012 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A154295"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="a" cd="A154295"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="a" cd="A154295"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A154295"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-Vincenzo Librandi ,Feb 03 2012 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> LinearRecurrence[{3, -3, 1}, {26, 17, 170}, 40] (* _Vincenzo Librandi_, Feb 03 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) I:=[26, 17, 170]; [n le 3 select I[n] else 3*Self(n-1)-3*Self(n-2)+1*Self(n-3): n in [1..40]]; // Vincenzo Librandi, Feb 03 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=0, 22, print1(81*n^2-90*n+26&quot;, &quot;)); \\ Vincenzo Librandi, Feb 03 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A154262, A154266.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vincenzo Librandi_, Jan 06 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected by Don Reble, Jun 16 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

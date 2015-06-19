@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A078599.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A078599">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,2,5,36,7,2,3,100,11,36,13,196,225,2,17,36,19,100,441,484,23,36,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5,676,3,196,29,810000,31,2,1089,1156,1225,36,37,1444,1521,100,41,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3111696,43,484,225,2116,47,36,7,100,2601,676,53,36,3025,196,3249,3364</CMP>
+    </assertion><omtext class="name">
+      <CMP> Product of squarefree divisors of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)=a(rad(n)), where rad(n) is the squarefree kernel of n; a(A006881(n))=A006881(n)^2; a(A000040(n))=A000040(n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A078599/b078599.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A078599"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A007955"/>
+      <OMA>
+      <OMR xref="A007947"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMV name="T"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="D"/>
+      </OMOBJ>.Noe ,Jul 08 2008 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Divisors of n=20: {1,2,4,5,10,20}, 4=2^2 and 20=5*2^2, therefore a(20)=1*2*5*10=100.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A005117, A007947, A034444.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Dec 09 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

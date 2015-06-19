@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A085503.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A085503">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,66,1,1,1191,1191,1,1,14608,156190,14608,1,1,152637,9738114,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9738114,152637,1,1,1479726,423281535,2275172004,423281535,1479726,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,13824739,15041229521,311387598411</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sub-triangle of A008292: take every second term of every second row.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sums are:{1, 2, 68, 2384, 185408, 19781504, 3124694528, 652885305344, 177948646719488,</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 60808005761859584, 25547946834881282048,...}.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence belongs to  the type Eulerian(n+1,k*m), k=1,2,3,...;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> here k=2: offset set to zero.</CMP>
+    </omtext><assertion class="example">
+      <CMP> {1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 66, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 1191, 1191, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 14608, 156190, 14608, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 152637, 9738114, 9738114, 152637, 1},</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> &lt;&lt; DiscreteMath`Combinatorica`</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a = Table[Table[Eulerian[n + 1, 2*m], {m, 0, Floor[n/2]}], {n, 0, 20, 2}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[%]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A008292</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_, Dec 13 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

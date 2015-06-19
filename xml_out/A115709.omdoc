@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A115709.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A115709">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 12,22,51,176,330,532,590,715,782,925,1162,1247,1335,1426,1717,3151,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3290,4187,5551,7107,7315,7957,10542,10795,11051,11837,12376,14950,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 15251,15555,15862,16172,17120,19097,19780,20126,22265,24130,24512</CMP>
+    </assertion><omtext class="name">
+      <CMP> Pentagonal numbers (A000326) whose digit reversal is a semiprime (A001358).</CMP>
+    </omtext><assertion class="example">
+      <CMP> 532 is the 19th pentagonal number and 235=5*47 is semiprime.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000326, A001358, A115708.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Giovanni Resta_, Jan 31 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

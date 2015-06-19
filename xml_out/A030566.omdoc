@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A030566.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A030566">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,0,0,0,1,1,0,1,1,2,2,3,3,4,4,5,6,7,6,5,5,4,4,3,3,2,2,1,2,1,0,0,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n)=(# 4's)-(# 5's) in first n terms of A030548.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,44</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

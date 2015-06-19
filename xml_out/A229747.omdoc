@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A229747.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A229747">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 13,41,113,109,2113,1613,1321,26317,525313,14449,30269,268501,279073,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 536903681,384773,4327489,47392381,231769777,21841,43249589,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1759217765581,29247661,140737471578113,4981857697937,1326700741,1801439824104653,3630105520141</CMP>
+    </assertion><omtext class="name">
+      <CMP> Largest prime factor of 4^(2*n+1)+1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 4^(2*n+1)+1 = 2^(2*(2*n+1))+1 = (2^(2*n+1)-2^(n+1)+1) * (2^(2*n+1)+2^(n+1)+1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For all n, the smallest prime factor of 4^(2*n+1)+1 is 5.</CMP>
+    </omtext><assertion class="example">
+      <CMP> For n=7, 4^(2*n+1)+1 = 1073741825 = 5*5*13*41*61*1321. So a(7)=1321.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) a(n) = {</CMP>
+    </omtext><omtext class="program">
+      <CMP>   f=factor(2^(2*n+1)-2^(n+1)+1);</CMP>
+    </omtext><omtext class="program">
+      <CMP>   g=factor(2^(2*n+1)+2^(n+1)+1);</CMP>
+    </omtext><omtext class="program">
+      <CMP>   max(f[matsize(f)[1],1], g[matsize(g)[1],1])</CMP>
+    </omtext><omtext class="program">
+      <CMP> }</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A207262</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Colin Barker_, Sep 28 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

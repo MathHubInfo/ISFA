@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A032032.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A032032">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,1,7,21,141,743,5699,42241,382153,3586155,38075247,428102117,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5257446533,68571316063,959218642651,14208251423433,223310418094785,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3699854395380371,64579372322979335,1182959813115161773,22708472725269799933,455643187943171348103</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of ways to partition n labeled elements into sets of sizes of at least 2 and order the sets.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> With m = floor(n/2), a(n) is the number of ways to distribute n different toys to m numbered children such that each child receiving a toy gets at least two toys and, if child k gets no toys, then each child numbered higher than k also gets no toys. Furthermore, a(n)= row sums of triangle A200091 for n&gt;=2. - _Dennis P. Walsh_, Apr 15 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sums of triangle A200091. - _Dennis P. Walsh_, Apr 15 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A032032/b032032.txt&quot;&gt;Table of n, a(n) for n = 0..400&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. G. Bower, &lt;a href=&quot;/transforms2.html&quot;&gt;Transforms (2)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Flajolet and R. Sedgewick, &lt;a href=&quot;http://algo.inria.fr/flajolet/Publications/books.html&quot;&gt;Analytic Combinatorics&lt;/a&gt;, 2009; see page 245</CMP>
+    </omtext><omtext class="link">
+      <CMP> I. Mezo, &lt;a href=&quot;http://arxiv.org/abs/1308.1637&quot;&gt;Periodicity of the last digits of some combinatorial sequences&lt;/a&gt;, arXiv preprint arXiv:1308.1637, 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> Robert A. Proctor, &lt;a href=&quot;http://arxiv.org/abs/math.CO/0606404&quot;&gt;Let's Expand Rota's Twelvefold Way For Counting Partitions!&lt;/a&gt;, arXiv:math.CO/0606404, Jan 05, 2007</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Par#partN&quot;&gt;Index entries for related partition-counting sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> &quot;AIJ&quot; (ordered, indistinct, labeled) transform of 0, 1, 1, 1...</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      E.g.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="exp" cd="A032032"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A032032"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="k"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A032032"/>
+      <OMV name="k"/><OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="stirling2" cd="A032032"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMV name="j"/>
+    </OMA><OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="j"/>
+    </OMA></OMA><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMV name="j"/>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMV name="j"/>
+    </OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+        </OMA>
+      </OMBIND></OMA>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A032032"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.-_Vladimir Kruchinin_ ,Feb 01 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A032032"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="r"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="r"/><OMI>2</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="r"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="LambertW" cd="A032032"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="exp" cd="A032032"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMF dec="3.14619322062"/>
+    </OMA>
+      </OMOBJ>...-_Vaclav Kotesovec_ ,Oct 08 2013 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> For n=5, a(5)=21 since there are 21 toy distributions satisfying the conditions above. Denoting a distribution by |kid_1 toys|kid_2 toys|, we have the distributions</CMP>
+    </assertion><assertion class="example">
+      <CMP>   |t1,t2,t3,t4,t5|_|, |t1,t2,t3|t4,t5|, |t1,t2,t4|t3,t5|, |t1,t2,t5|t3,t4|, |t1,t3,t4|t2,t5|, |t1,t3,t5|t2,t4|, |t1,t4,t5|t2,t3|, |t2,t3,t4|t1,t5|, |t2,t3,t5|t1,t4|, |t2,t4,t5|t1,t3|, |t3,t4,t5|t1,t2|, |t1,t2|t3,t4,t5|, |t1,t3|t2,t4,t5|, |t1,t4|t2,t3,t5|, |t1,t5|t2,t3,t4|, |t2,t3|t1,t4,t5|, |t2,t4|t1,t3,t5|, |t2,t5|t1,t3,t4|, |t3,t4|t1,t2,t5|, |t3,t5|t1,t2,t4|, and |t4,t5|,t1,t2,t3|. - _Dennis P. Walsh_, Apr 15 2013</CMP>
+    </assertion><omtext class="maple">
+      <CMP> spec := [ B, {B=Sequence(Set(Z,card&gt;1))}, labeled ]; [seq(combstruct[count](spec, size=n), n=0..30)];</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # second Maple program:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> b:= proc(n) b(n):= `if`(n=0, 1, add(b(n-j)/j!, j=2..n)) end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; n!*b(n):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..25);  # _Alois P. Heinz_, Jul 29 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := n! * Sum[ Binomial[k, j] * StirlingS2[n-k+j, j]*j! / (n-k+j)! * (-1)^(k-j), {k, 1, n}, {j, 0, k}]; a[0] = 1; Table[a[n], {n, 0, 22}] (* _Jean-François Alcover_, Sep 05 2012, from given formula *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) x='x+O('x^66); Vec(serlaplace( 1/(2+x-exp(x)) ) ) \\ _Joerg Arndt_, Apr 16 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A102233, A232475.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. column k=2 of A245732.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Christian G. Bower_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

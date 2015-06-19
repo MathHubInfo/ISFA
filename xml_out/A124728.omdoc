@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A124728.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A124728">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4023,7314,9162,12122,12123,16674,19434,19940,23874,24723,29094,33234,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 35124,35125,39234,42182,42183,44163,45175,46988,49147,51793,52854,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 52855,54584,54585,54663,58375,63594,64074,64075,64323,64491,64712</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n, n+1, n+2 and n+3 are products of 4 primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Subset of A045940 Numbers n such that factorizations of n through n+3 have same number of primes (including multiplicities). Cf. A124057, A124729 Numbers n such that n, n+1, n+2 and n+3 are products of exactly 3,5 primes. There are no numbers n such that n, n+1, n+2 and n+3 are products of exactly 6 primes(?)</CMP>
+    </omtext><omtext class="link">
+      <CMP> D. W. Wilson, &lt;a href=&quot;/A124728/b124728.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 4023=3^3*149, 4024=2^3*503, 4025=5^2*7*23, 4026=2*3*11*61 (all products of 4 primes).</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Transpose[Select[Partition[Range[65000],4,1],Union[PrimeOmega[#]] == {4}&amp;]] [[1]] (* _Harvey P. Dale_, Nov 01 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A045940, A124057, A124729.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zak Seidov_, Nov 05 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

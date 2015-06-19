@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A190240.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A190240">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,10,15,20,21,25,26,29,30,31,34,35,36,39,40,41,42,44,45,46,47,49,50,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 51,52,53,54,58,63,68,73,77,78,79,82,83,84,87,88,89,92,93,94,97,98,99,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 100,102,103,104,105,106,107,108,116,121,126,130,131,135,136,137,140,141,142,145,146,147,150,151,152,153,154,155,156,157</CMP>
+    </assertion><omtext class="name">
+      <CMP> Positions of 0 at A190239; complement of A190241.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (See A190239.)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A190239, A190241.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, May 06 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

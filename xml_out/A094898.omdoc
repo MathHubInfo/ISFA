@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A094898.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A094898">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,0,0,17,0,0,0,0,0,41,0,0,0,0,0,0,71,0,0,83,0,0,0,0,101,0,0,113,0,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,131,0,0,0,0,0,0,0,0,167,0,0,0,0,0,0,0,197,0,0,0,0,0,0,227,0,233,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,0,0,0,0,0,0,0,0,0,281,0,0,0,0,0,0,311,0,317,0,0,0,0,0,0,0,0,353,0,0,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Product of two prime sets.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A kind of prime information topology of primes as a product of boths sets being true. This result is a very strange set.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A094898"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMV name="when"/>
+    </OMA>
+      </OMOBJ>the linear combination of information of two prime types of <OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="m"/></OMA><OMI>1</OMI>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="m"/></OMA><OMI>3</OMI>
+    </OMA>
+      </OMOBJ>are both prime .
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> a=Table[If[PrimeQ[4*n+1]==True&amp;&amp;PrimeQ[4*n+3]==False, 1, 0], {n, 0, 200}] b=Table[If[PrimeQ[4*n+1]==False&amp;&amp;PrimeQ[4*n+3]==True, 1, 0], {n, 0, 200}] d=Table[If[PrimeQ[a[[n]]*(4*n+1)+b[[n]]*(4*n+3)]==True, a[[n]]*(4*n+1)+b[[n]]*(4*n+3), 0], {n, 1, 200}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A094896, A094897.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,uned,obsc</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_, Jun 14 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A220894.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A220894">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,3,14,82,579,4741,43977,454283,5159441,63782411,851368766,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 12188927818,186132043831,3017325884473,51712139570022,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 933654684562038,17702959714232057,351535449888420187,7292626296788508624,157698798590301690864,3547597554377118966359</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of closed lambda-terms of size n with size 0 for the variables.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Pierre Lescanne, &lt;a href=&quot;/A220894/b220894.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt; (first 200 terms from Alois P. Heinz).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Katarzyna Grygiel and Pierre Lescanne, &lt;a href=&quot;http://arxiv.org/abs/1210.2610&quot;&gt;Counting and generating lambda-terms&lt;/a&gt;, arXiv preprint arXiv:1210.2610, 2012</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="T" cd="A220894"/>
+      <OMV name="n"/><OMI>0</OMI>
+    </OMA>
+      </OMOBJ>where 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A220894"/>
+      <OMI>0</OMI><OMV name="m"/>
+    </OMA>
+      <OMV name="m"/>
+    </OMA>
+      </OMOBJ>;
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>     T(n+1,m) = T(n,m+1) + sum_{i=0 to n} T(i,m) * T(n-i,m).</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> f(n,0) where f(0,1) = 1; f(0,k) = 0 if k!=1; f(n,k) = 0 if k&gt;2n-1; f(n,k) = f(n-1,k) + f(n-1,k+1) + sum_{p=1 to n-2} sum_{c=0 to k} sum_{l=0 to k - c} [C^c_k C^l_(k-c) f(p,l+c) f(n-p-1,k-l)], where C^p_n are binomial coefficients (the last term is for the application where &quot;c&quot; is the number of common variables in both subterms). f(n,k) can be computed only using f(n',k') with n' &lt; n and k' &lt;= k + n - n'. f(n,k) is the number of lambda terms of size n (with size 0 for the variables) having exactly k free variables.</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="c" cd="A220894"/>
+      <OMV name="n"/><OMI>0</OMI>
+    </OMA>
+      </OMOBJ>where 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="c" cd="A220894"/>
+      <OMI>0</OMI><OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="c" cd="A220894"/>
+      <OMI>0</OMI><OMV name="i"/>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="i"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>;
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>   c(n+1,i) sum{j=i to n+1} binomial(j,i) * c(n,j) + sum{j=0 to i} sum{k=0..n} c(k,j)* c(n-k,i-j).</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="L" cd="A220894"/>
+      <OMV name="z"/><OMI>0</OMI>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="L" cd="A220894"/>
+      <OMV name="z"/><OMV name="u"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="u"/><OMA><OMS name="times"/><OMV name="z"/><OMA>
+      <OMS name="L" cd="A220894"/>
+      <OMV name="z"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="u"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMV name="z"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="L" cd="A220894"/>
+      <OMV name="z"/><OMV name="u"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Pierre Lescanne_ ,Mar 14 2013 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> a:= n-&gt; T(n, 0):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> T:= proc(n, m) option remember; `if`(n=0, m,</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       T(n-1, m+1) +add(T(i, m)*T(n-1-i, m), i=0..n-1))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..30);  # _Alois P. Heinz_, Mar 20 2013</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Clear[t]; t[0, m_] := m; t[n_, m_] := t[n, m] = t[n-1, m+1] + Sum[t[i, m]*t[n-1-i, m], {i, 0, n-1}]; a[n_] := t[n, 0]; Table[a[n], {n, 0, 21}] (* _Jean-François Alcover_, Apr 04 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage)</CMP>
+    </omtext><omtext class="program">
+      <CMP> @CachedFunction</CMP>
+    </omtext><omtext class="program">
+      <CMP> def T(n,m):</CMP>
+    </omtext><omtext class="program">
+      <CMP>     if n==0: return m</CMP>
+    </omtext><omtext class="program">
+      <CMP>     return T(n-1,m+1) + sum( T(i,m) * T(n-1-i,m) for i in xrange(0,n) )</CMP>
+    </omtext><omtext class="program">
+      <CMP> def a(n):  return T(n,0)</CMP>
+    </omtext><omtext class="program">
+      <CMP> [a(n) for n in xrange(0,66)]</CMP>
+    </omtext><omtext class="program">
+      <CMP> # _Joerg Arndt_, Jan 01 2013</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> t :: Int -&gt; Int -&gt; Integer</CMP>
+    </omtext><omtext class="program">
+      <CMP> t 0 m = (fromIntegral m)</CMP>
+    </omtext><omtext class="program">
+      <CMP> t n m = t (n-1) (m+1) + foldl (+) 0 (let tt = [t i m | i&lt;- [0..(n-1)]] in</CMP>
+    </omtext><omtext class="program">
+      <CMP>                                       (map (uncurry (*)) (zip tt (reverse tt))))</CMP>
+    </omtext><omtext class="program">
+      <CMP> # _Pierre Lescanne_, Mar 18 2013</CMP>
+    </omtext><omtext class="program">
+      <CMP> # The following program is more efficient:</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> with memoization</CMP>
+    </omtext><omtext class="program">
+      <CMP> ttab :: [[Integer]]</CMP>
+    </omtext><omtext class="program">
+      <CMP> ttab = [0..] : [[ttab !! (n-1) !! (m+1) + s n m | m &lt;- [0..]] | n &lt;- [1..]]</CMP>
+    </omtext><omtext class="program">
+      <CMP>   where s n m  = let ti = [ttab !! i !! m | i &lt;- [0..(n-1)]] in foldl (+) 0 (map (uncurry (*)) (zip ti (reverse ti)))</CMP>
+    </omtext><omtext class="program">
+      <CMP> t :: Int -&gt; Int -&gt; Integer</CMP>
+    </omtext><omtext class="program">
+      <CMP> t n m = ttab !! n !! m</CMP>
+    </omtext><omtext class="program">
+      <CMP> # _Pierre Lescanne_, Mar 20 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A135501, A114852.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A220895 (one free variable), A220896 (two free variables), A220897 (three free variables).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Dec 31 2012</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Added more terms, _Joerg Arndt_, Jan 01 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

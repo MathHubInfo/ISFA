@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A154798.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A154798">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,22,42,1002,2436,3718,5604,12310,37338,53174,105558,204226,715220,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1300156,1741630,2323520,4087968,7089500,12132164,15796476,26543660,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 34262962,92669720,118114304,150198136,190569292,384276336,483502844</CMP>
+    </assertion><omtext class="name">
+      <CMP> Even partition numbers of even numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Even numbers in A058696.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Charles R Greathouse IV, &lt;a href=&quot;/A154798/b154798.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> aa:= proc(n, i) if n=0 then 1 elif n&lt;0 or i=0 then 0 else aa(n,i):= aa(n, i-1) +aa(n-i, i) fi end: a:= proc(n) local k; if n&gt;1 then a(n-1) fi; for k from `if`(n=1, 0, b(n-1)+2) by 2 while irem(aa(k, k), 2)=1 do od; b(n):= k; aa(k, k) end: seq(a(n), n=1..40); # _Alois P. Heinz_, Jul 28 2009</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000041, A005843, A058696, A154795, A154796, A154797.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Omar E. Pol_, Jan 26 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Alois P. Heinz_, Jul 28 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A003219.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A003219">
+          <assertion class="***** TTTT *****">
+      <CMP> M2405</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,5,7,9,20,42,108,110,132,198,209,222,266,288,312,378,400,468,512,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 558,648,738,782,804,828,918,1032,1098,1122,1188,1212,1278,1300,1368,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1458,1526,1548,1638,1704,1728,1818,1974,2007,2022,2088,2112,2156,2178</CMP>
+    </assertion><omtext class="name">
+      <CMP> Self numbers divisible by sum of their digits (or, self numbers which are also Harshad numbers).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. R. Kaprekar, Puzzles of the Self-Numbers. 311 Devlali Camp, Devlali, India, 1959.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. R. Kaprekar, The Mathematics of the New Self Numbers (Part V). 311 Devlali Camp, Devlali, India, 1967.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;/A003219/b003219.txt&quot;&gt;Table of n, a(n) for n = 1..7045&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[list=Range[2178]; Complement[list,Table[n+Total[IntegerDigits[n]],{n,list}]], IntegerQ[#/Total[IntegerDigits[#]]] &amp;] (* _Jayanta Basu_, May 05 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A003052, A005349.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _James A. Sellers_, Jul 06 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

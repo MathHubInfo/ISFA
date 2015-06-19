@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A171258.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A171258">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 630,5544,11160,18810,27000,57000,80388,161820,178020,182880,242820,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 265608,388620,391500,447678,465192,522522,671760,690120,711000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 775170,826500,901170,1051830,1102290,1157130,1418160,1578330,1679400,1812384,1874520,1993824</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that sigma(n) = 13*phi(n) (where sigma=A000203, phi=A000010).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Donovan Johnson, &lt;a href=&quot;/A171258/b171258.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Kevin A. Broughan and Daniel Delbourgo, &lt;a href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL16/Broughan/broughan26.html&quot;&gt;On the Ratio of the Sum of Divisors and Euler’s Totient Function I&lt;/a&gt;, Journal of Integer Sequences, Vol. 16 (2013), Article 13.8.8.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Kevin A. Broughan and Qizhi Zhou, &lt;a href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL17/Broughan/bro32.html&quot;&gt;On the Ratio of the Sum of Divisors and Euler's Totient Function II&lt;/a&gt;, Journal of Integer Sequences, Vol. 17 (2014), Article 14.9.2.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(k=1,2e6, sigma(k) - 13*eulerphi(k) | print1(k&quot;, &quot;));</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A062699, A068391, A068390, A136547, A104900, A136540, A104901, A163667, A171256, A171257, A104902, A171259, A171260, A104903.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Farideh Firoozbakht_ and _M. F. Hasler_, Mar 19 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

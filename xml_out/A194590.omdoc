@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A194590.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A194590">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,2,7,14,38,76,187,374,874,1748,3958,7916,17548,35096,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 76627,153254,330818,661636,1415650,2831300,6015316,12030632,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 25413342,50826684,106853668,213707336,447472972,894945944,1867450648,3734901296,7770342787</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = (-1)^n*(A056040(n+1)*A152271(n)-2^n)/2</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The binomial transform of a(n) are the complementary Riordan numbers A194589 (see link).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Peter Luschny, &lt;a href=&quot;http://oeis.org/wiki/User:Peter_Luschny/TheLostCatalanNumbers&quot;&gt;The lost Catalan numbers&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A194590"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A194590"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="cr" cd="A194590"/>
+      <OMV name="k"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="cr" cd="A194590"/>
+      <OMV name="k"/>
+    </OMA>
+      </OMOBJ>are the complementary Riordan numbers <OMOBJ>
+        <OMR xref="A194589"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> A056040 := n -&gt; n!/iquo(n,2)!^2:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A152271 := n -&gt; `if`(n mod 2 = 0, 1, (n+1)/2):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A194590 := n -&gt; (-1)^n*(A056040(n+1)*A152271(n)-2^n)/2:</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A107373 (has offset 1).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Peter Luschny_, Aug 30 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

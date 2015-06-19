@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A233390.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A233390">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,1,2,1,2,2,2,1,4,4,4,2,3,2,3,3,7,4,4,5,3,4,5,5,5,6,7,6,5,4,4,9,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3,6,6,5,4,7,1,4,5,6,9,6,8,6,8,4,5,8,7,4,3,4,7,6,6,3,6,5,6,4,6,8,7,8,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4,5,3,6,7,7,3,10,7,5,6,10,4,8,4,6,7,6,8,10,4,6,8,9,5,6,5,7,13,5,5,6</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = |{0 &lt; k &lt; n: 2^k - 1 + q(n-k) is prime}|, where q(.) is the strict partition function (A000009).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture: a(n) &gt; 0 for all n &gt; 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> We have verified this for n up to 150000. For n = 124669, the least positive integer k with 2^k - 1 + q(n-k) prime is 13413.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Zhi-Wei Sun, &lt;a href=&quot;/A233390/b233390.txt&quot;&gt;Table of n, a(n) for n = 1..8000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Z.-W. Sun, &lt;a href=&quot;http://arxiv.org/abs/1312.1166&quot;&gt;On a^n+ bn modulo m&lt;/a&gt;, arXiv preprint arXiv:1312.1166, 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> Z.-W. Sun, &lt;a href=&quot;http://arxiv.org/abs/1402.6641&quot;&gt;Problems on combinatorial properties of primes&lt;/a&gt;, arXiv:1402.6641, 2014</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(6) = 1 since 2^2 - 1 + q(4) = 3 + 2 = 5 is prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(10) = 1 since 2^4 - 1 + q(6) = 15 + 4 = 19 is prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(41) = 1 since 2^{16} - 1 + q(25) = 65535 + 142 = 65677 is prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(127) = 1 since 2^{21} - 1 + q(106) = 2097151 + 728260 = 2825411 is prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(153) = 1 since 2^{70} - 1 + q(83) = 1180591620717411303423 + 101698 = 1180591620717411405121 is prime.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(164) = 1 since 2^{26} - 1 + q(138) = 67108863 + 8334326 = 75443189 is prime.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a[n_]:=Sum[If[PrimeQ[2^k-1+PartitionsQ[n-k]],1,0],{k,1,n-1}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[a[n],{n,1,100}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000009, A000040, A000225, A233307, A233346, A233359, A233360, A233393, A233417, A233439.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Zhi-Wei Sun_, Dec 08 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

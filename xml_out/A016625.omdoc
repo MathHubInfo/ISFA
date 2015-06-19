@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A016625.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A016625">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,8,8,1,5,6,3,7,9,7,9,4,3,4,3,7,5,1,2,6,9,9,4,8,9,5,0,0,2,4,5,7,8,5,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,4,5,7,3,3,4,1,4,7,6,8,2,9,8,5,2,6,1,0,1,8,5,5,5,5,4,3,5,9,2,6,6,7,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8,3,6,6,9,8,0,8,4,9,2,4,0,9,7,3,6,4,1,9,4,1,8,0,3,7,8,5,5,8,6</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of ln(97/2).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harry J. Smith, &lt;a href=&quot;/A016625/b016625.txt&quot;&gt;Table of n, a(n) for n=1,...,20000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 3.881563797943437512699489500245785145733414768298526101855554359266783... [From _Harry J. Smith_, May 30 2009]</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) { default(realprecision, 20080); x=log(97/2); for (n=1, 20000, d=floor(x); x=(x-d)*10; write(&quot;b016625.txt&quot;, n, &quot; &quot;, d)); } [From _Harry J. Smith_, May 30 2009]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A016576 Continued fraction. [From _Harry J. Smith_, May 30 2009]</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

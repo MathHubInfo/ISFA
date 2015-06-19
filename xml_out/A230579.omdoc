@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A230579.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A230579">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,8,16,32,64,128,256,171,1,2,4,8,16,32,64,128,256,171,1,2,4,8,16,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 32,64,128,256,171,1,2,4,8,16,32,64,128,256,171,1,2,4,8,16,32,64,128,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 256,171,1,2,4,8,16,32,64,128,256,171,1,2,4,8,16,32,64,128</CMP>
+    </assertion><omtext class="name">
+      <CMP> 2^n mod 341.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Jeans asserts that it would have been impossible for the ancient Chinese to have discovered a case of failure for the converse of Fermat's little theorem because the smallest counterexample &quot;(n = 341) consists of 103 figures&quot; in base 10.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Granted that without a computer, the task of calculating 2^340 - 1 and dividing by 341 is tedious and error-prone, thus discouraging the discovery of that number as a counterexample to the so-called Chinese hypothesis.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> But by instead computing just a few dozen powers of 2 modulo 341, it becomes readily apparent that the sequence of powers of 2 modulo 341 has a period of length 10 and therefore 2^340 = 1 mod 341, yet 341 = 11 * 31, which is not a prime number.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. H. Jeans, &lt;a href=&quot;http://oeis.org/w/images/c/c4/The_converse_of_Fermat%27s_theorem.pdf&quot;&gt;The converse of Fermat's theorem&lt;/a&gt;, Messenger of Mathematics 27 (1898), p. 174.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A230579"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A230579"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A230579"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMV name="mod"/><OMI>341</OMI></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(8) = 256 because 2^8 = 256.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(9) = 171 because 2^9 = 512 and 512 - 341 = 171.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(10) = 1 because 2 * 171 = 342 and 342 - 341 = 1.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> PowerMod[2, Range[0, 79], 341]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A206786.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alonso del Arte_, Oct 23 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

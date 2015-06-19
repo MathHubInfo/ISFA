@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A210980.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A210980">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,3,10,21,42,69,123,189,304,458,693,998,1474,2067,2927,4056,5613,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7595,10335,13782,18411,24276,31944,41583,54152,69762,89758,114668,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 146181,185083,234051,294126,368992,460669,573906,711865,881506,1087023,1338043</CMP>
+    </assertion><omtext class="name">
+      <CMP> Total area of the shadows of the three views of the shell model of partitions, version &quot;Tree&quot;, with n shells.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Each part is represented by a cuboid 1 X 1 X L where L is the size of the part.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A210980"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A066186"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A194804"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A194805"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> For n = 7 the shadows of the three views of the shell model of partitions version &quot;tree&quot; with seven shells looks like this:</CMP>
+    </assertion><assertion class="example">
+      <CMP> .                                        |  Partitions</CMP>
+    </assertion><assertion class="example">
+      <CMP> .    A194805(7) = 25    A066186(7) = 105 |  of 7</CMP>
+    </assertion><assertion class="example">
+      <CMP> .                                        |</CMP>
+    </assertion><assertion class="example">
+      <CMP> .                   1    * * * * * * 1   |  7</CMP>
+    </assertion><assertion class="example">
+      <CMP> .                 2      * * * 1 * * 2   |  4+3</CMP>
+    </assertion><assertion class="example">
+      <CMP> .               2        * * * * 1 * 2   |  5+2</CMP>
+    </assertion><assertion class="example">
+      <CMP> .             3          * * 1 * 2 * 3   |  3+2+2</CMP>
+    </assertion><assertion class="example">
+      <CMP> .   1       2            * * * * * 1 2   |  6+1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .     2     3            * * 1 * * 2 3   |  3+3+1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .       2   3            * * * 1 * 2 3   |  4+2+1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .         3 4            * 1 * 2 * 3 4   |  2+2+2+1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .           3   1        * * * * 1 2 3   |  5+1+1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .           4 2          * * 1 * 2 3 4   |  3+2+1+1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .       1   4            * * * 1 2 3 4   |  4+1+1+1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .         2 5            * 1 * 2 3 4 5   |  2+2+1+1+1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .           5 1          * * 1 2 3 4 5   |  3+1+1+1+1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .         1 6            * 1 2 3 4 5 6   |  2+1+1+1+1+1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .           7            1 2 3 4 5 6 7   |  1+1+1+1+1+1+1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .   ----------------------------------   |</CMP>
+    </assertion><assertion class="example">
+      <CMP> .                                        |</CMP>
+    </assertion><assertion class="example">
+      <CMP> .   * * * * 1 * * * *                    |</CMP>
+    </assertion><assertion class="example">
+      <CMP> .   * * * 1 2 * * * *                    |</CMP>
+    </assertion><assertion class="example">
+      <CMP> .   * 1 * * 2 1 * * *                    |</CMP>
+    </assertion><assertion class="example">
+      <CMP> .   * * 1 2 2 * * 1 *                    |</CMP>
+    </assertion><assertion class="example">
+      <CMP> .   * * * * 2 2 1 * *                    |</CMP>
+    </assertion><assertion class="example">
+      <CMP> .   1 2 2 3 2 * * * *                    |</CMP>
+    </assertion><assertion class="example">
+      <CMP> .           2 3 2 2 1                    |</CMP>
+    </assertion><assertion class="example">
+      <CMP> .                                        |</CMP>
+    </assertion><assertion class="example">
+      <CMP> .    A194804(7) = 59                     |</CMP>
+    </assertion><assertion class="example">
+      <CMP> .</CMP>
+    </assertion><assertion class="example">
+      <CMP> Note that, as a variant, in this case each part is labeled with its position in the partition.</CMP>
+    </assertion><assertion class="example">
+      <CMP> The areas of the shadows of the three views are A066186(7) = 105, A194804(7) = 59 and A194805(7) = 25, therefore the total area of the three shadows is 105+59+25 = 189, so a(7) = 189.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Other versions: A207380, A210970, A210979, A210990, A210991.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000041, A066186, A135010, A138121, A141285, A182703, A194804, A194805, A206437.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Omar E. Pol_, Apr 21 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A114164.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A114164">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,1,4,5,1,8,18,8,1,16,56,41,11,1,32,160,170,73,14,1,64,432,620,377,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 114,17,1,128,1120,2072,1666,704,164,20,1,256,2816,6496,6608,3649,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1178,223,23,1,512,6912,19392,24192,16722,7001,1826,291,26,1,1024,16640</CMP>
+    </assertion><omtext class="name">
+      <CMP> Riordan array (1/(1-2x), x(1-x)/(1-2x)^2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sums are A081567. Diagonal sums are A085810. Product of Pascal triangle A007318 and Morgan-Voyce triangle A085478.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Unsigned version of A123876 . - _Philippe Deléham_, Oct 25 2007</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Number triangle <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A114164"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A114164"/>
+      <OMV name="n"/><OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="C" cd="A114164"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="j"/><OMV name="k"/>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A114164"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A114164"/>
+      <OMV name="n"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMV name="j"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="C" cd="A114164"/>
+      <OMV name="k"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMV name="j"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/><OMV name="j"/>
+    </OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A114164"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A114164"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/><OMV name="j"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="C" cd="A114164"/>
+      <OMV name="k"/><OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/><OMV name="j"/>
+    </OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>;
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A114164"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="T" cd="A114164"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="k"/>
+    </OMA></OMA><OMA>
+      <OMS name="T" cd="A114164"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="T" cd="A114164"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMV name="k"/>
+    </OMA></OMA><OMA>
+      <OMS name="T" cd="A114164"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A114164"/>
+      <OMI>0</OMI><OMI>0</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="T" cd="A114164"/>
+      <OMI>1</OMI><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A114164"/>
+      <OMI>1</OMI><OMI>0</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A114164"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>or if <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>.-_Philippe Deléham_ ,Jan 17 2014 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle begins</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4,5,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8,18,8,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 16,56,41,11,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 32,160,170,73,14,1;</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Barry_, Nov 15 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

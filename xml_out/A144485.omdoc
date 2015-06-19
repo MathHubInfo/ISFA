@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A144485.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A144485">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,20,168,1320,10010,74256,542640,3922512,28120950,200300100,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1419269280,10013421600,70394353848,493362138080,3448674255840,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 24051721745568,167405449649550,1163116182943260,8068463611408200,55891260077406600</CMP>
+    </assertion><omtext class="name">
+      <CMP> (3n + 2)*binomial(3n + 1,n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A144485/b144485.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> O. Egecioglu, T. Redmond, C. Ryavec, &lt;a href=&quot;http://arxiv.org/abs/0704.3398&quot;&gt;Almost product evaluation of Hankel Determinants&lt;/a&gt;, arXiv:0704.3398.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A144485"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA><OMI>2</OMI>
+    </OMA><OMA>
+      <OMR xref="A045721"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Feb 01 2014 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A144485"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMR xref="A090763"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Alois <OMOBJ>
+        <OMV name="P"/>
+      </OMOBJ>.Heinz_ ,Feb 01 2014 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> a:= proc(n) option remember; `if`(n=0, 2,</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       3*(3*n+1)*(3*n+2)*a(n-1)/(2*n*(2*n+1)))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..30);  # _Alois P. Heinz_, Feb 01 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[k_] = (3k + 2)Binomial[3k + 1, k]; Table[a[k], {k, 0, 30}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [(3*n+2)*Binomial(3*n+1, n): n in [0..20]]; // _Vincenzo Librandi_, Feb 14 2014</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_, Oct 12 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

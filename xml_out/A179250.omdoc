@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A179250.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A179250">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 10945,15126,16723,17333,17566,17655,17689,17702,17707,17709,17710,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 21891,23488,24098,24331,24420,24454,24467,24472,24474,24475,26072,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 26682,26915,27004,27038,27051,27056,27058,27059,27669,27902,27991</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n that have 10 terms in their Zeckendorf representation.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A007895(a(n)) = 10. - _Reinhard Zumkeller_, Mar 10 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A179250/b179250.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 10945=6765+2584+987+377+144+55+21+8+3+1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 15126=10946+2584+987+377+144+55+21+8+3+1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 16723=10946+4181+987+377+144+55+21+8+3+1;</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(combinat): B := proc (n) local A, ct, m, j: A := proc (n) local i: for i while fibonacci(i) &lt;= n do n-fibonacci(i) end do end proc: ct := 0: m := n: for j while 0 &lt; A(m) do ct := ct+1: m := A(m) end do: ct+1 end proc: Q := {}: for i from fibonacci(21)-1 to 28500 do if B(i) = 10 then Q := `union`(Q, {i}) else end if end do: Q;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a179250 n = a179250_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a179250_list = filter ((== 10) . a007895) [1..]</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Mar 10 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A035517, A007895, A179242, A179243, A179244, A179245, A179246, A179247, A179248, A179249, A179251, A179252, A179253.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,look</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Emeric Deutsch_, Jul 05 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

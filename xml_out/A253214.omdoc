@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A253214.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A253214">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,1,4,1,5,9,2,6,5,3,5,8,9,7,9,3,0,1,6,4,9,5,8,8,8,6,5,3,1,9,6,7,2,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7,4,6,4,0,6,8,2,4,8,8,1,4,3,8,4,4,3,9,3,9,5,8,3,7,7,3,5,6,1,9,3,6,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8,7,0,8,6,3,8,6,2,1,8,2,6,1,6,9,8,6,0,4,9,3,7,9,0,6,7,2,3,4,9,9,5,5,6,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of log(640320^3)/sqrt(163), a Ramanujan constant producing 16 correct digits of Pi.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jonathan M. Borwein, &lt;a href=&quot;http://oldweb.cecm.sfu.ca/personal/jborwein/aesthetics.pdf&quot;&gt;Aesthetics for the Working Mathematician&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's MathWorld, &lt;a href=&quot;http://mathworld.wolfram.com/RamanujanConstant.html&quot;&gt;Ramanujan Constant&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 3.141592653589793|0164958886531967237464..., where | shows the position from where the digits differ.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> RealDigits[Log[640320^3]/Sqrt[163], 10, 104] // First</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000796, A060295.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jean-François Alcover_, Dec 29 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A083491.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A083491">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,6,9,12,30,42,51,60,72,81,90,111,204,315,402,513,600,711,804,912,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3000,4116,5007,6111,7002,8115,9000,11112,30000,41112,50007,61113,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 70002,81111,90000,111111,200004,311115,400002,511113,600000,711111,800004</CMP>
+    </assertion><omtext class="name">
+      <CMP> Multiples of 3 in which there is no common digit in successive terms.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A083490, A083492, A083493, A083494, A083495, A083496, A083497.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A030283.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_ and Meenakshi Srikanth (menakan_s(AT)yahoo.com), May 03 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _David Wasserman_, Nov 16 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

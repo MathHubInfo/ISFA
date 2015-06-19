@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A245148.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A245148">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,3,3,5,5,7,7,9,9,15,16,23,28,36,42,54,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 61,83,98,127,155,203,242,309,370,479,578,739,904,1155,1420,1790,2194,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2786,3425,4323,5350,6747,8362,10522,13022,16397,20346,25558</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of n-node unlabeled rooted trees with thickening limbs and root outdegree (branching factor) 8.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A245148/b245148.txt&quot;&gt;Table of n, a(n) for n = 9..150&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column k=8 of A245151.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 9,17</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alois P. Heinz_, Jul 12 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

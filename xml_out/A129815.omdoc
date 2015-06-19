@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A129815.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A129815">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,2,6,22,102,506,2952,18502,131112,991226,8271792,73176262,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 703077552,7121578106,77437418112,883521487942,10726837356672,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 136104948161786</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of reverse alternating fixed-point-free permutations on n letters.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Emeric Deutsch_, Aug 06 2009: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Reverse alternating permutations are called also up-down permutations.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is also the number of reverse alternating permutations having exactly 1 fixed point (see the Stanley reference). Example: a(4)=2 because we have 1423 and 2314.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (End)</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. P. Stanley, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0603520&quot;&gt;Alternating permutations and symmetric functions&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A129815"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A129817"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[_Emeric Deutsch_ ,Aug 06 2009 ]
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(4)=2 because we have 3412 and 2413. [_Emeric Deutsch_, Aug 06 2009]</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000111, A000166, A007779.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> more,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladeta Jovovic_, May 20 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

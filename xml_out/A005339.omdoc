@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A005339.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A005339">
+          <assertion class="***** TTTT *****">
+      <CMP> M5245</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 35,154,424,930,1775,3080,4985,7650,11256,16006,22126,29866,39501,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 51332,65687,82922,103422,127602,155908,188818,226843,270528,320453,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 377234,441524,514014,595434,686554,788185,901180,1026435,1164890,1317530</CMP>
+    </assertion><omtext class="name">
+      <CMP> Putting balls into 6 boxes.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Solution to Problem 68-16, SIAM Rev. 12 (1970), 294-297.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Philippe Flajolet, &lt;a href=&quot;http://algo.inria.fr/libraries/autocomb/balls-html/balls1.html&quot;&gt;BALLS AND URNS, ETC.&lt;/a&gt; A problem in submarine detection (solution to probl.68-16)</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>12</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>35</OMI><OMA><OMS name="times"/><OMI>56</OMI><OMV name="x"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>25</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>6</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Vladeta Jovovic_ ,Apr 13 2008 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMI>12</OMI>
+    </OMA>
+      <OMI>35</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMI>13</OMI>
+    </OMA>
+      <OMI>154</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMI>14</OMI>
+    </OMA>
+      <OMI>424</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMI>15</OMI>
+    </OMA>
+      <OMI>930</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMI>16</OMI>
+    </OMA>
+      <OMI>1775</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMI>17</OMI>
+    </OMA>
+      <OMI>3080</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMI>18</OMI>
+    </OMA>
+      <OMI>4985</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>15</OMI><OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>20</OMI><OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>15</OMI><OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A005339"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>[From Harvey <OMOBJ>
+        <OMV name="P"/>
+      </OMOBJ>.Dale ,Aug 12 2011 ]
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Drop[CoefficientList[Series[x^12(35-56x+25x^2-4x^3+x^6)/(1-x)^6, {x,0, 60}], x],12] (* or *) Join[{35},LinearRecurrence[{6,-15,20,-15,6,-1},{154,424,930,1775,3080,4985},48]] (* _Harvey P. Dale_, Aug 12 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A005337, A005338, A005340.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 12,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Vladeta Jovovic_, Apr 13 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

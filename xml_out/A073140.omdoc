@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A073140.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A073140">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,4,6,8,11,11,14,16,21,21,25,21,25,25,30,32,41,41,47,41,47,47,53,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 41,47,47,53,47,53,53,62,64,81,81,91,81,91,91,99,81,91,91,99,91,99,99,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 109,81,91,91,99,91,99,99,109,91,99,99,109,99,109,109,126,128,161,161,179</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sum of the largest and smallest number having in binary representation the same number of 0's and 1's as n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A073137(n) + A073138(n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Bi#binary&quot;&gt;Index entries for sequences related to binary expansion of n&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007088, A073139, A073141.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Jul 16 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

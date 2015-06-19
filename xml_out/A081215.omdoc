@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A081215.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A081215">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,5,41,434,5713,90075,1657009,34867844,826446281,21794641505,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 633095889817,20088655029078,691413758034721,25657845139503479,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1021273028302258913,43404581642184336392,1961870762757168078553</CMP>
+    </assertion><omtext class="name">
+      <CMP> (n^(n+1)+(-1)^n)/(n+1)^2.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladeta Jovovic_, Apr 17 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

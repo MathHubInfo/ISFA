@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A064092.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A064092">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,10,181,4078,102826,2777212,78571837,2298558934,68964092542,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2110472708140,65620725560578,2067160250751436,65833929303952564,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2116166898185821792,68565914052628406221,2237022199842087256678</CMP>
+    </assertion><omtext class="name">
+      <CMP> Generalized Catalan numbers C(9; n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n+1)= Y_{n}(n+1)= Z_{n}, n &gt;= 0, in the Derrida et al. 1992 reference (see A064094) for alpha=9, beta =1 (or alpha=1, beta=9).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>9</OMI><OMV name="x"/><OMA>
+      <OMS name="c" cd="A064092"/>
+      <OMA><OMS name="times"/><OMI>9</OMI><OMV name="x"/></OMA>
+    </OMA></OMA><OMI>8</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMI>8</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="c" cd="A064092"/>
+      <OMA><OMS name="times"/><OMI>9</OMI><OMV name="x"/></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>with <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="c" cd="A064092"/>
+      <OMV name="x"/>
+    </OMA><OMV name="g"/></OMA>
+      </OMOBJ>.f .of Catalan numbers <OMOBJ>
+        <OMR xref="A000108"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064092"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="m"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="m"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A064092"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="m"/>
+    </OMA><OMV name="m"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>9</OMI>
+      <OMV name="m"/>
+    </OMA></OMA><OMV name="n"/>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>8</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>9</OMI><OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A064092"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>72</OMI>
+    </OMA>
+      <OMV name="k"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND></OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064092"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>;with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="C" cd="A064092"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A000108"/>
+      <OMV name="n"/>
+    </OMA><OMV name="Catalan"/></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064092"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMR xref="A059365"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>9</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.-_Philippe Deléham_ ,Jan 19 2004 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Conjecture :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMV name="n"/><OMA>
+      <OMS name="a" cd="A064092"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMI>287</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>432</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A064092"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>18</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A064092"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Jun 07 2013 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> a[0] = 1; a[n_] := Sum[(n - m)*Binomial[n - 1 + m, m]*9^m/n, {m, 0, n - 1}]; Table[a[n], {n, 0, 16}] (* _Jean-François Alcover_, Jul 09 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;0,0,polcoeff(serreverse((x-8*x^2)/(1+x)^2+O(x^(n+1))),n)) /* _Ralf Stephan+ */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A064091 (C(8, n)).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_, Sep 13 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

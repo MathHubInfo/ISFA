@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A180097.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A180097">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,7,21,22,30,31,46,51,55,66,70,71,81,85,93,94,102,107,110,115,119,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 127,138,142</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that sigma(n) is powerful.</CMP>
+    </omtext><assertion class="example">
+      <CMP> sigma(3)=2^2, sigma(7)=2^3, sigma(21)=2^5, sigma(66)=2^4*3^2.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> emin := proc(n::posint) local L; if n&gt;1 then L:=ifactors(n)[2]; L:=map(z-&gt;z[2],L); min(L) else 0 fi end: L:=[]: for w to 1 do for n from 1 to 144 do sn:=numtheory[sigma](n); if emin(sn)&gt;1 then L:=[op(L),n]; print(n,ifactor(n),sn,ifactor(sn)) fi; od; od; L;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001694, A000203, A180090, A180098.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Walter Kehowski_, Aug 10 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A187777.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A187777">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 43,46,61,69,93,109,133,157,177,181,201,217,241,409</CMP>
+    </omtext><omtext class="name">
+      <CMP> 3-smooth Euclidean fields that are not 2-smooth Euclidean.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Xavier Guitart and Marc Masdeu, &lt;a href=&quot;http://arxiv.org/abs/1106.0856&quot;&gt;Continued fractions in 2-stage euclidean quadratic fields&lt;/a&gt; (arXiv:1106.0856)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/QuadraticField.html&quot;&gt;Quadratic Field&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Qua#quadfield&quot;&gt;Index entries for sequences related to quadratic fields&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A003174, A187776.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> fini,full,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Arkadiusz Wesolowski_, Jan 05 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

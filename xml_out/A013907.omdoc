@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A013907.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A013907">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 529,3404825447,21914624432020321,141050039560662968926103,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 907846434775996175406740561329,5843211045545439551605946764725979847,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 37608910510519071039902074217516707306379521,242063847902005849254176436075394136454464685331703</CMP>
+    </assertion><omtext class="name">
+      <CMP> 23^(5n+2).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A013907/b013907.txt&quot;&gt;Table of n, a(n) for n = 0..50&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tanya Khovanova, &lt;a href=&quot;http://www.tanyakhovanova.com/RecursiveSequences/RecursiveSequences.html&quot;&gt;Recursive Sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A013907"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>6436343</OMI><OMA>
+      <OMS name="a" cd="A013907"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A013907"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>529</OMI>
+    </OMA>
+      </OMOBJ>;[From Vincenzo Librandi ,May 29 2011 ]
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (MAGMA) [23^(5*n+2): n in [0..10]]; // Vincenzo Librandi, May 29 2011</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

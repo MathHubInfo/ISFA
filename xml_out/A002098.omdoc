@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A002098.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A002098">
+          <assertion class="***** TTTT *****">
+      <CMP> M0597 N0215</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,2,3,4,11,17,29,49,85,144,226,404,603,1025,1679,2558,4201,6677,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10190,16599,25681,39643,61830,96771,147114,228338,352725,533291,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 818624,1263259,1885918,2900270,4396577,6595481,10040029,15166064,22642064</CMP>
+    </assertion><omtext class="name">
+      <CMP> G.f.: 1/Product_{k&gt;=1} (1-prime(k)*x^prime(k)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is sum of all numbers k for which A001414(k), the sum of prime factors with repetition, equals n.  See Havermann's link. - _J. M. Bergot_, Jun 14 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S.M. Kerawala, On a Pair of Arithmetic Functions Analogous to Chawla's Pair, J. Natural Sciences and Mathematics, 9 (1969), circa p. 103.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A002098/b002098.txt&quot;&gt;Table of n, a(n) for n=0..500&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Havermann: &lt;a href=&quot;http://chesswanks.com/seq/sopfr/&quot;&gt;Tables of sum-of-prime-factors sequences (overview with links to the first 50000 sums).&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> b:= proc(n,i) option remember;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>      if n&lt;0 then 0</CMP>
+    </omtext><omtext class="maple">
+      <CMP>    elif n=0 then 1</CMP>
+    </omtext><omtext class="maple">
+      <CMP>    elif i=0 then 0</CMP>
+    </omtext><omtext class="maple">
+      <CMP>    else b(n, i-1) +b(n-ithprime(i), i) *ithprime(i)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>      fi</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; b(n, numtheory[pi](n)):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq (a(n), n=0..40);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002099.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Row sums of array A116864.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Better description and more terms from _Vladeta Jovovic_, May 09 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

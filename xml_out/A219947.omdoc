@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A219947.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A219947">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,5,8,37,136,545,2376,10534,46824,212926,961552,4374949,19888832,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 90570555,412561096,1880381253,8572076760,39086502817,178240531672,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 812868845530,3707227380920,16907856403612,77113848855920,351705509804137,1604084309231360</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of tilings of a 6 X n rectangle using right trominoes and 2 X 2 tiles.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A219947/b219947.txt&quot;&gt;Table of n, a(n) for n = 0..500&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:see Maple program .
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(2) = 5, because there are 5 tilings of a 6 X 2 rectangle using right trominoes and 2 X 2 tiles:</CMP>
+    </assertion><assertion class="example">
+      <CMP> .___.  .___.  .___.  .___.  .___.</CMP>
+    </assertion><assertion class="example">
+      <CMP> | . |  | ._|  | ._|  |_. |  |_. |</CMP>
+    </assertion><assertion class="example">
+      <CMP> |___|  |_| |  |_| |  | |_|  | |_|</CMP>
+    </assertion><assertion class="example">
+      <CMP> | . |  |___|  |___|  |___|  |___|</CMP>
+    </assertion><assertion class="example">
+      <CMP> |___|  | ._|  |_. |  | ._|  |_. |</CMP>
+    </assertion><assertion class="example">
+      <CMP> | . |  |_| |  | |_|  |_| |  | |_|</CMP>
+    </assertion><assertion class="example">
+      <CMP> |___|  |___|  |___|  |___|  |___|</CMP>
+    </assertion><omtext class="maple">
+      <CMP> gf:= -(6080*x^25 -7104*x^24 -21936*x^23 -4112*x^22 +82016*x^21 +39064*x^20 -139520*x^19 -103312*x^18 +102180*x^17 +165884*x^16 -18076*x^15 -101470*x^14 -41918*x^13 +35248*x^12 +29374*x^11 -1107*x^10 -10608*x^9 -3089*x^8 +1636*x^7 +1092*x^6 -26*x^5 -178*x^4 -22*x^3 +13*x^2 +4*x -1) /</CMP>
+    </omtext><omtext class="maple">
+      <CMP> (16640*x^29 -14592*x^28 +11840*x^27 -165952*x^26 +87952*x^25 +141200*x^24 +521244*x^23 -541484*x^22 -781380*x^21 +1310*x^20 +1242434*x^19 +476620*x^18 -673176*x^17 -725593*x^16 +92654*x^15 +393128*x^14 +137172*x^13 -107125*x^12 -88592*x^11 -1136*x^10 +24088*x^9 +7488*x^8 -2806*x^7 -2014*x^6 +12*x^5 +263*x^4 +34*x^3 -18*x^2 -4*x +1):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; coeff (series (gf, x, n+1), x, n):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..30);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Column k=6 of A219946.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alois P. Heinz_, Dec 01 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

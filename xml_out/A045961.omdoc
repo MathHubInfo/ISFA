@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A045961.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A045961">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,5,11,19,43,53,101,131,139,149,197,229,373,389,419,523,547,587,643,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 709,739,883,997,1091,1093,1187,1483,1621,1931,1973,2099,2243,2347,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2357,2411,2549,2677,2731,2741,2803,2963,3011,3203,3307,3331,3461,3467,3541,3733</CMP>
+    </assertion><omtext class="name">
+      <CMP> Twin A045954's (middle terms) that are primes.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A045954.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Felice Russo_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

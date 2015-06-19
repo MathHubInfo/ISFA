@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A115999.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A115999">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 49,1254,2379,2863,4584,35496,43865,56724,176432,361752,413678,413698,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 493899,1331966,1345378,1457776,1689823,1933424,1946886,2434820,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2446957,2474183,2498538,2565474,2668395,2673894,2732986,3074716</CMP>
+    </assertion><omtext class="name">
+      <CMP> The digits of n, in some order, are obtained by adding pairs of adjacent digits of the n-th prime.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 2732986 belongs, since p(2732986)=45260203 and adding adjacent pairs</CMP>
+    </assertion><assertion class="example">
+      <CMP> of digits of 45260203 we obtain (4+5)=9, (5+2)=7, (2+6)=8, (6+0)=6, (0+2)=2,</CMP>
+    </assertion><assertion class="example">
+      <CMP> (2+0)=2, (0+3)=3 and the digits 9,7,8,6,2,2,3, order apart, are the same of 2732986.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A116070, A115998.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base,fini</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Giovanni Resta_, Feb 13 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

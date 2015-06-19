@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A190293.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A190293">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 10080,15840,16800,18720,22176,23520,24480,26208,26400,27360,31200,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 33120,34020,34272,38304,40800,41184,41760,44640,45600,46368,51744,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 53280,53460,53856,55200,58080,58464,59040,60192,61152,61600,61920,62496</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers with prime factorization pqr^2s^5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A190293/b190293.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Will Nicholes,&lt;a href=&quot;http://willnicholes.com/math/primesiglist.htm&quot;&gt;Prime Signatures&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[n_]:=Sort[Last/@FactorInteger[n]]=={1,1,2,5};Select[Range[100000],f]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A162144, A190115, A190292.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Joseph Stephan Orlovsky_, May 07 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

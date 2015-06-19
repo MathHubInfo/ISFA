@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A025652.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A025652">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,0,2,1,0,3,2,1,0,4,3,2,1,0,5,4,3,2,1,6,0,5,4,3,2,7,1,6,0,5,4,3,8,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,7,1,6,0,5,4,9,3,8,2,7,1,6,0,5,10,4,9,3,8,2,7,1,6,0,11,5,10,4,9,3,8,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2,7,1,12,6,0,11,5,10,4,9,3,8,2,13,7,1,12,6,0,11,5,10,4,9,3,14,8,2,13,7,1,12,6</CMP>
+    </assertion><omtext class="name">
+      <CMP> Exponent of 5 (value of i) in n-th number of form 5^i*7^j.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A035621.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A035621">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,1,1,1,1,4,4,4,4,10,11,11,11,22,25,26,26,44,51,54,55,84,98,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 105,108,153,178,193,200,269,313,341,356,459,531,582,611,764,880,967,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1021,1244,1424,1568,1662,1988,2264,2494,2653,3122,3536,3896,4155</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n into parts 4k and 4k+1 with at least one part of each type</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,9</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Olivier Gérard_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

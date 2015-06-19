@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A225267.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A225267">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,8,6,16,20,9,25,44,32,12,40,78,71,44,15,59,123,126,98,56,18,79,178,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 198,174,125,68,21,104,244,286,273,222,152,80,24,133,322,391,394,348,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 270,179,92,27,166,411,514,538,502,423,318,206,104,30,205,510,654,706,685,610</CMP>
+    </assertion><omtext class="name">
+      <CMP> T(n,k)=Number of distinct values of the sum of a*b+a*c+b*c over n sets of three a,b,c 0..k integers</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Table starts</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..3...8..16..25..40...59...79..104..133..166..205..244..290..339..392..448..516</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..6..20..44..78.123..178..244..322..411..510..622..743..876.1022.1178.1345.1525</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..9..32..71.126.198..286..391..514..654..810..985.1175.1383.1610.1853.2113.2392</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .12..44..98.174.273..394..538..706..897.1110.1348.1607.1890.2198.2528.2881.3259</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .15..56.125.222.348..502..685..898.1140.1410.1711.2039.2397.2786.3203.3649.4126</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .18..68.152.270.423..610..832.1090.1383.1710.2074.2471.2904.3374.3878.4417.4993</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .21..80.179.318.498..718..979.1282.1626.2010.2437.2903.3411.3962.4553.5185.5860</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .24..92.206.366.573..826.1126.1474.1869.2310.2800.3335.3918.4550.5228.5953.6727</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .27.104.233.414.648..934.1273.1666.2112.2610.3163.3767.4425.5138.5903.6721.7594</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .30.116.260.462.723.1042.1420.1858.2355.2910.3526.4199.4932.5726.6578.7489.8461</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A225267/b225267.txt&quot;&gt;Table of n, a(n) for n = 1..1325&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Empirical: column k is 3*n*k^2 - A225270(k) for large n (n&gt;1 suffices through at least k=626)</CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ May 04 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

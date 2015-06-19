@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A214667.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A214667">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,1,0,2,2,0,2,1,3,3,1,3,3,0,4,4,2,2,4,4,3,3,5,5,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,3,5,0,4,6,6,2,0,6,6,6,3,3,5,7,7,7,5,7,7,6,4,0,6,8,8,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8,2,4,6,8,8,8,5,9,9,9,9,3,3,9,9,9,9,4,2,8</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> The y-coordinates of prime numbers in an Ulam spiral oriented counterclockwise with first step west.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The eight possible orientations of the Ulam spiral can be derived from combining either A214664 or A214666 with either A214665 or A214667 as ordered pairs of coordinates.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This spiral is rotated 180 degrees from the spiral on the March 1964 cover of Scientific American.</CMP>
+    </omtext><omtext class="link">
+      <CMP> William Rex Marshall, &lt;a href=&quot;/A214667/b214667.txt&quot;&gt;Table of n, a(n) for n = 1..10077&lt;/a&gt; (coordinates of primes in a 325 X 325 square)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A063826, A214664, A214665, A214666.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _William Rex Marshall_, Jul 26 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

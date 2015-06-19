@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A082759.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A082759">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,8,35,160,752,3599,17446,85376,420884,2087008,10398016,52010479,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 261021854,1313707256,6628095035,33512880640,169768235840,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 861450392708,4377796514152,22277498220160,113502759811000,578931209245760</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = sum_{k=0..n} binomial(n,k) trinomial(n,k), where trinomial(n,k) = trinomial coefficients.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Central coefficients of A115990. - _Paul Barry_, Feb 25 2011</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A082759/b082759.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A082759"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A082759"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="C" cd="A082759"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.-_Benoit Cloitre_ ,Jun 20 2003 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>38</OMI><OMV name="n"/></OMA><OMI>53</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A082759"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA><OMS name="times"/><OMI>760</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>1820</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>1252</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>252</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A082759"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>19</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>36</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>9</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A082759"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>38</OMI><OMV name="n"/></OMA><OMI>15</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A082759"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.-_Vladeta Jovovic_ ,Jul 15 2004 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A082759"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="C" cd="A082759"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMV name="k"/>
+    </OMA><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="C" cd="A082759"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.-_Paul Barry_ ,Jan 20 2005 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A082759"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>114</OMI>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A082759"/>
+      <OMI>57</OMI>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A082759"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>9747</OMI><OMA><OMS name="times"/><OMI>57</OMI><OMA>
+      <OMS name="sqrt" cd="A082759"/>
+      <OMI>57</OMI>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>9747</OMI><OMA><OMS name="times"/><OMI>57</OMI><OMA>
+      <OMS name="sqrt" cd="A082759"/>
+      <OMI>57</OMI>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMI>912</OMI><OMA><OMS name="times"/><OMI>57</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>9747</OMI><OMA><OMS name="times"/><OMI>57</OMI><OMA>
+      <OMS name="sqrt" cd="A082759"/>
+      <OMI>57</OMI>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA></OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>9747</OMI><OMA><OMS name="times"/><OMI>57</OMI><OMA>
+      <OMS name="sqrt" cd="A082759"/>
+      <OMI>57</OMI>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A082759"/>
+      <OMS name="Pi"/>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1261</OMI><OMA><OMS name="times"/><OMI>57</OMI><OMA>
+      <OMS name="sqrt" cd="A082759"/>
+      <OMI>57</OMI>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>2</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA><OMI>112</OMI><OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1261</OMI><OMA><OMS name="times"/><OMI>57</OMI><OMA>
+      <OMS name="sqrt" cd="A082759"/>
+      <OMI>57</OMI>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1261</OMI><OMA><OMS name="times"/><OMI>57</OMI><OMA>
+      <OMS name="sqrt" cd="A082759"/>
+      <OMI>57</OMI>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="sqrt" cd="A082759"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMF dec="0.445915027814826"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMF dec="5.219136248741586"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA>
+      <OMS name="sqrt" cd="A082759"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Vaclav Kotesovec_ ,Oct 24 2012 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> G.f.: A(x)=x*B'(x)/B(x), where B(x) satisfies B(x)=x*(1+2*B(x)+2*B(x)^2+B(x)^3). - _Vladimir Kruchinin_, Jan 14 2015</CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Table[Sum[Binomial[2 n - k, k] Binomial[n, k], {k, 0, n}], {n, 0, 20}] (* _Vaclav Kotesovec_, Oct 24 2012; typo fixed by _Vincenzo Librandi_, May 07 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=sum(k=0,n,binomial(n+k,n-k)*binomial(n,k))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A037011, A106228.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Emanuele Munarini_, May 21 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

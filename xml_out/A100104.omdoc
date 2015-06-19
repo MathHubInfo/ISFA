@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A100104.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A100104">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,5,19,49,101,181,295,449,649,901,1211,1585,2029,2549,3151,3841,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4625,5509,6499,7601,8821,10165,11639,13249,15001,16901,18955,21169,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 23549,26101,28831,31745,34849,38149,41651,45361,49285,53429,57799,62401,67241,72325</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = n^3 - n^2 + 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Appears to be the number of possible distinct sums of a set of n distinct integers between 1 and n^2. Checked up to n=6. - _Dylan Hamilton_, Sep 21 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A100104(n+1) - A100104(n). - _Reinhard Zumkeller_, Jul 07 2012</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. A. Gulliver, Sequences from Cubes of Integers, Int. Math. Journal, 4 (2003), 439-445.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      From _Harvey <OMOBJ>
+        <OMV name="P"/>
+      </OMOBJ>.Dale_ ,Sep 11 2011 :(Start )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A100104"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A100104"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A100104"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMI>5</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A100104"/>
+      <OMI>3</OMI>
+    </OMA>
+      <OMI>19</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A100104"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="a" cd="A100104"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>6</OMI><OMA>
+      <OMS name="a" cd="A100104"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="a" cd="A100104"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A100104"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>7</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.(End )
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> f[n_]:=n^3-n^2+1;Table[f[n],{n,5!}] (* _Vladimir Joseph Stephan Orlovsky_, Feb 07 2010 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Array[#^3-#^2+1&amp;,50,0] (* or *) LinearRecurrence[{4,-6,4,-1},{1,1,5,19},50] (* _Harvey P. Dale_, Sep 11 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a049451 n = n * (3 * n + 1)  -- _Reinhard Zumkeller_, Jul 07 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A162611. - _Vincenzo Librandi_, May 27 2010</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A049451 (first differences).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Jan 12 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

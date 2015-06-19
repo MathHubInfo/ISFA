@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A122190.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A122190">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,2,0,1,2,0,2,2,1,1,2,0,2,2,0,2,0,1,2,2,0,2,2,0,2,2,2,1,1,0,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,0,2,2,2,2,0,0,3,2,0,2,2,0,2,2,0,2,0,0,0,4,1,2,2,0,2,1,0,0,2,2,2,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,2,2,0,3,2,0,0,2,0,2,2,0,2,0,2,2,0,0,2,2,0,1,2,2,2,4,0,0,2,0,2,2,1,2,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of q^(-1/4) * eta(q^2) * eta(q^5)^3 / (eta(q) * eta(q^10)) in powers of q.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Ramanujan theta functions: f(q) (see A121373), phi(q) (A000122), psi(q) (A010054), chi(q) (A000700).</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Somos, &lt;a href=&quot;http://cis.csuohio.edu/~somos/multiq.pdf&quot;&gt;Introduction to Ramanujan theta functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/RamanujanThetaFunctions.html&quot;&gt;Ramanujan Theta Functions&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Euler transform of period <OMOBJ>
+        <OMI>10</OMI>
+      </OMOBJ>sequence [<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>0</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>0</OMI>
+      </OMOBJ>,-<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>0</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>0</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,-<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,...].
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A122190"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="b" cd="A122190"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="b" cd="A122190"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>is multiplicative and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A122190"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>0</OMI>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A122190"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>5</OMI>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A122190"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="e"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="mod" cd="A122190"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="b" cd="A122190"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="p"/>
+      <OMV name="e"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="e"/>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="==" cd="arithmetic"/>
+      <OMV name="p"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="mod" cd="A122190"/>
+      <OMI>4</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMBIND>
+          <OMA>
+            <OMS name="Product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="k"/></OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="k"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> G.f.: Sum_{k&gt;=0} a(k) * x^(4k+1) = Sum_{k&gt;0 odd} x^k * (1 - x^(2*k)) * (1 - x^(6*k)) / (1 + x^(10*k)).</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Expansion of f(x, x^4) * f(x^2, x^3) in powers of x where f() is the Ramanujan two variable theta function.</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Expansion of psi(x)^2 - x * psi(x^5)^2 in powers of x where psi() is a Ramanujan theta function.</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> G.f. is a period 1 Fourier series which satisfies f(-1 / (40 t)) = 2 (t/i) g(t) where q = exp(2 Pi i t) and g() is the g.f. for A133573.</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A122190"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A053694"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A094247"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A122190"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="a" cd="A122190"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="a" cd="A122190"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Michael Somos_ ,Feb 10 2015 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Convolution product of <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMR xref="A133100"/>
+      <OMV name="and"/>
+    </OMA><OMR xref="A133101"/></OMA>
+      </OMOBJ>.-_Michael Somos_ ,Feb 10 2015 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> G.f. = 1 + x + x^2 + 2*x^3 + 2*x^4 + x^6 + 2*x^7 + 2*x^9 + 2*x^10 + x^11 + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> G.f. = q + q^5 + q^9 + 2*q^13 + 2*q^17 + q^25 + 2*q^29 + 2*q^37 + 2*q^41 + ...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a[ n_] := SeriesCoefficient[ QPochhammer[ x^2] QPochhammer[ x^5]^3 / (QPochhammer[ x] QPochhammer[ x^10]), {x, 0, n}]; (* _Michael Somos_, Feb 10 2015 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A); if( n&lt;0, 0, A = x * O(x^n); polcoeff( eta(x^2 + A) * eta(x^5 + A)^3 / (eta(x + A) * eta(x^10 + A), n))};</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n) = local(A, p, e); if( n&lt;0, 0, n = 4*n + 1; A=factor(n); prod(k=1, matsize(A)[1], if( p=A[k, 1], e=A[k, 2]; if( p==2, 0, if( p==5, 1, if( p%4==1, e+1, (1 + (-1)^e) / 2))))))};</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A053694, A094247, A133100, A133101, A133573.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michael Somos_, Aug 24 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

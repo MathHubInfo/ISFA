@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A136005.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A136005">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,7,31,127,8191,131071,524287,2147483647,137438953471,2199023255551,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8796093022207,9007199254740991,2305843009213693951,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 147573952589676412927,9444732965739290427391</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers of the form 2^p - 1, where p is a prime number that is not the sum, minus 1, of a Pythagorean triple.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A136003 for the values of p.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A136005"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMR xref="A136003"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(3)=31 because A136003(3)=5 and 2^5=32 and 32-1=31.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000079, A000668, A136002, A136003.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Omar E. Pol_, Dec 17 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

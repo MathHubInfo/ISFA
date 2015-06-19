@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A216328.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A216328">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 243,70225,265879,953125,1015623,1071873,1922373,6436341,6739605,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7263025</CMP>
+    </assertion><omtext class="name">
+      <CMP> Values for b in abc-triples with a = 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The listed 10 b-values are the ones for all (2,b,2+b) triples</CMP>
+    </omtext><omtext class="comment">
+      <CMP> with b from the range {1, 2, ..., 10^7}. The best quality among these values appears for n=8: (2, 6436341, 6436343), b = 3^10*109, with rad(2*b*(2+b)) = 15042 =2*3*23*109 and q(2,6436341,6436343) = 1.629911684 (maple 10 digits). See Tabl. I of the (not updated) link: The ABC Conjecture Home Page.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A216323 for the list of increasing b values for abc-triples if a=1. There one finds also a reference and a maple program which can be adapted to a=2 instead of a=1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> The ABC Conjecture Home Page,</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;http://www.math.unicaen.fr/~nitaj/abc.html#Ten%20abc&quot;&gt;The top ten good abc-examples &lt;/a&gt;.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS cd="set1" name="set">
+        <OMI>2</OMI><OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="b"/>
+      <OMA>
+      <OMS name="a" cd="A216328"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>2</OMI><OMA>
+      <OMS name="a" cd="A216328"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMS>
+    </OMA>
+      </OMOBJ>is an <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="abc"/><OMV name="triple"/>
+    </OMA>
+      </OMOBJ>(which has quality <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="q"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>)with increasingly ordered <OMOBJ>
+        <OMV name="b"/>
+      </OMOBJ>values .See the comment above for <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="abc"/><OMV name="triples"/>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> n:  (a=2, b, c=2+a),    rad(a*b*c), q(a*b*c) (maple 10 digits)</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1:  (2, 243, 245),         210,     1.028828797</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2:  (2, 70225, 70227),     27030,   1.093563284</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3:  (2, 255879, 255881),   252642,  1.001024059</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4:  (2, 953125, 953127),   525210,  1.045245231</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5:  (2, 1015623, 1015625), 128310,  1.175886268</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6:  (2, 1071873, 1071875), 926310,  1.010623492</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7:  (2, 1922373, 1922375), 799890,  1.064510569</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8:  (2, 6436341, 6436343), 15042,   1.629911684</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9:  (2, 6739605, 6739607), 3621030, 1.041135746</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10: (2, 7263025, 7263027), 94710,   1.378732296</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> From _Wolfdieter Lang_, Oct 02 1020, (Start)</CMP>
+    </assertion><assertion class="example">
+      <CMP> The prime number decomposition of the ten b-values is</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3^5, 5^2*53^2, 47*5657, 5^6*61, 3^2*7^4*47, 3^5*11*401, 3^8*293, 3^10*109, 3^6*5*43^2, 5^2*7^4*11^2.</CMP>
+    </assertion><assertion class="example">
+      <CMP> The ten c = b+2 numbers have the prime number decomposition</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5*7^2, 3^5*17^2, 3*7*11*1151, 3^4*7*41^2, 5^7*13, 5^5*7^3, 5^3*7*13^3, 23^5, 7^5*401, 3^11*41. (End)</CMP>
+    </assertion><omtext class="maple">
+      <CMP> See the program given in A216323, adapted to a=2.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A216323, A216370.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_, Sep 28 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

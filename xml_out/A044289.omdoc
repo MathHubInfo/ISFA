@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A044289.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A044289">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 38,119,200,281,342,362,443,524,605,686,767,848,929,1010,1071,1091,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1172,1253,1334,1415,1496,1577,1658,1739,1800,1820,1901,1982,2063,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2144,2225,2306,2387,2468,2529,2549,2630,2711,2792</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that string 4,2 occurs in the base 9 representation of n but not of n-1.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

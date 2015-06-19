@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A132585.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A132585">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 25,49,799,899,32399,292681</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers n such that sigma(n)-n-1 divides sigma(n+1)-n-2, where sigma(n) is sum of positive divisors of n and the ratio is greater than zero.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The banal case of ratio equal to zero is excluded. In fact if n+1 is a prime than sigma(n+1)-n-2=0. Therefore the ratio with sigma(n)-n-1 is equal to zero. Is this sequence finite?</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(7) &lt;= 1492995736325809. [From _Donovan Johnson_, Aug 31 2008]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(7) &gt; 10^13. - _Giovanni Resta_, Jul 11 2013</CMP>
+    </omtext><assertion class="example">
+      <CMP> n=25 -&gt; sigma(25)= 1+5+25 -&gt; sigma(n)-n-1=5</CMP>
+    </assertion><assertion class="example">
+      <CMP> n+1=26 -&gt; sigma(26)= 1+2+13+26 -&gt; sigma(n+1)-n-2=2+13=15</CMP>
+    </assertion><assertion class="example">
+      <CMP> 15/5 = 3 (integer &gt; 0)</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory); P:=proc(n) local a,i; for i from 1 by 1 to n do if sigma(i)-i-1&gt;0 then a:=(sigma(i+1)-i-2)/(sigma(i)-i-1); if a&gt;0 and trunc(a)=a then print(i); fi; fi; od; end: P(100000);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002961, A058072, A058073, A132586.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> hard,more,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paolo P. Lava_ and _Giorgio Balzarotti_, Aug 23 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(6) from _Donovan Johnson_, Aug 31 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

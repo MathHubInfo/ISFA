@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A241871.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A241871">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,1,26,937,45747,2945144,242899690,25034354941,3157647587689,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 478931493603308,86057396214591300,18086772915953351382,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4397414569504319733812,1224945090342466220614714,387654163770235904289085798,138333762956844287480268151988</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of ascent sequences of length 2n with exactly n descents.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Joerg Arndt and Alois P. Heinz, &lt;a href=&quot;/A241871/b241871.txt&quot;&gt;Table of n, a(n) for n = 0..70&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A241871"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A238858"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> b:= proc(n, i, t) option remember; `if`(n=0, 1, expand(add(</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       `if`(j&lt;i, x, 1) *b(n-1, j, t+`if`(j&gt;i, 1, 0)), j=0..t+1)))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; coeff(b(2*n, -1$2), x, n):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..20);</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> b[n_, i_, t_] := b[n, i, t] = If[n == 0, 1, Expand[Sum[If[j&lt;i, x, 1]*b[n-1, j, t + If[j&gt;i, 1, 0]], {j, 0, t+1}]]]; a[n_] := Coefficient[b[2*n, -1, -1], x, n]; Table[ a[n], {n, 0, 20}] (* _Jean-François Alcover_, Feb 13 2015, after Maple *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Joerg Arndt_ and _Alois P. Heinz_, May 01 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

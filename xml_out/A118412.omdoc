@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A118412.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A118412">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,15,105,42,63,90,495,55,143,91,1365,420,510,612,2907,855,665,385,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1771,1518,1725,1950,8775,2457,5481,1015,4495,1240,4092,4488,19635,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5355,11655,6327,9139,2470,2665,8610,37023</CMP>
+    </assertion><omtext class="name">
+      <CMP> Denominator of sum of reciprocals of first n pentatope numbers A000332.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Numerators are A118411. Fractions are: 1/1, 6/5, 19/15, 136/105, 83/63, 119/90, 656/495, 73/55, 190/143, 121/91, 1816/1365, 559/420, 679/510, 815/612, 3872/2907, 1139/855, 886/665, 513/385, 2360/1771, 2023/1518, 2299/1725, 2599/1950, 11696/8775, 3275/2457, 7306/5481, 1353/1015, 5992/4495, 1653/1240, 5455/4092, 5983/4488, 26176/19635, 7139/5355, 15538/11655, 8435/6327, 12184/9139, 3293/2470, 3553/2665, 11479/8610, 49360/37023. The denominator of sum of reciprocals of first n triangular numbers is A026741. The denominator of sum of reciprocals of first n tetrahedral numbers is A118392.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A118411"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A118412"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="SUM" cd="A118412"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>..n ]<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMR xref="A000332"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A118411"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A118412"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="SUM" cd="A118412"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>..n ]<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="C" cd="A118412"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A118411"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A118412"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="SUM" cd="A118412"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>..n ]<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA></OMA><OMI>24</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(1) = 1 = denominator of 1/1.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 5 = denominator of 6/5 = 1/1 + 1/5.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3) = 15 = denominator of 19/15 = 1/1 + 1/5 + 1/15.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4) = 105 = denominator of 136/105 = 1/1 + 1/5 + 1/15 + 1/35.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(5) = 42 = denominator of 55/42 = 1/1 + 1/5 + 1/15 + 1/35 + 1/70.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(10) = 143 = denominator of 190/143 = 1/1 + 1/5 + 1/15 + 1/35 + 1/70 + 1/126 + 1/210 + 1/330 + 1/495 + 1/715.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(20) = 1771 = denominator of 2360/1771 = 1/1 + 1/5 + 1/15 + 1/35 + 1/70 + 1/126 + 1/210 + 1/330 + 1/495 + 1/715 + 1/1001 + 1/1365 + 1/1820 + 1/2380 + 1/3060 + 1/3876 + 1/4845 + 1/5985 + 1/7315 + 1/8855.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (Pari) s=0;for(i=4,50,s+=1/binomial(i,4);print(denominator(s))) /* Phil Carmody, Mar 27 2012 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000332, A022998, A026741, A118391, A118391, A118411.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,frac,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Vos Post_, Apr 27 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

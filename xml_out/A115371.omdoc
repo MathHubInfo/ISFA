@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A115371.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A115371">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,3,8,0,1,6,1,8,9,5,9,2,3,9,8,3,5,0,6,2,3,6,6,1,4,6,4,1,9,4,2,7,0,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3,0,5,3,2,6,3,0,3,6,9,1,9,0,3,0,8,8,3,2,7,1,0,7,1,8,8,2,8,4,2,5,1,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,9,5,7,8,0,9,0,1,1,1,3,0,8,0,7,0,7,4,5,7,9,0,4,3,5,7,9,5,1,9,5,6,9,3,6,4</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of first zero of BesselJ[3,z].</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/BesselFunctionZeros.html&quot;&gt;Bessel Function Zeros&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 6.3801618959239835062...</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) solve(x=6,7,besselj(3,x)) \\ _Charles R Greathouse IV_, Feb 19 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A115368, A115369, A115370, A115372, A115373.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric W. Weisstein_, Jan 21, 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

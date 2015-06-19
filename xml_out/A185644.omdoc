@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A185644.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A185644">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,2,1,0,0,1,0,0,0,0,0,5,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,0,0,1,0,2,0,0,0,2,21,12,1,1,0,0,2,0,31,0,0,0,0,3,103,220,7,1,1,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3,0,1606,0,1,0,0,0,5,752,16829,388,9,1,1,0,0,5,0,193900,0,6,0,0,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangular array E(n,k) counting, not necessarily connected, k-regular simple graphs on n vertices with girth exactly 4.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In the n-th row 0 &lt;= 2k &lt;= n.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jason Kimberley, &lt;a href=&quot;/A185644/b185644.txt&quot;&gt;Table of n, a(i)=E(n,k) for i = 1..139 (n = 1..22)&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jason Kimberley, &lt;a href=&quot;/wiki/User:Jason_Kimberley/E_k-reg_girth_eq_g_index&quot;&gt;Index of sequences counting not necessarily connected k-regular simple graphs with girth exactly g&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="E" cd="A185644"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A186734"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMR xref="A210704"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,noting the differing row lengths .
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="E" cd="A185644"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A185304"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMR xref="A185305"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,noting the differing row lengths .
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 01: 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 02: 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 03: 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 04: 0, 0, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 05: 0, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 06: 0, 0, 0, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 07: 0, 0, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 08: 0, 0, 1, 2, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 09: 0, 0, 1, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10: 0, 0, 0, 5, 2, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11: 0, 0, 1, 0, 2, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 12: 0, 0, 2, 21, 12, 1, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 13: 0, 0, 2, 0, 31, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 14: 0, 0, 3, 103, 220, 7, 1, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 15: 0, 0, 3, 0, 1606, 0, 1, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 16: 0, 0, 5, 752, 16829, 388, 9, 1, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 17: 0, 0, 5, 0, 193900, 0, 6, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 18: 0, 0, 7, 7385, 2452820, 406824, 267, 8, 1, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 19: 0, 0, 8, 0, 32670331, 0, 3727, 0, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 20: 0, 0, 11, 91939, 456028487, 1125022326, 483012, 741, 13, 1, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 21: 0, 0, 12, 0, 6636066126, 0, 69823723, 0, 1, 0, 0;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 22: 0, 0, 16, 1345933, 100135577863, 3813549359275, 14836130862, 2887493, ?, 14, 1;</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> The sum of the n-th row of this sequence is A198314(n).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Not necessarily connected k-regular simple graphs girth exactly 4: A198314 (any k), this sequence (triangle); fixed k: A026797 (k=2), A185134 (k=3), A185144 (k=4).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard,tabf</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,23</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jason Kimberley_, Feb 22 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

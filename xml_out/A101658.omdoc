@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A101658.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A101658">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,8,16,160,640,6400,12800,25600,256000,1024000,4096000,16384000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 163840000,327680000,655360000,2621440000,5242880000,10485760000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 104857600000,419430400000,1677721600000,3355443200000,13421772800000</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n)=Product{k=0..n, 1+3^A101650(k)}/2.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Barry_, Dec 10 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

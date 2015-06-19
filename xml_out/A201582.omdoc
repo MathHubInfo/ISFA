@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A201582.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A201582">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,0,3,2,6,4,5,4,1,8,3,8,8,7,5,6,1,8,8,6,7,5,3,2,5,6,3,6,8,0,2,6,0,8,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9,3,2,8,4,6,7,2,3,6,2,6,7,4,9,9,7,1,8,5,9,8,5,1,9,8,4,5,6,7,7,8,0,6,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7,1,1,3,4,1,9,9,2,4,2,2,5,0,4,2,5,5,8,4,3,8,8,9,8,8,9,7,1,0,4</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of greatest x satisfying x^2=csc(x) and 0&lt;x&lt;pi.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A201564 for a guide to related sequences.  The Mathematica program includes a graph.</CMP>
+    </omtext><assertion class="example">
+      <CMP> least:  1.068223544197249018283471114263092898468...</CMP>
+    </assertion><assertion class="example">
+      <CMP> greatest:  3.032645418388756188675325636802608932...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a = 1; c = 0;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[x_] := a*x^2 + c; g[x_] := Csc[x]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Plot[{f[x], g[x]}, {x, 0, Pi}, {AxesOrigin -&gt; {0, 0}}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> r = x /. FindRoot[f[x] == g[x], {x, .1, .2}, WorkingPrecision -&gt; 110]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[r]   (* A196617 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> r = x /. FindRoot[f[x] == g[x], {x, 3.0, 3.1}, WorkingPrecision -&gt; 110]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[r]   (* A201582 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A201564, A196617.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Dec 03 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

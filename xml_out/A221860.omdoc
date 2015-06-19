@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A221860.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A221860">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,15,39,2119,4189897,5812974437</CMP>
+    </omtext><omtext class="name">
+      <CMP> Indices k such that prime(k) - k is a power of 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The only primes in this sequence below primepi(10^8) are 2, 3 and 4189897.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> prime(5812974437) - 5812974437 = 2^37. - _Giovanni Resta_, Apr 10 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;http://list.seqfan.eu/pipermail/seqfan/2013-April/011029.html&quot;&gt;Re: 2^k - prime(p) or prime(p) - 2^k ?&lt;/a&gt;, SeqFan mailing list, Apr 10 2013</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000040"/>
+      <OMA>
+      <OMS name="a" cd="A221860"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A221860"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="floor" cd="A221860"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="log" cd="A221860"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMR xref="A000040"/>
+      <OMA>
+      <OMS name="a" cd="A221860"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for all <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI) n=0;forprime(p=1,10^8,n++;(t=p-n)==1&lt;&lt;valuation(t,2)&amp;print1(n&quot;,&quot;))</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _M. F. Hasler_, Apr 10 2013</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(8) from _Giovanni Resta_, Apr 10 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A246776.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A246776">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,0,4,2,6,4,3,9,5,8,11,9,7,8,13,9,12,14,10,13,11,10,15,17,15,17,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 15,5,17,15,20,11,20,16,16,19,17,17,22,13,22,20,22,12,13,22,24,22,20,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 24,16,21,21,21,25,21,23,25,17,14,25,27,24,14,23,20,28,26</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = floor(prime(n)^(1+1/n)) - prime(n+1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Firoozbakht Conjecture, &quot;prime(n)^(1/n) is a strictly decreasing function of n&quot; is true if and only if a(n) is nonnegative for all n, n&gt;1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A246777 is a hard subsequence of this sequence.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 18 is not in the sequence. It seems that, 18 is the only nonnegative integer which is not in the sequence.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Paulo Ribenboim, The little book Of bigger primes, second edition, Springer, 2004, p. 185.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Carlos Rivera, &lt;a href=&quot;http://www.primepuzzles.net/conjectures/conj_030.htm&quot;&gt;Conjecture 30&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Kourbatov, &lt;a href=&quot;http://arxiv.org/abs/1503.01744&quot;&gt;Verification of the Firoozbakht conjecture for primes up to four quintillion&lt;/a&gt;, arXiv:1503.01744 [math.NT], 2015</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Prime_gap&quot;&gt;Prime gap&lt;/a&gt;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Firoozbakht%E2%80%99s_conjecture&quot;&gt;Firoozbakht Conjecture&lt;/a&gt;.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A246776"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A249669"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A000040"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Reinhard Zumkeller_ ,Nov 16 2014 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Table[Floor[Prime[n]^(1+1/n)]-Prime[n+1],{n,70}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a246776 n = a249669 n - a000040 (n + 1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Nov 16 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A001223, A005669, A246777, A246778.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A249669.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Farideh Firoozbakht_, Sep 26 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

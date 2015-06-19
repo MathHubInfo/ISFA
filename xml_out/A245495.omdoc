@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A245495.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A245495">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 103,4441,36650881,5787936001,19702293811201,1075342687614074880001,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8547762518578406446202880000001,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 59043709472234119545920159524322926688993280000000001,698533028148544417308552639358841460358000936394290829866303488000000000001</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes of the form  n! - (n+1)! + (n+2)! + 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The next term a(10) has 95 digits which is too large to show in data section.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(16) has 1181 digits, hence not included in b-file.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Primes for indices 3, 5, 9, 11, 14, 20, 27, 41, 54, 65, 81, 83, 105, 315, 323, 515, ... - _Robert G. Wilson v_, Aug 07 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. D. Bajpai, &lt;a href=&quot;/A245495/b245495.txt&quot;&gt;Table of n, a(n) for n = 1..15&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> m = 3: m! - (m+1)! + (m+2)! + 1 = 103, which is prime, hence appears in the sequence.</CMP>
+    </assertion><assertion class="example">
+      <CMP> m = 5: m! - (m+1)! + (m+2)! + 1 = 4441, which is prime, hence appears in the sequence.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Select[Table[n! - (n + 1)! + (n + 2)! + 1, {n, 200}], PrimeQ[#] &amp;]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a(n) = p=n!-(n+1)!+(n+2)!+1;if(ispseudoprime(p),return(p))</CMP>
+    </omtext><omtext class="program">
+      <CMP> n=1;while(n&lt;100,if(a(n),print1(a(n),&quot;, &quot;));n++) \\ _Derek Orr_, Jul 27 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A049984, A049432.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _K. D. Bajpai_, Jul 24 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

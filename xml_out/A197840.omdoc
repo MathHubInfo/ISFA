@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A197840.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A197840">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,1,3,2,5,7,3,4,7,0,7,5,3,8,6,8,3,0,8,1,9,8,4,4,1,7,0,5,3,6,2,8,0,6,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,2,1,0,5,5,1,8,5,3,1,5,3,8,1,1,1,8,0,1,1,7,2,6,0,4,0,6,9,4,2,3,3,7,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8,0,0,3,2,1,2,4,7,6,1,8,2,7,0,6,7,2,4,2,3,5,8,4,3,9,1,8,1,4,3</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of greatest x having x^2-4x=-cos(x).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A197737 for a guide to related sequences.  The Mathematica program includes a graph.</CMP>
+    </omtext><assertion class="example">
+      <CMP> least x: 0.25839214437159967402757423807386027526101...</CMP>
+    </assertion><assertion class="example">
+      <CMP> greatest x: 4.13257347075386830819844170536280612105...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a = 1; b = -4; c = -1;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[x_] := a*x^2 + b*x; g[x_] := c*Cos[x]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Plot[{f[x], g[x]}, {x, -1, 5}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> r1 = x /. FindRoot[f[x] == g[x], {x, -4.2, -4.1}, WorkingPrecision -&gt; 110]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[r1] (* A197839 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> r2 = x /. FindRoot[f[x] == g[x], {x, 4.1, 4.2}, WorkingPrecision -&gt; 110]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> RealDigits[r2] (* A197840 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A197737.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Oct 20 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A254277.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A254277">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,8,1,7,9,4,0,3,2</CMP>
+    </omtext><omtext class="name">
+      <CMP> Decimal expansion of classical electron radius in m.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 2.817 940 3267(27) * 10^-15 m according to CODATA 2010.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(-5) is 4, 5, 6, 7, 8 or 9.</CMP>
+    </omtext><omtext class="link">
+      <CMP> NIST, &lt;a href=&quot;http://physics.nist.gov/cgi-bin/cuu/Value?re&quot;&gt;CODATA Value: classical electron radius&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> -14,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ivan Panchenko_, Jan 27 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

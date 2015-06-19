@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A079062.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A079062">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,11,19,23,31,47,79,83,211,227,263,271,307,311,347,379,383,419,547,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 563,571,587,619,683,691,727,743,751,787,823,827,859,863,991,1091</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(1) = 2; for n&gt;1, a(n) = smallest prime p such that p - a(n-1) = a^b for some positive integers a,b &gt; 1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A079062/b079062.txt&quot;&gt;Table of n, a(n) for n=1..1000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Start with 2. 2 + 3^2 = 11 is a prime and there is no smaller such prime, so 11 is the next number. 11 + 2^3 = 19 is a prime and there is no smaller such prime, so 19 comes next, etc.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> a[1] = 2; a[n_] := a[n] = Catch[ For[p = NextPrime[a[n-1]], True, p = NextPrime[p], q = p - a[n-1]; test = Catch[ Do[ If[q == a^b, Throw[True]], {a, 2, Ceiling[Sqrt[q]]}, {b, 2, Ceiling[Log[2, q]]}]]; If[test === True, Throw[p]]]]; Table[a[n], {n, 1, 35}] (* _Jean-François Alcover_, Jul 13 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a079062 n = a079062_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a079062_list = 2 : f 2 (tail a000040_list) where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    f x ps = q : f q qs where</CMP>
+    </omtext><omtext class="program">
+      <CMP>      (q:qs) = dropWhile (\p -&gt; a075802 (p - x) == 0 || p - x == 1) ps</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Jun 14 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A075802, A000040.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nice,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Fabian Rothelius_, Feb 02 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

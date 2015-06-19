@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A082169.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A082169">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,4,7,1,9,56,142,1,16,207,1780,5941,1,25,544,9342,103392,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 428856,1,36,1175,32848,709893,9649124,47885899,1,49,2232,91150,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3142528,82305144,1329514816,7685040448,1,64,3871,215892,10682325,440535696</CMP>
+    </assertion><omtext class="name">
+      <CMP> Deterministic completely defined quasi-acyclic automata with 2 inputs, n transient and k absorbing labeled states.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Array read by antidiagonals: (0,1),(0,2),(1,1),(0,3),... The first column is A082157.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> V. A. Liskovets, Exact enumeration of acyclic automata, Proc. 15th Conf. &quot;Formal Power Series and Algebr. Combin. (FPSAC'03)&quot;, 2003.</CMP>
+    </omtext><omtext class="link">
+      <CMP> V. A. Liskovets, &lt;a href=&quot;http://dx.doi.org/10.1016/j.dam.2005.06.009&quot;&gt;Exact enumeration of acyclic deterministic automata&lt;/a&gt;,Discrete Appl. Math., 154, No.3 (2006), 537-551.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A082169"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="T_2" cd="A082169"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T_2" cd="A082169"/>
+      <OMI>0</OMI><OMV name="k"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T_2" cd="A082169"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="i"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="binomial" cd="A082169"/>
+      <OMV name="n"/><OMV name="i"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="i"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="i"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="i"/></OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="T_2" cd="A082169"/>
+      <OMV name="i"/><OMV name="k"/>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>;
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> The array begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 1 1 1 1 1 1 1 1 - k=0</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1 4 9 16 25 36 49 64 81 - k=1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7 56 207 544 1175 2232 3871 6272 9639 - k=2</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A082161.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Valery A. Liskovets_, Apr 09 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

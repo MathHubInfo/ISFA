@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A017066.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A017066">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,64,256,576,1024,1600,2304,3136,4096,5184,6400,7744,9216,10816,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 12544,14400,16384,18496,20736,23104,25600,28224,30976,33856,36864,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 40000,43264,46656,50176,53824,57600,61504,65536,69696,73984,78400</CMP>
+    </assertion><omtext class="name">
+      <CMP> (8n)^2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A017066/b017066.txt&quot;&gt;Table of n, a(n) for n = 0..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/Sindx_Rea.html#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (3,-3,1).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> LinearRecurrence[{3, -3, 1}, {0, 64, 256}, 50] (* _Vincenzo Librandi_, Feb 10 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [(8*n)^2: n in [0..35]]; // Vincenzo Librandi, Jul 10 2011</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A162799.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A162799">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,2,2,2,4,8,14,8,4,2,4,8,14,14,16,20,38,58,88,36,12,8,6,10,14,14,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16,20,38,58,88,54,42,44,68,90,124,112,134,166,292,372,500,192,76,84,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 66,48,28,30,32,28,42,60,88,54,42,44,68,90,124,112,134,166,292,372,500,246</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = A160161(n+2)/4.</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, Omar E. Pol and N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/tooth.pdf&quot;&gt;The Toothpick Sequence and Other Sequences from Cellular Automata&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. J. A. Sloane, &lt;a href=&quot;http://neilsloane.com/doc/toothlist.html&quot;&gt;Catalog of Toothpick and Cellular Automata Sequences in the OEIS&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A162799"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A162798"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A139250, A139251, A160160, A160161, A162798.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Omar E. Pol_, Jul 28 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

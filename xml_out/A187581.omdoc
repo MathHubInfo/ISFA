@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A187581.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A187581">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,8,11,12,15,18,21,24,27,28,31,34,37,38,41,44,47,50,53,54,57,60,63,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 66,69,70,73,76,79,80,83,86,89,92,95,96,99,102,105,106,109,112,115,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 118,121,122,125,128,131,134,137,138,141,144,147,148,151,154,157,160,163,164,167,170,173,176,179,180,183,186,189,190,193,196,199,202,205,206,209,212,215,216,219</CMP>
+    </assertion><omtext class="name">
+      <CMP> Complement of A187580.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A187224 and A187580.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (See A187580.)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A187224, A187580.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Mar 11 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

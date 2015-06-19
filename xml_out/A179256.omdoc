@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A179256.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A179256">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,11,29,6421,149,521,84913,1949,1277,43391,1151,4547,933151,2999,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6947,1568867,10007,32297,4131223,25301,78779,12809491,91079,28277,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13626407,35729,117497,37305881,399851,102761,217795433,288647,296909,240485461,173429,1026029,213158501,1053179,371027,1163010421,1885151,461801,1661688551,1155821,576881,3403741987,4876607,4252679,10394432611,838349,1775171</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) is the smallest prime q such that (q-p)/(r-q) = n, where p&lt;q&lt;r are consecutive primes (or 0 if none exist).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Conjecture: a(n)&gt;0 for n &gt;= 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It would appear that a(3n+1) is greater than either a(3n) or a(3n+2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Records appear for a(n) for n's: 1, 2, 3, 4, 7, 13, 16, 19, 22, 25, 28, 31, 34, 40, 43, 46, 49, ..., .</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[n_] := f[n] = Block[{p = 3, q = 5, r = 7}, While[p + n*r != (n + 1) q, p = q; q = r; r = NextPrime@ r]; q]; Array[f, 33]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A179210, A179234, A168253, A001223</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Shevelev_, Jan 05 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

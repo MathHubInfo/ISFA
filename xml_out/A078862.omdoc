@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A078862.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A078862">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1901,433,647,23,31,3607,251,47,53,61,1117,73,83,727,941,733,947,331,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 131,557,353,151,157,373,167,173,601,607,3761,1033</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest primes from A031924, each belonging to those different residue class of mod 210 which are listed in A078861. Arranged according to possible least positive residues mod 210.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Several terms are equal to corresponding ones in A078861, while others are larger like: 1033=4.210+193, where r=193 is in A078861.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[x_] := Mod[Prime[x], 210] d[x_] := Prime[x+1]-Prime[x] t=Table[0, {210}]; Do[s=f[n]; If[Equal[d[n], 6]&amp;&amp;s&lt;211&amp;&amp;t[[s]]==0, t[[s]]=Prime[n]], {n, 1, 1000}]; t</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A031924, A008364, A078861, A078859-A078864.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> fini,full,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Dec 13 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

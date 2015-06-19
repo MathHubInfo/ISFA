@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A117430.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A117430">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,1,0,2,1,2,2,2,2,3,2,2,2,4,4,2,8,6,2,3,2,2,4,2,6,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 4,2,3,17,9,4,8,6,12,14,2,6,8,2,6,24,2,14,6,4,18,6,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6,16</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Integer k such that 5^n + k = A117429(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Distance from 5^n to the nearest semiprime. See also: A117416 Semiprime nearest to 3^n. A117405 Semiprime nearest to 2^n. A117387 Prime nearest to 2^n.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> a(n) = Integer k such that 5^n + k = A117429(n). a(n) = A117429(n) - 5^n. a(n) = Min{k such that A001358(i) + k = 5^n}.</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(0) = 3 because 5^0 + 3 = 4 = A001358(1) and no semiprime is closer to 5^0.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(1) = -1 because 5^1 - 1 = 4 = A001358(1) and no semiprime is closer to 5^1.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(2) = 0 because 5^2 + 0 = 25 = A001358(9), no semiprime is closer to 5^2 [this is the only 0 element].</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(3) = -2 because 5^3 - 2 = 123 = 3 * 41 = A00135842), no semiprime is closer.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(4) = 1 because 5^4 + 1 = 626 = 2 * 313, no semiprime is closer.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(5) = 2 because 5^5 + 2 = 3127 = 53 * 59, no semiprime is closer.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000079, A001358, A117387, A117405, A117406, A117416, A117429.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,sign,less</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Vos Post_, Mar 14 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

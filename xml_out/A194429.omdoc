@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A194429.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A194429">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 110,120,121,130,131,132,140,141,142,143,150,151,152,153,154,160,161,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 162,163,164,165,170,171,172,173,174,175,176,180,181,182,183,184,185,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 186,187,190,191,192,193,194,195,196,197,198,220,230,231,240,241,242,250,251,252,253,260,261,262,263,264,270,271,272,273,274,275,280,281</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that there is no i &gt;= 0 for which A053392(i) = n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The Friedman web site quotes B. J. van der Zwaag as saying that the three-digit terms are those for which the middle digit is &gt;= the sum of the other two digits.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Erich Friedman, &lt;a href=&quot;http://www2.stetson.edu/~efriedma/mathmagic/0200.html&quot;&gt;Problem of the Month (February 2000).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A053392.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Aug 24 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

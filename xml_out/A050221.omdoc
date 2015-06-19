@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A050221.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A050221">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,1,1,2,1,3,1,3,2,2,1,1,2,2,2,2,5,2,3,2,4,2,1,3,2,1,1,2,2,1,5,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,4,2,2,1,3,1,2,1,1,4,1,2,1,1,1,1,3,2,2,2,1,1,5,3,1,1,1,2,2,2,1,1,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3,1,4,1,2,2,1,3,3,1,3,1,2,1,1,3,1,1,1,2,1,3,1,1,1,2,3,1,1,2,4,4,2,4,1,3,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = number of sets of consecutive primes whose arithmetic mean is A060863(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Essentially A122821 with the 0's removed.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A050221"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A122821"/>
+      <OMA>
+      <OMR xref="A060863"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> For n=4; A060863(4) = 5. the two sets are 5/1 = 5, (3+5+7)/3 = 5. so a(4)=2.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[n_]:=Block[{i=1,j,c=0,m},While[Prime[i]&lt;=n, j=1; While[m=Sum[Prime[k],{k,i,i+j-1}]/j; If[m==n,c++ ]; m&lt;n, j++ ]; i++ ]; c]; Select[Table[f[n],{n,160}],#&gt;0&amp;] (*Chandler*)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Naohiro Nomoto_, May 08 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Ray Chandler_, Oct 03 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

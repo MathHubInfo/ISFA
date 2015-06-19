@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A049596.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A049596">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,5,11,17,23,29,31,41,43,47,53,59,71,83,89,101,107,113,127,131,137,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 149,157,167,173,179,191,197,223,227,229,233,239,251,257,263,269,277,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 281,283,293,311,317,347,353,359,383,389,397,401,419,431,439,443,449</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes p such that x^9 = 2 has a solution mod p.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Coincides with sequence of &quot;primes p such that x^27 = 2 has a solution mod p&quot; for first 339 terms, then diverges.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Complement of A059262 relative to A000040. - _Vincenzo Librandi_, Sep 15 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. J. Mathar, &lt;a href=&quot;/A049596/b049596.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Pri#smp&quot;&gt;Index entries for related sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> ok[p_]:= Reduce[Mod[x^9 - 2, p] == 0, x, Integers] =!= False; Select[Prime[Range[100]], ok] (* _Vincenzo Librandi_, Sep 15 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(500) | exists(t){x : x in ResidueClassRing(p) | x^9 eq 2}]; // _Vincenzo Librandi_, Sep 15 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A001132, A059262.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A083311.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A083311">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,3,1,2,2,2,2,2,2,2,2,3,2,1,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,2,2,2,2,2,3,2,2,1,2,2,2,2,2,2,3,2,2,2,1,2,2,2,2,2,3,2,2,2,2,1,2,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2,2,3,2,2,2,2,2,1,2,2,2,3,2,2,2,2,2,2,1,2,2,3,2,2,2,2,2,2,2,2,1,1,2,2,2,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> Minimal number of edit-steps (insert, delete, substitute) to obtain in decimal representation the least number greater n that contains all digits of n (A083310).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = LD-10(n, A083310(n)), where LD-10 is the Levenshtein distance on decimal strings.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Michael Gilleland, &lt;a href=&quot;http://www.merriampark.com/ld.htm&quot;&gt;Levenshtein Distance&lt;/a&gt;. [It has been suggested that this algorithm gives incorrect results sometimes. - _N. J. A. Sloane_]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,12</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Apr 24 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A054655.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A054655">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,5,6,1,12,47,60,1,22,179,638,840,1,35,485,3325,11274,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 15120,1,51,1075,11985,74524,245004,332640,1,70,2086,34300,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 336049,1961470,6314664,8648640,1,92,3682,83720,1182769</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle T(n,k) giving coefficients in expansion of n!*binomial(x-n,n) in powers of x.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A054655"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMV name="n"/>
+    </OMA><OMV name="n"/>
+    </OMA></OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="Sum" cd="A054655"/>
+      <OMA>
+      <OMS name="T" cd="A054655"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>..n .
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 1; 1,-1; 1,-5,6; 1,-12,47,-60; ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> a054655_row := proc(n) local k; seq(coeff(expand((-1)^n*pochhammer (n-x,n)),x,n-k),k=0..n) end: [Peter Luschny, Nov 28 2010]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> row[n_] := Table[ Coefficient[(-1)^n*Pochhammer[n - x, n], x, n - k], {k, 0, n}]; A054655 = Flatten[ Table[ row[n], {n, 0, 8}]] (* _Jean-François Alcover_, Apr 06 2012, after Peter Luschny *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) T(n,k)=polcoeff(n!*binomial(x-n,n), n-k)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A054651, A054654, A008276.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,tabl,easy,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Apr 18 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

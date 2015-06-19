@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A168269.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A168269">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,3,7,7,11,11,15,15,19,19,23,23,27,27,31,31,35,35,39,39,43,43,47,47,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 51,51,55,55,59,59,63,63,67,67,71,71,75,75,79,79,83,83,87,87,91,91,95,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 95,99,99,103,103,107,107,111,111,115,115,119,119,123,123,127,127,131,131</CMP>
+    </assertion><omtext class="name">
+      <CMP> 2*n-(-1)^n.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A168269/b168269.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1,1,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.[<OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Jan 05 2011 ]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A168269"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A168269"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A168269"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A168269"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Vincenzo Librandi_ ,Sel <OMOBJ>
+        <OMA><OMS name="times"/><OMI>16</OMI><OMI>2013</OMI></OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> CoefficientList[Series[(3 + x^2)/((1 + x) (x - 1)^2), {x, 0, 70}], x] (* _Vincenzo Librandi_, Sep 16 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [2*n-(-1)^n: n in [1..70]]; // _Vincenzo Librandi_, Sep 16 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A004767.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vincenzo Librandi_, Nov 22 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> New definition by _R. J. Mathar_, Jan 05 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

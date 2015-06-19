@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A206602.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A206602">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,11,14,36,57,141,221,346,677,4042,9870,114916,179557,1070250,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2612917,9967491,12459364,19467757,30418371,38022964,59410882,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 116036880,283293166,553306966,864542135,1080677669,3297966522,8051676081,15725929847,19657412309,47991729272</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) is the number of white and black stones lying in a circle; starting with place 1, the first a(n) steps of length 5 give the places of white stones. Beginning with last place, the next a(n) steps give the places of black stones.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The game eliminates (a(n)-1) white and a(n) black stones; the a(n)-th white stone survives. The game is known under different names; e.g. &quot;Sankt Peters Spiel&quot; or &quot;Ludus Sancti Petri&quot; or &quot;Josephus problem&quot;.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It gives sequences for every step length s from 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> s=2: a(n)=2^n-1;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> s=3: 3,5,8,30,69,104,354,798,1797,2696,9102,20481.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Baumann, Computer Knobelei, LOG IN, 165(2010), 68-71.</CMP>
+    </omtext><assertion class="example">
+      <CMP> The solution for a(3) = 11: (WBWBWBWBWWBBBWWWBBBWBW);</CMP>
+    </assertion><assertion class="example">
+      <CMP> White stones: (5,10,15,20,3,9,16,22,7,14,1);</CMP>
+    </assertion><assertion class="example">
+      <CMP> Black stones: (8,18,4,17,6,21,13,12,20,2,11).</CMP>
+    </assertion><omtext class="maple">
+      <CMP> s:=5: s1:=s-1: a:=1:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for p from 2 to 100000 by 2 do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   b:=(a+s1) mod p +1:</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   if (b=1) then printf(&quot;%9d&quot;,p-1): end if:</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   a:=(b+s1) mod (p+1) +1:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> if (a=1) then printf(&quot;%9d&quot;,p): end if:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> end do:</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Weisenhorn_, Feb 10 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

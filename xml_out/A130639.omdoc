@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A130639.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A130639">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,41,1121,80977,5073377,984765497,131026429249,45819745767329,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9199822716980033,5303459200225973833,1646226697154555000993,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1377111876294420026771441,574027598120143165861124641,675477754387947155701063431257,381022545331716847279242552317057</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of degree-2n permutations without even cycles and such that number of cycles of size 2k-1 is even (or zero) for every k.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A130639/b130639.txt&quot;&gt;Table of n, a(n) for n = 0..220&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      E.g.f .:<OMOBJ>
+        <OMBIND>
+          <OMA>
+            <OMS name="Product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="cosh" cd="A130639"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="k"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(2)=1 because we have (1)(2)(3)(4).</CMP>
+    </assertion><omtext class="maple">
+      <CMP> g:=product(cosh(x^(2*k-1)/(2*k-1)),k=1..40): gser:=series(g,x=0,35): seq(factorial(2*n)*coeff(gser,x,2*n),n=0..14); # _Emeric Deutsch_, Aug 25 2007</CMP>
+    </omtext><omtext class="maple">
+      <CMP> # second Maple program:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(combinat):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> b:= proc(n, i) option remember; `if`(n=0, 1, `if`(i&lt;1, 0, add(</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       `if`(j=0 or irem(i, 2)=1 and irem(j, 2)=0, multinomial(n,</CMP>
+    </omtext><omtext class="maple">
+      <CMP>        n-i*j, i$j)*(i-1)!^j/j!*b(n-i*j, i-1), 0), j=0..n/i)))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; b(2*n$2):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..20);  # _Alois P. Heinz_, Mar 09 2015</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A060307.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladeta Jovovic_, Aug 11 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Emeric Deutsch_, Aug 25 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

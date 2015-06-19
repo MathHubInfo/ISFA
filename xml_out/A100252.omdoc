@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A100252.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A100252">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 36,4,9801,1225,81,225,9,0,196,64,36,441,3025,16,17689,100,484,0,2601,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 729,68121,225,25,7225,25921,81,1225,203401,441,1089,4761,196,15376,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 36,1936,511225,784,576,55071241,47089,1156,256,529046001,2916,1134225</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least square n-gonal number greater than 1, or 0 if none exists.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also, let j be the smallest integer for which 1+(1+1*n)+(1+2*n)+... +(1+j*n)=k^2=s. Then a(n)=s; if no such j exists, then a(n)=0. Basis for sequence is shortest arithmetic series with initial term 1 and difference n that sums to a perfect square.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A100251 and A188898 for the corresponding indices of these terms. Note that a(n) is zero for n = 10, 20, 52 (numbers in A188896). Although the Mathematica program searches only the first 25000 square numbers for n-gonal numbers, the Reduce function can show that there are no square n-gonal numbers (other than 0 and 1) for these n. - T. D. Noe, Apr 19 2011</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A100252/b100252.txt&quot;&gt;Table of n, a(n) for n = 3..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric W. Weisstein, &lt;a href=&quot;http://mathworld.wolfram.com/PolygonalNumber.html&quot;&gt;MathWorld: Polygonal Number&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric W. Weisstein, &lt;a href=&quot;http://mathworld.wolfram.com/SquareNumber.html&quot;&gt;MathWorld: Square Number&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>1</OMI><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMR xref="A100254"/>
+      <OMV name="n"/>
+    </OMA><OMV name="n"/></OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>1</OMI><OMV name="n"/></OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMS name="..." cd="arithmetics"></OMS><OMA>
+      <OMR xref="A100253"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A100251"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="a" cd="A100252"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(3)=9801 since 1 + 4 + 7 +...+ (1+80*3)= 99^2 = 9801 and no other arithmetic series with initial term 1, difference 3 and fewer terms sums to a perfect square.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> NgonIndex[n_, v_] := (-4 + n + Sqrt[16 - 8*n + n^2 - 16*v + 8*n*v])/(n - 2)/2; Table[k = 2; While[sqr = k^2; i = NgonIndex[n, sqr]; k &lt; 25000 &amp;&amp; ! IntegerQ[i], k++]; If[k == 25000, k = sqr = i = 0]; sqr, {n, 3, 64}] - T. D. Noe, Apr 19 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000290 (squares), A188891 (similar sequence for triangular numbers).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 3,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Charlie Marion_, Nov 21 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

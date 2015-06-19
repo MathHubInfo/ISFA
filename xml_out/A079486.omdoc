@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A079486.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A079486">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,15,103,879,8787,99061,1227369,16409937,233588249,3504149013,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 54963273921,895797910129</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of different solutions to a variant of the 3-ball tennis ball problem.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> You're given labeled balls three at time (labeled 1,2,3 then 4,5,6 etc.), choose two balls from those still on hand (including the three you've just been given) and throw the larger out the window onto the front lawn, the smaller onto the back lawn.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Larger numbers computed by Matt Richey.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="a" cd="A079486"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>is the number of <OMOBJ>
+        <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+      </OMOBJ>matrices of positive integers ,with the numbers in each row and column increasing ,the numbers in column <OMOBJ>
+        <OMV name="k"/>
+      </OMOBJ>less than or equal to <OMOBJ>
+        <OMA><OMS name="times"/><OMI>3</OMI><OMV name="k"/></OMA>
+      </OMOBJ>and no number used more than once .
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A000108, A001764, A002293, A049235.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Barry Cipra_, Jan 19 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

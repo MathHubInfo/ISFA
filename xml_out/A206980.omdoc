@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A206980.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A206980">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,16,58,556,7500,119224,2926752,111202694,5582239354,398193149976,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 43178426815216,6623459579619334,1414003622686654366,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 443957184641073369216</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nXn 0..1 arrays avoiding the patterns 0 1 0 or 1 0 1 in any row, column, diagonal or antidiagonal</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Diagonal of A206987</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..0..0....0..1..1..1....1..0..0..1....1..1..0..0....1..1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0....1..1..1..0....0..0..0..1....0..0..0..0....1..0..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..1....1..1..1..0....0..0..0..1....0..0..0..0....0..0..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..1..1....0..1..1..0....1..0..0..1....1..0..0..0....0..0..0..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Feb 14 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

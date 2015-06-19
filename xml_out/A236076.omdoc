@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A236076.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A236076">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,2,0,1,3,0,0,3,5,0,0,1,7,8,0,0,0,4,15,13,0,0,0,1,12,30,21,0,0,0,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5,31,58,34,0,0,0,0,1,18,73,109,55,0,0,0,0,0,6,54,162,201,89,0,0,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,1,25,145,344,365,144,0,0,0,0,0,0,7,85,361</CMP>
+    </assertion><omtext class="name">
+      <CMP> A skewed version of triangular array A122075.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Triangle T(n,k), 0&lt;=k&lt;=n, read by rows, given by (0, 1/2, -1/2, 0, 0, 0, 0, 0, 0, 0, ...) DELTA (2, -1/2, -1/2, 0, 0, 0, 0, 0, 0, 0, ...) where DELTA is the operator defined in A084938.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Subtriangle of the triangle A122950.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A236076/b236076.txt&quot;&gt;Rows n = 0..125 of triangle, flattened&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Fuks and J.M.G. Soto, &lt;a href=&quot;http://arxiv.org/abs/1306.1189&quot;&gt;Exponential convergence to equilibrium in cellular automata asymptotically emulating identity&lt;/a&gt;, arXiv preprint arXiv: 1306.1189, 2013</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMV name="x"/><OMV name="y"/></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMV name="x"/><OMV name="y"/></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="y"/></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="y"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMI>0</OMI><OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMI>1</OMI><OMI>0</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMI>1</OMI><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>if <OMOBJ>
+        <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>or if <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMV name="k"/>
+                  <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMV name="k"/>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+              </OMA>
+          </OMA>
+          
+        <OMA>
+          <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A000079"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMV name="n"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMV name="k"/>
+    </OMA>
+              </OMA>
+          </OMA>
+          
+        <OMA>
+          <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A078057"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A001333"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMV name="n"/><OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="Fibonacci" cd="A236076"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A000045"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A023610"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A236076"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A129707"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 1, 3;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 0, 3, 5;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 0, 1, 7, 8;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 0, 0, 4, 15, 13;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 0, 0, 1, 12, 30, 21;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0, 0, 0, 0, 5, 31, 58, 34;</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a236076 n k = a236076_tabl !! n !! k</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a236076_row n = a236076_tabl !! n</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a236076_tabl = [1] : [0, 2] : f [1] [0, 2] where</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>    f us vs = ws : f vs ws where</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>      ws = [0] ++ zipWith (+) (zipWith (+) ([0] ++ us) (us ++ [0])) vs</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> -- _Reinhard Zumkeller_, Jan 19 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. Variant : A055830, A122075, A122950, A208337</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A167704 (diagonal sums), A000079 (row sums)</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A111006.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Philippe Deléham_, Jan 19 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

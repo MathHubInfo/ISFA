@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A213182.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A213182">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 10100,10101,10102,10103,10104,10105,10106,10107,10108,10109,10110,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10111,10112,10113,10114,10115,10116,10117,10118,10119,10120,10121,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 10122,10123,10124,10125,10126,10127,10128,10129,10130,10131,10132,10133,10134,10135,10136,10137,10138,10139,10140</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers which may represent a date in &quot;condensed European notation&quot; DDMMYY.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The &quot;may&quot; in the definition should clarify that, e.g., 290200 is in the sequence since it may represent a date, but not necessarily in any century.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence is finite, the largest term is a(36525)=311299.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> There are 366*25 + 365*75 = 36525 possible dates. - _Giovanni Resta_, Feb 28 2013</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1)=10100 represents e.g., Jan 01 1900 or Jan 01 2000.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(100)=10199 (for Jan 01 1999) is followed by a(101)=10200 (for Feb 01 2000).</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(1200)=11299 (for Dec 01 1999) is followed by a(1201)=20100 (for Jan 02 2000).</CMP>
+    </assertion><assertion class="example">
+      <CMP> The sequence becomes more interesting after the term 281299, since then the numbers DD02YY drop out for DD &gt; 29 and for DD = 29 depending on YY.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A213184; A106605, A107273, A107275; A210883, A210884, A210885.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,fini</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _M. F. Hasler_, Feb 27 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

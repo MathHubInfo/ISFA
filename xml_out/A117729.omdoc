@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A117729.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A117729">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,4,5,6,7,9,10,11,14,18,19,22,23,27,38,46,47,54,81,94,162,163,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 243,326,486,487,729,974,1458,1459,2187,2918,4374,6561,13122,19683,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 39366,39367,59049,78734,118098,177147,354294,531441,1062882,1594323,3188646,4782969</CMP>
+    </assertion><omtext class="name">
+      <CMP> Orders n of cyclic groups C_n such that the map &quot;G -&gt; Automorphism group of G&quot; eventually reaches the trivial group when started at C_n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If the map &quot;G -&gt; Automorphism group of G&quot; eventually reaches the trivial group, then the initial group IS a cyclic group.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Consists of the following numbers :
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="i"/>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="i"/>
+    </OMA></OMA>
+      </OMOBJ>for all <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      if <OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="i"/>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA>
+      </OMOBJ>is a prime ,then also <OMOBJ>
+        <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="i"/>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>3</OMI>
+      <OMV name="i"/>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA></OMA>
+      </OMOBJ>,
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      the exceptional entries <OMOBJ>
+        <OMI>4</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>5</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>10</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>11</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>22</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>23</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>46</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>47</OMI>
+      </OMOBJ>and <OMOBJ>
+        <OMI>94</OMI>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> t1:={ 4, 5, 10, 11, 22, 23, 46, 47, 94}; for i from 0 to 30 do t1:={op(t1),3^i, 2*3^i}; if isprime(2*3^i+1) then t1:={op(t1), 2*3^i+1, 2*(2*3^i+1)}; fi; od: convert(t1,list); sort(%);</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, based on a communication from _J. H. Conway_, Apr 14 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

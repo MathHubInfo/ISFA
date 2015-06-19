@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A235114.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A235114">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,1,1,6,10,6,1,1,9,28,40,28,9,1,1,12,55,129,170,129,55,12,1,1,15,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 91,300,597,748,597,300,91,15,1,1,18,136,580,1560,2783,3368,2783,1560,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 580,136,18,1,1,21,190,996,3391,7923,13067,15418,13067,7923,3391,996,190,21,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Irregular triangle read by rows: T(n,k) = number of independent vertex subsets of size k of the graph g_n obtained by attaching two pendant edges to each vertex of the star graph S_n (having n vertices).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sum of entries in row n = 4*5^{n-1} + 4^{n-1} (n&gt;=1) (see A235115).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In the Maple program P[n] gives the independence polynomial of the graph g_n.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. Mandrescu, Unimodality of some independence polynomials via their palindromicity, Australasian J. of Combinatorics, 53, 2012, 77-82.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Stevanovic, Graphs with palindromic independence polynomial, Graph Theory Notes of New  York, 34, 1998, 31-36.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Generating polynomial of row n (n&gt;=1) is x(1 + x)^{2n-2} + (1 + x)^2*(1 + 3*x + x^2)^{n-1}  (it is palindromic).</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Bivariate generating polynomial :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="G" cd="A235114"/>
+      <OMV name="x"/><OMV name="z"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="z"/><OMA><OMS name="times"/><OMI>2</OMI><OMV name="xz"/></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="z"/></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="z"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="z"/><OMA><OMS name="times"/><OMI>2</OMI><OMV name="xz"/></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="z"/></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="z"/><OMA><OMS name="times"/><OMI>3</OMI><OMV name="xz"/></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="z"/></OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="G" cd="A235114"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="z"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="G" cd="A235114"/>
+      <OMV name="x"/><OMV name="z"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>(this implies the above mentioned <OMOBJ>
+        <OMV name="palindromicity"/>
+      </OMOBJ>).
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Row 1 is 1,3,1; indeed, S_1 is the one-vertex graph and after attaching two pendant vertices we obtain the path graph ABC; the independent vertex subsets are: empty, {A}, {B}, {C}, and {A, C}.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Triangle begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,3,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,6,10,6,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,9,28,40,28,9,1;</CMP>
+    </assertion><omtext class="maple">
+      <CMP> G := (1-z-2*x*z-x^2*z-x^2*z^2)/((1-z-2*x*z-x^2*z)*(1-z-3*x*z-x^2*z)): Gser := simplify(series(G, z = 0, 10)): for n from 0 to 9 do P[n] := sort(coeff(Gser, z, n)) end do: for n from 0 to 9 do seq(coeff(P[n], x, i), i = 0 .. 2*n) end do; # yields sequence in triangular form</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A235115.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabf</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Emeric Deutsch_, Jan 13 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

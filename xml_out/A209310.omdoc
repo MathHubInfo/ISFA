@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A209310.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A209310">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,4186,32131,52975,78210,111628,237016,247456,584821,750925,1464616,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3649051,5791906,11297881,16082956,24650731,27243271,38618866,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 46585378,51546781,56026405,76923406,89880528,96070591,126906346,164629585,201854278,228733966</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangular numbers whose sum of triangular divisors is also triangular and greater than 1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Donovan Johnson, &lt;a href=&quot;/A209310/b209310.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 4186 is in sequence because it is triangular (4186 = 91*92/2) and the sum of triangular divisors, 4186+91+1 = 4278 is also triangular (4278 = 92*93/2)</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) istriangular(n)=issquare(8*n+1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> {t=0; for(n=1, 10^8, if(istriangular(n), k=sumdiv(n, d, istriangular(d)*d) ;if(istriangular(k)&amp;&amp;k&gt;&gt;1,t+=1;write(&quot;b209310.txt&quot;,t,&quot; &quot;,n))))}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A185027, A035316, A209309.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Antonio Roldán_, Jan 18 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

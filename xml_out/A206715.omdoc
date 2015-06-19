@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A206715.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A206715">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,10,15,20,30,40,45,60,65,75,80,85,90,95,105,120,125,130,135,150,160,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 165,170,175,180,190,195,210,215,225,235,240,245,250,255,260,270,300,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 320,325,330,335,340,350,360,365,380,390,420,430,450,455,470</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers matched to polynomials divisible by x^2+1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Is this a duplicate of A131853?</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The polynomials having coefficients in {0,1} are enumerated as in A206074.  The sequence A206715 shows the numbers of those satisfying p(n,i)=0.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t = Table[IntegerDigits[n, 2], {n, 1, 3000}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> b[n_] := Reverse[Table[x^k, {k, 0, n}]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> p[n_, x_] := p[n, x] = t[[n]].b[-1 + Length[t[[n]]]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> TableForm[Table[{n, p[n, x], Factor[p[n, x]]},</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   {n, 1, 16}]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u = {}; Do[n++; If[(p[n, x] /. x -&gt; I) == 0,</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   AppendTo[u, n]], {n, 800}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u    (* A206715 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u/5  (* A206716 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A131853, A206074, A206716.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Feb 11 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

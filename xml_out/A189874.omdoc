@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A189874.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A189874">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,0,2,10,0,0,4,8,28,100,186,624,1720,7288,30666,100220,360208,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1517804,7302336,29429672,139854636,753288744</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of ways to place n nonattacking composite pieces queen + rider[1,4] on an n X n chessboard.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (in fairy chess the rider [1,4] is called a Girafferider)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is also number of permutations p of 1,2,...,n satisfying |p(i+k)-p(i)|&lt;&gt;4k AND |p(j+4k)-p(j)|&lt;&gt;k AND |p(m+k)-p(m)|&lt;&gt;k for all i&gt;=1, j&gt;=1, m&gt;=1, k&gt;=1, i+k&lt;=n, j+4k&lt;=n, m+k&lt;=n</CMP>
+    </omtext><omtext class="link">
+      <CMP> V. Kotesovec, &lt;a href=&quot;http://web.telecom.cz/vaclav.kotesovec/math.htm&quot;&gt;Number of ways of placing non-attacking queens, kings, bishops and knights&lt;/a&gt; (in English and Czech)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wikipedia, &lt;a href=&quot;http://en.wikipedia.org/wiki/Fairy_chess_piece&quot;&gt;Fairy chess piece&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A102388, A189873, A189851</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vaclav Kotesovec_, Apr 29 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A140187.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A140187">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,3,5,3,6,3,10,5,6,3,13,3,6,5,24,3,13,3,13,6,6,3,33,5,6,10,12,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 14,3,75,5,6,5,34,3,6,6,32,3,17,3,12,9,6,3,99,5,13,5,13,3,33,6,30,6,6,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3,39,3,6,12,342,5,14,3,13,5,14,3,104,3,6,10,12,5,17,3,98,25,6,3,43,5,6,5,29</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of connected groupoids (categories all of whose morphisms are invertible) with n times as many morphisms as objects.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If n&gt;1, a(n) &gt;= 2 + A000001(n) (number of groups of order n), with equality if and only if n is prime (sequence A000040).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A140187"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="sum" cd="A140187"/>
+      <OMA>
+      <OMR xref="A000001"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divisible" cd="arithemtics">
+        <OMV name="k"/>
+        <OMV name="n"/>
+      </OMS>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.(see formula for <OMOBJ>
+        <OMR xref="A140185"/>
+      </OMOBJ>)
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A140187"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sum" cd="A140187"/>
+      <OMA>
+      <OMR xref="A000001"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divisible" cd="arithemtics">
+        <OMV name="k"/>
+        <OMV name="n"/>
+      </OMS>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.(the <OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>accounts for the empty <OMOBJ>
+        <OMV name="groupoid"/>
+      </OMOBJ>;see formula for <OMOBJ>
+        <OMR xref="A140185"/>
+      </OMOBJ>)
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A140185, A140186, A140188.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Benoit Jubin_, May 12 2008, May 16 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

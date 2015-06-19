@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A024668.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A024668">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,7,10,15,21,27,35,42,51,61,71,84,95,109,122,138,155,170,189,207,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 228,247,269,291,313,338,361,388,415,442,470,498,528,559,589,623,656,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 690,726,761,799,836,877,916,956,998,1039,1084,1126,1172,1218,1264,1311,1357</CMP>
+    </assertion><omtext class="name">
+      <CMP> Position of 1 + n^3 in A003325.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

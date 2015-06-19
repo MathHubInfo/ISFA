@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A023340.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A023340">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 18257,19541,22063,48383,73037,73133,78173,88261,93811,101051,104537,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 152377,153941,162343,168043,175523,204251,211681,238463,287341,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 375253,386713,423961,659513,672181,676103,688027,741283,759491,770951,786673</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n remains prime through 5 iterations of function f(x) = 4x + 9.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> n, 4*n+9, 16*n+45, 64*n+189, 256*n+765 and 1024*n+3069 are primes. [From _Vincenzo Librandi_, Aug 05 2010]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [n: n in [1..10000000] | IsPrime(n) and IsPrime(4*n+9) and IsPrime(16*n+45) and IsPrime(64*n+189) and IsPrime(256*n+765) and IsPrime(1024*n+3069)] [From _Vincenzo Librandi_, Aug 05 2010]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A245433.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A245433">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,0,1,1,1,2,2,3,4,4,5,5,6,8,9,12,13,14,17,18,21,26,28,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 34,39,42,49,53,60,70,78,90,101,110,125,137,153,174,192,217,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 241,264,295,322,357,400,438,490,540,588,652,711,781,866,946</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of f(-x^3, -x^5)^2 / (psi(-x) * psi(x^2)) in powers of x where psi(), f() are Ramanujan theta functions.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Ramanujan theta functions: f(q) (see A121373), phi(q) (A000122), psi(q) (A010054), chi(q) (A000700).</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Somos, &lt;a href=&quot;http://cis.csuohio.edu/~somos/multiq.pdf&quot;&gt;Introduction to Ramanujan theta functions&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/RamanujanThetaFunctions.html&quot;&gt;Ramanujan Theta Functions&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Euler transform of period <OMOBJ>
+        <OMI>8</OMI>
+      </OMOBJ>sequence [<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,-<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,-<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,-<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,-<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>0</OMI>
+      </OMOBJ>,...].
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Given <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .<OMOBJ>
+        <OMA>
+      <OMS name="A" cd="A245433"/>
+      <OMV name="x"/>
+    </OMA>
+      </OMOBJ>,then <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="B" cd="A245433"/>
+      <OMV name="q"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="A" cd="A245433"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA><OMV name="q"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>satisfies <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMA>
+      <OMS name="f" cd="A245433"/>
+      <OMA>
+      <OMS name="B" cd="A245433"/>
+      <OMV name="q"/>
+    </OMA><OMA>
+      <OMS name="B" cd="A245433"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="f" cd="A245433"/>
+      <OMV name="u"/><OMV name="v"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="u"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="v"/>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="u"/>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="v"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="v"/></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="u"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="u"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="v"/></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="v"/>
+      <OMI>2</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A245433"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A111374"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A245436"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> G.f. = 1 + x - x^3 + x^4 + x^5 - 2*x^6 - 2*x^7 + 3*x^8 + 4*x^9 + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> G.f. = 1/q + q^3 - q^11 + q^15 + q^19 - 2*q^23 - 2*q^27 + 3*q^31 + ...</CMP>
+    </assertion><omtext class="program">
+      <CMP> {a(n) = if( n&lt;0, 0, polcoeff( prod(k=1, n, (1 - x^k + x * O(x^n))^[0, -1, 1, 1, -2, 1, 1, -1][k%8 + 1]), n))};</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A111374, A245436.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michael Somos_, Jul 21 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

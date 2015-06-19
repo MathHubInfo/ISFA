@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A228895.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A228895">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,4,5,6,9,11,13,14,16,17,19,22,23,27,28,31,32,33,35,37,38,39,40,43,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 45,47,48,51,52,53,55,57,59,60,62,63,65,67,70,71,73,75,78,79,80,83,84,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 85,86,87,88,92,95,97,101,102,103,106,107,113,115,118,119</CMP>
+    </assertion><omtext class="name">
+      <CMP> Nodes of tree generated as follows: (3,1) is an edge, and if (x,y) is an edge, then (y,y+x) and (y,2y+x) are edges.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The tree has infinitely many branches which are essentially linear recurrence sequences (and infinitely many which are not).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A228895/b228895.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Taking the first generation of edges to be G(1) = {(3,1)}, the edge (3,1) grows G(2) = {(1,4), (1,5)}, which grows G(3) = {(4,5), (4,9), (5,6), (5,11)}, ... Expelling duplicate nodes and sorting leave (1,2,4,5,6,9,11,...).</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[x_, y_] := {{y, x + y}, {y, x + 2 y}}; x = 3; y = 1; t = {{x, y}};</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u = Table[t = Flatten[Map[Apply[f, #] &amp;, t], 1], {12}]; v = Flatten[u];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> w = Flatten[Prepend[Table[v[[2 k]], {k, 1, Length[v]/2}], {x, y}]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Sort[Union[w]]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A228855.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Sep 08 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

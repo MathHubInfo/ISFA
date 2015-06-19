@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A189836.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A189836">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 11,12,15,20,27,36,47,60,75,92,111,132,155,180,207,236,267,300,335,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 372,411,452,495,540,587,636,687,740,795,852,911,972,1035,1100,1167,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1236,1307,1380,1455,1532,1611,1692,1775,1860,1947</CMP>
+    </assertion><omtext class="name">
+      <CMP> n^2+11.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[n^2+11,{n,0,100}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002522, A059100, A117950, A087475.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Joseph Stephan Orlovsky_, Apr 28 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

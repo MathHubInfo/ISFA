@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A120483.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A120483">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,7,9,8,9,3,6,6,3,3,5,7,5,0,2,3,8,3,2,3,2,2,7,6,0,4,1,4,3,4,1,5,0,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6,1,5,1,2,4,0,1,1,8,7,6,4,2,4,4,0,3,1,2,8,7,0,3,5,8,5,0,9,2,2,3,1,5,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3,3,9,8,6,1,6,7,2,6,6,6,9,7,2,6,4,9,5,8,0,9,0,4,0,0,9,0,7,6,6,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of s = sum_{i=1..infinity} (1/c(i))^i, where c(i) is the i-th composite number.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Sum is (1/4)^1 + (1/6)^2 + (1/8)^3 + (1/9)^4 + (1/10)^5 + ... = 0.279893663...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> k = s = 0; Do[If[ !PrimeQ[n], k++; s += (1/n)^k], {n, 2, 100}]; First[RealDigits[N[s, 100]]]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> cons,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ryan Propper_, Jul 21 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

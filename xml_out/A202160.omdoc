@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A202160.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A202160">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 588455,179998,460317,6265805,1236235,287274,949025,1436932,794871,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2013650,3797365,1169688,3739827,1587586,6872565,7706270,1529983,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7351242,2528045,5247970,487179,10920965,1316497,121894476,1404455,5814874,12223653,2260412,8022531</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = smallest k having at least five prime divisors d such that (d + n) | (k + n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence a(n) = k composite and squarefree, prime p | k ==&gt; p+n | k+n  is given by A029591 (least quasi-Carmichael number of order -n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If k is square free, for n = 1, we obtain Lucas-Carmichael numbers : A006972.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In this sequence, the majority of numbers are not square free.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(3) = 460317 because the primes divisors of 460317 are 3, 11, 13, 29, 37  =&gt;</CMP>
+    </assertion><assertion class="example">
+      <CMP> (3 + 3) | (460317 + 3) = 460320 = 6*76720;</CMP>
+    </assertion><assertion class="example">
+      <CMP> (11 + 3) | 460320 = 14*32880;</CMP>
+    </assertion><assertion class="example">
+      <CMP> (13 + 3) | 460320 = 16*28770;</CMP>
+    </assertion><assertion class="example">
+      <CMP> (29+3)  |  460320 = 32*14385;</CMP>
+    </assertion><assertion class="example">
+      <CMP> (37+3) | 460320 = 40*11508.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory):for n from 1 to 23 do:i:=0:for k from 1 to 10^8 while(i=0) do:x:=factorset(k):n1:=nops(x):y:=k+n: j:=0:for m from 1 to n1 do:if  n1&gt;=2 and irem(y,x[m]+n)=0 then j:=j+1:else fi:od:if j&gt;4 then i:=1: printf ( &quot;%d %d \n&quot;,n,k):else fi:od:od:</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A006972, A029591, A202157, A202158, A202159.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Lagneau_, Dec 13 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

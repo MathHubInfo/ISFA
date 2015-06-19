@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A233158.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A233158">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 243,1536,15552,157464,1658232,17587584,187446312,2000708640,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 21367730664,228251103552,2438324338248,26048163809952,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 278268995799144,2972714012485056,31757156984626632,339258043287199008</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 5Xn 0..2 arrays with no element x(i,j) adjacent to value 2-x(i,j) horizontally or antidiagonally</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row 5 of A233155</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A233158/b233158.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A233158"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>16</OMI><OMA>
+      <OMS name="a" cd="A233158"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>64</OMI><OMA>
+      <OMS name="a" cd="A233158"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>76</OMI><OMA>
+      <OMS name="a" cd="A233158"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>17</OMI><OMA>
+      <OMS name="a" cd="A233158"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>84</OMI><OMA>
+      <OMS name="a" cd="A233158"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>48</OMI><OMA>
+      <OMS name="a" cd="A233158"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="a" cd="A233158"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>7</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>11</OMI>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2..2..1....1..2..2..1....0..1..2..1....1..0..1..0....1..2..1..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..2..1....2..1..2..1....2..1..0..1....0..0..1..2....2..2..2..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..2..2....0..1..2..2....0..1..2..2....1..0..1..2....2..2..2..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..2..2....2..2..2..1....2..1..2..1....1..2..2..2....2..2..2..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..2..1....1..2..2..2....0..1..2..2....1..2..2..2....1..2..2..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Dec 05 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

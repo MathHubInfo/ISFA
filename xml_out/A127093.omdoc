@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A127093.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A127093">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,1,0,3,1,2,0,4,1,0,0,0,5,1,2,3,0,0,6,1,0,0,0,0,0,7,1,2,0,4,0,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,8,1,0,3,0,0,0,0,0,9,1,2,0,0,5,0,0,0,0,10,1,0,0,0,0,0,0,0,0,0,11,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2,3,4,0,6,0,0,0,0,0,12,1,0,0,0,0,0,0,0,0,0,0,0,13,1,2,0,0,0,0,7,0,0,0,0,0,0,14</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle read by rows: T(n,k)=k if k is a divisor of n; otherwise, T(n,k)=0 (1&lt;=k&lt;=n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sum of terms in row n = sigma(n) (sum of divisors of n, A000203(n)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Euler's derivation of A127093 in polynomial form is in his proof of the formula for Sigma(n): (let S=Sigma, then Euler proved that S(n) = S(n-1) + S(n-2) - S(n-5) - S(n-7) + S(n-12) + S(n-15) - S(n-22) - S(n-26),...).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> [Young, p. 365-366], Euler begins, s = (1-x)*(1-x^2)*(1-x^3)...= 1 - x - x^2 + x^5 + x^7 - x^12...; log s = log(1-x) + log(1-x^2) + log(1-x^3)...; differentiating and then changing signs, Euler has t = x/(1-x) + 2x^2/(1-x^2) + 3x^3/(1-x^3) + 4x^4/(1-x^4) + 5x^5/(1-x^5)...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Finally, Euler expands each term of t into a geometric series, getting A127093 in polynomial form: t =</CMP>
+    </omtext><omtext class="comment">
+      <CMP> x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8 + ...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..+2x^2..........+ 2x^4..........+ 2x^6.........+ 2x^8 + ...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .........+ 3x^3..................+ 3x^6.................+ ...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .................+ 4x^4.........................+ 4x^8..+ ...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .........................+ 5x^5.........................+ ...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .................................+ 6x^6.................+ ...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .........................................+ 7x^7.........+ ...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ................................................+ 8x^8..+ ...</CMP>
+    </omtext><omtext class="reference">
+      <CMP> David Wells, &quot;Prime Numbers, the Most Mysterious Figures in Math&quot;, John Wiley &amp; Sons, 2005, appendix.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Euler, &quot;Discovery of a Most Extraordinary Law of the Numbers Concerning the Sum of Their Divisors&quot;; pp. 358-367 of Robert M. Young, &quot;Excursions in Calculus, An Interplay of the Continuous and the Discrete&quot;, MAA, 1992. See p. 366.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A127093/b127093.txt&quot;&gt;Rows n=1..100 of triangle, flattened&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Divisor.html&quot;&gt;Divisor&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> k-th column is composed of &quot;k&quot; interspersed with (k-1) zeros.</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Let <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="M"/>
+      <OMA>
+      <OMR xref="A127093"/>
+      <OMV name="as"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>an infinite lower triangular matrix and <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="V"/>
+      <OMV name="the"/>
+    </OMA>
+      </OMOBJ>harmonic series as a vector :[<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>3</OMI>
+    </OMA>
+      </OMOBJ>,...].then <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMV name="M"/><OMV name="V"/></OMA>
+      <OMA>
+      <OMS name="d" cd="A127093"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMR xref="A000005"/>
+      </OMOBJ>:[<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>4</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>4</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>4</OMI>
+      </OMOBJ>,...].<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="M"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="V"/></OMA>
+      <OMR xref="A060640"/>
+    </OMA>
+      </OMOBJ>:[<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>5</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>7</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>17</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>11</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>35</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>15</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>49</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>34</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>55</OMI>
+      </OMOBJ>,...].-_Gary <OMOBJ>
+        <OMV name="W"/>
+      </OMOBJ>.Adamson_ ,May 10 2007 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> Also mod(n-1;k) - mod(n;k) + 1 (1&lt;=k&lt;=n). - _Mats Granvik_, Aug 31 2007</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A127093"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMV name="k"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>0</OMI>
+      <OMA><OMS name="times"/><OMV name="n"/><OMV name="mod"/><OMV name="k"/></OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Reinhard Zumkeller_ ,Jan 15 2011 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> T(8,4) = 4 since 4 divides 8.</CMP>
+    </assertion><assertion class="example">
+      <CMP> T(9,3) = 3 since 3 divides 9.</CMP>
+    </assertion><assertion class="example">
+      <CMP> First few rows of the triangle are:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 0, 3;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 2, 0, 4;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 0, 0, 0, 5;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 2, 3, 0, 0, 6;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 0, 0, 0, 0, 0, 7;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 2, 0, 4, 0, 0, 0, 8;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1, 0, 3, 0, 0, 0, 0, 0, 9;</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A127093:=proc(n,k) if type(n/k, integer)=true then k else 0 fi end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for n from 1 to 16 do seq(A127093(n,k),k=1..n) od; # yields sequence in triangular form - _Emeric Deutsch_, Jan 20 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t[n_, k_] := k*Boole[Divisible[n, k]]; Table[t[n, k], {n, 1, 14}, {k, 1, n}] // Flatten (* _Jean-François Alcover_, Jan 17 2014 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[ SeriesCoefficient[k*x^k/(1 - x^k), {x, 0, n}], {n, 1, 14}, {k, 1, n}] // Flatten (* _Jean-François Alcover_, Apr 14 2015 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Excel cell formula) mod(row()-1;column()) - mod(row();column()) + 1 - _Mats Granvik_, Aug 31 2007</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a127093 n k = a127093_row n !! (k-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a127093_row n = zipWith (*) [1..n] $ map ((0 ^) . (mod n)) [1..n]</CMP>
+    </omtext><omtext class="program">
+      <CMP> a127093_tabl = map a127093_row [1..]</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Jan 15 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Reversal = A127094</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A127094, A123229, A127096, A127097, A127098, A127099, A000203, A126988, A127013, A127057, A038040, A024916, A060640, A001001.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000005, A060640.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A027750.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Gary W. Adamson_, Jan 05 2007, Apr 04 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Emeric Deutsch_, Jan 20 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

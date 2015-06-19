@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A089759.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A089759">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,1,1,1,2,1,1,1,6,6,1,1,1,24,90,20,1,1,1,120,2520,1680,70,1,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,720,113400,369600,34650,252,1,1,1,5040,7484400,168168000,63063000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 756756,924,1,1,1,40320,681080400,137225088000,305540235000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Table T(n,k), 0&lt;=k, 0&lt;=n, read by antidiagonals, defined by T(n,k) = (k*n)! / (n!)^k.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> T(n,k) is the number of lattice paths from {n}^k to {0}^k using steps that decrement one component by 1. - _Alois P. Heinz_, May 06 2013</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A089759/b089759.txt&quot;&gt;Antidiagonals n = 0..32, flattened&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Row n=0: 1, 1,   1,      1,           1,               1, ... A000012</CMP>
+    </assertion><assertion class="example">
+      <CMP> Row n=1: 1, 1,   2,      6,          24,             120, ... A000142</CMP>
+    </assertion><assertion class="example">
+      <CMP> Row n=2: 1, 1,   6,     90,        2520,          113400, ... A000680</CMP>
+    </assertion><assertion class="example">
+      <CMP> Row n=3: 1, 1,  20,   1680,      369600,       168116800, ... A014606</CMP>
+    </assertion><assertion class="example">
+      <CMP> Row n=4: 1, 1,  70,  34650,    63063000,    305540235000, ... A014608</CMP>
+    </assertion><assertion class="example">
+      <CMP> Row n=5: 1, 1, 252, 756756, 11732745024, 623360743125120, ... A014609</CMP>
+    </assertion><omtext class="maple">
+      <CMP> T:= (n, k)-&gt; (k*n)!/(n!)^k:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(seq(T(n, d-n), n=0..d), d=0..10);  # _Alois P. Heinz_, Aug 16 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000680, A014606, A014608, A014609, A000984.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Diagonal gives: A034841. - _Alois P. Heinz_, Jan 23 2013</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A210472, A225094. - _Alois P. Heinz_, May 06 2013</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,tabl,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,8</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Philippe Deléham_, Jan 08 2004; revised Jun 08 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected by _Alois P. Heinz_, Aug 16 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

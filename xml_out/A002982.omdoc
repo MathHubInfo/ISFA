@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A002982.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A002982">
+          <assertion class="***** TTTT *****">
+      <CMP> M2321</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,4,6,7,12,14,30,32,33,38,94,166,324,379,469,546,974,1963,3507,3610,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6917,21480,34790,94550,103040,147855</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n! - 1 is prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The corresponding primes n!-1 are often called factorial primes.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J.-M. De Koninck, Ces nombres qui nous fascinent, Entry 166, p. 53, Ellipses, Paris 2008.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, Unsolved Problems in Number Theory, Section A2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Borning, &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1972-0308018-5&quot;&gt;Some results for k!+-1 and 2.3.5...p+-1&lt;/a&gt;, Math. Comp., 26:118 (1972), pp. 567-570.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. P. Buhler et al., &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-1982-0645679-1&quot;&gt;Primes of the form n!+-1 and 2.3.5....p+-1&lt;/a&gt;, Math. Comp., 38:158 (1982), pp. 639-643.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell, &lt;a href=&quot;http://www.utm.edu/research/primes/lists/top20/PrimorialFactorial.html&quot;&gt;Primorial factorial numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. K. Caldwell and Y. Gallot, &lt;a href=&quot;http://www.ams.org/journals/mcom/2002-71-237/S0025-5718-01-01315-1/&quot;&gt;On the primality of n!+-1 and 2*3*5*...*p+-1&lt;/a&gt;, Math. Comp., 71:237 (2002), pp. 441-448.</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Carmody, &lt;a href=&quot;http://83.143.57.194:16384/Factorial/&quot;&gt;Factorial Prime Search Progress Pages&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Mestrovic, &lt;a href=&quot;http://arxiv.org/abs/1202.3670&quot;&gt;Euclid's theorem on the infinitude of primes: a historical survey of its proofs (300 BC--2012) and another new proof&lt;/a&gt;, arXiv preprint arXiv:1202.3670, 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Ondrejka, &lt;a href=&quot;http://www.utm.edu/research/primes/lists/top_ten/&quot;&gt;The Top Ten: a Catalogue of Primal Configurations&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> PrimeGrid, &lt;a href=&quot;http://www.primegrid.com/forum_thread.php?id=1336&amp;amp;nowrap=true#26809&quot;&gt;World Record Factorial Prime!!!&lt;/a&gt; [From _Eric W. Weisstein_, Oct 06 2010]</CMP>
+    </omtext><omtext class="link">
+      <CMP> PrimeGrid, &lt;a href=&quot;http://www.primegrid.com/download/fps-94550.pdf&quot;&gt;Announcement of 94550&lt;/a&gt;, (2010) - _Felix Fröhlich_, Jul 11 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> PrimeGrid, &lt;a href=&quot;http://www.primegrid.com/download/fps-103040.pdf&quot;&gt;Announcement of 103040&lt;/a&gt;, (2010) - _Felix Fröhlich_, Jul 11 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> PrimeGrid, &lt;a href=&quot;http://www.primegrid.com/download/FPS-147855.pdf&quot;&gt;Announcement of 147855&lt;/a&gt;, (2013) - _Felix Fröhlich_, Jul 11 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Factorial.html&quot;&gt;Factorial.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/FactorialPrime.html&quot;&gt;Factorial Prime&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/IntegerSequencePrimes.html&quot;&gt;Integer Sequence Primes&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Fa#factorial&quot;&gt;Index entries for sequences related to factorial numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[10^3], PrimeQ[ #!-1] &amp;] (* _Vladimir Joseph Stephan Orlovsky_, May 01 2008 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) is(n)=ispseudoprime(n!-1) \\ _Charles R Greathouse IV_, Mar 21 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002981 (primes of form n!+1).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> hard,more,nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 21480 sent in by Ken Davis (ken.davis(AT)softwareag.com), Oct 29 2001</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Updated Feb 26 2007 by _Max Alekseyev_, based on progress reported in the Carmody web site.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Inserted missing 21480 and 34790 (see Caldwell). Added 94550, discovered Oct 05 2010. _Eric W. Weisstein_, Oct 06 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 103040 was discovered by James Winskill, Dec 14 2010. It has 471794 digits. Corrected by _Jens Kruse Andersen_, Mar 22 2011</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Term 147855 added, _Felix Fröhlich_, Sep 02 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

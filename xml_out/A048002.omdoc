@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A048002.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A048002">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,11,12,72,78,84,294,315,336,896,952,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1008,2268,2394,2520,5230,5502,5775,12705,13409,14124,37224,39600,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 42042,126412,135135,144144,434434,464464,495495,1400455</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nonempty subsets of {1,2,...,n} in which exactly 5/6 of the elements are &lt;= n/3.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,15</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

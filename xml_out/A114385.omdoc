@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A114385.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A114385">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,10101,101010,111111,1010100,1010101,1111110,1111111,10101000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10101010,10111101,10111111,11111100,11111101,11111110,11111111,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 101010000,101010100,101010101,101111010,101111110,101111111</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sequence A114384 in binary.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> a(n) = A007088(A114384(n)).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Antti Karttunen_, Feb 07 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

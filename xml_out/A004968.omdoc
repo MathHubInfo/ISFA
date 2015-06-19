@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A004968.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A004968">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,522,1043,1564,2085,2606,3127,3648,4169,4690,5211,5732,6253,6774,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7295,7816,8337,8858,9379,9900,10421,10942,11463,11984,12505,13026,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 13547,14068,14589,15110,15631,16152</CMP>
+    </assertion><omtext class="name">
+      <CMP> Ceiling of n*phi^13, where phi is the golden ratio, A001622.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

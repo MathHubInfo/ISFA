@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A125021.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A125021">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,4,8,10,16,18,20,26,32,34,36,40,52,58,64,68,72,74,80,82,90,98,104,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 106,116,122,128,136,144,146,148,160,162,164,178,180,194,196,202,208,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 212,218,226,232,234,242,244,256,272,274,288,292,296,298,306,314</CMP>
+    </assertion><omtext class="name">
+      <CMP> Even numbers with a unique partition as the sum of 2 squares x^2+y^2.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A002145, A124982, A125022.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Artur Jasinski_, Nov 16 2006, corrected Nov 18 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

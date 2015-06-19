@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A219772.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A219772">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,18,189,1887,17259,147012,1163030,8624956,60333410,399317172,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2503952448,14900183092,84344722793,455482339940,2353553187435,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11669724873155,55672849062701,256177163036963,1139527386994434</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX7 arrays of the minimum value of corresponding elements and their horizontal or antidiagonal neighbors in a random, but sorted with lexicographically nondecreasing rows and columns, 0..1 nX7 array</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 7 of A219773</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A219772/b219772.txt&quot;&gt;Table of n, a(n) for n = 1..97&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0..0..1..1....0..0..0..0..0..1..1....0..0..0..0..0..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0..0..1..1....0..0..0..0..0..0..0....0..0..0..1..1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..0..0..0..1..1....0..1..0..0..0..0..0....0..0..1..0..0..0..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Nov 27 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

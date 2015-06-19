@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A133028.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A133028">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,14,248,4064,16775168,4294934528,68719345664,1152921504069976064,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1329227995784915872327346307976921088,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 95780971304118053647396689042151819065498660774084608,6582018229284824168619876730229361455111736159193471558891864064,7237005577332262213973186563042994240786838745737417944533177174565599576064</CMP>
+    </assertion><omtext class="name">
+      <CMP> Even perfect numbers divided by 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(13) has 314 digits and is too large to include. - _R. J. Mathar_, Oct 23 2007</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Largest proper divisor of n-th even perfect number.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also numbers n such that A000203(n) is divisible 24. [From _Ctibor O. Zizka_, Jun 29 2009]</CMP>
+    </omtext><omtext class="link">
+      <CMP> Omar E. Pol, &lt;a href=&quot;http://www.polrimos.com&quot;&gt;Determinacion geometrica de los numeros primos y perfectos&lt;/a&gt;.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A133028"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000396"/>
+      <OMV name="n"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Oct 23 2007 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A133028"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000043"/>
+      <OMV name="n"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A000668"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Omar <OMOBJ>
+        <OMV name="E"/>
+      </OMOBJ>.Pol_ ,Mar 01 2008 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A133028"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A032742"/>
+      <OMA>
+      <OMR xref="A000396"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,assuming there are no odd perfect numbers .
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> a:=proc(n) if isprime(2^n-1)=true then 2^(n-2)*(2^n-1) else end if end proc: seq(a(n),n=1..120); - _Emeric Deutsch_, Oct 24 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> p = Select[2^Range[400] - 1, PrimeQ]; p*(p+1)/4 (* _Vladimir Joseph Stephan Orlovsky_, Feb 02 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A028334. Perfect numbers: A000396.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000043, A000668.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A018254, A018487, A032742, A133024, A133025, A135652, A135653, A135654, A135655.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A134708, A135650. [From _Omar E. Pol_, Jul 07 2009]</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Omar E. Pol_, Oct 20 2007, Apr 23 2008, Apr 28 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _R. J. Mathar_ and _Emeric Deutsch_, Oct 23 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

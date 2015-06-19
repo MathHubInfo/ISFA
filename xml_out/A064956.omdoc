@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A064956.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A064956">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,7,11,4,16,8,5,12,28,6,33,17,13,9,43,14,50,10,15,29,60,19,22,34,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 20,18,68,21,79,25,27,44,23,26,96,51,32,24,104,37,113,30,38,61,119,31,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 56,39,42,35,137,48,40,36,49,69,146,41,156,80,57,46,54,58,173,45,59,55</CMP>
+    </assertion><omtext class="name">
+      <CMP> Inverse permutation to A064417.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A064956/b064956.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. C. Lagarias, E. M. Rains and N. J. A. Sloane, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0204011&quot;&gt;The EKG sequence&lt;/a&gt;, Exper. Math. 11 (2002), 437-446.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ed#EKG&quot;&gt;Index entries for sequences related to EKG sequence&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Per#IntegerPermutation&quot;&gt;Index entries for sequences that are permutations of the natural numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.List (elemIndex)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.Maybe (fromJust)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a064956 n = (fromJust $ elemIndex n a064417_list) + 1</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Nov 13 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A064417, A064413.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Oct 30 2001</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Naohiro Nomoto_, Oct 31 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

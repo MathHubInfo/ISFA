@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A149842.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A149842">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,12,36,110,362,1184,3970,13460,46182,160424,558504,1966559,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6952260,24667781,88039932,315257113,1132887337,4082861443,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 14761825714,53495073036,194274233075,707197292768,2579195023698,9423152477327,34484610652223,126408613193178,463988555923468,1705361725173422</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of walks within N^3 (the first octant of Z^3) starting at (0,0,0) and consisting of n steps taken from {(-1, -1, 0), (-1, 1, -1), (0, 1, 1), (1, 0, 0)}</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Bostan and M. Kauers, 2008. Automatic Classification of Restricted Lattice Walks, &lt;a href=&quot;http://arxiv.org/abs/0811.2899&quot;&gt;ArXiv 0811.2899&lt;/a&gt;.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> aux[i_Integer, j_Integer, k_Integer, n_Integer] := Which[Min[i, j, k, n] &lt; 0 || Max[i, j, k] &gt; n, 0, n == 0, KroneckerDelta[i, j, k, n], True, aux[i, j, k, n] = aux[-1 + i, j, k, -1 + n] + aux[i, -1 + j, -1 + k, -1 + n] + aux[1 + i, -1 + j, 1 + k, -1 + n] + aux[1 + i, 1 + j, k, -1 + n]]; Table[Sum[aux[i, j, k, n], {i, 0, n}, {j, 0, n}, {k, 0, n}], {n, 0, 10}]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,walk</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Manuel Kauers_, Nov 18 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

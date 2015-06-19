@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A021221.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A021221">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,4,6,0,8,2,9,4,9,3,0,8,7,5,5,7,6,0,3,6,8,6,6,3,5,9,4,4,7,0,0,4,6,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,8,2,9,4,9,3,0,8,7,5,5,7,6,0,3,6,8,6,6,3,5,9,4,4,7,0,0,4,6,0,8,2,9,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4,9,3,0,8,7,5,5,7,6,0,3,6,8,6,6,3,5,9,4,4,7,0,0,4,6,0,8,2,9,4</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of 1/217.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

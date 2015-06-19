@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A074404.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A074404">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,8,36,160,548,1920,6496,23040,84565,317440,1197824,4508328,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 16905344,63406080,238602228,902430720,3429249843,13076616480,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 49977704448,191312691200,733365135860,2815436626328,10825959342080,41694904974720,160823207301705</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 4-ary Lyndon words of length n over Z_4 with trace 0 and subtrace 2.</CMP>
+    </omtext><omtext class="link">
+      <CMP> F. Ruskey, &lt;a href=&quot;http://www.theory.csc.uvic.ca/~cos/inf/trs/lyn/Zq/lyn_tr_subtr_Z4.html&quot;&gt;4-ary Lyndon words of given trace and subtrace&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Max Alekseyev, &lt;a href=&quot;http://home.gwu.edu/~maxal/gpscripts/&quot;&gt;PARI/GP scripts for miscellaneous math problems&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A068596, A074403, A074405, A074406, A074407, A074408, A074409, A074410, A074411, A074412, A074413.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Frank Ruskey_ and Nate Kube, Aug 22 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Terms a(16) onward from _Max Alekseyev_, Apr 09 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

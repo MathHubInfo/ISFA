@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A252038.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A252038">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1080979,2297641,1083611,3353508,30060975,248966785,759807163,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8322287804,80058549769,231405295872,2847277173198,29309575490132,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 82709272927087,1076025229294297,11432884684320589,31965076595521008,427474706429778817</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+2)X(6+2) 0..4 arrays with every 3X3 subblock row and column sum nonprime and every diagonal and antidiagonal sum prime</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 6 of A252039</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A252038/b252038.txt&quot;&gt;Table of n, a(n) for n = 1..48&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..3..3..2..4..3..3..0....0..4..4..2..3..3..4..2....0..3..3..2..4..3..1..4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..4..0..4..0..0..0..0....0..3..1..0..0..4..4..4....0..2..2..2..4..4..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..3..2..4..3..1..0....0..2..4..2..3..1..0..0....0..3..1..0..0..1..3..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Dec 12 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

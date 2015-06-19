@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A063817.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A063817">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,28,756,20412,551124,14880348,401769396,10847773692,292889889684,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7908027021468,213516729579636,5764951698650172,155653695863554644,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4202649788315975388,113471544284531335448,3063731695682346056340</CMP>
+    </assertion><omtext class="name">
+      <CMP> Growth series for fundamental group of orientable closed surface of genus 7.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. de la Harpe, Topics in Geometric Group Theory, Univ. Chicago Press, 2000, p. 160, Sigma(Gamma_7, S_7; z).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>14</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>27</OMI><OMV name="x"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>27</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>14</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>15</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Aug 21 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

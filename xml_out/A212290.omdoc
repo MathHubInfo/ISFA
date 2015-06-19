@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A212290.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A212290">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 9,255,1239,5895,221961</CMP>
+    </omtext><omtext class="name">
+      <CMP> Difference between the smallest 10^n-bit prime and 2^(10^n-1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(5) found by _Serge Batalov_, Jun 11 2012.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Henri Lifchitz, Renaud Lifchitz, &lt;a href=&quot;http://www.primenumbers.net/prptop/prptop.php&quot;&gt;Probable Primes Top 10000.&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 2^99+255 is the smallest 100-bit prime, 2^999+1239 is the smallest 1000-bit prime, etc.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) a(n)=nextprime(2^(10^n-1))-2^(10^n-1)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Binary analogue of A096548.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,hard</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Charles R Greathouse IV_, Jun 16 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

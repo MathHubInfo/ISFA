@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A252159.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A252159">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2581,1930,2264,9058,90638,1007913,13087197,433466577,10924924975,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 323391798040,35279164500443,1921851255032605,127953336003292258</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+2)X(n+2) 0..3 arrays with every 3X3 subblock row and column sum equal to 2 3 4 6 or 7 and every 3X3 diagonal and antidiagonal sum not equal to 2 3 4 6 or 7</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Diagonal of A252167</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..3..1..3..0..3..1....3..0..1..3..3..1....0..3..1..0..3..1....3..2..2..3..2..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..3..0..3..0..3....2..2..3..2..2..0....2..2..3..2..2..0....0..2..2..3..2..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..3..0..3..0..3..0....2..2..3..2..2..3....2..2..3..2..2..3....1..3..3..1..3..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..3..0..3..0..3....0..3..1..3..0..1....3..3..1..3..3..1....3..2..2..3..2..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..3..0..3..0..3..1....2..2..0..2..2..3....2..2..0..2..2..3....3..2..2..3..2..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..3..0..3..1..2....2..2..3..2..2..3....2..2..3..2..2..0....1..3..0..1..3..3</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Dec 14 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

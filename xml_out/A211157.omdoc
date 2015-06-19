@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A211157.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A211157">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,164,528,1968,3844,8836,14144,26176,37540,61188,82192,123120,157924,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 223268,276608,374272,452420,591524,700752,891760,1038980,1293700,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1487744,1818112,2067172</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 2x2 matrices having all terms in {-n,...,0,..,n} and positive even determinant.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For a guide to related sequences, see A210000.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a = -n; b = n; z1 = 25;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t[n_] := t[n] = Flatten[Table[w*z - x*y, {w, a, b}, {x, a, b}, {y, a, b}, {z, a, b}]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> c[n_, k_] := c[n, k] = Count[t[n], k]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u[n_] := u[n] = Sum[c[n, 2 k], {k, 0, 2*n^2}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> v[n_] := v[n] = Sum[c[n, 2 k], {k, 1, 2*n^2}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> w[n_] := w[n] = Sum[c[n, 2 k - 1], {k, 1, 2*n^2}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u1 = Table[u[n], {n, 1, z1}] (* A211156 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> v1 = Table[v[n], {n, 1, z1}] (* A211157 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> w1 = Table[w[n], {n, 1, z1}] (* A211158 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (u1 - 1)/4 (* integers *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> v1/4 (* integers *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> w1/4 (* integers *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A210000.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Apr 05 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

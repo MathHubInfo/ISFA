@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A158991.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A158991">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,8,34,1840,4724,683488,7782664,339629632,8055944560,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 201822075008,8719919701984,128026275891968,10424283645874496,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 67164631281958400,13817854415099775104,18392961201951276032,20165102300581059194624,190160981569308074375168</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numerator of Hermite(n, 4/7).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A158991/b158991.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Conjecture :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A158991"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="a" cd="A158991"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>98</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A158991"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Feb 16 2014 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Numerator of 1, 8/7, -34/49, -1840/343, -4724/2401, 683488/16807, 7782664/117649...</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A158991 := proc(n)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         orthopoly[H](n,4/7) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         numer(%) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> end proc: # _R. J. Mathar_, Feb 16 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Numerator[Table[HermiteH[n,4/7],{n,0,50}]] (* _Vladimir Joseph Stephan Orlovsky_, Mar 23 2011*)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000420 (denominators)</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,frac</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Nov 12 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A129864.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A129864">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 13,31,37,73,79,739,769,937,991,1009,1021,1201,1231,1249,1471,1597,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1723,1831,1879,1933,3049,3109,3121,3163,3301,3433,3571,3613,3697,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3889,7207,7321,7459,7507,7603,7687,7717,7951,7963,9349,9403,9421,9547,9613,9643</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers that are both lucky and emirp.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMR xref="A000959"/>
+      <OMV name="INTERSECTION"/>
+    </OMA><OMR xref="A006567"/></OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="a" cd="A129864"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>is <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>element of <OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMR xref="A000959"/>
+      <OMV name="AND"/>
+    </OMA><OMA>
+      <OMS name="a" cd="A129864"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+      </OMOBJ>is an element of <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A000040"/>
+      <OMV name="AND"/>
+    </OMA><OMA>
+      <OMS name="R" cd="A129864"/>
+      <OMA>
+      <OMS name="a" cd="A129864"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA></OMA>
+      <OMA>
+      <OMR xref="A004086"/>
+      <OMA>
+      <OMS name="a" cd="A129864"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>is an element of <OMOBJ>
+        <OMR xref="A000040"/>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(9) = 1009 because 1009 is a lucky number A000959(154) and 1009 is an emirp because 1009 is prime and R(1009) = 9001 is prime (but is not lucky).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000040, A000959, A004086, A006567, A031157.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,easy,nonn,less</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Vos Post_, May 23 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _R. J. Mathar_, Jun 12 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

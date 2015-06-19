@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A237128.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A237128">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 36,324,396,684,756,1044,1116,1404,1476,1764,1836,2124,2196,2484,2556,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2844,2916,3204,3276,3564,3636,3924,3996,4284,4356,4644,4716,5004,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5076,5364,5436,5724,5796,6084,6156,6444,6516,6804,6876,7164,7236,7524,7596,7884</CMP>
+    </assertion><omtext class="name">
+      <CMP> Angles n expressed in degrees such that 2*cos(n) = phi where phi is the golden ratio (A001622).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) == 36, 324 mod 360 and a(n)/36 is congruent to {1,9} mod 10 (A090771).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A019863 = half of the golden ratio (A001622) =&gt; a(1) = 90 - 54 degrees and a(2) = 360 - a(1) = 324 degrees.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The squares in the sequence are 36, 324, 1764, 2916, 4356, 6084, 10404, 12996, 15876, 19044, 26244, 30276, 34596, 39204, 49284, 54756, 60516, 66564, 79524,... with the following properties:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If a(n) == 36 mod 360 is a perfect square, sqrt(36+360*n)/6 = A090771 (numbers that are congruent to {1, 9} mod 10).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> If a(n) == 324 mod 360 is a perfect square, sqrt(324+360*n)/6 = A063226 (numbers that are congruent to {3, 7} mod 10).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1,1,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A237128"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>18</OMI><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>5</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>10</OMI><OMV name="n"/></OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A237128"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A237128"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A237128"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A237128"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>36</OMI><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>8</OMI><OMV name="x"/></OMA><OMI>1</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Feb 04 2014 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 1476 is in the sequence because 2*cos(1476°) = 2*cos(1476*Pi/180) = 1.61803398... = phi.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> ***first program***</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(numtheory):err:=1/10^10:Digits:=20:for n from 1 to 20000 do:x:=evalf(2*cos(n*Pi/180)):ph:=evalf((1+sqrt(5)))/2:if abs(ph-x)&lt;err then printf(`%d, `,n):else fi:od:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> ***second program***</CMP>
+    </omtext><omtext class="maple">
+      <CMP> lst:={}:for n from 0 to 30 do:x:=36+n*360:y:=324+n*360:lst:=lst union {x} union {y}:od:print(lst):</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) Vec(36*x*(x^2+8*x+1)/((x-1)^2*(x+1)) + O(x^100)) \\ _Colin Barker_, Feb 04 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001622, A019863.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Lagneau_, Feb 04 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

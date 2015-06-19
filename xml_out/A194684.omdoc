@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A194684.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A194684">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,2,2,5,3,7,1,7,8,11,3,11,12,12,0,15,6,16,19,7,5,21,12,23,0,15,15,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7,15,21,10,23,8,0,24,26,19,10,0,28,29,21,39,0,43,47,24,46,39,11,3,37,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 40,3,49,26,51,41,3,52,23,16,57,4,3,43,45,27,13,26,68,50,49,37</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of k in [1,n] for which &lt;r^n&gt;+&lt;r^k&gt; &gt; 1, where &lt; &gt; = fractional part, and r=(1+sqrt(3))/2.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> r = 1/2 + Sqrt[3]/2; z = 15;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> p[x_] := FractionalPart[x]; f[x_] := Floor[x];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> w[n_, k_] := p[r^n] + p[r^k] - p[r^n + r^k]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[Table[w[n, k], {n, 1, z}, {k, 1, n}]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     (* A194683 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> TableForm[Table[w[n, k], {n, 1, z}, {k, 1, n}]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> s[n_] := Sum[w[n, k], {k, 1, n}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[s[n], {n, 1, 100}]   (* A194684 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> h[n_, k_] := f[p[n*r] + p[k*r]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[Table[h[n, k], {n, 1, z}, {k, 1, n}]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>    (* A194685 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> TableForm[Table[h[n, k], {n, 1, z}, {k, 1, n}]]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t[n_] := Sum[h[n, k], {k, 1, n}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[t[n], {n, 1, 100}]    (* A194686 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A194683.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Sep 01 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

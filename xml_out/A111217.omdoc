@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A111217.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A111217">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,7,7,28,7,49,7,84,28,49,7,196,7,49,49,210,7,196,7,196,49,49,7,588,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 28,49,84,196,7,343,7,462,49,49,49,784,7,49,49,588,7,343,7,196,196,49,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7,1470,28,196,49,196,7,588,49,588,49,49,7,1372,7,49,196,924,49,343,7,196</CMP>
+    </assertion><omtext class="name">
+      <CMP> d_7(n), tau_7(n), number of ordered factorizations of n as n = rstuvwx (7-factorizations).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Enrique Pérez Herrero, &lt;a href=&quot;/A111217/b111217.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> Dirichlet convolution of A000012 with A034695, or of A000005 with A061200, or of A007425 with A007426. Dirichlet g.f. zeta^7(s). - R. J. Mathar, Apr 01 2011</CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> tau[n_, 1] = 1; tau[n_, k_] := tau[n, k] = Plus @@ (tau[ #, k - 1] &amp; /@ Divisors[n]); Table[ tau[n, 7], {n, 68}] (from _Robert G. Wilson v_, Nov 02 2005)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=1,100,print1(sumdiv(n,i,sumdiv(i,j,sumdiv(j,k,sumdiv(k,l,sumdiv(l,x,numdiv(x)))))),&quot;,&quot;))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. tau_k(n) for k&gt;=2: A000005, A007425, A007426, A061200, A034695, A111218 - A111221, A111306.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> mult,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Gerald McGarvey_, Oct 25 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

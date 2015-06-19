@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A229381.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A229381">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8128,8191,8208</CMP>
+    </omtext><omtext class="name">
+      <CMP> The Simpsons' perfect number, Mersenne prime, and narcissistic number.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The perfect number 8128, Mersenne prime 8191, and narcissistic number 8208 appeared together on the screen in the &quot;Marge and Homer Turn a Couple Play&quot; episode of Season 17 of The Simpsons.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Singh, The Simpsons and Their Mathematical Secrets, Bloomsbury USA, 2013.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Goff, &lt;a href=&quot;http://www.ams.org/notices/201501/rnoti-p40.pdf&quot;&gt;Animating Popular Mathematics: “The Simpsons and Their Mathematical Secrets”&lt;/a&gt;, AMS Notices, 62 (2015), 40-44.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Singh, &lt;a href=&quot;http://www.theguardian.com/tv-and-radio/2013/sep/22/the-simpsons-secret-formula-maths-simon-singh&quot;&gt;The Simpsons' secret formula: it's written by maths geeks&lt;/a&gt;, The Guardian, 21 September 2013.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A229381"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMR xref="A000396"/>
+      <OMI>4</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A229381"/>
+      <OMI>2</OMI>
+    </OMA>
+      <OMA>
+      <OMR xref="A000668"/>
+      <OMI>5</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A229381"/>
+      <OMI>3</OMI>
+    </OMA>
+      <OMA>
+      <OMR xref="A005188"/>
+      <OMI>15</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A000396, A000668, A005188.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,fini,full,bref</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Joe Sondow and _Jonathan Sondow_, Sep 23 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

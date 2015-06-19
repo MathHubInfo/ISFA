@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A176292.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A176292">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,7,10,12,15,17,18,21,22,25,28,29,40,47,53,61,62,64,68,69,72,85,87,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 90,91,93,100,102,106,107,110,112,114,116,120,125,130,131,132,133,136,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 151,154,155,158,165,166,169,170,179,181,190,191,198,212,221,222,223</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that factorizations of composite(n) and composite(n+1) have same number of primes (including multiplicities).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A001222"/>
+      <OMA>
+      <OMR xref="A002808"/>
+      <OMA>
+      <OMS name="a" cd="A176292"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A001222"/>
+      <OMA>
+      <OMR xref="A002808"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A176292"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> Contribution from _R. J. Mathar_, Apr 20 2010: (Start)</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A001222 := proc(n) numtheory[bigomega](n) ; end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A002808 := proc(n) if n = 1 then return 4; else for a from procname(n-1)+1 do if not isprime(a) then return a; end if; end do; end if; end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for n from 1 to 400 do if A001222(A002808(n)) = A001222(A002808(n+1)) then printf(&quot;%d,&quot;,n) ; end if; end do: (End)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A045920, A045939.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Juri-Stepan Gerasimov_, Apr 14 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected (86 replaced by 87, 89 removed, many terms after 92 replaced) by _R. J. Mathar_, Apr 20 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

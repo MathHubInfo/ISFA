@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A252743.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A252743">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 0,1,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = A252742(A005940(1+n)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) tells whether the n-th node in A005940 (here counted with offset 0) has a pair of children where the left child is larger than the right child, see illustration in A005940 and one below.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Antti Karttunen, &lt;a href=&quot;/A252743/b252743.txt&quot;&gt;Table of n, a(n) for n = 0..8191&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A252743"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A252742"/>
+      <OMA>
+      <OMR xref="A005940"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A252743"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A252744"/>
+      <OMA>
+      <OMR xref="A054429"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[The tree is a mirror image of the tree of <OMOBJ>
+        <OMR xref="A252744"/>
+      </OMOBJ>.]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Other identities .For all <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>:
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="sgn" cd="A252743"/>
+      <OMA>
+      <OMR xref="A252750"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="a" cd="A252743"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> The first six levels of the binary tree (compare also to the illustration given at A005940):</CMP>
+    </assertion><assertion class="example">
+      <CMP>                                0</CMP>
+    </assertion><assertion class="example">
+      <CMP>                                |</CMP>
+    </assertion><assertion class="example">
+      <CMP>                                0</CMP>
+    </assertion><assertion class="example">
+      <CMP>                 ............../ \..............</CMP>
+    </assertion><assertion class="example">
+      <CMP>                0                               1</CMP>
+    </assertion><assertion class="example">
+      <CMP>         ....../ \......                 ....../ \......</CMP>
+    </assertion><assertion class="example">
+      <CMP>        0               1               1               1</CMP>
+    </assertion><assertion class="example">
+      <CMP>       / \             / \             / \             / \</CMP>
+    </assertion><assertion class="example">
+      <CMP>      /   \           /   \           /   \           /   \</CMP>
+    </assertion><assertion class="example">
+      <CMP>     0     1         1     1         0     1         1     1</CMP>
+    </assertion><assertion class="example">
+      <CMP>    / \   / \       / \   / \       / \   / \       / \   / \</CMP>
+    </assertion><assertion class="example">
+      <CMP>   0   1 1   1     1   1 1   1     1   1 1   1     1   1 1   1</CMP>
+    </assertion><assertion class="example">
+      <CMP> For n=0, the corresponding node in A005940(0+1) is 1, which has just one child 2, thus we set a(0) = 0.</CMP>
+    </assertion><assertion class="example">
+      <CMP> For n=1, the corresponding node in A005940(1+1) is 2, which has children 3 and 4, in correct order, thus a(1) = 0.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Similarly for node 3, with children 5 &lt; 6, thus a(2) = 0. But for node 4, with its children 9 &gt; 8, we set a(3) = 1.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (Scheme) (define (A252743 n) (A252742 (A005940 (+ 1 n))))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A005940, A003961, A048673.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Permutations: A252742, A252744.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A252745 (number of ones) and A252746 (number of zeros on each level of binary tree), A252750, A252751.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabf</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Antti Karttunen_, Dec 21 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

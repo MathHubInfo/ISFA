@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A024835.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A024835">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,17,31,49,81,111,157,197,257,307,381,441,529,625,703,813,931,1025,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1157,1297,1407,1561,1723,1849,2025,2209,2401,2551,2757,2971,3193,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3365,3601,3845,4097,4291,4557,4831,5113,5329,5625,5929,6241,6561,6807,7141,7483,7833</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = least m such that if r and s in {1/2, 1/4, 1/6, ..., 1/2n} satisfy r &lt; s, then r &lt; k/m &lt; (k+1)/m &lt; s for some integer k.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For a guide to related sequences, see A001000. - _Clark Kimberling_, Aug 12 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> Clark Kimberling, &lt;a href=&quot;/A024835/b024835.txt&quot;&gt;Table of n, a(n) for n = 2..100&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> leastSeparatorS[seq_, s_] := Module[{n = 1},</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[While[Or @@ (Ceiling[n #1[[1]]] &lt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> s + 1 + Floor[n #1[[2]]] &amp;) /@ (Sort[#1, Greater] &amp;) /@</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Partition[Take[seq, k], 2, 1], n++]; n, {k, 2, Length[seq]}]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t = Map[leastSeparatorS[1/(2*Range[50]), #] &amp;, Range[5]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> TableForm[t]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t[[2]]  (* A024835 )</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (* _Peter J. C. Moses_, Aug 06 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A001000, A024834.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

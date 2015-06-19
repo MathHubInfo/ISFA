@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A082203.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A082203">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,13,82,219,451,547,840,893,697,1977,1050,2909,2987,3881,4058,5519,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5407,8117,7374,11105,7209,14731,10442,18105,16285,22393,19766,27669,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 24375,34065,28480,40661,28059,47787,35676,55843,44965,65533,49342</CMP>
+    </assertion><omtext class="name">
+      <CMP> Row sums of the triangle described in A082200.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) After T has been computed (cf. A082200): {for(j=1,n,print1(sum(k=1,j,T[j,k]),&quot;,&quot;))}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A082200, A082201, A082202.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Apr 07 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited, corrected and extended by _Klaus Brockhaus_, May 14 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

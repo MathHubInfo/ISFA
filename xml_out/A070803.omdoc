@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A070803.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A070803">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,2,4,3,5,4,6,6,7,5,9,6,9,9,11,7,12,8,13,11,11,9,17,11,13,12,16,10,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 20,11,18,15,16,15,24,12,17,16,24,13,24,14,23,21,20,15,30,16,24,20,25,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 16,30,20,30,22,24,17,39,18,24,27,31,23,34,19,30,24,34,20,44,21,30,30</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of primes not exceeding sum of divisors of n.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A070803"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000720"/>
+      <OMA>
+      <OMR xref="A000203"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMS name="Pi"/>
+    </OMA>
+      </OMOBJ>[<OMOBJ>
+        <OMA>
+      <OMS name="sigma" cd="A070803"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>]
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> n=50: sigma[50]=93, Pi[93]=24=a(50)</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Table[PrimePi[DivisorSigma[1, n]], {n, 1, 256}]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [prime_pi(sigma(n,1)) for n in xrange(1, 76)] # [From _Zerinvary Lajos_, Jun 06 2009]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) A070803(n) = primepi(sigma(n)) [From _Michael B. Porter_, Jan 28 2010]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007818, A000203, A000720, A070800-A070804.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, May 08 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

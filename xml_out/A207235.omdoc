@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A207235.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A207235">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,9,9,23,81,23,61,529,529,61,161,3721,5853,3721,161,425,25921,79353,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 79353,25921,425,1121,180625,1089017,2464241,1089017,180625,1121,2957,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1256641,14540437,77937497,77937497,14540437,1256641,2957,7801,8743849</CMP>
+    </assertion><omtext class="name">
+      <CMP> T(n,k)=Number of nXk 0..2 arrays avoiding the patterns z z+1 z or z z-1 z in any row, column, diagonal or antidiagonal</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Table starts</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ....3.......9.........23............61..............161................425</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ....9......81........529..........3721............25921.............180625</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ...23.....529.......5853.........79353..........1089017...........14540437</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ...61....3721......79353.......2464241.........77937497.........2320163321</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..161...25921....1089017......77937497.......5437970705.......350097798369</CMP>
+    </omtext><omtext class="comment">
+      <CMP> ..425..180625...14540437....2320163321.....350097798369.....47274560618753</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .1121.1256641..191801477...68168506265...22315875854161...6288613378797777</CMP>
+    </omtext><omtext class="comment">
+      <CMP> .2957.8743849.2533992385.2020945709121.1438362000618041.848441499201176937</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A207235/b207235.txt&quot;&gt;Table of n, a(n) for n = 1..111&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=4 k=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..2....1..2..2....1..2..0....2..1..0....2..1..0....0..1..2....0..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..2..1....2..1..0....1..2..2....0..2..2....0..1..2....0..2..2....1..2..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..2..1....0..0..1....2..2..0....2..0..0....1..2..0....0..2..2....1..2..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..0....1..2..2....0..0..2....2..1..0....1..2..0....0..1..2....0..0..2</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Column 1 is A207008</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Column 2 is A207009</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Feb 16 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

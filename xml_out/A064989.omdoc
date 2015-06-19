@@ -1,0 +1,403 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A064989.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A064989">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,1,3,2,5,1,4,3,7,2,11,5,6,1,13,4,17,3,10,7,19,2,9,11,8,5,23,6,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 29,1,14,13,15,4,31,17,22,3,37,10,41,7,12,19,43,2,25,9,26,11,47,8,21,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5,34,23,53,6,59,29,20,1,33,14,61,13,38,15,67,4,71,31,18,17,35,22,73,3,16</CMP>
+    </assertion><omtext class="name">
+      <CMP> Multiplicative with a(2^e)=1 and a(p^e)=prevprime(p)^e for odd primes p.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Antti Karttunen_, May 12 2014: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(A003961(n)) = n for all n. [This is a left inverse function for the injection A003961.]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Bisections are A064216 (the terms at odd indices) and A064989 itself (the terms at even indices), i.e., a(2n) = a(n) for all n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (End)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> From _Antti Karttunen_, Dec 18-21 2014: (Start)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> When n represents an unordered integer partition via the indices of primes present in its prime factorization (for n &gt;= 2, n corresponds to the partition given as the n-th row of A112798) this operation subtracts one from each part. If n is of the form 2^k (a partition having just k 1's as its parts) the result is an empty partition (which is encoded by 1, having an &quot;empty&quot; factorization).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For all odd numbers n &gt;= 3, a(n) tells which number is located immediately above n in square array A246278. Cf. also A246277.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (End)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Alternatively, if numbers are represented as the multiset of indices of prime factors with multiplicity, this operation subtracts 1 from each element and discards the 0's. - _M. F. Hasler_, Dec 29 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harry J. Smith (first 1000 terms) &amp; Antti Karttunen, &lt;a href=&quot;/A064989/b064989.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      From _Antti Karttunen_ ,Dec 18 2014 :(Start )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      If <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="product" cd="A064989"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000040"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="e" cd="A064989"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>then <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="product" cd="A064989"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A008578"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="e" cd="A064989"/>
+      <OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>[where <OMOBJ>
+        <OMA>
+      <OMR xref="A000040"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>gives the n-th prime ,and <OMOBJ>
+        <OMA>
+      <OMR xref="A008578"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>gives <OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>for <OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>and otherwise the <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI><OMV name="th"/>
+    </OMA>
+      </OMOBJ>prime ].
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>;for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A008578"/>
+      <OMA>
+      <OMR xref="A055396"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMA>
+      <OMR xref="A032742"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.[Above formula represented as a recurrence .Cf .<OMOBJ>
+        <OMR xref="A252461"/>
+      </OMOBJ>.]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>;for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A008578"/>
+      <OMA>
+      <OMR xref="A061395"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMA>
+      <OMR xref="A052126"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.[Compare to the formula of <OMOBJ>
+        <OMR xref="A252462"/>
+      </OMOBJ>.]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      This prime -shift operation is used in the definitions of many other sequences ,thus it can be expressed in many alternative ways :
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A200746"/>
+      <OMV name="n"/>
+    </OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A242424"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A105560"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A122111"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A122111"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A105560"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A122111"/>
+      <OMA>
+      <OMR xref="A052126"/>
+      <OMA>
+      <OMR xref="A122111"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.[In <OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMR xref="A112798"/><OMV name="partition"/>
+    </OMA>
+      </OMOBJ>context :conjugate ,remove the largest part (the largest prime factor ),and conjugate again .]
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>;for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A064989"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A163511"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A243071"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMI>1</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> a(n) = A249818(A250470(A249817(n))). [A250470 is an analogous operation for &quot;going one step up&quot; in the square array A083221 (A083140).]</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      (End )
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(20) = a(2^2*5) = a(2^2)*a(5) = prevprime(5) = 3.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> q:= proc(p) prevprime(p) end proc: q(2):= 1:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> [seq(mul(q(f[1])^f[2], f = ifactors(n)[2]), n = 1 .. 1000)]; # _Robert Israel_, Dec 21 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a064989[n_Integer] := Module[{f, p, a},</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   f[x_] := Transpose@FactorInteger[x];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   p[x_] := Which[</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     x == 1, 1,</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     x == 2, 1,</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>     True, NextPrime[x, -1]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP>   a[x_] := Times @@ Power[p /@ First[f[x]], Last[f[x]]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a /@ Range[n]]; a064989[81] (* _Michael De Vlieger_, Dec 18 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a064989 1 = 1</CMP>
+    </omtext><omtext class="program">
+      <CMP> a064989 n = product $ map (a008578 . a049084) $ a027746_row n</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Apr 09 2012</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MIT/GNU Scheme, with Aubrey Jaffer's SLIB Scheme library)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (require 'factor)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (define (A064989 n) (if (= 1 n) n (apply * (map (lambda (k) (if (zero? k) 1 (A000040 k))) (map -1+ (map A049084 (factor n)))))))</CMP>
+    </omtext><omtext class="program">
+      <CMP> ;; _Antti Karttunen_, May 12 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (definec (A064989 n) (if (= 1 n) n (* (A008578 (A055396 n)) (A064989 (A032742 n))))) ;; One based on given recurrence and utilizing memoizing definec-macro.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (definec (A064989 n) (cond ((= 1 n) n) ((even? n) (A064989 (/ n 2))) (else (A163511 (/ (- (A243071 n) 1) 2))))) ;; Corresponds to one of the alternative formulas, but is very unpractical way to compute this sequence. - _Antti Karttunen_, Dec 18 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) { for (n=1, 1000, f=factor(n)~; a=1; j=1; if (n&gt;1 &amp;&amp; f[1, 1]==2, j=2); for (i=j, length(f), a*=precprime(f[1, i] - 1)^f[2, i]); write(&quot;b064989.txt&quot;, n, &quot; &quot;, a) ) } \\ _Harry J. Smith_, Oct 02 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n) = {my(f = factor(n)); for (i=1, #f~, if ((p=f[i,1]) % 2, f[i,1] = precprime(p-1), f[i,1] = 1);); factorback(f);} \\ _Michel Marcus_, Dec 18 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=factorback(Mat(apply(t-&gt;[max(precprime(t[1]-1),1),t[2]],Vec(factor(n)~))~)) \\ _M. F. Hasler_, Dec 29 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A064216 (odd bisection), A003961 (inverse).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000040, A008578, A027746, A032742, A049084, A052126, A055396, A061395, A112798, A249817, A249818.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Other sequences whose definition involve or are some other way related with this sequence: A105560, A108951, A118306, A122111, A156552, A163511, A200746, A241909, A243070, A243071, A243072, A243073, A244319, A245605, A245607, A246165, A246266, A246268, A246277, A246278, A246361, A246362, A246371, A246372, A246373, A246374, A246376, A246380, A246675, A246682, A249745, A250470.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Similar prime-shifts towards smaller numbers: A252461, A252462, A252463.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> mult,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladeta Jovovic_, Oct 30 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

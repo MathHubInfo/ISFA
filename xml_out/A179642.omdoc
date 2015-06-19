@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A179642.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A179642">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 120,168,180,252,264,270,280,300,312,378,396,408,440,450,456,468,520,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 552,588,594,612,616,680,684,696,700,702,728,744,750,760,828,882,888,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 918,920,945,952,980,984,1026,1032,1044,1064,1100,1116,1128,1144,1160</CMP>
+    </assertion><omtext class="name">
+      <CMP> Product of exactly 5 primes, 3 of which are distinct.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A179642/b179642.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Will Nicholes, &lt;a href=&quot;http://willnicholes.com/math/primesiglist.htm&quot;&gt;Prime Signatures&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 120=2^3*3*5, 168=2^3*3*7, 180=2^2*3^2*5, 252=2^2*3^2*7, 264=2^3*3*11, 270=2*3^3*5</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[n_]:=Sort[Last/@FactorInteger[n]]=={1,1,3} || Sort[Last/@FactorInteger[n]]=={1,2,2}; Select[Range[2000], f]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) list(lim)=my(v=List(),t);forprime(p=2,(lim\6)^(1/3),forprime(q=2,sqrt(lim\p^3),if(p==q,next);t=p^3*q;forprime(r=q+1,lim\t,if(p==r,next);listput(v,t*r))));forprime(p=2,sqrt(lim\12),forprime(q=p+1,sqrt(lim\p^2\2),t=(p*q)^2;forprime(r=2,lim\t,if(p==r||q==r,next);listput(v,t*r))));vecsort(Vec(v)) \\ _Charles R Greathouse IV_, Jul 19 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Union of A189975 and A179643.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A006881, A007304, A085986, A085987, A178739.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Joseph Stephan Orlovsky_, Jul 21 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

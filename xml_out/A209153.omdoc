@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A209153.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A209153">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,1,4,5,2,7,14,11,3,11,31,38,22,5,16,60,103,93,43,8,22,106,239,298,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 212,81,13,29,175,497,802,782,459,150,21,37,274,952,1909,2393,1917,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 958,273,34,46,411,1710,4143,6410,6570,4465,1942,491,55,56,595</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle of coefficients of polynomials u(n,x) jointly generated with A208340; see the Formula section.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Every row ends with a Fibonacci number (A000045).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Alternating row sums: 1,1,1,1,1,1,1,1,1,1,1,1,1,1,...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For a discussion and guide to related arrays, see A208510.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="u" cd="A209153"/>
+      <OMV name="n"/><OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="u" cd="A209153"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="x"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="v" cd="A209153"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="x"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="v" cd="A209153"/>
+      <OMV name="n"/><OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="u" cd="A209153"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="x"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="v" cd="A209153"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="x"/>
+    </OMA></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="u" cd="A209153"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="v" cd="A209153"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> First five rows:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2....1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4....5....2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7....14...11...3</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11...31...38...22...5</CMP>
+    </assertion><assertion class="example">
+      <CMP> First three polynomials v(n,x): 1, 2 + x, 4 + 5x + 2x^2.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> u[1, x_] := 1; v[1, x_] := 1; z = 16;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> u[n_, x_] := u[n - 1, x] + (x + 1)*v[n - 1, x];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> v[n_, x_] := x*u[n - 1, x] + (x + 1)*v[n - 1, x] + 1;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Expand[u[n, x]], {n, 1, z/2}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Expand[v[n, x]], {n, 1, z/2}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> cu = Table[CoefficientList[u[n, x], x], {n, 1, z}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> TableForm[cu]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[%]    (* A209153 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Expand[v[n, x]], {n, 1, z}]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> cv = Table[CoefficientList[v[n, x], x], {n, 1, z}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> TableForm[cv]</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[%]    (* A208340 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A208340, A208510.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Mar 07 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

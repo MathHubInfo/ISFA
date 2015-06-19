@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A190753.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A190753">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,14,23,30,39,48,57,64,72,81,90,98,106,115,123,131,140,148,156,164,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 172,182,188,198,205,215,222,232,239,249,255,265,273,282,289,298,306,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 315,322,331,339,347,356,365,373,380,389,398,407,414,423,431,440,448,457,465,473,481,490,499,506,514,523,532,540,548,557,565,573</CMP>
+    </assertion><omtext class="name">
+      <CMP> n+[nr/t]+[ns/t]+[nu/t]+[nv/t]+[nw/t], where r=sinh(x), s=cosh(x), t=tanh(x), u=csch(x), v=sech(x), w=coth(x), x=pi/2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A190751.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (See A190751.)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A190751.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, May 18 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A209059.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A209059">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,3,4,9,3,0,1,1,0,6,3,6,2,2,3,5,9,3,5,1,0,3,3,8,6,9,0,7,7,8,2,2,1,6,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6,0,2,8,6,6,0,3,2,2,5,0,1,2,2,4,4,3,5,5,1,3,7,4,7,8,3,9,9,2,0,8,3,5,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7,6,6,5,2,3,9,4,5,6,4,1,1,2,1,2,8,1,9,4,4,8,6,3,2,4,5,6,8,9,2,7,0,0,6</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of the triple integral int {z = 0..1} int {y = 0..1} int {x = 0..1} (x*y*z)^(x*y*z) dx dy dz.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The double integral int {y = 0..1} int {x = 0..1} (x*y)^(x*y) dx dy equals int {x = 0..1} x^x dx, which is listed as A083648.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> The triple integral is most conveniently estimated from the identity int {z = 0..1} int {y = 0..1} int {z = 0..1} (x*y*z)^(x*y*z) dx dy dz = 1/2*sum {n = 1..inf} (-1)^(n+1)*(1/n^n + 1/n^(n+1)).</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> 0.83493011063622359351...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> digits = 103; 1/2*NSum[ (-1)^(n+1)*(1/n^n + 1/n^(n+1)), {n, 1, Infinity}, WorkingPrecision -&gt; digits+10, NSumTerms -&gt; 100] // RealDigits[#, 10, digits]&amp; // First (* _Jean-François Alcover_, Feb 15 2013, from formula *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A073009, A083648, A209060.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Peter Bala_, Mar 04 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

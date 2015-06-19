@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A025127.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A025127">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,5,7,11,13,17,30,36,46,50,60,70,74,84,94,102,108,120,161,171,187,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 197,209,229,243,253,271,281,289,313,323,339,363,381,391,403,421,431,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 530,552,568,592,618,630,650,674,696,712,746,768,794,802,830,846,872,906,922,942,962</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = s(1)t(n) + s(2)t(n-1) + ... + s(k)t(n-k+1), where k = [ n/2 ], s = A023533, t = (primes).</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A106210.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A106210">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,3,3,1,16,16,5,1,127,127,39,7,1,1363,1363,416,72,9,1,18628,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 18628,5671,967,115,11,1,311250,311250,94643,16027,1864,168,13,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6173791,6173791,1876160,316600,36415,3191,231,15,1,142190703,142190703</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangular matrix T, read by rows, that satisfies: [T^-1](n,k) = -k^2*T(n-2,k) when (n-2)&gt;=k&gt;=0, with T(n,n) = 1 and T(n+1,n) = (2*n+1) for n&gt;=0.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Both column 0 and column 1 form A082161. Row sums form A106211.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A106210"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A102086"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A106210"/>
+      <OMV name="n"/><OMI>0</OMI>
+    </OMA>
+      <OMA>
+      <OMR xref="A082161"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A106210"/>
+      <OMI>0</OMI><OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.G.f .for column <OMOBJ>
+        <OMV name="k"/>
+      </OMOBJ>:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMV name="k"/><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="n"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="T" cd="A106210"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="prod" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>1</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="j"/><OMV name="k"/>
+    </OMA><OMV name="x"/></OMA>
+    </OMA>
+        </OMA>
+      </OMBIND></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle T begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3,3,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 16,16,5,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 127,127,39,7,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1363,1363,416,72,9,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 18628,18628,5671,967,115,11,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 311250,311250,94643,16027,1864,168,13,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6173791,6173791,1876160,316600,36415,3191,231,15,1; ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> Matrix inverse T^-1 begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> -1,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,-3,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,-1,-5,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,-3,-4,-7,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,-16,-20,-9,-9,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,-127,-156,-63,-16,-11,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,-1363,-1664,-648,-144,-25,-13,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,-18628,-22684,-8703,-1840,-275,-36,-15,1; ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> where [T^-1](n,k) = -k^2*T(n-2,k) when (n-2)&gt;=k&gt;=0.</CMP>
+    </assertion><assertion class="example">
+      <CMP> G.f. for column 0: 1/(1-0x) = 1*(1-1x) + 1*x*(1-1x)(1-2x) +</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3*x^2*(1-1x)(1-2x)(1-3x) + 16*x^3*(1-1x)(1-2x)(1-3x)(1-4x) + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> + T(n,0)*x^n*(1-1x)(1-2x)*..*(1-(n+1)*x) + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> G.f. for column 1: 1/(1-1x) = 1*(1-2x) + 3*x*(1-2x)(1-3x) +</CMP>
+    </assertion><assertion class="example">
+      <CMP> 16*x^2*(1-2x)(1-3x)(1-4x) + 127*x^3*(1-2x)(1-3x)(1-4x)(1-5x) + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> + T(n+1,1)*x^n*(1-2x)(1-3x)*..*(1-(n+2)*x) + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> G.f. for column 2: 1/(1-2x) = 1*(1-3x) + 5*x*(1-3x)(1-4x) +</CMP>
+    </assertion><assertion class="example">
+      <CMP> 39*x^2*(1-3x)(1-4x)(1-5x) + 416*x^3*(1-3x)(1-4x)(1-5x)(1-6x) + ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> + T(n+2,2)*x^n*(1-3x)(1-4x)*..*(1-(n+3)*x) + ...</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) {T(n,k)=if(n&lt;k,0,if(n==k,1,polcoeff( 1/(1-k*x)-sum(i=0,n-k-1,T(i+k,k)*x^i*prod(j=1,i+1,1-(j+k)*x+x*O(x^(n-k)))),n-k)))} (PARI) {T(n,k)=local(A=matrix(1,1),B);A[1,1]=1; for(m=2,n+2,B=matrix(m,m);for(i=1,m, for(j=1,i, if(j==i,B[i,j]=j,if(j==1,B[i,j]=(A^2)[i-1,1], B[i,j]=(A^2)[i-1,j]));));A=B); return(if(k==0,if(n==0,1,A[n+1,k+1]),A[n+1,k]/k^2))}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A102086, A082161, A106211.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, May 01 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

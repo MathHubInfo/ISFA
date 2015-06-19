@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A162894.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A162894">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 45141,86061,92568,175423,176890,261427,270768,297384,323967,394317,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 400146,423010,443569,463050,516601,547396,571422,624925,870523,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 895767,902742,920463,1034250,1064532,1083873,1085791,1108572,1181122,1204530</CMP>
+    </assertion><omtext class="name">
+      <CMP> Integers n such that the century defined by the interval [100n+1,100n+100] (i.e. the (n+1)-st century) contains exactly two Ormiston prime pairs and no other primes.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 45141 is included since (4514113,4514131) and (4514137,4514173) are Ormiston prime pairs and there are no other primes in the century.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A162765.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ray Chandler_ and _Ki Punches_, Jul 16 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

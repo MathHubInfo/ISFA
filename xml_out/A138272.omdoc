@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A138272.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A138272">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,4,28,268,3164,43672,682632,11834536,224283416,4597330748,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 101100605540,2370095338372,58924635472260,1546999678599872,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 42734731811302304,1238309697485975648,37538075865014728096</CMP>
+    </assertion><omtext class="name">
+      <CMP> Column 0 of triangle A138271; also, column 3 of A138271 shift left; also, column 0 of matrix power A138271^4 shift right.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A138271; A138273, A138274; A138275.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Mar 11 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

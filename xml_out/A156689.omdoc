@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A156689.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A156689">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,3,4,5,5,6,7,7,8,9,6,9,10,11,11,12,13,10,13,14,15,15,12,16,17,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 14,17,18,15,19,19,20,21,18,21,22,23,15,23,24,21,25,22,25,26,27,27,24,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 28,29,21,26,29,30</CMP>
+    </assertion><omtext class="name">
+      <CMP> Inradii of primitive Pythagorean triples a^2+b^2=c^2, 0&lt;a&lt;b&lt;c with gcd(a,b)=1, and sorted to correspond to increasing a (given in A020884).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The inradius is given by r=1/2 (a+b-c)=ab/(a+b+c)=area/semiperimeter, and the inradii ordered by increasing r are in A020888.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Mohammad K. Azarian, Circumradius and Inradius, Problem S125, Math Horizons, Vol. 15, Issue 4, April 2008, p. 32.  Solution published in Vol. 16, Issue 2, November 2008, p. 32.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Rogers, D.G.: Putting Pythagoras in the frame, Mathematics Today, The Institute of Mathematics and its Applications, Vol.44, No.3, June 2008, pp. 123-125.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A156689/b156689.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ron Knott, &lt;a href=&quot;http://www.mcs.surrey.ac.uk/Personal/R.Knott/Pythag/pythag.html&quot;&gt;Right-angled Triangles and Pythagoras' Theorem&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A156689"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A020884"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A156678"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA><OMA>
+      <OMR xref="A156679"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> The eighth primitive Pythagorean triple ordered by increasing a is (13,84,85). As this has inradius 1/2 (13+84-85)=6, we have a(8)=6.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> PrimitivePythagoreanTriplets[n_]:=Module[{t={{3,4,5}},i=4,j=5},While[i&lt;n,If[GCD[i,j]==1,h=Sqrt[i^2+j^2];If[IntegerQ[h] &amp;&amp; j&lt;n,AppendTo[t,{i,j,h}]];];If[j&lt;n,j+=2,i++;j=i+1]];t];k=30;data1=PrimitivePythagoreanTriplets[2k^2+2k+1];data2=Select[data1,#[[1]]&lt;=2k+1 &amp;];1/2(#[[1]]+#[[2]]-#[[3]]) &amp;/@data2</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a156689 n = a156689_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a156689_list = f 1 1 where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    f u v | v &gt; uu `div` 2        = f (u + 1) (u + 2)</CMP>
+    </omtext><omtext class="program">
+      <CMP>          | gcd u v &gt; 1 || w == 0 = f u (v + 2)</CMP>
+    </omtext><omtext class="program">
+      <CMP>          | otherwise             = (u + v - w) `div` 2 : f u (v + 2)</CMP>
+    </omtext><omtext class="program">
+      <CMP>          where uu = u ^ 2; w = a037213 (uu + v ^ 2)</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Nov 09 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A020884, A020888, A156678, A156679.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A037213.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nice,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ant King_, Feb 18 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

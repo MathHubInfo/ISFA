@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A231509.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A231509">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,6,14,35,90,225,569,1441,3640,9208,23293,58912,149023,376961,953533,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2412030,6101388,15433867,39041066,98757133,249813189,631920345,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1598487728,4043489236,10228295949,25873208028,65448135355,165555752805</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX2 0..1 arrays with no element less than a strict majority of its horizontal, vertical, diagonal and antidiagonal neighbors</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 2 of A231515</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A231509/b231509.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A231509"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A231509"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA>
+      <OMS name="a" cd="A231509"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="a" cd="A231509"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="a" cd="A231509"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A231509"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="a" cd="A231509"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=7</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1....0..0....0..0....0..0....0..1....1..0....0..1....0..0....1..1....0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0....0..0....0..0....0..0....0..0....0..0....0..0....0..0....0..0....0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1....0..0....0..1....0..0....0..0....0..0....0..0....0..0....0..0....0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0....0..0....0..0....1..1....1..1....0..0....0..0....0..0....0..0....0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0....0..0....1..0....0..0....0..0....0..1....0..0....1..1....1..0....0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0....0..0....0..1....0..0....0..0....0..0....0..0....1..1....0..1....0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1....0..1....0..0....0..1....1..1....0..1....1..1....1..1....0..0....0..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Nov 09 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A187619.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A187619">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,2,4,2,8,16,12,20,28,26,32,24,28,32,64,60,24,58,72,86,88,122,116,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 78,128,98,108,144,80,202,204,60,184,216,188,226,292,168,196,316,260,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 168,376,236,216,334,120,304,408,278,340,472,392,454,604,452,372,724,216,330,580,162,472,542,392,366,540,470,592,838,384,390,828</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sum of the differences of the parts in each Goldbach partition of 2n, A187129(n) - A185297(n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A187619/b187619.txt&quot;&gt;Table of n, a(n) for n = 2..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Go#Goldbach&quot;&gt;Index entries for sequences related to Goldbach conjecture&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A187619"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="i"/>
+      <OMI>2</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="i"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="i"/>
+    </OMA><OMA>
+      <OMR xref="A064911"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="ni"/></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="i"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND></OMA>
+    </OMA>
+      </OMOBJ>.-_Wesley Ivan Hurt_ ,Dec 20 2013 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Table[2 Sum[(n - i) Floor[2/PrimeOmega[2 n*i - i^2]], {i, 2, n}], {n, 2, 100}] (* _Wesley Ivan Hurt_, Dec 20 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A226237 (Sum of sums).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Mar 12 2011</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More descriptive name by _Wesley Ivan Hurt_, Dec 20 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

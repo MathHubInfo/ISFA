@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A136606.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A136606">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,6,24,5040,72576,39916800,95800320,1307674368000,4184557977600,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 121645100408832000,2043637686868377600,25852016738884976640000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 238634000666630553600000,10888869450418352160768000000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Reduced denominators in the Maclaurin series for the Gudermannian.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Gudermannian.html&quot;&gt;Gudermannian&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/InverseGudermannian.html&quot;&gt;Inverse Gudermannian&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> x - x^3/6 + x^5/24 - (61*x^7)/5040 + (277*x^9)/72576 - ...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> gd[x_] := 2*ArcTan[(E^x - 1)/(E^x + 1)]; CoefficientList[ Series[gd[x], {x, 0, 28}]/x , x^2] // Denominator (* _Jean-François Alcover_, Nov 09 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A091912.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric W. Weisstein_, Jan 12, 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

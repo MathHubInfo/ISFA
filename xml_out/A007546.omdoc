@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A007546.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A007546">
+          <assertion class="***** TTTT *****">
+      <CMP> M5074</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 19,69,280,707,2363,3876,8068,11319,19201,36866,45551,75224,101112,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 117831,152025,215384,293375,327020,428553,507519,555694,700063,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 808331,989526,1273490,1434366,1530213,1710923,1818254,2019962,2833089,3104685</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of steps to compute n-th prime in PRIMEGAME (fast version).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> D. Olivastro, Ancient Puzzles. Bantam Books, NY, 1993, p. 21.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A007546/b007546.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. H. Conway, &lt;a href=&quot;http://dx.doi.org/10.1007/978-1-4612-4808-8_2&quot;&gt;FRACTRAN: a simple universal programming language for arithmetic&lt;/a&gt;, in T. M. Cover and Gopinath, eds., Open Problems in Communication and Computation, Springer, NY 1987, pp. 4-26.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. K. Guy, &lt;a href=&quot;http://www.jstor.org/stable/2690263&quot;&gt;Conway's prime producing machine&lt;/a&gt;, Math. Mag. 56 (1983), no. 1, 26-33.</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(numtheory): f:= proc(n) local l, b, d; l:= sort([divisors (n)[]]); b:= l[nops(l)-1]; n-1 +(6*n+2)*(n-b) +2*add(floor(n/d), d=b..n-1) end: a:= proc(n) option remember; `if`(n=1, f(2), a(n-1) +add(f(i), i=ithprime(n-1)+1..ithprime(n))) end: seq(a(n), n=1..40); # _Alois P. Heinz_, Aug 12 2009</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[n_] := Module[{l, b, d}, l = Divisors [n]; b = l[[-2]]; n-1 + (6*n+2)*(n-b) + 2*Sum[Floor[n/d], {d, b, n-1}]]; a[n_] := a[n] = If[n == 1, f[2], a[n-1] + Sum[f[i], {i, Prime[n-1]+1, Prime[n]}]]; Table[a[n], {n, 1, 32}] (* _Jean-François Alcover_, Oct 04 2013, translated from Alois P. Heinz's Maple program *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007542, A007547.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Alois P. Heinz_, Aug 12 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A244863.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A244863">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,9,10,22,121,169,178,187,202,259,295,301,358,394,466,493,529,538,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 565,583,655,718,745,763,781,799,817,835,862,871,889,898,934,943,961,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 979,1003,1111,1159,1177,1186,1195,1267,1285,1294,1339,1357,1366,1393,1438,1465</CMP>
+    </assertion><omtext class="name">
+      <CMP> Semiprimes whose digit sum is a perfect square.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Subsequence of A028839.</CMP>
+    </omtext><omtext class="link">
+      <CMP> K. D. Bajpai, &lt;a href=&quot;/A244863/b244863.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 178 is in the sequence because 178 = 2*89 (semiprime) and 1+7+8 = 16 (square).</CMP>
+    </assertion><assertion class="example">
+      <CMP> 187 is in the sequence because 187 = 11*17 (semiprime) and 1+8+7 = 16 (square).</CMP>
+    </assertion><omtext class="maple">
+      <CMP> select(n -&gt; numtheory:-bigomega(n)=2 and issqr(convert(convert(n,base,10),`+`)),</CMP>
+    </omtext><omtext class="maple">
+      <CMP> [$1..3000]); # _Robert Israel_, Jul 09 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[3000], PrimeOmega[#] == 2 &amp;&amp; IntegerQ[Sqrt[Apply [Plus, IntegerDigits[#]]]] &amp;]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A007953, A028839, A048519.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A107288 (Primes whose digit sum is square).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _K. D. Bajpai_, Jul 07 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A166771.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A166771">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 10,132,1618,18584,206392,2247486</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of nX6 1..2 arrays containing at least one of each value, and all equal values connected.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.1.1.1.1.2...2.2.2.2.2.1...2.2.2.2.2.2...2.2.2.2.1.1...2.2.2.2.2.2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...1.1.2.1.1.2...2.2.2.1.2.1...2.1.1.2.2.2...1.1.1.2.2.1...2.1.1.2.1.2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...2.2.2.2.2.2...2.2.2.1.1.1...1.1.1.1.1.1...1.1.1.1.1.1...2.2.1.1.1.2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ------</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...2.2.2.2.1.1...1.1.1.1.1.1...2.2.1.1.2.2...2.2.1.1.1.2...1.1.1.1.1.1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...2.2.2.2.1.1...1.1.1.1.1.1...2.2.2.2.2.2...2.1.1.1.1.2...1.1.1.2.2.2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...2.2.1.1.1.1...1.2.2.2.1.1...2.2.2.2.2.2...2.2.2.2.2.2...1.1.1.1.1.1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Oct 21 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

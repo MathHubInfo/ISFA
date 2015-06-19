@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A108654.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A108654">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,4,6,7,9,15,27,40,72,134,170,204,237,240,285,288,592,613,1443,1524,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2289,2292</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that 10^n - 117 is prime.</CMP>
+    </omtext><assertion class="example">
+      <CMP> If n=3 then 10^n - 117 = 883 (prime).</CMP>
+    </assertion><assertion class="example">
+      <CMP> If n=40 then 10^n - 117 = 9999999999999999999999999999999999999883 (prime).</CMP>
+    </assertion><omtext class="maple">
+      <CMP> a := proc (n) if isprime(10^n-117) = true then n else end if end proc; seq(a(n), n = 1 .. 1500); - _Emeric Deutsch_, Jul 09 2007</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[3,2500],PrimeQ[10^#-117]&amp;]  (* _Harvey P. Dale_, Feb 18 2011 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> hard,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Parthasarathy Nambi_, Jul 06 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Emeric Deutsch_, Jul 09 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Harvey P. Dale, Feb 18 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

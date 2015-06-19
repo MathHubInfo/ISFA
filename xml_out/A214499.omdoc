@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A214499.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A214499">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,4,4,1,1,2,3,4,6,4,6,4,11,3,10,6,9,4,18,30,16,8,29,5,32,21,15,45,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5,97,10,36,3,33,35,55,20,54,25,30,30,36,8,38,30,16,6,3,20,10,35,36,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 84,20,52,85,25,25,70,46,15,53,6,103,11,27,87,15,42,14</CMP>
+    </assertion><omtext class="name">
+      <CMP> The size of the set of numbers k&gt;=0 such that all (3^n-k)*3^n-1 are prime but only the last (largest) (3^n-k)*3^n+1 is also an associated twin prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Starting at a count of zero, we consider for increasing k&gt;=0 the pairs (3^n-k)*3^n+-1. If the smaller of these two numbers is prime, we increase the counter. If the larger of these two numbers is also prime, we admit the counter to the sequence. It is basically a measure of how many unsuccessful primality tests on the larger of the two numbers are done before it becomes a compatible twin prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Heuristically, the average of a(n)/n over n=1 to N tends to 0.83 as N increases.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Pierre CAMI, &lt;a href=&quot;/A214499/b214499.txt&quot;&gt;Table of n, a(n) for n = 1..500&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> PFGW64 and SCRIPTIFY</CMP>
+    </omtext><omtext class="program">
+      <CMP> SCRIPT</CMP>
+    </omtext><omtext class="program">
+      <CMP> DIM nn,0</CMP>
+    </omtext><omtext class="program">
+      <CMP> DIM kk</CMP>
+    </omtext><omtext class="program">
+      <CMP> DIM jj</CMP>
+    </omtext><omtext class="program">
+      <CMP> DIMS tt</CMP>
+    </omtext><omtext class="program">
+      <CMP> OPENFILEOUT myfile,b(n).txt</CMP>
+    </omtext><omtext class="program">
+      <CMP> OPENFILEOUT myf,a(n).txt</CMP>
+    </omtext><omtext class="program">
+      <CMP> LABEL loopn</CMP>
+    </omtext><omtext class="program">
+      <CMP> SET nn,nn+1</CMP>
+    </omtext><omtext class="program">
+      <CMP> SET jj,0</CMP>
+    </omtext><omtext class="program">
+      <CMP> IF nn&gt;500 THEN END</CMP>
+    </omtext><omtext class="program">
+      <CMP> SET kk,0</CMP>
+    </omtext><omtext class="program">
+      <CMP> LABEL loopk</CMP>
+    </omtext><omtext class="program">
+      <CMP> SET kk,kk+1</CMP>
+    </omtext><omtext class="program">
+      <CMP> SETS tt,%d,%d\,;nn;kk</CMP>
+    </omtext><omtext class="program">
+      <CMP> PRP (3^nn-kk)*3^nn-1,tt</CMP>
+    </omtext><omtext class="program">
+      <CMP> IF ISPRP THEN GOTO a</CMP>
+    </omtext><omtext class="program">
+      <CMP> IF ISPRIME THEN GOTO a</CMP>
+    </omtext><omtext class="program">
+      <CMP> GOTO loopk</CMP>
+    </omtext><omtext class="program">
+      <CMP> LABEL a</CMP>
+    </omtext><omtext class="program">
+      <CMP> SET jj,jj+1</CMP>
+    </omtext><omtext class="program">
+      <CMP> PRP (3^nn-kk)*3^nn+1,tt</CMP>
+    </omtext><omtext class="program">
+      <CMP> IF ISPRP THEN GOTO d</CMP>
+    </omtext><omtext class="program">
+      <CMP> IF ISPRIME THEN GOTO d</CMP>
+    </omtext><omtext class="program">
+      <CMP> GOTO loopk</CMP>
+    </omtext><omtext class="program">
+      <CMP> LABEL d</CMP>
+    </omtext><omtext class="program">
+      <CMP> WRITE myfile,tt</CMP>
+    </omtext><omtext class="program">
+      <CMP> SETS tt,%d,%d\,;nn;jj</CMP>
+    </omtext><omtext class="program">
+      <CMP> WRITE myf,tt</CMP>
+    </omtext><omtext class="program">
+      <CMP> GOTO loopn</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A212037, A214495, A214496, A214500, A214501, A214502.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Pierre CAMI_, Jul 20 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

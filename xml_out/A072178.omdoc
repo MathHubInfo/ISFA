@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A072178.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A072178">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,19,21,24,44,42,50,57,0,60,76,91,56,86,85,66,92,88,114,129,131,106,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 130,122,117,157,134,175,119,150,181,165,185,179,198,182,220,228,188,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 190,261,235,222,231,229,233,224,227,288,372,241,279,254,253,318,267</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n)-th factorial is the smallest factorial containing exactly n 4's, or 0 if no such number exists.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is conjectured that a(9)=0 since no factorial &lt; 10000 contained just 9 fours.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(2)=19 since 19th factorial, i.e., 19! = 121645100408832000 contains exactly two 4's.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Do[k = 1; While[ Count[IntegerDigits[k! ], 4] != n, k++ ]; Print[k], {n, 1, 60}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A072244, A072220, A072208, A072204, A072200, A072199, A072177, A072163, A072124.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Shyam Sunder Gupta_, Jul 30 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited and extended by _Robert G. Wilson v_, Jul 31 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

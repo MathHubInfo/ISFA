@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A162580.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A162580">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,6,16,26,44,62,240,418,756,1094,2544,3994,6556,9118,32352,55586,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 99492,143398,330000,516602,845900,1175198,3452112,5729026,9953556,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 14178086,31076592,47975098,77547580,107120062,298608832,490097602</CMP>
+    </assertion><omtext class="name">
+      <CMP> G.f.: A(x) = exp( 2*Sum_{n&gt;=1} 2^[A007814(n)^2] * x^n/n ), where A007814(n) = exponent of highest power of 2 dividing n.</CMP>
+    </omtext><assertion class="example">
+      <CMP> G.f.: A(x) = 1 + 2*x + 4*x^2 + 6*x^3 + 16*x^4 + 26*x^5 + 44*x^6 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> log(A(x))/2 = 2^0*x + 2^1*x^2 + 2^0*x^3/3 + 2^4*x^4/4 + 2^0*x^5/5 + 2^1*x^6/6 + 2^0*x^7/7 + 2^9*x^8/8 +...+ 2^[A007814(n)^2]*x^n/n +...</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) {a(n)=local(L=sum(m=1,n,2*2^(valuation(m,2)^2)*x^m/m)+x*O(x^n));polcoeff(exp(L),n)}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A155200, A007814, A000123, A162581, A162582.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Jul 06 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

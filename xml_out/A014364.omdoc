@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A014364.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A014364">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1074,1086,1098,1320,3000,6360,13080,26520,64200,136680,303960,668040,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1448760,2897880,6778920,14760600,31761720,75003840,189623520,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 475142400,1262108388,1723154620,2250655556,1742856988</CMP>
+    </assertion><omtext class="name">
+      <CMP> Aliquot sequence starting at 1074.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, Unsolved Problems in Number Theory, B6.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;http://www.loria.fr/~zimmerma/records/aliquot.html&quot;&gt;Latest information&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Christophe CLAVIER, &lt;a href=&quot;http://christophe.clavier.free.fr/Aliquot/site/Aliquot.html&quot;&gt;Aliquot Sequences&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul Zimmermann_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

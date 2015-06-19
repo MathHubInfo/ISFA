@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A071699.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A071699">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,13,61,73,109,181,193,229,241,313,349,421,433,601,661,829,1021,1033,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1093,1153,1321,1429,1453,1489,1609,1621,1669,1789,1873,1933,2029,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2089,2113,2269,2341,2593,2689,2713,3001,3121,3169,3253,3301</CMP>
+    </assertion><omtext class="name">
+      <CMP> Greater members of twin prime pairs of form (4*k+3,4*(k+1)+1), k&gt;=0.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Corresponding lesser members: A071698(n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A071699/b071699.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> #+2&amp;/@Select[4Range[0,850]+3,PrimeQ[#]&amp;&amp;PrimeQ[#+2]&amp;] (* _Harvey P. Dale_, Aug 24 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a071699 n = a071699_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a071699_list = [x | x &lt;- [5, 9 ..], a010051' x == 1, a010051' (x-2) == 1]</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Aug 05 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A006512, A071696, A071698, A071700.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A010051, subsequence of A016813.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Jun 04 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

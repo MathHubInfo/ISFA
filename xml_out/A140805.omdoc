@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A140805.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A140805">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,4,1,1,27,27,1,1,256,46656,256,1,1,3125,10000000000,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 10000000000,3125,1,1,46656,437893890380859375,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 104857600000000000000000000,437893890380859375,46656,1,1,823543,5842587018385982521381124421</CMP>
+    </assertion><omtext class="name">
+      <CMP> Positive triangular sequence of coefficients inspired by the Belyi transform: x'-&gt;(m + n)^(n + m)*x^m*(1 - x)^n/(m^m*n^n): t(n,m)=Binomial[n, m]^Binomial[n, m].</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sums are: 1, 2, 6, 56, 47170, 20000006252, 104857600875787780761812064, ...</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These symmetrical coefficients remind one of Calbi-Yau base Hodge Diamond matrices. These numbers get large very fast.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Leila Schneps (editor), The Grothendieck Theory of Dessins D'enfants, London Mathematical Society, Cambridge Press, page 49</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="t" cd="A140805"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Binomial" cd="A140805"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA>
+      <OMA>
+      <OMS name="Binomial" cd="A140805"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> {1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 4, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 27, 27, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 256, 46656, 256, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 3125, 10000000000, 10000000000, 3125, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 46656, 437893890380859375, 104857600000000000000000000, 437893890380859375, 46656, 1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> {1, 823543, 5842587018385982521381124421, 1102507499354148695951786433413508348166942596435546875, 1102507499354148695951786433413508348166942596435546875, 5842587018385982521381124421, 823543, 1}</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Clear[t, n, m, a] t[n_, m_] = Binomial[n, m]^Binomial[n, m]; a = Table[Table[t[n, m], {m, 0, n}], {n, 0, 10}]; Flatten[a]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_ and _Gary W. Adamson_, Jul 15 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

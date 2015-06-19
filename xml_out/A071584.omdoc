@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A071584.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A071584">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,7,94,343,1042,70861,946711,345328,1084675,70635304,942574282,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3476237791,10278214831,70401098869,948270322876,3499051657474,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 10696503923233,702789315036232,9440197953148261,34137358159889311</CMP>
+    </assertion><omtext class="name">
+      <CMP> Powers of 7 written backwards.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A071584/b071584.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; (s-&gt; parse(cat(s[-i]$i=1..length(s))))(&quot;&quot;||(7^n)):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..50);  # _Alois P. Heinz_, Apr 09 2015</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> FromDigits[Reverse[IntegerDigits[#]]]&amp;/@(7^Range[0,20]) (* _Harvey P. Dale_, Apr 29 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(i=1,50,n=5^i; s=ceil(log(n)/log(10)); print1(sum(i=0,s,10^(s-i-1)*(floor(n/10^i)-10*floor(n/10^(i+1)))),&quot;,&quot;))</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Benoit Cloitre_, Jun 01 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

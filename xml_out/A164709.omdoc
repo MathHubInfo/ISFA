@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A164709.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A164709">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,9,10,17,18,20,21,27,33,34,36,37,40,41,42,51,54,65,66,68,69,72,73,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 74,80,81,82,84,85,99,102,108,119,129,130,132,133,136,137,138,144,145,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 146,148,149,160,161,162,164,165,168,169,170,195,198,204,216,219,231,238</CMP>
+    </assertion><omtext class="name">
+      <CMP> A positive integer n is included if all runs of 1's in binary n are of the same length, and if there are at least two runs of 1's.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Clarification: A binary number consists of &quot;runs&quot; completely of 1's alternating with runs completely of 0's. No two or more runs all of the same digit are adjacent.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For the terms of this sequence together with those positive integers that, when written in binary, each contain only one run of 1's, see A164707.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A164707.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Leroy Quet_, Aug 23 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended by _Ray Chandler_, Mar 15 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

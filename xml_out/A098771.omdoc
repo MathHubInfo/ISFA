@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A098771.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A098771">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,4,5,6,7,8,9,38,58,66,87,568,766,2799,6478,6785,26486,36685,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 36893,64788,66758,67586,69664,77686,276895,467683,474668,488973,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 548678,587667,658648,666369,668954,839666,939669,958968,968765,2386698</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that sigma(n)=sigma(d_1)*sigma(d_2)*...*sigma(d_k) where d_1 d_2 ... d_k is the decimal expansion of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of terms of this sequence up to 15000000 is 72. Has this sequence at least one multi-digit prime term?</CMP>
+    </omtext><assertion class="example">
+      <CMP> 97888745 is in the sequence because sigma(97888745) = 117936000 = sigma(9)*sigma(7)*sigma(8)*sigma(8)*sigma(8)*sigma(7)*sigma(4)*sigma(5).</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Do[If[h=IntegerDigits[n];l=Length[h];!MemberQ[h, 0]&amp;&amp;DivisorSigma[ 1, n]==Product[DivisorSigma[1, h[[k]]], {k, l}], Print[n]] {n, 100000000}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A098684, A098685.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Farideh Firoozbakht_, Oct 03 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

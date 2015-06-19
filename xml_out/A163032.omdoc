@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A163032.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A163032">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 21,639,27651,1111283,42972329,1642690309,62618577481,2385542862643,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 90870669971589,3461426734215747</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX6 binary arrays with all 1s connected and a path of 1s from top row to bottom row</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Jul 20 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A212019.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A212019">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,4,8,24,32,64,76,124,154,214,234,340,364,452,532,664,696,854,890,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1086,1206,1350,1394,1692,1794,1966,2108,2396,2452,2822,2882,3212,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3408,3636,3860,4360,4432,4688,4920,5470,5550,6090,6174,6642,7056</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (w,x,y,z) with all terms in {1,...,n} and w*x=2*y*z.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Each term is divisible by 2.  See A211795 for a guide to related sequences.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Bo Gyu Jeong, &lt;a href=&quot;/A212019/b212019.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(2) counts these four 4-tuples: (1,2,1,1), (2,1,1,1), (2,2,1,2), (2,2,2,1).</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> t = Compile[{{n, _Integer}}, Module[{s = 0},</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (Do[If[w*x == 2 y*z, s = s + 1],</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> {w, 1, #}, {x, 1, #}, {y, 1, #}, {z, 1, #}] &amp;[n]; s)]];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Map[t[#] &amp;, Range[0, 60]] (* A212019 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> %/2  (* integers *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (* Peter Moses, Apr 13 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A211795.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Apr 28 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

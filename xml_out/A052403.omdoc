@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A052403.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A052403">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,0,1,2,33,187,1144,6919,38118,226581,1309875</CMP>
+    </omtext><omtext class="name">
+      <CMP> Noninvertible knots with n crossings (A002863-A052402).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Jablan S. and Sazdanovic R., LinKnot: Knot Theory by Computer, World Scientific Press, 2007.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Hoste, J.; Thistlethwaite, M.; and Weeks, J. &quot;The First 1,701,936 Knots.&quot; Math. Intell., 20, 33-48, Fall 1998.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/InvertibleKnot.html&quot;&gt;Invertible Knot.&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,9</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric W. Weisstein_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

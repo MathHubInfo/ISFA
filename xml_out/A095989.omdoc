@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A095989.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A095989">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,8,48,368,3376,35824,430512,5773936,85482032,1384936688,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 24380214960,463522810736,9468048895792,206831329017328,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4812581925690288,118843801816575088,3104590192664327216,85544737118902122224</CMP>
+    </assertion><omtext class="name">
+      <CMP> INVERTi transform applied to the ordered Bell numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A set composition of n is an ordered sequence [S_1, S_2, ..., S_k] where S_i subset of [n] all disjoint and the union of all S_i is [n] (see A000670). A set composition is atomic if S_1 union ... union S_j does not equal [r] for any r&lt;n and j&lt;k. a(n) is the number of atomic set compositions.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A preference function of n is a word of length n where all the numbers 1 through k occur at least once for some k&lt;=n (see A000670). A preference function is atomic if no strict leading subword contains the only occurrences in the word of the letters 1 through j&lt;k. a(n) is the number of atomic preference functions.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sum" cd="A095989"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMR xref="A000670"/>
+      <OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="q"/>
+      <OMV name="k"/>
+    </OMA></OMA><OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>6</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5</OMI><OMV name="x"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>(continued fraction ).-From _Philippe Deléham_ ,Nov 22 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="T" cd="A095989"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMA><OMV name="x"/>
+    </OMA>
+      </OMOBJ>,where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A095989"/>
+      <OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="T" cd="A095989"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>;(continued fraction ).-_Sergei <OMOBJ>
+        <OMV name="N"/>
+      </OMOBJ>.Gladkovskii_ ,Nov 29 2013 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Let <OMOBJ>
+        <OMA>
+      <OMS name="A" cd="A095989"/>
+      <OMV name="x"/>
+    </OMA>
+      </OMOBJ>be the <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .<OMOBJ>
+        <OMR xref="A095989"/>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="B" cd="A095989"/>
+      <OMV name="x"/>
+    </OMA>
+      </OMOBJ>the <OMOBJ>
+        <OMV name="g"/>
+      </OMOBJ>.f .<OMOBJ>
+        <OMR xref="A000670"/>
+      </OMOBJ>,then <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="A" cd="A095989"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="B" cd="A095989"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA><OMV name="x"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Sergei <OMOBJ>
+        <OMV name="N"/>
+      </OMOBJ>.Gladkovskii_ ,Nov 29 2013 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Atomic set compositions a(1)=1: [{1}]; a(2)=2: [{12}], [{2},{1}]; a(3)=8: [{123}], [{2},{13}], [{3}, {12}], [{23}, {1}], [{13},{2}], [{2},{3},{1}], [{3},{1},{2}], [{3},{2},{1}].</CMP>
+    </assertion><assertion class="example">
+      <CMP> Atomic preference functions a(1) = 1: 1; a(2)=2: 11, 21; a(3)=8: 111, 212, 221, 211, 121, 312, 231, 321.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A000670 := proc(n) option remember; local k; if n &lt;=1 then 1 else add(binomial(n,k)*A000670(n-k),k=1..n); fi; end: add(A000670(k)*x^k,k=0..20): series(1-1/%,x,21): [seq(coeff(%,x,i),i=1..20)];</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000670, A074664, A095993.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Mike Zabrocki_, Jul 18 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

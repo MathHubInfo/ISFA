@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A022141.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A022141">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,17,22,39,61,100,161,261,422,683,1105,1788,2893,4681,7574,12255,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 19829,32084,51913,83997,135910,219907,355817,575724,931541,1507265,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2438806,3946071,6384877,10330948</CMP>
+    </assertion><omtext class="name">
+      <CMP> Fibonacci sequence beginning 5, 17.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tanya Khovanova, &lt;a href=&quot;http://www.tanyakhovanova.com/RecursiveSequences/RecursiveSequences.html&quot;&gt;Recursive Sequences&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>5</OMI><OMA><OMS name="times"/><OMI>12</OMI><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Philippe Deléham_ ,Nov 20 2008 ]
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> a={};b=5;c=17;AppendTo[a, b];AppendTo[a, c];Do[b=b+c;AppendTo[a, b];c=b+c;AppendTo[a, c], {n, 4!}];a (* _Vladimir Joseph Stephan Orlovsky_, Sep 17 2008 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> LinearRecurrence[{1,1},{5,17},30] (* _Harvey P. Dale_, Feb 21 2013 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

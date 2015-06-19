@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A191997.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A191997">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,32,128,512,8192,2097152,226492416,301989888,536870912,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 32212254720,8349416423424,4453022092492800,1122161567308185600,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2294196982052290560,12235717237612216320,16314289650149621760,58731442740538638336000,51166832915557261718323200</CMP>
+    </assertion><omtext class="name">
+      <CMP> Denominators of partial products of a Hardy-Littlewood constant.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The rational partial products are r(n)=A191996(n)/a(n), n&gt;=1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The limit r(n), n-&gt;infinity, approximately 1.3203236, is the constant C(f_1,f_2) appearing in the Hardy-Littlewood conjecture (also called Bateman-Horn conjecture) for the integer polynomials f_1=x and f_2=x+2 (relevant for twin primes). See the Conrad reference Example 1, p. 134, also for the original references.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Keith Conrad, Hardy-Littlewood constants, pp. 133-154 in: Mathematical properties of sequences and other combinatorial structures, edts. Jong-Seon No et al., Kluwer, Boston/Dordrecht/London, 2003.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Wolfdieter Lang, &lt;a href=&quot;/A191997/a191997.txt&quot;&gt;Rationals and limit.&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A191997"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="denominator" cd="A191997"/>
+      <OMA>
+      <OMS name="r" cd="A191997"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,with the rational <OMOBJ>
+        <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="r" cd="A191997"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMBIND>
+          <OMA>
+            <OMS name="product" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>2</OMI>
+    </OMA>
+                  <OMV name="n"/>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="p" cd="A191997"/>
+      <OMV name="j"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND></OMA>
+    </OMA>
+      </OMOBJ>,with the primes <OMOBJ>
+        <OMA>
+      <OMS name=":=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="p" cd="A191997"/>
+      <OMV name="j"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000040"/>
+      <OMV name="j"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> The rationals r(n)(in lowest terms) are 2, 3/2, 45/32, 175/128, 693/512, 11011/8192,...</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A191996, A191998/A191999</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,frac</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_, Jun 21 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

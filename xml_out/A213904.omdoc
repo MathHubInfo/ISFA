@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A213904.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A213904">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1006301,0,11,1022381,0,3512051,1871,632081,0,1121831,15731,0,1481,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1155611,1068251,0,18911,284741,0,12390011,191,821,0,3837131,875261,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 854921,10865291,18041,0,958541,680291,0,299471,1063961,663581,0,165701</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) is the initial member of the least pair of prime quadruples (of the form p, p+2, p+6, p+8) with a difference of 30*n, with no other prime quadruple between the pair.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is 0 if no such pair of prime quadruples is conjectured to exist for the indicated difference.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> When n is congruent to 2 or 5 mod 7 (A047385) no solution exists because one of the terms is divisible by 7. [_Jud McCranie_, Jun 17 2013]</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jud McCranie, &lt;a href=&quot;/A213904/b213904.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> For n=3, a(3)=11, since 11, 13, 17, 19 is a prime quadruple. The next prime quadruple is 101, 103, 107, 109. The difference 101-11=90, which is equal to 30*3.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A007530, A059925, A157967, A047385.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ray G. Opao_, Jun 24 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

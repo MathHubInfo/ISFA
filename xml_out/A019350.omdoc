@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A019350.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A019350">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,5,17,47,59,89,97,113,127,131,137,149,167,179,181,223,229,281,293,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 307,311,337,347,389,401,421,433,439,443,457,487,491,499,521,547,557,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 569,587,599,607,617,641,647,661,677,683,709,719,733,739,769,773,797,811,823</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes with primitive root 23.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A019350/b019350.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Pri#primes_root&quot;&gt;Index entries for primes by primitive root&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> pr=23; Select[Prime[Range[200]], MultiplicativeOrder[pr, # ] == #-1 &amp;]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A055244.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A055244">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,6,12,23,43,79,143,256,454,799,1397,2429,4203,7242,12432,21271,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 36287,61739,104791,177476,299978,506111,852457,1433593,2407443,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4037454,6762708,11314391,18909139,31569799,52657247,87751624</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of certain stackings of n+1 squares on a double staircase.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)= G_{n+1} of Turban reference eq.(3.9).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Equals A046854 * [1,2,3,...]. [_Gary W. Adamson_, Dec 23 2008]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> (1 + x + 3x^2 + 6x^3 + ...) = (1 + x + 2x^2 + 3x^3 + 5x^4 + 8x^5 + ...) * (1 + x^2 + 2x^3 + 3x^4 + 5x^5 + 8x^6 + ...). [_Gary W. Adamson_, Jul 27 2010]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 1 of A194540 [_R. H. Hardin_, Aug 28 2011]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Turban, Lattice animals on a staircase and Fibonacci numbers, J.Phys. A 33 (2000) 2587-2595.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A055244/b055244.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> G.f.: (1-x+x^3)/(1-x-x^2)^2 (from Turban reference eq.(3.3) with t=1).</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A055244"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="F" cd="A055244"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="F" cd="A055244"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA><OMI>5</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="F" cd="A055244"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMR xref="A000045"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>(Fibonacci numbers )(from Turban reference <OMOBJ>
+        <OMV name="eq"/>
+      </OMOBJ>.<OMOBJ>
+        <OMF dec="3.9"/>
+      </OMOBJ>).
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A055244"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A001629"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="F" cd="A055244"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Gary <OMOBJ>
+        <OMV name="W"/>
+      </OMOBJ>.Adamson_ ,Jul 27 2007 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A055244"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>4</OMI>
+    </OMA><OMV name="n"/></OMA><OMI>6</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A055244"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>5</OMI>
+    </OMA><OMV name="n"/></OMA><OMI>11</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A055244"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>6</OMI>
+    </OMA><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Jean -François Alcover_ ,Mar 11 2014 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> a:= n-&gt; (Matrix([[1,-1,2,-4]]). Matrix(4, (i,j)-&gt; if (i=j-1) then 1 elif j=1 then [2,1,-2,-1][i] else 0 fi)^(n))[1,1] ; seq (a(n), n=0..33); # _Alois P. Heinz_, Aug 05 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[0] = a[1] = 1; a[n_] := a[n] = (((n-4)*n-6)*a[n-2] + ((n-5)*n-11)*a[n-1]) / ((n-6)*n-1); Table[a[n], {n, 0, 40}] (* _Jean-François Alcover_, Mar 11 2014 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> CoefficientList[Series[(1 - x + x^3)/(1 - x - x^2)^2, {x, 0, 50}], x] (* _Vincenzo Librandi_, Mar 13 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000045, A001629, A046854, A055245.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_, May 10 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

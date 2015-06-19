@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A133978.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A133978">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 378997,777643,3127979,3127997,3136607,3173761,3374729,3377999,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3759263,3774161,3791387,3943967,7342469,7521641,7540541,7767709</CMP>
+    </assertion><omtext class="name">
+      <CMP> Home primes whose homeliness is 12.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of terms &lt; 10^n: 0, 0, 0, 0, 0, 2, 16, ....</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> lst = {}; f[n_] := FromDigits@ Flatten[ IntegerDigits@ Table[ #[[1]], {#[[2]]}] &amp; /@ FactorInteger@n, 2]; h[n_] := NestWhileList[f@# &amp;, n, !PrimeQ@# &amp;, 1, 28]; Do[p = h[n][[ -1]]; If[ PrimeQ@p &amp;&amp; p &lt; 10^7 &amp;&amp; p != n, Print[{n, p}]; AppendTo[lst, p]], {n, 2, 1000}];</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> d = 12 - 2; lsu = {}; Do[ If[ lst[[n]] == lst[[n + d]] &amp;&amp; lst[[n - 1]] != lst[[n]] &amp;&amp; lst[[n]] != lst[[n + d + 1]], AppendTo[lsu, lst[[n]]]], {n, 188004 - d - 1}]; Take[Union@ lsu, 31]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A037274, A118756, A133977, A133956, A000014, A133958, A133960, A133962, A133964, A133966, A133968, A133970, A133972, A133974, A133976.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Sep 30 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

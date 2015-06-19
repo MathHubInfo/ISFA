@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A137244.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A137244">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,6,42,1050,127050,13086150,65967282150,2659866783570150,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 13594579130827036650,4484729304047661947505150,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 179016047168539016473835519025150</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least common multiple of {k!+1} for k=0...n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> I came upon this sequence in an attempt to solve an open Erdos problem: Show that Sum_{1/(k!+1), k=0...infinity} is rational/irrational/transcendental.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> LCM {k!+1 : k=0...n}</CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI) a(n) = {lc = 1; for (k=0, n, lc = lcm(lc, k!+1);); return (lc);} \\ _Michel Marcus_, Jul 25 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A038507, A000142.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Karl Ethan Levy (klevy1(AT)gc.cuny.edu), Mar 09 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A155815.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A155815">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 23,97,269,587,1123,1973,3257,5119,7727,11273,15973,22067,29819,51473,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 104369,191123,229637,687787,897473,1018807,1152119,1631723,2026069,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2488223,2747023,3025577,3989723,5614247,7125947,7692019,8291237</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes of form n^4+2*n^3+36*n^2+35*n+23.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For all 0&lt;=n&lt;13, n^4+2*n^3+36*n^2+35*n+23 is a prime.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A155815/b155815.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Table[n^4 + 2 n^3 + 36 n^2 + 35 n + 23, {n, 0, 100}], PrimeQ] (* _Vincenzo Librandi_, Jun 24 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [a: n in [0..100] | IsPrime(a) where a is n^4+2*n^3+36*n^2+35*n+23]; // _Vincenzo Librandi_, Jun 24 2013</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vincenzo Librandi_, Jan 28 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

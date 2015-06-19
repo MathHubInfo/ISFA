@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A186938.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A186938">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7528,431656,5769904,102475864,1627815216,28477050608,475637108896,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 8132915749352,137957613500896,2350443973085288,39973429999524952,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 680134904601046536,11574046354140738136,196965440910144079296</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+1)X9 binary arrays with every 2X2 subblock trace equal to exactly one or two horizontal and vertical neighbor 2X2 subblock traces</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 8 of A186939</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A186938/b186938.txt&quot;&gt;Table of n, a(n) for n = 1..25&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for 4X9</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..1..1..1..0..0..1..0....0..0..1..0..0..0..1..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..0..1..1..0..0..1..1....0..1..1..0..0..1..1..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0..1..0..0..1..1....0..0..1..1..0..1..1..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0..1..0..0..1..1....0..0..0..1..0..1..1..0..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Mar 01 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

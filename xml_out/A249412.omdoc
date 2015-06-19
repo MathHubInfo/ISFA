@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A249412.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A249412">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,5,7,9,13,25,29,61,81,121,169</CMP>
+    </omtext><omtext class="name">
+      <CMP> Cardinalities of finite fields without three consecutive primitive elements.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Stephen D. Cohen, Tomás Oliveira e Silva, Tim Trudgian, &lt;a href=&quot;http://arxiv.org/abs/1410.6210&quot;&gt;On consecutive primitive elements in a finite field&lt;/a&gt;, arXiv:1410.6210 [math.NT], (22-October-2014)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,fini,full</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Joerg Arndt_, Oct 28 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A200531.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A200531">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 32,354,3135,23925,167171,1092645,6820330,41135050,241717185,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1391776867,7886862976,44130194797,244429190692,1342743707709,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7326819179875,39759798789392,214782513374737,1155893422272121,6201199013944784</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX5 0..2 arrays with every row and column running average nondecreasing rightwards and downwards</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 5 of A200534</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A200531/b200531.txt&quot;&gt;Table of n, a(n) for n = 1..36&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=4</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0..2....0..0..0..0..1....0..0..2..1..1....0..0..0..0..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..2..2....0..0..0..1..1....0..1..2..1..1....0..0..1..1..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..2..2..2....1..2..2..2..2....0..1..2..2..2....0..1..2..2..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2..2..2..2....1..1..2..2..2....1..1..2..2..2....1..2..2..2..2</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Nov 18 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -128,7 +128,12 @@ case class ExtraSymbol(symbol : String) extends Expression{
 }
 case class ArgList(args : List[Expression]) extends Expression{
   def present : String = "("+args.mkString(",")+")"
-  def toNode(implicit theory : String) : Elem = <OME>THIS SHOULD NEVER BE CALLED! WILL BE FIXED!</OME>
+  def toNode(implicit theory : String) : Elem =
+    <OMA>
+      <OMS cd="set1" name="set">
+        {args.map(_.toNode)}
+      </OMS>
+    </OMA>
   def clear : Expression = this
 }
 case class SeqReference(seq : String) extends Expression{
@@ -141,12 +146,11 @@ case class Iters(name : String, from : Option[Expression], to : Option[Expressio
   def present : String =
     name + "_{"+(if(from.isEmpty) "" else from.get.toString)+"}^{"+(if(to.isEmpty) "" else to.get.toString)+"}("+on.toString+")"
   def toNode(implicit theory : String) : Elem =
-    <OMS name="name">
       <OMBIND>
           <OMA>
             <OMS name={name} cd="arithmetics"/>
               <OMA>
-                <OMS name="interval">
+                <OMS name="interval" cd="arithmetics"/>
                   {if(from.nonEmpty) {
                       from.get.toNode
                     }
@@ -155,21 +159,20 @@ case class Iters(name : String, from : Option[Expression], to : Option[Expressio
                       to.get.toNode
                     }
                   }
-                </OMS>
               </OMA>
-              <OMBVAR>
-                {if(from.nonEmpty) {
-                    from.get match {
-                      case Equation(eq, Var(a), rest) => Var(a).toNode
-                      case _ => ""
-                    }
-                  }
-                }
-              </OMBVAR>
-            {on.toNode}
           </OMA>
+          {if(from.nonEmpty) {
+              from.get match {
+                case Equation(eq, Var(a), rest) =>
+                  <OMBVAR>{ Var(a).toNode }</OMBVAR>
+                case _ => ""
+              }
+            }
+          }
+        <OMA>
+          {on.toNode}
+        </OMA>
       </OMBIND>
-    </OMS>
   def clear : Expression = this
 }
 case class Factorial(expr : Expression) extends Expression{

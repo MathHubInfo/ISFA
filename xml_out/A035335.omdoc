@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A035335.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A035335">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 6,4,3,7,2,6,7,7,11,10,9,8,23,7,19,6,17,49,21,5,19,31,13,29,4,19,29,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 17,13,19,31,3,23,17,19,27,26,23,25,17,7,23,29,22,26,17,29,51,2,29,17,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 26,22,18,23,7,17,47,23,21,16,19,17,23,6,49,19,13,17,7,29,19,47,29,13</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = smallest number m such that n appears in decimal expansion of 1/m.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. J. Mathar, &lt;a href=&quot;/A035335/b035335.txt&quot;&gt;Table of n, a(n) for n = 1..200&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(13)=23 since 1/23=.04347826086956521739{13}... is the first to contain 13.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> foundQ[n_, m_] := (idn = IntegerDigits[n]; ln = Length[idn]; rdm = Most[ Flatten[ RealDigits[1/m, 10, lm = 2* Length[ Flatten[ RealDigits[1/m]]]]]]; found = False; Do[If[idn === Take[rdm, {k, k+ln-1}], found = True; Break[]], {k, 1, lm-ln+1}]; found); a[n_] := (m = 2; While[ True, If[foundQ[n, m], Break[], m++]]; m); a[n_ /; n &gt; 1 &amp;&amp; IntegerQ[ Log[10, n]]] := 10; a[n_ /; n &gt; 1 &amp;&amp; Union[ IntegerDigits[n]] == {1}] := 9; Table[a[n], {n, 1, 76}] (* _Jean-François Alcover_, Oct 24 2011 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nice,nonn,base,look</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Erich Friedman_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A247062.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A247062">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,5,6,8,11,12,16,17,18,21,22,24,27,28,32,33,34,37,38,40,43,44,48,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 49,50,53,54,56,59,60,64,65,66,69,70,72,75,76,80,81,82,85,86,88,91,92,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 96,97,98,101,102,104,107,108,112</CMP>
+    </assertion><omtext class="name">
+      <CMP> Dynamic Betting Game D(n,5,2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Players A and B bet in a k-round of game. Player A has initial money n. In each round, player A can wager an integer between 0 and what he has. Player A then gains or losses an amount equal to his wager depending on whether player B let him win or lose. Player B tries to minimize player A’s money at the end. The number of round player A can lose is r. a(n) is the maximum money player A can have at the end of the game for k = 5 and r = 2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Charles Jwo-Yue Lien, Dynamic Betting Game, Southeast Asian Bulletin of Mathematics (to be published)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A247062/b247062.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1,0,0,0,0,0,0,1,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      With <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A247062"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A247062"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A247062"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>is a periodic function of <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>with value =<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>3</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>4</OMI>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A247062"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A247062"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A247062"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>8</OMI>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="a" cd="A247062"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>9</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Sep 11 2014 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>7</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>6</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMV name="x"/><OMI>1</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Colin Barker_ ,Sep 11 2014 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> In the case of n=3: For the 1st round, player A bets 1. If A loses, A will end up with D(2,4,1)=5 per reference A247060. If A wins, he will end up with D(4,4,2)=5 per reference A247161. If A does not follow the proposed bet, he will have less than 5 at the end. So a(3) = 5.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) Vec(x*(4*x^7+x^6+3*x^5+2*x^4+x^3+3*x^2+x+1)/((x-1)^2*(x+1)*(x^2+1)*(x^4+1)) + O(x^100)) \\ _Colin Barker_, Sep 11 2014</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a247062 n = a247062_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a247062_list = [1,2,5,6,8,11,12,16,17] ++ zipWith (+)</CMP>
+    </omtext><omtext class="program">
+      <CMP>    (drop 8 a247062_list) (zipWith (-) (tail a247062_list) a247062_list)</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Sep 19 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A247060, A247061, A247063, A247064, A247160, A247161.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Charles Jwo-Yue Lien_, Sep 10 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

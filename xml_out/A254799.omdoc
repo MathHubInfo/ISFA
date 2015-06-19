@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A254799.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A254799">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 12680,40167,133628,351264,1200192,3633517,12325478,38276893,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 128187410,405105944,1331704432,4254116411,13863454578,44643253435,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 145048675394,469389806478,1524517587338,4947289882647,16076937597652,52251576307768</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (n+2)X(3+2) 0..1 arrays with every 3X3 subblock diagonal sum minus antidiagonal median nondecreasing horizontally, vertically and ne-to-sw antidiagonally</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 3 of A254804</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A254799/b254799.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0..1....0..0..1..1..1....0..0..0..0..0....0..0..1..0..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..1..1....0..1..1..1..1....0..1..1..1..1....1..0..1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..1..1..1....1..1..0..1..0....1..1..0..0..0....1..1..1..0..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..1..1..1....1..0..1..0..0....1..1..0..1..1....0..0..1..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..1..0..1..0....0..1..0..0..1....1..0..0..1..1....0..1..1..1..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Feb 08 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

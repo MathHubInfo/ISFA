@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A213259.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A213259">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,1,1,1,1,1,1,1,2,2,2,1,2,2,1,2,2,2,2,2,2,2,2,2,3,2,2,2,2,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3,3,3,3,3,3,4,4,4,4,4,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5,5,5,5,5,5,5</CMP>
+    </assertion><omtext class="name">
+      <CMP> The number of primorials that neither exceed nor divide the n-th colossally abundant number.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also: the number of primorials p#&lt;m such that p#/phi(p#)&gt;m/phi(m), where m is the n-th colossally abundant (CA) number.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Note that only two CA numbers are primorials (2 and 6); all other CA numbers are not squarefree, while all primorials are squarefree.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence is not monotonic but tends to grow, albeit very slowly.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> L. Alaoglu and P. Erdős, On highly composite and similar numbers. Trans. Amer. Math. Soc. 56:3 (1944), 448-469.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. Erdős and J.-L. Nicolas, Repartition des nombres superabondants. Bull. Soc. Math. Fr., 103 (1975), 65-90.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J.-L. Nicolas, Petites valeurs de la fonction d'Euler. J. Number Theory 17, no.3 (1983), 375-388.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> S. Ramanujan, Highly composite numbers. Annotated and with a foreword by J.-L. Nicolas and G. Robin, Ramanujan J., 1 (1997), 119-153.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. Robin, Grandes valeurs de la fonction somme des diviseurs et hypothèse de Riemann. J. Math. Pures Appl. 63 (1984), 187-213.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Let <OMOBJ>
+        <OMV name="x"/>
+      </OMOBJ>be the largest prime factor of the n-th CA number <OMOBJ>
+        <OMV name="m"/>
+      </OMOBJ>,then :
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMI>1</OMI><OMA>
+      <OMS name="a" cd="A213259"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sqrt" cd="A213259"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="log" cd="A213259"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for all <OMOBJ>
+        <OMV name="nonzero"/>
+      </OMOBJ>terms <OMOBJ>
+        <OMA>
+      <OMS name="a" cd="A213259"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="&lt;" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="a" cd="A213259"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="sqrt" cd="A213259"/>
+      <OMV name="x"/>
+    </OMA></OMA><OMA>
+      <OMS name="log" cd="A213259"/>
+      <OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for all terms <OMOBJ>
+        <OMA>
+      <OMS name="a" cd="A213259"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="a" cd="A213259"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A213259"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>(due to the factorization pattern of CA numbers ).
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Corollary :there are only finitely many zero terms <OMOBJ>
+        <OMA>
+      <OMS name="a" cd="A213259"/>
+      <OMV name="n"/>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP> All formulas can be checked directly for small x (e.g., for x&lt;100000).</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      For large <OMOBJ>
+        <OMV name="x"/>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>and <OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>follow from Robin's Lemma (Robin ,<OMOBJ>
+        <OMI>1984</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMV name="p"/>
+      </OMOBJ>.<OMOBJ>
+        <OMI>190</OMI>
+      </OMOBJ>).
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> For the first five CA numbers m, each smaller primorial divides m; therefore the initial five terms are zeros.</CMP>
+    </assertion><assertion class="example">
+      <CMP> The 6th CA number, 360, is not divisible by one smaller primorial, 210; thus a(6)=1.</CMP>
+    </assertion><assertion class="example">
+      <CMP> The 13th CA number, 21621600, is not divisible by two smaller primorials, 510510 and 9699690; thus a(13)=2.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A004490 (colossally abundant numbers), A002110 (primorials).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,13</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Alexei Kourbatov_, Jun 07 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

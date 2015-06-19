@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A068365.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A068365">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 14,24,308,474,690,1242,2970,9690,10340,13110,18270,26400,161880</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers n such that sigma(n)=phi((prime(n)+prime(n+1))/2).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Are there any odd numbers in the sequence?</CMP>
+    </omtext><omtext class="comment">
+      <CMP> There are no more terms up to 2500000. - _Rick L. Shepherd_, Aug 29 2002</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=2,2500000,if(sigma(n)==eulerphi((prime(n)+prime(n+1))/2),print1(n,&quot;,&quot;)))</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Benoit Cloitre_, Feb 28 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Rick L. Shepherd_, Aug 29 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

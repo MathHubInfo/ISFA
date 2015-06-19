@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A101478.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A101478">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,4,21,124,782,5144,34845,241196,1697498,12104872,87246770,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 634425752,4647805372,34267130928,254035385949,1892315106252,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 14155536314786,106288436980488,800753707211430,6050872882024520</CMP>
+    </assertion><omtext class="name">
+      <CMP> G.f. satisfies A(x) = x*(1+A)^4/(1+A^2).</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Bousquet-Melou, &lt;a href=&quot;http://arXiv.org/abs/math.CO/0501266&quot;&gt;Limit laws for embedded trees&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> G.f. (1-(1-8*x)^(1/4))/(1+(1-8*x)^(1/4))-1, a(n)=sum(m=1..n, m*sum(k=0..n-m(-1)^(n-m-k)*binomial(n+k-1,n-1)*sum(j=0..k, binomial(j,n-m-3*k+2*j)*binomial(k,j)*2^(2*n-2*m-5*k+3*j)*3^(-n+m+3*k-j))))/n, n&gt;0, a(0)=0. - _Vladimir Kruchinin_, Dec 10 2011</CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="~" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A101478"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMV name="n"/></OMA><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="Gamma" cd="A101478"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>4</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>5</OMI><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="Gamma" cd="A101478"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>4</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>4</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="sqrt" cd="A101478"/>
+      <OMS name="Pi"/>
+    </OMA></OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>3</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Gamma" cd="A101478"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>4</OMI>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="sqrt" cd="A101478"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA>
+    </OMA><OMS name="Pi"/></OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-_Vaclav Kotesovec_ ,Sep 16 2013 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Conjecture :<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="n"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A101478"/>
+      <OMV name="n"/>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>12</OMI><OMV name="n"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A101478"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>12</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>16</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="n"/>
+      <OMI>2</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>64</OMI><OMV name="n"/></OMA>
+    </OMA><OMI>65</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A101478"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>16</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="n"/></OMA><OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA><OMI>9</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>4</OMI><OMV name="n"/></OMA><OMI>11</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A101478"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>3</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="_R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar_ ,Nov 10 2013 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> A:= proc(n) option remember; if n=0 then 0 else convert(series(x* (1+A(n-1))^4/ (1+A(n-1)^2), x,n+1), polynom) fi end: a:= n-&gt; coeff(A(n), x,n): seq(a(n), n=0..20); # _Alois P. Heinz_, Aug 23 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[0]=0; a[n_] := Sum[m*Sum[(-1)^(n-m-k)*Binomial[n+k-1, n-1]*Sum[Binomial[j, n-m-3*k+2*j]*Binomial[k, j]*2^(2*n-2*m-5*k+3*j)*3^(-n+m+3*k-j), {j, 0, k}], {k, 0, n-m}], {m, 1, n}]/n; Table[a[n], {n, 0, 20}] (* _Jean-François Alcover_, Mar 30 2015, after _Vladimir Kruchinin_ *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a(n):=sum(m*sum((-1)^(n-m-k)*binomial(n+k-1,n-1)*sum(binomial(j,n-m-3*k+2*j)*binomial(k,j)*2^(2*n-2*m-5*k+3*j)*3^(-n+m+3*k-j),j,0,k),k,0,n-m),m,1,n)/n; (* _Vladimir Kruchinin_, Dec 10 2011 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Ralf Stephan_, Jan 21 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

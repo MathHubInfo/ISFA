@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A021053.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A021053">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,2,0,4,0,8,1,6,3,2,6,5,3,0,6,1,2,2,4,4,8,9,7,9,5,9,1,8,3,6,7,3,4,6,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9,3,8,7,7,5,5,1,0,2,0,4,0,8,1,6,3,2,6,5,3,0,6,1,2,2,4,4,8,9,7,9,5,9,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,8,3,6,7,3,4,6,9,3,8,7,7,5,5,1,0,2,0,4,0,8,1,6,3,2,6,5,3,0,6</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of 1/49.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The 42-digit cycle 1,0,2,0,4,0,8,1,6,3,2,6,5,3,0,6,1,2,2,4,4,8,9,7,9,5,9,1,8,3,6,7,3,4,6,9,3,8,7,7,5,5 in this sequence and the others based on forty-ninths, gives the successive digits of the smallest integer which is multiplied by 5 when the final digit is moved from the right hand end to the left hand end. - _Ian Duff_, Jan 09 2009</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

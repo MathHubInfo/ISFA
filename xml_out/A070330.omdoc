@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A070330.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A070330">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,23,29,31,43,47,73,77,83,91,101,103,107,127,143,157,173,199,209,221,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 233,241,247,251,257,259,271,307,313,317,343,353,359,373,377,391,409,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 431,433,437,439,443,461,467,469,487,497,527,541,563,569,583,589,601</CMP>
+    </assertion><omtext class="name">
+      <CMP> Nontrivial numbers in which suffixing or inserting a 0 anywhere yields only composite numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This excludes numbers with sum of the digits == 0 mod 3, even numbers, or numbers == 5 (mod 10).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A070331.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, May 11 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Sascha Kurz_, Feb 01 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

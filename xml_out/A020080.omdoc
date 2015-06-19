@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A020080.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A020080">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,4,16,80,467,3196,25042,221208,2175216,23564850,278850730,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3578584368,49503750432,734305631412,11626505830701,195712848150140,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3490212458677514,65732334638426516,1303691303662125905</CMP>
+    </assertion><omtext class="name">
+      <CMP> Integer part of GAMMA(n+5/6)/GAMMA(5/6).</CMP>
+    </omtext><omtext class="maple">
+      <CMP> Digits := 64:f := proc(n,x) trunc(GAMMA(n+x)/GAMMA(x)); end;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Simon Plouffe_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

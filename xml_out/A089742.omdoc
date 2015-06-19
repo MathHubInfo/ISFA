@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A089742.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A089742">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,3,7,17,41,99,242,596,1477,3681,9215,23155,58368,147530,373768,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 948882,2413264,6147414,15682008,40056238,102434119,262228051,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 671945055,1723350315,4423518544,11362907022,29208834520,75131251334,193370093508</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of subwords UHH...HD in all peakless Motzkin paths of length n+3, where U=(1,1), D=(1,-1) and H=(1,0).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This sequence can also be easily expressed using RNA secondary structure terminology.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> I. L. Hofacker, P. Schuster and P. F. Stadler, Combinatorics of RNA secondary structures, Discrete Appl. Math., 88, 1998, 207-237.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> P. R. Stein and M. S. Waterman, On some new sequences generalizing the Catalan and Motzkin numbers, Discrete Math., 26, 1979, 261-272.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Vauchassade de Chaumont and G. Viennot, Polynomes orthogonaux et problemes d'enumeration en biologie moleculaire, Publ. I.R.M.A. Strasbourg, 1984, 229/S-08, Actes 8e Sem. Lotharingien, pp. 79-86.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. S. Waterman, &lt;a href=&quot;http://www.cmb.usc.edu/people/msw/Waterman.html&quot;&gt;Home Page&lt;/a&gt; (contains copies of his papers)</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Vauchassade de Chaumont and G. Viennot, &lt;a href=&quot;http://www.mat.univie.ac.at/~slc/opapers/s08viennot.html&quot;&gt;Polynomes orthogonaux at problemes d'enumeration en biologie moleculaire&lt;/a&gt;, Sem. Loth. Comb. B08l (1984) 79-86.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP> G.f.= g^2/[(1-z)(1-z^2*g^2)], where g=(1-z+z^2-sqrt(1-2z-z^2-2*z^3+z^4))/(2z^2) is the g.f. of sequence A004148 (RNA secondary structures).</CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(1)=3 because in the four peakless Motzkin paths of length 4, namely HHHH, H(UHD), (UHD)H and (UHHD), we have altogether three subwords of the required form (shown between parentheses).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A004148.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Emeric Deutsch_, Jan 08 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A061559.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A061559">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,7,12,15,48,39,23,144,271,120,39,288,1119,1440,363,47,576,2927,8160,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7447,1092,71,864,6927,27840,58095,37968,3279,87,1440,12767,78720,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 257543,409584,192031,9840,111,2016,23759,175680,877239,2351328,2875839</CMP>
+    </assertion><omtext class="name">
+      <CMP> Array read by antidiagonals: T(k,d) = number of different hyperplanes in d-space with integer coefficients in set {-k,...,-1,0,1,...,k}.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The number of hyperplanes is T(k,d)=Sum(binomial(d,i)2^(d-i-1)(2*M(d+1-i,k)+M(d-i,k)),i=0..d-1) or T(k,d)=(1/2)*Sum(binomial(n,i)2^(n-i)M(n-i,k),i=0..n-1)-1, with n=d+1, where M(n,k) is the number of n-tuples (a,b,...) with 1&lt;=a,b,...&lt;=k and gcd(a,b,...)=1 T(1,d) is A029858 for n&gt;=2.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Array begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3 12 39 120 363 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7 48 271 1440 7447 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 15 144 1119 8160 58095 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 23 288 2927 27840 257543 ...</CMP>
+    </assertion><assertion class="example">
+      <CMP> 39 576 6927 78720 877239 ...</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A018805, A071778.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Carlos A.S Felgueiras (casf(AT)fe.up.pt), Jan 16 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

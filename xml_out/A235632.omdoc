@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A235632.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A235632">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,11,13,31,41,53,73,101,131,151,223,281,313,353,401,463,521,523,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 541,593,661,701,733,773,941,983,1013,1063,1091,1093,1123,1153,1193,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1201,1321,1381,1423,1471,1481,1483,1571,1583,1601,1613,1663,1693,1741,1753,1801,1861,1871,1873</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes whose base 5 representation is also the base 8 representation of a prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This sequence is part of a two dimensional array of sequences, given in the LINK, based on this same idea for any two different bases b, c &gt; 1. Sequence A235265 and A235266 are the most elementary ones in this list. Sequences A089971, A089981 and A090707 through A090721, and sequences A065720 - A065727, follow the same idea with one base equal to 10.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. F. Hasler, &lt;a href=&quot;https://docs.google.com/document/d/10IM7fcAbB2tqRGuwfGvuEGUzD_IXbgXPDK0tfxN4M3o/pub&quot;&gt;Primes whose base c expansion is also the base b expansion of a prime&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> E.g., 11 = 21[5] and 21[8] = 17 both are prime.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) is(p,b=8,c=5)=isprime(vector(#d=digits(p,c),i,b^(#d-i))*d~)&amp;&amp;isprime(p) \\ NB: This code is only valid for b&gt;c.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A235628, A235265, A235266, A152079, A235461 - A235482, A065720 - A065727, A235394, A235395, A089971 ⊂ A020449, A089981, A090707 - A091924, A235615 - A235639. See the LINK for further cross-references.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _M. F. Hasler_, Jan 13 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

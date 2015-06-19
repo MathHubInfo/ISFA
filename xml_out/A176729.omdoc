@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A176729.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A176729">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,1,4,1,6,1,24,1,10,1,12,1,210,1,48,1,90,1,420,1,330,1,360,1,1638,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,28,1,30,1,7392,1,510,1,36,1,51870,1,840,1,6930,1,13860,1,4830,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1008,1,99450,1,5148,1,2970,1,3192,1,870,1,180,1,2792790,1,137280,1,1530,1,5796</CMP>
+    </assertion><omtext class="name">
+      <CMP> Denominator of z-sequence for Sheffer triangle A060081.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The numerator sequence is A176728.</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Lang: &lt;a href=&quot;http://www-itp.physik.uni-karlsruhe.de/~wl/EISpub/A176728.text&quot;&gt;Rationals A176728/A176729 . &lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      E.g.f .for rationals <OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMR xref="A176728"/><OMR xref="A176729"/>
+    </OMA>
+      </OMOBJ>:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="sqrt" cd="A176729"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="log" cd="A176729"/>
+      <OMA>
+      <OMS name="sqrt" cd="A176729"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.For <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>one has <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A176729"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,hence <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A176728"/>
+      <OMI>0</OMI>
+    </OMA><OMA>
+      <OMS name="a" cd="A176729"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMA>
+      <OMI>0</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Rationals A176728/A176729 with offset 0: [0,1/2,0,-1/4,0,-17/6,0,-1955/24,0,-44089/10,0,-4627969/12,... ].</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A176726/A176727 a-sequence for triangle A060081.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,frac</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_, Jul 14 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

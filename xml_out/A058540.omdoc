@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A058540.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A058540">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,3,9,36,144,651,3015,14634,72654,369063,1904985,9971889,52788393,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 282161025,1520597895,8253281871,45075359277,247534382298,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1365994896264,7571065357620,42127865408028,235246997219400,1317894484506336</CMP>
+    </assertion><omtext class="name">
+      <CMP> Another 3-way generalization of series-parallel networks with n unlabeled edges.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Compare the combstruct construction here with those for A000084 and A058534.</CMP>
+    </omtext><omtext class="maple">
+      <CMP> spec := [ N, {N=Union(Z,S,P,Q), S=Set(Union(Z,P,Q),card&gt;=2), P=Set(Union(Z,S,Q),card&gt;=2), Q=Set(Union(Z,S,P),card&gt;=2)} ]; [seq(combstruct[count](spec,size=n), n=0..40)]; # N=A058540, S=A058371</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000084, A058534, A058371.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Dec 24 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

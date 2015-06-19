@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A014052.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A014052">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,6,37,326,3802,54992,948645,18992710,432655358,11046221254,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 312347907386,9688154906657,327018557066164,11932588574197763,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 468012768020438830,19634066192684343922,877272066059957914873</CMP>
+    </assertion><omtext class="name">
+      <CMP> Floor((n+1/n)^n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A014052/b014052.txt&quot;&gt;Table of n, a(n) for n = 1..300&lt;/a&gt;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Floor((n+1/n)^n): n in [1..20]]; // Vincenzo Librandi, Oct 17 2011</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=(n+1/n)^n\1 \\ _Charles R Greathouse IV_, Apr 17 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

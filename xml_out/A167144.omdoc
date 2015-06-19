@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A167144.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A167144">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,14,70,503,4898,60517,899764,15496561,301137820,6483583802,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 152689979223,3896718655702,107010852239903,3144913162405021,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 98469727935174977,3272516761148911378,115063890523670839944</CMP>
+    </assertion><omtext class="name">
+      <CMP> Column 0 of the matrix 4th power of triangle A167015.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> This sequence equals the reversal of row 4 of A167015 (when extended infinitely to the left), and then shifted left 1 place.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> In triangle T=A167015, row n of T equals the initial n terms in column 0 of matrix power T^n, reversed and with an appended '1'.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The definition of A167015 may be relaxed to allow the triangle to extend indefinitely also to the left, making each row infinite.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A167015, A167016, A167142, A167143, A167145.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Oct 28 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

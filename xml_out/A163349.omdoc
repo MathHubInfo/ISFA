@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A163349.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A163349">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,9,67,463,3089,20241,131363,848087,5459521,35089209,225323107,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1446179263,9279361169,59531488641,381889579523,2449671556487,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 15713255235841,100790106559209,646496195167747,4146789500815663</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = ((1+2*sqrt(2))*(5+sqrt(2))^n+(1-2*sqrt(2))*(5-sqrt(2))^n)/2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Binomial transform of A081180 without initial 0. Fifth binomial transform of A143095.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A163349"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="a" cd="A163349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMI>23</OMI><OMA>
+      <OMS name="a" cd="A163349"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for <OMOBJ>
+        <OMA>
+      <OMS name="&gt;" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A163349"/>
+      <OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A163349"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMI>9</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>10</OMI><OMV name="x"/></OMA>
+    </OMA><OMA><OMS name="times"/><OMI>23</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="program">
+      <CMP> (MAGMA) Z&lt;x&gt;:=PolynomialRing(Integers()); N&lt;r&gt;:=NumberField(x^2-2); S:=[ ((1+2*r)*(5+r)^n+(1-2*r)*(5-r)^n)/2: n in [0..19] ]; [ Integers()!S[j]: j in [1..#S] ]; [From _Klaus Brockhaus_, Jul 26 2009]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A081180, A143095.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> Al Hakanson (hawkuu(AT)gmail.com), Jul 25 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited and extended beyond a(5) by _Klaus Brockhaus_, Jul 26 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

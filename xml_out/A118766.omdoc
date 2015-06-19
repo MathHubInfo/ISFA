@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A118766.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A118766">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,3,4,5,6,7,8,9,12,13,14,15,16,17,18,19,10,11,22,23,24,25,26,27,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 28,20,21,29,32,33,34,35,36,37,38,39,30,31,42,43,44,45,46,47,48,40,41,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 49,52,53,54,55,56,57,58,59,50,51,62,63,64,65,66,67,68,60,61,69,72,73,74</CMP>
+    </assertion><omtext class="name">
+      <CMP> A118764(A118764(n)).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Inverse integer permutation of A118765;</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A118763(a(n)) = a(A118763(n)) = A118764(n).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Per#IntegerPermutation&quot;&gt;Index entries for sequences that are permutations of the natural numbers&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A118765.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, May 01 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

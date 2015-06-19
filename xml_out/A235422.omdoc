@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A235422.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A235422">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 432,5022,60879,543946,4895505,35230388,255103234,1554228232,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9515328218,50741400195,271565143251,1297890540438,6219668001557,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 27116924880173,118466428248793,477662770905341,1929017445264100,7271629530089986</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of (2+1)X(n+1) 0..2 arrays with 2X2 subblock sum of squares lexicographically nondecreasing rowwise and nonincreasing columnwise</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row 2 of A235421</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A235422/b235422.txt&quot;&gt;Table of n, a(n) for n = 1..33&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..1..0..2....2..1..1..0....1..1..0..0....0..1..1..0....0..0..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..2..2..0....2..2..2..1....1..1..1..0....2..0..1..1....2..2..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2..1..2....1..2..2..1....2..2..1..1....1..2..1..1....2..1..2..2</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Jan 10 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

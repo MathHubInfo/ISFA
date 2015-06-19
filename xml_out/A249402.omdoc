@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A249402.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A249402">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,2,3,11,40,99,589,3194,11259,92159,666160,3052323,31799041,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 287316122,1620265923,20497038755,222237912664,1488257158851,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 22149498351205,280180369563194,2172534146099019,37183508549366519,537546603651987424,4736552519729393091</CMP>
+    </assertion><omtext class="name">
+      <CMP> The number of 3-alternating permutations of [n].</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A sequence a(1),a(2),... is called k-alternating if a(i) &gt; a(i+1) iff i=1 (mod k). a(n) counts the number of 3-alternating permutations of [n].</CMP>
+    </omtext><omtext class="link">
+      <CMP> Alois P. Heinz, &lt;a href=&quot;/A249402/b249402.txt&quot;&gt;Table of n, a(n) for n = 0..500&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. P. Stanley, &lt;a href=&quot;http://arxiv.org/abs/0912.4240&quot;&gt;A survey of alternating permutations&lt;/a&gt;, arXiv:0912.4240, page 17.</CMP>
+    </omtext><assertion class="example">
+      <CMP> The a(4)=3 3-alternating permutations of [4] are: [2 1 3 4 ] [3 1 2 4 ] and [4 1 2 3 ].</CMP>
+    </assertion><assertion class="example">
+      <CMP> The a(5)=11 3-alternating permutations of [5] are: [2 1 3 5 4 ] [2 1 4 5 3 ] [3 1 2 5 4 ] [3 1 4 5 2 ] [3 2 4 5 1 ] [4 1 2 5 3 ] [4 1 3 5 2 ] [4 2 3 5 1 ] [5 1 2 4 3 ] [5 1 3 4 2 ] and [5 2 3 4 1 ].</CMP>
+    </assertion><omtext class="maple">
+      <CMP> b:= proc(u, o, t) option remember; `if`(u+o=0, 1,</CMP>
+    </omtext><omtext class="maple">
+      <CMP>      `if`(t=1, add(b(u-j, o+j-1, irem(t+1, 3)), j=1..u),</CMP>
+    </omtext><omtext class="maple">
+      <CMP>                add(b(u+j-1, o-j, irem(t+1, 3)), j=1..o)))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= n-&gt; b(0, n, 0):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=0..35);  # _Alois P. Heinz_, Oct 27 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A065619 (2-alternating).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A178963, A249583 (alternative definitions of 3-alternating permutations).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Column k=3 of A250261.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. J. Mathar_, Oct 27 2014</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(16)-a(25) from _Alois P. Heinz_, Oct 27 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A099632.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A099632">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 45,694,3768374,6303735,15913725,20291271,42824146,47788894,54424095,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 141120134,163380694,219105494,305034794,404686557,790565966,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 893558445,928608435,1198745925,1251276254,1409720194,1412229015,1696122945</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n for which (sigma[n-d]+sigma[n+d])/2 = sigma[n], where d=1; name=1-sigma-balanced numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> These terms, the 1-sigma-balanced numbers, seems to be significantly rarer than those with d=2,4,6,8,10.. It seems also that the 6-sigma-balanced numbers are very common.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Giovanni Resta, &lt;a href=&quot;/A099632/b099632.txt&quot;&gt;Table of n, a(n) for n = 1..91&lt;/a&gt; (terms &lt; 4*10^12)</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Solutions to <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="sigma" cd="A099632"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMV name="d"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="sigma" cd="A099632"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="x"/><OMV name="d"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="sigma" cd="A099632"/>
+      <OMV name="x"/>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="d"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>20291271</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="a"/>
+      <OMA>
+      <OMS name="sigma" cd="A099632"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMI>37374480</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="b"/>
+      <OMA>
+      <OMS name="sigma" cd="A099632"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA><OMS name="times"/><OMI>38104560</OMI><OMA>
+      <OMS name="sigma" cd="A099632"/>
+      <OMV name="n"/>
+    </OMA></OMA>
+    </OMA>
+      <OMI>37739520</OMI>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="a"/><OMV name="b"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>,
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> d=1;Do[s=(DivisorSigma[1, n+d]+DivisorSigma[1, n-d])/ 2-DivisorSigma[1, n];If[Equal[s, 0], Print[n]], {n, 1, 100000000}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000203, A099631.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Oct 26 2004</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(10)-a(22) from _Donovan Johnson_, Feb 01 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

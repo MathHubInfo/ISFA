@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A073640.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A073640">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,7,19,31,37,61,73,127,139,199,211,229,283,397,433,439,463,523,541,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 547,577,601,607,619,739,751,787,811,919,937,991,1009,1021,1039,1093,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1201,1213,1297,1447,1453,1459,1471,1483,1657,1663,1723,1783,1867,1879</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(1) = 2; a(n) = smallest prime greater than the previous term such that concatenation of two successive terms is a prime.</CMP>
+    </omtext><assertion class="example">
+      <CMP> e.g. a(1)=2, the next prime is 3 and when 2 and 3 are concatenated we get 23, another prime. Hence a(2)=3. Likewise, a(3)=7 because 37 is prime, whereas the next prime after 3 is &quot;5&quot; which would lead to the nonprime &quot;35&quot;.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> pout := [2]: nout := [1]: for n from 2 to 1000 do: p := ithprime(n): d := parse(cat(pout[nops(pout)],p)): if (isprime(d)) then pout := [op(pout),p]: nout := [op(nout),n]: fi: od:</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> t = {i = 2}; Do[While[! PrimeQ[FromDigits[Flatten[IntegerDigits[{Last[t], x = Prime[i]}]]]], i++]; AppendTo[t, x], {49}]; t (* _Jayanta Basu_, Jul 03 2013 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Aug 09 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from Mark Hudson (mrmarkhudson(AT)hotmail.com), Jan 31 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

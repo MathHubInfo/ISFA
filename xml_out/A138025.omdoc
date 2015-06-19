@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A138025.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A138025">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 19099919,52554569,85864769,171729539,198479579,226366139</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers n such that n remains prime through 7 iterations of function f(x) = 2x + 1.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Prime[Range[10^7]],PrimeQ[a1=2*#+1]&amp;&amp;PrimeQ[a2=2*a1+1]&amp;&amp;PrimeQ[a3=2*a2+1]&amp;&amp;PrimeQ[a4=2*a3+1]&amp;&amp;PrimeQ[a5=2*a4+1]&amp;&amp;PrimeQ[a6=2*a5+1]&amp;&amp;PrimeQ[a7=2*a6+1] &amp;]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Joseph Stephan Orlovsky_, May 01 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Added more terms _Vladimir Joseph Stephan Orlovsky_, Jan 17 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A229377.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A229377">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 164,2138,48490,956866,20014278,407900408,8454015792,173331549156,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3583467036398,73637531304764,1520470917860158,31281412038561736,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 645413766480453102,13287410455121938834,274025926174436180190</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX5 0..2 arrays avoiding 11 horizontally, 22 vertically and 00 diagonally or antidiagonally</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 5 of A229380</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A229377/b229377.txt&quot;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A229377/a229377.txt&quot;&gt;Empirical recurrence of order 64&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Empirical recurrence of order <OMOBJ>
+        <OMI>64</OMI>
+      </OMOBJ>(see link above )
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=3</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..1..2..2..2....2..0..1..2..2....1..0..1..0..0....0..0..1..2..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..0..0..0..0..1....1..2..2..0..0....2..1..2..2..2....2..2..2..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..2..2..1..2....0..0..1..2..2....1..0..0..0..1....1..0..0..2..0</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_ Sep 21 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A228354.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A228354">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,4,6,8,12,16,22,24,28,32,44,48,56,64,86,88,92,96,112,120,128,172,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 176,184,192,220,224,240,256,342,344,348,352,368,376,384,440,448,480,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 496,512,684,688,696,704,732,736,752,768,880,888,896,960,992,1024</CMP>
+    </assertion><omtext class="name">
+      <CMP> Indices (k) of partitions in the list of compositions of j in colexicographic order, if 1&lt;=k&lt;=2^(j-1), j&gt;=1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also where records occur in A228720.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Also triangle read by rows in which row j lists the indices of the partitions of j into parts greater than the smallest part of the partitions of j-1, in the list of compositions of j in colexicographic order. See A228525 and A211992.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The total number of terms in the first j rows of triangle is A000041(j), j &gt;= 1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row j has length A187219(j).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Right border gives A000079.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A228354"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMR xref="A194602"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A001511"/>
+      <OMA>
+      <OMS name="a" cd="A228354"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A141285"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMR xref="A000120"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="a" cd="A228354"/>
+      <OMV name="n"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMR xref="A207034"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> For j = 5 consider the list of compositions of 5 in colexicographic order (see A228525). The indices of the partitions are 1, 2, 4, 6, 8, 12, 16 which are the first A000041(5) terms of this sequence, see below:</CMP>
+    </assertion><assertion class="example">
+      <CMP> ---------------------------------------------------------</CMP>
+    </assertion><assertion class="example">
+      <CMP> .   Compositions                     Partitions</CMP>
+    </assertion><assertion class="example">
+      <CMP> k      of 5                             of 5      n  a(n)</CMP>
+    </assertion><assertion class="example">
+      <CMP> ---------------------------------------------------------</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1    1+1+1+1+1  * ............... *  1+1+1+1+1    1    1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2    2+1+1+1    * ............... *  2+1+1+1      2    2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3    1+2+1+1          ........... *  3+1+1        3    4</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4    3+1+1      * .../ .......... *  2+2+1        4    6</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5    1+1+2+1          / ......... *  4+1          5    8</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6    2+2+1      * .../ /   ...... *  3+2          6   12</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7    1+3+1            /   /   ... *  5            7   16</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8    4+1        * .../   /   /</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9    1+1+1+2            /   /</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10   2+1+2             /   /</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11   1+2+2            /   /</CMP>
+    </assertion><assertion class="example">
+      <CMP> 12   3+2        * .../   /</CMP>
+    </assertion><assertion class="example">
+      <CMP> 13   1+1+3              /</CMP>
+    </assertion><assertion class="example">
+      <CMP> 14   2+3               /</CMP>
+    </assertion><assertion class="example">
+      <CMP> 15   1+4              /</CMP>
+    </assertion><assertion class="example">
+      <CMP> 16   5          * .../</CMP>
+    </assertion><assertion class="example">
+      <CMP> .</CMP>
+    </assertion><assertion class="example">
+      <CMP> Written as an irregular triangle the sequence begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6,8;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 12,16;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 22,24,28,32;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 44,48,56,64;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 86,88,92,96,112,120,128;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 172,176,184,192,220,224,240,256;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 342,344,348,352,368,376,384,440,448,480,496,512;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 684,688,696,704,732,736,752,768,880,888,896,960,992,1024;</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000041, A187219, A211992, A228354, A228525, A228720.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabf</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Omar E. Pol_, Aug 20 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

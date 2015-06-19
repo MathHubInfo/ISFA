@@ -47,8 +47,6 @@
     </omtext><omtext class="comment">
       <CMP> When constructing a zonohedron, one zone at a time, out of (up to) 3-d non-intersecting parallelepipeds, the n-th element of this sequence is the number of edges in the n-th zone added with the n-th &quot;layer&quot; of parallelepipeds. (Verified up to 10-zone zonohedron, the enneacontahedron.) E.g., adding the 10th zone to the enneacontahedron requires 46 parallel edges (edges in the 10th zone) by looking directly at a 5-valence vertex and counting visible vertices. - _Shel Kaphan_, Feb 16 2006</CMP>
     </omtext><omtext class="comment">
-      <CMP> Euler transform of length 6 sequence [2, 1, 1, 0, 0, -1]. - _Michael Somos_, Sep 04 2006</CMP>
-    </omtext><omtext class="comment">
       <CMP> Binomial transform of (1, 1, 1, 0, 0, 0,...) and inverse binomial transform of A072863: (1, 3, 9, 26, 72, 192,...). - _Gary W. Adamson_, Oct 15 2007</CMP>
     </omtext><omtext class="comment">
       <CMP> If Y is a 2-subset of an n-set X then, for n &gt;= 3, a(n-3) is the number of (n-2)-subsets of X which have no exactly one element in common with Y. - _Milan Janjic_, Dec 28 2007</CMP>
@@ -94,6 +92,8 @@
       <CMP> For n &gt; 0: A228446(a(n)) = 3. - _Reinhard Zumkeller_, Mar 12 2014</CMP>
     </omtext><omtext class="comment">
       <CMP> Equivalently, numbers of the form 2*m^2+m+1, where m = 0, -1, 1, -2, 2, -3, 3, ... . - _Bruno Berselli_, Apr 08 2014</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For n &gt;= 2: quasi-triangular numbers; the almost-triangular numbers being A000096(n), n &gt;= 2. Note that 2 is simultaneously almost-triangular and quasi-triangular. - _Daniel Forgues_, Apr 21 2015</CMP>
     </omtext><omtext class="reference">
       <CMP> R. B. Banks, Slicing Pizzas, Racing Turtles and Further Adventures in Applied Mathematics, Princeton Univ. Press, 1999. See p. 24.</CMP>
     </omtext><omtext class="reference">
@@ -108,6 +108,8 @@
       <CMP> Derrick Niederman, Number Freak, From 1 to 200 The Hidden Language of Numbers Revealed, A Perigee Book, NY, 2009, p. 83. [_Robert G. Wilson v_, May 21 2010]</CMP>
     </omtext><omtext class="reference">
       <CMP> N. Reading, On the structure of Bruhat Order, Ph.D. dissertation, University of Minnesota, anticipated 2002.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Michel Rigo, Formal Languages, Automata and Numeration Systems, 2 vols., Wiley, 2014. Mentions this sequence - see &quot;List of Sequences&quot; in Vol. 2.</CMP>
     </omtext><omtext class="reference">
       <CMP> A. M. Robert, A Course in p-adic Analysis, Springer-Verlag, 2000; p. 213.</CMP>
     </omtext><omtext class="reference">
@@ -194,8 +196,8 @@
       <CMP> &lt;a href=&quot;/index/Rec#order_03&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (3,-3,1).</CMP>
     </omtext><omdoc:p class="formula">
         <CMP>
-         G.f.:<OMOBJ>
-      <OMA>
+      G.f .:<OMOBJ>
+        <OMA>
       <OMS name="divide" cd="arithmetics"/>
       <OMA>
       <OMS name="plus" cd="arithmetics"/>
@@ -216,12 +218,12 @@
       <OMI>3</OMI>
     </OMA>
     </OMA>
-    </OMOBJ>.
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
         <CMP>
-         G.f.:<OMOBJ>
-      <OMA>
+      G.f .:<OMOBJ>
+        <OMA>
       <OMS name="divide" cd="arithmetics"/>
       <OMA>
       <OMS name="minus" cd="arithmetics"/>
@@ -253,27 +255,52 @@
     </OMA>
     </OMA></OMA>
     </OMA>
-    </OMOBJ>.<OMOBJ>
-      <OMA>
+      </OMOBJ>.<OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
-      <OMA>
-      <OMS name="a" cd="A000124"/>
-      <OMA>
-      <OMS name="minus" cd="arithmetics"/>
-      <p></p><OMV name="n"/>
-    </OMA>
-    </OMA>
       <OMA>
       <OMS name="a" cd="A000124"/>
       <OMV name="n"/>
     </OMA>
-    </OMA>
-    </OMOBJ>. - _Michael Somos_, Sep 04 2006
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
-        <CMP>
-        <OMOBJ>
       <OMA>
+      <OMS name="a" cd="A000124"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA><OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>for all <OMOBJ>
+        <OMV name="n"/>
+      </OMOBJ>in <OMOBJ>
+        <OMV name="Z"/>
+      </OMOBJ>.-_Michael Somos_ ,Sep 04 2006 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      Euler transform of length <OMOBJ>
+        <OMI>6</OMI>
+      </OMOBJ>sequence [<OMOBJ>
+        <OMI>2</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>0</OMI>
+      </OMOBJ>,<OMOBJ>
+        <OMI>0</OMI>
+      </OMOBJ>,-<OMOBJ>
+        <OMI>1</OMI>
+      </OMOBJ>].-_Michael Somos_ ,Sep 04 2006 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="a" cd="A000124"/>
@@ -305,8 +332,8 @@
     </OMA>
     </OMA>
     </OMA>
-    </OMOBJ> and<OMOBJ>
-      <OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="a" cd="A000124"/>
@@ -314,8 +341,8 @@
     </OMA>
       <OMI>1</OMI>
     </OMA>
-    </OMOBJ>,<OMOBJ>
-      <OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="a" cd="A000124"/>
@@ -323,8 +350,8 @@
     </OMA>
       <OMI>2</OMI>
     </OMA>
-    </OMOBJ>,<OMOBJ>
-      <OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="a" cd="A000124"/>
@@ -332,12 +359,12 @@
     </OMA>
       <OMI>4</OMI>
     </OMA>
-    </OMOBJ>. - _Artur Jasinski_, Oct 21 2008
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
+      </OMOBJ>.-_Artur Jasinski_ ,Oct 21 2008 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
         <CMP>
-        <OMOBJ>
-      <OMA>
+      <OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="a" cd="A000124"/>
@@ -351,12 +378,12 @@
     </OMA><OMI>1</OMI>
     </OMA>
     </OMA>
-    </OMOBJ>.
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
         <CMP>
-        <OMOBJ>
-      <OMA>
+      <OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="a" cd="A000124"/>
@@ -373,24 +400,69 @@
     </OMA><OMV name="n"/>
     </OMA>
     </OMA>
-    </OMOBJ>. E.g.f.:(1+x+x^2/2)*exp(x). - _Geoffrey Critzer_, Mar 10 2009
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
-        <CMP>
-         a(n) = sum(k=0..n+1,<OMOBJ>
+      </OMOBJ>.E.g.f .:<OMOBJ>
+        <OMA><OMS name="times"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
       <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="exp" cd="A000124"/>
+      <OMV name="x"/>
+    </OMA></OMA>
+      </OMOBJ>.-_Geoffrey Critzer_ ,Mar 10 2009 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A000124"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA>
       <OMS name="binomial" cd="A000124"/>
       <OMA>
       <OMS name="plus" cd="arithmetics"/>
       <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMV name="n"/>
+    </OMA></OMA>
     </OMA>
+        </OMA>
+      </OMBIND>
     </OMA>
-    </OMOBJ>, 2(k-n))). - _Paul Barry_, Aug 29 2004
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
+      </OMOBJ>.-_Paul Barry_ ,Aug 29 2004 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
         <CMP>
-        <OMOBJ>
-      <OMA>
+      <OMOBJ>
+        <OMA>
       <OMS name="plus" cd="arithmetics"/>
       <OMA>
       <OMS name="minus" cd="arithmetics"/>
@@ -415,12 +487,12 @@
     </OMA><OMI>2</OMI>
     </OMA>
     </OMA>
-    </OMOBJ>. - _Zerinvary Lajos_, May 12 2006
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
+      </OMOBJ>.-_Zerinvary Lajos_ ,May 12 2006 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
         <CMP>
-        <OMOBJ>
-      <OMA>
+      <OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="a" cd="A000124"/>
@@ -438,27 +510,26 @@
     </OMA>
     </OMA>
     </OMA>
-    </OMOBJ>. - _Zerinvary Lajos_, Apr 25 2008
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
+      </OMOBJ>.-_Zerinvary Lajos_ ,Apr 25 2008 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
         <CMP>
-         From _Thomas Wieder_, Feb 25 2009: (Start)
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
+      From _Thomas Wieder_ ,Feb 25 2009 :(Start )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
         <CMP>
-        <OMOBJ>
-      <OMA>
+      <OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="a" cd="A000124"/>
       <OMV name="n"/>
     </OMA>
-      <OMS name="name">
       <OMBIND>
           <OMA>
             <OMS name="sum" cd="arithmetics"/>
               <OMA>
-                <OMS name="interval">
+                <OMS name="interval" cd="arithmetics"/>
                   <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMV name="l_1"/>
@@ -468,34 +539,30 @@
       <OMS name="plus" cd="arithmetics"/>
       <OMV name="n"/><OMI>1</OMI>
     </OMA>
-                </OMS>
               </OMA>
-              <OMBVAR>
-                <OMV name="l_1"/>
-              </OMBVAR>
-            <OMS name="name">
-      <OMBIND>
+          </OMA>
+          <OMBVAR><OMV name="l_1"/></OMBVAR>
+        <OMA>
+          <OMBIND>
           <OMA>
             <OMS name="sum" cd="arithmetics"/>
               <OMA>
-                <OMS name="interval">
+                <OMS name="interval" cd="arithmetics"/>
                   <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMV name="l_2"/>
       <OMI>0</OMI>
     </OMA>
                   <OMV name="n"/>
-                </OMS>
               </OMA>
-              <OMBVAR>
-                <OMV name="l_2"/>
-              </OMBVAR>
-            <OMA><OMS name="times"/><OMS name="..." cd="arithmetics"></OMS><OMS name="name">
-      <OMBIND>
+          </OMA>
+          <OMBVAR><OMV name="l_2"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMS name="..." cd="arithmetics"></OMS><OMBIND>
           <OMA>
             <OMS name="sum" cd="arithmetics"/>
               <OMA>
-                <OMS name="interval">
+                <OMS name="interval" cd="arithmetics"/>
                   <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMV name="l_i"/>
@@ -505,47 +572,40 @@
       <OMS name="minus" cd="arithmetics"/>
       <OMV name="n"/><OMV name="i"/>
     </OMA>
-                </OMS>
               </OMA>
-              <OMBVAR>
-                <OMV name="l_i"/>
-              </OMBVAR>
-            <OMA><OMS name="times"/><OMS name="..." cd="arithmetics"></OMS><OMS name="name">
-      <OMBIND>
+          </OMA>
+          <OMBVAR><OMV name="l_i"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMS name="..." cd="arithmetics"></OMS><OMBIND>
           <OMA>
             <OMS name="sum" cd="arithmetics"/>
               <OMA>
-                <OMS name="interval">
+                <OMS name="interval" cd="arithmetics"/>
                   <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMV name="l_n"/>
       <OMI>0</OMI>
     </OMA>
                   <OMI>1</OMI>
-                </OMS>
               </OMA>
-              <OMBVAR>
-                <OMV name="l_n"/>
-              </OMBVAR>
-            <OMA>
+          </OMA>
+          <OMBVAR><OMV name="l_n"/></OMBVAR>
+        <OMA>
+          <OMA>
       <OMS name="delta" cd="A000124"/>
       <OMV name="l_1"/><OMV name="l_2"/><OMS name="..." cd="arithmetics"></OMS><OMV name="l_i"/><OMS name="..." cd="arithmetics"></OMS><OMV name="l_n"/>
     </OMA>
-          </OMA>
+        </OMA>
+      </OMBIND></OMA>
+        </OMA>
+      </OMBIND></OMA>
+        </OMA>
       </OMBIND>
-    </OMS></OMA>
-          </OMA>
+        </OMA>
       </OMBIND>
-    </OMS></OMA>
-          </OMA>
-      </OMBIND>
-    </OMS>
-          </OMA>
-      </OMBIND>
-    </OMS>
     </OMA>
-    </OMOBJ> where<OMOBJ>
-      <OMA>
+      </OMOBJ>where <OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="delta" cd="A000124"/>
@@ -553,8 +613,8 @@
     </OMA>
       <OMI>0</OMI>
     </OMA>
-    </OMOBJ> if any<OMOBJ>
-      <OMA>
+      </OMOBJ>if any <OMOBJ>
+        <OMA>
       <OMS name="&lt;&gt;" cd="arithmetic"/>
       <OMV name="l_i"/>
       <OMA>
@@ -565,8 +625,8 @@
     </OMA>
     </OMA>
     </OMA>
-    </OMOBJ> and<OMOBJ>
-      <OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
       <OMS name="&lt;&gt;" cd="arithmetic"/>
       <OMA>
       <OMS name="l_" cd="A000124"/>
@@ -577,8 +637,8 @@
     </OMA>
       <OMI>0</OMI>
     </OMA>
-    </OMOBJ> and<OMOBJ>
-      <OMA>
+      </OMOBJ>and <OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="delta" cd="A000124"/>
@@ -586,12 +646,12 @@
     </OMA>
       <OMI>1</OMI>
     </OMA>
-    </OMOBJ> otherwise. (End)
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
+      </OMOBJ>otherwise .(End )
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
         <CMP>
-        <OMOBJ>
-      <OMA>
+      <OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="=" cd="arithmetic"/>
@@ -630,12 +690,12 @@
     </OMA>
     </OMA>
     </OMA>
-    </OMOBJ>. - _Jaroslav Krizek_, Sep 05 2009
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
+      </OMOBJ>.-_Jaroslav Krizek_ ,Sep 05 2009 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
         <CMP>
-        <OMOBJ>
-      <OMA>
+      <OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="a" cd="A000124"/>
@@ -661,12 +721,34 @@
     </OMA><OMI>1</OMI>
     </OMA>
     </OMA>
-    </OMOBJ>. - _Eric Werley_, Jun 27 2011
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
+      </OMOBJ>.-_Eric Werley_ ,Jun 27 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
         <CMP>
-         E.g.f.: exp(x)*(1+x+(x^2)/2) = Q(0);<OMOBJ>
+      E.g.f .:<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="exp" cd="A000124"/>
+      <OMV name="x"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
       <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+      <OMA>
+      <OMS name="Q" cd="A000124"/>
+      <OMI>0</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>;<OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="Q" cd="A000124"/>
@@ -710,12 +792,14 @@
     </OMA>
     </OMA>
     </OMA>
-    </OMOBJ>; (continued fraction). - _Sergei N. Gladkovskii_, Nov 21 2011
-      </CMP>
-      </omdoc:p><omdoc:p class="formula">
+      </OMOBJ>;(continued fraction ).-_Sergei <OMOBJ>
+        <OMV name="N"/>
+      </OMOBJ>.Gladkovskii_ ,Nov 21 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
         <CMP>
-        <OMOBJ>
-      <OMA>
+      <OMOBJ>
+        <OMA>
       <OMS name="=" cd="arithmetic"/>
       <OMA>
       <OMS name="=" cd="arithmetic"/>
@@ -755,10 +839,12 @@
     </OMA>
     </OMA>
     </OMA>
-    </OMOBJ>. - _Wesley Ivan Hurt_, Jun 14 2013
-      </CMP>
-      </omdoc:p><assertion class="example">
+      </OMOBJ>.-_Wesley Ivan Hurt_ ,Jun 14 2013 
+    </CMP>
+    </omdoc:p><assertion class="example">
       <CMP> a(3) = 7 because the 132- and 321-avoiding permutations of {1,2,3,4} are 1234, 2134, 3124, 2314, 4123, 3412, 2341.</CMP>
+    </assertion><assertion class="example">
+      <CMP> G.f. = 1 + 2*x + 4*x^2 + 7*x^3 + 11*x^4 + 16*x^5 + 22*x^6 + 29*x^7 + ...</CMP>
     </assertion><omtext class="maple">
       <CMP> A000124 := n-&gt; n*(n+1)/2+1;</CMP>
     </omtext><omtext class="maple">
@@ -780,7 +866,9 @@
     </omtext><omtext class="program">
       <CMP> (MAGMA) [n: n in [0..1500] | IsSquare(8*n-7)]; // _Vincenzo Librandi_, Apr 16 2014</CMP>
     </omtext><assertion class="crossref">
-      <CMP> Cf. A000096, A002061, A002522, A016028, A055503, A072863, A144328.</CMP>
+      <CMP> Cf. A000096 Maximal number of pieces that can be obtained by cutting an annulus with n cuts, for n &gt;= 1.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A002061, A002522, A016028, A055503, A072863, A144328.</CMP>
     </assertion><assertion class="crossref">
       <CMP> Slicing a cake: A000125, a bagel: A003600.</CMP>
     </assertion><assertion class="crossref">
@@ -789,6 +877,8 @@
       <CMP> The first 20 terms are also found in A025732 and A025739.</CMP>
     </assertion><assertion class="crossref">
       <CMP> Cf. A000125, A000127, A002522, A005408, A006261, A016813, A058331, A080856, A086514, A161701, A161702, A161703, A161704, A161706, A161707, A161708, A161710, A161711, A161712, A161713, A161715, A014206, A051601.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A055469 Quasi-triangular primes.</CMP>
     </assertion><assertion class="keywords">
       <CMP> nonn,core,easy,nice,changed</CMP>
     </assertion><assertion class="offset">

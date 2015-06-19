@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A129622.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A129622">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 24,1028,56014,3705306,286717796,25493886852</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of minimal deterministic finite automata with n states on a two-letter alphabet.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Frederique Bassino, Julien David and Cyril Nicaud. REGAL: a library to randomly and exhaustively generate automata. 2007.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Frederique Bassino, Julien David and Cyril Nicaud, &lt;a href=&quot;http://igm.univ-mlv.fr/~jdavid01/Publications.php&quot;&gt;REGAL: a library to randomly and exhaustively generate automata.&lt;/a&gt;.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A059412, A000282.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Johnicholas Hines (johnicholas.hines(AT)gmail.com), May 30 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

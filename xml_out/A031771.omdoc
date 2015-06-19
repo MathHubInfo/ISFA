@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A031771.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A031771">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8651,34600,77847,138392,216235,311376,423815,553552,700587,864920,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1046551,1245480,1461707,1695232,1946055,2214176,2499595,2802312,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3122327,3459640,3814251,4186160,4575367,4981872,5405675,5846776,6305175,6780872</CMP>
+    </assertion><omtext class="name">
+      <CMP> Least term in period of continued fraction for sqrt(n) is 93.</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>
