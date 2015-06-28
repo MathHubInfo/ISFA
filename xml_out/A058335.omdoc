@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A058335.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A058335">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,5,10,12,22,35,49,64,84,100,122,141,169,225,271,295,338,399,465,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 547,579,670,745,816,917,993,1033,1172,1258,1401,1533,1644,1789,1878,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2106,2257,2419,2571,2724,2942,3006,3148,3308,3475,3719,3991,4272,4428</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = least value such that sequence increases and pairwise differences are unique.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A variation on A005282 (Mian-Chowla, where positive differences of pairs of elements are unique) by starting with a(1) =1, a(2) = 4.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A005282, A051788.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> Gerald A. Mischke (Gerald.Mischke(AT)mutualofomaha.com), Dec 13 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

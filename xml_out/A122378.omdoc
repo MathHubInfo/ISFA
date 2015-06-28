@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A122378.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A122378">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,6,8,12,15,20,24,30,36,40,45,48,60,72,80,84,90,105,112,120,126,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 140,144,168,180,210,224,240,252,280,288,315,320,336,360,384,420,448,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 480,504,560,576,630,640,648,672,720,756,810,840,864,896,945,960,1008,1080</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n^2 &gt; S(n)!, where S(n)! is the smallest factorial divisible by n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> It is conjectured that n^2 &lt; S(n)! for almost all n.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Sondow, A geometric proof that e is irrational and a new measure of its irrationality, Amer. Math. Monthly 113 (2006) 637-641.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Fa#factorial&quot;&gt;Index entries for sequences related to factorial numbers.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Sondow, &lt;a href=&quot;http://arxiv.org/abs/0704.1282&quot;&gt;A geometric proof that e is irrational and a new measure of its irrationality&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Sondow and E. W. Weisstein, &lt;a href=&quot;http://mathworld.wolfram.com/SmarandacheFunction.html&quot;&gt;MathWorld: Smarandache Function&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 15^2 = 225 &gt; 120 = 5! = S(15)!, so 15 is a member.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000290, A002034, A057109, A092495, A122379, A122380.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Sondow_, Sep 03 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

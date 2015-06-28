@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A185783.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A185783">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,6,3,20,20,6,50,70,44,10,105,180,160,80,15,196,385,420,300,130,21,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 336,728,910,800,500,196,28,540,1260,1736,1750,1350,770,280,36,825,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2040,3024,3360,2975,2100,1120,384,45,1210,3135,4920,5880,5740,4655,3080,1560,510,55,1716,4620,7590,9600,10080,9016,6860,4320,2100,660,66,2366,6578,11220,14850,16500,15876,13328,9660,5850,2750,836,78</CMP>
+    </assertion><omtext class="name">
+      <CMP> Second accumulation array of A185780, by antidiagonals.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> See A144112 and A185780.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> row 1: A002415 (4-dimensional pyramidal numbers)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> col 1: A000217</CMP>
+    </omtext><omtext class="comment">
+      <CMP> col 2: 2*A006503</CMP>
+    </omtext><omtext class="comment">
+      <CMP> col 3: 10*A005581</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(T,ArgList(List(Var(&quot;n&quot;), Var(&quot;k&quot;)))),Div(List(Mul(List(Func(C,ArgList(List(Add(List(Var(&quot;k&quot;), Num(2.0))), Num(3.0)))), Func(C,ArgList(List(Add(List(Var(&quot;n&quot;), Num(1.0))), Num(2.0)))), Add(List(Sub(List(Var(&quot;kn&quot;), Var(&quot;n&quot;))), Mul(List(Num(2.0), Var(&quot;k&quot;))), Num(4.0))))), Num(6.0)))), Delim(,), Equation(&gt;=,Var(&quot;k&quot;),Num(1.0)), Delim(,), Equation(&gt;=,Var(&quot;n&quot;),Num(1.0)), Delim(.)))
+    </omdoc:p><assertion class="example">
+      <CMP> Northwest corner:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1....6....20....50....105</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3....20...70....180...385</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6....44...160...420...910</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10...80...300...800...1750</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> (See A185780.)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A144112, A185780.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_, Feb 03 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

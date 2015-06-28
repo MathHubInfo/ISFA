@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A082778.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A082778">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,33,363,36663,36699663,36699699699663,36699699699699699699699663,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 36699699699699699699699699699699699699699699699663,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 36699699699699699699699699699699699699699699699699699699699699699699699699699699699699699699699663</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(1) = 3; for n&gt;1, a(n) = smallest palindromic multiple of a(n-1) obtained by inserting digits anywhere in a(n-1).</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A082776, A082777, A082779, A082780.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_, Apr 19 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected by _Ray Chandler_, Oct 13 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Ray G. Opao_, Sep 09 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

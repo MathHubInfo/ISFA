@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A087891.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A087891">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,3,1,3,3,6,2,8,3,6,4,5,6,7,3,6,9,8,4,5,6,7,5,10,5,38,7,8,7,36,4,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 12,6,7,10,9,8,12,5,37,5,13,7,9,7,36,6,11,11,10,6,7,39,40,8,14,8,12,8,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9,36,36,5,13,12,11,7,8,7,36,11,41,9,9,9,10,12,13,6,11,37,40,6,7,13,12,8,12</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of non-squarefree terms in 3x+1 trajectory started at n.</CMP>
+    </omtext><assertion class="example">
+      <CMP> n=61: trajectory={61,184,92,46,23,70,35,...,20,10,5,16,8,4,2,1},</CMP>
+    </assertion><assertion class="example">
+      <CMP> non-squarefree terms={184,92,160,80,40,20,16,8,4}, so a(61)=9.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> c[x_] := (1-Mod[x, 2])*(x/2)+Mod[x, 2]*(3*x+1); c[1]=1; fpl[x_] := Delete[FixedPointList[c, x], -1] lf[x_] := Length[fpl[x]] Table[Count[Table[MoebiusMu[Part[fpl[w], j]], {j, 1, lf[w]}], 0], {w, 1, 256}]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Labos Elemer_, Oct 02 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

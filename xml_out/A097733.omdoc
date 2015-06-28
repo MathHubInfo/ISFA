@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A097733.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A097733">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,197,39005,7722793,1529074009,302748930989,59942759261813,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 11868363584907985,2349876047052519217,465263588952813896981,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 92119840736610099083021,18239263202259846804541177</CMP>
+    </assertion><omtext class="name">
+      <CMP> Pell equation solutions (7*b(n))^2 - 2*(5*a(n))^2 = -1 with b(n):=A097732(n), n&gt;=0. Note that D=50=2*5^2 is not squarefree.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tanya Khovanova, &lt;a href=&quot;http://www.tanyakhovanova.com/RecursiveSequences/RecursiveSequences.html&quot;&gt;Recursive Sequences&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. C. Williams and R. K. Guy, &lt;a href=&quot;http://dx.doi.org/10.1142/S1793042111004587&quot;&gt;Some fourth-order linear divisibility sequences&lt;/a&gt;, Intl. J. Number Theory 7 (5) (2011) 1255-1277.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. C. Williams and R. K. Guy, &lt;a href=&quot;http://www.emis.de/journals/INTEGERS/papers/a17self/a17self.Abstract.html &quot;&gt;Some Monoapparitic Fourth Order Linear Divisibility Sequences&lt;/a&gt; Integers, Volume 12A (2012) The John Selfridge Memorial Volume</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ch#Cheby&quot;&gt;Index entries for sequences related to Chebyshev polynomials.&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Sub(List(Func(S,ArgList(List(Var(&quot;n&quot;), Mul(List(Num(2.0), Num(99.0)))))), Func(S,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(1.0))), Mul(List(Num(2.0), Num(99.0))))))))),Div(List(Func(T,ArgList(List(Add(List(Mul(List(Num(2.0), Var(&quot;n&quot;))), Num(1.0))), Mul(List(Num(5.0), Func(sqrt,ArgList(List(Num(2.0))))))))), Mul(List(Num(5.0), Func(sqrt,ArgList(List(Num(2.0))))))))), Delim(,), Word(with), Name(Chebyshev), Word(polynomials), Word(of), Word(the), Mul(List(Num(2.0), Var(&quot;nd&quot;))), Word(and), Word(first), Word(kind), Delim(.), Name(See), FuncR(SeqReference(A049310),ArgList(List(Var(&quot;for&quot;)))), Word(the), Word(triangle), Word(of), Equation(=,Func(S,ArgList(List(Var(&quot;n&quot;), Var(&quot;x&quot;)))),Func(U,ArgList(List(Var(&quot;n&quot;), Div(List(Var(&quot;x&quot;), Num(2.0))))))), Word(coefficients), Delim(.), Equation(:=,Func(S,ArgList(List(Neg(Num(1.0)), Var(&quot;x&quot;)))),Num(0.0)), Delim(=), Delim(:), Func(U,ArgList(List(Neg(Num(1.0)), Var(&quot;x&quot;)))), Delim(;), Word(and), FuncR(SeqReference(A053120),ArgList(List(Var(&quot;for&quot;)))), Word(the), Sub(List(Var(&quot;T&quot;), Var(&quot;triangle&quot;))), Delim(.)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Mul(List(Power(Neg(Num(1.0)),Var(&quot;n&quot;)), Func(S,ArgList(List(Mul(List(Num(2.0), Var(&quot;n&quot;))), Mul(List(Num(14.0), Var(&quot;I&quot;))))))))), Word(with), Word(the), Word(imaginary), Word(unit), Var(&quot;I&quot;), Word(and), Name(Chebyshev), Word(polynomials), Func(S,ArgList(List(Var(&quot;n&quot;), Var(&quot;x&quot;)))), Word(with), Word(coefficients), Word(shown), Word(in), SeqReference(A049310), Delim(.)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Word(G.f), Delim(.), Delim(:), Div(List(Sub(List(Num(1.0), Var(&quot;x&quot;))), Add(List(Sub(List(Num(1.0), Mul(List(Num(198.0), Var(&quot;x&quot;))))), Power(Var(&quot;x&quot;),Num(2.0)))))), Delim(.)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Sub(List(Mul(List(Num(198.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(1.0)))))))), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(2.0))))))))), Delim(,), Equation(&gt;,Var(&quot;n&quot;),Num(1.0)), Delim(;), Equation(=,Func(a,ArgList(List(Num(0.0)))),Num(1.0)), Delim(,), Equation(=,Func(a,ArgList(List(Num(1.0)))),Num(197.0)), Delim(.), Delim([), Name(From), Name(_Philippe), Name(Deléham_), Delim(,), Date(Nov 18 2008), Delim(])))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Sub(List(Add(List(Power(Var(&quot;k&quot;),Var(&quot;n&quot;)), Power(Var(&quot;k&quot;),Neg(Var(&quot;n&quot;))))), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(1.0))))))))),Sub(List(FuncR(SeqReference(A003499),ArgList(List(Mul(List(Num(3.0), Var(&quot;n&quot;)))))), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(1.0))))))))), Delim(,), Word(where), Equation(=,Equation(=,Var(&quot;k&quot;),Power(Add(List(Func(sqrt,ArgList(List(Num(2.0)))), Num(1.0))),Num(6.0))),Add(List(Num(99.0), Mul(List(Num(70.0), Func(sqrt,ArgList(List(Num(2.0))))))))), Word(and), Equation(=,Func(a,ArgList(List(Num(0.0)))),Num(1.0)), Delim(.), Delim(-), Name(_Charles), Var(&quot;L&quot;), Delim(.), Name(Hohn_), Delim(,), Date(Apr 05 2011)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Name(From), Name(_Peter), Name(Bala_), Delim(,), Date(Mar 23 2015), Delim(:), Delim((), Name(Start), Delim())))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Div(List(Sub(List(Func(Pell,ArgList(List(Sub(List(Add(List(Mul(List(Num(6.0), Var(&quot;n&quot;))), Num(6.0))), Mul(List(Num(2.0), Var(&quot;k&quot;)))))))), Func(Pell,ArgList(List(Add(List(Mul(List(Num(6.0), Var(&quot;n&quot;))), Mul(List(Num(2.0), Var(&quot;k&quot;)))))))))), Sub(List(Func(Pell,ArgList(List(Sub(List(Num(6.0), Mul(List(Num(2.0), Var(&quot;k&quot;)))))))), Func(Pell,ArgList(List(Mul(List(Num(2.0), Var(&quot;k&quot;))))))))))), Delim(,), Word(for), Var(&quot;k&quot;), Word(an), Word(arbitrary), Word(integer), Delim(.)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Div(List(Add(List(Func(Pell,ArgList(List(Sub(List(Add(List(Mul(List(Num(6.0), Var(&quot;n&quot;))), Num(6.0))), Mul(List(Num(2.0), Var(&quot;k&quot;))), Num(1.0)))))), Func(Pell,ArgList(List(Add(List(Mul(List(Num(6.0), Var(&quot;n&quot;))), Mul(List(Num(2.0), Var(&quot;k&quot;))), Num(1.0)))))))), Add(List(Func(Pell,ArgList(List(Sub(List(Num(6.0), Mul(List(Num(2.0), Var(&quot;k&quot;))), Num(1.0)))))), Func(Pell,ArgList(List(Add(List(Mul(List(Num(2.0), Var(&quot;k&quot;))), Num(1.0))))))))))), Delim(,), Word(for), Var(&quot;k&quot;), Word(an), Word(arbitrary), Word(integer), Delim(.)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Name(The), Word(aerated), Word(sequence), Equation(=,Equation(&gt;=,Mul(List(Func(b,ArgList(List(Var(&quot;n&quot;)))), Var(&quot;n&quot;))),Num(1.0)),ArgList(List(Num(1.0), Num(0.0), Num(197.0), Num(0.0), Num(39005.0), Num(0.0), Num(7722793.0), Num(0.0), ExtraSymbol(...)))), Word(is), Word(a), Word(fourth), Delim(-), Word(order), Word(linear), Word(divisibility), Word(sequence), Delim(;), Word(that), Word(is), Delim(,), Word(if), Divisible(Var(&quot;n&quot;),Var(&quot;m&quot;)), Word(then), Divisible(Func(b,ArgList(List(Var(&quot;n&quot;)))),Func(b,ArgList(List(Var(&quot;m&quot;))))), Delim(.), Name(It), Word(is), Word(the), Word(case), Equation(=,Var(&quot;P1&quot;),Num(0.0)), Delim(,), Equation(=,Var(&quot;P2&quot;),Neg(Num(200.0))), Delim(,), Equation(=,Var(&quot;Q&quot;),Num(1.0)), Word(of), Word(the), Sub(List(Num(3.0), Var(&quot;parameter&quot;))), Word(family), Word(of), Word(divisibility), Word(sequences), Word(found), Word(by), Word(Williams), Word(and), Name(Guy), Delim(.), Name(See), FuncR(SeqReference(A100047),ArgList(List(Var(&quot;for&quot;)))), Word(the), Word(connection), Word(with), Name(Chebyshev), Word(polynomials), Delim(.), Delim((), Name(End), Delim())))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Iters(Sum,Some(Equation(&gt;=,Var(&quot;n&quot;),Num(1.0))),None,Equation(=,Div(List(Num(1.0), Sub(List(Func(a,ArgList(List(Var(&quot;n&quot;)))), Div(List(Num(1.0), Func(a,ArgList(List(Var(&quot;n&quot;)))))))))),Div(List(Num(1.0), Num(196.0))))), Delim(.), Delim(-), Name(_Peter), Name(Bala_), Delim(,), Date(Mar 26 2015)))
+    </omdoc:p><assertion class="example">
+      <CMP> (x,y) = (7,1), (1393,197), (275807,39005), ... give the positive integer solutions to x^2 - 50*y^2 =-1.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A097731 for S(n, 198). Row 7 of array A188647. Cf. A000129, A100047.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_, Aug 31 2004</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

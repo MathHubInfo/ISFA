@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A232992.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A232992">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,1,1,2,2,3,2,1,2,3,6,7,6,7,7,7,6,5,7,12,11,10,10,9,10,12,11,12,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 11,10,9,9,8,8,8,9,8,8,8,7,10,16,16,16,19,18,17,16,15,15,16,16,17,16,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 15,16,16,19,19,20,20,19,18,17,16,17,20,19,20,19,18,18,19,23,24,23,25,24,25,27,26,27,27,26,25,25</CMP>
+    </assertion><omtext class="name">
+      <CMP> Let b(i) = A134204(i) and c(n) = A133242(n); a(n) is the number of primes p &lt;= c(n) such that p is not in {b(0), b(1), ..., b(c(n)-1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Computed by _David Applegate_, Oct 2007.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Arises from studying the question of whether A134204 is an infinite sequence.</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, &lt;a href=&quot;/A232992/b232992.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, &lt;a href=&quot;/A134204/a134204.cc.txt&quot;&gt;C++ Program&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, &lt;a href=&quot;/A232992/a232992.notes.txt&quot;&gt;Notes on programs and output&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> David Applegate, &lt;a href=&quot;/A232992/a232992.out2.txt&quot;&gt;The first 106394 lines of output&lt;/a&gt;. The first 3 columns give the first 106394 terms of A133242, A133243 and A232992 (the present sequence), and establish that at least 800 million terms of A134204 exist.</CMP>
+    </omtext><assertion class="example">
+      <CMP> Terms b(0) through b(12) of A134202 are (ignore the periods, which are just for alignment):</CMP>
+    </assertion><assertion class="example">
+      <CMP> i:... 0, 1, 2, 3,. 4,. 5,. 6,. 7,. 8,. 9, 10, 11, 12</CMP>
+    </assertion><assertion class="example">
+      <CMP> b(i): 2, 3, 5, 7, 13, 17, 19, 23, 41, 31, 29, 37, 11</CMP>
+    </assertion><assertion class="example">
+      <CMP> c(1) = 12 is the first i for which b(i)&lt;i.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Then a(1) is the number of primes p &lt;= 12 that are not in the set {b(0), ..., b(11)} = {2, 3, 5, 7, 13, 17, 19, 23, 41, 31, 29, 37}.</CMP>
+    </assertion><assertion class="example">
+      <CMP> Only p = 11 is missing, so a(1)=1.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A134204, A133242.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Dec 13 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

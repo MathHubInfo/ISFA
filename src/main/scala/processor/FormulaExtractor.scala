@@ -108,10 +108,10 @@ class TextParser extends FormulaParser {
         case true =>
           succeded +=1
           successFile.write(theory + "\t" + line+"\n")
-//           val processed = parsed.get.parts.map({
-//            case x : Line => x
-//            case x : Expression => postProcess(x)
-//          })
+           val processed = parsed.get.parts.map({
+            case x : Line => x
+            case x : Expression => postProcess(x)
+          })
           Some(parsed.get)
       }
     }catch{
@@ -129,7 +129,7 @@ class TextParser extends FormulaParser {
 object TextParserIns extends TextParser{
 
   def main(args : Array[String]): Unit = {
-    val test = "sin(2x)"
+    val test = " Euler transform of period 8 sequence [ 1, -1, 1, 0, 1, -1, 1, -2, ...]."
     println("input : "+ test)
     println(parseAll(sentence, test))
   }

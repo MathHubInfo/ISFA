@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A171087.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A171087">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,1,4,6,3,5,7,8,9,11,13,15,17,10,19,21,12,23,25,27,29,14,31,33,35,37,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 39,41,16,43,45,47,49,51,53,55,18,57,59,61,63,65,67,69,71,20,73,75,77,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 79,81,83,85,87,89,91,22,93,95,97,99,101,103,105,107,109,111,113,115,24</CMP>
+    </assertion><omtext class="name">
+      <CMP> A &quot;run&quot; means a maximal string of numbers that includes exactly one even number; this sequence has the property that the sequence of run lengths is the sequence itself and all natural numbers appear exactly once.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The rule of construction is: each of the even numbers e(k)=2*k = 2, 4, 6, 8, 10,.. etc starts a run of numbers that contains e(k) and a(k)-1 odd numbers not used so far. [From _R. J. Mathar_, Sep 09 2010]</CMP>
+    </omtext><omtext class="link">
+      <CMP> Lars Blomberg, &lt;a href=&quot;/A171087/b171087.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Angelini, &lt;a href=&quot;http://www.cetteadressecomportecinquantesignes.com/Runs.htm&quot;&gt;Runs&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> Blocks with run lengths of 2, 1, 4 etc are (2,1), (4), (6,3,5,7), (8,9,11,13,15,17), (10,19,21), (12,23,25,27,29),... [From _R. J. Mathar_, Sep 09 2010]</CMP>
+    </assertion><omtext class="maple">
+      <CMP> A171087 := proc(n) a := [2,1] ; modd := 1 ; for p from 2 do rl := op(p,a) ; ev := 2*p ; a := [op(a),ev] ; for o from modd+2 to modd+2*(rl-1) by 2 do a := [op(a),o] ; modd := o ; end do: if nops(a) &gt; n then print(a) ; return; end if; end do: end proc: A171087(100) ; [From _R. J. Mathar_, Sep 09 2010]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A171083-A171086.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Sep 07 2010, based on a posting to the Sequence Fans Mailing List by Eric Angelini, Aug 23 2010.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _R. J. Mathar_ and _John W. Layman_, Sep 09 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

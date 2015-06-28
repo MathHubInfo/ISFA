@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A171035.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A171035">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,5,1,77,73,71,79,23,29,37,31,47,43,41,53,59,67,61,17,13,19,83,89,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 91,707,703,701,709,773,721,737,731,739,749,757,751,763,761,713,719,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 787,797,793,791,799,277,223,221,229,233,239,247,257,251,263</CMP>
+    </assertion><omtext class="name">
+      <CMP> In the sequence of prime numbers, replace all the '7' digits by '1' and vice versa.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A171035/b171035.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> FromDigits[IntegerDigits[#]/.{7-&gt;p, 1-&gt;q}/.{p-&gt;1, q-&gt;7}]&amp;/@Prime[Range[100]] (* _Vincenzo Librandi_, Apr 07 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=my(v=[0,7,2,3,4,5,6,1,8,9]);subst(Pol(apply(k-&gt;v[k+1], digits(prime(n)))),'x,10) \\ _Charles R Greathouse IV_, Jul 25 2013</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_ and _Vincenzo Librandi_, Sep 04 2010.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

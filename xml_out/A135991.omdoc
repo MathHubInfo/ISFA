@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A135991.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A135991">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,1,0,1,0,3,0,2,1,9,0,3,6,26,2,2,25,74,16,10,89,210,85,67,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 288,599,375,291,869,1725,1485,1112,2471,5020,5479,4037,6629,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 14732,19236,14332,16629,43417,65116,50320,37975,127831,214397,175328</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of x^3*(x-1)^2*(x+1) / (x^6-3*x^5+3*x^4-x+1)</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The ratio is &quot;ringing&quot; cyclic:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Table[N[a[[n]]/a[[n - 1]]], {n, 8, 100}]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The sequence alternates and is relatively low in value a little longer than other such sequences.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1,0,0,-3,3,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Word(G.f), Delim(.), Delim(:), Div(List(Mul(List(Power(Var(&quot;x&quot;),Num(3.0)), Power(Sub(List(Var(&quot;x&quot;), Num(1.0))),Num(2.0)), Add(List(Var(&quot;x&quot;), Num(1.0))))), Add(List(Sub(List(Add(List(Sub(List(Power(Var(&quot;x&quot;),Num(6.0)), Mul(List(Num(3.0), Power(Var(&quot;x&quot;),Num(5.0)))))), Mul(List(Num(3.0), Power(Var(&quot;x&quot;),Num(4.0)))))), Var(&quot;x&quot;))), Num(1.0))))), Delim(.), Delim([), Name(_Colin), Name(Barker_), Delim(,), Date(Feb 02 2013), Delim(])))
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Clear[v, m, n, M0, N0] v[0] = {0, 0, 1}; v[1] = {0, 1, 2}; M0 = {{0, 1, 0}, {0, 0, 1}, {1, 0, 1}}; N0 = {{0, 1, 0}, {0, 0, 1}, {1, 1, 1}}; v[n_] := v[n] = N0.v[n - 1] - M0.v[n - 2] a = Table[v[n][[1]], {n, 0, 100}]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> sign,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,7</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_, Mar 03 2008</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Better name by _Colin Barker_, Feb 02 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A002867.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A002867">
+          <assertion class="***** TTTT *****">
+      <CMP> M2035 N0806</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,12,72,720,7200,100800,1411200,25401600,457228800,10059033600,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 221298739200,5753767219200,149597947699200,4487938430976000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 134638152929280000,4577697199595520000,155641704786247680000</CMP>
+    </assertion><omtext class="name">
+      <CMP> C(n,[n/2])*(n+1)!.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. S. Motzkin, Sorting numbers ...: for a link to this paper see A000262.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> T. S. Motzkin, Sorting numbers for cylinders and other classification numbers, in Combinatorics, Proc. Symp. Pure Math. 19, AMS, 1971, pp. 167-176.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A002867/b002867.txt&quot;&gt;Table of n, a(n) for n = 0..100&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Name(E.g.f), Delim(.), Delim(:), Equation(=,Div(List(Num(1.0), Mul(List(Func(sqrt,ArgList(List(Add(List(Num(1.0), Mul(List(Num(2.0), Var(&quot;x&quot;)))))))), Power(Sub(List(Num(1.0), Mul(List(Num(2.0), Var(&quot;x&quot;))))),Div(List(Num(3.0), Num(2.0)))))))),Div(List(Num(1.0), Mul(List(Func(sqrt,ArgList(List(Sub(List(Num(1.0), Mul(List(Num(4.0), Power(Var(&quot;x&quot;),Num(2.0))))))))), Sub(List(Num(1.0), Mul(List(Num(2.0), Var(&quot;x&quot;)))))))))), Delim(;), Delim(-), Name(_Paul), Name(Barry_), Delim(,), Date(Jul 22 2005)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Name(Conjecture), Delim(:), Equation(=,Sub(List(Func(a,ArgList(List(Var(&quot;n&quot;)))), Mul(List(Num(2.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(1.0)))))))), Mul(List(Num(4.0), Var(&quot;n&quot;), Sub(List(Var(&quot;n&quot;), Num(1.0))), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(2.0)))))))))),Num(0.0)), Delim(.), Delim(-), Var(&quot;_R&quot;), Delim(.), Var(&quot;J&quot;), Delim(.), Name(Mathar_), Delim(,), Date(Nov 24 2012)))
+    </omdoc:p><assertion class="crossref">
+      <CMP> 2^n * A000246(n+1).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _James A. Sellers_, Jul 10 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

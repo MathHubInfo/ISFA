@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A195270.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A195270">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 71,107,137,281,347,379,443,461,557,617,641,727,809,827,853,857,991,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1031,1049,1091,1093,1289,1297,1319,1433,1489,1579,1607,1613,1697,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1747,1787,1867,1871,1877,1931,1987,1997,2027,2237,2269,2309,2377,2381,2473,2591</CMP>
+    </assertion><omtext class="name">
+      <CMP> 3-gap primes: Prime p is a term iff there is no prime between 3*p and 3*q, where q is the next prime after p.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For a real r&gt;1, a prime p is called an r-gap prime, if there is no prime between r*p and r*q, where q is the next prime after p. In particular, 2-gap primes are in A080192.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> pQ[p_, r_] := Block[{q = NextPrime@ p}, Union@ PrimeQ@ Range[r*p, r*q] == {False}]; Select[ Prime@ Range@ 380, pQ[#, 3] &amp;] (* _Robert G. Wilson v_, Sep 18 2011 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A080192, A193507, A194186, A164368, A194598, A194658, A194659, A194674, A164288, A164294.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Shevelev_, Sep 14 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

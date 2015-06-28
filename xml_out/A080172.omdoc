@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A080172.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A080172">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,7,1,7,1,1,7,7,1,1,7,7,1,7,7,7,1,1,1,7,1,1,1,1,1,1,1,7,7,1,7,7,1,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,1,1,1,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Final digit of Mersenne primes (primes of the form 2^p - 1 where p is prime).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Distribution of final digit for Mersenne primes appears (naturally) to be different from distribution for regular primes. Unconfirmed 39th digit in sequence is 1 (awaiting confirmation of 39th Mersenne prime).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. H. Hardy and E. M. Wright, An Introduction to the Theory of Numbers. 3rd ed., Oxford Univ. Press, 1954, p. 16.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Great Internet Mersenne Prime Search (GIMPS), &lt;a href=&quot;http://www.mersenne.org/&quot;&gt;Distributed Computing Projects&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Mersenne Primes, &lt;a href=&quot;http://www.utm.edu/research/primes/mersenne/index.html&quot;&gt;History, Theorems and Lists&lt;/a&gt;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> (Maple code from _N. J. A. Sloane_) # let s1 := list of terms in A000043</CMP>
+    </omtext><omtext class="maple">
+      <CMP> f:=n-&gt;if n mod 4 = 0 then 4 else n mod 4; fi; map(x-&gt;2^f(x)-1,s1);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000668, A007652, A080173.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> Mark Dowdeswell (mark(AT)stats.wits.ac.za), Feb 04 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Updated by _N. J. A. Sloane_, Apr 01 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

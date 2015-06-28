@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A065540.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A065540">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,11,37,113,347,1049,3163,9491,28477,85439,256337,769019,2307059,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6921179,20763541,62290633,186871907,560615723,1681847191,5045541577,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 15136624739,45409874221,136229622677,408688868051,1226066604179</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) is smallest prime &gt; 3*a(n-1), a(1) = 3.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> NextPrim[n_Integer] := Block[ {k = n + 1}, While[ !PrimeQ[k], k++ ]; Return[k]]; a[1] = 3; a[n_] := NextPrim[ 3*a[n - 1]]; Table[ a[n], {n, 1, 30} ]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Nov 28 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

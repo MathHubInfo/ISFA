@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A243585.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A243585">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,20,106,580,3244,18446,106250,618340,3628600,21438820,127377980,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 760346350,4556473276,27396081950,165189725326,998492094244,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6048338850560,36706629690824,223139239595840,1358475322091620</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of log'(C(C(x)-1)-1), C(x)=(1-sqrt(1-4*x))/(2*x).</CMP>
+    </omtext><omtext class="link">
+      <CMP> G.-S. Cheon, H. Kim, L. W. Shapiro, &lt;a href=&quot;http://arxiv.org/abs/1410.1249&quot;&gt;Mutation effects in ordered trees&lt;/a&gt;, arXiv preprint arXiv:1410.1249, 2014 (see page 6).</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Iters(sum,Some(Equation(=,Var(&quot;k&quot;),Num(0.0))),Some(Var(&quot;n&quot;)),Mul(List(Func(binomial,ArgList(List(Mul(List(Num(2.0), Var(&quot;k&quot;))), Var(&quot;k&quot;)))), Func(binomial,ArgList(List(Mul(List(Num(2.0), Var(&quot;n&quot;))), Sub(List(Var(&quot;n&quot;), Var(&quot;k&quot;)))))))))), Delim(.)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(~,Func(a,ArgList(List(Var(&quot;n&quot;)))),Div(List(Power(Num(5.0),Add(List(Mul(List(Num(2.0), Var(&quot;n&quot;))), Div(List(Num(1.0), Num(2.0)))))), Mul(List(Power(Num(4.0),Var(&quot;n&quot;)), Func(sqrt,ArgList(List(Mul(List(Num(3.0), Constant(Pi), Var(&quot;n&quot;))))))))))), Delim(.), Delim(-), Name(_Vaclav), Name(Kotesovec_), Delim(,), Date(Jun 08 2014)))
+    </omdoc:p><omtext class="mathematica">
+      <CMP> CoefficientList[Series[1/(Sqrt[(1-4*x)*(2*Sqrt[1-4*x]+5*x-2)/x]), {x, 0, 20}], x] (* _Vaclav Kotesovec_, Jun 08 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a(n):=sum(binomial(2*k,k)*binomial(2*n,n-k),k,0,n);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000108.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladimir Kruchinin_, Jun 07 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

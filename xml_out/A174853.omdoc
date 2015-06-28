@@ -19,74 +19,9 @@
     </omtext><omtext class="link">
       <CMP> &lt;a href=&quot;/Sindx_Rea.html#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (96,-1).</CMP>
     </omtext><omdoc:p class="formula">
-        <CMP>
-      <OMOBJ>
-        <OMA>
-      <OMS name="=" cd="arithmetic"/>
-      <OMA>
-      <OMS name="a" cd="A174853"/>
-      <OMV name="n"/>
-    </OMA>
-      <OMA>
-      <OMS name="minus" cd="arithmetics"/>
-      <OMA><OMS name="times"/><OMI>96</OMI><OMA>
-      <OMS name="a" cd="A174853"/>
-      <OMA>
-      <OMS name="minus" cd="arithmetics"/>
-      <OMV name="n"/><OMI>1</OMI>
-    </OMA>
-    </OMA></OMA><OMA>
-      <OMS name="a" cd="A174853"/>
-      <OMA>
-      <OMS name="minus" cd="arithmetics"/>
-      <OMV name="n"/><OMI>2</OMI>
-    </OMA>
-    </OMA>
-    </OMA>
-    </OMA>
-      </OMOBJ>with <OMOBJ>
-        <OMA>
-      <OMS name="=" cd="arithmetic"/>
-      <OMA>
-      <OMS name="a" cd="A174853"/>
-      <OMI>1</OMI>
-    </OMA>
-      <OMI>0</OMI>
-    </OMA>
-      </OMOBJ>,<OMOBJ>
-        <OMA>
-      <OMS name="=" cd="arithmetic"/>
-      <OMA>
-      <OMS name="a" cd="A174853"/>
-      <OMI>2</OMI>
-    </OMA>
-      <OMI>7</OMI>
-    </OMA>
-      </OMOBJ>.
-    </CMP>
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Sub(List(Mul(List(Num(96.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(1.0)))))))), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(2.0))))))))), Word(with), Equation(=,Func(a,ArgList(List(Num(1.0)))),Num(0.0)), Delim(,), Equation(=,Func(a,ArgList(List(Num(2.0)))),Num(7.0)), Delim(.)))
     </omdoc:p><omdoc:p class="formula">
-        <CMP>
-      G.f .:<OMOBJ>
-        <OMA>
-      <OMS name="divide" cd="arithmetics"/>
-      <OMA><OMS name="times"/><OMI>7</OMI><OMA>
-      <OMS name="power" cd="arithmetics"/>
-      <OMV name="x"/>
-      <OMI>2</OMI>
-    </OMA></OMA><OMA>
-      <OMS name="plus" cd="arithmetics"/>
-      <OMA>
-      <OMS name="minus" cd="arithmetics"/>
-      <OMI>1</OMI><OMA><OMS name="times"/><OMI>96</OMI><OMV name="x"/></OMA>
-    </OMA><OMA>
-      <OMS name="power" cd="arithmetics"/>
-      <OMV name="x"/>
-      <OMI>2</OMI>
-    </OMA>
-    </OMA>
-    </OMA>
-      </OMOBJ>.
-    </CMP>
+        Sentence(List(Word(G.f), Delim(.), Delim(:), Div(List(Mul(List(Num(7.0), Power(Var(&quot;x&quot;),Num(2.0)))), Add(List(Sub(List(Num(1.0), Mul(List(Num(96.0), Var(&quot;x&quot;))))), Power(Var(&quot;x&quot;),Num(2.0)))))), Delim(.)))
     </omdoc:p><omtext class="mathematica">
       <CMP> LinearRecurrence[{96,-1},{0,7},30]</CMP>
     </omtext><omtext class="program">

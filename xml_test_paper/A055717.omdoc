@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A055717.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A055717">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,6,28,120,316,496,672,1272,1431,1484,1580,2212,2862,3768,4452,4740,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 5462,5724,6360,7155,7584,8128,11060,11448,12640,13356,14310,15800,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 16386,17696,18840,22896,28620,30240,32760,33180,35616,37920,38712</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n | sigma_13(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> sigma_13(n) is the sum of the 13th powers of the divisors of n (A013961).</CMP>
+    </omtext><omtext class="maple">
+      <CMP> with(numtheory);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A055717:=proc(q)</CMP>
+    </omtext><omtext class="maple">
+      <CMP> local a,i,n;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> for n from 1 to q do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>   a:=divisors(n); if frac(add(a[i]^13,i=1..nops(a))/n)=0 then print(n);</CMP>
+    </omtext><omtext class="maple">
+      <CMP> fi; od; end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A055717(100000);  # _Paolo P. Lava_, Dec 07 2012</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Do[If[Mod[DivisorSigma[13, n], n]==0, Print[n]], {n, 1, 50000}]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert G. Wilson v_, Jun 09 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

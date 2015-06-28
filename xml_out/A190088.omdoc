@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A190088.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A190088">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,1,15,5,1,36,70,7,1,66,330,210,9,1,105,1001,1716,495,11,1,153,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2380,8008,6435,1001,13,1,210,4845,27132,43758,19448,1820,15,1,276,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8855,74613,203490,184756,50388,3060,17,1,351,14950,177100,735471,1144066,646646,116280,4845,19</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle of binomial coefficients binomial(3*n-k+1,3*n-3*k+1).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row sums = A190089.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Diagonal sums = A190090.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Triangle begins:</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1, 3</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1, 15, 5</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1, 36, 70, 7</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1, 66, 330, 210, 9</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1, 105, 1001, 1716, 495, 11</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1, 153, 2380, 8008, 6435, 1001, 13</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1, 210, 4845, 27132, 43758, 19448, 1820, 15</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 1, 276, 8855, 74613, 203490, 184756, 50388, 3060, 17</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Flatten[Table[Binomial[3n - k + 1, 3n - 3k + 1], {n, 0, 8}, {k, 0, n}]]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) create_list(binomial(3*n-k+1,3*n-3*k+1),n,0,12,k,0,n);</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A190089, A190090.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Emanuele Munarini_, May 04 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

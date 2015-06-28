@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A226445.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A226445">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 5,10,18,32,45,94,220,175,325,247,630,578,637,1012,2712,3867,4851,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2993,10230,2363,6435</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest k such that n is the n-th largest anti-divisor of k.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(7) = 94 because the sorted anti-divisors of 94 are (63, 38, 27, 21, 10, 9, 7, 3, 2) and 7 is the 7th anti-divisor.</CMP>
+    </assertion><omtext class="maple">
+      <CMP> antidivisors := proc(n)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     local a, k;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     a := {} ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     for k from 2 to n-1 do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         if abs((n mod k)- k/2) &lt; 1 then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             a := a union {k} ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end do:</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     convert(a,list) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP> end proc:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A226445 := proc(n)</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     local k,adv;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     for k from 3 do</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         adv := sort(antidivisors(k)) ;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         if nops(adv) &gt;= n then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         if op(-n,adv) = n then</CMP>
+    </omtext><omtext class="maple">
+      <CMP>             return k;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>         end if;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end do:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> end proc: # _R. J. Mathar_, Jun 18 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A066272, A130799.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,less</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Juri-Stepan Gerasimov_, Jun 06 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

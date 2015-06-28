@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A038801.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A038801">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,8,10,12,15,17,19,22,24,25,29,30,31,34,35,37,39,41,42,46,46,47,50,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 52,53,55,57,59,61,62,63,66,66,68,70,72,73,75,77,78,80,81,82,85,87,88,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 91,92,93,95,97,97,99,99,101,102,104,106,107,109,111,114,114,115,118,120</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of primes less than 10n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For almost all n, that is for a set of density 1, a(n) = a(n-1), and in all cases a(n) &lt;= a(n-1) + 4. - _Charles R Greathouse IV_, Aug 27 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Robert G. Wilson v, &lt;a href=&quot;/A038801/b038801.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Andrew R. Booker, &lt;a href=&quot;http://primes.utm.edu/nthprime/&quot;&gt;The Nth Prime Page&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Thomas R. Nicely, &lt;a href=&quot;http://www.trnicely.net/index.html&quot;&gt;Some Results of Computational Research in Prime Numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Tomás Oliveira e Silva, &lt;a href=&quot;http://sweet.ua.pt/tos/primes.html&quot;&gt;Tables of values of pi(x) and of pi2(x)&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[ PrimePi[ n*10 ], {n, 1, 66}] (* _Robert G. Wilson v_ *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=primepi(10*n) \\ _Charles R Greathouse IV_, Aug 27 2014</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A028505, A038812, A038813, A038814, A038815, A038816, A038817, A038818, A038819, A038820, A038821, A080122, A080123, A080124, A080125, A080126, A080127, A080128, A080129.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jeff Burch_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited and corrected by _Robert G. Wilson v_, Jan 29 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

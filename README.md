@@ -11,3 +11,8 @@ TODOS:
      
     7. Add mod support, note different forms, 1 mod 3, x = 4 (mod 3), different meanings.
     8. sin an! should be parsed as sin(an!) (change the _argument_ rule). (  ) if not bla bla
+
+
+    - Sum{k in Z}
+    - fix the fucking phi(), phi(,)
+    -         Euler transform of period 8 sequence [ 1, -1, 1, 0, 1, -1, 1, -2, ...]. - _Michael Somos_, Apr 28 2003 */

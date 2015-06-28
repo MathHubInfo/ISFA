@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A052255.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A052255">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,13,81,345,1155,3267,8151,18447,38610,75790,140998,250614,428298,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 707370,1133730,1769394,2696727,4023459,5888575,8469175,11988405,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 16724565,23021505,31300425</CMP>
+    </assertion><omtext class="name">
+      <CMP> Partial sums of A050484.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> A. H. Beiler, Recreations in the Theory of Numbers, Dover, N.Y., 1964, pp. 194-196.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Murray R.Spiegel, Calculus of Finite Differences and Difference Equations, &quot;Schaum's Outline Series&quot;, McGraw-Hill, 1971, pp. 10-20, 79-94.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_09&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (9,-36,84,-126,126,-84,36,-9,1).</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Div(List(Mul(List(Add(List(Mul(List(Num(5.0), Var(&quot;n&quot;))), Num(8.0))), Func(C,ArgList(List(Add(List(Var(&quot;n&quot;), Num(7.0))), Num(7.0)))))), Num(8.0)))), Delim(.)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Word(G.f), Delim(.), Delim(:), Div(List(Add(List(Num(1.0), Mul(List(Num(4.0), Var(&quot;x&quot;))))), Power(Sub(List(Num(1.0), Var(&quot;x&quot;))),Num(9.0)))), Delim(.)))
+    </omdoc:p><assertion class="crossref">
+      <CMP> Cf. A050484.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A093562 ((5, 1) Pascal, column m=8).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Barry E. Williams_, Feb 02 2000</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

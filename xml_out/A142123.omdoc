@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A142123.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A142123">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 199,347,421,569,643,1013,1087,1531,1753,1901,2789,3011,3307,3529,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3677,4639,4787,4861,5009,5231,5527,5749,5897,6563,6637,7229,7451,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7673,8117,8191,8783,9227,9967,10337,10559,10781,11003,11299,11447,11743,12113,12409</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes congruent to 14 mod 37.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A142123/b142123.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[14,30000,37],PrimeQ] (* _Vladimir Joseph Stephan Orlovsky_, May 08 2011 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Prime[Range[5000]],MemberQ[{14},Mod[#,37]]&amp;] (* _Vincenzo Librandi_, Aug 19 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(15000) | p mod 37 eq 14 ]; // _Vincenzo Librandi_, Aug 19 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040, A142120, A142121, A142122.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Jul 11 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

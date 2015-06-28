@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A142319.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A142319">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 59,149,239,419,509,599,1049,1229,1319,1409,1499,1949,2039,2129,2309,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2399,2579,2939,3119,3209,3299,3389,3659,3929,4019,4289,4649,4919,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 5009,5099,5189,5279,5639,6089,6269,6359,6449,6719,6899,7079,7349,7529,8069,8429</CMP>
+    </assertion><omtext class="name">
+      <CMP> Primes congruent to 14 mod 45.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harvey P. Dale, &lt;a href=&quot;/A142319/b142319.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Range[14, 8500, 45], PrimeQ] (* _Harvey P. Dale_, May 09 2012 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[Prime[Range[1200]], MemberQ[{14}, Mod[#, 45]] &amp;] (* _Vincenzo Librandi_, Aug 26 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [p: p in PrimesUpTo(10000) | p mod 45 eq 14]; // _Vincenzo Librandi_, Aug 26 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000040.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Jul 11 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

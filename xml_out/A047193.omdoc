@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A047193.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A047193">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,2,3,4,14,20,27,83,119,164,494,714,1000,3002,4367,6187,18563,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 27131,38759,116279,170543,245156,735470,1081574,1562274,4686824,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 6906899,10015004,30045014,44352164,64512239,193536719,286097759</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nonempty subsets of {1,2,...,n} in which exactly 1/2 of the elements are &lt;= n/3.</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Sub(List(Func(C,ArgList(List(Var(&quot;n&quot;), Div(List(Var(&quot;n&quot;), Num(3.0)))))), Num(1.0)))),Sub(List(FuncR(SeqReference(A051033),ArgList(List(Var(&quot;n&quot;)))), Num(1.0)))), Delim(.), Delim(-), Name(_Ralf), Name(Stephan_), Delim(,), Date(Mar 16 2004)))
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

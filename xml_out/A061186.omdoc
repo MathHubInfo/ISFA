@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A061186.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A061186">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,11,11,4,1,30,6,23,12,1,58,123,278,193,72,16,1,95,565,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 715,145,601,360,80,1,141,1590,89,5226,6441,3659,1260,336,64,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 196,3549,6797,22099,12369,9156,15791,9492</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Staircase of coefficients of polynomials used for column g.f.s of triangle A060923.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n,m) is coefficient of x^m of polynomial pLe(n,x) := (((1+x)+(3-2*x)*sqrt(x))^n + ((1+x)-(3-2*x)*sqrt(x))^n)/2 of degree n+floor(n/2)= A032766(n). pLe(n,x)= sum(binomial(n,2*j)*(1+x)^(n-2*j)*(3-2*x)^(2*j)*x^j,j=0..floor(n/2)), n &gt;= 1; pLe(0,x)=1.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> pLe(m+1,x) is the numerator polynomial of the g.f. for column m &gt;= 0 of the triangle A060923 (even part of bisection of Lucas triangle).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A061186"/>
+      <OMV name="n"/><OMV name="m"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="j"/>
+      <OMI>0</OMI>
+    </OMA>
+                  <OMA>
+      <OMS name="floor" cd="A061186"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="j"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>9</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMV name="j"/>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A061186"/>
+      <OMV name="n"/><OMA><OMS name="times"/><OMI>2</OMI><OMV name="j"/></OMA>
+    </OMA><OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMV name="k"/>
+      <OMA>
+      <OMS name="max" cd="A061186"/>
+      <OMI>0</OMI><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="m"/><OMA><OMS name="times"/><OMI>3</OMI><OMV name="j"/></OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+                  <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMA><OMS name="times"/><OMI>2</OMI><OMV name="j"/></OMA>
+    </OMA>
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="k"/></OMBVAR>
+        <OMA>
+          <OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>3</OMI><OMI>2</OMI>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMV name="m"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A061186"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMA><OMS name="times"/><OMI>2</OMI><OMV name="j"/></OMA>
+    </OMA><OMV name="k"/>
+    </OMA><OMA>
+      <OMS name="binomial" cd="A061186"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMV name="j"/></OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="m"/><OMV name="k"/><OMV name="j"/>
+    </OMA>
+    </OMA></OMA>
+        </OMA>
+      </OMBIND></OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="&lt;=" cd="arithmetic"/>
+      <OMI>0</OMI>
+      <OMV name="m"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMV name="n"/><OMA>
+      <OMS name="floor" cd="A061186"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>;else <OMOBJ>
+        <OMI>0</OMI>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> {1}; {1,1}; {1,11,-11,4}; ...; pLe(2,x)= 1+11*x-11*x^2+4*x^3.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> A061187 (companion staircase).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,easy,tabf</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,5</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_, Apr 20 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

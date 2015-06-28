@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A244434.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A244434">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,5,6,83</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers n such that A244433(n) does not belong to the set {A244433(n-1), A244433(n+1)}.</CMP>
+    </omtext><assertion class="example">
+      <CMP> 83 is a term of the sequence because A244433(83)=491702 does not belong to the set {A244433(82), A244433(84)}={424783, 860831}.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Farideh Firoozbakht_, Jul 19 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

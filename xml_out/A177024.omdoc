@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A177024.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A177024">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 15,21,24,33,39,40,51,57,69,87,93,111,123,129,141,154,159,177,183,201,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 213,219,237,249,267,291,303,309,321,327,339,381,393,411,417,447,453,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 471,489,501,519,537,543,573,579,591,597,633,669,681,687,699,717,723,731,753,771,789,807,813,831,843,849,879,921</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that (2^(n-1) mod n)=number of divisors of n.</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,FuncR(SeqReference(A062173),ArgList(List(Func(a,ArgList(List(Var(&quot;n&quot;))))))),FuncR(SeqReference(A000005),ArgList(List(Func(a,ArgList(List(Var(&quot;n&quot;)))))))), Delim(.)))
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Select[Range[1000], Mod[2^(# - 1), #] == Length[Divisors[#]] &amp;]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A176175.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Juri-Stepan Gerasimov_, Dec 08 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

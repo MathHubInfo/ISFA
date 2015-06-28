@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A145232.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A145232">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,5,75025,59425114757512643212875125,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 18526362353047317310282957646406309593963452838196423660508102562977229905562196608078556292556795045922591488273554788881298750625</CMP>
+    </assertion><omtext class="name">
+      <CMP> Fibonacci(5^n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n)= (G^(5^n) - (1 - G)^(5^n))/sqrt(5) where G = (1 + sqrt(5))/2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Family of sequences (G^(k^n) - (1 - G)^(k^n))/sqrt(5) :</CMP>
+    </omtext><omtext class="comment">
+      <CMP> k=2 see A058635,</CMP>
+    </omtext><omtext class="comment">
+      <CMP> k=3 see A045529,</CMP>
+    </omtext><omtext class="comment">
+      <CMP> k=4 see A145231,</CMP>
+    </omtext><omtext class="comment">
+      <CMP> k=5 see A145232,</CMP>
+    </omtext><omtext class="comment">
+      <CMP> k=6 see A145233,</CMP>
+    </omtext><omtext class="comment">
+      <CMP> k=7 see A145234.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> General (hyperbolic) trigonometric formula</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = (G^((2k+1)^n) - (1 - G)^((2k+1)^n))/sqrt[5] = where G = (1 + sqrt(5))/2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = (2/sqrt(5))*Cosh[(2k+1)^n*ArcCosh[sqrt(5)/2]].</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Mul(List(Div(List(Num(2.0), Func(sqrt,ArgList(List(Num(5.0)))))), Func(cosh,ArgList(List(Mul(List(Power(Num(5.0),Var(&quot;n&quot;)), Func(arccosh,ArgList(List(Div(List(Func(sqrt,ArgList(List(Num(5.0)))), Num(2.0)))))))))))))), Delim([), Name(_Artur), Name(Jasinski_), Delim(,), Date(Oct 09 2008), Delim(])))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Mul(List(Power(Num(5.0),Var(&quot;n&quot;)), FuncR(SeqReference(A128935),ArgList(List(Var(&quot;n&quot;))))))), Delim(.), Delim([), Var(&quot;_R&quot;), Delim(.), Var(&quot;J&quot;), Delim(.), Name(Mathar_), Delim(,), Date(Nov 04 2010), Delim(])))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),FuncR(SeqReference(A000045),ArgList(List(FuncR(SeqReference(A000351),ArgList(List(Var(&quot;n&quot;)))))))), Delim(.), Delim(-), Name(_Michel), Name(Marcus_), Delim(,), Date(Nov 07 2013)))
+    </omdoc:p><omtext class="mathematica">
+      <CMP> G = (1 + Sqrt[5])/2; Table[Expand[(G^(6^n) - (1 - G)^(6^n))/Sqrt[5]], {n, 1, 6}] (*Artur Jasinski*)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Table[Round[N[(2/Sqrt[5])*Cosh[5^n*ArcCosh[Sqrt[5]/2]], 1000]], {n, 1, 4}] [From _Artur Jasinski_, Oct 09 2008]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000045, A058635, A045529, A145231, A145232, A145233, A145234.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Artur Jasinski_, Oct 05 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

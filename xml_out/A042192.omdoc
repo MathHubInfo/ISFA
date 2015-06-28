@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A042192.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A042192">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 24,25,299,623,7152,7775,380352,388127,4649749,9687625,111213624,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 120901249,5914473576,6035374825,72303596651,150642568127,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1729371846048,1880014414175,91970063726448,93850078140623,1124320923273301,2342491924687225,26891732094832776</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numerators of continued fraction convergents to sqrt(621).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A042192/b042192.txt&quot;&gt;Table of n, a(n) for n = 0..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (0,0,0,0,0,15550,0,0,0,0,0,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Word(G.f), Delim(.), Delim(:), Delim(-), Div(List(Sub(List(Add(List(Sub(List(Add(List(Sub(List(Power(Var(&quot;x&quot;),Num(11.0)), Mul(List(Num(24.0), Power(Var(&quot;x&quot;),Num(10.0)))))), Mul(List(Num(25.0), Power(Var(&quot;x&quot;),Num(9.0)))))), Mul(List(Num(299.0), Power(Var(&quot;x&quot;),Num(8.0)))))), Mul(List(Num(623.0), Power(Var(&quot;x&quot;),Num(7.0)))))), Mul(List(Num(7152.0), Power(Var(&quot;x&quot;),Num(6.0)))), Mul(List(Num(7775.0), Power(Var(&quot;x&quot;),Num(5.0)))), Mul(List(Num(7152.0), Power(Var(&quot;x&quot;),Num(4.0)))), Mul(List(Num(623.0), Power(Var(&quot;x&quot;),Num(3.0)))), Mul(List(Num(299.0), Power(Var(&quot;x&quot;),Num(2.0)))), Mul(List(Num(25.0), Var(&quot;x&quot;))), Num(24.0))), Mul(List(Add(List(Sub(List(Power(Var(&quot;x&quot;),Num(4.0)), Mul(List(Num(25.0), Power(Var(&quot;x&quot;),Num(2.0)))))), Num(1.0))), Add(List(Power(Var(&quot;x&quot;),Num(8.0)), Mul(List(Num(25.0), Power(Var(&quot;x&quot;),Num(6.0)))), Mul(List(Num(624.0), Power(Var(&quot;x&quot;),Num(4.0)))), Mul(List(Num(25.0), Power(Var(&quot;x&quot;),Num(2.0)))), Num(1.0))))))), Delim(.), Delim(-), Name(_Colin), Name(Barker_), Delim(,), Date(Dec 03 2013)))
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Numerator[Convergents[Sqrt[621], 30]] (* _Vincenzo Librandi_, Nov 18 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A042193, A040596.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cofr,frac,easy,less</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Colin Barker_, Dec 03 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

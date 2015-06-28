@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A088962.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A088962">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,3,4,5,7,9,10,11,12,14,15,18,19,21,22,26,27,29,30,33,34,35,42,45,47,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 49,51,54,55,58,63,65,66,69,70,73,79,85,86,87,105,106,110,111,113,114,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 126,129,138,147,151,157,163,167,178,186,189,217,231,239,241,242,283</CMP>
+    </assertion><omtext class="name">
+      <CMP> Values of n that generate Generalized Gaussian-Mersenne primes (see below).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Chamberland, &quot;Binary BBP-Formulae for Logarithms and Generalized Gaussian-Mersenne Primes&quot;, Journal of Integer Sequences, v.6 (2003), article 03.3.7, 1-10.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Chamberland, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/&quot;&gt;Binary BBP-Formulae for Logarithms and Generalized Gaussian-Mersenne Primes&lt;/a&gt;.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      The numerator of the rational expression <OMOBJ>
+        <OMA>
+      <OMS name="exp" cd="A088962"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="Re" cd="A088962"/>
+      <OMA>
+      <OMS name="log" cd="A088962"/>
+      <OMA>
+      <OMS name="Phi_n" cd="A088962"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="i"/>
+    </OMA><OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>is prime ,where <OMOBJ>
+        <OMV name="Phi_n"/>
+      </OMOBJ>is the n-th <OMOBJ>
+        <OMV name="cyclotomic"/>
+      </OMOBJ>polynomial .
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> t = {}; Do[s = FullSimplify[Exp[2 Re[Log [Cyclotomic[n, (1 + I)/2]]]]]; If[PrimeQ[Numerator[s]], AppendTo[t, n]], {n, 100}]; t (* _T. D. Noe_, May 02 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A057429, A182300 (Gaussian-Mersenne primes).</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Marc Chamberland_, Oct 28 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

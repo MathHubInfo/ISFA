@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A231604.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A231604">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,709,1637,17911</CMP>
+    </omtext><omtext class="name">
+      <CMP> Numbers n such that (42^n + 1)/43 is prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> All terms are primes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(5) &gt; 10^5.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Brillhart et al., &lt;a href=&quot;http://dx.doi.org/10.1090/conm/022&quot;&gt;Factorizations of b^n +- 1&lt;/a&gt;, Contemporary Mathematics, Vol. 22, Amer. Math. Soc., Providence, RI, 3rd edition, 2002.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Dubner and T. Granlund, &lt;a href=&quot;http://www.cs.uwaterloo.ca/journals/JIS/VOL3/DUBNER/dubner.html&quot;&gt;Primes of the Form (b^n+1)/(b+1)&lt;/a&gt;, J. Integer Sequences, 3 (2000), #P00.2.7.</CMP>
+    </omtext><omtext class="link">
+      <CMP> H. Lifchitz, &lt;a href=&quot;http://www.primenumbers.net/Henri/us/MersFermus.htm&quot;&gt;Mersenne and Fermat primes field&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Repunit.html&quot;&gt;Repunit&lt;/a&gt;.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Do[ p=Prime[n]; If[ PrimeQ[ (42^p + 1)/43 ], Print[p] ], {n, 1, 9592} ]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000978 = numbers n such that (2^n + 1)/3 is prime. Cf. A007658, A057171, A057172, A057173, A057175, A001562, A057177, A057178, A057179, A057180, A057181, A057182, A057183, A057184, A057185, A057186, A057187, A057188, A057189, A057190, A057191, A071380, A071381, A071382, A084741, A084742, A065507, A126659, A126856, A185240, A229145, A229524, A230036, A229663.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> hard,more,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Robert Price_, Nov 11 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

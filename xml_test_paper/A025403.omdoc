@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A025403.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A025403">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,11,18,25,30,32,37,44,51,56,63,67,70,74,81,82,88,89,93,100,107,108,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 119,126,128,130,135,137,142,144,145,149,154,156,161,163,168,180,182,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 187,191,193,198,200,205,206,217,224,226,233,240,243,245,254,256,261,266,271,280</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers that are the sum of 4 positive cubes in exactly 1 way.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/CubicNumber.html&quot;&gt;Cubic Number.&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Reap[For[n = 1, n &lt;= 300, n++, pr = Select[ PowersRepresentations[n, 4, 3], Times @@ # != 0 &amp;]; If[pr != {} &amp;&amp; Length[pr] == 1, Print[n, pr]; Sow[n]]]][[2, 1]] (* _Jean-François Alcover_, Jul 31 2013 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A003327.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

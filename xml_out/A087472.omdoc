@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A087472.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A087472">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,1,1,1,1,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,2,2,2,3,1,1,1,2,2,2,2,3,2,3,1,1,2,2,2,3,2,3,2,3,1,1,2,2,2,2,3,2,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3,1,1,2,2,3,3,2,4,3,3,1,1,2,2,2,2,3,3,3,3,1,1,2,3,3,3,3,3,3,2,1,1,1,1,1,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of iterations required for the function f(n) to reach a single digit, where f(n) is the product of the two numbers formed from the alternating digits of n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A087471(n) gives the final digit reached by successive iterations of Murthy's function, f(n). A087473(n) gives the smallest number that requires n iterations of Murthy's function to reach a single digit. The n-th row of triangle A087474 gives the n successive iterations of Murthy's function on A087473(n).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Differs from A031346 first at n=110. [From _R. J. Mathar_, Sep 11 2008]</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1234)= 3 since f(1234)=13*24=312, f(312)=32*1=32 and</CMP>
+    </assertion><assertion class="example">
+      <CMP> f(32)=3*2=6.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A087471, A087473, A087474.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,25</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Amarnath Murthy_ and _Paul D. Hanna_, Sep 11 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A181762.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A181762">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,8,1,14,2,20,3,26,4,32,5,38,6,44,7,50,8,56,9,62,10,68,11,74,12,80,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 13,86,14,92,15,98,16,104,17,110,18,116,19,122,20,128,21,134,22,140,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 23,146,24,152,25,158,26,164,27,170,28,176,29,182,30,188,31,194,32,200,33,206,34,212,35,218,36,224,37</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = n/2 if n even, otherwise 3n+5.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Has at least two periodic orbits, {1,8,4,2} and {5,20,10}.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Four others are {19,62,31,98,49,152,76,38}, {23,74,37,116,58,29,92,46}, {187,...} and {347,...}. The last two are each of length 44, peaking with 8324 and 10196 respectively. - _Geoffrey H. Morley_, Mar 14 2013</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. C. Lagarias, ed., The Ultimate Challenge: The 3x+1 Problem, Amer. Math. Soc., 2010. See p. 307.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A181762/b181762.txt&quot;&gt;Table of n, a(n) for n = 0..2000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/3#3x1&quot;&gt;Index entries for sequences related to 3x+1 (or Collatz) problem&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (0,2,0,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A181762"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>7</OMI><OMV name="n"/></OMA><OMI>10</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>10</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>1</OMI>
+    </OMA>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA><OMI>4</OMI>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-Paolo <OMOBJ>
+        <OMV name="P"/>
+      </OMOBJ>.Lava ,Mar 10 2011 
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="unary_minus"/>
+      <OMI>8</OMI>
+    </OMA><OMV name="x"/>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="x"/><OMI>1</OMI>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.-<OMOBJ>
+        <OMV name="R"/>
+      </OMOBJ>.<OMOBJ>
+        <OMV name="J"/>
+      </OMOBJ>.Mathar ,Mar 10 2011 
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> f:-n-&gt;if n mod 2 = 0 then n/2 else 3*x+5 fi;</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [(7*n+10-10*(-1)^n*(n/2+1))/4: n in [0..80]]; // Vincenzo Librandi, May 24 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A006370.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Jan 31 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

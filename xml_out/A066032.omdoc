@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A066032.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A066032">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,0,1,0,0,1,0,1,1,2,0,0,0,0,1,0,0,1,1,1,2,0,0,0,0,0,0,1,0,1,1,2,2,2,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,3,0,0,1,1,1,1,1,1,2,0,0,0,0,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0,0,1,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,2,2,3,3,3,3,3,3,4,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,1,1,1,1,1,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of ways to write n as a product with no factor larger than m (1 &lt;= m &lt;=n, written row by row).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> T(n,floor(n/2)) = A028422(n) for n &gt; 1; T(n,floor(n/3)) = A216599(n) for n &gt; 2; T(n,floor(n/4)) = A216600(n) for n &gt; 3; T(n,floor(n/5)) = A216601(n) for n &gt; 4; T(n,floor(n/6)) = A216602(n) for n &gt; 5. - _Reinhard Zumkeller_, Oct 01 2012</CMP>
+    </omtext><omtext class="link">
+      <CMP> Reinhard Zumkeller, &lt;a href=&quot;/A066032/b066032.txt&quot;&gt;Rows n = 1..150 of triangle, flattened&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(T,ArgList(List(Num(1.0), Num(1.0)))),Num(1.0)), Delim(.), Name(For), Word(every), Word(prime), Equation(=,Mul(List(Var(&quot;p&quot;), Func(T,ArgList(List(Var(&quot;p&quot;), Var(&quot;m&quot;)))))),Num(1.0)), Word(if), Equation(&lt;=,Var(&quot;p&quot;),Var(&quot;m&quot;)), Word(and), Num(0.0), Word(else), Delim(.), Name(For), Word(composite), Var(&quot;n&quot;), Delim(:), Equation(=,Func(T,ArgList(List(Var(&quot;n&quot;), Var(&quot;m&quot;)))),Add(List(Iters(sum,None,None,Func(T,ArgList(List(Div(List(Var(&quot;n&quot;), Var(&quot;d&quot;))), Var(&quot;d&quot;))))), Func(I,ArgList(List(Equation(&lt;=,Var(&quot;n&quot;),Var(&quot;m&quot;)))))))), Word(where), Word(the), Var(&quot;sum&quot;), Word(is), Word(over), Word(all), Word(divisors), Var(&quot;d&quot;), Word(of), Var(&quot;n&quot;), Word(except), Num(1.0), Word(and), Var(&quot;n&quot;), Word(with), Equation(&lt;=,Var(&quot;d&quot;),Var(&quot;m&quot;)), Word(and), Func(I,ArgList(List(Equation(&lt;=,Var(&quot;n&quot;),Var(&quot;m&quot;))))), Word(is), Num(1.0), Word(if), Equation(&lt;=,Var(&quot;n&quot;),Var(&quot;m&quot;)), Word(and), Num(0.0), Word(else), Delim(.)))
+    </omdoc:p><assertion class="example">
+      <CMP> T(12, 5) = a(71) = 2, since there are 2 possibilities to write 12 as a product with no factor larger than 5 (4*3 and 3*2*2)</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,0,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,1,1,2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,0,0,0,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,0,1,1,1,2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,0,0,0,0,0,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,1,1,2,2,2,2,3;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,0,1,1,1,1,1,1,2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,0,0,0,1,1,1,1,1,2;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,0,0,0,0,0,0,0,0,0,1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0,0,1,2,2,3,3,3,3,3,3,4;</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory): T := proc(n::integer, m::integer) local i, A, summe, d: if isprime(n) then: if n &lt;= m then RETURN(1) fi: RETURN(0): fi:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A := divisors(n) minus {n,1}: for d in A do: if d &gt; m then A := A minus {d}: fi: od: summe := 0: for d in A do: summe := summe + T(n/d,d): od: if n &lt;=m then summe := summe + 1: fi: RETURN(summe): end: A066032 := [seq(seq(T(n, m),m=1..n), n=1..16)];</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a066032 1 1 = 1</CMP>
+    </omtext><omtext class="program">
+      <CMP> a066032 n k = fromEnum (n &lt;= k) +</CMP>
+    </omtext><omtext class="program">
+      <CMP>    (sum $ map (\d -&gt; a066032 (n `div` d) d) $</CMP>
+    </omtext><omtext class="program">
+      <CMP>               takeWhile (&lt;= k) $ tail $ a027751_row n)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a066032_row n = map (a066032 n) [1..n]</CMP>
+    </omtext><omtext class="program">
+      <CMP> a066032_tabl = map a066032_row [1..]</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Oct 01 2012</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A001055(n) = T(n, n) is the right diagonal.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,10</CMP>
+    </assertion><assertion class="author">
+      <CMP> Ulrich Schimke (ulrschimke(AT)aol.com), Feb 11 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

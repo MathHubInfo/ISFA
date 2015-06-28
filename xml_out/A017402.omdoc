@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A017402.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A017402">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,144,529,1156,2025,3136,4489,6084,7921,10000,12321,14884,17689,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 20736,24025,27556,31329,35344,39601,44100,48841,53824,59049,64516,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 70225,76176,82369,88804,95481,102400</CMP>
+    </assertion><omtext class="name">
+      <CMP> (11n+1)^2.</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Num(0.0)))),Num(1.0)), Delim(,), Equation(=,Func(a,ArgList(List(Num(1.0)))),Num(144.0)), Delim(,), Equation(=,Func(a,ArgList(List(Num(2.0)))),Num(529.0)), Delim(,), Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Add(List(Sub(List(Mul(List(Num(3.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(1.0)))))))), Mul(List(Num(3.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(2.0)))))))))), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(3.0))))))))), Delim(.), Delim(-), Name(_Harvey), Var(&quot;P&quot;), Delim(.), Name(Dale_), Delim(,), Date(May 05 2014)))
+    </omdoc:p><omtext class="mathematica">
+      <CMP> (11*Range[0,30]+1)^2 (* or *) LinearRecurrence[{3,-3,1},{1,144,529},30] (* _Harvey P. Dale_, May 05 2014 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

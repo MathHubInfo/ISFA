@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A132650.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A132650">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,4,4,27,4,256,4,256,27,256,4,46656,4,256,256,3125,4,46656,4,46656,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 256,256,4,16777216,27,256,256,46656,4,16777216,4,46656,256,256,256,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 387420489,4,256,256,16777216,4,16777216,4,46656,46656,256,4</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of divisors of n, d(n) raised to power d(n).</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Power(Func(d,ArgList(List(Var(&quot;n&quot;)))),Func(d,ArgList(List(Var(&quot;n&quot;)))))), Delim(.)))
+    </omdoc:p><assertion class="example">
+      <CMP> a(12)=46656 because d(12)=6 and we can write 46656=6^6 or 46656=6*6*6*6*6*6.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A000005, A008973, A008974, A051674.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Omar E. Pol_, Aug 29 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

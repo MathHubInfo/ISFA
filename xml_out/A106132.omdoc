@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A106132.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A106132">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 9,66,6675,6918,613374,613412,613418,613422,613428,613434,613510,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 613512,613514,613520,613542,58155531,58155569,58155572</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n-th semiprime == 7 (mod n).</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(1)=9 is a term because 9th semiprime (i.e. 25)== 7 (mod 9).</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A001358.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> hard,more,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Shyam Sunder Gupta_, May 07 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(16)-a(18) from _Donovan Johnson_, Oct 29 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

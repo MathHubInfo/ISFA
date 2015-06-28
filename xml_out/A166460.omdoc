@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A166460.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A166460">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,5,7,8,9,11,13,14,15,17,19,20,21,23,24,25,26,27,29,31,32,33,34,35,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 37,38,39,41,43,44,45,47,48,49,50,51,53,54,55,56,57,59,61,62,63,64,65,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 67,68,69,71,73,74,75,76,77,79,80,81,83,84,85,86,87,89,90,91,92,93,94</CMP>
+    </assertion><omtext class="name">
+      <CMP> n such that n+(-1)^n is not prime.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Is this the complement of A068499? [R. J. Mathar, Oct 21 2009]</CMP>
+    </omtext><assertion class="example">
+      <CMP> 0+(-1)^0 = 1, not prime, which adds 0 to the sequence. 5+(-1)^5=4, not prime, which adds 5 to the sequence.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A072668, A141468, A060462, A118742.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Juri-Stepan Gerasimov_, Oct 14 2009</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> 0 added by _R. J. Mathar_, Oct 21 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

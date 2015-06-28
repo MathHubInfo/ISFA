@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A066506.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A066506">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 3,9,19,33,43,48,99,69,163,201,197,289,339,393,451,513,579,374,411,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 801,543,644,1059,791,725,1353,739,1244,863,1801,1063</CMP>
+    </assertion><omtext class="name">
+      <CMP> Smallest integer &gt; n^2 of the form (k^3+1)/(n^2+1).</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Add(List(Mul(List(Num(2.0), Power(Var(&quot;n&quot;),Num(2.0)))), Num(1.0)))), Word(for), Equation(=,Var(&quot;n&quot;),Num(1.0)), Delim(,), Num(2.0), Delim(,), Num(3.0), Delim(,), Num(4.0), Delim(,), Num(7.0), Delim(,), Num(9.0), Delim(,), Num(10.0), Delim(,), Num(12.0), Delim(,), Num(13.0), Delim(,), Num(14.0), Delim(,), Num(15.0), Delim(,), Num(16.0), Delim(,), Num(17.0), Delim(,), Num(20.0), Delim(,), Num(23.0), Delim(,), Num(26.0)))
+    </omdoc:p><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Benoit Cloitre_, Jan 04 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

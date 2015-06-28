@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A172185.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A172185">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,9,11,9,20,11,9,29,31,11,9,38,60,42,11,9,47,98,102,53,11,9,56,145,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 200,155,64,11,9,65,201,345,355,219,75,11,9,74,266,546,700,574,294,86,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11,9,83,340,812,1246,1274,868,380,97,11,9,92,423,1152,2058</CMP>
+    </assertion><omtext class="name">
+      <CMP> (9,11) Pascal triangle.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Sums of NW-SE diagonals give A022114 (apart from first two terms).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Triangle T(n,k), read by rows, given by (9,-8,0,0,0,0,0,0,0,...) DELTA (11,-10,0,0,0,0,0,0,0,...) where DELTA is the operator defined in A084938. - From _Philippe Deléham_, Oct 09 2011.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row n : Expansion of (9+11x)*(1+x)^(n-1), n&gt;0. - From _Philippe Deléham_, Oct 09 2011.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A172185"/>
+      <OMV name="n"/><OMV name="k"/>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="T" cd="A172185"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="k"/><OMI>1</OMI>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="T" cd="A172185"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMI>1</OMI>
+    </OMA><OMV name="k"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A172185"/>
+      <OMI>0</OMI><OMI>0</OMI>
+    </OMA>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A172185"/>
+      <OMI>1</OMI><OMI>0</OMI>
+    </OMA>
+      <OMI>9</OMI>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="T" cd="A172185"/>
+      <OMI>1</OMI><OMI>1</OMI>
+    </OMA>
+      <OMI>11</OMI>
+    </OMA>
+      </OMOBJ>.-From _Philippe Deléham_ ,Oct 09 2011 .
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA><OMS name="times"/><OMI>8</OMI><OMV name="x"/></OMA><OMA><OMS name="times"/><OMI>10</OMI><OMV name="y"/><OMV name="x"/></OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/><OMA><OMS name="times"/><OMV name="y"/><OMV name="x"/></OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.-_Philippe Deléham_ ,Apr 13 2012 
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> Triangle begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> .....1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ....9,11</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...9,20,11</CMP>
+    </assertion><assertion class="example">
+      <CMP> .9,29,31,11</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9,38,60,42,11</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A093644, A172179, A022114.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> M. Dols (markdols99(AT)yahoo.com), Jan 28 2010</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Corrected and extended by _Philippe Deléham_, Oct 09 2011.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

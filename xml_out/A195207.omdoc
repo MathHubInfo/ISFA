@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A195207.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A195207">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,0,1,0,4,0,6,0,24,0,4,0,24,0,4,0,16,0,24,0,32,0,96,0,144,0,16,0,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 64,0,144,0,40,0,128,0,160,0,16,0,96,0,96,0,32,0,128,0,96,0,48,0,128,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 0,96,0,96,0,32,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of even divisors of !n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> !n is a subfactorial number (A000166).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Property of this sequence : for n different of 3, the number of even divisors of !n seems even.</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(7) = 6 because the divisors of  !7 = 1854 are  {1, 2, 3, 6, 9, 18, 103, 206, 309, 618, 927, 1854}with 6  even divisors  2, 6, 18, 206, 618, 1854 =&gt; 6 is in the sequence.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> f[n_] := Block[{d = Divisors[Subfactorial[n]]}, Count[EvenQ[d], True]]; Table[f[n], {n, 0, 60}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000166, A195208.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Michel Lagneau_, Sep 13 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

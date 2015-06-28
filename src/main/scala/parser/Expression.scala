@@ -195,6 +195,14 @@ case class Equation(comparison : String, left : Expression, right : Expression) 
     </OMA>
   def clear : Expression = this
 }
+
+case class Modulo(base : Expression, modulo : Expression) extends Expression {
+  def present : String = base.toString + " mod " + modulo.toString
+  def toNode(implicit theory : String) =
+    <OMA></OMA>
+  def clear : Expression = this
+}
+
 //
 case class Adder(expr : Expression) extends Expression{
   def present : String = expr.toString

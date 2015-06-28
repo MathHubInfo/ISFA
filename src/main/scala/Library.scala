@@ -66,7 +66,7 @@ object Library {
 
     from to to foreach(i =>{
       val theory = createID(i.toString)
-      val fileLoc = "/home/enxhi/github/OEISLAB/oeis/source/oeis_source/"+theory+".txt"
+      val fileLoc = "/home/enxhi/projects/OEIST/source/oeis_source/"+theory+".txt"
       val ioFile = new java.io.File(fileLoc)
       if(ioFile.exists) {
         val file = Source.fromFile(ioFile)
@@ -84,22 +84,6 @@ object Library {
     })
   }
 
-  def crawlText(from : Int, to : Int) = {
-    if(from < 1){
-      throw new Error("There is no entry "+from+" in OEIS!")
-    }
-
-    from to to foreach(i =>{
-      val theory = createID(i.toString)
-      val doc: List[String] = DocumentParser.getFormulas(Source.fromURL(getURL(theory)))
-
-      if(i % 10 == 0){
-        println("Fetching entry "+ theory)
-      }
-
-      writeFormula(doc, theory)
-    })
-  }
   def getXML(entry : Int) : Elem = {
     val id = createID(entry.toString)
 //    if(storage.get(id).isEmpty){
@@ -119,7 +103,7 @@ object Library {
   }
 
   def writeXML(xml : Elem, theory : String) = {
-    XML.save("xml_out/" + theory +".omdoc", xml, "UTF-8", true, null)
+    XML.save("xml_test_paper/" + theory +".omdoc", xml, "UTF-8", true, null)
   }
 
   def writeFormula(formulas : List[String], theory : String) : Unit = {
@@ -131,15 +115,15 @@ object Library {
   def main(args : Array[String]) = {
 //    crawlXMLLocal(1, 3000)
     println(Calendar.getInstance().getTime())
-    val documents = 5000
-    val max = 255000
-    val scriptPath = "/home/enxhi/github/logs/oeis_sc"
-    println(1 to 1)
+    val documents = 20
+    val max = 245000
+    val scriptPath = "logs/copyScript"
+    val file = new File(scriptPath)
     val rndm = new Random()
     1 to documents foreach { x =>
       val n = rndm.nextInt(max) + 1
       val theory = createID(n.toString)
-      printToFile(new File(scriptPath))( p => "cp ../../oeis/source/oeis_omdoc/" + theory + " ../source/" )
+      printToFile(file)( p => "cp ../../oeis/source/oeis_omdoc/" + theory + " ../source/" )
       crawlXMLLocal(n,n)
     }
 

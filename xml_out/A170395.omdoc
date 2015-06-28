@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A170395.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A170395">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,50,2450,120050,5882450,288240050,14123762450,692064360050,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 33911153642450,1661646528480050,81420679895522450,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3989613314880600050,195491052429149402450,9579061569028320720050,469374016882387715282450</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of reduced words of length n in Coxeter group on 50 generators S_i with relations (S_i)^2 = (S_i S_j)^43 = I.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The initial terms coincide with those of A170769, although the two sequences are eventually different.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Computed with MAGMA using commands similar to those used to compute A154638.</CMP>
+    </omtext><omdoc:p class="formula">
+         G.f. (t^43 + 2*t^42 + 2*t^41 + 2*t^40 + 2*t^39 + 2*t^38 + 2*t^37 + 2*t^36 +
+    </omdoc:p><omdoc:p class="formula">
+         2*t^35 + 2*t^34 + 2*t^33 + 2*t^32 + 2*t^31 + 2*t^30 + 2*t^29 + 2*t^28 +
+    </omdoc:p><omdoc:p class="formula">
+         2*t^27 + 2*t^26 + 2*t^25 + 2*t^24 + 2*t^23 + 2*t^22 + 2*t^21 + 2*t^20 +
+    </omdoc:p><omdoc:p class="formula">
+         2*t^19 + 2*t^18 + 2*t^17 + 2*t^16 + 2*t^15 + 2*t^14 + 2*t^13 + 2*t^12 +
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Add(List(Mul(List(Num(2.0), Power(Var(&quot;t&quot;),Num(11.0)))), Mul(List(Num(2.0), Power(Var(&quot;t&quot;),Num(10.0)))), Mul(List(Num(2.0), Power(Var(&quot;t&quot;),Num(9.0)))), Mul(List(Num(2.0), Power(Var(&quot;t&quot;),Num(8.0)))), Mul(List(Num(2.0), Power(Var(&quot;t&quot;),Num(7.0)))), Mul(List(Num(2.0), Power(Var(&quot;t&quot;),Num(6.0)))), Mul(List(Num(2.0), Power(Var(&quot;t&quot;),Num(5.0)))), Mul(List(Num(2.0), Power(Var(&quot;t&quot;),Num(4.0)))), Mul(List(Num(2.0), Power(Var(&quot;t&quot;),Num(3.0))))))))
+    </omdoc:p><omdoc:p class="formula">
+         + 2*t^2 + 2*t + 1)/(1176*t^43 - 48*t^42 - 48*t^41 - 48*t^40 - 48*t^39 -
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Sub(List(Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(38.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(37.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(36.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(35.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(34.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(33.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(32.0)))))), Delim(-)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Sub(List(Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(31.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(30.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(29.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(28.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(27.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(26.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(25.0)))))), Delim(-)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Sub(List(Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(24.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(23.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(22.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(21.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(20.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(19.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(18.0)))))), Delim(-)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Sub(List(Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(17.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(16.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(15.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(14.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(13.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(12.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(11.0)))))), Delim(-)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Sub(List(Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(10.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(9.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(8.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(7.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(6.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(5.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(4.0)))), Mul(List(Num(48.0), Power(Var(&quot;t&quot;),Num(3.0)))))), Delim(-)))
+    </omdoc:p><omdoc:p class="formula">
+         48*t^2 - 48*t + 1)
+    </omdoc:p><omtext class="mathematica">
+      <CMP> With[{num=Total[2t^Range[42]]+t^43+1,den=Total[-48 t^Range[42]]+ 1176t^43+ 1},CoefficientList[Series[num/den,{t,0,20}],t]] (* _Harvey P. Dale_, Dec 08 2011 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _John Cannon_ and _N. J. A. Sloane_, Dec 03 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

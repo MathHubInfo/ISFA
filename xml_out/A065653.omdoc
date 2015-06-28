@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A065653.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A065653">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,3,6,11,38,123,1446,15131,2090918,228947163,4371938082726,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 52416803445748571,19113842599189892819591078,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2747521283470239265968814548542043,365338978906606237729724396156395693696687137202086</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(0) = 0, a(1) = 1, a(n) = a(n-2)*a(n-2) + 2 for n &gt; 1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harry J. Smith, &lt;a href=&quot;/A065653/b065653.txt&quot;&gt;Table of n, a(n) for n=0,...,24&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,FuncR(SeqReference(A102847),ArgList(List(Var(&quot;n&quot;)))),Func(a,ArgList(List(Add(List(Mul(List(Num(2.0), Var(&quot;n&quot;))), Num(1.0))))))), Delim(,), Equation(=,FuncR(SeqReference(A072191),ArgList(List(Var(&quot;n&quot;)))),Func(a,ArgList(List(Mul(List(Num(2.0), Var(&quot;n&quot;))))))), Delim(.)))
+    </omdoc:p><omtext class="mathematica">
+      <CMP> RecurrenceTable[{a[0]==0,a[1]==1,a[n]==a[n-2]^2+2},a,{n,20}] (* _Harvey P. Dale_, Aug 19 2013 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) a(n)=if(n&lt;2, n&gt;0, 2+a(n-2)^2) /* _Michael Somos_, Mar 25 2006 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) { for (n=0, 24, if (n&gt;1, a=a2^2 + 2; a2=a1; a1=a, if (n, a=a1=1, a=a2=0)); write(&quot;b065653.txt&quot;, n, &quot; &quot;, a) ) } \\ _Harry J. Smith_, Oct 25 2009</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A065652</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Reinhard Zumkeller_, Nov 10 2001</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> One more term from _Harvey P. Dale_, Aug 19 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

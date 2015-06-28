@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A037679.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A037679">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,9,83,750,6751,60759,546833,4921500,44293501,398641509,3587773583,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 32289962250,290609660251,2615486942259,23539382480333,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 211854442323000,1906689980907001</CMP>
+    </assertion><omtext class="name">
+      <CMP> Base 9 digits are, in order, the first n terms of the periodic sequence with initial period 1,0,2,3.</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_04&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (10,-10,10,-9).</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Word(G.f), Delim(.), Delim(:), Div(List(Mul(List(Var(&quot;x&quot;), Add(List(Sub(List(Num(1.0), Var(&quot;x&quot;))), Mul(List(Num(3.0), Power(Var(&quot;x&quot;),Num(2.0)))))))), Mul(List(Sub(List(Var(&quot;x&quot;), Num(1.0))), Sub(List(Mul(List(Num(9.0), Var(&quot;x&quot;))), Num(1.0))), Add(List(Power(Var(&quot;x&quot;),Num(2.0)), Num(1.0))))))), Delim(.), Delim(-), Var(&quot;_R&quot;), Delim(.), Var(&quot;J&quot;), Delim(.), Name(Mathar_), Delim(,), Date(May 04 2015)))
+    </omdoc:p><omtext class="mathematica">
+      <CMP> nn=30;With[{digs=PadRight[{},nn,{1,0,2,3}]},Table[FromDigits[Take[ digs, n],9],{n,nn}]] (* _Harvey P. Dale_, Jun 19 2013 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,base,easy,changed</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Clark Kimberling_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

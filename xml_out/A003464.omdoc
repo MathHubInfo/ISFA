@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A003464.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A003464">
+          <assertion class="***** TTTT *****">
+      <CMP> M4425</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,7,43,259,1555,9331,55987,335923,2015539,12093235,72559411,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 435356467,2612138803,15672832819,94036996915,564221981491,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3385331888947,20311991333683,121871948002099,731231688012595,4387390128075571</CMP>
+    </assertion><omtext class="name">
+      <CMP> a(n) = (6^n - 1)/5.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = A125118(n, 5) for n&gt;4. - _Reinhard Zumkeller_, Nov 21 2006</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let A be the Hessenberg matrix of order n, defined by: A[1,j]=1, A[i,i]:=6, (i&gt;1), A[i,i-1]=-1, and A[i,j]=0 otherwise. Then, for n&gt;=1, a(n)=det(A). - _Milan Janjic_, Feb 21 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Let A be the Hessenberg matrix of order n, defined by: A[1,j]=1, A[i,i]:=7, (i&gt;1), A[i,i-1]=-1, and A[i,j]=0 otherwise. Then, for n&gt;1, a(n-1)=(-1)^n*charpoly(A,1). - _Milan Janjic_, Feb 21 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Repunits to base 6. A repunit consisting of zero 1's (empty string) gives the empty sum, i.e., 0 (only case where leading zero is shown, for convenience). - _Daniel Forgues_, Jul 08 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 3*a(n) is the total number of holes in a certain triangle fractal (start with 6 triangles, 3 holes) after n iterations. See illustration in links. - _Kival Ngaokrajang_, Feb 21 2015</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A003464/b003464.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. Banderier and D. Merlini, &lt;a href=&quot;http://local.disia.unifi.it/merlini/papers/poster.ps&quot;&gt;Lattice paths with an infinite set of jumps&lt;/a&gt;, FPSAC02, Melbourne, 2002.</CMP>
+    </omtext><omtext class="link">
+      <CMP> INRIA Algorithms Project, &lt;a href=&quot;http://algo.inria.fr/ecs/ecs?searchType=1&amp;amp;service=Search&amp;amp;searchTerms=375&quot;&gt;Encyclopedia of Combinatorial Structures 375&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Kival Ngaokrajang, &lt;a href=&quot;/A003464/a003464.pdf&quot;&gt;Illustration of initial terms&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/MasterThesis.pdf&quot;&gt;Approximations de séries génératrices et quelques conjectures&lt;/a&gt;, Dissertation, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Simon Plouffe, &lt;a href=&quot;http://www.lacim.uqam.ca/%7Eplouffe/articles/FonctionsGeneratrices.pdf&quot;&gt;1031 Generating Functions and Conjectures&lt;/a&gt;, Université du Québec à Montréal, 1992.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/Repunit.html&quot;&gt;Repunit.&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_02&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (7,-6).</CMP>
+    </omtext><omdoc:p class="formula">
+         Binomial transform of A003948. If preceded by 0, then binomial transform of powers of 5, A000351 (preceded by 0). - _Paul Barry_, Mar 28 2003
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Iters(Sum,Some(Equation(=,Var(&quot;k&quot;),Num(1.0))),Some(Var(&quot;n&quot;)),Mul(List(Func(C,ArgList(List(Var(&quot;n&quot;), Var(&quot;k&quot;)))), Power(Num(5.0),Sub(List(Var(&quot;k&quot;), Num(1.0)))))))), Delim(.)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Name(E.g.f), Delim(.), Delim(:), Div(List(Sub(List(Func(exp,ArgList(List(Mul(List(Num(6.0), Var(&quot;x&quot;)))))), Func(exp,ArgList(List(Var(&quot;x&quot;)))))), Num(5.0))), Delim(.), Delim(-), Name(_Paul), Name(Barry_), Delim(,), Date(Mar 28 2003)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Word(G.f), Delim(.), Delim(:), Div(List(Var(&quot;x&quot;), Mul(List(Sub(List(Num(1.0), Var(&quot;x&quot;))), Sub(List(Num(1.0), Mul(List(Num(6.0), Var(&quot;x&quot;))))))))), Delim(.), Delim(-), Name(Lambert), Name(Klasen), Delim((), Word(lambert), Delim(.), Email(klasen(AT)gmx.net), Delim(), Delim()), Delim(,), Date(Feb 06 2005)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Add(List(Mul(List(Num(6.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(1.0)))))))), Num(1.0)))), Word(with), Equation(=,Func(a,ArgList(List(Num(1.0)))),Num(1.0)), Delim(.), Delim(-), Name(_Vincenzo), Name(Librandi_), Delim(,), Date(Nov 17 2010)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Sub(List(Mul(List(Num(7.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(1.0)))))))), Mul(List(Num(6.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(2.0))))))))))), Delim(.), Delim(-), Name(_Vincenzo), Name(Librandi_), Delim(,), Date(Nov 08 2012)))
+    </omdoc:p><assertion class="example">
+      <CMP> a(n) in base 6.................... a(n) in base 10:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 0..................................0</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1..................................1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11.................................7</CMP>
+    </assertion><assertion class="example">
+      <CMP> 111................................43</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1111...............................259</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11111..............................1555</CMP>
+    </assertion><assertion class="example">
+      <CMP> 111111.............................9331</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1111111............................55987, etc. - _Philippe Deléham_, Mar 12 2014</CMP>
+    </assertion><omtext class="maple">
+      <CMP> a:=n-&gt;sum(6^(n-j),j=1..n): seq(a(n), n=1..21); # _Zerinvary Lajos_, Jan 04 2007</CMP>
+    </omtext><omtext class="maple">
+      <CMP> A003464:=1/(6*z-1)/(z-1); # conjectured by _Simon Plouffe_ in his 1992 dissertation</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a[0]:=0:a[1]:=1:for n from 2 to 50 do a[n]:=5*a[n-1]+6*a[n-2]+2 od: seq(a[n], n=1..33); # _Zerinvary Lajos_, Dec 14 2008</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> (6^Range[20]-1)/5 (* _Harvey P. Dale_, Dec. 14, 2010 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> LinearRecurrence[{7, -6}, {0, 1}, 30] (* _Vincenzo Librandi_, Nov 08 2012 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=0,10,print1(polcoeff(1/((1-1*x)*(1-6*x)),n),&quot;,&quot;));</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=1,10,print1((6^n-1)/5,&quot;,&quot;));</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [lucas_number1(n,7,6) for n in xrange(1, 22)] # _Zerinvary Lajos_, Apr 23 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Sage) [gaussian_binomial(n,1,6) for n in xrange(1,22)] # _Zerinvary Lajos_, May 28 2009</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Maxima) A003464(n):=floor((6^n-1)/5)$  makelist(A003464(n),n,0,30); /* _Martin Ettl_, Nov 05 2012 */</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [n le 2 select n-1 else 7*Self(n-1) - 6*Self(n-2): n in [1..30]]; // _Vincenzo Librandi_, Nov 08 2012</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Reinhard Zumkeller_, Nov 21 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> G.f. corrected by _Philippe Deléham_, Mar 11 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

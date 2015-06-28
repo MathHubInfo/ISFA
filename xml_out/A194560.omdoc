@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A194560.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A194560">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,2,4,2,10,2,20,14,49,2,217,2,438,310,1580,2,6352,2,18062,7824,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 58799,2,258971,2532,742915,246794,2729095,2,11154954,2,35779660,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8414818,129644809,242354,531132915,2,1767263211,300830821,6593815523,2,26289925026,2,91708135773</CMP>
+    </assertion><omtext class="name">
+      <CMP> G.f.: Sum_{n&gt;=1} G_n(x)^n where G_n(x) = x + x*G_n(x)^n.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Number of Dyck n-paths with all ascents of equal length. - David Scambler, Nov 17 2011</CMP>
+    </omtext><omtext class="link">
+      <CMP> Paul D. Hanna, &lt;a href=&quot;/A194560/b194560.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A194560"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="divisible" cd="arithemtics">
+        <OMV name="d"/>
+        <OMV name="n"/>
+      </OMS>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          
+        <OMA>
+          <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="C" cd="A194560"/>
+      <OMV name="n"/><OMV name="d"/>
+    </OMA><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMV name="n"/><OMV name="d"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:<OMOBJ>
+        <OMBIND>
+          <OMA>
+            <OMS name="Sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="n"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="Series_Reversion" cd="A194560"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMV name="x"/><OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMV name="n"/>
+    </OMA>
+        </OMA>
+      </OMBIND>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> G.f.: A(x) = x + 2*x^2 + 2*x^3 + 4*x^4 + 2*x^5 + 10*x^6 + 2*x^7 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> where</CMP>
+    </assertion><assertion class="example">
+      <CMP> A(x) = G_1(x) + G_2(x)^2 + G_3(x)^3 + G_4(x)^4 + G_5(x)^5 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> and G_n(x) = x + x*G_n(x)^n is given by:</CMP>
+    </assertion><assertion class="example">
+      <CMP> G_n(x) = Sum_{k&gt;=0} C(n*k+1,k)/(n*k+1)*x^(n*k+1),</CMP>
+    </assertion><assertion class="example">
+      <CMP> G_n(x)^n = Sum_{k&gt;=1} C(n*k,k)/(n*k-k+1)*x^(n*k);</CMP>
+    </assertion><assertion class="example">
+      <CMP> the first few expansions of G_n(x)^n begin:</CMP>
+    </assertion><assertion class="example">
+      <CMP> G_1(x) = x + x^2 + x^3 + x^4 + x^5 +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> G_2(x)^2 = x^2 + 2*x^4 + 5*x^6 + 14*x^8 +...+ A000108(n)*x^(2*n) +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> G_3(x)^3 = x^3 + 3*x^6 + 12*x^9 + 55*x^12 +...+ A001764(n)*x^(3*n) +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> G_4(x)^4 = x^4 + 4*x^8 + 22*x^12 + 140*x^16 +...+ A002293(n)*x^(4*n) +...</CMP>
+    </assertion><assertion class="example">
+      <CMP> G_5(x)^5 = x^5 + 5*x^10 + 35*x^15 + 285*x^20 +...+ A002294(n)*x^(5*n) +...</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) {a(n)=if(n&lt;1,0,sumdiv(n,d,binomial(n,d)/(n-d+1)))}</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) {a(n)=polcoeff(sum(m=1,n,serreverse(x/(1+x^m+x*O(x^n)))^m),n)}</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A194558.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Paul D. Hanna_, Aug 28 2011</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

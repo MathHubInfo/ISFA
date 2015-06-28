@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A103930.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A103930">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,9,121,625,18769,2401,131769,579121,50822641,54479161,7007531521,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 7399612441,1313299956049,1372958223289,1429834803049,5936819760481,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1775966959381729,203755669038601,75787776947048401,3117562300468225</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numerators of squares of harmonic numbers A001008/A002805.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The corresponding denominators are given in A103931.</CMP>
+    </omtext><omtext class="link">
+      <CMP> W. Lang: &lt;a href=&quot;http://www-itp.physik.uni-karlsruhe.de/~wl/EISpub/A103930.text&quot;&gt;Rationals H(n)^2.&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      G.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="diff" cd="A103930"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="ln" cd="A103930"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA><OMV name="x"/>
+    </OMA><OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="dilog" cd="A103930"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="ln" cd="A103930"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA><OMA>
+      <OMS name="dilog" cd="A103930"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>with <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="dilog" cd="A103930"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+      <OMA>
+      <OMS name="polylog" cd="A103930"/>
+      <OMI>2</OMI><OMV name="x"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      First differences give <OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A103932"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A103933"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A103930"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="numerator" cd="A103930"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="H" cd="A103930"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,with the harmonic numbers <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="H" cd="A103930"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A001008"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A002805"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>,<OMOBJ>
+        <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>1</OMI>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omtext class="maple">
+      <CMP> A103930 := n-&gt;numer(sum(1/i, i=1..n)^2); seq(A103930(k), k=1..40); # _Wesley Ivan Hurt_, Sep 30 2013</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := HarmonicNumber[n]^2 // Numerator; Table[a[n], {n, 1, 20}] (* _Jean-François Alcover_, Sep 16 2013 *)</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy,frac</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Wolfdieter Lang_, Mar 24 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

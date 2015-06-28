@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A003088.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A003088">
+          <assertion class="***** TTTT *****">
+      <CMP> M2011</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,2,11,171,8603,1478644,870014637</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of unilateral digraphs with n unlabeled nodes.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, p. 218.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. C. Read (rcread(AT)math.uwaterloo.ca), email to _N. J. A. Sloane_, 28 August, 2000.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. C. Read and R. J. Wilson, An Atlas of Graphs, Oxford, 1998.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. W. Robinson, &lt;a href=&quot;http://dx.doi.org/10.1002/jgt.3190010215&quot;&gt;Counting strong digraphs (research announcement)&lt;/a&gt;, J. Graph Theory 1, 1977, pp. 189-190.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A057270, A003029 (labeled case), A003085, A035512, A051421, A049531, A049512.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,more</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Note that Read and Wilson incorrectly give a(4) as 172 - thanks to _Vladeta Jovovic_, Goran Kilibarda for finding this error and for verifying a(5).</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(7) from _Sean A. Irvine_, Jan 26 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

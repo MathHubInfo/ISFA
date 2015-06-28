@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A228748.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A228748">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,0,1,1,5,18,52,140,361,909,2255,5542,13538,32940,79939,193661,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 468625,1133118,2738432,6615760,15979301,38589489,93182755,224994602,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 543236038,1311570360,3166544519,7644930841,18456845405,44559332298</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Pell numbers (A000129) minus Lucas numbers beginning at 2 (A000032).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_04&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (3,0,-3,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="a" cd="A228748"/>
+      <OMV name="n"/>
+    </OMA>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMR xref="A000129"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMR xref="A000032"/>
+      <OMV name="n"/>
+    </OMA>
+    </OMA>
+    </OMA>
+      </OMOBJ>.
+    </CMP>
+    </omdoc:p><omdoc:p class="formula">
+        <CMP>
+      G.f .:-<OMOBJ>
+        <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>2</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA>
+    </OMA><OMA><OMS name="times"/><OMI>6</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMV name="x"/>
+    </OMA><OMI>1</OMI>
+    </OMA><OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMI>2</OMI><OMV name="x"/></OMA>
+    </OMA><OMI>1</OMI>
+    </OMA></OMA>
+    </OMA>
+      </OMOBJ>.[_Joerg Arndt_ ,Sep 03 2013 ]
+    </CMP>
+    </omdoc:p><assertion class="example">
+      <CMP> a(0) = Pell(0) - L(0) = 0 - 2 = -2.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(1) = Pell(1) - L(1) = 1 - 1 = 0.</CMP>
+    </assertion><assertion class="example">
+      <CMP> a(8) = Pell(8) - L(8) = 408 - 47 = 361.</CMP>
+    </assertion><omtext class="program">
+      <CMP> (PARI) Vec( -(2*x^3+x^2-6*x+2) / ((x^2+x-1)*(x^2+2*x-1)) +O(x^66) ) \\ _Joerg Arndt_, Sep 03 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000032, A000129, A060405, A226638.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jonathan Vos Post_, Sep 02 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A130214.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A130214">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,60,7800,976500,122070000,15258787500,1907348625000,238418579062500,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 29802322387500000,3725290298460937500,465661287307734375000,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 58207660913467382812500,7275957614183425781250000,909494701772928237304687500,113686837721616029736328125000</CMP>
+    </assertion><omtext class="name">
+      <CMP> Order of modular group of degree 5^(n-1)+1.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. Mathieu, Memoire sur le nombre de valeurs que peut acquerir une fonction quand on y permute ses variables de toutes les manieres possibles, Journ. de math. (2) 5 (1860), 9-42 (see p. 39).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (130,-625).</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Div(List(Mul(List(Power(Num(5.0),Sub(List(Var(&quot;n&quot;), Num(1.0)))), Sub(List(Power(Num(5.0),Sub(List(Mul(List(Num(2.0), Var(&quot;n&quot;))), Num(2.0)))), Num(1.0))))), Num(2.0)))), Delim(.)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Sub(List(Mul(List(Num(130.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(1.0)))))))), Mul(List(Num(625.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(2.0))))))))))), Delim(.), Word(G.f), Delim(.), Delim(:), Div(List(Mul(List(Num(60.0), Power(Var(&quot;x&quot;),Num(2.0)))), Mul(List(Sub(List(Mul(List(Num(5.0), Var(&quot;x&quot;))), Num(1.0))), Sub(List(Mul(List(Num(125.0), Var(&quot;x&quot;))), Num(1.0))))))), Delim(.), Delim(-), Name(_Colin), Name(Barker_), Delim(,), Date(Sep 02 2013)))
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Table[5^(x - 1) (5^(2 x - 2) - 1)/2, {x, 1, 15}]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A120689.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Artur Jasinski_, Aug 04 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Colin Barker_, Sep 02 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

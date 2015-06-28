@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A132023.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A132023">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 4,5,8,7,6,6,7,2,6,6,9,9,7,6,8,9,8,5,0,2,0,0,0,5,1,5,3,3,6,9,7,4,3,7,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,1,7,8,2,5,4,6,6,8,8,7,1,4,7,3,1,8,7,0,0,7,8,2,4,4,0,1,3,8,5,0,6,9,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 9,7,4,4,0,3,2,6,5,9,3,0,3,6,5,2,3,7,8,1,7,1,0,9,0,4,0,5,8,4,7,5,9,8,2</CMP>
+    </assertion><omtext class="name">
+      <CMP> Decimal expansion of Product{k&gt;=0, 1-1/(2*7^k)}.</CMP>
+    </omtext><omdoc:p class="formula">
+         lim inf product{0&lt;=k&lt;=floor(log_7(n)), floor(n/7^k)*7^k/n} for n--&gt;oo.
+    </omdoc:p><omdoc:p class="formula">
+         lim inf A132031(n)/n^(1+floor(log_7(n)))*7^(1/2*(1+floor(log_7(n)))*floor(log_7(n))) for n--&gt;oo.
+    </omdoc:p><omdoc:p class="formula">
+         lim inf A132031(n)/n^(1+floor(log_7(n)))*7^A000217(floor(log_7(n))) for n--&gt;oo.
+    </omdoc:p><omdoc:p class="formula">
+         1/2*exp(-sum{n&gt;0, 7^(-n)*sum{k|n, 1/(k*2^k))}}).
+    </omdoc:p><omdoc:p class="formula">
+         lim inf A132031(n)/A132031(n+1)=0.4587667266997689850200... for n--&gt;oo.
+    </omdoc:p><assertion class="example">
+      <CMP> 0.4587667266997689850200...</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> digits = 103; NProduct[1-1/(2*7^k), {k, 0, Infinity}, NProductFactors -&gt; 200, WorkingPrecision -&gt; digits+5] // N[#, digits+5]&amp; // RealDigits[#, 10, digits]&amp; // First (* _Jean-François Alcover_, Feb 18 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A048651, A098844, A067080, A132019, A132026, A132031, A132035, A000217.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,cons</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Hieronymus Fischer_, Aug 14 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

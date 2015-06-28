@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A004448.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A004448">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,6,5,4,3,2,1,0,15,14,13,12,11,10,9,8,23,22,21,20,19,18,17,16,31,30,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 29,28,27,26,25,24,39,38,37,36,35,34,33,32,47,46,45,44,43,42,41,40,55,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 54,53,52,51,50,49,48,63,62,61,60,59,58,57,56,71,70,69,68,67,66,65,64,79,78,77,76,75,74,73,72,87,86,85</CMP>
+    </assertion><omtext class="name">
+      <CMP> Nimsum n + 7.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> E. R. Berlekamp, J. H. Conway and R. K. Guy, Winning Ways, Academic Press, NY, 2 vols., 1982, see p. 60.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. H. Conway, On Numbers and Games. Academic Press, NY, 1976, pp. 51-53.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A004448/b004448.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ni#Nimsums&quot;&gt;Index entries for sequences related to Nim-sums&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rea#recLCC&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (1,0,0,0,0,0,0,1,-1).</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Add(List(Var(&quot;n&quot;), Power(Neg(Num(1.0)),Var(&quot;n&quot;)), Mul(List(Num(2.0), Power(Neg(Num(1.0)),Func(floor,ArgList(List(Div(List(Var(&quot;n&quot;), Num(2.0))))))))), Mul(List(Num(4.0), Power(Neg(Num(1.0)),Func(floor,ArgList(List(Div(List(Var(&quot;n&quot;), Num(4.0)))))))))))), Delim(.), Delim(-), Name(_Mitchell), Name(Harris_), Delim(,), Date(Jan 10 2005)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Word(G.f), Delim(.), Delim(:), Div(List(Add(List(Sub(List(Mul(List(Num(8.0), Power(Var(&quot;x&quot;),Num(8.0)))), Power(Var(&quot;x&quot;),Num(7.0)), Power(Var(&quot;x&quot;),Num(6.0)), Power(Var(&quot;x&quot;),Num(5.0)), Power(Var(&quot;x&quot;),Num(4.0)), Power(Var(&quot;x&quot;),Num(3.0)), Power(Var(&quot;x&quot;),Num(2.0)), Var(&quot;x&quot;))), Num(7.0))), Mul(List(Power(Sub(List(Var(&quot;x&quot;), Num(1.0))),Num(2.0)), Add(List(Var(&quot;x&quot;), Num(1.0))), Add(List(Power(Var(&quot;x&quot;),Num(2.0)), Num(1.0))), Add(List(Power(Var(&quot;x&quot;),Num(4.0)), Num(1.0))))))), Delim(.), Delim(-), Name(_Colin), Name(Barker_), Delim(,), Date(Jun 29 2014)))
+    </omdoc:p><omtext class="mathematica">
+      <CMP> CoefficientList[Series[(8 x^8 - x^7 - x^6 - x^5 - x^4 - x^3 - x^2 - x + 7)/((x - 1)^2 (x + 1) (x^2 + 1) (x^4 + 1)), {x, 0, 100}], x] (* _Vincenzo Librandi_, Jun 30 2014 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) Vec((8*x^8-x^7-x^6-x^5-x^4-x^3-x^2-x+7)/((x-1)^2*(x+1)*(x^2+1)*(x^4+1)) + O(x^100)) \\ _Colin Barker_, Jun 29 2014</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Colin Barker_, Jun 29 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

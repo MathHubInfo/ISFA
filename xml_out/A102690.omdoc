@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A102690.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A102690">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 10,6,5,4,3,3,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1</CMP>
+    </omtext><omtext class="name">
+      <CMP> Number of n-expodigital numbers (i.e. numbers m such that m^n has exactly n decimal digits).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) = 10 - A102691(n).</CMP>
+    </omtext><assertion class="example">
+      <CMP> a(6) = 3 because only the 3 numbers 7, 8 and 9 are 6-expodigital: 7^6 = 117649, 8^6 = 262144, 9^6 = 531441.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A102691.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Diagonal of A216653.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> fini,full,nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Lekraj Beedassy_, Jan 21 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _Charles R Greathouse IV_, Aug 03 2010</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A074481.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A074481">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,1,1,0,1,1,0,1,0,1,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,0,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,1,1,1,1,0,1,0,1,0,1,0,1,1,0,1,1,0,0,1,1,1,1,1,0,1,1,0,1,1,0,0,1,0,1,0</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle T(p,k) read by rows, where p runs through the primes and 1 &lt;= k &lt;= p-1. T(p,k) = 1 if the reverse of the base-k expansion of p is a prime, otherwise 0.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Row p has p-1 terms.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A very large version of this pyramid, with 1's replaced with white dots and 0's replaced with black dots, shows a very interesting pattern (see link). The author says: &quot;These primes form a pattern similar to an astronomical radiant (the point in the sky from which a meteor shower appears to originate)&quot;.</CMP>
+    </omtext><omtext class="link">
+      <CMP> C. E. Nichols, &lt;a href=&quot;http://www.radiantprimes.com/&quot;&gt;Radiant Prime&lt;/a&gt;, 2003</CMP>
+    </omtext><assertion class="example">
+      <CMP> Writing 11 in bases 1 through 10, we obtain</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11111111111,1011,102,23,21,15,14,13,12,11. Reversing these, we obtain</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11111111111,1101,201,32,12,51,41,31,21,11. Now 32 (base 4) and 31 (octal) are composite, all others are prime, so the row for 11 reads.</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1,1,1,0,1,1,1,0,1,1</CMP>
+    </assertion><assertion class="example">
+      <CMP> Triangle begins:</CMP>
+    </assertion><assertion class="example">
+      <CMP> .1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .1 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .1 1 1 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .1 1 1 1 1 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> .1 1 1 0 1 1 1 0 1 1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ....</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> See A089829 for another version.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,easy,nonn,tabf</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 2,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> C. E. Nichols (radprime(AT)radiantprimes.com), Nov 19 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Ray Chandler_, Nov 22 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A080690.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A080690">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,14,2398,5015972,128091434266,39931856138212664,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 151966368274993474937668,7059965159455454640307807067492,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 4003910412343921295679925280332950062686,27719972687144020161876951888422165049044889741764</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of acyclic orientations of n X n grid graph.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. Calkin, C. Merino, S. Noble and M. Noy Improved Bounds for the Number of Forests and Acyclic Orientations in the Square Lattice, The Electronic Journal of Combinatorics, Volume 10(1), 2003</CMP>
+    </omtext><omtext class="link">
+      <CMP> Peter Tittmann, &lt;a href=&quot;http://www.htwm.de/~peter/research/enumeration.html&quot;&gt;More Results&lt;/a&gt; [Gives a(1)-a(14)] [broken link]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> Andre Poenitz [Po&quot;nitz], Peter Tittmann (poenitz(AT)htwm.de), Mar 03 2003</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> a(10) from _Alois P. Heinz_, Dec 21 2013</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

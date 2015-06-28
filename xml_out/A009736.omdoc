@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A009736.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A009736">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,2,5,16,61,248,1217,6336,38137,242464,1753245,13219328,112141173,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 982066816,9583252569,95757641728,1057866255601,11884764271104,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 146689651631285,1830773338714112,24972471277262509</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of tan(x)*exp(sinh(x)).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Tan[ x ]*Exp[ Sinh[ x ] ]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended and signs tested Mar 15 1997 by _Olivier Gérard_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

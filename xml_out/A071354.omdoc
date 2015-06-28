@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A071354.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A071354">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 12,18,25,36,42,45,48,55,80,91,95,98,99,100,108,110,112,125,130,132,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 135,136,140,143,152,153,155,160,161,162,175,184,187,190,192,198,208,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 216,224,225,228,232,235,238,240,242,245,247,248,261,266,273,275,279,285,286,289</CMP>
+    </assertion><omtext class="name">
+      <CMP> Floor(2^n/n) is odd.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A student asked if the floor of 2^n / n was always even. He had a proof when n is prime. There is a shorter proof if you look at the binomial expansion of (1+1)^p.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Select[ Range[300], OddQ[ Floor[2^# / # ]] &amp; ]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) for(n=1,1000,if((-1)^(floor(2^n/n))==-1+isprime(n),print1(n,&quot;,&quot;)))</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A071941.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. K. Guy_, Jun 12 2002</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from several correspondents, Jun 12, 2002</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

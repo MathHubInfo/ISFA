@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A211667.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A211667">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of iterations sqrt(sqrt(sqrt(...(n)...))) such that the result is &lt; 2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Different from A001069, but equal for n &lt; 256.</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Power(Num(2.0),Power(Num(2.0),Var(&quot;n&quot;)))))),Add(List(Func(a,ArgList(List(Power(Num(2.0),Power(Num(2.0),Sub(List(Var(&quot;n&quot;), Num(1.0)))))))), Num(1.0)))), Delim(,), Word(for), Equation(&gt;=,Var(&quot;n&quot;),Num(1.0)), Delim(.)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Word(G.f), Delim(.), Delim(:), Equation(=,Func(g,ArgList(List(Var(&quot;x&quot;)))),Mul(List(Div(List(Num(1.0), Sub(List(Num(1.0), Var(&quot;x&quot;))))), Iters(sum,Some(Equation(=,Var(&quot;k&quot;),Num(0.0))),Some(Constant(infinity)),Power(Var(&quot;x&quot;),Power(Num(2.0),Power(Num(2.0),Var(&quot;k&quot;)))))))), Delim(.), Name(The), Word(explicit), Word(first), Word(terms), Word(of), Word(the), Var(&quot;g&quot;), Name(.f), Delim(.), Word(are)))
+    </omdoc:p><omdoc:p class="formula">
+         g(x)=(x^2+x^4+x^16+x^256+x^65536+…)/(1-x).
+    </omdoc:p><assertion class="example">
+      <CMP> a(n)=1, 2, 3, 4, 5 for n=2^1, 2^2, 2^4, 2^8, 2^16 =2, 4, 16, 256, 65536.</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A001069, A010096, A211662, A211668, A211670.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> base,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Hieronymus Fischer_, Apr 30 2012</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

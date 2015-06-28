@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A069327.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A069327">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,49,1632,46557,1225194,30754544,749866185,17950397258,424660442975,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 9969967594443,232909647253690,5423397612311731,126017939209370356,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2924071505958808678,67786971099219351975,1570519781573431498844</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 5 X n binary arrays with path of adjacent 1's from upper right corner to lower left corner.</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. 2 X n A048739, 3 X n A069325, 4 X n A069326, 6 X n A069328, 7 X n A069329, 8 X n A069330, 9 X n A069331, 10 X n A069332, 11 X n A069333, 12 X n A069334, 13 X n A069335, 14 X n A069336, 15 X n A069337, 16 X n A069338, 17 X n A069339, 18 X n A069340, 19 X n A069341, 20 X n A069342, n X n A069343, n X n symmetric A069344.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Mar 16 2002.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

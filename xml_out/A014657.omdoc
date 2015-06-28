@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A014657.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A014657">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,5,9,11,13,17,19,25,27,29,33,37,41,43,53,57,59,61,65,67,81,83,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 97,99,101,107,109,113,121,125,129,131,137,139,145,149,157,163,169,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 171,173,177,179,181,185,193,197,201,205,209,211,227,229,241,243,249,251,257,265</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n that divide 2^k + 1 for some k.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Since for some a &lt; n, 2^a = 1 (mod n) (a consequence of Euler's Theorem), searching up to k=n is sufficient to determine whether an integer is in the sequence. [_Michael B. Porter_, Dec 06 2009]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A195470(a(n)) &gt; 0; A195610(n) gives the smallest k such that a(n) divides 2^k + 1. [_Reinhard Zumkeller_, Sep 21 2011]</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A014657 is the subset of odd integers &gt;1 as (2*n - 1) in A179480, such that the corresponding entry in A179480 is odd. Example: A179480(14) = 5, odd, with (2*14 - 1) = 27; in the sequence A014657. A014659 (odd and does not divide (2^k + 1) for any k&gt;1) represents the subset of odd terms &gt;1 corresponding to A179480 entries that are even. - _Gary W. Adamson_, Aug 20 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> All prime factors of a(n) are in A091317.  Sequence has asymptotic density 0. - _Robert Israel_, Aug 12 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A014657/b014657.txt&quot;&gt;Table of n, a(n) for n=1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> P. Moree, Appendix to V. Pless et al., &lt;a href=&quot;http://dx.doi.org/10.1006/ffta.1996.0172&quot;&gt;Cyclic Self-Dual Z_4 Codes&lt;/a&gt;, Finite Fields Applic., vol. 3 pp. 48-69, 1997.</CMP>
+    </omtext><omtext class="maple">
+      <CMP> select(t -&gt; [msolve(2^x+1,t)] &lt;&gt; [], [2*i+1 $ i=1..1000]); # _Robert Israel_, Aug 12 2014</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> ok[n_] := Module[{k=0}, While[k&lt;=n &amp;&amp; Mod[2^k + 1, n] &gt; 0, k++]; k&lt;n]; Select[Range[265], ok] (* _Jean-François Alcover_, Apr 06 2011, after PARI prog *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> okQ[n_] := Module[{k = MultiplicativeOrder[2, n]}, EvenQ[k] &amp;&amp; Mod[2^(k/2) + 1, n] == 0]; Join[{1, 2}, Select[Range[3, 265, 2], okQ]] (* _T. D. Noe_, Apr 06 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI) isA014657(n) = {local(r);r=0;for(k=0,n,if(Mod(2^k+1,n)==Mod(0,n),r=1));r} [From Michael Porter, Dec 06 2009]</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.List (findIndices)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a014657 n = a014657_list !! (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a014657_list = map (+ 1) $ findIndices (&gt; 0) $ map a195470 [1..]</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Sep 21 2011</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000051, A003558, A014659, A014661, A091317, A179480, A195470, A195610.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Henry Bottomley_, May 19 2000</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended and corrected by _David W. Wilson_, May 01 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

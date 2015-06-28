@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A049359.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A049359">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2177399,2177406,2177455,2177469,2177518,2177525,2177847,2177854,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2177959,2177980,2178022,2178036,2178351,2178365,2178407,2178428,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 2178533,2178540,2178862,2178869,2178918,2178932,2178981,2178988</CMP>
+    </assertion><omtext class="name">
+      <CMP> Digitally balanced numbers in base 8: equal numbers of 0's, 1's, ..., 7's.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A049359/b049359.txt&quot;&gt;Table of n, a(n) for n = 1..720&lt;/a&gt;</CMP>
+    </omtext><assertion class="example">
+      <CMP> 2177399 is 10234567 in base 8.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> Select[Range[2100000,2200000],Union[DigitCount[#,8]]=={1}&amp;] (* _Harvey P. Dale_, Sep 14 2012 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A031443.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,base</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Harvey P. Dale_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

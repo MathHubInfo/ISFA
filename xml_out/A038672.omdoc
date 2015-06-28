@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A038672.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A038672">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 19,31,37,41,53,59,61,67,71,73,79,89,97,101,103,107,109,113,127,139,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 149,151,157,163,167,173,179,181,191,193,197,199,211,223,227,229,233,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 239,241,251,257,263,269,271,277,281,283,293,307,311,313,317,331,337</CMP>
+    </assertion><omtext class="name">
+      <CMP> Numbers n such that n is prime but n-th Fibonacci number is composite.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hans Havermann, &lt;a href=&quot;/A038672/b038672.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Hans Havermann, &lt;a href=&quot;http://chesswanks.com/num/CompositePrimeIndexFibonaccis.txt&quot;&gt;Composite Prime-Index Fibonacci Numbers Factored&lt;/a&gt;</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Rest[Select[Prime[Range[68]], ! PrimeQ[Fibonacci[#]] &amp;]] (* _Jayanta Basu_, Jul 10 2013 *)</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> s={A083668}; Complement[Prime[Range[2, 10034]], s] (* _Hans Havermann_, Feb 12 2014 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A090819 (essentially identical), A083668, A135952.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Jeff Burch_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

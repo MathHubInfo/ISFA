@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A005245.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A005245">
+          <assertion class="***** TTTT *****">
+      <CMP> M0457</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,3,4,5,5,6,6,6,7,8,7,8,8,8,8,9,8,9,9,9,10,11,9,10,10,9,10,11,10,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 11,10,11,11,11,10,11,11,11,11,12,11,12,12,11,12,13,11,12,12,12,12,13,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 11,12,12,12,13,14,12,13,13,12,12,13,13,14,13,14,13,14,12,13,13,13,13,14,13,14</CMP>
+    </assertion><omtext class="name">
+      <CMP> Complexity of n: number of 1's required to build n using + and *.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The complexity of an integer n is the least number of 1's needed to represent it using only additions, multiplications and parentheses. This does not allow juxtaposition of 1's to form larger integers, so for example, 2 = 1+1 has complexity 2, but 11 does not (&quot;pasting together&quot; two 1's is not an allowed operation).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The complexity of a number has been defined in several different ways by different authors. See the Index to the OEIS for other definitions.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Guy asks if a(p) = a(p-1) + 1 for prime p. Martin Fuller found the least counterexample p = 353942783 in 2008, see Fuller link. - _Charles R Greathouse IV_, Oct 04 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Altman writes: &quot;Define |n| to be the complexity of n, the smallest number of ones needed to write n using an arbitrary combination of addition and multiplication. John Selfridge showed that |n| greater than or equal to 3 log_3 n for all n. Define the defect of n, denoted delta(n), to be |n| - 3 log_3 n. In this paper, we consider the set D := {delta(n): n greater than or equal to 1 of all defects. We show that as a subset of the real numbers, the set D is well-ordered, of order type omega^omega. More specifically, for k greater than or equal to 1 an integer, Dcap[0,k) has order type omega^k. We also consider some other sets related to D, and show that these too are well-ordered and have order type omega^omega.&quot; [_Jonathan Vos Post_, Oct 10 2013]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> M. Criton, &quot;Les uns de Germain&quot;, Problem No.4 pp 13 ; 68 in '7 x 7 Enigmes Et Defis Mathematiques pour tous', vol.25 Editions POLE Paris 2001.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. Arias de Reyna, Complejidad de los numeros naturales, Gaceta de la Real Sociedad Matematica Espanola, 3, (2000), 230-250.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, Unsolved Problems Number Theory, Sect. F26.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> K. Mahler and J. Popken, Over een Maximumprobleem uit de Rekenkunde (Dutch: On a maximum problem in arithmetic), Nieuw Arch. Wiskunde, (3) 1 (1953), pp. 1-15.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Stefan Steinerberger,  A Short Note on Integer Complexity, Contributions to Discrete Mathematics, accepted (2015).</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. F. Hasler, &lt;a href=&quot;/A005245/b005245.txt&quot;&gt;Table of n, a(n) for n = 1..10000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harry Altman, &lt;a href=&quot;http://www-personal.umich.edu/~haltman/stdalone.pdf&quot;&gt;Highest few sums and products of ones&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harry Altman, &lt;a href=&quot;http://arxiv.org/abs/1310.2894&quot;&gt;Integer Complexity and Well-Ordering&lt;/a&gt;,  arXiv:1310.2894v1 [math.NT] , Oct 10, 2013.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Harry Altman and Joshua Zelinsky, Numbers with integer complexity close to the lower bound, &lt;a href=&quot;http://arxiv.org/abs/1207.4841&quot;&gt;arXiv:1207.4841&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Juris Cernenoks, Janis Iraids, Martins Opmanis, Rihards Opmanis, Karlis Podnieks, &lt;a href=&quot;http://arxiv.org/abs/1409.0446&quot;&gt;Integer Complexity: Experimental and Analytical Results II&lt;/a&gt; arxiv:1409.0446, 2014.</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Arias de Reyna, J. van de Lune, &lt;a href=&quot;http://arxiv.org/abs/1404.1850&quot;&gt;The question &quot;How many 1's are needed?&quot; revisited&lt;/a&gt;, arXiv preprint arXiv:1404.1850, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Arias de Reyna, J. van de Lune, &lt;a href=&quot;http://arxiv.org/abs/1404.2183&quot;&gt;Algorithms for determining integer complexity&lt;/a&gt;, arXiv preprint arXiv:1404.2183, 2014</CMP>
+    </omtext><omtext class="link">
+      <CMP> Martin N. Fuller, &lt;a href=&quot;/A005245/a005245.c.txt&quot;&gt;C program&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. K. Guy, &lt;a href=&quot;http://www.jstor.org/stable/2323338&quot;&gt;Some suspiciously simple sequences&lt;/a&gt;, Amer. Math. Monthly 93 (1986), 186-190; 94 (1987), 965; 96 (1989), 905.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Janis Iraids, &lt;a href=&quot;http://expmath.lumii.lv/wiki/index.php/Special:Complexity&quot;&gt;Online calculator of a(n) for n &lt; 10^12&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Jānis Iraids, Kaspars Balodis, Juris Čerņenoks, Mārtiņš Opmanis, Rihards Opmanis, and Kārlis Podnieks, &lt;a href=&quot;http://arxiv.org/abs/1203.6462&quot;&gt;Integer complexity: experimental and analytical results&lt;/a&gt; (2012)</CMP>
+    </omtext><omtext class="link">
+      <CMP> Daniel A. Rawsthorne, &lt;a href=&quot;http://www.fq.math.ca/Scanned/27-1/rawsthorne.pdf&quot;&gt;How many 1's are needed?&lt;/a&gt;, Fibonacci Quarterly 27 (1989), pp. 14-17.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Srinivas, Vivek V. and Shankar, B. R., &lt;a href=&quot;http://www.waset.org/journals/waset/v17/v17-119.pdf&quot;&gt;Integer Complexity: Breaking the Theta(n^2) barrier&lt;/a&gt;, World Academy of Science 41 (2008), pp. 690-691.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Venecia Wang, A counterexample to the prime conjecture of expressing numbers using just ones, Journal of Number Theory, submitted. &lt;a href=&quot;http://www.youtube.com/watch?v=R8IQI_dwaJE&quot;&gt;video abstract&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Mathematics, &lt;a href=&quot;http://mathworld.wolfram.com/IntegerComplexity.html&quot;&gt;Integer Complexity&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Com#complexity&quot;&gt;Index to sequences related to the complexity of n&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Name(It), Word(is), Word(known), Word(that), Equation(&lt;=,Func(a,ArgList(List(Var(&quot;n&quot;)))),FuncR(SeqReference(A061373),ArgList(List(Var(&quot;n&quot;))))), Word(but), Var(&quot;I&quot;), Word(think), Equation(&lt;=,Equation(&lt;=,Num(0.0),Sub(List(FuncR(SeqReference(A061373),ArgList(List(Var(&quot;n&quot;)))), Func(a,ArgList(List(Var(&quot;n&quot;))))))),Num(1.0)), Word(also), Word(holds), Delim(.), Delim(-), Name(Benoit), Name(Cloitre), Delim(,), Date(Nov 23 2003), Delim(.), Name(That's), Word(false), Delim(:), Word(the), Word(numbers), ArgList(List(Num(46.0), Num(235.0), Num(649.0), Num(1081.0), Num(7849.0), Num(31669.0), Num(61993.0))), Word(require), ArgList(List(Num(1.0), Num(2.0), Num(3.0), Num(4.0), Num(5.0), Num(6.0), Num(7.0))), Word(fewer), Num(1.0), Name('s), Word(in), FuncR(SeqReference(A005245),ArgList(List(Var(&quot;than&quot;)))), Word(in), SeqReference(A061373), Delim(.), Delim(-), Word(Ed), Name(Pegg), Name(Jr), Delim(,), Date(Apr 13 2004), Delim(.)))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Name(Coppersmith), Word(proved), Word(that), Equation(&lt;=,Equation(&lt;=,Mul(List(Num(3.0), Var(&quot;log_3&quot;), Var(&quot;n&quot;))),Func(a,ArgList(List(Var(&quot;n&quot;))))),Mul(List(Num(3.0), Var(&quot;log_2&quot;), Var(&quot;n&quot;)))), Word(for), Word(all), Equation(&gt;,Var(&quot;n&quot;),Num(1.0)), Delim(.), Delim(-), Name(_Charles), Var(&quot;R&quot;), Name(Greathouse), Name(IV_), Delim(,), Date(Apr 19 2012)))
+    </omdoc:p><assertion class="example">
+      <CMP> Contribution from _Lekraj Beedassy_, Jul 04 2009: (Start)</CMP>
+    </assertion><assertion class="example">
+      <CMP> n ........... minimal expression........... a(n)= number of 1's</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1.....................1.......................1</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2....................1+1......................2</CMP>
+    </assertion><assertion class="example">
+      <CMP> 3...................1+1+1.....................3</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4................(1+1)*(1+1)..................4</CMP>
+    </assertion><assertion class="example">
+      <CMP> 5...............(1+1)*(1+1)+1.................5</CMP>
+    </assertion><assertion class="example">
+      <CMP> 6...............(1+1)*(1+1+1).................5</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7..............(1+1)*(1+1+1)+1................6</CMP>
+    </assertion><assertion class="example">
+      <CMP> 8.............(1+1)*(1+1)*(1+1)...............6</CMP>
+    </assertion><assertion class="example">
+      <CMP> 9..............(1+1+1)*(1+1+1)................6</CMP>
+    </assertion><assertion class="example">
+      <CMP> 10............(1+1+1)*(1+1+1)+1...............7</CMP>
+    </assertion><assertion class="example">
+      <CMP> 11...........(1+1+1)*(1+1+1)+1+1..............8</CMP>
+    </assertion><assertion class="example">
+      <CMP> 12...........(1+1)*(1+1)*(1+1+1)..............7</CMP>
+    </assertion><assertion class="example">
+      <CMP> 13..........(1+1)*(1+1)*(1+1+1)+1.............8</CMP>
+    </assertion><assertion class="example">
+      <CMP> 14.........{(1+1)*(1+1+1)+1}*(1+1)............8</CMP>
+    </assertion><assertion class="example">
+      <CMP> 15.........{(1+1)*(1+1)+1}*(1+1+1)............8</CMP>
+    </assertion><assertion class="example">
+      <CMP> 16.........(1+1)*(1+1)*(1+1)*(1+1)............8</CMP>
+    </assertion><assertion class="example">
+      <CMP> 17........(1+1)*(1+1)*(1+1)*(1+1)+1...........9</CMP>
+    </assertion><assertion class="example">
+      <CMP> 18..........(1+1)*(1+1+1)*(1+1+1).............8</CMP>
+    </assertion><assertion class="example">
+      <CMP> 19.........(1+1)*(1+1+1)*(1+1+1)+1............9</CMP>
+    </assertion><assertion class="example">
+      <CMP> 20........{(1+1+1)*(1+1+1)+1}*(1+1)...........9</CMP>
+    </assertion><assertion class="example">
+      <CMP> 21........{(1+1)*(1+1+1)+1}*(1+1+1)...........9</CMP>
+    </assertion><assertion class="example">
+      <CMP> 22.......{(1+1)*(1+1+1)+1}*(1+1+1)+1..........10</CMP>
+    </assertion><assertion class="example">
+      <CMP> 23......{(1+1)*(1+1+1)+1}*(1+1+1)+1+1.........11</CMP>
+    </assertion><assertion class="example">
+      <CMP> 24........(1+1)*(1+1)*(1+1)*(1+1+1)...........9</CMP>
+    </assertion><assertion class="example">
+      <CMP> 25.......(1+1)*(1+1)*(1+1)*(1+1+1)+1..........10</CMP>
+    </assertion><assertion class="example">
+      <CMP> 26......{(1+1)*(1+1)*(1+1+1)+1}*(1+1).........10</CMP>
+    </assertion><assertion class="example">
+      <CMP> 27.........(1+1+1)*(1+1+1)*(1+1+1)............9</CMP>
+    </assertion><assertion class="example">
+      <CMP> 28........(1+1+1)*(1+1+1)*(1+1+1)+1...........10</CMP>
+    </assertion><assertion class="example">
+      <CMP> 29.......(1+1+1)*(1+1+1)*(1+1+1)+1+1..........11</CMP>
+    </assertion><assertion class="example">
+      <CMP> 30.......{(1+1+1)*(1+1+1)+1}*(1+1+1)..........10</CMP>
+    </assertion><assertion class="example">
+      <CMP> 31......{(1+1+1)*(1+1+1)+1}*(1+1+1)+1.........11</CMP>
+    </assertion><assertion class="example">
+      <CMP> 32......(1+1)*(1+1)*(1+1)*(1+1)*(1+1).........10</CMP>
+    </assertion><assertion class="example">
+      <CMP> 33.....(1+1)*(1+1)*(1+1)*(1+1)*(1+1)+1........11</CMP>
+    </assertion><assertion class="example">
+      <CMP> 34...{(1+1)*(1+1)*(1+1)*(1+1)+1}*(1+1)........11</CMP>
+    </assertion><assertion class="example">
+      <CMP> ................................................</CMP>
+    </assertion><assertion class="example">
+      <CMP> (End)</CMP>
+    </assertion><omtext class="maple">
+      <CMP> with(numtheory):</CMP>
+    </omtext><omtext class="maple">
+      <CMP> a:= proc(n) option remember;</CMP>
+    </omtext><omtext class="maple">
+      <CMP>       `if`(n=1, 1, min(seq(a(i)+a(n-i), i=1..n/2),</CMP>
+    </omtext><omtext class="maple">
+      <CMP>        seq(a(d)+a(n/d), d=divisors(n) minus {1, n})))</CMP>
+    </omtext><omtext class="maple">
+      <CMP>     end:</CMP>
+    </omtext><omtext class="maple">
+      <CMP> seq(a(n), n=1..100); # _Alois P. Heinz_, Apr 18 2012</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> a[n_] := a[n] = If[n == 1, 1, Min [Sequence @@ Table [a[i] + a[n-i], {i, 1, n/2}], Sequence @@ Table[a[d] + a[n/d], {d, Divisors[n] ~Complement~ {1, n}}]]]; Table[a[n], {n, 1, 100}] (* _Jean-François Alcover_, Dec 12 2013, after _Alois P. Heinz_ *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI, from _M. F. Hasler_, Jan 30 2008) A005245(n /* start by calling this with the largest needed n */, lim/* see below */) = { local(d); n&lt;6&amp;return(n);</CMP>
+    </omtext><omtext class="program">
+      <CMP> if(n&lt;=#A05245, A05245[n]&amp;return(A05245[n]) /* return memoized result if available */,</CMP>
+    </omtext><omtext class="program">
+      <CMP> A05245=vector(n) /*create vector if needed - should better re-use exiting data if available */);</CMP>
+    </omtext><omtext class="program">
+      <CMP> for(i=1, n-1, A05245[i] || A05245[i]=A005245(i,lim)); /* compute all previous elements */</CMP>
+    </omtext><omtext class="program">
+      <CMP> A05245[n]=min( vecmin(vector(min(n\2,if(lim&gt;0,lim,n)), k, A05245[k]+A05245[n-k])) /* additive possibilities - if lim&gt;0 is given, consider a(k)+a(n-k) only for k&lt;=lim - we know it is save to use lim=1 up to n=2e7 */, if( isprime(n), n, vecmin(vector((-1+#d=divisors(n))\2, i, A05245[d[i+1]]+A05245[d[ #d-i]]))/* multiplicative possibilities */))}</CMP>
+    </omtext><omtext class="program">
+      <CMP> See also the Python program by Tim Peters at A005421.</CMP>
+    </omtext><omtext class="program">
+      <CMP> (Haskell)</CMP>
+    </omtext><omtext class="program">
+      <CMP> import Data.List (genericIndex)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a005245 n = a005245_list `genericIndex` (n-1)</CMP>
+    </omtext><omtext class="program">
+      <CMP> a005245_list = 1 : f 2 [1] where</CMP>
+    </omtext><omtext class="program">
+      <CMP>    f x ys = y : f (x + 1) (y : ys) where</CMP>
+    </omtext><omtext class="program">
+      <CMP>      y = minimum $</CMP>
+    </omtext><omtext class="program">
+      <CMP>          (zipWith (+) (take (x `div` 2) ys) (reverse ys)) ++</CMP>
+    </omtext><omtext class="program">
+      <CMP>          (zipWith (+) (map a005245 $ tail $ a161906_row x)</CMP>
+    </omtext><omtext class="program">
+      <CMP>                       (map a005245 $ reverse $ init $ a161908_row x))</CMP>
+    </omtext><omtext class="program">
+      <CMP> -- _Reinhard Zumkeller_, Mar 08 2013</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A000792 (largest integer of given complexity), A003313, A076142, A076091, A061373, A005421, A064097, A005520, A025280, A003037, A161906, A161908.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,look</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_.</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _David W. Wilson_, May 15 1997</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

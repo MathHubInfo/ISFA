@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A046102.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A046102">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,3,7,24,31,179,389,9126,18641,46408,65049,111457,6195184,6306641,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 31421748,100571885,131993633,232565518,3620476403,3853041921,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 38297853692,80448749305,440541600217,3164239950824,3604781551041</CMP>
+    </assertion><omtext class="name">
+      <CMP> Denominators of convergents to the comma of Pythagoras.</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A046102/b046102.txt&quot;&gt;Table of n, a(n) for n=1..200&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> Eric Weisstein's World of Music, &lt;a href=&quot;http://www.ericweisstein.com/encyclopedias/music/CommaofPythagoras.html&quot;&gt;Comma of Pythagoras&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Sub(List(FuncR(SeqReference(A005663),ArgList(List(Var(&quot;n&quot;)))), FuncR(SeqReference(A005664),ArgList(List(Var(&quot;n&quot;)))), Var(&quot;T&quot;)))), Delim(.), Var(&quot;D&quot;), Delim(.), Name(Noe), Delim(,), Date(Oct 12 2007)))
+    </omdoc:p><omtext class="mathematica">
+      <CMP> Denominator[ Table[ ContinuedFraction[ Log[ 2 ]/Log[ 3/2 ], i ]//Normal, {i, 30} ] ]</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A005664.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,frac</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Eric W. Weisstein_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

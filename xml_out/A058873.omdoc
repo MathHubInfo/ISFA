@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A058873.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A058873">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,0,8,192,5120,192000,10938368,976453632,138258022400,31176435302400,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 11206367427166208,6420240819994755072,5860188449655027138560,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8518797083350691185950720,19715227484913090464294371328,72618853907514273117149186752512</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of 3-colored labeled graphs with n nodes.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A coloring of a simple graph is a choice of color for each graph vertex such that no two vertices sharing the same edge have the same color. A213442 counts those colorings of labeled graphs on n vertices that use exactly three colors. In this sequence, graph colorings that differ only by a permutation of the three colors are considered to be the same. Hence a(n) = 1/3!*A213442(n). [_Peter Bala_, Apr 12 2013]</CMP>
+    </omtext><omtext class="reference">
+      <CMP> F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, p. 18, Table 1.5.1.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. C. Read, &lt;a href=&quot;http://cms.math.ca/10.4153/CJM-1960-035-0&quot;&gt;The number of k-colored graphs on labelled nodes&lt;/a&gt;, Canad. J. Math., 12 (1960), 410-414.</CMP>
+    </omtext><omdoc:p class="formula">
+        <CMP>
+      Let <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="E" cd="A058873"/>
+      <OMV name="x"/>
+    </OMA>
+      <OMBIND>
+          <OMA>
+            <OMS name="sum" cd="arithmetics"/>
+              <OMA>
+                <OMS name="interval" cd="arithmetics"/>
+                  <OMA>
+      <OMS name="&gt;=" cd="arithmetic"/>
+      <OMV name="n"/>
+      <OMI>0</OMI>
+    </OMA>
+                  
+              </OMA>
+          </OMA>
+          <OMBVAR><OMV name="n"/></OMBVAR>
+        <OMA>
+          <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMV name="n"/>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMV name="n"/>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMA>
+      <OMS name="C" cd="A058873"/>
+      <OMV name="n"/><OMI>2</OMI>
+    </OMA>
+    </OMA></OMA>
+    </OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMI>1</OMI><OMV name="x"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>2</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>2</OMI>
+    </OMA><OMI>2</OMI></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+        </OMA>
+      </OMBIND>
+    </OMA>
+      </OMOBJ>.Then a generating function is <OMOBJ>
+        <OMA>
+      <OMS name="=" cd="arithmetic"/>
+      <OMA><OMS name="times"/><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMI>1</OMI><OMI>6</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMA>
+      <OMS name="minus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="E" cd="A058873"/>
+      <OMV name="x"/>
+    </OMA><OMI>1</OMI>
+    </OMA>
+      <OMI>3</OMI>
+    </OMA></OMA>
+      <OMA>
+      <OMS name="plus" cd="arithmetics"/>
+      <OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>8</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>3</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>3</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMI>3</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>192</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>4</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>4</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMI>6</OMI>
+    </OMA></OMA>
+    </OMA><OMA>
+      <OMS name="divide" cd="arithmetics"/>
+      <OMA><OMS name="times"/><OMI>5120</OMI><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMV name="x"/>
+      <OMI>5</OMI>
+    </OMA></OMA><OMA><OMS name="times"/><OMA>
+      <OMS name="factorial" cd="arithmetics"/>
+      <OMI>5</OMI>
+    </OMA><OMA>
+      <OMS name="power" cd="arithmetics"/>
+      <OMI>2</OMI>
+      <OMI>10</OMI>
+    </OMA></OMA>
+    </OMA><OMS name="..." cd="arithmetics"></OMS>
+    </OMA>
+    </OMA>
+      </OMOBJ>(see Read ).-_Peter Bala_ ,Apr 13 2013 
+    </CMP>
+    </omdoc:p><omtext class="mathematica">
+      <CMP> f[list_] := (Apply[Multinomial, list] * 2^((Total[list]^2-Total[Table[list[[i]]^2, {i, 1, Length[list]}]])/2))/3!; Table[Total[Map[f, Select[Compositions[n, 3], Count[#, 0]==0&amp;]]], {n, 1, 20}] (* _Geoffrey Critzer_, Oct 24 2011 *)</CMP>
+    </omtext><omtext class="program">
+      <CMP> (PARI)</CMP>
+    </omtext><omtext class="program">
+      <CMP> N=66;  x='x+O('x^N);</CMP>
+    </omtext><omtext class="program">
+      <CMP> E=sum(n=0, N, x^n/(n!*2^binomial(n,2)) );</CMP>
+    </omtext><omtext class="program">
+      <CMP> tgf=(E-1)^3/6;  v=concat([0,0], Vec(tgf));</CMP>
+    </omtext><omtext class="program">
+      <CMP> v=vector(#v, n, v[n] * n! * 2^(n*(n-1)/2) )</CMP>
+    </omtext><omtext class="program">
+      <CMP> /* _Joerg Arndt_, Apr 14 2013 */</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> A diagonal of A058843. A213442.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,3</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_, Jan 07 2001</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

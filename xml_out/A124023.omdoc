@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A124023.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A124023">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,10,28,108,344,1224,4080,14128,47840,164128,558784,1910976,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6518144,22267008,75998976,259527424,885980672,3025129984,10328034304,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 35262925824,120393537536,411052492800,1403414507520,4791569821696,16359416717312,55854594334720</CMP>
+    </assertion><omtext class="name">
+      <CMP> G.f.: 1/(1-2*x-6*x^2+4*x^3).</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Rec#order_03&quot;&gt;Index to sequences with linear recurrences with constant coefficients&lt;/a&gt;, signature (2,6,-4).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> f[x_] = -4 + 6 x + 2 x^2 - x^3; g[x_] = ExpandAll[x^3*f[1/x]]; Table[ SeriesCoefficient[Series[x/(g[x]), {x, 0, 30}], n], {n, 0, 30}]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Roger L. Bagula_ and _Gary W. Adamson_, Oct 31 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited by _N. J. A. Sloane_, Nov 04 2006</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

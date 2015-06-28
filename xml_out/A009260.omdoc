@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A009260.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A009260">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,1,1,1,1,7,47,279,1343,5167,8671,150833,2436545,27945609,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 249528945,1993449433,10176663169,9028140255,1606374108095,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 31838140005407,482969577637247,6048738288194407,59264468409177327</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Expansion of exp(tanh(tan(x))).</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> Exp[ Tanh[ Tan[ x ] ]]</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> sign,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,6</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Extended with signs Mar 15 1997 by _Olivier Gérard_.</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

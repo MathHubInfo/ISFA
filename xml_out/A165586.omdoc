@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A165586.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A165586">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><assertion class="notsupported">
+      <CMP>Unexpected tag!</CMP>
+    </assertion><omtext class="name">
+      <CMP> Legendre symbol (n,514229).</CMP>
+    </omtext><omtext class="comment">
+      <CMP> 514229 is the 9th Fibonacci prime, A005478(9) = A000045(29).</CMP>
+    </omtext><omtext class="link">
+      <CMP> A. Karttunen, &lt;a href=&quot;/A165586/b165586.txt&quot;&gt;Table of n, a(n) for n = 0..514229&lt;/a&gt;</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Partial sums: A165587.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> sign,mult</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Antti Karttunen_, Sep 22 2009</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

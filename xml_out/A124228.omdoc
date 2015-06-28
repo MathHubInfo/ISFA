@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A124228.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A124228">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 0,1,0,2,0,6,4,10,8,20,16,32,32,58,60,96,104,162,180,260,296,416,480,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 650,760,1012,1184,1540,1816,2330,2752,3476,4112,5142,6080,7522,8896,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 10922,12900,15710,18536,22438,26432,31798,37400,44772,52560,62612</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of partitions of n with odd crank.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> For a partition p, let l(p) = largest part of p, w(p) = number of 1's in p, m(p) = number of parts of p larger than w(p). The crank of p is given by l(p) if w(p) = 0, otherwise m(p)-w(p).</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Div(List(Sub(List(FuncR(SeqReference(A000041),ArgList(List(Var(&quot;n&quot;)))), FuncR(SeqReference(A124226),ArgList(List(Var(&quot;n&quot;)))))), Num(2.0)))), Delim(.)))
+    </omdoc:p><omtext class="maple">
+      <CMP> A000041 := proc(n) combinat[numbpart](n) ; end: A124226 := proc(n) local x,gf,i ; gf := 1; for i from 1 to n+1 do gf := taylor(gf*(1-x^i)/(1+x^i)^2,x=0,n+1) ; od ; coeftayl(2*x+gf,x=0,n) ; end: A124228 := proc(n) (A000041(n)-A124226(n))/2 ; end: for n from 0 to 60 do printf(&quot;%a, &quot;,A124228(n)) ; od ; - _R. J. Mathar_, May 18 2007</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A124226, A124227.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,4</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Vladeta Jovovic_, Oct 20 2006</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _R. J. Mathar_, May 18 2007</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A107356.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A107356">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 2,2,1,4,4,2,2,1,4,2,3,6,2,6,4,2,1,2,8,4,4,2,3,6,6,5,4,10,8,4,2,1,4,6,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6,6,3,4,3,6,10,4,6,8,9,6,2,4,4,2,2,1,6,2,7,8,2,12,4,9,3,6,12,6,18,6,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 7,4,6,7,6,6,14,4,2,2,12,10,6,6,4,10,7,4,18,4,4,2,3,6,5,20,14,8,5,12,6,10</CMP>
+    </assertion><omtext class="name">
+      <CMP> Period of continued fraction for (1 + square root of n-th squarefree integer)/2.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> K. S. Williams and N. Buck, Comparison of the lengths of the continued fractions of sqrt(D) and 1+sqrt(D))/2, Proc. Amer. Math. Soc. 120 (1994) 995-1002.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. Knott, &lt;a href=&quot;http://www.mcs.surrey.ac.uk/Personal/R.Knott/Fibonacci/cfINTRO.html&quot;&gt;An Introduction to Continued Fractions&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),FuncR(SeqReference(A146326),ArgList(List(FuncR(SeqReference(A005117),ArgList(List(Add(List(Var(&quot;n&quot;), Num(1.0)))))))))), Delim(.), Delim([), Var(&quot;_R&quot;), Delim(.), Var(&quot;J&quot;), Delim(.), Name(Mathar_), Delim(,), Date(Sep 24 2009), Delim(])))
+    </omdoc:p><assertion class="example">
+      <CMP> a(7)=2 because 11 is the 7th smallest squarefree integer and (1 + sqrt 11)/2 = [2,6,3,6,3,6,3,... ] thus has an eventual period of 2. We omit 1 from the list of squarefree integers.</CMP>
+    </assertion><omtext class="mathematica">
+      <CMP> (* first do *) Needs[&quot;NumberTheory`NumberTheoryFunctions`&quot;] (* then *) s = Drop[ Select[ Range[162], SquareFreeQ[ # ] &amp;], 1]; Length[ ContinuedFraction[ # ][[2]]] &amp; /@ ((1 + Sqrt[s])/2) (from _Robert G. Wilson v_, May 27 2005)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A035015, A005117.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Steven Finch_, May 24 2005</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> More terms from _Robert G. Wilson v_, May 27 2005</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

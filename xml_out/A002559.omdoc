@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A002559.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A002559">
+          <assertion class="***** TTTT *****">
+      <CMP> M1432 N0566</CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,5,13,29,34,89,169,194,233,433,610,985,1325,1597,2897,4181,5741,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 6466,7561,9077,10946,14701,28657,33461,37666,43261,51641,62210,75025,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 96557,135137,195025,196418,294685,426389,499393,514229,646018,925765</CMP>
+    </assertion><omtext class="name">
+      <CMP> Markoff (or Markov) numbers: union of positive integers x, y, z satisfying x^2 + y^2 + z^2 = 3xyz.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> A004280 gives indices of Fibonacci numbers (A000045) which are also Markoff (or Markov) numbers.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> As mentioned by Conway and Guy, all odd-indexed Pell numbers (A001653) also appear in this sequence. The positions of the Fibonacci and Pell numbers in this sequence are given in A158381 and A158384, respectively. - _T. D. Noe_, Mar 19 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Assuming that each solution (x,y,z) is ordered x &lt;= y &lt;= z, the open problem is to prove that each z value occurs only once. There are no counterexamples in the first 1046858 terms, which have z values &lt; Fibonacci(5001) = 6.2763...*10^1044. - _T. D. Noe_, Mar 19 2009</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Zagier shows that there are C log^2 (3x) + O(log x log log x) Markoff numbers below x, for C = 0.18071704711507.... - _Charles R Greathouse IV_, Mar 14 2010</CMP>
+    </omtext><omtext class="comment">
+      <CMP> The odd numbers in this sequence are of the form 4k+1. - _Paul Muljadi_, Jan 31 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> All prime divisors of Markov numbers (with exception 2) are of the form 4k+1. - _Artur Jasinski_, Nov 20 2011</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Kaneko extends a parameterization of Markoff numbers, citing Frobenius, and relates it to a conjectured behavior of the elliptic modular j-function at real quadratic numbers. - _Jonathan Vos Post_, May 06 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Riedel (2012) claims a proof of the unicity conjecture: &quot;it will be shown that the largest member of [a Markoff] triple determines the other two uniquely.&quot; - _Jonathan Sondow_, Aug 21 2012</CMP>
+    </omtext><omtext class="comment">
+      <CMP> There are 93 terms with each term &lt;= 2*10^9 in the sequence. The number of distinct prime divisors of any of the first 93 terms is less than 6. The second, third, 4th, 5th, 6th, 10th, 11th, 15th, 16th, 18th, 20th, 24th, 25th, 27th, 30th, 36th, 38th, 45th, 48th, 49th, 69th, 79th, 81st, 86th, 91st terms are primes. - _Shanzhen Gao_, Sep 18 2013</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Bourgain, Gamburd, and Sarnak have announced a proof that almost all Markoff numbers are composite--see A256395. Equivalently, the prime Markoff numbers A178444 have density zero among all Markoff numbers. (It is conjectured that infinitely many Markoff numbers are prime.) - _Jonathan Sondow_, Apr 30 2015</CMP>
+    </omtext><omtext class="comment">
+      <CMP> According to Sarnak on 30 April 2015, all claims to have proved the unicity conjecture have turned out to be false. - _Jonathan Sondow_, May 01 2015</CMP>
+    </omtext><omtext class="reference">
+      <CMP> Aigner, Martin. Markov's theorem and 100 years of the uniqueness conjecture. A mathematical journey from irrational numbers to perfect matchings. Springer, 2013. x+257 pp. ISBN: 978-3-319-00887-5; 978-3-319-00888-2 MR3098784</CMP>
+    </omtext><omtext class="reference">
+      <CMP> J. H. Conway and R. K. Guy, The Book of Numbers, Copernicus Press, NY, 1996, p. 187.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. Descombes, Problemes d'approximation diophantienne. Enseignement Math. (2) 6 1960 18-26.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. K. Guy, Unsolved Problems in Number Theory, D12.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> G. H. Hardy and E. M. Wright, An Introduction to the Theory of Numbers, 5th ed., Oxford Univ. Press, 1979, notes on ch. 24.6 (p. 412)</CMP>
+    </omtext><omtext class="reference">
+      <CMP> R. A. Mollin, Advanced Number Theory with Applications, Chapman &amp; Hall/CRC, Boca Raton, 2010, 123-125.</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).</CMP>
+    </omtext><omtext class="reference">
+      <CMP> N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. D. Noe, &lt;a href=&quot;/A002559/b002559.txt&quot;&gt;Table of n, a(n) for n = 1..1000&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> T. Ace, &lt;a href=&quot;http://www.minortriad.com/markov.html&quot;&gt;Markov numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. K. Guy, &lt;a href=&quot;http://www.jstor.org/stable/2975688&quot;&gt;Don't try to solve these problems&lt;/a&gt;, Amer. Math. Monthly, 90 (1983), 35-41.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Masanobu Kaneko, &lt;a href=&quot;http://www.ams.org/amsmtgs/2190_abstracts/1078-11-124.pdf&quot;&gt;Congruences of Markoff numbers via Farey parametrization&lt;/a&gt;, Preliminary Report, Dec 2011, AMS 1078-11-124, listed in Abstracts of Papers Presented to AMS, Vol.33, No.2, Issue 168, Spring 2012.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. L. Lang &amp; S. P. Tan, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0508443&quot;&gt;A simple proof of the Markoff conjecture for prime powers&lt;/a&gt;, arXiv:math/0508443 [math.NT], 2005.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. L. Lang &amp; S. P. Tan, &lt;a href=&quot;http://www.math.nus.edu.sg/~mattansp/markoffconjectureprimepower.pdf&quot;&gt;A Simple Proof Of The Markoff Conjecture For Prime Powers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> J. Propp, &lt;a href=&quot;http://faculty.uml.edu/jpropp/markoff-talk.html&quot;&gt;The combinatorics of Markov numbers&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> N. Riedel, &lt;a href=&quot;http://arxiv.org/abs/1208.4032&quot;&gt;On the Markoff Equation&lt;/a&gt;, arXiv:1208.4032 [math.NT], 2012-2015.</CMP>
+    </omtext><omtext class="link">
+      <CMP> M. Waldschmidt, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0312440&quot;&gt;Open Diophantine problems&lt;/a&gt;, arXiv:math/0312440 [math.NT], 2003.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Don Zagier, &lt;a href=&quot;http://people.mpim-bonn.mpg.de/zagier/files/doi/10.2307/2007348/fulltext.pdf&quot;&gt;On the number of Markoff numbers below a given bound&lt;/a&gt;, Mathematics of Computation 39:160 (1982), pp. 709-723.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Y. Zhang, &lt;a href=&quot;http://arXiv.org/abs/math.NT/0606283&quot;&gt;An Elementary Proof of Markoff Conjecture for Prime Powers&lt;/a&gt;, arXiv:math/0606283 [math.NT], 2006-2007.</CMP>
+    </omtext><omtext class="link">
+      <CMP> Ying Zhang, &lt;a href=&quot;http://dx.doi.org/10.4064/aa128-3-7&quot;&gt;Congruence and uniqueness of certain Markov numbers&lt;/a&gt;, Acta Arithmetica 128 (2007), 295-301.</CMP>
+    </omtext><omtext class="mathematica">
+      <CMP> m = {1}; Do[x = m[[i]]; y = m[[j]]; a = (3*x*y + Sqrt[ -4*x^2 - 4*y^2 + 9*x^2*y^2])/2; b = (3*x*y + Sqrt[ -4*x^2 - 4*y^2 + 9*x^2*y^2])/2; If[ IntegerQ[a], m = Union[ Join[m, {a}]]]; If[ IntegerQ[b], m = Union[ Join[m, {b}]]], {n, 8}, {i, Length[m]}, {j, i}]; Take[m, 40] (* _Robert G. Wilson v_, Oct 05 2005 *)</CMP>
+    </omtext><assertion class="crossref">
+      <CMP> Cf. A178444, A256395.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,nice,easy</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _N. J. A. Sloane_ and _J. H. Conway_</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> Edited: name clarified. - _Wolfdieter Lang_, Jan 22 2015</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A141210.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A141210">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 1,2,1,4,3,4,7,6,10,9,12,11,20,24,25,19,18,34,45,60,49,30,29,56,78,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 115,126,121,45,44,86,123,190,231,286,225,67,66,130,189,300,385,528,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 555,484,97,96,190,279,450,595,858,1005,1144,900</CMP>
+    </assertion><omtext class="name">
+      <CMP> Triangle read by rows, A140207^2.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Left border of the triangle = A000070; right border = A001255.</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Power(SeqReference(A140207),Num(2.0)), Word(as), Word(an), Word(infinite), Word(lower), Word(triangular), Word(matrix), Delim(.)))
+    </omdoc:p><assertion class="example">
+      <CMP> First few rows of the triangle are:</CMP>
+    </assertion><assertion class="example">
+      <CMP> 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 2, 1;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 4, 3, 4;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 7, 6, 10, 9;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 12, 11, 20, 24, 25;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 19, 18, 34, 45, 60, 49;</CMP>
+    </assertion><assertion class="example">
+      <CMP> 30, 29, 56, 78, 115, 126, 121;</CMP>
+    </assertion><assertion class="example">
+      <CMP> ...</CMP>
+    </assertion><assertion class="crossref">
+      <CMP> Cf. A001255, A141211 (row sums), A140207, A000070.</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn,tabl</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,2</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Gary W. Adamson_ &amp; _Roger L. Bagula_, Jun 13 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

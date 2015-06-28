@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A238723.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A238723">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 8,42,336,1506,11440,48538,359456,1502622,10971288,45750856,331213056,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 1382740252,9956765976,41644596642,298827741680,1252006016638,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 8963172170592,37604588665246,268792589572384,1128862873230946</CMP>
+    </assertion><omtext class="name">
+      <CMP> Number of nX5 0..2 arrays with no element equal to the sum modulo 3 of elements to its left or elements above it</CMP>
+    </omtext><omtext class="comment">
+      <CMP> Column 5 of A238726</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. H. Hardin, &lt;a href=&quot;/A238723/b238723.txt&quot;&gt;Table of n, a(n) for n = 1..220&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Name(Empirical), Delim(:), Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Add(List(Sub(List(Add(List(Sub(List(Add(List(Sub(List(Add(List(Sub(List(Add(List(Sub(List(Add(List(Sub(List(Add(List(Sub(List(Add(List(Sub(List(Add(List(Sub(List(Mul(List(Num(167.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(2.0)))))))), Mul(List(Num(12737.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(4.0)))))))))), Mul(List(Num(590522.0), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(6.0)))))))))), Mul(List(Num(1.867496E7), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(8.0)))))))))), Mul(List(Num(4.28232709E8), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(10.0)))))))))), Mul(List(Num(7.384832953E9), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(12.0)))))))))), Mul(List(Num(9.7981999331E10), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(14.0)))))))))), Mul(List(Num(1.014383126841E12), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(16.0)))))))))), Mul(List(Num(8.257937387592E12), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(18.0)))))))))), Mul(List(Num(5.3002256526176E13), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(20.0)))))))))), Mul(List(Num(2.67655608403835E14), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(22.0)))))))))), Mul(List(Num(1.056157718233604E15), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(24.0)))))))))), Mul(List(Num(3.21619611326438E15), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(26.0)))))))))), Mul(List(Num(7.411332048725488E15), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(28.0)))))))))), Mul(List(Num(1.2543993016224416E16), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(30.0)))))))))), Mul(List(Num(1.4892794784221696E16), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(32.0)))))))))), Mul(List(Num(1.150343883839744E16), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(34.0)))))))))), Mul(List(Num(5.030303892805632E15), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(36.0)))))))))), Mul(List(Num(8.90642713919488E14), Func(a,ArgList(List(Sub(List(Var(&quot;n&quot;), Num(38.0)))))))))))))
+    </omdoc:p><assertion class="example">
+      <CMP> Some solutions for n=5</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..2..1..2..1....2..1..1..2..1....1..2..1..2..2....2..1..1..2..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..0..0..1..2....1..0..2..1..2....2..0..0..1..1....1..0..2..1..0</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..0..0..1..2....1..0..2..1..2....1..0..0..2..1....1..2..2..1..1</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..1..0..2..2..1....2..0..1..2..0....2..1..2..1..2....2..1..1..2..2</CMP>
+    </assertion><assertion class="example">
+      <CMP> ..2..0..1..1..2....1..0..2..2..1....1..2..1..2..1....1..2..1..2..1</CMP>
+    </assertion><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _R. H. Hardin_, Mar 03 2014</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

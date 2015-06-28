@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A089129.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A089129">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 7,2,1,2,1,2,1,14,1,2,1,2,1,2,7,2,1,2,1,2,1,14,1,2,1,2,1,2,7,2,1,2,1,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 2,1,14,1,2,1,2,1,2,7,2,1,2,1,2,1,14,1,2,1,2,1,2,7,2,1,2,1,2,1,14,1,2,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 1,2,1,2,7,2,1,2,1,2,1,14,1,2,1,2,1,2,7,2,1,2,1,2,1,14,1,2,1,2,1,2,7,2,1</CMP>
+    </assertion><omtext class="name">
+      <CMP> Greatest common divisor of n^2-7 and n^2+7.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> a(n) is the product of the periodic sequences [1,2]*[7,1,1,1,1,1,1].</CMP>
+    </omtext><omtext class="comment">
+      <CMP> [From _Gary Detlefs_, Apr 22 2011]</CMP>
+    </omtext><omtext class="link">
+      <CMP> Vincenzo Librandi, &lt;a href=&quot;/A089129/b089129.txt&quot;&gt;Table of n, a(n) for n = 0..1000&lt;/a&gt;</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Name(Contribution), Word(from), Name(_Gary), Name(Detlefs_), Delim(,), Date(Apr 22 2011), Delim(:), Delim((), Name(Start), Delim())))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Func(gcd,ArgList(List(Add(List(Var(&quot;n&quot;), Num(7.0))), Num(14.0)))))))
+    </omdoc:p><omdoc:p class="formula">
+        Sentence(List(Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Mul(List(Add(List(Mul(List(Num(6.0), Sub(List(Num(1.0), Modulo(Power(Var(&quot;n&quot;),Num(6.0)),Num(7.0)))))), Num(1.0))), Add(List(Modulo(Var(&quot;n&quot;),Num(2.0)), Num(1.0)))))), Delim(.), Delim((), Name(End), Delim())))
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI) g(n,k) = for(x=0,n,print1(gcd(x^k-7,x^k+7)&quot;,&quot;))</CMP>
+    </omtext><omtext class="program">
+      <CMP> (MAGMA) [Gcd(n^2+7,n^2-7): n in [0..100] ]; // Vincenzo Librandi, Apr 22 2011</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> easy,nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 0,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Cino Hilliard_, Dec 05 2003</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

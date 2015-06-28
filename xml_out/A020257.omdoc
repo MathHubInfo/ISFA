@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A020257.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A020257">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 15,49,133,481,931,6241,8911,9131,10963,11041,14191,17767,29341,56033,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 58969,68251,79003,83333,87061,88183,113527,130561,131407,164737,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 190861,197209,206981,210337,229633,244949,264223,269011,270943,347263,389777</CMP>
+    </assertion><omtext class="name">
+      <CMP> Strong pseudoprimes to base 31.</CMP>
+    </omtext><omtext class="link">
+      <CMP> R. J. Mathar, &lt;a href=&quot;/A020257/b020257.txt&quot;&gt;Table of n, a(n) for n = 1..698&lt;/a&gt;</CMP>
+    </omtext><omtext class="link">
+      <CMP> &lt;a href=&quot;/index/Ps#pseudoprimes&quot;&gt;Index entries for sequences related to pseudoprimes&lt;/a&gt;</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _David W. Wilson_</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<omdoc xml:id="A135286.omdoc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:omdoc="http://omdoc.org/ns" xmlns="http://omdoc.org/ns">
+        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+        <theory name="A135286">
+          <assertion class="***** TTTT *****">
+      <CMP></CMP>
+    </assertion><omtext class="starts-with">
+      <CMP> 20,46,160,352,940,1822,3670,5284,10510,11800,19192,22678,32590,37060,</CMP>
+    </omtext><assertion class="***** UUUU *****">
+      <CMP> 39430,52222,57868,73180,79834,97690,121522,176830,187084,213964,</CMP>
+    </assertion><assertion class="***** IIII *****">
+      <CMP> 273052,325498,360616,382564,412822,436408,656920,676510,686440,737044,778942,1041430,1066072,1103560,1128934,1193614,1328332,1514176,1634572,1665400,1696522,1743826,2040634,2109784,2197810,2215750</CMP>
+    </assertion><omtext class="name">
+      <CMP> Sum of staircase twin primes according to the rule: top * bottom + next top.</CMP>
+    </omtext><omtext class="comment">
+      <CMP> While there is multiplication in the generation of this sequence, it is still called a sum because the arithmetic processes -,*,/ are derived from addition.</CMP>
+    </omtext><omdoc:p class="formula">
+        Sentence(List(Word(We), Word(list), Word(the), Word(twin), Word(primes), Word(in), Word(staircase), Word(fashion), Word(as), Word(in), SeqReference(A135283), Delim(.), Name(Then), Equation(=,Func(a,ArgList(List(Var(&quot;n&quot;)))),Add(List(Mul(List(Func(tl,ArgList(List(Var(&quot;n&quot;)))), Func(tu,ArgList(List(Var(&quot;n&quot;)))))), Func(tl,ArgList(List(Add(List(Var(&quot;n&quot;), Num(1.0))))))))), Delim(.)))
+    </omdoc:p><omtext class="program">
+      <CMP> (PARI) g(n) = for(x=1,n,y=twinu(x) * twinl(x) + twinl(x+1);print1(y&quot;,&quot;)) twinl(n) = / *The n-th lower twin prime. */ { local(c,x); c=0; x=1; while(c&lt;n, if(ispseudoprime(prime(x)+2),c++); x++; ); return(prime(x-1)) } twinu(n) = /* The n-th upper twin prime. */ { local(c,x); c=0; x=1; while(c&lt;n, if(isprime(prime(x)+2),c++); x++; ); return(prime(x)) }</CMP>
+    </omtext><assertion class="keywords">
+      <CMP> nonn</CMP>
+    </assertion><assertion class="offset">
+      <CMP> 1,1</CMP>
+    </assertion><assertion class="author">
+      <CMP> _Cino Hilliard_, Dec 03 2007</CMP>
+    </assertion><assertion class="extensions">
+      <CMP> All the entries were wrong. They have been corrected by Franklin T. Adams-Watters, Apr 29 2008</CMP>
+    </assertion>
+        </theory>
+      </omdoc>

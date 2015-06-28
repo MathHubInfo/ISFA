@@ -8,7 +8,7 @@ import scala.util.matching.Regex.Match
 import scala.xml._
 
 object DocumentParser {
-  val dictionary = Source.fromFile("/home/enxhi/github/OEIS_1/src/main/resources/dictionary").getLines().toSet
+  val dictionary = Source.fromFile(getClass.getResource("/dictionary").getPath).getLines().toSet
 
   private val IDregex = "A\\d+".r
 
@@ -241,72 +241,11 @@ object DocumentParser {
   def formulaWrap(line : String, theory : String ) : Elem = {
     <omdoc:p class="formula">
         {TextParserIns.parseLine(line, theory) match {
-          case Some(a) => a.toNode(theory)
-          case None => <CMP>{line}</CMP>
+          case Some(a) =>/* a.toNode(theory)*/ a.toString
+          case None => /*<CMP>{line}</CMP>*/ line
           }
         }
     </omdoc:p>
-  }
-
-//  private def formulaWrapper(line : String, theory : String) : Elem = {
-//    val extracted = extractFormula(line)
-//    val res = (extracted._1.toArray, extracted._2.toArray)
-//    val formulaPosition = res._2
-//    val tokenizedLine = res._1
-//
-//    val omdoc : Elem =
-//      <CMP>
-//        {
-//        (0 to tokenizedLine.length - 1).map( i =>
-//        {
-//          if (formulaPosition.contains(i)) {
-//            val parse = formulaParser.parse(res._1(i), theory)
-//            parse match {
-//              case Some(expression) =>
-//                parsedFormulaWrap(expression, theory)
-//              case None => {
-//                tokenizedLine(i)
-//              }
-//            }
-//          } else {
-//            {tokenizedLine(i)}
-//          }
-//        })
-//        }
-//      </CMP>
-//
-//    val result  : Elem =
-//      <omdoc:p class="formula">
-//        {omdoc}
-//      </omdoc:p>
-//
-//    result
-//  }
-
-  def getFormulas(source : BufferedSource) : List[String] = {
-
-    val formula: List[(List[String], List[Int])] = source.getLines().toList.collect({
-      case line if line.length > 2 =>
-
-        val contentIndex: Option[Match] = IDregex.findFirstMatchIn(line)
-        val scalaerror  = line.substring(0,2) match{
-          case "%F" => extractFormula(line.substring(contentIndex.get.end))
-          case _ => Nil -> Nil
-        }
-
-        scalaerror
-
-    })
-
-
-    formula.map(pair =>{
-      pair._1.zipWithIndex.map({ case (word, index) =>
-        if (pair._2.contains(index))
-          "FORMULA " + word
-        else
-          word
-      })
-    }).flatten
   }
 
   def main(args : Array[String]) : Unit = {
