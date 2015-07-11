@@ -70,21 +70,6 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   }
 
 
-  def transformSignedTerm(base : Expression, expr : Expression) : Expression = {
-    (base, expr) match {
-      case (Add(e1), Adder(e2)) => Add(e1 :+ e2)
-      case (Add(e1), Subber(e2)) => Sub(Add(e1) :: e2 :: Nil)
-      case (Sub(e1), Adder(e2)) =>  Add(Sub(e1) :: e2 :: Nil)
-      case (Sub(e1), Subber(e2)) => Sub(e1 :+ e2)
-      //      case (Func(a,b), right) if a.equals("<=") => Func(a,ArgList(b.args.drop(1) :+ transformSignedTerm(b.args.last, right)))
-      case (e1, Subber(e2)) => Sub(e1 :: e2 :: Nil)
-      case (e1, Adder(e2)) => Add(e1 :: e2 :: Nil)
-      //      case (left, right) => Func("<=",ArgList(left :: right :: Nil))
-
-    }
-  }
-
-
   def addVar(variable : String, throwable : Boolean = true) = {
     if(functions.contains(variable)){
       if(throwable)
@@ -120,7 +105,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   val exceptionCases: Regex = List("G.f", "[A-Za-z]\\-th").mkString("|").r
 
   lazy val word: Regex = "[A-Za-z\\']+(?![\\(\\[\\{\\<\\=\\>])\\b".r
-  lazy val delim: Regex = "([\t\n\\.\\?\\!\\:\\;\\-\\=\\#\\[\\]\\,]|(\\/\\/)|(\\\\\\\\))".r
+  lazy val delim: Regex = "([\t\n\\.\\?\\!\\:\\;\\-\\=\\#\\*\\,\\/]|(\\/\\/)|(\\\\\\\\))".r
   lazy val month = "(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)"
 
   /*Month day year*/
@@ -224,16 +209,21 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       }
 
 
-  lazy val function: PackratParser[String] = not(number|mod)~>( "floor\\b".r | "ceiling\\b".r | "ceil\\b".r | "sqrt\\b".r | "log\\b".r | "sinh\\b".r |"sin\\b".r | "cosh\\b".r | "cos\\b".r |
-    "tan\\b".r |"tg\\b".r | "ctg\\b".r | "deg\\b".r | "binomial\\b".r | "numerator\\b".r | "exp\\b".r | "phi\\b".r | "If\\b" | "if\\b" | "[A-Za-z']+[A-Za-z_0-9']*(?=[\\(\\[\\{])\\b".r /*|
-    "\\w+(?=[\\(\\[\\{])\\b".r*/ /*| "[a-z_]{1}\\b(?!\\d)".r*/)
+  lazy val infix_ops = mod | element
+
+  lazy val no_bracket_function =  not(number|infix_ops)~>("floor\\b".r | "ceiling\\b".r | "ceil\\b".r | "sqrt\\b".r | "log\\b".r | "sinh\\b".r |"sin\\b".r | "cosh\\b".r | "cos\\b".r |
+    "tan\\b".r |"tg\\b".r | "ctg\\b".r | "deg\\b".r | "binomial\\b".r | "numerator\\b".r | "exp\\b".r | "phi\\b".r | "If\\b" | "if\\b")
+
+    // no mod (for modulo) because it is an infix operator so it shouldn't understand a mod b, as a*(mod(b))
+  lazy val function: PackratParser[String] = no_bracket_function | not(number|infix_ops) ~> "[A-Za-z']+[A-Za-z_0-9']*(?=[\\(\\[\\{])\\b".r
+
 
   lazy val constant: PackratParser[String] = "Pi\\b".r | "pi\\b".r | "infinity\\b".r | "infty\\b".r | "Infinity\\b".r | "Infty\\b".r |
     "Inf\\b".r | "inf\\b".r
 
   lazy val dots : PackratParser[String] = "..." | ".."
   lazy val reference : Regex = "A\\d{6}".r
-  lazy val variable : PackratParser[String] = not(mod)~>"\\w+\\d{0,1}\\b".r ^^ {x=>x}/*| "\\w+\\d+(?=\\()(?=\\))\\b".r*/
+  lazy val variable : PackratParser[String] = not(infix_ops)~>"\\w+\\d{0,1}\\b".r ^^ {x=>x}/*| "\\w+\\d+(?=\\()(?=\\))\\b".r*/
   lazy val number : Regex = """(\d+(\.\d+)?)""".r
   lazy val sum : PackratParser[String] = "SUM" | "Sum" | "sum" | "Product" | "product" | "PRODUCT" | "limit" | "Limit" | "lim" | "prod" | "Prod"
   lazy val comparison : PackratParser[(Expression,Expression) => Expression] = ("~" | "<>" | "<=" | ">=" | "==" | ">" | "=" | "<" | "->" | ":=" | "=:") ^^{
@@ -258,6 +248,14 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       }
     }
 
+  lazy val elem : PackratParser[String] = "element\\b".r | "in\\b".r
+  lazy val element : PackratParser[(Expression, Expression) => Expression] =
+    elem ^^ {
+      _ => (x:Expression, y:Expression) => (x,y) match {
+        case (x: Expression, y: Expression) => InSet(x,y)
+      }
+    }
+
   lazy val plusminus: PackratParser[(Expression,Expression) => Expression] =
     "+" ^^ {
       _ => (x:Expression, y:Expression) => (x,y) match {
@@ -273,7 +271,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       }
 
   lazy val multdiv: PackratParser[(Expression,Expression) => Expression] =
-    "(\\*)|(\\bX\\b)|(\\bx\\b)".r ^^{
+    "(\\*)|(\\bX\\b)".r ^^{
       _ => (x:Expression, y:Expression) => (x,y) match {
         case (x: Mul , y: Expression) => Mul(x.expr :+ y)
         case (x: Expression, y: Expression) => Mul(List(x, y))
@@ -294,7 +292,22 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       case expr~listexpr => expr
     }
 
+  lazy val expression_iters : PackratParser[Expression] =
+    (c_expression_iters~rep(comparison~c_expression_iters)) ^^ {
+      case expr~listexpr if listexpr.length != 0 =>
+        applyFunctionsInOrder( expr :: listexpr.map(_._2), listexpr.map(_._1) )
+      case expr~listexpr => expr
+    }
+
   lazy val c_expression : PackratParser[Expression] = signed_term~rep(sum_op) ^^ {
+    case (fctr : Expression)~(divs : List[((Expression,Expression)=>Expression,Expression)]) if divs.length !=0 =>
+      val (funcs, exprs) = divs.unzip
+      applyFunctionsInOrder(fctr :: exprs , funcs)
+
+    case (fctr)~(divs) => fctr
+  }
+
+  lazy val c_expression_iters : PackratParser[Expression] = signed_term~rep(sum_op_iters) ^^ {
     case (fctr : Expression)~(divs : List[((Expression,Expression)=>Expression,Expression)]) if divs.length !=0 =>
       val (funcs, exprs) = divs.unzip
       applyFunctionsInOrder(fctr :: exprs , funcs)
@@ -307,6 +320,23 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       case func~(fctr : Expression) => func->fctr
     } |
     divisible ~ term  ^^ {
+      case func ~ fctr => func -> fctr
+    } |
+    modulo ~ term ^^ {
+      case func ~ fctr => func -> fctr
+    } |
+    obracket ~> modulo ~ term <~ cbracket ^^ {
+      case func ~ fctr => func -> fctr
+    }
+
+  lazy val sum_op_iters : PackratParser[((Expression,Expression)=>Expression,Expression)] =
+    plusminus~term ^^ {
+      case func~(fctr : Expression) => func->fctr
+    } |
+    divisible ~ term  ^^ {
+      case func ~ fctr => func -> fctr
+    } |
+    element ~ term ^^ {
       case func ~ fctr => func -> fctr
     } |
     modulo ~ term ^^ {
@@ -351,27 +381,17 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
           case x: (((Expression, Expression) => Expression) ~ Expression) => x._1
           case x =>
             (x: Expression, y: Expression) => (x, y) match {
-              case (x: Var, y: ArgList) => {
-                addFunc(x.name)
-                Func(x.name, y)
-              }
-              //In case there is var(var) consider the first var to be a function
-              case (x: Var, y: Var) => {
-                if (variables.contains(x.name))
-                  Mul(x :: y :: Nil)
-                else {
+              case (x: Var, y: ArgList) => y match {
+                //In case there is var(var) consider the first var to be a function
+                case ArgList(List(Var(a))) =>
                   addFunc(x.name)
-                  Func(x.name, ArgList(List(y)))
-                }
+                  Func(x.name, y)
+                case ArgList(List(Num(a))) =>
+                  addFunc(x.name)
+                  Func(x.name, y)
+                case elsee =>
+                  Func(x.name, y)
               }
-              case (x: Var, y: Num) => //TODO: cant happen
-                addFunc(x.name)
-                Func(x.name, ArgList(List(y)))
-              case (x: Var, y: Expression) =>
-                if (variables.contains(x.name))
-                  Mul(x :: y :: Nil)
-                else
-                  Func(x.name, ArgList(List(y)))
               case (x: Mul, y: Expression) => Mul(x.expr :+ y)
               case (x: Expression, y: Expression) => Mul(List(x, y))
             }
@@ -402,7 +422,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       case x ~ "even" => Divisible(x,Num(2))
     } |
     factor~opt("!") ^^ {
-      case (a:Expression)~None => a
+      case (a:Expression)~ None => a
       case a ~ Some(b) => Factorial(a)
     }
 
@@ -430,27 +450,24 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
   lazy val argument : PackratParser[Expression] =
 
-      sum ~(opt("_")~>"{"~>expression)~(dots~>expression<~"}")~expression ^^{
+      sum ~(opt("_")~>obracket~>expression)~(dots~>expression<~cbracket)~expression ^^{
         case (iter : String)~(from )~(to : Expression)~(on : ArgList) => Iters(iter, Some(from), Some(to), on.args.head)
         case (iter : String)~(from )~(to : Expression)~(on : Expression) => Iters(iter, Some(from), Some(to), on)
       } |
-      sum ~(opt("_")~>"{"~>expression)~(dots~>expression)~(","~>expression<~"}")^^{
+      sum ~(opt("_")~>obracket~>expression)~(dots~>expression)~(","~>expression<~cbracket)^^{
         case (iter : String)~(from )~(to : Expression)~(on : ArgList) => Iters(iter, Some(from), Some(to), on.args.head)
         case (iter : String)~(from )~(to : Expression)~(on : Expression) => Iters(iter, Some(from), Some(to), on)
       } |
-      sum ~(opt("_")~>"{"~>expression<~"}")~opt("^"~>"{"~>expression<~"}")~(opt("(")~>expression<~opt(")")) ^^{
+      sum ~(opt("_")~>obracket~>expression<~cbracket)~opt("^"~>obracket~>expression<~cbracket)~(opt(obracket)~>expression<~opt(cbracket)) ^^{
         case (iter : String)~(from : Expression)~(e : Option[Expression])~(on : ArgList) =>
           Iters(iter,Some(from),e,on.args.head)
         case (iter : String)~(from : Expression)~(e : Option[Expression])~(on : Expression) =>
           Iters(iter,Some(from),e,on)
       } |
-      (sum)~(opt("_")~>"("~>expression)~(dots~>expression<~("," | ";"))~(expression<~")") ^^{
+      (sum)~(opt("_")~>obracket~>expression)~(dots~>expression<~("," | ";"))~(expression<~cbracket) ^^{
         case (iter : String)~(from )~(to : Expression)~(on : Expression) => Iters(iter, Some(from), Some(to), on)
       } |
-      (sum)~(opt("_")~>"{"~>expression<~("," | ";" | ":") )~(expression)~(dots~>expression<~"}") ^^{
-        case (iter : String)~(on )~(from : Expression)~(to : Expression) => Iters(iter, Some(from), Some(to), on)
-      } |
-      (sum)~(opt("_")~>"("~>expression<~("," | ";" | ":"))~(expression)~(dots~>expression<~")") ^^{
+      (sum)~(opt("_")~>obracket~>expression<~("," | ";" | ":") )~(expression)~(dots~>expression<~cbracket) ^^{
         case (iter : String)~(on )~(from : Expression)~(to : Expression) => Iters(iter, Some(from), Some(to), on)
       } |
       (sum)~(opt("_")~>"{"~>expression<~("," | ";" | ":"))~(expression<~"}")~(expression) ^^{
@@ -459,11 +476,11 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       (sum)~(opt("_")~>"{"~>expression<~("," | ";" | ":"))~(expression<~"}") ^^{
         case (iter : String)~(from )~(on : Expression) => Iters(iter, Some(from), None, on)
       } |
-      (sum)~(opt("_")~>(obracket~>expression<~cbracket))~opt(obracket~>expression<~cbracket) ^^{
+      (sum)~(opt("_")~>(obracket~>expression_iters<~cbracket))~opt(obracket~>expression<~cbracket) ^^{
         case (iter : String)~(on : Expression)~Some(expr) => Iters(iter, Some(on), None, expr)
         case (iter : String)~(on : Expression)~None => Iters(iter, None, None, on)
       } |
-      not(constant|reference)~>(function)~(not("^" | obracket)~>term_no_fact) ^^ {
+      not(constant|reference)~>(no_bracket_function)~(not("^" | obracket)~>term_no_fact) ^^ {
         case (a : String)~(b : ArgList)  =>
           if(variables.contains(a) && b.args.length == 1){
             Mul(List(Var(a), b.args.head))
@@ -507,24 +524,21 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       } |
       not(constant|reference)~>(function)<~(obracket~rep(",")~cbracket) ^^ {
         case (a : String) => Func(a, ArgList(Nil))
-      }
+      } |
+      obracket~cbracket ^^ {
+        case left~right => ArgList(Nil)
+      } |
       reference~argument ^^{
         case (ref : String)~(args : ArgList)  => FuncR(SeqReference(ref), args)
         case (ref : String)~(arg : Expression) => FuncR(SeqReference(ref), ArgList(arg::Nil))
       } |
-      "("~expression ~ rep("," ~> expression) <~opt(")") ^^ {
-        case "("~(expr1 : Expression)~(expr : List[Expression]) => ArgList(expr1::expr)
+      obracket~>expression ~ rep("," ~> expression) <~cbracket ^^ {
+        case (expr1 : Expression)~(expr : List[Expression]) => ArgList(expr1::expr)
       } |
-      "["~expression ~ rep("," ~> expression) <~opt("]") ^^ {
-        case "["~(expr1 : Expression)~(expr : List[Expression]) => ArgList(expr1::expr)
+      "|"~>expression <~ "|" ^^ {
+        case (expr : Expression) => Abs(expr)
       } |
-      "{"~expression ~ rep("," ~> expression) <~opt("}") ^^ {
-        case "{"~(expr1 : Expression)~(expr : List[Expression]) => ArgList(expr1::expr)
-      } |
-      "|"~expression ~ rep("," ~> expression) <~ "|" ^^ {
-        case "|"~(expr1 : Expression)~(expr : List[Expression]) => ArgList(expr1::expr)
-      } |
-      value ^^ {case x : Expression => x}
+      value ^^ { case x : Expression => x }
 
   lazy val value : PackratParser[Expression] =
     reference ^^ {x => SeqReference(x)}|
@@ -535,8 +549,6 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       } |
       "..." ^^ {x => ExtraSymbol("...")}
 
-
-
   def initSet() : Unit = {
     variables = variables.empty
     functions = functions.empty
@@ -544,19 +556,37 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
   def parse(line : String, theory : String = "") : Option[Expression] = {
     if(line.isEmpty){
-      return None
-    }
+       None
+    } else {
 
-    initSet()
-    calls += 1
-    try {
-      val parsed = parseAll(expression, line)
-      parsed.successful match {
-        case false => failFile.write(theory + "\t" + line+"\n"); None
-        case true => succeded +=1; successFile.write(theory + "\t" + line+"\n"); Some(postProcess(parsed.get))
+      initSet()
+      calls += 1
+      try {
+        val parsed = parseAll(expression, line)
+        parsed.successful match {
+          case false => failFile.write(theory + "\t" + line + "\n"); None
+          case true => succeded += 1; successFile.write(theory + "\t" + line + "\n"); Some(postProcess(parsed.get))
+        }
+      } catch {
+        case ex: Throwable => exceptions += 1; None
       }
-    }catch{
-      case ex : Throwable => exceptions += 1; None
+    }
+  }
+
+  def parseQuery(line : String, theory : String = "") : Option[String] = {
+    if(line.isEmpty){
+      None
+    }else{
+      initSet()
+      try{
+        val parsed = parseAll(expression, line)
+        parsed.successful match {
+          case false => None
+          case true => Some(parsed.get.toNode(theory).toString())
+        }
+      } catch {
+        case ex : Throwable => None
+      }
     }
   }
 
@@ -565,7 +595,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
 object FormulaParserInst extends FormulaParser{
   def main(args : Array[String]): Unit = {
-    val test = "T(x)(x+3)"
+    val test = "q = exp(2 Pi)"
     println("input : "+ test)
     println(parse(expression, test))
 

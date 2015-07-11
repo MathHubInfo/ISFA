@@ -32,23 +32,22 @@ object DocumentParser {
     (IDregex findAllIn  line).toList
   }
 
-  def fromReaderToXML(source : BufferedSource) : Elem = {
+  def addHeaders(xml : List[Elem], theory : String) : Elem = {
+    <omdoc xmlns="http://omdoc.org/ns" xmlns:omdoc="http://omdoc.org/ns" xmlns:html="http://www.w3.org/1999/xhtml" xml:id={theory+".omdoc"}>
+      <!--This OMDoc file is generated from an OEIS entry, do not edit-->
+      <theory name={theory}>
+        {xml}
+      </theory>
+    </omdoc>
+  }
 
-    def addHeaders(xml : List[Elem], theory : String) : Elem = {
-      <omdoc xmlns="http://omdoc.org/ns" xmlns:omdoc="http://omdoc.org/ns" xmlns:html="http://www.w3.org/1999/xhtml" xml:id={theory+".omdoc"}>
-        <!--This OMDoc file is generated from an OEIS entry, do not edit-->
-        <theory name={theory}>
-          {xml}
-        </theory>
-      </omdoc>
-    }
+  def omdocWrapperCMP(xclass : String, cmpval : String) = omtext(xclass, cmpval)
+  def omdocWrapperAs(xclass : String, cmpval : String) = assertion(xclass, cmpval)
 
-    def omdocWrapperCMP(xclass : String, cmpval : String) = omtext(xclass, cmpval)
-    def omdocWrapperAs(xclass : String, cmpval : String) = assertion(xclass, cmpval)
-
+  def parseLines(documentLines : List[String] ) : Elem = {
     var theory : Option[String] = None
 
-    val xml: List[Any] = source.getLines().toList.collect({
+    val xml: List[Any] = documentLines.collect({
       case line if line.length > 2 =>
         val contentIndex: Option[Match] = IDregex.findFirstMatchIn(line)
 
@@ -80,8 +79,15 @@ object DocumentParser {
         }
     })
 
-
     addHeaders(xml collect {case a : Elem => a}, theory.get)
+  }
+
+  def fromReaderToXML(source : BufferedSource) : Elem = {
+    parseLines(source.getLines().toList)
+  }
+
+  def parseDocument(document : String) : String = {
+    parseLines(document.lines.toList).toString
   }
 
 
@@ -241,8 +247,8 @@ object DocumentParser {
   def formulaWrap(line : String, theory : String ) : Elem = {
     <omdoc:p class="formula">
         {TextParserIns.parseLine(line, theory) match {
-          case Some(a) =>/* a.toNode(theory)*/ a.toString
-          case None => /*<CMP>{line}</CMP>*/ line
+          case Some(a) => a.toNode(theory)
+          case None => <CMP>{line}</CMP>
           }
         }
     </omdoc:p>

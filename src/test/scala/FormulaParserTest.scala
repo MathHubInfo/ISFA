@@ -149,10 +149,10 @@ class FormulaParserTest extends FlatSpec{
     assert(parsed == result16)
   }
 
-  expr17 should "be parsed to" in{
-    val parsed = formulaParser.parse(expr17).get
-    assert(parsed == result17)
-  }
+//  expr17 should "be parsed to" in{
+//    val parsed = formulaParser.parse(expr17).get
+//    assert(parsed == result17)
+//  }
 
   expr18 should "be parsed to" in{
     val parsed = formulaParser.parse(expr18).get

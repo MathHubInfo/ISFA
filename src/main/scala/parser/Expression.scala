@@ -105,10 +105,13 @@ case class Neg(expr : Expression) extends Expression{
 case class Func(name : String, args : ArgList) extends Expression{
   def present : String = name + args.toString
   def toNode(implicit theory : String) : Elem =
-    <OMA>
-      <OMS name={name} cd={theory}/>
-      {args.args.map(_.toNode)}
-    </OMA>
+    if(args.args.nonEmpty) {
+      <OMA>
+        <OMS name={name} cd={theory}/>{args.args.map(_.toNode)}
+      </OMA>
+    }else{
+      <OMS name={name} cd="arithmetic"/>
+    } //TODO : the last one is "function()" like phi(), fix it
   def clear : Expression = this
 }
 case class FuncR(seq : SeqReference, args : ArgList) extends Expression{
@@ -145,34 +148,61 @@ case class SeqReference(seq : String) extends Expression{
 case class Iters(name : String, from : Option[Expression], to : Option[Expression], on : Expression) extends Expression{
   def present : String =
     name + "_{"+(if(from.isEmpty) "" else from.get.toString)+"}^{"+(if(to.isEmpty) "" else to.get.toString)+"}("+on.toString+")"
-  def toNode(implicit theory : String) : Elem =
-      <OMBIND>
+  def toNode(implicit theory : String) : Elem = {
+      val regular =
+        <OMBIND>
           <OMA>
             <OMS name={name} cd="arithmetics"/>
-              <OMA>
-                <OMS name="interval" cd="arithmetics"/>
-                  {if(from.nonEmpty) {
-                      from.get.toNode
-                    }
-                  }
-                  {if(to.nonEmpty) {
-                      to.get.toNode
-                    }
-                  }
-              </OMA>
+            <OMA>
+              <OMS name="interval" cd="arithmetics"/>
+              {if(from.nonEmpty) {
+              from.get.toNode
+            }
+              }
+              {if(to.nonEmpty) {
+              to.get.toNode
+            }
+              }
+            </OMA>
           </OMA>
           {if(from.nonEmpty) {
-              from.get match {
-                case Equation(eq, Var(a), rest) =>
-                  <OMBVAR>{ Var(a).toNode }</OMBVAR>
-                case _ => ""
-              }
-            }
+          from.get match {
+            case Equation(eq, Var(a), rest) =>
+              <OMBVAR>{ Var(a).toNode }</OMBVAR>
+            case _ => ""
           }
-        <OMA>
-          {on.toNode}
-        </OMA>
-      </OMBIND>
+        }
+          }
+          <OMA>
+            {on.toNode}
+          </OMA>
+        </OMBIND>
+      if(from.nonEmpty){
+        from.get match {
+          case exp : InSet =>
+            <OMBIND>
+              <OMA>
+                <OMS name={name} cd="arithmetics"/>
+              </OMA>
+              {
+              exp match {
+                case InSet(variable, set) =>
+                  <OMBVAR>{ variable }</OMBVAR>
+                  set.toNode
+               }
+              }
+              <OMA>
+                {on.toNode}
+              </OMA>
+            </OMBIND>
+          case _ => regular
+        }
+      }else{
+        regular
+      }
+  }
+
+
   def clear : Expression = this
 }
 case class Factorial(expr : Expression) extends Expression{
@@ -199,18 +229,28 @@ case class Equation(comparison : String, left : Expression, right : Expression) 
 case class Modulo(base : Expression, modulo : Expression) extends Expression {
   def present : String = base.toString + " mod " + modulo.toString
   def toNode(implicit theory : String) =
-    <OMA></OMA>
+    Func("mod", ArgList(base::modulo::Nil)).toNode
+
   def clear : Expression = this
 }
 
-//
-case class Adder(expr : Expression) extends Expression{
-  def present : String = expr.toString
-  def toNode(implicit theory : String) = <p></p>
-  def clear : Expression = expr
+case class InSet(element : Expression, set : Expression) extends Expression{
+  def present : String = element.toString + " in " + set.toString
+  def toNode(implicit theory : String) =
+      <OMA>
+        <OMBVAR>{ element.toNode }</OMBVAR>
+        {set.toNode}
+      </OMA>
+
+  def clear : Expression = this
 }
-case class Subber(expr : Expression) extends Expression{
-  def present : String = expr.toString
-  def toNode(implicit theory : String) = <p></p>
-  def clear : Expression = Neg(expr)
+
+case class KSet(name : String) extends Expression{
+  def present : String = name
+  def toNode(implicit theory : String) =
+    <OMA>
+      <OMS name="in" cd="arithmetic" />
+      <OMS name={name} cd="arithmetic"/>
+    </OMA>
+  def clear : Expression = this
 }

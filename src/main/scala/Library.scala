@@ -103,7 +103,7 @@ object Library {
   }
 
   def writeXML(xml : Elem, theory : String) = {
-    XML.save("xml_test_paper/" + theory +".omdoc", xml, "UTF-8", true, null)
+    XML.save("xml_out/" + theory +".omdoc", xml, "UTF-8", true, null)
   }
 
   def writeFormula(formulas : List[String], theory : String) : Unit = {
@@ -115,18 +115,19 @@ object Library {
   def main(args : Array[String]) = {
 //    crawlXMLLocal(1, 3000)
     println(Calendar.getInstance().getTime())
-    val documents = 20
-    val max = 245000
+    val documents = 5000
+    val max = 265000
     val scriptPath = "logs/copyScript"
     val file = new File(scriptPath)
     val rndm = new Random()
-    1 to documents foreach { x =>
-      val n = rndm.nextInt(max) + 1
-      val theory = createID(n.toString)
-      printToFile(file)( p => "cp ../../oeis/source/oeis_omdoc/" + theory + " ../source/" )
-      crawlXMLLocal(n,n)
-    }
+//    1 to documents foreach { x =>
+//      val n = rndm.nextInt(max) + 1
+//      val theory = createID(n.toString)
+//      printToFile(file)( p => "cp ../../oeis/source/oeis_omdoc/" + theory + " ../source/" )
+//      crawlXMLLocal(n,n)
+//    }
 
+    crawlXMLLocal(53692, 53692)
     println(TextParserIns.succeded)
     println(TextParserIns.calls)
     println(TextParserIns.exceptions)

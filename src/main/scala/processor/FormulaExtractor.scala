@@ -129,9 +129,9 @@ class TextParser extends FormulaParser {
 object TextParserIns extends TextParser{
 
   def main(args : Array[String]): Unit = {
-    val test = " Euler transform of period 8 sequence [ 1, -1, 1, 0, 1, -1, 1, -2, ...]."
+    val test = "a(x)+3"
     println("input : "+ test)
-    println(parseAll(sentence, test))
+    println(parseAll(expression, test).get.toNode("A00000").toString)
   }
 
 }

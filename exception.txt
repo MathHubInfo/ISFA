@@ -1,0 +1,374 @@
+A000464	 a(n)=(-1)^n*L(X,-2n+1) where L(X,z) is the Dirichlet L-function L(X,z)=sum(k=1,infty,X(k)/k^z) and where X(k) is the Dirichlet character Legendre(k,2) which begins 1,0,-1,0,-1,0,1,0,1,0,-1,0,-1,0,1,0,1,0,-1,0.... - _Benoit Cloitre_, Mar 22 2009
+A002061	 a(n) = Det[Transpose[{{-1, 1}, {0, -1}}] - n {{-1, 1}, {0, -1}}]. - _Artur Jasinski_, Mar 31 2008
+A002083	 a(n)=sum(K(n-k+1, k)*a(n - k),k=1..n), where K(n,k) = 1 if 0 <= k AND k <= n and K(n,k)=0 else. (Several arguments to the K-coefficient K(n,k) can lead to the same sequence. For example, we get A002083 also from a(n)=sum(K((n - k)!,k!)*a(n - k),k=1..n), where K(n,k) = 1 if 0 <= k <= n and 0 else. See also the comment to a similar formula for A002487.) - _Thomas Wieder_, Jan 13 2008
+A002143	 h(-p) = 1 + 2*sum(0 <= n <= (1/2)*sqrt(p/3)-1, d(n^2+n+(p+1)/4, [2*n+1, sqrt(n^2+n+(p+1)/4)])) for prime p=3 mod 4, p>3. d(n, [a, b])=card{d: d|n and a<d<b} for integer n and real a, b. - Antonio G. Astudillo (afg_astudillo(AT)hotmail.com), Jul 19 2002
+A003130	 a(n) = A003128(n) + 2 * A003129(n) + U(n) where U(n) = sum(u(n) * Stirling2(n, k), k=2..n) and u(n) = (20(n)_4 + 10(n)_5 + (n)_6) / 8 where (n)_k = n * (n - 1) * ... * (n - k + 1) denotes the falling factorial. - _Sean A. Irvine_, Feb 03 2015
+A003707	 a(n) = sum((-1)^(k+1)evenp(n+k), k=1,n, (-1)^((n+k)/2)/k*sum(j=k,n, j!/n!*stirling2(n,j)*2^(n-j)*(-1)^(n+j-k)*binomial(j-1,k-1)), n>0 [_Vladimir Kruchinin_, Aug 18 2010]
+A005814	 Linear differential equation satisfied by F(t)=Sum a(n) t^n/(2n)!: {F(0) = 1, - 3*t*(10*t^2 + 9*t^6 + 18*t^4 - 8 + t^10 - 6*t^8)*( - 2 - 2*t^2 + t^4)*(diff(F(t), t)) + 9*t^4*( - 2 - 2*t^2 + t^4)^2*(diff(F(t), `$`(t, 2))) + t^2*( - 2 - 2*t^2 + t^4)*(24*t^6 - 10*t^8 - 4*t^4 - 44*t^2 + t^10 - 48)*F(t)}. - _Marni Mishna_, Jun 17 2005 [Probably this defines A005814? - _N. J. A. Sloane_]
+A007953	 a(0) = 0, a(10n+i) = a(n) + i 0 <= i <= 9; a(n) = n - 9*(sum(k > 0,  floor(n/10^k)) = n - 9*A054899(n). - _Benoit Cloitre_, Dec 19 2002
+A008277	 With P(n) = the number of integer partitions of n, p(i) = the number of parts of the i-th partition of n, d(i) = the number of different parts of the i-th partition of n, p(j, i) = the j-th part of the i-th partition of n, m(i, j) = multiplicity of the j-th part of the i-th partition of n, sum_[p(i)=m]_{i=1}^{P(n)} = sum running from i=1 to i=p(n) but taking only partitions with p(i)=m parts into account, prod_{j=1}^{p(i)} = product running from j=1 to j=p(i), prod_{j=1}^{d(i)} = product running from j=1 to j=d(i) one has S2(n, m) = sum_[p(i)=m]_{i=1}^{P(n)} (n!/prod_{j=1}^{p(i)} p(i, j)!) (1/prod_{j=1}^{d(i)} m(i, j)!). For example, S2(6, 3) = 90 because n=6 has the following partitions with m=3 parts: (114), (123), (222). Their complexions are: (114): (6!/1!*1!*4!)*(1/2!*1!) = 15, (123): (6!/1!*2!*3!)*(1/1!*1!*1!) = 60, (222): (6!/2!*2!*2!)*(1/3!) = 15. The sum of the complexions is 15+60+15=90=S2(6, 3). - _Thomas Wieder_, Jun 02 2005
+A008297	 If L_n(y)=Sum_{k=0..n} |a(n, k)|*y^k (a Lah polynomial) then e.g.f. for L_n(y) is exp(x*y/(1-x)) - _Vladeta Jovovic_, Jan 06 2001
+A008307	 T(n+1, k) = Sum_{d|k} (n)_{d-1}*T(n-d+1, k), where (n)_i = n*(n-1)*(n-2)*...*(n-i+1).
+A013643	 The general form of these numbers is d = d(m, n) = a^2 + 4mn + 1, where m and n are positive integers and a = a(m, n) = (4m^2 + 1)n + m, for which the continued fraction expansion of sqrt(d) is [a;[2m, 2m, 2a]]. - _David Terr_, Jul 20 2004
+A015716	 G.f.: G=G(t,x)=product(1+x^j, j=1..infinity)*sum(t^i*x^i/(1+x^i), i=1..infinity). - _Emeric Deutsch_, Mar 29 2006
+A028412	 T(n, m) = Sum[i_1>=0, Sum[i_2>=0, ... Sum[i_m>=0, C(n-i_m, i_1)*C(n-i_1, i_2)*C(n-i_2, i_3)*...*C(n-i_{m-1}, i_m) ] ... ]].
+A030981	 Sum((-1)^(n-k)*2^(n-k)*binomial(n, k)*binomial(3*k, k-1), k=1..n)/n; G.f. satisfies z A^3 + 3 z A^2 + z A - A + z = 0
+A033282	 G.f. G=G(t, z) satisfies (1+t)G^2 - z(1-z-2tz)G + tz^4 = 0.
+A036355	 T(n, m)=T'(n-1, m-1)+T'(n-2, m-2)+T'(n-1, m)+T'(n-2, m), where T'(n, m)=T(n, m) if 0<=m<=n and n >= 0 and T'(n, m)=0 otherwise. Initial term T(0, 0)=1.
+A037027	 T(n, m) = T'(n-1, m)+T'(n-2, m)+T'(n-1, m-1), where T'(n, m) = T(n, m) for n >= 0 and 0< = m< = n and T'(n, m) = 0 otherwise.
+A037093	 a(n) := Sum(bit_n(A000045(n+i), i)*(2^i), i=0..inf) [ bit_n := (x, n) -> `mod`(floor(x/(2^n)), 2); ]
+A037094	 a(n) := Sum(bit_n(A000032(n+i), i)*(2^i), i=0..inf) [ bit_n := (x, n) -> `mod`(floor(x/(2^n)), 2); ]
+A037095	 a(n) := Sum(bit_n(A000244(n-i), i)*(2^i), i=0..(n-1)) [ bit_n := (x, n) -> `mod`(floor(x/(2^n)), 2); ]
+A039699	 1, 0, 8, 0, 168, 0, 5120... has e.g.f.=BesselI[ 0, 2x ]^4 (BesselI=modified Bessel function of first kind).
+A049397	 a(n) = (25^n*(9/5)_n)/n!, where the rising factorial (c)_n = Gamma(c+n)/Gamma(c). - _Todd Silvestri_, Dec 17 2014. See the a(n) formula above.
+A053737	 a(0)=0, a(4n+i)=a(n)+i 0<=i<=3; a(n)=n-3*(sum(k>0, floor(n/4^k))=n-3*A054893(n). - _Benoit Cloitre_, Dec 19 2002
+A053824	 a(0)=0, a(5n+i)=a(n)+i 0<=i<=4; a(n)=n-4*(sum(k>0, floor(n/5^k))=n-4*A027868(n). - _Benoit Cloitre_, Dec 19 2002
+A053827	 a(0)=0, a(6n+i)=a(n)+i 0<=i<=5; a(n)=n-5*(sum(k>0, floor(n/6^k))=n-5*A054895(n). - _Benoit Cloitre_, Dec 19 2002
+A053828	 a(0)=0, a(7n+i)=a(n)+i 0<=i<=6; a(n)=n-6*(sum(k>0, floor(n/7^k))=n-6*A054896(n). - _Benoit Cloitre_, Dec 19 2002
+A053829	 a(0)=0, a(8n+i)=a(n)+i 0<=i<=7; a(n)=n-7*(sum(k>0, floor(n/8^k))=n-7*A054897(n). - _Benoit Cloitre_, Dec 19 2002
+A053830	 a(0)=0, a(9n+i)=a(n)+i 0<=i<=8; a(n)=n-8*(sum(k>0, floor(n/9^k))=n-8*A054898(n). - _Benoit Cloitre_, Dec 19 2002
+A053831	 a(0)=0, then a(11n+i)=a(n)+i 0<=i<=10; a(n)=n-(m-1)*(sum(k>0, floor(n/m^k))=n-(m-1)*A064458 (n). - _Benoit Cloitre_, Dec 19 2002
+A053832	 a(0)=0, a(12n+i)=a(n)+i 0<=i<=11; a(n)=n-11*(sum(k>0, floor(n/12^k))=n-11*A064459(n). - _Benoit Cloitre_, Dec 19 2002
+A053833	 a(0)=0, a(13n+i)=a(n)+i 0<=i<=12; a(n)=n-12*(sum(k>0, floor(n/13^k)). - _Benoit Cloitre_, Dec 19 2002
+A053834	 a(0)=0, a(14n+i)=a(n)+i 0<=i<=13; a(n)=n-13*(sum(k>0, floor(n/14^k)). - _Benoit Cloitre_, Dec 19 2002
+A053835	 a(0)=0, a(15n+i)=a(n)+i 0<=i<=14; a(n)=n-14*(sum(k>0, floor(n/15^k)). - _Benoit Cloitre_, Dec 19 2002
+A053836	 a(0)=0, a(16*n+i)=a(n)+i 0<=i<=15; a(n)=n-15*(sum(k>0, floor(n/16^k)). - _Benoit Cloitre_, Dec 19 2002
+A058183	 a(n) ~ n log_10 n + O(n). In particular lim inf (n log_10 n - a(n))/n = (1+log(10/9)+log(log(10)))/log(10) and the corresponding lim sup is 10/9. - _Charles R Greathouse IV_, Sep 19 2012
+A059081	 a(n) = (1/5!)*([32]_n - 20*[24]_n + 60*[20]_n + 20*[18]_n + 10*[17]_n - 110*[16]_n - 120*[15]_n + 150*[14]_n + 120*[13]_n - 240*[12]_n + 20*[11]_n + 240*[10]_n + 40*[9]_n - 205*[8]_n + 60*[7]_n - 210*[6]_n + 210*[5]_n + 50*[4]_n - 100*[3]_n + 24*[2]_n), where [k]_n := k*(k - 1)*...*(k - n + 1), [k]_0 = 1.
+A059082	 a(n) = (1/6!)*([64]_n - 30*[48]_n + 120*[40]_n + 60*[36]_n + 60*[34]_n - 12*[33]_n - 345*[32]_n - 720*[30]_n + 810*[28]_n + 120*[27]_n + 480*[26]_n + 360*[25]_n - 480*[24]_n - 720*[23]_n - 240*[22]_n - 540*[21]_n + 1380*[20]_n + 750*[19]_n + 60*[18]_n - 210*[17]_n - 1535*[16]_n - 1820*[15]_n + 2250*[14]_n + 1800*[13]_n - 2820*[12]_n + 300*[11]_n + 2040*[10]_n + 340*[9]_n - 1815*[8]_n + 510*[7]_n - 1350*[6]_n + 1350*[5]_n + 274*[4]_n - 548*[3]_n + 120*[2]_n), where [k]_n := k*(k - 1)*...*(k - n + 1), [k]_0 = 1.
+A059202	 T(n, m) = (1/m!)*Sum_{1..m + 1} stirling1(m + 1, i)*[2^(i - 1) - 1]_n, where [k]_n := k*(k - 1)*...*(k - n + 1), [k]_0 = 1.
+A063746	 G.f.: Consider a function; f(n) = 1 + sum(i_1=1, n, sum(i_2=0, i_1, ..., sum(i_n=0, i_(n-1), x^(sum(j=1, n, i_j))*(1+...+x^i_n))...)) Then the GF is f(1)+x^3.f(2)+x^8.f(3)+..., where after x^3 the increase is n^2+1 from f(n). - _Jon Perry_, Jul 13 2004
+A064881	 a(n, m)= a(n-1, m/2) if m is even, else a(n, m)= a(n-1, (m-1)/2)+a(n-1, (m+1)/2, a(1, 0)=1, a(1, 1)=2.
+A064882	 a(n, m)= a(n-1, m/2) if m is even, else a(n, m)= a(n-1, (m-1)/2)+a(n-1, (m+1)/2, a(1, 0)=2, a(1, 1)=1.
+A064883	 a(n, m)= a(n-1, m/2) if m is even, else a(n, m)= a(n-1, (m-1)/2)+a(n-1, (m+1)/2, a(1, 0)=1, a(1, 1)=3.
+A064884	 a(n, m)= a(n-1, m/2) if m is even, else a(n, m)= a(n-1, (m-1)/2)+a(n-1, (m+1)/2, a(1, 0)=3, a(1, 1)=1.
+A064885	 a(n, m)= a(n-1, m/2) if m is even, else a(n, m)= a(n-1, (m-1)/2)+a(n-1, (m+1)/2, a(1, 0)=3, a(1, 1)=2.
+A064886	 a(n, m)= a(n-1, m/2) if m is even, else a(n, m)= a(n-1, (m-1)/2)+a(n-1, (m+1)/2, a(1, 0)=2, a(1, 1)=3.
+A065109	 Sum_{k 0<=k<=n} T(n,k)*x^k = (2-x)^n. [_Philippe Deléham_, Dec 15 2009]
+A066087	 A009223(n)-A066086(n)= GCD(sigma(n), phi(n))-GCD[sigma(A007947(n)), phi(A007947(n))).
+A068218	 T(k, r) = 2*(2k-3)/(k-2r) * ( T(k-1, r) - T(k-1, r-1) ), for k > 2r. T(1, 0)=2, T(1, 1)=2 Sum[T(k, r), r=0, ..., k] = A054474(k) T(k, r)=A069466(k, r) - Sum[ Sum[ T(i, j)*A069466(k-i, r-j), j=0...r], i=1, k-1]
+A069548	 Primes of the form 3*sigma(n) + sum_{d|k, d squarefree} d(6/(2 + mu(d)) - 3) for some k. [_Charles R Greathouse IV_, Feb 18 2011]
+A072183	 For odd n: log(a(n))=Sum(d|n)mu(n/d)*log(L(d)). For even n:log(a(n))=Sum(d|n, d even)mu(n/d)*log(F(d))+Sum(d|n, d odd)mu(n/d)*log(L(d))
+A080277	 n log_2 n - 2n < a(n) <= n log_2 n + n [Bannister et al., 2013] - _David Eppstein_, Aug 31 2013
+A081285	 f_n(q) = sum_r=1..n (-1)^(r+1) q^(r(r-1)/2) (q)_(n-1) (q)_n / ((q)_(r) ((q)_(n-r))^2) f_(n-r)(q) for n>=1.
+A086836	 a(n) = 1/8*([9]_n+4*[3]_n+3*[1]_n) = 3/8*(967680-1145424*n+705596*n^2-256796*n^3+59649*n^4-8936*n^5+834*n^6-44*n^7+n^8)/GAMMA(10-n), where [m]_n=m*(m-1)*...*(m-n+1) is falling factorial. - _Vladeta Jovovic_, Aug 10 2003
+A087074	 T(n, k) = 1/8*([n^2]_k+2*[n]_k+5*[0]_k) if n is even and 1/8*([n^2]_k+4*[n]_k+3*[1]_k) if n is odd, where [m]_k=m*(m-1)*...*(m-k+1), k>0, [m]_0=1, is falling factorial. - _Vladeta Jovovic_, Aug 10 2003
+A088538	 arcsin x = (4/Pi) sum_{n = 1, 3, 5, 7, ...} T_n(x)/n^2 (Chebyshev series of arcsin; App C of math.CA/0403344). - _R. J. Mathar_, Jun 26 2006
+A090981	 T(n, k)=binomial(n+1, k)*sum(binomial(n+1, j)*binomial(n-j-1, k-1), j=0..n-k)/(n+1). G.f. G=G(t, z) satisfies z(1-z+tz)G^2-(1-tz)G+1=0.
+A090985	 T(n, k)=binomial(n+k-2, k)*sum(binomial(n-2+k+i, i)*binomial(n-3-k-i, i-1), i=0..floor((n-2-k)/2))/(n-1). G.f. G=G(t, z) satisfies (1-t)G^3+(1+t)zG^2-z^2*(1+z)G+z^4=0.
+A091187	 G.f.: G=G(t,z) satisfies t*z*G^2-(1 - z + t*z)*G + 1- z + t*z = 0.
+A091602	 G.f.: G = G(t,x) = sum(k>=1, t^k*(prod(j>=1, (1-x^((k+1)*j))/(1-x^j) ) -prod(j>=1, (1-x^(k*j))/(1-x^j) ) ) ). - _Emeric Deutsch_, Mar 30 2006
+A091866	 G.f. = G = G(t, z) satisfies z(1-tz)G^2-(1+z-2tz)G+1-tz = 0.
+A091867	 T(n, k) = [binomial(n+1, k)/(n+1)]*sum(binomial(n+1-k, j)*binomial(n-k-j-1, j-1), j=1..floor((n-k)/2)) for k<n; T(n, n)=1; T(n, k)=0 for k>n. G.f.=G=G(t, z) satisfies z(1+z-tz)G^2-(1+z-tz)G+1=0. T(n, k)=r(n-k)*binomial(n, k), where r(n)=A005043(n) are the Riordan numbers.
+A091869	 T(n, k)=binomial(n-1, k)*sum(binomial(n-k, j)*binomial(n-k-j, j-1), j=0..ceil((n-k)/2))/(n-k) for 0<=k<n; T(n, k)=0 for k>=n. G.f.=G=G(t, z) satisfies zG^2-(1+z-tz)G+1+z-tz=0. T(n, k)=M(n-k-1)*binomial(n-1, k), where M(n)=A001006(n) are the Motzkin numbers.
+A091894	 G.f.: G = G(t,z) satisfies: t*z*G^2-(1-2*z+2*t*z)*G+1-z+t*z = 0.
+A091958	 T(n,k) = binomial((n+1), k)*sum((-1)^j*binomial(n+1-k,j)*binomial(2n-3k-3j, n), j=0..floor(n/3)-k)/(n+1). G.f.: G=G(t,z) satisfies (t-1)z^3 G^3 + zG^2 - G + 1 = 0.
+A091977	 G.f.=G=G(t, z) satisfies tz(1-z)G^2-(1+tz-2z)G+1-z=0.
+A093127	 G.f.: G=G(t,z) satisfies t*z^4*G^2 - (1 - z - 2*t*z^2 - t*z^3 + t^2*z^4)*G + 1 = 0. - _Emeric Deutsch_, Sep 18 2014
+A094021	 T(n, k)=binomial(n, k-1)*binomial(3n-2k-1, n-k)/(2n-k). G.f. G=G(t, z) satisfies G^3+(t^3*z^2-t^2*z-3)G^2+(t^2*z+3)G-1=0.
+A094046	 T(n, k)=binomial(n+k-2, k)*sum(binomial(n+k+i-2, i)*binomial(4n-4-k-i, n-2k-2-3i), i=0..floor((n-2k-2)/3))/(n-1). G.f.=G=G(t, z) satisfies G=z(1+G)^5/(1+G-G^3-tG^2).
+A094322	 G.f.=G=G(t, z)=(1-z)/(1-zC+z^2*C -tz), where C=[1-sqrt(1-4z)]/(2z) is the Catalan function.
+A094449	 G.f.=G=G(t, z)= (1-tz)(1-z)/[1-2tz+tz^2-z(1-z)(1-t*z)C), where C=[1-sqrt(1-4z)]/(2z) is the Catalan function.
+A094507	 G.f.: G=G(t, z) satisfies the equation z(1+z-tz)G^2-(1+z+z^2-tz-tz^2)G+1+z-tz=0.
+A096441	 G.f.: F + G - 2, where F = prod(j>=1, 1/(1-q^(2*j) ), G = prod(j>=0, 1/(1-q^(2*j+1)) ).
+A096793	 G.f. G=G(t,z) satisfies G = 1 + zG(t + zG)/(1 - z^2*G^2).
+A096793	 The trivariate g.f. H=H(t,s,z), where t (s) marks odd-length (even-length) ascents satisfies H = 1 + zH(t+szH)/(1-z^2*H^2). (End)
+A097100	 G.f.=G=G(t, z) satisfies G=1+zG+z^2*G*[z+(1-z+t*z)^2*(G-zG-1)]/(1-z).
+A097107	 G.f.=G=G(t, z) satisfies G=1+zG+z^2*(G-1)[(1-z)G+z(1-t)/(1-z)]/(1-tz).
+A097777	 G.f. = G = G(t, z) satisfies G=1+zG+z^2*G[G-1-(1-t)[zG-z/(1-z)]].
+A097777	 The generating function H=H(t,z) relative to the number of subwords of the form UH^bU for a fixed b>=1 satisfies H = 1+zH+z^2*H[H-1+(t-1)z^b*(H-1-zH)].
+A097860	 G.f. G = G(t, z) satisfies G = 1+z*G+z^2*G*(G-1+t).
+A097885	 G.f. G=G(t, z) satisfies z^2*(t+z-tz)G^2-(1-z-z^2+tz^2)*G+1=0.
+A097887	 G.f.=G=G(t, z) satisfies z^2*(2-4z+3z^2-t+2tz-3tz^2+t^2*z^2)G^2-(1-z)(1-2z+3z^2-2tz^2)G+(1-z)^2=0.
+A097888	 G.f.=G=G(t, z) satisfies tz^2*(1-z)G^2-(1-2*z+tz^2)*G+1-z=0.
+A097891	 G.f.=G=G(t, z) satisfies z^2*(1-z+z^2-tz^2)G^2-(1-z)(1-z+z^2-tz^2)G+1-z=0.
+A097892	 G.f.=G=G(t, z) satisfies z^2*(1-z)G^2-(1-z)(1-z+z^2-tz^2)G+1-z+z^2-tz^2=0.
+A098050	 G.f.=G=G(t, z) satisfies G=1+zG+z^2*G[G-1-z/(1-z)+tz/(1-tz)].
+A098056	 G.f.=G=G(t, z) satisfies G = 1 + zG + z^2*[H + 2tzH/(1-z)+t^2*z^2*H/(1-z)^2+ z/(1-z)][G-(1-t)zH/(1-z)^2], where H=(1-z)^2*G-1+z.
+A098063	 G.f.=G=G(t, z) satisfies z(t-tz+tz^2-1+2z-z^2)G^2-(1-2z+z^2+tz)G+1=0.
+A098071	 G.f.=G=G(t, z) satisfies aG^2 + bG + c = 0, where a=z^2*(1-z-z^2+2z^3-tz+2tz^2-2tz^3-tz^4+t^2z^4), b=-(1-z)(1-2z+2z^2+z^3-2tz^3), c=(1-z)^2.
+A098073	 G.f.=G=G(t, z) satisfies aG^2 + bG + c = 0, where a=z^2*(1-2z+z^2-z^3+tz-tz^2+tz^3), b=-(1-2z+2z^2-2z^3+tz^3), c=1-z.
+A098083	 G.f.=G=G(t, z) satisfies G=1+zG+z^2*(G-1)[G-(1-t)z(G-zG-1)/(1-z)].
+A098093	 G.f.=G=G(t, z) satisfies G=1+zG+tz^2*G(G-1)/(1-z^2+tz^2).
+A098832	 Item m of row n of T is given (in infix form) by: n T m = n * (n + m) / (1 + m (mod 2)). E.g. Item 4 of row 3 of T: 3 T 4 = 14.
+A100754	 G.f.: t*z*r/(1-t*z*r), where r = r(t,z) is the Narayana function defined by r=z*(1+r)*(1+t*r).
+A101276	 G.f. G=G(t, z) satisfies z(t+z-tz)G^2-(1-z+tz+z^2-tz^2)G+1-z+tz+z^2-tz^2=0.
+A101282	 G.f.=G=G(t, z) satisfies z(t+z-tz)G^2-(1-2z+tz)G+1=0.
+A101307	 G.f.=G=G(t, z) satisfies G=1+P+PG(G-1), where P= z/(1-z)+(t-1)z^2 (for the explicit form see the Maple program).
+A101431	 T(n, k)=(1/n)binomial(n, k)*sum(3^(n-1-k-2i)*binomial(k, i)binomial(n-k, k+i+1), i=0..min(k, n-1-2k)) (0<=k<=ceil(n/2)-1). G.f.=G=G(t, z) satisfies tzG^3-(1+3tz-3z)G+1+2tz-2z=0.
+A101646	 n x k = n k - [(k+1)/phi^2] [(n+1)/phi^2] . For proof see link. - W. F. Lunnon, May 24 2008
+A101894	 G.f.=G=G(t, z) satisfies z(1-tz)G^2-(1-z)(1-tz)G+1-z=0.
+A101895	 G.f.=G=G(t, z) satisfies z(1-z)G^2-(1-z)(1-tz)G+1-tz=0.
+A101919	 G.f.=G=G(t, z) satisfies z(1-z)G^2-(1-z-tz+z^2)G+1-z=0.
+A101920	 G.f.=G=G(t, z) satisfies tz(1-z)G^2-(1-3z+tz+z^2)G+1-z=0.
+A102003	 G.f.=G=G(t, z) satisfies z(t+z)G^2-(1+tz)G+1+tz=0.
+A102004	 G.f.=G=G(t, z) satisfies z(1+tz)G^2-(1+z-z^2+tz^2)G+1+z-z^2+tz^2=0
+A102402	 G.f.: G=G(t,z) satisfies z^3*(1-t)G^3+z(1-z+tz)G^2-G+1=0.
+A102404	 G.f.=G=G(t, z) satisfies z(1+z-tz)^2*G^2-(1+z+z^2-tz-tz^2)G+1=0.
+A102405	 G.f.: G=G(t, z) satisfies zG^2-(1+z-z^2-tz+tz^2)G+1+z-tz=0.
+A103323	 T(n, k) = Sum[i_1>=0, Sum[i_2>=0, ... Sum[i_{k-1}>=0, C(n, i_1)*C(n-i_1, i_2)*C(n-i_2, i_3)*...*C(n-i_{k-2}, i_{k-1}) ] ... ]].
+A103324	 T(n, k) = Sum[i_1>=0, Sum[i_2>=0, ... Sum[i_{k-1}>=0, 2^i_1*C(n, i_1)*C(n-i_1, i_2)*C(n-i_2, i_3)*...*C(n-i_{k-2}, i_{k-1}) ] ... ]].
+A104461	 Consider pythagorean triples x^2+y^2=z^2. We seek to find the total number of instances of an integer m being x or y or z. The solution for x or y is straightforward by considering appropriate lesser and greater pairwise factors, L, G of m^2 in z^2 - y^2 = (z-y)(z+y) = m^2. Then solve for z and y with the relations, z-y = L z+y = G 2z = L+G, z = (L+G)/2 where L and G are both even if m is even or both odd if m is odd. The number of L factors < m is the number of instances of x or y. The count of instances z=m is solved by trial on x^2 = m^2 - y^2.
+A104544	 G.f.=G=G(t, z) satisfies z^2(1+z-tz)G^2-(1-tz)G+1+z-tz=0.
+A104546	 G.f.: G = G(t,z) satisfies G=1+zG+zG[G+(t-1)z/(1-z)].
+A104552	 G.f.=G=G(t, z) satisfies zG^2-[1-z+z(1-t)/((1-z)(1-tz))]G+1=0.
+A104573	 G.f.=G=G(t, z) satisfies G=1+zG+z^2[G-(1-t)/((1-z)(1-tz^2))]G.
+A104580	 T(n, m) = T'(n-1, m-1)+T'(n-1, m)+T'(n-2, m)+T'(n-3,m), where T'(n, m) = T(n, m)
+A105156	 a(n) = if 10 Mod[Prime[n], 10] is 1, 3 then -Prime[n] else Prime[n] a[1]=5 a[3]-2 T(n, k)=a(k)*Prime[n] aout[n]=Sum[T(n, k], {k, 1, n]
+A105162	 a(n) = if 10 Mod[Prime[n], 10] is 1 then -Prime[n]-6 if 3 then -Prime[n]-2 else if 7 then Prime[n]-2, if 9 then Prime[n]-6 a[1]=-5 a[3]=2 T(n, k)=a(k)*Prime[n]*(-1)^k aout[n]=Sum[T(n, k], {k, 1, n]
+A105640	 G.f.=G-1, where G =G(t,z) satisfies z(2+z+z^2-tz^2)G^2-(1+2z+z^2-tz^2)G+1=0.
+A107131	 G.f. G=G(t, z) satisfies G=1+tzG+tz^2*G^2. - _Emeric Deutsch_, May 29 2005
+A107230	 G.f.=G=G(t,z) satisfies z(1-2z-tz)G^2+(1-2z-tz)G-1=0. - _Emeric Deutsch_, Oct 07 2007
+A108198	 G.f.: G-1, where G=G(t,z) satisfies G=1+tzG^2+z(G-1).
+A108263	 G.f. G=G(t, z) satisfies z*(1+t*z)*G^2 - (1+z)*G + 1 = 0.
+A108425	 T(n, k)=(1/n)binomial(n, k)*sum(2^(n-j)*binomial(n, j)*binomial(n, k-1-j), j=0..k-1). G.f. =G=G(t, z) satisfies zG^3+tzG^2-(1+z-tz)G+1=0.
+A108426	 T(n, k)=(1/n)binomial(n, k)*binomial(3n-k, n-1). G.f. =G=G(t, z) satisfies G=1+z(t+G)G^2.
+A108428	 T(n, k)=(1/n)sum(binomial(n, j)binomial(n, k-j)binomial(n+j, k+1), j=0..k). G.f.=G=G(t, z) satisfies t^2*zG^3-t^2*zG^2-(1+z-tz)G+1=0.
+A108429	 T(n, k)=binomial(n, 2n-k)binomial(n+k, n-1)/n; G.f.=G=G(t, z) satisfies G=1+tzG^2*(1+tG).
+A108437	 G.f.=G=G(t, z)=1/(1-tzA-t^2*zA^2)-1, where A=1+zA^2+zA^3=(2/3)*sqrt((z+3)/z)*sin((1/3)*arcsin(sqrt(z)*(z+18)/(z+3)^(3/2)))-1/3 (the g.f. of A027307).
+A108438	 G.f.=G=G(t, z)=1/(1-t^2zA-tzA^2)-1, where A=1+zA^2+zA^3=(2/3)*sqrt((z+3)/z)*sin((1/3)*arcsin(sqrt(z)*(z+18)/(z+3)^(3/2)))-1/3 (the g.f. of A027307).
+A108440	 G.f.=G=G(t, z)=1/(1-tzA-zA^2)-1, where A=1+zA^2+zA^3=(2/3)*sqrt((z+3)/z)*sin((1/3)*arcsin(sqrt(z)*(z+18)/(z+3)^(3/2)))-1/3 (the g.f. of A027307).
+A108441	 G.f.=G=G(t, z)=1/(1-zA-tzA^2)-1, where A=1+zA^2+zA^3=(2/3)*sqrt((z+3)/z)*sin((1/3)*arcsin(sqrt(z)*(z+18)/(z+3)^(3/2)))-1/3 (the g.f. of A027307).
+A108443	 G.f.=G=G(t, z) satisfies G=1+z(t+z-tz)^2*G^3+z(2-t)(t+z-tz)G^2+2z(1-t)G.
+A108446	 T(n, k)=(1/n)binomial(n, k)*sum(binomial(n-k, j)*binomial(n+2j, k+j-1), j=0..n-k). G.f.=G=G(t, z) satisfies G=1+z(G-1+t)G+zG^3.
+A108746	 G.f.=G=G(t, z) satisfies G=1+zG(G-1+t-tz+z).
+A108767	 G.f.: T-1, where T=T(t, z) satisfies T=1+z*T^2*(T-1+t).
+A108838	 G.f.=1+z(1+r)^2, where r=r(t,z) is the Narayana function defined by (1+r)(1+tr)z=r, r(t,0)=0. - _Emeric Deutsch_, Jul 23 2006
+A108838	 The trivariate g.f. G=G(t,s,z) of Dyck paths with respect to number of DUU's (marked by t), number of DDU's (marked by s) and semilength (marked by z) satisfies G=1+zG+z^2*[1+t(G-1)][1+s(G-1)]/[1-z(1+ts(G-1))] (the number of long interior inclines is equal to the number of DUU and DDU's). - _Emeric Deutsch_, Oct 09 2008
+A109089	 a in (a, b) = lim(n->infinity)A^n(1, 1) with A(x, y) = (x+y/x, y/x).
+A109090	 a in (a, b) = lim(n->infinity)A^n(1, 1) with A(x, y) = (x+y/x, y/x).
+A110235	 T(n, k)=[2/(n+k)]binomial((n+k)/2, k)*binomial((n+k)/2, k-1). G.f.=g=g(t, z) satisfies g=1+tzg+z^2*g(g-1).
+A112412	 G.f. is the diagonal of g(t, s, z), where g=g(t, s, z) is defined by z(1+tz-tsz)(1+sz-tsz)g^2 - [1+(1-ts)z-(1-t)(1-s)z^2]g+1=0 (g is the trivariate g.f. of Dyck paths, where z marks semilength and t (s) marks number of ascents (descents) of length 1.
+A113869	 Furthermore, P_k ~ 1 - Sum_{n >= 1} A003319(n)/[k]_n, where [k]_n = k(k-1)(k-2)...(k-n+1). Therefore for n >= 2, a(n) = - Sum_{i=1..n} A003319(i)*Stirling_2(n-1, i-1). - _N. J. A. Sloane_.
+A114117	 T(n, k)=sum{j=0..n, sum{i=0..n, C(floor((n+i)/2, j)C(j, floor((n+i)/2))}*(2*C(0, j-k)-C(1, j-k))}}.
+A114463	 G.f.: G=G(t, z) satisfies z[(1-t)z^2-(1-t)z+1]G^2-[1-(1-t)z^2]G+1=0.
+A114486	 G.f. G=G(t, z) satisfies G=1+z(C-z+tz)G, where C=[1-sqrt(1-4z)]/(2z) is the Catalan function. G=2/[1+2z^2-2tz^2+sqrt(1-4z)].
+A114492	 G.f. G=G(t, z) satisfies z(t+z-tz)G^2-(1-2(1-t)z+(1-t)z^2)G+1-z+tz=0.
+A114502	 G.f.: G=G(t, z) satisfies z(1-z)G^2-(1-z-z^2+tz^2)G+1-2z+tz=0.
+A114506	 G.f. G=G(t, z) satisfies (1-t)z^4*G^4-(1-t)z^3*G^3+zG^2-G+1=0.
+A114508	 G.f. G=G(t, z) satisfies (1-t)z^5*G^5-(1-t)z^4*G^4+zG^2-G+1=0.
+A114516	 G.f.: G=G(t, z) satisfies z*(1+t*z-z*t^2*z)^2*G^2-(1+z-z^2-t^2*z+2*t*z^2-t^2*z^2)*G+ 1=0.
+A114583	 G.f.=G=G(t, z) satisfies G=1+zG+z^2*G(tz-z+G).
+A114586	 G.f.=G-1, where G=G(t, z) satisfies z(1+t+z)G^2-(1+z+tz)G+1=0.
+A114588	 G.f.: G-1, where G = G(t,z) satisfies z(2+2z+z^2-tz-tz^2)G^2+(1+2z)(1+z-tz)G+1+z-tz=0.
+A114593	 T(n, k)=2^(n-2k)*binomial(n+1, k)binomial(n-k-1, k-1)/(n+1) (1<=k<=floor(n/2)). G.f.=G-1, where G=G(t, z) satisfies z(2+tz)G^2-(1+2z)G+1=0.
+A114597	 G.f.= G-1, where G=G(t, z) satisfies z(1+t-t^2*z-t^3*z^2)G^2-(1+z-2t^2*z^2)G+1-tz=0.
+A114608	 T(n, k)=(1/n)binomial(n, k)*sum(2^j*binomial(n, j+1)binomial(n-k, j), j=0..n-k) (k<=n-1); T(n, n)=1. G.f.=G=G(t, z) satisfies G=1+z(G-1+t)G+zG^2.
+A114655	 T(n, k)=2^(n-k+1)*binomial(n, k)*binomial(n, k-1)/n (1<=k<=n). G.f. G=G(t, z) satisfies G=z(2+G)(t+G).
+A114656	 T(n, k)=2^(n-k)*binomial(n, k)*binomial(n, k-1)/n. G.f.=G=G(t, z) satisfies G=z(2G+t)(G+1).
+A114687	 G.f.: G=G(t, z) satisfies G = z*(1+G)*(1+2*t*G).
+A114690	 G.f. G=G(t, z) satisfies G=z(t+G)(1+z+zG).
+A114706	 G.f.=G-1, where G=G(t, z) satisfies z(1+t-z+tz)G^2-(1+tz)G+1=0.
+A114711	 G.f.=G=G(t, z) satisfies G=z(t+G)+z^2*G(1+G).
+A114712	 G.f.=G=G(t, z) satisfies G=1+zG+z^2*(tzG+G-1-zG)G.
+A114848	 T(n,k) = Sum((-1)^j * binomial(n-1-(j+k), j+k) * binomial(j + k, k) * A000108(n-2(j+k)), j=0..[(n-1)/2]-k). G.f. G = G(t,z) satisfies G = C(z/(z^2(1-t)+1)), where C(z) is g.f. of Catalan numbers.
+A116385	 E.g.f.: dif(Bessel_I(3,2x),x)+2*Bessel_I(3,2x); a(n)=C(n+1,floor((n-2)/2)(1+(-1)^n)/2+C(n,floor((n-3)/2))(1-(-1)^n).
+A116424	 T(n,k) = Sum((-1)^(i+k) * binomial(i,k) * binomial(n-i,i) * binomial(2*n-3*i, n - 2*i -1)/(n-i), i=k..[(n-1)/2]), n >=1. G.f. G = G(t,z) satisfies G = 1 + z^2(1-t)G + z(1-z+tz)G^2.
+A116863	 a(n,m) are the coefficients of the polynomial C2_n = C2_n(a[1],...,a[n]) in the above mentioned order.
+A118357	 G.f.: G-1, where G = G(t,z) = [1+(1-t)z]/[1-(2+t)z-2(1-t)z^2]. G.f. of column k is z^(k+1)*(1-2z)^(k-1)/(1-2z-2z^2)^(k+1) (k>=1).
+A118920	 More generally, the trivariate g.f. G=G(x,y,z), where x (y) marks number of downward (upward) crossings of the x-axis, is given by G = z*C^2*(2+(x+y)*z*C^2)/(1-x*y*z^2*C^4).
+A118963	 T(n,k)=[(n+1)/n]binomial(n,k)binomial(n,k+1). G.f.=G(t,z)=(1+r)^2/(1-tr^2)-1, where r=r(t,z) is the Narayana function, defined by (1+r)(1+tr)z=r, r(t,0)=0. More generally, the g.f. H=H(t,s,u,z), where t,s and u mark double rises above, below and on the x-axis, respectively, is H=[1+r(s,z)]/[1-z(1+tr(t,z))(1+ur(s,z))].
+A118964	 G.f.: G(t,z)=(1+r)/[1-z(1+r)C]-1, where r=r(t,z) is the Narayana function, defined by (1+r)(1+tr)z=r, r(t,0)=0 and C=C(z)=[1-sqrt(1-4z)]/(2z) is the Catalan function. More generally, the g.f. H=H(t,s,u,z), where t,s and u mark double rises above, below and on the x-axis, respectively, is H=[1+r(s,z)]/[1-z(1+tr(t,z))(1+ur(s,z))].
+A119011	 G.f.=G(t,z)=1/[1-zr(t,z)]-1, where r=r(t,z) is the Narayana function, defined by (1+r)(1+tr)z=r, r(t,0)=0. See Maple program for the explicit form of G(t,z).
+A120429	 T(n,k)=(1/(n+1))*binomial(n+1,k)*sum(3^(n-2k+j+2)*binomial(n+1-k,j)*binomial(j,k-1-j), j=0..n+1-k). G.f.=G=G(t,z) satisfies G = [1+z(G-1+t)]^3.
+A120933	 T(n,k)=k*2^(n-k-1) if k<n; T(n,n)=n+1. G=G(t,z)=(1-2z+tz^2)/[(1-2z)(1-tz)^2] - 1.
+A120981	 T(n,k)=(1/(n+1))*binomial(n+1,k)*sum(3^(2k-n+3j)*binomial(n+1-k,j)*binomial(j,n-k-2j), j=0..n+1-k). G.f.=G=G(t,z) satisfies G = 1+3tzG+3z^2*G^2+z^3*G^3.
+A120982	 T(n,k)=(1/(n+1))*binomial(n+1,k)*sum(3^(n-k-3j)*binomial(n+1-k,k+1+2j)*binomial(n-2k-2j,j), j=0..n/2-k). G.f.=G=G(t,z) satisfies G = 1+3zG+3tz^2*G^2+z^3*G^3.
+A120983	 T(n,k)=(1/(n+1))*binomial(n+1,k)*sum(3^j*binomial(n+1-k,j)*binomial(j,n-3k-j), j=0..n+1-k). G.f.=G=G(t,z) satisfies G=1+3zG+3z^2*G^2+tz^3*G^3.
+A120986	 T(n,k)=(1/(n+1))*binomial(n+1,k)*binomial(2(n+1),n-k). G.f.=G=G(t,z) satisfies G=(1+tzG)(1+zG)^2.
+A121445	 G.f.=G=G(t,z)=1/[1-t(h-1-z)/(h-1)]-1, where h=1+zh^3=2sin(arcsin(sqrt(27z/4))/3)/sqrt(3z).
+A121448	 T(n,k)=2^k*binomial(n+1,k)binomial(n+1-k,(n-k)/2)/(n+1) if n-k is even; otherwise, T(n,k)=0. G.f. G=G(t,z) satisfies G=1+2tzG+z^2*G^2.
+A121460	 T(n,k)=binomial(n-2,k-2)+Sum(fibonacci(2j-1)*binomial(n-2-j,k-2), j=1..n-k). G.f.=G=G(t,z)=tz(1-2z)(1-z)/[(1-3z+z^2)(1-z-tz)].
+A121461	 G.f.: G=G(t,z)=tz(1-z)^2/[(1-3z+z^2)(1-tz)].
+A121462	 G.f.=G=G(t,z)=tz(1-z)/(1-2tz-z+tz^2).
+A121463	 T(n,k)=Sum(binomial(n,2*k+j)*binomial(k-1+j,k-1),j=0..n-2*k) (k<=n/2). G.f.=G=G(t,z)=(1-2z)/(1-3z+2z^2-tz^2)-1.
+A121464	 T(n,k)=binomial(n,k)+Sum(binomial(n-j,k)*fibonacci(2j-4), j=1..n-k). G.f.=G=G(t,z)=(1-2z)^2/[(1-3z+z^2)(1-z-tz)].
+A121465	 T(n,0)=fibonacci(2*n-3)-1; T(n,k)=2^(k-1)*(fibonacci(2n-2k-3)-1) for 1<=k<=n. G.f.=G=G(t,z)=(1-2z)^2*(1-tz)/[(1-3z+z^2)(1-z)(1-2tz)].
+A121501	 a(k) is such that E(a(k),A121500(a(k)) < min(E(n,A121500(n)),n=3..a(k)-1), k>=2, a(1):=3, with the relative error E(n,m):= abs(F(n,m)-Pi))/Pi and F(n,m):= (Fin(n)+Fout(m))/2, where Fin(n):=(n/2)*sin(2*Pi/ n) and Fout(m):= m*tan(Pi/m).
+A121531	 G=G(t,z)=z(1-2tz^2-tz^3)(1-tz^2)/[(1-z-tz^2)(1-z-z^2-3tz^2-tz^3+t^2*z^4)].
+A122774	 (n B m+1) = (n B m) 2(n-m) / (2(n-m)-1), 1<=m<n
+A123590	 m(n,m,d)=If[m == n + Floor[d/3], 1, If[m == n - Floor[d/3], 1,If[m == n + Floor[2*d/3], 1, If[m == n - Floor[2*d/3],1, If[ n <= Floor[d/3] && m <= Floor[d/3] && (n < m || n > m), 1, If[ n > Floor[d/3] && n < Floor[2*d/3] + 1 && m > Floor[d/3] && m < Floor[2*d/3] + 1 && (n < m ||n > m), 1, If[ n > Floor[2*d/3] && m > Floor[2*d/3] && (n < m || n > m), 1, If[n == m, 0, 0]]]]]]]]
+A123735	 m(n,m,d)=If[ n == m, 0, If[n == m - 1 || n ==m + 1, -1, If[n == m - 2 || n == m + 2, -1, 0]]]
+A123949	 x(i,j)=a(i,j)^(-1).b(i,j) p(n,x)=CharacteristicPolyynomial(x(i,j)) p(n,x)->t(n,m)
+A124022	 k=2; m(n,m,d)= = Table[If[n +m - 1 == d && n > 1, k, If[n + m == d, -1, If[n + m - 2 == d, -1, If[n == 1 && m == d, k - 1, 0]]]], {n, 1, d}, {m, 1, d}];
+A124028	 m(n,m,d)=If[n + m - 1 == d, 4, If[n + m == d, -1, If[n + m - 2 == d, -1, 0]]]
+A124031	 m(n,m,d)=If[ n == m, (-1)^n, If[n == m - 1 || n == m + 1, -1, 0]]
+A124034	 k=1; m(n,m,d)=If[n + m - 1 == d && n > 1, k, If[n + m ==d, -1, If[n + m - 2 == d, -1, If[n == 1 && m == d, -k, 0]]]]
+A124035	 m(n,m,d)=If[ n == m && n < d && m < d, 1, If[n == m - 1 || n == m + 1, -1, If[n == m == d, -1, 0]]
+A124036	 m(n,m,d)=If[ n == m, 1 + (1 - (-1)^(n + 1))/2, If[n == m - 1 || n == m + 1, 1 + (1 - (-1)^n)/2, 0]]
+A124038	 m(n,n,d)=If[ n == m && n > 1 && m > 1, y, If[n == m - 1 || n == m + 1, -1, If[n == m == 1, y - 2, 0]]]; Det(m,n,m,d)=P(d,y)
+A124039	 m(n,m,d)=If[ n == m && n > 1 && m > 1, 0, If[n == m - 1 || n == m + 1, -1, If[n == m == 1, 3, 0]]]
+A124040	 m(n,m,d)=If[ n == m, 3, If[n == m - 1 || n ==m + 1, 1, If[(n == 1 && m == d) || (n == d && m == 1), 1, 0]]]
+A125270	 Let p = Prime(n), q = Prime(n+1), r = Prime(n+2), s = Prime(n+3) and t = Prime(n+4). Then a(n) = p q (r+s+t) + (p + q) r (s + t) + (p + q + r) s t.
+A126177	 T(n,k)=3^(n-2k+2)binomial(2k-2,k-1)*binomial(n,2k-2)/k. Proof: There are Catalan(k-1) full binary trees with k leaves. Each of them has 2k-2 edges. Additional n-2k+2 edges can be inserted as paths at the existing 2k-1 vertices in 3^(n-2k+2)*binom(n,2k-2) ways. G.f.=G=G(t,z) satisfies z^2*G^2-(1-3z-2tz^2)G+tz(3+tz)=0.
+A126178	 T(n,k)=[3^k/(n+1)]binomial(n+1,k)*binomial(n+1-k,(n-k)/2) (0<=k<=n). G.f.=G=G(t,z) satisfies G=1+3tzG+z^2*G^2.
+A126181	 G.f.: G = G(t,z) satisfies G = 1+(2+t)*z*G+z^2*G^2.
+A126182	 T(n,k)=[1/(n+1)]*binomial(n+1,k)*sum(2^j*binomial(k,n-k-j)*binomial(n+1-k,j),j=n-2k..n-k) if 0<k<=n; T(n,0)=2^n. G.f. G=G(t,z) satisfies G  = 1 + (t+2)*z*G + t*z^2*G^2.
+A126183	 G.f.: G(t,z)=1+3*z*H+z^2*H^2, where H=H(t,z) is defined by H=1+3*z*H+t*z^2*H^2 (see explicit expression of G(t,z) at the Maple program).
+A126188	 G.f.: G = G(t,z) = 1+3*z*G+z^2*(1+3*z*G+t*(G-1-3*z*G))^2 (explicit expression in the Maple program).
+A126191	 G.f.=G=G(t,z) satisfies G=1+zG+z^2*(G^2-1+t).
+A126218	 G.f.=G=G(t,z) satisfies G=1+zG+z^2*[1+zG+t(G-1-zG)]^2 (see the Maple program for the explicit expression).
+A126219	 G.f.=G=G(t,z) satisfies G=1+2zG+z^2*[1+2zG+t(G-2zG-1)]^2 (see the Maple program for the explicit expression).
+A126222	 G.f.: G=G(t,z) satisfies z(t+z-t^2*z)G^2-G+1=0.
+A127155	 G.f.=G=G(t,z) satisfies: z(1-z+tz)^2*G^2-(1-z+tz)(1+z-tz)G+1 = 0.
+A127157	 T(n,k)=2*binomial(3k-1,2k)*binomial(n-1+k,3k-2)/(3k-1) (formula obtained only by inspection). G.f.=G-1, where G=G(t,z) satisfies z^2*G^3-z(z+2)G^2+(1+2z)G-t^2*z-1=0.
+A127529	 G.f. G=G(t,z) satisfies (1-t-2*z+t*z)*G^2 - (1-2*t-z+t*z)*G-t = 0.
+A127530	 G.f.=G=G(t,z) is given by G=1+2zG+z^2[t(G-1)+1]G.
+A127532	 G.f.=G=G(t,z) is given by (1-t-2z+2tz-z^2)G^2-(1-2t+2tz)G-t=0.
+A127535	 G.f.=G=G(t,z) is given by (2t-1-t^2+2z-tz)G^3-(2+2tz-2t-5z)G^2+(4z-tz-1)G+z=0.
+A127537	 T(n,k)=C(3n-3,n+k)C(k-1,k-n+1)/(n-1) (n>=2, 0<=k<=2n-3). G.f.=G=G(t,z) satisfies tG^3+tG^2-z(1+2t)G+z^2*(1+t)=0.
+A127671	 a(n,m)=((-1)^(m-1))*(m-1)!*M_3(n,m) with M_3(n,m):=A036040(n,m) (Abramowitz-Stegun M_3 numbers).
+A128500	 a(n)=numerator(r(n)) with the rationals r(n):=sum(((-1)^k)*S(k,1)/(k+1),k=0..n) with Chebyshev's S-Polynomials S(k,1)=[1,1,0,-1,-1,0] periodic sequence with period 6. See A010892.
+A128501	 a(n+1) = denominator(r(n)) with the rationals r(n):=sum(((-1)^k)*S(k,1)/(k+1),k=0..n) with Chebyshev's S-Polynomials S(n,1)=[1,1,0,-1,-1,0] periodic sequence with period 6. See A010892.
+A128506	 a(n)=numerator(r(n)) with the rationals r(n):=sum(S(2*k,sqrt(2))/(2*k+1)^3,k=0..n) with Chebyshev's S-Polynomials S(2*k,sqrt(2))=[1,1,-1,-1] periodic sequence with period 4. See A057077.
+A128507	 a(n)=denominator(r(n)) with the rationals r(n):=sum(S(2*k,sqrt(2))/(2*k+1)^3,k=0..n) with Chebyshev's S-Polynomials S(2*k,sqrt(2))=[1,1,-1,-1] periodic sequence with period 4. See A057077.
+A128719	 G.f.=G=G(t,z) satisfies z(t+z-tz)G^2-(1-z-z^2+tz^2)G+1-tz=0.
+A128724	 G.f.=G=G(t,z) satisfies z^2*G^3-z(2-tz)G^2+(1+z-z^2-tzG+tz-1=0.
+A128727	 T(n,k)=(1/n)*3^(n-1-2k)*binom(n,k)*binom(n-k,k+1) G.f.=G=G(t,z) satisfies tzG^2-(1-3z+2tz)G+1-2z+tz=0.
+A128728	 G.f.=G=G(t,z) satisfies z^2*G^3-z(2-z)G^2+(1-z^2)G-1+z+z^2-tz^2=0.
+A128731	 G.f.=G=G(t,z) satisfies z^2*G^3-z(2-z)G^2+(1-tz^2)G-1+z=0.
+A128733	 G.f.=G=G(t,z) satisfies tz^2*G^3-(t-1)z^2*G^2-(1-3z+2z^2)G+(1-z)^2=0.
+A128735	 G.f.=G=G(t,z) satisfies (t+1)zG^3-(2-4z+3tz)G^2+3(1-2z+tz)G-1+2z-tz=0.
+A128738	 G.f.= G=G(t,z) satisfies z^2*G^3-z(1-t)(1-z)G^2-(1-z)(1-3z+tz)G+(1-z)^2=0.
+A128739	 G.f.= G=G(t,z) satisfies z^2*G^3-z(1-z)G^2-(1-z)(1-3z)G+(1-z)^2=0.
+A128747	 G.f.=G(t,z)=[1-z+zK(t,z)]/[1-zK(t,z)]-1, where K=K(t,z) satisfies zK^2-(1-tz)K+1-z=0 (K is the g.f. for the number of peaks; see A126182).
+A128749	 G.f.=G=G(t,z) satisfies z(1+z-tz)G^2-(1-tz+tz^2-z^2)G+1-z=0.
+A128751	 G.f.=G=G(t,z) satisfies z(1-z+tz)G^2-(1-z+z^2-tz^2)G+1-z=0.
+A128753	 G.f.=G=G(t,z) satisfies z(1+z-tz)G^2-(1-tz)G+1-tz=0. G=C((1+z-tz)/(1-tz)), where C(z)=[1-sqrt(1-4z)]/(2z) is the Catalan function.
+A128894	 a[a,k]= (3*a + 2*k + 5)*binomial[k + 2*a + 3, k]*binomial[k + 5*a/2 + 3, k]*binomial[k + 3*a + 4, k]/((3*a + 5)*binomial[k + a/2 + 1, k]*binomial[k + a + 1, k])
+A129159	 G.f.=tzhg + z(h-1), where g=1+zg^2+z(g-1)=[1-z-sqrt(1-6z+5z^2)] and h=1+tzh^2+z(h-1) (h=h(t,z) is the g.f. for skew Dyck paths according to the semi-abscissa of the last point on the x-axis and semilength; see A108198).
+A129163	 G.f.=G-1, where G=G(t,z) is given by z(1-tz)G^2-(1-2tz+tz^2)G+(1-z)(1-tz)=0.
+A129180	 G.f.=(1+z)[1-z-sqrt(1-6z+z^2)]^2/[4z(1-6z+z^2)] (obtained by computing (dG/dt)_{t=1} where G=G(t,z) is defined by G(t,z)=1+zG(t,z)+tzG(t,t^2*z)G(t,z); see A129179).
+A132277	 G.f.=G=G(t,z) satisfies G = 1 + tzG + z^2*G + z^2*G^2 (see explicit expression at the Maple program).
+A132279	 G.f. = G = G(t,z) satisfies G = 1+zG+z^2*G+z^2*[t(G-1-zG-z^2*G)+1+zG+z^2*G]G (see explicit expression at the Maple program).
+A132280	 G.f.=G=G(t,z) satisfies G = 1+zG+tz^2*G+z^2*G^2 (see explicit expression at the Maple program).
+A132883	 G.f.=G=G(t,z) satisfies G=1+zG+z^2*G+tz^2*G^2 (see explicit expression at the Maple program).
+A132893	 G.f.=G=G(t,z) satisfies z(1-3z+z^(2)-tz^(2))G^(2)+(1-3z+z^(2)-tz^(2))G-1=0 (see the Maple program for the explicit expression of G).
+A135281	 a(n)=(-1)^n*(n-1)!; b[n]=(n-1)!; m(i,j)=If[i > j, (-1)^(i + j)*((a[j + 1]*a[j + 2] - b[i + 1]^2)/(n + 1)!)/(j!*(i - j)!), 0] t(n,m)=(n+2)*Coefficients of Characteristic polynomials of inverse of m(i,j)
+A135305	 G.f.: G=G(t,z) satisfies (1-t)z^3*G^3+z(t+z-tz)G^2+((1-t)z-1)G+1=0. - _Emeric Deutsch_, Dec 14 2007
+A135835	 L(i,1=L(i,i)=i, otherwise L(i,j)=Sum[L(i-j-1,k)*L(j,k)
+A136262	 The Hermite Integral form is: IH[x,n]=(x*H[x,n]-H'[x,n])/n Which can be done as an integer form: n*IH[x,n]
+A136643	 a(n)= 1; b(n)= 2; c(n) = -2; T(n, m, d) := If[ n == m,a(n), If[n == m - 1 || n == m + 1, If[n == m - 1, c(m - 1), If[n == m + 1, b(n - 1), 0]], 0]];
+A136644	 a(n)= 1; b(n)= 2; c(n) = 1; T(n, m, d) := If[ n == m,a(n), If[n == m - 1 || n == m + 1, If[n == m - 1, c(m - 1), If[n == m + 1, b(n - 1), 0]], 0]];
+A137503	 Let w(n) = b(n) - sum_{1<d<m,d even,d|m}{c(n/d)} - sum_{1<d<m,d odd,d|m}{w(n/d)}.
+A137949	 M(3)= {{0, -3/2, 0}, {-3/2, 0, -3/2}, {0, -3/2, 0}} m(n,m)=If[ n == m, 0, If[n == m - 1 || n == m + 1, -d/2, 0]]->P(x,n); out_n,m=2^(n-1)*Coefficients(P(x,n)).
+A140698	 Galois polynomial GF(2^p) g[x,p]=x^p+x+1 Cyclotomic polynomial for primes: c[x,p]=Sum[x^i,{i,0,p}] ratio polynomial: q[x,p]=c[x,p]/g[x,p] Toral inverse for expansion: p[x,p]=x^p*g[1/x,p]/(x^p*c[x,p]) a(n,m)=Anti-diagonal Coefficients(p[x,p]).
+A141058	 Gf: Sum_{n>=0,k>=0}T(n,k)*x^n*y^k = (1 + x y CatalanGF[x y])/(1 - x^2 y CatalanGF[x] CatalanGF[x y]) where CatalanGF[x] = (1-Sqrt[1-4x])/(2x) is the Gf for the Catalan numbers A000108.
+A141525	 a(n)=If[Mod[n, 3] == 0, a(n - 2) + a(n - 3), If(Mod[n, 4) == 0, a(n - 1) + a(n - 4), a(n - 1), a(n - 2)]].
+A141760	 Let U = unsigned matrix inverse (T^-1) with leftmost column dropped, then U = A107876 where [U^k](n,k) = U(n,k-1) for n>=k>0.
+A142240	 b(n,m)=b(n-1,m]+m; Delta_diagonal=m; m={0,1,2,3,...k}.
+A143024	 T(n,k)=2*binom(k-2, n-3)binom(3n-5, 2n-k-4)/(n-2) (n>=3, 2<=k<=2n-4); T(2,1)=1; T(2,k)=0 (k>=2). The trivariate g.f. G=G(t,s,z) for non-crossing connected graphs on nodes on a circle, with respect to number of nodes (marked by z), number of edges (marked by t) and degree of root (marked by s) is G=z + tszg^2/[z-ts(g - z + g^2)], where g=g(t,z) satisfies tg^3 + tg^2 - (1 + 2t)zg +(1 + t)z^2 = 0 (see Domb & Barrett, Eq. (47); Flajolet & Noy, Eq. (18)).
+A143362	 G.g.=G-1, where G=G(t,z) satisfies G = 1/(1-zG) + z(t-1)(G-1)/(1+z-zG).
+A143364	 G.f.=g, where g=g(t,z) satisfies tz^2*g^2-(1-tz-2z^2)g+z(1+z)=0.
+A143734	 q(1,1,1) = 1; q(1,1,2) = 1; q(1,2,1) = 1; q(1,1,2) = 1; q(i_,j,k) = Sum(q(x,j,k), {x,1,i-1}) + Sum(q(i,y,k), {y,1,j-1}] + Sum(q(i,j,z), {z,1,k-1}) + Sum(q(i-w,j-w,k), {w,1,Min(i,j)}) + Sum(q(i,j-w,k-w), {w,1,Min(j, k)}) + Sum(q(i-w,j,k-w), {w,1,Min(i,k)}) + Sum(q(i-w,j-w,k-w), {w,1,Min(i,j,k)}); a(n) = q(n,n,n).
+A143950	 G.f. G=G(s,z) satisfies G = 1 + zG(1 + szG)/(1 - z^2*G^2).
+A143950	 The trivariate g.f. H=H(t,s,z), where t (s) marks odd-length (even-length) ascents satisfies H = 1 + zH(t+szH)/(1-z^2*H^2).
+A143952	 The g.f. G=G(t,z) satisfies z(1-z)G^2 - (1-z+z^2-tz^2)G+1-z = 0 (for the explicit form of G see the Maple program).
+A143952	 The trivariate g.f. g=g(x,y,z) of Dyck paths with respect to number of peak plateaux, number of peaks in the peak plateaux and semilength, marked, by x, y and z, respectively satisfies g=1+zg[g+xyz/(1-yz)-z/(1-z)].
+A143953	 The g.f. G=G(t,z) satisfies z(1-z)(1-tz)G^2-(1-z+z^2-tz)G+(1-z)(1-tz) = 0 (for the explicit form of G see the Maple program).
+A143953	 The trivariate g.f. g=g(x,y,z) of Dyck paths with respect to number of peak plateaux, number of peaks in the peak plateaux and semilength, marked, by x, y and z, respectively satisfies g=1+zg[g+xyz/(1-yz)-z/(1-z)].
+A144409	 f(t,n)=If[n == 1, 1/(1 - t), 1/(1 - t^Floor[n/2] - t^n)]; t(n,m)=anti_diagonal_expansion(f(t,n)).
+A144462	 a(n)=A000045(n); t(n,m)=If[m == 0 || m == 1, 2 - m, If[ m < n, Ceiling[(a(m) - 1)/a(n) + 1], a(n) + 1]].
+A147315	 (5)... R(n+1,x) = x*{R(n,x)+R'(n,x)+1/2*R''(n,x)},
+A147315	 (6)... Bell(n+1,x) = x*(Bell(n,x)+Bell'(n,x)).
+A147517	 Using a limited dataset, the approximate relation is the quadratic Y=Ax^2+Bx+C (A,B,C)=(0.12267, 0.75758, -1.592)
+A152547	 G.f. of row n: Sum_{k=0..n} (x^binomial(n,k) - 1)/(x-1) = Sum_{k=0..binomial(n,n\2)-1} T(n,k)*x^k.
+A154714	 f(1,x)=x+1; f(n+1,x)=f(n,f(n,...f(n,x)...)), the formula contains x applications of f; a(n)=f(n,2)
+A157117	 t(n,m)=If[m <= n, t0(n*m + 1, n - m), t0(n*(n - m) + 1, m]) +
+A157785	 m(n,k)=If[k == m, q^(n - k), If[m == 1 && k < n, q^(n - k), If[k == n && m == 1, -(n-1), If[ k == n && m > 1, 1, 0]]]].
+A157972	 m(n,m,d)=If[ n == m, 2, If[n == m - 1 || n == m + 1, -1, 0]];
+A157972	 p(x,n)=Characteristicpolynomial(m(n,m,k),x);
+A157981	 out_(n,m)=coefficient(characteristicpolynomial(m(23,7,n))).
+A158202	 m(n,m,d)=If[ m <= n, Mod[Binomial[n, m], 2], 0];
+A158202	 M(n)=m(n,m,d).Transpose[m(n,m,d)].Transpose[m(n,m,d)].m(n,m,d);
+A158777	 t(n,m)=coefficients(expansion(p(x,t),t),t).
+A158785	 t(n,m)=2^Floor[n/2]*n!*coefficients(expansion(p(x,t),t),t)
+A160679	 a(n) = NIM(n, a(NIM(n, a(n, TIM(n,n)) )
+A161009	 T(n, m) = T'(n-1, m-1)+T'(n-1,m+1)+T'(n-1, m)+T'(n-2, m)+T'(n-3,m), where T'(n, m) = T(n, m)
+A162984	 G.f.: G=G(t,z) satisfies G = 1 + zG + z^2*G + z^3*(G-1+t)G.
+A166284	 G.f. G=G(t,z) satisfies G = 1 + zG + tz^2*G + z^3*G^2.
+A166285	 G.f. G=G(t,z) satisfies G = 1 + zG + z^2*G + z^3*G[G+(t-1)/(1-z)].
+A166288	 G.f.: G(t,z) -1, where G=G(t,z) satisfies z^3*G^2 - (1+z-tz)(1-tz-z^2)G+(1+z-tz)^2=0.
+A166291	 The trivariate g.f. G=G(t,s,z), where z marks semilength, t marks odd-level peaks and s marks even-level peaks, satisfies G = 1 + tzG + sz^2*G + s^2*z^3*HG, where H=G(s,t,z) (interchanging t and s and eliminating H, one obtains G(t,s,z); see the Maple program).
+A166293	 The trivariate g.f. G=G(t,s,z), where z marks semilength, t marks odd-level peaks and s marks even-level peaks, satisfies G = 1 + tzG + sz^2*G + s^2*z^3*HG, where H=G(s,t,z) (interchanging t and s and eliminating H, one obtains G(t,s,z); see the Maple program).
+A166301	 G.f.: G=G(t,z) satisfies G = 1 + zG[G - 1 + tz - tz(1 - t)/(1 - tz)].
+A167634	 G.f.: G=G(t,z) satisfies z(1+z-z^2)G^2-(1+z-z^2)(1+z-tz^2)G + 1+z-tz^2=0.
+A167634	 The trivariate g.f. G=G(t,s,z), where t marks odd-level peaks, s marks even-level peaks, and z marks semilength, satisfies aG^2 - bG + c = 0, where a = z(1+z-sz^2), b=(1+z-tz^2)(1+z-sz^2), c=1+z-tz^2.
+A167637	 G.f.: G=G(t,z) satisfies z(1+z-tz^2)G^2-(1+z-z^2)(1+z-tz^2)G + 1+z-z^2=0.
+A167637	 The trivariate g.f. G=G(t,s,z), where t marks odd-level peaks, s marks even-level peaks, and z marks semilength, satisfies aG^2 - bG + c = 0, where a = z(1+z-sz^2), b=(1+z-tz^2)(1+z-sz^2), c=1+z-tz^2.
+A170747	 a(n)= Sum_{k 0<=k<=n} A097805(n,k)*(-1)^(n-k)*28^k. [From _Philippe Deléham_, Dec 04 2009]
+A171846	 G.f. G=G(t,z) satisfies: G(t,z)=1/[1 - z + tz^2 - tz^2*G(t,tz)] (yielding a continued-fraction expression for G(t,z)).
+A171848	 The trivariate g.f. G=G(t,u,z), where z marks length, t marks area below the level steps, and u marks number of level steps, satisfies G(t,u,z)=1+uzG(t,u,z)+z^2*(G(t,tu,z) - 1)G(t,u,z).
+A171850	 The trivariate g.f. G=G(t,u,z), where z marks length, t marks the area below the path, and x marks number of U-steps, satisfies G(t,x,z)=1+zG(t,x,z)+txz^2*(G(t,x,tz) - 1)G(t,x,z) (yielding a continued fraction expression for G(t,1/t,z)).
+A171852	 The g.f. G=G(t,z) satisfies G = 1 + zG + z^2*G*(G - 1 + z*(t - 1)/[(1 - z)(1 - t*z^2)].
+A172986	 a(n)=If[n==0,0,If[n <= 20, A029826(n+1), a(n - 1 - Mod[n, 20]) + A029826(2 + Mod[n, 20])]
+A174119	 c(n)=If[n == 0, 1, If[n == 1, 1, Product[i*(i - 1)*(2*i - 1)/6, {i, 2, n}]];
+A174150	 c(n)=If[n == 0 || n == 1, 1, Product[If[ i == 2, 6, i*(i^2 - 1)/2], {i, 2, n}]];
+A174151	 c(n)=If[n == 0 || n == 1, 1, Product[If[ i == 2, 12, i*(i^2 - 1)*(i + 2)/2], {i, 2, n}]];
+A176417	 t(n,m,q)=1 - n! + n!*c(n, q)/(c[m, q)*c(n - m, q))/Binomial[n, m]
+A176418	 t(n,m,q)=1 - n! + n!*c(n, q)/(c[m, q)*c(n - m, q))/Binomial[n, m]
+A176419	 t(n,m,q)=1 - n! + n!*c(n, q)/(c[m, q)*c(n - m, q))/Binomial[n, m]
+A176420	 t(n,m,q)=t(n,m,q)=1 c(n, q)/(c[m, q)*c(n - m, q))-Binomial[n, m]
+A176421	 t(n,m,q)=t(n,m,q)=1 c(n, q)/(c[m, q)*c(n - m, q))-Binomial[n, m]
+A176422	 t(n,m,q)=t(n,m,q)=1 c(n, q)/(c[m, q)*c(n - m, q))-Binomial[n, m]
+A177378	 For sufficiently large n, 2^n-1<=a(n)<=2^ceil(40*n/19). Let k>=n. Put g=g(n,k)=min{odd j>=2^(k-n): 2^k-j is prime} and h(n)=min{k: k-n=floor(log_2(g))}. Then a(n)=2^h(n)-g(n,h(n)).
+A177947	 t(n,m)=1/Integrate[(-1 + t)^n/t^(m + n + 2), {t, 1, Infinity}] - (-2 Binomial[m + n, m] + Binomial[2 + m + n, 1 + m]);
+A178519	 G.f. G=G(t,z) satisfies zG^2-(1-z^3+tz^3)G+1-z^2+tz^2=0.
+A178603	 t(n,m)=(2^(n=3)*n!)*coefficients(p(x,t))
+A180572	 The bivariate g.f. G=G(t,z) appears in the Maple program.
+A181289	 T(n,k = 2*T(n-1,k)+2*T(n-1,k-1)-T(n-2,k)-T(n-2,k-1), T(0,0)=1, T(1,0)=0, T(1,1)=2, T(2,0)=0, T(1,1)=3, T(2,2)=4, T(n,k)=0, if k<0 or if k>n. - _Philippe Deléham_, Nov 29 2013
+A181304	 The g.f. H=H(t,s,z), where z marks size and t (s) marks odd (even) entries in the top row, is given by H = (1+z)(1-z)^2/[(1+z)(1-z)^2-(t+s)z-sz^2*(1-z)].
+A181336	 The g.f. H=H(t,s,z), where z marks size and t (s) marks odd (even) entries in the top row, is given by H = (1+z)(1-z)^2/[(1+z)(1-z)^2-(t+s)z-sz^2*(1-z)].
+A182107	 a(n) = 2 * sum(i=1..floor( (n-1)/2 ),  ( sum( k_1+k_2 == (n^2-n)/4-(n-i-1), S(n-i-2,k_1) * S(i-1,k_2) ) + sum(k_1+k_2 == (n^2-n)/4, S(floor( (n-2)/2 ) , k_1 ) * S( floor( (n-2)/2 ), k_2 ), where S(n,k) = S(n-1, k) + S(n-1, k-n), S(0,0)=1, S(0,k) = 0, S(n,k) = 0  if  k < 0  or  k > binom(n+1,2).
+A182898	 The trivariate g.f. H=H(t,s,z), where t (s) marks (1,-1)-returns ((1,1)-returns) to the horizontal axis, and z marks weight is given by H=1+zH+z^2*H+(t+s)z^3*cH, where c satisfies c = 1+zc+z^2*c+z^3*c^2.
+A182900	 G. f.: F=F(v,z) satisfies z^3*(z+z^2+v-vz-vz^2)F^2 - (1-z-z^2-z^3+vz^3)F+1=0 (z marks weight, v marks number of valleys).
+A182903	 Let F=F(t,s,x,y,z) be the 5-variate g.f. of the considered weighted lattice paths, where z marks weight, t (s) marks number of peaks (valleys), x (y) indicates that the path starts with a (1,1)-step ((1,-1)-step). Then F(t,s,x,y,z)=1+z(1+z)F(t,s,1,1,z)+xz^3[t+H(t,s,z)-1]F(t,s,s,1,z)+yz^3[s+H(s,t,z)-1]F(t,s,1,t,z), where H=H(t,s,z) is given by H=1+zH+z^2*H+z^3*(t-1+H)[s(H-1-zH-z^2*H)+1+zH+z^2*H] (see A182900).
+A185422	 (5)... R(n+1,x) = x*{R(n,x)+R'(n,x)+R''(n,x)},
+A187778	 Sum(n>0, 1/a(n)^k) = 1 + Sum(i>0, Sum(j>0, 1/(2^i * 3^j)^k = 1 + 1/((2^k-1)*(3^k-1)).
+A190164	 G.f. = G = G(t,z) satisfies the equation z^2*(1-tz+z^2)G^2-(1-z+z^2)(1-tz+z^2)G+1-z+z^2=0.
+A190167	 G.f. = G = G(s,z) satisfies the equation z^2*(1-z+z^2)G^2-(1-z+z^2)(1-sz+z^2)G+1-sz+z^2=0.
+A190170	 G.f. G=G(t,z) is obtained by elimitaing S from the equations G=1+zG+z^2*G(S-1-z+tz) and S=1+zS+z^2*S(S-1).
+A190172	 G.f. G=G(t,z) satisfies the equation G = 1 + zG + z^2*G(G-1-z+tz).
+A191305	 G.f.: G=G(t,z) satisfies G = 1+z*G + z^2*G(C-1+t), where C=1+z^2*C^2 (and G=2/(1-2*z+2*z^2-2*t*z^2+sqrt(1-4*z^2)), see Maple program).
+A191306	 G.f.: G=G(t,z) satisfies G = 1+z*G + t*z^2*g/(1-t*z^2*C), where C=1+z^2*C^2 and g=2/(1-2*z+sqrt(1-4*z^2)).
+A191308	 G.f.: G=G(t,z) satisfies G = 1+z*G + z^2*G(1+t*r), where r=r(t,z) is given by r=z^2*(1+r)*(1+t*r) (the Narayana function).
+A191316	 G.f.: G=G(t,z) is given by z*(1-2*z+z^2-z^3-t*z^2+t*z^3)*G^2 +(1-2*z)*(1+z^2-t*z^2)*G -(1+z^2-t*z^2)=0.
+A191316	 This can also be written as G = C/(1-z*C), where C=C(t,z) is given by z^2*C^2 - (1 + z^2 - t*z^2)*C + 1 + z^2 - t*z^2 = 0. - Emeric Deutsch, Jun 18 2011
+A191318	 G.f.: G=G(t,z) satisfies z*(1-z)*(z-1+2*t*z^2)*G^2 + (1-z)*(z-1+2*t*z^2)*G+1-t*z^2=0.
+A191387	 G.f.: G=G(t,z) is given by G=1+z*G +z^2*c*(t*(G-1-z*G)+1+z*G), where c=(1-sqrt(1-4*z^2))/(2*z^2).
+A191395	 G.f.: G=G(t,z) satisfies G = 1+z*G+z^2*G*(c+t/(1-t*z^2)-1/(1-z^2)), where c = (1-sqrt(1-4*z^2))/(2*z^2) (the Catalan function with argument z^2).
+A191399	 G.f. G=G(t,z) satisfies the equation (t*z^4-z^4-2*z^3+z^2+2*z-1)*G*(1+z*G)+1-z^2=0.
+A191518	 G.f.: G=G(t,z) satisfies aG^2 + bG -1 = 0, where a=z(1-z-z^2-z^3-tz+tz^2+tz^3), and b=1-2z-z^2+tz^2.
+A191523	 G.f.: G(t,z)=(z+r+r*z)/(1-t*z*(1+r)) where r=r(t,z) is a solution of z^2*(1+r)*(1+t*r) (the Narayana function with argument z^2).
+A191785	 G.f.: G=G(t,z) is given by G = C + z*C*(t*(G - 1 - z - z^2*G) + 1 + z + z^2*G), where C=C(t,z) is the solution of the equation z^2*(t+z^2-t*z^2)*C^2 - (1 - z^2 + t*z^2)*C + 1 = 0.
+A191791	 G.f.: G(t,z) = C/(1-z*C), where C=C(t,z) is given by z^2*(1+z^2-t*z^2)*C^2 - (1+z^2+z^4- t*z^2-t*z^4)*C + 1 + z^2 - t*z^2 = 0.
+A191793	 G.f.: G(t,z)= C/(1-z*C), where C=C(t,z) is given by z^2*C^2-(1+z^4-t*z^4)*C +1=0.
+A191795	 G.f.: G(t,z) =1- (1-C-z*C)/(1-z+t*z-t*z*C), where C=C(t,z) is given by t*z^2*C^2 - (1-2*z^2+2*t*z^2)*C + 1-z^2+t*z^2 = 0.
+A197653	                      C = (C(n,k))^2 *(C(n,n-1-k))^2
+A197654	                      C = (C(n,k))^3 *(C(n,n-1-k))^2
+A197655	                      C = (C(n,k))^4 *(C(n,n-1-k))^2
+A204456	 a(m,k) = a(p(m);k+1) - a(p(m);k), m>=2, k=0,...,(p(m)-1)/2,
+A209830	 As DELTA-triangle : T(n,k) = 3*T(n-1,k-1) + T(n-2,k) + 2*T(n-2,k-1) - T(n-2,k-2), T(0,0) = T(1,0) = T(2,0) = 1, T(1,1 = T(2,2) = 0, T(2,1) = 2 and T(n,k) = 0 if k<0 or if k>n . - _Philippe Deléham_, Mar 16 2012
+A228094	 d(n,k) = phi(n/k) + d'(n,k), where: If n is odd, then d'(n,k)= n when k=(n+1)/2 and d'(n,k)=0 otherwise. If n is even, then d'(n,k)=n/2 when k=n/2, (n+2)/2 and d'(n,k)=0 otherwise.
+A228783	 a(2*L,m) = [x^m](s(4*L,x)(mod C(4*L,x))), with s(4*L,x) = sum((-1)^(L-1-s)*A111125(L-1,s)*x^(2*s+1),s=0..L-1), L >= 1, m =0, ..., delta(4*L)-1, and
+A228783	 a(2*L+1,m) = [x^m](s(4*L+2,x)(mod C(2*L+1,x))), with s(4*L+2,x) = sum(A127677(L,s)*(2+x)^(L-s)),s=0..L) (with s(2,x) = 2 for L = 0), L >= 0,  m = 0, ..., delta(4*L+2)/2, with delta(n) = A055034(2*l).
+A228785	 a(l,m) = [x^(2*m+1)](s(2*l+1,x)(mod C(2*(2l+1),x))), with s(2*l+1,x) = sum((-1)^(l-1-s)* A111125(l1,s)*x^(2*s+1), s=0..l-1), l >= 1, m=0, ..., (delta(2*(2*l+1))/2 - 1), with delta(n) = A055034(n).
+A233357	 T(n,k) = ((S2)^2)(n,k) * k! = Sum(k<=i<=n) [ S2(n,i) * S2(i,k) ] * k!.
+A236842	 On the other hand, a composite integer n is in this sequence if and only if it is either in A014580 or it has such a proper factor k (1<k<n, k|n) that both k and n/k are members of this sequence.
+A237716	 a(2n)=Sum_{j=0}^{n/7} Binomial[n-5j, 2j]*2^{2j} + Sum_{j=0}^{(n-4)/7} Binomial[n-3-5j,2j+1}*2^{2j+1}.
+A237716	 a(2n+1)=Sum_{j=0}^{n/7} Binomial[n-5j, 2j]*2^{2j} + Sum_{j=0}^{(n-3)/7} Binomial[n-2-5j,2j+1}*2^{2j+1}).
+A242589	 sum = sum + digit-sum(digit-mult(prime,base=4),base=15). The function digit-mult(n) multiplies all digits d of n, where d > 0. For example, digit-mult(1230) = 1 * 2 * 3 = 6. Therefore, the digit-sum in base 15 of the digit-mult(333) in base 4 = digit-sum(3 * 3 * 3) = digit-sum(1C) = 1 + C = 13. (1C in base 15 = 27 in base 10).
+A245191	 Write n = 2^k-1+j (k>=0, 0<=j<2^k). Then a(n) = 2^(k-j+1)*A038183(j).
+A246177	 The trivariate g.f. G=G(t,s,z), where t marks area, s marks length (=number of steps), and z marks weight, satisfies G = 1+szG+sz^2G+ts^2z^3G(t,ts,z)G. This follows at once from the fact that every nonempty path is of the form hC or HC or UCDC, where h denotes a (1,0)-step of weight 1, H denotes a (1,0)-step of weight 2, U denotes a (1,1)-step, D denotes  a (1,-1)-step, and the C's denote paths, not necessarily the same. From the equation one can find G(t,s,z) as a continued fraction (the Maple program makes use of this).
+A246179	 G.f. G=G(t,z) satisfies G = 1 + z*G + z^2*G + t*z^3*g*G, where g=1+z*g+z^2*g+z^3*g^2.
+A246180	 G.f. G=G(t,z) satisfies G = 1 + t*z*G + t*z^2*G + z^3*G^2.
+A246181	 G.f. G=G(t,z) satisfies G = 1 + t*z*G + z^2*G + z^3*G^2.
+A246182	 G.f. G=G(t,z) satisfies z^3*(1+z-t*z)*G^2 - (1-t*z-z^2+t*z^3-z^3)*G+1+z-t*z=0.
+A246183	 G.f. G=G(t,z) satisfies z^3*(1+z^2-t*z^2)*G^2 - (1-z-t*z^2+t*z^3-z^3)*G +1+z^2-t*z^2=0.
+A246185	 G.f. g = g(t,z) satisfies (t*z^3 + z^2 - t*z^2 + z - t*z - 1 + t)*g^2 +(1 - 2*t + t*z + t*z^2)*g + t = 0.
+A246186	 The g.f. g = g(t,z) satisfies g = 1 + z*g + z^2*g + t*z^3*g*A, where A = 1 + z*g + z^2*g + z^3*g*A.
+A246187	 G.f.: G(t,z) = g/(1-t*z^2*g), where g=g(t,z) satisfies g = 1 + t*z*g + t*z^2*g +t^2*z^3*g^2.
+A247290	 G.f. G = G(t,z) satisfies G = 1 + z*G + z^2*G + z^3*G*(G - z + t*z).
+A247292	 G.f. G = G(t,z) satisfies G = 1 + z*G + z^2*G + z^3*G*(G - z^2 + t*z^2).
+A247294	 G.f. G = G(t,z) satisfies G = 1 + z*G + z^2*G + z^3*G*(G - z - z^2 + t*z + t*z^2).
+A2472
