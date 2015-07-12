@@ -103,7 +103,7 @@ object Library {
   }
 
   def writeXML(xml : Elem, theory : String) = {
-    XML.save("xml_out/" + theory +".omdoc", xml, "UTF-8", true, null)
+//    XML.save("xml_out/" + theory +".omdoc", xml, "UTF-8", true, null)
   }
 
   def writeFormula(formulas : List[String], theory : String) : Unit = {
@@ -127,7 +127,7 @@ object Library {
 //      crawlXMLLocal(n,n)
 //    }
 
-    crawlXMLLocal(53692, 53692)
+    crawlXMLLocal(1, max)
     println(TextParserIns.succeded)
     println(TextParserIns.calls)
     println(TextParserIns.exceptions)

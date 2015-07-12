@@ -6,7 +6,7 @@ package processor
 
 import java.io.Serializable
 
-import parser.{Num, Divisible, Expression, FormulaParser}
+import parser._
 
 import scala.util.parsing.combinator.{JavaTokenParsers, PackratParsers}
 import scala.xml.{Node, Elem}
@@ -129,9 +129,9 @@ class TextParser extends FormulaParser {
 object TextParserIns extends TextParser{
 
   def main(args : Array[String]): Unit = {
-    val test = "a(x)+3"
+    val test = "1   - 1    2 "
     println("input : "+ test)
-    println(parseAll(expression, test).get.toNode("A00000").toString)
+    println(parseAll(expression, test))
   }
 
 }

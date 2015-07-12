@@ -172,7 +172,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       sen_obracket~(sentence)~sen_cbracket ^? { // ex: (fraction continues) //TODO: (-1) //try expr if fail try words
         //      case ob~w~cb =>(Delim(ob) :: w) ::: (s :: Delim(cb) :: Nil)
 
-        //avoiding expression like (x+3) to be taken as Delim(() x +3  Delim())
+        //avoiding expression like (x+3) to be taken as Delim(() x + 3  Delim())
         case ob~w~cb if (w.parts.head.isInstanceOf[Line])=> (Delim(ob) :: w.parts):+ Delim(cb)
       } |
       rep1(delim) ^^{
@@ -224,7 +224,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   lazy val dots : PackratParser[String] = "..." | ".."
   lazy val reference : Regex = "A\\d{6}".r
   lazy val variable : PackratParser[String] = not(infix_ops)~>"\\w+\\d{0,1}\\b".r ^^ {x=>x}/*| "\\w+\\d+(?=\\()(?=\\))\\b".r*/
-  lazy val number : Regex = """(\d+(\.\d+)?)""".r
+  lazy val number : PackratParser[String] = """(\d+(\.\d+)?)""".r | """\d+(\.\d+)\b""".r
   lazy val sum : PackratParser[String] = "SUM" | "Sum" | "sum" | "Product" | "product" | "PRODUCT" | "limit" | "Limit" | "lim" | "prod" | "Prod"
   lazy val comparison : PackratParser[(Expression,Expression) => Expression] = ("~" | "<>" | "<=" | ">=" | "==" | ">" | "=" | "<" | "->" | ":=" | "=:") ^^{
     x => {(left: Expression, right : Expression) => Equation(x, left, right)}
@@ -404,6 +404,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
     multdiv~signed_factor ^^ {x => x}
 
   //add HERE what is not to be understood as lazy multiplication
+  //TODO : Add context so that once inside the function the words_inbracket is not checked ( or something similar) because of exp(2 Pi t)
   lazy val lazy_multiply : PackratParser[Expression] =
     (not(dots)~not(words_inbracket)~not(mod))~>unsigned_factor ^^ {x => x}
 
@@ -415,11 +416,12 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
     } |
       unsigned_factor ^^ {x=>x}
 
-  lazy val suffix_functions : Regex = "even\\b".r
-  //acts as factor with suffixes
+  lazy val suffix_functions : PackratParser[String] = "even\\b".r | "?"
+  // acts as factor with suffixes
   lazy val unsigned_factor : PackratParser[Expression] =
     unsigned_factor ~ suffix_functions ^^ {
       case x ~ "even" => Divisible(x,Num(2))
+      case x ~ "?" => QVar(x)
     } |
     factor~opt("!") ^^ {
       case (a:Expression)~ None => a
@@ -427,29 +429,67 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
     }
 
   lazy val factor : PackratParser[Expression] =
-    argument~opt("^"~signed_factor~opt(argument)) ^? {
+    argument_suffix~opt("^"~signed_factor~opt(argument)) ^? {
       case (a : Var)~Some("^"~(signed : Expression)~Some(arguments : ArgList)) =>{
-        Power(Func(a.name,arguments),signed)
+        Power(Func(a.name, arguments), signed)
       }
       case (a : ArgList)~Some("^"~(signed : Expression)~Some(arguments : ArgList))
-        if a.args.length==1 && arguments.args.length==1 => {
+        if a.args.length == 1 && arguments.args.length == 1 => { // TODO: Can drop the first a.args.length == 1, because we can have [-1,1,0]^2
         Power(a.args.head, Mul(signed :: arguments.args.head :: Nil))
       }
       case (a : ArgList)~Some("^"~(signed : Expression)~None) => Power(a.args.head, signed)
-      case (a : Expression)~Some("^"~(signed : Expression)~None) => Power(a,signed)
       case (a : ArgList)~None if a.args.length == 1 => a.args.head
+
+      // Query parser
+      case (ar : QVar)~Some("^"~signed~Some(arguments : ArgList))
+        if(ar.expr match {
+          case a: Var => true
+          case a: ArgList if a.args.length == 1 && arguments.args.length == 1 => true
+          case _ => false
+        }) => {
+          ar.expr match {
+            case a: Var => Power(QVar(Func(a.name, arguments)), signed) // TODO: NOT QUITE RIGHT, the ? is on the function name
+            case a: ArgList => Power(QVar(a.args.head), Mul(signed :: arguments.args.head :: Nil))
+          }
+        }
+      case (ar : QVar)~Some("^"~(signed : Expression)~None)
+        if(ar.expr match {
+          case a: ArgList => true
+          case _ => false
+        }) =>
+          ar.expr match {
+            case a: ArgList => Power(QVar(a.args.head), signed)
+          }
+      case (ar : QVar)~Some("^"~(signed : Expression)~None) => Power(ar, signed)
+      case (ar : QVar)~None
+        if(ar.expr match {
+          case a: ArgList if(a.args.length == 1) => true
+          case _ => false
+        }) =>
+        ar.expr match {
+          case a: ArgList => QVar(a.args.head)
+        }
+      case (ar : QVar)~None => ar
+
+      case (a : Expression)~Some("^"~(signed : Expression)~None) => Power(a,signed)
       case (a : Expression)~None => a
     } |
-      argument~opt("^"~signed_factor) ^^ {
-        case (a : Expression)~Some("^"~(signed : Expression)) =>{
-          Power(a,signed)
-        }
-      }
+      argument_suffix~opt("^"~signed_factor) ^^ {
+        case (ar : QVar)~Some("^"~(signed : Expression)) =>
+          Power(ar, signed)
+      case (a : Expression)~Some("^"~(signed : Expression)) =>
+        Power(a,signed)
 
-  //  lazy val factor_op : PackratParser[Expression] = "^"~signed_factor | ""
+    }
+
+  lazy val argument_suffix : PackratParser[Expression] =
+    argument ~ suffix_functions ^^ {
+      case (x : Expression) ~ "even" => Divisible(x, Num(2))
+      case (x : Expression) ~ "?" => QVar(x)
+    } |
+    argument ^^ {x => x}
 
   lazy val argument : PackratParser[Expression] =
-
       sum ~(opt("_")~>obracket~>expression)~(dots~>expression<~cbracket)~expression ^^{
         case (iter : String)~(from )~(to : Expression)~(on : ArgList) => Iters(iter, Some(from), Some(to), on.args.head)
         case (iter : String)~(from )~(to : Expression)~(on : Expression) => Iters(iter, Some(from), Some(to), on)
@@ -558,7 +598,6 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
     if(line.isEmpty){
        None
     } else {
-
       initSet()
       calls += 1
       try {
@@ -589,13 +628,11 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       }
     }
   }
-
 }
-
 
 object FormulaParserInst extends FormulaParser{
   def main(args : Array[String]): Unit = {
-    val test = "q = exp(2 Pi)"
+    val test = "2 Pi"
     println("input : "+ test)
     println(parse(expression, test))
 
