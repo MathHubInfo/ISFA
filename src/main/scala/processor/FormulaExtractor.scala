@@ -16,8 +16,6 @@ trait Line extends Expression
 case class Sentence(parts : List[Expression]) extends Line{
   override def present: String = parts.mkString("")
 
-  override def clear: Expression = this
-
   //  override def toString = present
   override def toNode(implicit theory: String): Elem = {
     <CMP>
@@ -42,8 +40,6 @@ case class Sentence(parts : List[Expression]) extends Line{
 case class Delim(delim : String) extends Line{
   override def present: String = delim
 
-  override def clear: Expression = this
-
   //  override def toString = present
   //shouldn't be called
   override def toNode(implicit theory: String): Elem = <text>{delim}</text>
@@ -51,8 +47,6 @@ case class Delim(delim : String) extends Line{
 
 case class Word(word : String) extends Line{
   override def present: String = word+" "
-
-  override def clear: Expression = this
 
   //  override def toString = present
 
@@ -63,8 +57,6 @@ case class Word(word : String) extends Line{
 case class Name(name : String) extends Line{
   override def present: String = name+" "
 
-  override def clear: Expression = this
-
   //  override def toString = present
   //shouldn't be called
   override def toNode(implicit theory: String): Elem = <text>{name}</text>
@@ -73,8 +65,6 @@ case class Name(name : String) extends Line{
 case class Date(date : String) extends Line{
   override def present: String = date+" "
 
-  override def clear: Expression = this
-
   //  override def toString = present
   //shouldn't be called
   override def toNode(implicit theory: String): Elem = <text>{date}</text>
@@ -82,8 +72,6 @@ case class Date(date : String) extends Line{
 
 case class Email(email : String) extends Line{
   override def present: String = email+" "
-
-  override def clear: Expression = this
 
   override def toNode(implicit theory: String): Elem = <text>{email}</text>
 }

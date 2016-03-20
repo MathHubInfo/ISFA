@@ -114,7 +114,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   lazy val cbracket : PackratParser[String] = ")" | "}" | "]"
 
   lazy val sen_obracket : PackratParser[String] = ("(" | "{" | "[")<~not("-")  // avoid considering expressions of (-exp text ...) as a text
-  lazy val sen_cbracket : PackratParser[String] = (")" | "}" | "]")/*<~not("""[\^\+\*\-\/\\]""".r)*/  // avoid considering expr part of (expr)^exponent as seperate from exponent
+  lazy val sen_cbracket : PackratParser[String] = ")" | "}" | "]" /*<~not("""[\^\+\*\-\/\\]""".r)*/  // avoid considering expr part of (expr)^exponent as seperate from exponent
 
   def isInDictionary(word : String) : Boolean = {
     if(word.isEmpty){
@@ -124,7 +124,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   }
 
   lazy val sentence: PackratParser[Sentence] = {
-    (rep1(sentence_cont))^^ { x => Sentence(x.flatten) }
+    rep1(sentence_cont) ^^ { x => Sentence(x.flatten) }
   }
 
   /*Why not do: rep1(rep(words)~rep(formulas)) - BUG (i call) in Scala. It can be easily fixed
@@ -169,11 +169,11 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       "_{0,2}[A-Z\\.']+[A-Za-z'[^\\x00-\\x7F]\\.]+(?![\\(\\{])_{0,2}(?![\\[\\{\\(])\\b".r ~ rep(delim) ^^ /*human names (not functions)*/ {
         case x~del =>  Name(x) :: del.map(x => Delim(x))
       } | // IDK - french names or something of this sort d'Artagon'k
-      sen_obracket~(sentence)~sen_cbracket ^? { // ex: (fraction continues) //TODO: (-1) //try expr if fail try words
+      sen_obracket~ sentence ~sen_cbracket ^? { // ex: (fraction continues) //TODO: (-1) //try expr if fail try words
         //      case ob~w~cb =>(Delim(ob) :: w) ::: (s :: Delim(cb) :: Nil)
 
         //avoiding expression like (x+3) to be taken as Delim(() x + 3  Delim())
-        case ob~w~cb if (w.parts.head.isInstanceOf[Line])=> (Delim(ob) :: w.parts):+ Delim(cb)
+        case ob~w~cb if w.parts.head.isInstanceOf[Line] => (Delim(ob) :: w.parts):+ Delim(cb)
       } |
       rep1(delim) ^^{
         x => x.map( y => Delim(y))
@@ -211,12 +211,12 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
   lazy val infix_ops = mod | element
 
+  lazy val generating_function = "[A-Za-z]G\\.f\\.:".r | "[A-Za-z]G\\.f\\.".r | "[A-Za-z]G\\.f".r | "GF"
   lazy val no_bracket_function =  not(number|infix_ops)~>("floor\\b".r | "ceiling\\b".r | "ceil\\b".r | "sqrt\\b".r | "log\\b".r | "sinh\\b".r |"sin\\b".r | "cosh\\b".r | "cos\\b".r |
-    "tan\\b".r |"tg\\b".r | "ctg\\b".r | "deg\\b".r | "binomial\\b".r | "numerator\\b".r | "exp\\b".r | "phi\\b".r | "If\\b" | "if\\b")
+    "tan\\b".r |"tg\\b".r | "ctg\\b".r | "deg\\b".r | "binomial\\b".r | "numerator\\b".r | "exp\\b".r | "phi\\b".r | "If\\b".r | "if\\b".r)
 
     // no mod (for modulo) because it is an infix operator so it shouldn't understand a mod b, as a*(mod(b))
   lazy val function: PackratParser[String] = no_bracket_function | not(number|infix_ops) ~> "[A-Za-z']+[A-Za-z_0-9']*(?=[\\(\\[\\{])\\b".r
-
 
   lazy val constant: PackratParser[String] = "Pi\\b".r | "pi\\b".r | "infinity\\b".r | "infty\\b".r | "Infinity\\b".r | "Infty\\b".r |
     "Inf\\b".r | "inf\\b".r
@@ -229,7 +229,6 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   lazy val comparison : PackratParser[(Expression,Expression) => Expression] = ("~" | "<>" | "<=" | ">=" | "==" | ">" | "=" | "<" | "->" | ":=" | "=:") ^^{
     x => {(left: Expression, right : Expression) => Equation(x, left, right)}
   }
-
 
   lazy val divisible : PackratParser[(Expression,Expression) => Expression] =
     "(\\|)|(divides)".r ^^ {
@@ -373,7 +372,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       case (no )~(expr : Expression)~None => Mul(Num(no.toDouble)::expr::Nil)
     } |*/
     unsigned_factor~rep(multiply | lazy_multiply) ^^ {
-      case (fctr : Expression)~(divs) if divs.length != 0 =>
+      case (fctr : Expression)~(divs) if divs.nonEmpty =>
         applyFunctionsInOrder(fctr :: divs.collect({
           case x : (Any~Expression)  => x._2
           case x : Expression => x
@@ -463,7 +462,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       case (ar : QVar)~Some("^"~(signed : Expression)~None) => Power(ar, signed)
       case (ar : QVar)~None
         if(ar.expr match {
-          case a: ArgList if(a.args.length == 1) => true
+          case a: ArgList if a.args.length == 1 => true
           case _ => false
         }) =>
         ar.expr match {
@@ -520,8 +519,11 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
         case (iter : String)~(on : Expression)~Some(expr) => Iters(iter, Some(on), None, expr)
         case (iter : String)~(on : Expression)~None => Iters(iter, None, None, on)
       } |
-      not(constant|reference)~>(no_bracket_function)~(not("^" | obracket)~>term_no_fact) ^^ {
-        case (a : String)~(b : ArgList)  =>
+      not(constant|reference)~> generating_function ~>(not("^" | obracket)~>term_no_fact) ^^ {
+        case (expression: Expression) => GeneratingFunction(expression)
+      } |
+      not(constant|reference)~> no_bracket_function ~(not("^" | obracket)~>term_no_fact) ^^ {
+        case (a : String)~(b : ArgList) =>
           if(variables.contains(a) && b.args.length == 1){
             Mul(List(Var(a), b.args.head))
           }else {
@@ -542,6 +544,9 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
           }else {
             Func(a, ArgList(b :: Nil))
           }
+      } |
+      (not(constant|reference)~generating_function)~>(argument) ^^ {
+        case (b : ArgList)  => GeneratingFunctionDef(b)
       } |
       not(constant|reference)~>opt(function)~(argument) ^^ {
         case Some(a : String)~(b : ArgList)  =>
@@ -632,7 +637,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
 object FormulaParserInst extends FormulaParser{
   def main(args : Array[String]): Unit = {
-    val test = "2 Pi"
+    val test = "x^2+1/(2x+1)"
     println("input : "+ test)
     println(parse(expression, test))
 
