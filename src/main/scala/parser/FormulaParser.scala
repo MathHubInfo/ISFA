@@ -102,7 +102,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   }
 
   val dictionary = Source.fromFile(getClass.getResource("/dictionary").getPath).getLines().map(_.trim).toSet
-  val exceptionCases: Regex = List("G.f", "[A-Za-z]\\-th").mkString("|").r
+  val exceptionCases: Regex = List("[A-Za-z]\\-th").mkString("|").r
 
   lazy val word: Regex = "[A-Za-z\\']+(?![\\(\\[\\{\\<\\=\\>])\\b".r
   lazy val delim: Regex = "([\t\n\\.\\?\\!\\:\\;\\-\\=\\#\\*\\,\\/]|(\\/\\/)|(\\\\\\\\))".r
@@ -166,7 +166,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
         case name~sym~dom~dels => Email(name+sym+dom) :: Delim(dels.mkString("")) :: Nil
       } |
       //unicode|
-      "_{0,2}[A-Z\\.']+[A-Za-z'[^\\x00-\\x7F]\\.]+(?![\\(\\{])_{0,2}(?![\\[\\{\\(])\\b".r ~ rep(delim) ^^ /*human names (not functions)*/ {
+      not(generating_function)~>"_{0,2}[A-Z\\.']+[A-Za-z'[^\\x00-\\x7F]\\.]+(?![\\(\\{])_{0,2}(?![\\[\\{\\(])\\b".r ~ rep(delim) ^^ /*human names (not functions)*/ {
         case x~del =>  Name(x) :: del.map(x => Delim(x))
       } | // IDK - french names or something of this sort d'Artagon'k
       sen_obracket~ sentence ~sen_cbracket ^? { // ex: (fraction continues) //TODO: (-1) //try expr if fail try words
@@ -197,7 +197,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
         case name~sym~dom~dels => Email(name+sym+dom) :: Delim(dels.mkString("")) :: Nil
       } |
       //unicode|
-      "_*[A-Z\\.']+[A-Za-z'[^\\x00-\\x7F]\\.]+(?![\\(\\{])_*(?![\\[\\{\\(])\\b".r ~ rep(delim) ^^ /*human names (not functions)*/ {
+      not(generating_function)~>"_*[A-Z\\.']+[A-Za-z'[^\\x00-\\x7F]\\.]+(?![\\(\\{])_*(?![\\[\\{\\(])\\b".r ~ rep(delim) ^^ /*human names (not functions)*/ {
         case x~del =>  Name(x) :: del.map(x => Delim(x))
       } |
       sen_obracket~words~sentence~sen_cbracket ^^ { // ex: (fraction continues) //TODO: (-1) //try expr if fail try words
@@ -211,7 +211,8 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
   lazy val infix_ops = mod | element
 
-  lazy val generating_function = "[A-Za-z]G\\.f\\.:".r | "[A-Za-z]G\\.f\\.".r | "[A-Za-z]G\\.f".r | "GF"
+  lazy val generating_function_def = "(?i)GF".r
+  lazy val generating_function = "(?i)[O]*G\\.f\\.:[ =]*".r | "(?i)[O]*G\\.f\\.[ =]*".r | "(?i)[O]*G\\.f[ =]*".r
   lazy val no_bracket_function =  not(number|infix_ops)~>("floor\\b".r | "ceiling\\b".r | "ceil\\b".r | "sqrt\\b".r | "log\\b".r | "sinh\\b".r |"sin\\b".r | "cosh\\b".r | "cos\\b".r |
     "tan\\b".r |"tg\\b".r | "ctg\\b".r | "deg\\b".r | "binomial\\b".r | "numerator\\b".r | "exp\\b".r | "phi\\b".r | "If\\b".r | "if\\b".r)
 
@@ -285,11 +286,15 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
 
   lazy val expression : PackratParser[Expression] =
+    generating_function~c_expression ^^ {
+      case gn~exp => GeneratingFunction(exp)
+    } |
     (c_expression~rep(comparison~c_expression)) ^^ {
       case expr~listexpr if listexpr.length != 0 =>
         applyFunctionsInOrder( expr :: listexpr.map(_._2), listexpr.map(_._1) )
       case expr~listexpr => expr
     }
+
 
   lazy val expression_iters : PackratParser[Expression] =
     (c_expression_iters~rep(comparison~c_expression_iters)) ^^ {
@@ -519,9 +524,6 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
         case (iter : String)~(on : Expression)~Some(expr) => Iters(iter, Some(on), None, expr)
         case (iter : String)~(on : Expression)~None => Iters(iter, None, None, on)
       } |
-      not(constant|reference)~> generating_function ~>(not("^" | obracket)~>term_no_fact) ^^ {
-        case (expression: Expression) => GeneratingFunction(expression)
-      } |
       not(constant|reference)~> no_bracket_function ~(not("^" | obracket)~>term_no_fact) ^^ {
         case (a : String)~(b : ArgList) =>
           if(variables.contains(a) && b.args.length == 1){
@@ -545,7 +547,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
             Func(a, ArgList(b :: Nil))
           }
       } |
-      (not(constant|reference)~generating_function)~>(argument) ^^ {
+      (not(constant|reference)~generating_function_def)~>(argument) ^^ {
         case (b : ArgList)  => GeneratingFunctionDef(b)
       } |
       not(constant|reference)~>opt(function)~(argument) ^^ {
@@ -637,9 +639,14 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
 object FormulaParserInst extends FormulaParser{
   def main(args : Array[String]): Unit = {
-    val test = "x^2+1/(2x+1)"
+    val test = "\t\nE.g.f.: (1+sin(x))/cos(x) = tan(x) + sec(x).\nE.g.f. for a(n+1) is 1/(cos(x/2)-sin(x/2))^2 = 1/(1-sin(x)) = d/dx(sec(x)+tan(x)).\nE.g.f. A(x)=-log(1-sin(x)), for a(n+1). - Vladimir Kruchinin, Aug 09 2010\nO.g.f.: A(x) = 1+x/(1-x-x^2/(1-2*x-3*x^2/(1-3*x-6*x^2/(1-4*x-10*x^2/(1-... -n*x-(n*(n+1)/2)*x^2/(1- ...)))))) (continued fraction). - Paul D. Hanna, Jan 17 2006\nO.g.f. A(x) = y satisfies 2y' = 1 + y^2. - Michael Somos, Feb 03 2004\na(n) = P_n(0) + Q_n(0) (see A155100 and A104035), defining Q_{-1} = 0. Cf. A156142.\n2*a(n+1) = Sum_{k=0..n} binomial(n, k)*a(k)*a(n-k)."
+    val lines = test.split("\n")
     println("input : "+ test)
-    println(parse(expression, test))
+    val parseed = lines.map(TextParserIns.parseLine(_))
+    parseed.foreach(println)
+
+    println("GFS")
+    parseed.map(x => x.map(y => DocumentParser.getGeneratingFunction(y))).foreach(println)
 
   }
 

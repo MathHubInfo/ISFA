@@ -15,14 +15,6 @@ import scala.xml.Elem
  */
 
 
-case class QVar(expr : Expression) extends Expression{
-  def present : String = expr.present
-  def toNode(implicit theory : String) : Elem = <QVAR>{expr.toNode}</QVAR>
-  def clear = this
-  override def toString = "QVar(" + expr.toString +")"
-}
-
-
 class QueryParser extends JavaTokenParsers with PackratParsers {
   var variables = new mutable.HashSet[String]()
   var functions = new mutable.HashSet[String]()

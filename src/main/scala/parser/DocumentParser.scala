@@ -1,11 +1,76 @@
 package parser
 
+import com.mongodb.casbah.MongoClient
+import com.mongodb.casbah.commons.MongoDBObject
+import com.mongodb.casbah.Imports._
+
+import com.novus.salat.annotations._
+import com.novus.salat.dao.{DAO, ModelCompanion, SalatDAO}
+import library.Library
+import org.bson.types.ObjectId
+import org.json4s.{NoTypeHints, ShortTypeHints}
+import org.json4s.native.Serialization
+import parser.DocumentParser.GeneratingFunctionDefinition
 import processor.{TextParserIns, TextParser}
+import com.novus.salat.global.ctx
 
 import scala.io.{BufferedSource, Source}
 import scala.util.matching.Regex
 import scala.util.matching.Regex.Match
 import scala.xml._
+
+import org.json4s.native.Serialization._
+
+case class Theory(
+  @Key("_id") id: ObjectId = new ObjectId(),
+  theory: String,
+  name: Option[String],
+  formulas: Seq[String],
+  var generatingFunctions: Seq[String] = List(),
+  var pureGeneratingFunctions: Seq[String] = List(),
+  var partialFractions: Seq[String] = List(),
+  var sage: List[String] = List(),
+  var pureGeneratingFunctionsPartialized: List[String] = List(),
+  var sageUnified: List[String] = List()
+){
+//  override def toString() = s"$theory \n ${generatingFunctions.map(_.toString + "\n")}"
+}
+
+case class PartialFractionToTransforms(expression: String, transforms: List[List[String]])
+object PartialFractionToTransforms {
+  val hints = ShortTypeHints(List(classOf[PartialFractionToTransforms], classOf[Expression], classOf[String]))
+  implicit val ptformat = Serialization.formats(hints)
+}
+
+case class PartialFractionAndTransform(expression: Expression, transform: String)
+object PartialFractionAndTransform {
+  import Expression.format
+  val hints = ShortTypeHints(List(classOf[PartialFractionAndTransform], classOf[Expression], classOf[String]))
+  implicit val pformat = Serialization.formats(hints)
+}
+
+object DocumentDao extends ModelCompanion[Theory, ObjectId] {
+  val mongoClient = MongoClient("localhost", 27017)
+  val db = mongoClient("OEIS")
+  def collection = db("theory")
+  override def dao: DAO[Theory, ObjectId] = new SalatDAO[Theory, ObjectId](collection) {}
+
+  def findOneByTheory(theoryNumber: Int): Option[Theory] = {
+    val theory = Library.createID(theoryNumber.toString)
+
+    dao.findOne(MongoDBObject("theory" -> theory))
+  }
+
+  def removeOneByTheory(theory: String) = {
+    dao.findOne(MongoDBObject("theory" -> theory)).map(dao.remove)
+  }
+
+  def updateDao(theory: Theory) = {
+    dao.removeById(theory.id)
+    dao.insert(theory)
+  }
+}
+
 
 object DocumentParser {
   val dictionary = Source.fromFile(getClass.getResource("/dictionary").getPath).getLines().toSet
@@ -82,6 +147,30 @@ object DocumentParser {
     addHeaders(xml collect {case a : Elem => a}, theory.get)
   }
 
+  def parseLinesTheory(documentLines : List[String] ) : Theory = {
+    var theory : Option[String] = None
+    var name: Option[String] = None
+
+    val formulas: collection.mutable.ListBuffer[Expression] = collection.mutable.ListBuffer.empty
+    val xml: List[Any] = documentLines.collect({
+      case line if line.length > 2 =>
+        val contentIndex: Option[Match] = IDregex.findFirstMatchIn(line)
+
+        if(!contentIndex.isEmpty && theory.isEmpty){
+          theory = Some(contentIndex.get.matched)
+        }
+
+        line.substring(0,2) match{
+          case "%N" =>  name = Some(line.substring(contentIndex.get.end))
+          case "%F" => TextParserIns.parseLine(line.substring(contentIndex.get.end), theory.get).foreach {x => formulas += x}
+          case _ =>
+        }
+    })
+
+    import Expression.format
+    Theory(theory = theory.get, name = name, formulas = formulas.toSeq.map(x => write(x)))
+  }
+
   def fromReaderToXML(source : BufferedSource) : Elem = {
     parseLines(source.getLines().toList)
   }
@@ -90,6 +179,15 @@ object DocumentParser {
     parseLines(document.lines.toList).toString
   }
 
+  case class GeneratingFunctionDefinition(function: Func, body: Expression)
+  def getGeneratingFunction(expression: Expression): List[GeneratingFunctionDefinition] = {
+    expression match {
+      case Sentence(exps) => exps.flatMap(getGeneratingFunction)
+      case in: GeneratingFunction => List(GeneratingFunctionDefinition(Func("GF", ArgList(List(Var("x")))), in.expression))
+      case Equation(eq, GeneratingFunctionDef(exp), definition) if eq.trim == "=" => List(GeneratingFunctionDefinition(Func("GF", exp), definition))
+      case _ => List()
+    }
+  }
 
   def split(s:String, l:List[String]):List[(String,String)] = {
     if(s == null){
@@ -256,8 +354,8 @@ object DocumentParser {
 
   def main(args : Array[String]) : Unit = {
     val res = extractFormula("Recurrence:A(x) + 3 + Prod_{i=1..t: t^2+4}. - Elhaida, Mar 20, 1994 ")
-    println(res)
-    println(res._1.zipWithIndex)
+//    println(res)
+//    println(res._1.zipWithIndex)
   }
 
 }

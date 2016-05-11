@@ -1,14 +1,20 @@
+package library
 
+import org.json4s.NoTypeHints
+import org.json4s.native.Serialization
+import org.json4s.native.Serialization._
 import java.io.File
 import java.net.URL
 import java.util.Calendar
-import processor.{TextParserIns}
+
+import parser._
+import processor.TextParserIns
+import relations.{GeneratingFunctionSearch, UnificationSearch}
 
 import scala.io.Source
 import scala.util.Random
-import scala.xml.{Elem, XML}
-import parser.{DocumentParser}
-
+import scala.xml.Elem
+import parser.Expression.format
 
 object Library {
   //store everything, check before crawling
@@ -16,7 +22,7 @@ object Library {
   private def getURL(entryID : String) : URL = new URL("""http://oeis.org/search?q=id:"""+entryID+"""&fmt=text""")
 
   //will just give id of number-th OEIS entry
-  private def createID( number : String) : String = "A"+"000000".substring(0,6-number.length) + number
+  def createID( number : String) : String = "A"+"000000".substring(0,6-number.length) + number
 
   def crawlDocuments(from : Int, to :Int) = {
     if(from < 1){
@@ -66,7 +72,7 @@ object Library {
 
     from to to foreach(i =>{
       val theory = createID(i.toString)
-      val fileLoc = "/home/enxhi/projects/OEIST/source/oeis_source/"+theory+".txt"
+      val fileLoc = s"all/$theory.txt"
       val ioFile = new java.io.File(fileLoc)
       if(ioFile.exists) {
         val file = Source.fromFile(ioFile)
@@ -82,6 +88,56 @@ object Library {
         println("File doesn't exists: " + theory)
       }
     })
+  }
+
+  def parseLocalTheory(from : Int, to : Int)= {
+    if(from < 1){
+      throw new Error("There is no entry "+from+" in OEIS!")
+    }
+    var count = 0
+    from to to foreach(i =>{
+      val theoryId = createID(i.toString)
+      val fileLoc = s"all/$theoryId.txt"
+      val ioFile = new java.io.File(fileLoc)
+      if(ioFile.exists) {
+        val file = Source.fromFile(ioFile)
+        val theory = DocumentParser.parseLinesTheory(file.getLines().toList)
+
+        if (i % 1000 == 0) {
+          println("Fetching entry " + theory)
+        }
+
+        file.close()
+
+        try {
+          theory.formulas.map(read[Sentence])
+        } catch {
+          case e => println("THEORY " + theory.formulas, e); Seq("")
+        }
+
+        if (theory.formulas.nonEmpty) {
+          val formulas = theory.formulas.map(read[Sentence])
+          val generatingFunctions = formulas.map(DocumentParser.getGeneratingFunction).toList
+          theory.generatingFunctions = generatingFunctions.flatten.map(write(_))
+          theory.pureGeneratingFunctions = generatingFunctions.flatten.map(GeneratingFunctionSearch.getGeneratingFunction).map(write(_))
+
+          if (theory.generatingFunctions.nonEmpty) {
+            count += theory.generatingFunctions.length
+          }
+          if (theory.generatingFunctions.nonEmpty) {
+            try {
+              DocumentDao.save(theory)
+            } catch {
+              case e => println(" Error when saving to DAO" + theory, e)
+            }
+          }
+        }
+      } else {
+        println("File doesn't exists: " + theoryId)
+      }
+    })
+
+    println("TOTAL " + count)
   }
 
   def getXML(entry : Int) : Elem = {
@@ -114,23 +170,17 @@ object Library {
 
   def main(args : Array[String]) = {
 //    crawlXMLLocal(1, 3000)
-    println(Calendar.getInstance().getTime())
-    val documents = 5000
-    val max = 265000
+    val start = Calendar.getInstance().getTime()
+    val max = 270000
     val scriptPath = "logs/copyScript"
-    val file = new File(scriptPath)
     val rndm = new Random()
-//    1 to documents foreach { x =>
-//      val n = rndm.nextInt(max) + 1
-//      val theory = createID(n.toString)
-//      printToFile(file)( p => "cp ../../oeis/source/oeis_omdoc/" + theory + " ../source/" )
-//      crawlXMLLocal(n,n)
-//    }
 
-    crawlXMLLocal(1, max)
-    println(TextParserIns.succeded)
-    println(TextParserIns.calls)
-    println(TextParserIns.exceptions)
-    println(Calendar.getInstance().getTime())
+    parseLocalTheory(1, max)
+
+//    crawlXMLLocal(1, max)
+    println("Succeded " + TextParserIns.succeded)
+    println("Calls " +TextParserIns.calls)
+    println("Exceptions " + TextParserIns.exceptions)
+    println(start, Calendar.getInstance().getTime())
   }
 }

@@ -6,75 +6,12 @@ package processor
 
 import java.io.Serializable
 
+import com.novus.salat.annotations.raw.Salat
 import parser._
+import play.api.libs.json.Format
 
 import scala.util.parsing.combinator.{JavaTokenParsers, PackratParsers}
 import scala.xml.{Node, Elem}
-
-trait Line extends Expression
-
-case class Sentence(parts : List[Expression]) extends Line{
-  override def present: String = parts.mkString("")
-
-  //  override def toString = present
-  override def toNode(implicit theory: String): Elem = {
-    <CMP>
-      {parts.map {
-      case a: Line => a.present
-      case a: Expression => <OMOBJ>
-        {a.toNode}
-      </OMOBJ>
-    }}
-    </CMP>
-  }
-
-  def toSubNode(implicit theory: String): List[Serializable] = {
-    parts.map {
-      case a: Sentence => a.toSubNode
-      case a: Line => a.present
-      case a: Expression => <OMOBJ>{ a.toNode }</OMOBJ>
-    }
-  }
-}
-
-case class Delim(delim : String) extends Line{
-  override def present: String = delim
-
-  //  override def toString = present
-  //shouldn't be called
-  override def toNode(implicit theory: String): Elem = <text>{delim}</text>
-}
-
-case class Word(word : String) extends Line{
-  override def present: String = word+" "
-
-  //  override def toString = present
-
-  //shouldn't be called
-  override def toNode(implicit theory: String): Elem = <text>{word}</text>
-}
-
-case class Name(name : String) extends Line{
-  override def present: String = name+" "
-
-  //  override def toString = present
-  //shouldn't be called
-  override def toNode(implicit theory: String): Elem = <text>{name}</text>
-}
-
-case class Date(date : String) extends Line{
-  override def present: String = date+" "
-
-  //  override def toString = present
-  //shouldn't be called
-  override def toNode(implicit theory: String): Elem = <text>{date}</text>
-}
-
-case class Email(email : String) extends Line{
-  override def present: String = email+" "
-
-  override def toNode(implicit theory: String): Elem = <text>{email}</text>
-}
 
 class TextParser extends FormulaParser {
 
@@ -119,7 +56,7 @@ object TextParserIns extends TextParser{
   def main(args : Array[String]): Unit = {
     val test = "1   - 1    2 "
     println("input : "+ test)
-    println(parseAll(expression, test))
+//    println(parseAll(expression, test))
   }
 
 }
