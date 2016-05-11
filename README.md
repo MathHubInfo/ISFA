@@ -1,13 +1,5 @@
 # OEIS
-A parser for OEIS formulas.
+This implements a parser for the OEIS formulas and the transformation of those to OMDoc.
+On top of this implements a relation finder between OEIS sequences. 
 
-TODOS:
-    1. Allow phi() func(); - DONE
-    5. Create a dictionary of external words and add them to the "exceptions" rule of grammar when parsing the grammmar
-    n = p_a * p_b * ... * p_h * p_i * p_j * p_k
-    B_4(-1) = 2*log(3) - (2/3)*Catalan + 2*Ti_2(3-2*sqrt(2)) - sqrt(8) * arctan( 1/sqrt(8) )
-    postProcess fix
-     a(n+1) is the determinant of the n X n symmetric Pascal matrix M_(i, j) = binomial(i+j+1, i). - _Benoit Cloitre_, Aug 19 2003 - post process this - DONE
-     
-    7. Add mod support, note different forms, 1 mod 3, x = 4 (mod 3), different meanings. - DONE
-    8. sin an! should be parsed as sin(an!) (change the _argument_ rule). (  ) if not bla bla - DONE
+Paper can be found [here](https://drive.google.com/open?id=0B9hWq2e2xoY2YUI3UFhYY1d1aWs).
