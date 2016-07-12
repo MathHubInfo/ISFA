@@ -23,12 +23,6 @@ import scala.collection.mutable.ListBuffer
 import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, Future}
 
-object UnificationSearch {
-  def unify(formula: Expression, withFormula: Expression) = {
-
-  }
-}
-
 object GeneratingFunctionSearch {
   def logger = LoggerFactory.getLogger(this.getClass)
   private val renameBase = "vari"
@@ -141,7 +135,9 @@ object GeneratingFunctionSearch {
 
   def extractPartialFractionSummands(partialFractions: Expression): List[Expression] = partialFractions match {
     case Add(expr) => expr.flatMap(extractPartialFractionSummands)
-    case Sub(expr) => expr.flatMap(extractPartialFractionSummands)
+    case Sub(expr) =>
+      val partials = expr.flatMap(extractPartialFractionSummands)
+      partials.headOption.toList ::: partials.tail.map(Neg.apply)
     case x => x :: Nil
   }
 
@@ -151,6 +147,14 @@ object GeneratingFunctionSearch {
     val same = expression
 
     (same, "unit") :: integrate.toList.map((_, "integrate")) ::: differentiate.toList.map((_, "differentiate"))
+  }
+
+  def doTransformations(expression: Expression): List[(Expression,Transformation)] = {
+    val integrate = SageWrapper.integrate(expression)
+    val differentiate = SageWrapper.derivative(expression)
+    val same = expression
+
+    (same, Unit) :: integrate.toList.map((_, Integral)) ::: differentiate.toList.map((_, Differential))
   }
 
   def checkIfExists(expression: Expression, id: String) = {
@@ -231,6 +235,57 @@ object GeneratingFunctionSearch {
       Div(Num(1) :: Sub(Num(1) ::removeConstants(Mul(bx)) :: Nil) :: Nil)
     case x => x
   }
+
+
+  sealed trait Transformation {
+    def inverse: Transformation
+    def toString: String
+  }
+  object Integral extends Transformation {
+    def inverse = Differential
+    override def toString = "integrate"
+  }
+  object Differential extends Transformation {
+    def inverse = Integral
+    override def toString = "differential"
+  }
+  object Unit extends Transformation {
+    def inverse = Unit
+    override def toString = ""
+  }
+
+//  case class GeneratingFunctionRep(
+//    generatingFunction: Expression,
+//    partialFractions: Seq[Expression]
+//  )
+//
+//  case class PartialFractionsRep(
+//    partialFraction: Expression,
+//    normalized: Seq[TransformedRep]
+//  )
+//
+//  case class TransformedRep(
+//    transformed: Expression,
+//    transformation: Transformation
+//  )
+//  case class TheoryRep(
+//    generatingFunctions: Seq[]
+//  )
+
+
+  def secondMethod() = {
+    val theories = TheoryRepDao.findAll().toArray
+
+    theories.foreach { theoryRep =>
+      theoryRep.generatingFunctions.foreach { generatingFunction =>
+        val partialFractions = SageWrapper.partialFraction(generatingFunction).map(extractPartialFractionSummands)
+        partialFractions.foreach(_.foreach { partialFraction =>
+
+        })
+      }
+    }
+  }
+
 
   def tryFunctionMatch() = {
     val theories = DocumentDao.findAll().toArray
@@ -385,90 +440,104 @@ object GeneratingFunctionSearch {
   }
 
   def tryFunctionMatchWithDirectSubs() = {
-    val hashSet = new ConcurrentHashMap[Expression, List[String]]().asScala
-    val theories = DocumentDao.findAll().toArray
+    case class MappedTheory(
+      theory: TheoryRep,
+      initialGeneratingFunction: Expression,
+      initialPartialFraction: Expression,
+      unifiedPartialFraction: Expression,
+      restOfPartialFractions: List[Expression]
+    )
+
+    val hashMap = new mutable.HashMap[Expression, List[MappedTheory]]()
+    val theories = TheoryRepDao.findAll().toArray
     println(s"Length is ${theories.length}")
 
     import parser.Expression._
 
-    val indices = theories.indices
+    val indices = theories.indices.takeWhile(_ < 100)
 
-    for(i <- indices){
-      val mainTheory = theories(i)
+    for (i <- indices) {
+      val theoryRep = theories(i)
       println(i)
-      mainTheory.pureGeneratingFunctionsPartialized.foreach { mainGF =>
-        val gfProcessed = read[Expression](mainGF)
+      theoryRep.generatingFunctions.foreach { generatingFunction =>
+        val partialFractionsOpt = SageWrapper.partialFraction(generatingFunction).map(extractPartialFractionSummands)
 
-        val value = rename(removeXMultiplications(removeConstants(gfProcessed)))
-        if(hashSet.contains(value)) {
-          hashSet.put(value, mainTheory.theory::hashSet(value))
-        } else hashSet.put(value, List(mainTheory.theory))
+        partialFractionsOpt.foreach(partialFractions =>
+          partialFractions.foreach { partialFraction =>
+            val value = removeXMultiplications(removeConstants(partialFraction))
+            val mappedTheory = MappedTheory(
+              theory = theoryRep,
+              initialGeneratingFunction = generatingFunction,
+              initialPartialFraction = partialFraction,
+              unifiedPartialFraction = value,
+              restOfPartialFractions = partialFractions.filterNot(_ == partialFraction)
+            )
+            if (hashMap.contains(value)) {
+              hashMap.put(value, mappedTheory :: hashMap(value))
+            } else hashMap.put(value, List(mappedTheory))
+          }
+        )
+
       }
     }
 
-    val map = new mutable.HashMap[String, mutable.Map[Expression, List[(Expression, String, List[String])]]]()
-    for(
-      i <- indices
-    ) {
-        val expressions = theories(i).pureGeneratingFunctions
-        val theoryId = theories(i).theory
-        val partialFractionHashMap = new mutable.HashMap[Expression, List[(Expression, String, List[String])]]()
-        map.put(theoryId, partialFractionHashMap)
+    case class ExpressingTheory(
+      theoryId: String,
+      partialFraction: Expression,
+      transformedPartialFunction: Expression,
+      transformation: Transformation,
+      restOfPartialFractions: List[Expression],
+      mappedTheories: List[MappedTheory]
+    )
 
-        val parsedSageTheories = theories(i).sageUnified.map(parseSageTheory)
+    val map = new mutable.HashMap[String, List[ExpressingTheory]]()
+    for (i <- indices) {
+      println(s"Processing theory $i")
+      val generatingFunctions = theories(i).generatingFunctions
+      generatingFunctions.foreach { generatingFunction =>
+        val partialFractionsOpt = SageWrapper.partialFraction(generatingFunction).map(extractPartialFractionSummands)
 
-        parsedSageTheories.map { parsedSageTheory  =>
-          val expression = parsedSageTheory.generatingFunctionPartial
-//        println(s"Expression: ${expression.toSage}")
-
-          val extractedGFs = parsedSageTheory.extractedPartials.filter(_.nonEmpty)
-
-          extractedGFs.map { extractedPartialAndTransformations =>
-            println(extractedPartialAndTransformations)
-            val partialFraction = extractedPartialAndTransformations.head.expression
-            map(theoryId).put(partialFraction, Nil)
-
-//            println(s"Partial fraction: ${partialFraction.toSage}")
-            val transformed = extractedPartialAndTransformations
-            transformed.map { transformedPF =>
-              val pff = transformedPF.expression
-              val renamed = rename(pff)
-              if (hashSet.contains(renamed) && hashSet(renamed).head != theories(i).theory) {
-                val m = map(theoryId).put(partialFraction, (renamed, transformedPF.transform, hashSet(renamed)) :: map(theoryId)(partialFraction))
-                  logger.debug(m.toString())
-                  m
+        partialFractionsOpt.foreach { partialFractions =>
+          partialFractions.foreach { partialFraction =>
+            doTransformations(partialFraction).foreach { case (transformedPartialFraction, transformation) =>
+              if (hashMap.contains(transformedPartialFraction) && hashMap(transformedPartialFraction).head.theory.theory != theories(i).theory) {
+                map.put(
+                  theories(i).theory,
+                  ExpressingTheory(
+                    theories(i).theory,
+                    partialFraction,
+                    transformedPartialFraction,
+                    transformation,
+                    partialFractions.filterNot(_ == partialFraction),
+                    hashMap(transformedPartialFraction)
+                  ) :: map.getOrElse(theories(i).theory, Nil)
+                )
               }
             }
           }
+        }
       }
     }
 
-//    logger.debug("finished")
-//    logger.debug(map.map(x => (x._1, x._2.map(y => (y._1.toSage, y._2.map(z => (z._1.toSage, z._2, z._3)))))).mkString("\n"))
-//    logger.debug(s"\n\n\n")
-//
-//    logger.debug("Direct relations to be printed \n\n\n\n")
-    val directRelations = map.filter(theoryMap => theoryMap._2.forall(_._2.nonEmpty) && theoryMap._2.nonEmpty)
-//    logger.debug(directRelations.map(x => (x._1, x._2.map(y => (y._1.toSage, y._2.map(z => (z._1.toSage, z._2, z._3)))))).mkString("\n"))
-//    logger.debug("\n\n\n\n")
-//
-//    logger.debug("Generating functions per sequence to be printed \n\n\n\n\n")
-//    logger.debug("\n\n\n\n\n")
-//
+    val relations = map.values.flatten.flatMap { expressionTheory =>
+      expressionTheory.mappedTheories.map { mapTheory =>
+        val IUPFROpt = SageWrapper.divide(mapTheory.initialPartialFraction, mapTheory.unifiedPartialFraction)
+        println(IUPFROpt)
+        IUPFROpt.map { IUPFR =>
+          val substitution = Add(List(SeqReference(expressionTheory.theoryId), Neg(Add(expressionTheory.restOfPartialFractions))))
+          Equation(
+            "=",
+            SeqReference(mapTheory.theory.theory),
+            Add(
+              Mul(IUPFR :: Func(expressionTheory.transformation.toString, ArgList(List(substitution))) :: Nil) :: mapTheory.restOfPartialFractions
+            )
+          )
+        }
+      }
+    }
 
-    val script = map.toList.sortBy(_._1.substring(1).toInt).map { case (k,v) =>
-      s"""{ "name": "$k", "size": 10, "imports": [${v.flatMap(x => x._2.flatMap(y => y._3).distinct).map(x => "\"" + x + "\"").mkString(",")}] } """
-    }.mkString(",")
-//
-    logger.debug("script being printed")
-    logger.debug(script)
-
-    logger.debug(s"Number of theories that can be expressed as direct relations: ${directRelations.size}")
-    logger.debug(s"Number of unique sequence direct relations: ${directRelations.flatMap(theoryMap => theoryMap._2.flatMap(_._2.flatMap(_._3)).toList.distinct).toList.distinct.length}")
-    logger.debug(s"Number of total direct relations: ${directRelations.map(theoryMap => theoryMap._2.map(_._2.flatMap(_._3).distinct.length).product).sum/2}")
-    logger.debug(s"Number of shift/scale relations: ${hashSet.map(_._2.distinct.length - 1).sum}")
-    logger.debug(s"Number of shift/scale relations: ${hashSet.map(x => (x._2.distinct.length*(x._2.distinct.length-1))/2).sum}")
-//    logger.debug(hashSet.filter(x => x._2.length >1).map(x => (x._1.toSage, x._2)).mkString("\n"))
+    logger.trace(relations.filter(_.isDefined).map(_.get.toSage).mkString("\n \n"))
+    println(relations.filter(_.isDefined).map(_.get.toSage).mkString("\n \n"))
   }
 
   def produceCurrentGraph() = {
@@ -501,43 +570,19 @@ object GeneratingFunctionSearch {
 
     logger.debug("script being printed")
     logger.debug(script)
-    logger.debug("Number of connections " + graph.count{ case (k,v) => v.length > 1})
+    logger.debug("Number of connections " + graph.count { case (k,v) => v.length > 1})
   }
 
 
 
   def main(args: Array[String]): Unit = {
-//    val expression = Div(List(Var("x"), Power(Sub(List(Num(1), Mul(List(Num(2), Var("x"))))), Num(2))))
-//    val json = write(expression)
-//    println(json)
-//    println(read[Add](json))
-//
-//    println(SageWrapper.partialFraction(expression).get)
-//    println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
-//
-//    val expression1 = Iters("fff", None, None, Div(List(Var("x"), Power(Sub(List(Var("x"), Num(1))), Num(3)))))
-//
-//    println(SageWrapper.partialFraction(expression1))
-//    println()
-//
-//    val legit = DocumentDao.findAll().toList.map { theory =>
-//      val parsedTheory = theory.sageUnified.map { x =>
-//        val parsed = read[PartialFractionToTransforms](x)
-//        read[Expression](parsed.expression) -> parsed.transforms.map(_.map(read[PartialFractionAndTransform]))
-//      }
-//      parsedTheory.length
-//    }.sum
-//    println(s"Number of legit ordinary generating functions ${legit}")
-    val b: Future[Boolean] = null
+    val expression = Div(List(Var("x"), Power(Sub(List(Num(1), Mul(List(Num(2), Var("x"))))), Num(2))))
 
-//    logger.debug("Number of generating functions: " + DocumentDao.findAll().toList.map(_.pureGeneratingFunctions.length).sum)
-//    logger.debug(s"Generating functions ${DocumentDao.findAll().toList.map(x => x.pureGeneratingFunctions.map(read[Expression](_).toSage).mkString("\n")).mkString("\n\n\n")}")
-//    populatePartialized()
-    tryFunctionMatch()
-//    logger.debug("Number of valid~ generating functions: "+ validGFS)
+    println(SageWrapper.partialFraction(expression).get)
+    println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
+    tryFunctionMatchWithDirectSubs()
 
-//    val expr = Div(Num(3)::Var("x")::Nil)
-//    println(expr.toSage)
-//    println(removeConstants(expr).toSage)
+    TheoryRepDao.findOneByTheory(128).map(x => println(x.generatingFunctions.map(_.toSage)))
+    TheoryRepDao.findOneByTheory(217).map(x => println(x.generatingFunctions.map(_.toSage)))
   }
 }

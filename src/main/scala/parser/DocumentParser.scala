@@ -49,6 +49,26 @@ object PartialFractionAndTransform {
   implicit val pformat = Serialization.formats(hints)
 }
 
+case class TheoryRep(
+  theory: String,
+  name: Option[String],
+  formulas: Seq[Expression],
+  var generatingFunctions: Seq[Expression] = Nil
+)
+
+object TheoryRepDao extends ModelCompanion[TheoryRep, ObjectId] {
+  val mongoClient = MongoClient("localhost", 27017)
+  val db = mongoClient("OEIS")
+  def collection = db("theory_gen")
+  override def dao: DAO[TheoryRep, ObjectId] = new SalatDAO[TheoryRep, ObjectId](collection) {}
+
+  def findOneByTheory(theoryNumber: Int): Option[TheoryRep] = {
+    val theory = Library.createID(theoryNumber.toString)
+
+    dao.findOne(MongoDBObject("theory" -> theory))
+  }
+}
+
 object DocumentDao extends ModelCompanion[Theory, ObjectId] {
   val mongoClient = MongoClient("localhost", 27017)
   val db = mongoClient("OEIS")
@@ -116,17 +136,17 @@ object DocumentParser {
       case line if line.length > 2 =>
         val contentIndex: Option[Match] = IDregex.findFirstMatchIn(line)
 
-        if(!contentIndex.isEmpty && theory.isEmpty){
+        if(contentIndex.isDefined && theory.isEmpty){
           theory = Some(contentIndex.get.matched)
         }
 
         line.substring(0,2) match{
-          case "%N" =>  omdocWrapperCMP("name", line.substring(contentIndex.get.end))
+          case "%N" =>  formulaWrap(line.substring(contentIndex.get.end), theory.get, "name")
           case "%S" =>  omdocWrapperCMP("starts-with", line.substring(contentIndex.get.end))
           case "%C" =>  omdocWrapperCMP("comment", line.substring(contentIndex.get.end))
           case "%D" =>  omdocWrapperCMP("reference", line.substring(contentIndex.get.end))
           case "%H" =>  omdocWrapperCMP("link", line.substring(contentIndex.get.end))
-          case "%F" =>  formulaWrap(line.substring(contentIndex.get.end), theory.get)
+          case "%F" =>  formulaWrap(line.substring(contentIndex.get.end), theory.get, "formula")
           case "%Y" =>  omdocWrapperAs("crossref", line.substring(contentIndex.get.end))
           case "%K" =>  omdocWrapperAs("keywords", line.substring(contentIndex.get.end))
           case "%A" =>  omdocWrapperAs("author", line.substring(contentIndex.get.end))
@@ -147,7 +167,7 @@ object DocumentParser {
     addHeaders(xml collect {case a : Elem => a}, theory.get)
   }
 
-  def parseLinesTheory(documentLines : List[String] ) : Theory = {
+  def parseLinesTheory(documentLines : List[String] ): TheoryRep = {
     var theory : Option[String] = None
     var name: Option[String] = None
 
@@ -156,19 +176,20 @@ object DocumentParser {
       case line if line.length > 2 =>
         val contentIndex: Option[Match] = IDregex.findFirstMatchIn(line)
 
-        if(!contentIndex.isEmpty && theory.isEmpty){
+        if(contentIndex.isDefined && theory.isEmpty){
           theory = Some(contentIndex.get.matched)
         }
 
-        line.substring(0,2) match{
-          case "%N" =>  name = Some(line.substring(contentIndex.get.end))
-          case "%F" => TextParserIns.parseLine(line.substring(contentIndex.get.end), theory.get).foreach {x => formulas += x}
+        line.substring(0,2) match {
+          case "%N" =>
+            name = Some(line.substring(contentIndex.get.end))
+            TextParserIns.parseLine(line.substring(contentIndex.get.end), theory.get).foreach { x => formulas += x}
+          case "%F" => TextParserIns.parseLine(line.substring(contentIndex.get.end), theory.get).foreach { x => formulas += x}
           case _ =>
         }
     })
 
-    import Expression.format
-    Theory(theory = theory.get, name = name, formulas = formulas.toSeq.map(x => write(x)))
+    TheoryRep(theory = theory.get, name = name, formulas = formulas.toSeq)
   }
 
   def fromReaderToXML(source : BufferedSource) : Elem = {
@@ -298,7 +319,7 @@ object DocumentParser {
         while(words.nonEmpty && (!isWord(words.head._1, dropped) || isFormulaUnfinished)){
           balancedPar += computeBalancedPar(words.head._1)
           isFormulaUnfinished = false
-          if(temp.length == 0 && words.head._2.trim == ":"){
+          if(temp.isEmpty && words.head._2.trim == ":"){
             delims = delims :+ ""
           }else {
             delims = delims :+ words.head._2
@@ -342,8 +363,8 @@ object DocumentParser {
     </OMOBJ>
   }
 
-  def formulaWrap(line : String, theory : String ) : Elem = {
-    <omdoc:p class="formula">
+  def formulaWrap(line : String, theory : String, nameTag: String) : Elem = {
+    <omdoc:p class={s"$nameTag"}>
         {TextParserIns.parseLine(line, theory) match {
           case Some(a) => a.toNode(theory)
           case None => <CMP>{line}</CMP>
@@ -353,9 +374,6 @@ object DocumentParser {
   }
 
   def main(args : Array[String]) : Unit = {
-    val res = extractFormula("Recurrence:A(x) + 3 + Prod_{i=1..t: t^2+4}. - Elhaida, Mar 20, 1994 ")
-//    println(res)
-//    println(res._1.zipWithIndex)
   }
 
 }

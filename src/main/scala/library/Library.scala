@@ -9,7 +9,7 @@ import java.util.Calendar
 
 import parser._
 import processor.TextParserIns
-import relations.{GeneratingFunctionSearch, UnificationSearch}
+import relations.{GeneratingFunctionSearch}
 
 import scala.io.Source
 import scala.util.Random
@@ -109,24 +109,17 @@ object Library {
 
         file.close()
 
-        try {
-          theory.formulas.map(read[Sentence])
-        } catch {
-          case e => println("THEORY " + theory.formulas, e); Seq("")
-        }
-
         if (theory.formulas.nonEmpty) {
-          val formulas = theory.formulas.map(read[Sentence])
-          val generatingFunctions = formulas.map(DocumentParser.getGeneratingFunction).toList
-          theory.generatingFunctions = generatingFunctions.flatten.map(write(_))
-          theory.pureGeneratingFunctions = generatingFunctions.flatten.map(GeneratingFunctionSearch.getGeneratingFunction).map(write(_))
+          val formulas = theory.formulas
+          val generatingFunctions = formulas.flatMap(DocumentParser.getGeneratingFunction)
+          theory.generatingFunctions = generatingFunctions.map(GeneratingFunctionSearch.getGeneratingFunction)
 
           if (theory.generatingFunctions.nonEmpty) {
             count += theory.generatingFunctions.length
           }
           if (theory.generatingFunctions.nonEmpty) {
             try {
-              DocumentDao.save(theory)
+              TheoryRepDao.save(theory)
             } catch {
               case e => println(" Error when saving to DAO" + theory, e)
             }
