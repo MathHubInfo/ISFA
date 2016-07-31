@@ -189,7 +189,7 @@ case class Div(expr : List[Expression]) extends Expression{
 }
 
 case class Neg(expr : Expression) extends Expression{
-  def present : String = ("-"+expr.toString)
+  def present : String = s"(-${expr.toSage})"
   def toNode(implicit theory : String) : Elem =
     <OMA>
       <OMS name="unary_minus"/>
@@ -230,7 +230,7 @@ case class FuncR(seq : SeqReference, args : ArgList) extends Expression{
       {seq.toNode}
       {args.args.map(_.toNode)}
     </OMA>
-  def toSage = s"${seq.toSage}${args.toSage}}"
+  def toSage = s"${seq.toSage}(${args.toSage})"
   def toCML =
     <apply>
       {seq.toCML}
