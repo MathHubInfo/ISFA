@@ -1,0 +1,5 @@
+[
+{"name":"flare.analytics.cluster.AgglomerativeCluster","size":3938,"imports":["flare.vis.Visualization"]},
+{"name":"flare.vis.Visualization","size":16540,"imports":["flare.analytics.cluster.AgglomerativeCluster", "flare.analytics.cluster.Chinque"]},
+{"name":"flare.analytics.cluster.Chinque","size":3938,"imports":[]}
+]
