@@ -15,7 +15,7 @@ The ISF is currently composed of:
 
 [Head to this thesis](https://github.com/eluzhnica/OEIS/blob/master/docs/Enxhell_Luzhnica_BSC.pdf) to learn more.
 
-### Some stats 
+### Some stats and results
 
 The current parser can parse about 90% of the formula lines (%F) from the OEIS documents. Out of the parsed formulas, 89% are parsed semantic correctly.
 The program that generates relations between OEIS sequences uses three methods. In total, the number of relations is about 20 million (look at the thesis for the results).
@@ -23,5 +23,6 @@ The program that generates relations between OEIS sequences uses three methods. 
 ### Download
 
 ISF is developed on and hosted with GitHub. Head to the <a href="https://github.com/eluzhnica/OEIS">GitHub repository</a> for downloads, bug reports, and requests.
+The relations are available <a href="https://github.com/eluzhnica/OEIS/tree/master/results/relations">here</a>.
 
 Thanks!
