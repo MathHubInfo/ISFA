@@ -4,8 +4,8 @@
 permalink:           pretty
 
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
+title:               ISFA
+tagline:             'Integer Sequence Formulas and Applications'
 url:                 http://eluzhnica.github.io/OEIS
 baseurl:             'http://eluzhnica.github.io/OEIS/'
 paginate:            5

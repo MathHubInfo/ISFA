@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Introducing ISF project 
+title: Introducing ISFA project 
 ---
 
-The ISF project is a database of Integer Sequence Formulas and some applications derived from it. The Integer Sequence Formulas are parsed from the [OEIS](http://getpoole.com).
+The ISFA project is a database of Integer Sequence Formulas and Applications derived from it. The Integer Sequence Formulas are parsed from the [OEIS](http://getpoole.com).
 
 ### Current ISF parts
 
