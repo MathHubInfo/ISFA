@@ -3,7 +3,7 @@ layout: post
 title: Introducing ISFA project 
 ---
 
-The ISFA project is a database of Integer Sequence Formulas and Applications derived from it. The Integer Sequence Formulas are parsed from the [OEIS](http://getpoole.com).
+The ISFA project is a database of Integer Sequence Formulas and Applications derived from it. The Integer Sequence Formulas are parsed from the [OEIS](http://oeis.org).
 
 ### Current ISF parts
 
