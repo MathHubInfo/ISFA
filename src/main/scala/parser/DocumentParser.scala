@@ -2,24 +2,19 @@ package parser
 
 import com.mongodb.casbah.MongoClient
 import com.mongodb.casbah.commons.MongoDBObject
-import com.mongodb.casbah.Imports._
-
 import com.novus.salat.annotations._
 import com.novus.salat.dao.{DAO, ModelCompanion, SalatDAO}
+import com.novus.salat.global.ctx
 import library.Library
 import org.bson.types.ObjectId
-import org.json4s.{NoTypeHints, ShortTypeHints}
+import org.json4s.ShortTypeHints
 import org.json4s.native.Serialization
-import parser.DocumentParser.GeneratingFunctionDefinition
-import processor.{TextParserIns, TextParser}
-import com.novus.salat.global.ctx
+import processor.TextParserIns
 
 import scala.io.{BufferedSource, Source}
 import scala.util.matching.Regex
 import scala.util.matching.Regex.Match
 import scala.xml._
-
-import org.json4s.native.Serialization._
 
 case class Theory(
   @Key("_id") id: ObjectId = new ObjectId(),
@@ -44,7 +39,6 @@ object PartialFractionToTransforms {
 
 case class PartialFractionAndTransform(expression: Expression, transform: String)
 object PartialFractionAndTransform {
-  import Expression.format
   val hints = ShortTypeHints(List(classOf[PartialFractionAndTransform], classOf[Expression], classOf[String]))
   implicit val pformat = Serialization.formats(hints)
 }
@@ -89,6 +83,23 @@ object DocumentDao extends ModelCompanion[Theory, ObjectId] {
     dao.removeById(theory.id)
     dao.insert(theory)
   }
+}
+
+case class RelationRep(
+  method: Int,
+  level: String,
+  expression: Expression
+)
+object RelationRep {
+  val representingFunction = "Rep"
+  val generatingFunction = "Gen"
+}
+
+object RelationDao extends ModelCompanion[RelationRep, ObjectId] {
+  val mongoClient = MongoClient("localhost", 27017)
+  val db = mongoClient("OEIS")
+  def collection = db("relations")
+  override def dao: DAO[RelationRep, ObjectId] = new SalatDAO[RelationRep, ObjectId](collection) {}
 }
 
 

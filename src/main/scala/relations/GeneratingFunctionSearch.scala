@@ -1,27 +1,19 @@
 package relations
 
-import java.util
 import java.util.concurrent.ConcurrentHashMap
 
-import parser._
-import Expression.format
-import com.sun.org.apache.xpath.internal.operations.Variable
-import org.json4s.{ShortTypeHints, FullTypeHints, NoTypeHints}
-import org.json4s.native.Serialization
 import org.json4s.native.Serialization._
 import org.slf4j.LoggerFactory
 import parser.DocumentParser.GeneratingFunctionDefinition
+import parser.Expression.format
 import parser._
 import play.api.Logger
-import play.api.libs.json.Json
 import sage.SageWrapper
 
-import scala.collection.immutable.{::, HashMap}
 import scala.collection.JavaConverters._
+import scala.collection.immutable.::
 import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
-import scala.concurrent.duration.Duration
-import scala.concurrent.{Await, Future}
 
 object GeneratingFunctionSearch {
   def logger = LoggerFactory.getLogger(this.getClass)
@@ -290,6 +282,9 @@ object GeneratingFunctionSearch {
     }
   }
 
+  /**
+   * This method tries to find relations such that each partial fraction can be expressed through an existing OEIS sequence.
+   */
   def secondMethod() = {
     case class MappedTheory(
       theory: TheoryRep,
@@ -301,8 +296,6 @@ object GeneratingFunctionSearch {
     val hashMap = new mutable.HashMap[Expression, List[MappedTheory]]()
     val theories = TheoryRepDao.findAll().toArray.take(1000)
     println(s"Length is ${theories.length}")
-
-    import parser.Expression._
 
     val indices = theories.indices
 
@@ -366,7 +359,7 @@ object GeneratingFunctionSearch {
                val unifiedTransformedPartialFraction = removeXMultiplications(removeConstants(transformedPartialFraction))
 
                if (hashMap.contains(simplifiedTransformedPartialFraction) && hashMap(simplifiedTransformedPartialFraction).head.theory.theory != theories(i).theory) {
-                 val relations = hashMap(simplifiedTransformedPartialFraction).map { mappedTheory =>
+                 val relations = hashMap(simplifiedTransformedPartialFraction).flatMap { mappedTheory =>
                    mappedTheory.unificationConstant.flatMap { leftUnificationFactor =>
                      SageWrapper.divide(transformedPartialFraction, unifiedTransformedPartialFraction).map { rightUnificationFactor =>
                        val constN = Div(rightUnificationFactor :: leftUnificationFactor :: Nil)
@@ -382,7 +375,7 @@ object GeneratingFunctionSearch {
                        )
                      }
                    }
-                 }.collect { case Some(x) => x }
+                 }
 
                  Some(PartialExpressingTheory(
                    theories(i).theory,
@@ -412,13 +405,17 @@ object GeneratingFunctionSearch {
 
     val allRelations = map.toList.flatMap { fullExpressionTheory =>
       combine(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution)))).map { partialFractionsAsRelations =>
-        Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
+        val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
+        RelationDao.save(RelationRep(2, RelationRep.generatingFunction, relation))
+        relation
       }
     }
 
     val allRelationRepresentingFunction = map.toList.flatMap { fullExpressionTheory =>
       combine(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitutionRepresentingFunctionLevel)))).map { partialFractionsAsRelations =>
-        Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
+        val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
+        RelationDao.save(RelationRep(2, RelationRep.representingFunction, relation))
+        relation
       }
     }
 
@@ -496,7 +493,10 @@ object GeneratingFunctionSearch {
     }
   }
 
-  def tryFunctionMatchWithDirectSubs() = {
+  /**
+   * This method tries to find one partial fraction intersection.
+   */
+  def thirdMethod() = {
     case class MappedTheory(
       theory: TheoryRep,
       initialGeneratingFunction: Expression,
@@ -508,8 +508,6 @@ object GeneratingFunctionSearch {
     val hashMap = new mutable.HashMap[Expression, List[MappedTheory]]()
     val theories = TheoryRepDao.findAll().toArray.take(100)
     println(s"Length is ${theories.length}")
-
-    import parser.Expression._
 
     val indices = theories.indices
 
@@ -582,13 +580,17 @@ object GeneratingFunctionSearch {
         println(IUPFROpt)
         IUPFROpt.map { IUPFR =>
           val substitution = Add(List(SeqReference(expressionTheory.theoryId), Neg(Add(expressionTheory.restOfPartialFractions))))
-          Equation(
+          
+          val relation = Equation(
             "=",
             SeqReference(mapTheory.theory.theory),
             Add(
               Mul(IUPFR :: Func(expressionTheory.transformation.toString, ArgList(List(substitution))) :: Nil) :: mapTheory.restOfPartialFractions
             )
           )
+          
+          RelationDao.save(RelationRep(3, RelationRep.generatingFunction, relation))
+          relation
         }
       }
     }
