@@ -6,7 +6,7 @@ permalink:           pretty
 # Setup
 title:               ISFA
 tagline:             'Integer Sequence Formulas and Applications'
-url:                 http://eluzhnica.github.io/OEIS 
+url:                  https://github.com/eluzhnica/OEIS
 baseurl:             'http://eluzhnica.github.io/OEIS/'
 paginate:            5
 
