@@ -13,7 +13,7 @@ The ISF is currently composed of:
 * A program that find relations between OEIS sequences.
 * A MathWebSearch instance for OEIS documents.
 
-[Head to this thesis](https://github.com/poole/lanyon#readme) to learn more.
+[Head to this thesis](https://github.com/eluzhnica/OEIS/blob/master/docs/Enxhell_Luzhnica_BSC.pdf) to learn more.
 
 ### Some stats 
 
