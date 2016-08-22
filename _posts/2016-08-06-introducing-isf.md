@@ -5,9 +5,9 @@ title: Introducing ISFA project
 
 The ISFA project is a database of Integer Sequence Formulas and Applications derived from it. The Integer Sequence Formulas are parsed from the [OEIS](http://oeis.org).
 
-### Current ISF parts
+### Current ISFA parts
 
-The ISF is currently composed of:
+The ISFA is currently composed of:
 
 * A parser for math formulas found in the OEIS.
 * A program that find relations between OEIS sequences.
