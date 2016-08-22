@@ -18,7 +18,13 @@ The ISFA is currently composed of:
 ### Some stats and results
 
 The current parser can parse about 90% of the formula lines (%F) from the OEIS documents. Out of the parsed formulas, 89% are parsed semantic correctly.
-The program that generates relations between OEIS sequences uses three methods. In total, the number of relations is about 20 million (look at the thesis for the results).
+The program that generates relations between OEIS sequences uses three methods. In total, the number of generated relations is about 20 million (look at the thesis for the exact results).
+Since we were able to parse the formulas, we know the current relations that are present in the OEIS. Here is the graph of relations between the sequences that we selected for generation
+(again, read the thesis for information about the sequences we have selected):
+
+![Current graph of relations](/_includes/current-graph.png){:class="img-responsive"}
+
+<img src="{{ site.baseurl }}/_includes/current-graph.png" alt="Current relations" align="middle">
 
 ### Download
 
