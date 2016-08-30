@@ -22,9 +22,9 @@ The program that generates relations between OEIS sequences uses three methods. 
 Since we were able to parse the formulas, we know the current relations that are present in the OEIS. Here is the graph of relations between the sequences that we selected for generation
 (again, read the thesis for information about the sequences we have selected):
 
-![Current graph of relations](/_includes/current-graph.png){:class="img-responsive"}
+![Current graph of relations]({{site.baseurl}}/images/current-graph.png){:class="img-responsive"}
 
-<img src="{{ site.baseurl }}/_includes/current-graph.png" alt="Current relations" align="middle">
+<img src="{{site.baseurl}}/images/current-graph.png" alt="Current relations" align="middle">
 
 ### Download
 
