@@ -1,6 +1,7 @@
 package parser
 
-import com.mongodb.casbah.MongoClient
+import com.mongodb.ServerAddress
+import com.mongodb.casbah.{MongoCredential, MongoClientURI, MongoClient}
 import com.mongodb.casbah.commons.MongoDBObject
 import com.novus.salat.annotations._
 import com.novus.salat.dao.{DAO, ModelCompanion, SalatDAO}
@@ -16,32 +17,6 @@ import scala.util.matching.Regex
 import scala.util.matching.Regex.Match
 import scala.xml._
 
-case class Theory(
-  @Key("_id") id: ObjectId = new ObjectId(),
-  theory: String,
-  name: Option[String],
-  formulas: Seq[String],
-  var generatingFunctions: Seq[String] = List(),
-  var pureGeneratingFunctions: Seq[String] = List(),
-  var partialFractions: Seq[String] = List(),
-  var sage: List[String] = List(),
-  var pureGeneratingFunctionsPartialized: List[String] = List(),
-  var sageUnified: List[String] = List()
-){
-//  override def toString() = s"$theory \n ${generatingFunctions.map(_.toString + "\n")}"
-}
-
-case class PartialFractionToTransforms(expression: String, transforms: List[List[String]])
-object PartialFractionToTransforms {
-  val hints = ShortTypeHints(List(classOf[PartialFractionToTransforms], classOf[Expression], classOf[String]))
-  implicit val ptformat = Serialization.formats(hints)
-}
-
-case class PartialFractionAndTransform(expression: Expression, transform: String)
-object PartialFractionAndTransform {
-  val hints = ShortTypeHints(List(classOf[PartialFractionAndTransform], classOf[Expression], classOf[String]))
-  implicit val pformat = Serialization.formats(hints)
-}
 
 case class TheoryRep(
   theory: String,
@@ -63,28 +38,6 @@ object TheoryRepDao extends ModelCompanion[TheoryRep, ObjectId] {
   }
 }
 
-object DocumentDao extends ModelCompanion[Theory, ObjectId] {
-  val mongoClient = MongoClient("localhost", 27017)
-  val db = mongoClient("OEIS")
-  def collection = db("theory")
-  override def dao: DAO[Theory, ObjectId] = new SalatDAO[Theory, ObjectId](collection) {}
-
-  def findOneByTheory(theoryNumber: Int): Option[Theory] = {
-    val theory = Library.createID(theoryNumber.toString)
-
-    dao.findOne(MongoDBObject("theory" -> theory))
-  }
-
-  def removeOneByTheory(theory: String) = {
-    dao.findOne(MongoDBObject("theory" -> theory)).map(dao.remove)
-  }
-
-  def updateDao(theory: Theory) = {
-    dao.removeById(theory.id)
-    dao.insert(theory)
-  }
-}
-
 case class RelationRep(
   method: Int,
   level: String,
@@ -96,6 +49,10 @@ object RelationRep {
 }
 
 object RelationDao extends ModelCompanion[RelationRep, ObjectId] {
+  // Sending stuff to cloud, not enough space in my drive
+//  val server = new ServerAddress("104.155.127.42", 27017)
+//  val credentials = MongoCredential.createCredential("oeis-report", "OEIS", "oeis-report".toCharArray)
+//  val mongoClient = MongoClient(server, List(credentials))
   val mongoClient = MongoClient("localhost", 27017)
   val db = mongoClient("OEIS")
   def collection = db("relations")
