@@ -8,7 +8,7 @@ class SageTest extends FlatSpec {
   "sage wrapper" should "simplifiy in order" in {
     val expressions = (1 to 100).map(Num(_))
     expressions.foreach { x =>
-      SageWrapper.simplifyFull(x).foreach(y => assert(y == x))
+      SageWrapper.simplify(x).foreach(y => assert(y == x))
     }
   }
 }

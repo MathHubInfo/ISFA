@@ -36,7 +36,7 @@ object SageRequest extends ModelCompanion[SageRequest, ObjectId] {
 }
 
 object SageWrapper {
-  val session = "_ga=GA1.1.1714581731.1463532018; ajs_anonymous_id=%221d80e25a-36a9-4ed6-8dec-d73e9f57670d%22; ajs_group_id=null; ajs_user_id=null; mp_455c026defefc920eae5a5a3a74a9008_mixpanel=%7B%22distinct_id%22%3A%20%22154c14e5b2f4a-0427c3e9dba975-36677f03-13c680-154c14e5b3066e%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; optimizelyBuckets=%7B%7D; optimizelyEndUserId=oeu1463532355302r0.7610385580606998; optimizelySegments=%7B%223013750511%22%3A%22direct%22%2C%223029780148%22%3A%22false%22%2C%223031480132%22%3A%22gc%22%7D; mjx.menu=renderer%3ACommonHTML; cookie_test_8080=cookie_test; session=\"8+o3fF8Y+JOQLk5o06l1YZXdSPg=?username=VmFkbWluCnAwCi4=\""
+  val session = "_ga=GA1.1.1714581731.1463532018; ajs_anonymous_id=%221d80e25a-36a9-4ed6-8dec-d73e9f57670d%22; ajs_group_id=null; ajs_user_id=null; mp_455c026defefc920eae5a5a3a74a9008_mixpanel=%7B%22distinct_id%22%3A%20%22154c14e5b2f4a-0427c3e9dba975-36677f03-13c680-154c14e5b3066e%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; optimizelyBuckets=%7B%7D; optimizelyEndUserId=oeu1463532355302r0.7610385580606998; optimizelySegments=%7B%223013750511%22%3A%22direct%22%2C%223029780148%22%3A%22false%22%2C%223031480132%22%3A%22gc%22%7D; mjx.menu=renderer%3ACommonHTML; session=\"FEAg7THEG41nMnZZiKbdQS5ux+U=?username=VmFkbWluCnAwCi4=\"; nb_session_8080="
   private var counter = 0
 
   def integrate(expression: Expression, variables: List[String] = List("x")): Option[Expression] = {
@@ -55,7 +55,6 @@ object SageWrapper {
       result
     } else {
       logger.debug(s"NOT CACHED")
-      cleanup()
       try {
         counter += 1
 
@@ -102,6 +101,7 @@ object SageWrapper {
           headerAlive.param("_", System.currentTimeMillis().toString)
           Thread.sleep(100)
           headerAlive.param("_", System.currentTimeMillis().toString)
+          cleanup()
         }
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
         val parsedFormula = FormulaParserInst.parse(formula)
@@ -143,7 +143,6 @@ object SageWrapper {
       result
     } else {
       logger.debug(s"NOT CACHED")
-      cleanup()
       try {
         counter += 1
         val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
@@ -190,6 +189,7 @@ object SageWrapper {
           headerAlive.param("_", System.currentTimeMillis().toString)
           Thread.sleep(100)
           headerAlive.param("_", System.currentTimeMillis().toString)
+          cleanup()
         }
 
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "")else "No formula"
@@ -276,7 +276,6 @@ object SageWrapper {
       result
     } else {
       logger.debug(s"NOT CACHED")
-      cleanup()
       try {
         counter += 1
         val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
@@ -323,6 +322,7 @@ object SageWrapper {
           headerAlive.param("_", System.currentTimeMillis().toString)
           Thread.sleep(100)
           headerAlive.param("_", System.currentTimeMillis().toString)
+          cleanup()
         }
 
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
@@ -360,7 +360,6 @@ object SageWrapper {
       result
     } else {
       logger.debug(s"NOT CACHED")
-      cleanup()
       try {
         counter += 1
         val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
@@ -392,7 +391,6 @@ object SageWrapper {
         while (parsed == "\" \"" && count < 500) {
           val x = headerSecond.postForm(Map("id" -> "20").toSeq)
           parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
-          println(parsed)
           if ((count % 20) == 1) logger.debug(s"sleeping ... ")
           Thread.sleep(50)
           count += 1
@@ -407,12 +405,10 @@ object SageWrapper {
           headerAlive.param("_", System.currentTimeMillis().toString)
           Thread.sleep(100)
           headerAlive.param("_", System.currentTimeMillis().toString)
+          cleanup()
         }
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
-        println(formula)
-        println(parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", ""))
         val parsedFormula = FormulaParserInst.parse(formula)
-        println(parsedFormula)
         //    logger.debug(parsedFormula)
         Thread.sleep(50)
 
