@@ -1,7 +1,7 @@
 package parser
 
 import com.mongodb.ServerAddress
-import com.mongodb.casbah.{MongoCredential, MongoClientURI, MongoClient}
+import com.mongodb.casbah.{WriteConcern, MongoCredential, MongoClientURI, MongoClient}
 import com.mongodb.casbah.commons.MongoDBObject
 import com.novus.salat.annotations._
 import com.novus.salat.dao.{DAO, ModelCompanion, SalatDAO}
@@ -48,7 +48,13 @@ object RelationRep {
   val generatingFunction = "Gen"
 }
 
-object RelationDao extends ModelCompanion[RelationRep, ObjectId] {
+case class RelationRepString(
+  method: Int,
+  level: String,
+  expression: String
+)
+
+object RelationDao extends ModelCompanion[RelationRepString, ObjectId] {
   // Sending stuff to cloud, not enough space in my drive
 //  val server = new ServerAddress("104.155.127.42", 27017)
 //  val credentials = MongoCredential.createCredential("oeis-report", "OEIS", "oeis-report".toCharArray)
@@ -56,7 +62,20 @@ object RelationDao extends ModelCompanion[RelationRep, ObjectId] {
   val mongoClient = MongoClient("localhost", 27017)
   val db = mongoClient("OEIS")
   def collection = db("relations")
-  override def dao: DAO[RelationRep, ObjectId] = new SalatDAO[RelationRep, ObjectId](collection) {}
+  override def dao: DAO[RelationRepString, ObjectId] = new SalatDAO[RelationRepString, ObjectId](collection) {}
+
+  def insert(relation: RelationRep) = {
+    val relationStr = RelationRepString(relation.method, relation.level, relation.expression.toSage)
+    dao.insert(relationStr)
+  }
+
+  def insert(relation: Traversable[RelationRep]) = {
+    dao.insert(relation.map(x => RelationRepString(x.method, x.level, x.expression.toSage)), WriteConcern.Normal)
+  }
+
+  def find(f: MongoDBObject) = {
+    dao.find(f).map(x => RelationRep(x.method, x.level, FormulaParserInst.parse(x.expression).get))
+  }
 }
 
 

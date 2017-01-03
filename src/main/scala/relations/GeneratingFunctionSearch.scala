@@ -411,13 +411,13 @@ object GeneratingFunctionSearch {
           if(partialExpressingTheories.forall(_.nonEmpty)) {
             val fullExpressionTheory = FullExpressingTheory(theories(i).theory, partialExpressingTheories, partialFractions)
             val total = fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution)).length).product
-            if(total < 300000) { // for optimization purposes
-              combine(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution))), { partialFractionsAsRelations =>
-                val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations))
-                val rel = RelationRep(2, RelationRep.generatingFunction, relation)
-                gen_count += 1
-                RelationDao.insert(rel)
-              })
+            if(total > 300000) { // for optimization purposes
+//              combine(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution))), { partialFractionsAsRelations =>
+//                val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations))
+//                val rel = RelationRep(2, RelationRep.generatingFunction, relation)
+//                gen_count += 1
+//                RelationDao.insert(rel)
+//              })
               combine(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitutionRepresentingFunctionLevel))), { partialFractionsAsRelations =>
                 val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations))
                 val rel = RelationRep(2, RelationRep.representingFunction, relation)
@@ -425,19 +425,19 @@ object GeneratingFunctionSearch {
                 RelationDao.insert(rel)
               })
             } else {
-              val gen = combineMem(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution)))).map { partialFractionsAsRelations =>
-                val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
-                RelationRep(2, RelationRep.generatingFunction, relation)
-              }
-              gen_count += gen.length
-              RelationDao.insert(gen, Imports.WriteConcern.Normal)
+//              val gen = combineMem(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution)))).map { partialFractionsAsRelations =>
+//                val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
+//                RelationRep(2, RelationRep.generatingFunction, relation)
+//              }
+//              gen_count += gen.length
+//              RelationDao.insert(gen)
 
               val rep = combineMem(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitutionRepresentingFunctionLevel)))).map { partialFractionsAsRelations =>
                 val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
                  RelationRep(2, RelationRep.representingFunction, relation)
               }
               rep_count += rep.length
-              RelationDao.insert(rep, Imports.WriteConcern.Normal)
+              RelationDao.insert(rep)
             }
 //            logger.debug(s"Generating function: \n ${gen.map(_.toSage).mkString("\n \n")}")
 //            logger.debug(s"Representing function: \n ${rep.map(_.toSage).mkString("\n \n")}")
