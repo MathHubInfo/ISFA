@@ -1,6 +1,6 @@
 package parser
 
-import com.mongodb.ServerAddress
+import com.mongodb.{DBObject, ServerAddress}
 import com.mongodb.casbah.{WriteConcern, MongoCredential, MongoClientURI, MongoClient}
 import com.mongodb.casbah.commons.MongoDBObject
 import com.novus.salat.annotations._
@@ -73,7 +73,7 @@ object RelationDao extends ModelCompanion[RelationRepString, ObjectId] {
     dao.insert(relation.map(x => RelationRepString(x.method, x.level, x.expression.toSage)), WriteConcern.Normal)
   }
 
-  def find(f: MongoDBObject) = {
+  def find(f: DBObject) = {
     dao.find(f).map(x => RelationRep(x.method, x.level, FormulaParserInst.parse(x.expression).get))
   }
 }

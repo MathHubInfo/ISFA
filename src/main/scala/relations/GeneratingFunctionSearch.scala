@@ -465,7 +465,7 @@ object GeneratingFunctionSearch {
   }
 
   def countRelations() = {
-    val relations = RelationDao.find(MongoDBObject("method" -> 2)).limit(1000000).toList
+    val relations = RelationDao.find(MongoDBObject("method" -> 2))
 
     val counting = relations.toList.groupBy { _.expression match { case Equation (_, SeqReference(id), _) => id }}
       .map(x => x._1 -> x._2.length)
