@@ -437,12 +437,12 @@ object GeneratingFunctionSearch {
                 RelationDao.insert(rel)
               })
             } else {
-              val gen = combineMem(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution)))).map { partialFractionsAsRelations =>
-                val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
-                RelationRep(2, RelationRep.generatingFunction, relation)
-              }
-              gen_count += gen.length
-              RelationDao.insert(gen)
+//              val gen = combineMem(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution)))).map { partialFractionsAsRelations =>
+//                val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
+//                RelationRep(2, RelationRep.generatingFunction, relation)
+//              }
+//              gen_count += gen.length
+//              RelationDao.insert(gen)
 
               val rep = combineMem(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitutionRepresentingFunctionLevel)))).map { partialFractionsAsRelations =>
                 val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
