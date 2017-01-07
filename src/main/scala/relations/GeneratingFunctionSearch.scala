@@ -307,9 +307,8 @@ object GeneratingFunctionSearch {
       unificationConstant: Option[Expression]
     )
 
-    val list = Seq("A156279", "A000032")
     val hashMap = new ConcurrentHashMap[Expression, List[MappedTheory]]().asScala
-    val theories = TheoryRepDao.findAll().toArray.filter(x => list.contains(x.theory))
+    val theories = TheoryRepDao.findAll().toArray
     println(s"Length is ${theories.length}")
 
     val indices = theories.indices
