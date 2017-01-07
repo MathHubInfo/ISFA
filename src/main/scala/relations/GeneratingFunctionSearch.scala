@@ -639,11 +639,6 @@ object GeneratingFunctionSearch {
 
     println(SageWrapper.partialFraction(expression).get)
     println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
-//    secondMethod()
-    logger.debug(s"THE END")
-    logger.debug(s"${getRepresentingFunction(Unit, FormulaParserInst.parse("10*5*6*x/3").get, "").get.toSage}")
-//    TheoryRepDao.findOneByTheory(217).map(x => println(x.generatingFunctions.map(_.toSage)))
-//    val formula = FormulaParserInst.parse("((-((30*(((((((((((((((((((((((((((((((x^31-(31*x^30))+(465*x^29))-(4495*x^28))+(31465*x^27))-(169911*x^26))+(736281*x^25))-(2629575*x^24))+(7888725*x^23))-(20160075*x^22))+(44352165*x^21))-(84672315*x^20))+(141120525*x^19))-(206253075*x^18))+(265182525*x^17))-(300540195*x^16))+(300540195*x^15))-(265182525*x^14))+(206253075*x^13))-(141120525*x^12))+(84672315*x^11))-(44352165*x^10))+(20160075*x^9))-(7888725*x^8))+(2629575*x^7))-(736281*x^6))+(169911*x^5))-(31465*x^4))+(4495*x^3))-(465*x^2))+(31*x))-1))/(x-1)^31))/(-((((((((((((((((((((((((((((((((x^31-(31*x^30))+(465*x^29))-(4495*x^28))+(31465*x^27))-(169911*x^26))+(736281*x^25))-(2629575*x^24))+(7888725*x^23))-(20160075*x^22))+(44352165*x^21))-(84672315*x^20))+(141120525*x^19))-(206253075*x^18))+(265182525*x^17))-(300540195*x^16))+(300540195*x^15))-(265182525*x^14))+(206253075*x^13))-(141120525*x^12))+(84672315*x^11))-(44352165*x^10))+(20160075*x^9))-(7888725*x^8))+(2629575*x^7))-(736281*x^6))+(169911*x^5))-(31465*x^4))+(4495*x^3))-(465*x^2))+(31*x))-1)/(x-1)^31)))")
-//    println(SageWrapper.simplify(formula.get))
+    secondMethod()
   }
 }
