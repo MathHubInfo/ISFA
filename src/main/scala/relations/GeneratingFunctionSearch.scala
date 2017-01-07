@@ -245,7 +245,6 @@ object GeneratingFunctionSearch {
   }
 
   def getRepresentingFunction(inverse: Transformation, simplifiedConst: Expression, theory: String): Option[Expression] = {
-    logger.debug(s"Trying to get the representing function: $simplifiedConst")
     val (multiplicationConstant, shiftConstant) = inverse match {
       case Integral => Div(Num(1) :: Var("n") :: Nil) -> -1
       case Differential => Add(Var("n") :: Num(1) :: Nil) -> 1
@@ -446,8 +445,6 @@ object GeneratingFunctionSearch {
 
               val rep = combineMem(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitutionRepresentingFunctionLevel)))).map { partialFractionsAsRelations =>
                 val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
-                logger.debug(s"Representing function: \n ${relation.toSage} \n")
-                logger.debug(s"Gen function: \n ${relation.toSage} \n")
                 RelationRep(2, RelationRep.representingFunction, relation)
               }
 
