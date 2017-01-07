@@ -245,25 +245,34 @@ object GeneratingFunctionSearch {
   }
 
   def getRepresentingFunction(inverse: Transformation, simplifiedConst: Expression, theory: String): Option[Expression] = {
-
+    logger.debug(s"Trying to get the representing function: $simplifiedConst")
     val (multiplicationConstant, shiftConstant) = inverse match {
       case Integral => Div(Num(1) :: Var("n") :: Nil) -> -1
       case Differential => Add(Var("n") :: Num(1) :: Nil) -> 1
       case Unit => Num(1) -> 0
     }
 
-    def getShiftAndMultiplication(multConst: Expression): (Expression, Double) = {
+    def getShiftAndMultiplication(multConst: Expression): (Double, Expression) = {
       multConst match {
-        case Mul(Num(c) :: Var("x") :: Nil) => (Num(-1), c)
-        case Mul(Num(c) :: Power(Var("x"), sConstant) :: Nil) => (Neg(sConstant), c)
-        case Div(Num(c) :: Var("x") :: Nil) => (Num(1), c)
-        case Div(Num(c) :: Power(Var("x"), sConstant) :: Nil) => (sConstant, c)
-        case Mul(Var("x") :: Nil) => (Num(-1), 1.0)
-        case Mul(Power(Var("x"), sConstant) :: Nil) => (Neg(sConstant), 1.0)
+        case Mul(Var("x") :: Nil) => (-1, Num(1))
+        case Mul(Num(c) :: b) =>
+          val temp = getShiftAndMultiplication(Mul(b))
+          (temp._1, Mul(temp._2 :: Num(c) :: Nil))
+        case Mul(Power(Var("x"), Num(sConstant)) :: Nil) => (-sConstant, Num(1))
+        case Mul(Div(a) :: b) =>
+          val temp = getShiftAndMultiplication(Div(a))
+          val temp1 = getShiftAndMultiplication(Mul(b))
+          (temp._1 + temp1._1, Mul(temp._2 :: temp1._2 :: Nil))
+
+        case Div(Num(c) :: b) =>
+          val temp = getShiftAndMultiplication(Mul(b))
+          (-temp._1, Div(Num(c) :: temp._2 :: Nil))
+        case Div(Var("x") :: Nil) => (1, Num(1))
+        case Div(Power(Var("x"), Num(sConstant)) :: Nil) => (sConstant, Num(1))
         case Neg(expr) =>
           val result = getShiftAndMultiplication(expr)
-          result._1 -> -result._2
-        case _ => (Num(0), 1.0)
+          result._1 -> Neg(result._2)
+        case _ => (0, Num(1))
       }
     }
 
@@ -271,13 +280,13 @@ object GeneratingFunctionSearch {
       getShiftAndMultiplication(simplifiedConst)
 
     val finalShifts = (Mul(multiplicationConstant :: {
-      if(multiplicationConstantFromTheMultiplication != 1)
-        Num(multiplicationConstantFromTheMultiplication)::Nil
+      if(multiplicationConstantFromTheMultiplication != Num(1))
+        multiplicationConstantFromTheMultiplication::Nil
       else
         Nil
-    }), Add(Num(shiftConstant) :: shiftFromTheMultiplication :: Nil))
+    }), Add(Num(shiftConstant + shiftFromTheMultiplication) :: Nil))
 
-    val simplifiedFinalShifts = (Some(finalShifts._1), SageWrapper.simplify(finalShifts._2))
+    val simplifiedFinalShifts = (SageWrapper.simplifyFull(finalShifts._1).orElse(SageWrapper.simplify(finalShifts._1)), SageWrapper.simplify(finalShifts._2))
 
     simplifiedFinalShifts match {
       case (Some(multiplication), Some(shift)) =>
@@ -299,8 +308,9 @@ object GeneratingFunctionSearch {
       unificationConstant: Option[Expression]
     )
 
+    val list = Seq("A156279", "A000032")
     val hashMap = new ConcurrentHashMap[Expression, List[MappedTheory]]().asScala
-    val theories = TheoryRepDao.findAll().toArray
+    val theories = TheoryRepDao.findAll().toArray.filter(x => list.contains(x.theory))
     println(s"Length is ${theories.length}")
 
     val indices = theories.indices
@@ -377,8 +387,10 @@ object GeneratingFunctionSearch {
                          val constN = Div(rightUnificationFactor :: leftUnificationFactor :: Nil)
                           SageWrapper.simplifyFull(constN).orElse(SageWrapper.simplify(constN)).map { simplifiedConst =>
 
+                            logger.debug(simplifiedConst.toSage)
                             val relation = Func(transformation.inverse.toString, ArgList(Mul(simplifiedConst :: SeqReference(mappedTheory.theory.theory) :: Nil) :: Nil))
 
+                            logger.debug(relation.toSage)
                             Relation(
                               partialFractionSubstitution = relation,
                               partialFractionSubstitutionRepresentingFunctionLevel = getRepresentingFunction(transformation.inverse, simplifiedConst, mappedTheory.theory.theory).get,
@@ -425,22 +437,24 @@ object GeneratingFunctionSearch {
                 RelationDao.insert(rel)
               })
             } else {
-//              val gen = combineMem(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution)))).map { partialFractionsAsRelations =>
-//                val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
-//                RelationRep(2, RelationRep.generatingFunction, relation)
-//              }
-//              gen_count += gen.length
-//              RelationDao.insert(gen)
+              val gen = combineMem(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution)))).map { partialFractionsAsRelations =>
+                val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
+                RelationRep(2, RelationRep.generatingFunction, relation)
+              }
+              gen_count += gen.length
+              RelationDao.insert(gen)
 
               val rep = combineMem(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitutionRepresentingFunctionLevel)))).map { partialFractionsAsRelations =>
                 val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations.toList))
-                 RelationRep(2, RelationRep.representingFunction, relation)
+                logger.debug(s"Representing function: \n ${relation.toSage} \n")
+                logger.debug(s"Gen function: \n ${relation.toSage} \n")
+                RelationRep(2, RelationRep.representingFunction, relation)
               }
+
               rep_count += rep.length
               RelationDao.insert(rep)
             }
-//            logger.debug(s"Generating function: \n ${gen.map(_.toSage).mkString("\n \n")}")
-//            logger.debug(s"Representing function: \n ${rep.map(_.toSage).mkString("\n \n")}")
+
           }
         }
       }
@@ -625,8 +639,9 @@ object GeneratingFunctionSearch {
 
     println(SageWrapper.partialFraction(expression).get)
     println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
-    secondMethod()
+//    secondMethod()
     logger.debug(s"THE END")
+    logger.debug(s"${getRepresentingFunction(Unit, FormulaParserInst.parse("10*5*6*x/3").get, "").get.toSage}")
 //    TheoryRepDao.findOneByTheory(217).map(x => println(x.generatingFunctions.map(_.toSage)))
 //    val formula = FormulaParserInst.parse("((-((30*(((((((((((((((((((((((((((((((x^31-(31*x^30))+(465*x^29))-(4495*x^28))+(31465*x^27))-(169911*x^26))+(736281*x^25))-(2629575*x^24))+(7888725*x^23))-(20160075*x^22))+(44352165*x^21))-(84672315*x^20))+(141120525*x^19))-(206253075*x^18))+(265182525*x^17))-(300540195*x^16))+(300540195*x^15))-(265182525*x^14))+(206253075*x^13))-(141120525*x^12))+(84672315*x^11))-(44352165*x^10))+(20160075*x^9))-(7888725*x^8))+(2629575*x^7))-(736281*x^6))+(169911*x^5))-(31465*x^4))+(4495*x^3))-(465*x^2))+(31*x))-1))/(x-1)^31))/(-((((((((((((((((((((((((((((((((x^31-(31*x^30))+(465*x^29))-(4495*x^28))+(31465*x^27))-(169911*x^26))+(736281*x^25))-(2629575*x^24))+(7888725*x^23))-(20160075*x^22))+(44352165*x^21))-(84672315*x^20))+(141120525*x^19))-(206253075*x^18))+(265182525*x^17))-(300540195*x^16))+(300540195*x^15))-(265182525*x^14))+(206253075*x^13))-(141120525*x^12))+(84672315*x^11))-(44352165*x^10))+(20160075*x^9))-(7888725*x^8))+(2629575*x^7))-(736281*x^6))+(169911*x^5))-(31465*x^4))+(4495*x^3))-(465*x^2))+(31*x))-1)/(x-1)^31)))")
 //    println(SageWrapper.simplify(formula.get))
