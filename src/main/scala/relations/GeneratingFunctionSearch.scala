@@ -506,7 +506,7 @@ object GeneratingFunctionSearch {
     val theories = TheoryRepDao.findAll().toArray
     println(s"Length is ${theories.length}")
 
-    val indices = theories.indices
+    val indices = theories.indices.take(1000)
     for (i <- indices) {
       val theoryRep = theories(i)
       println(i)
@@ -555,32 +555,50 @@ object GeneratingFunctionSearch {
         partialFractionsOpt.foreach { partialFractions =>
           partialFractions.foreach { partialFraction =>
             doTransformations(partialFraction).foreach { case (transformedPartialFraction, transformation) =>
-              if (hashMap.contains(transformedPartialFraction) && hashMap(transformedPartialFraction).head.theory.theory != theories(i).theory) {
-                val expressionTheory =
-                  ExpressingTheory(
-                    theories(i).theory,
-                    partialFraction,
-                    transformedPartialFraction,
-                    transformation,
-                    partialFractions.filterNot(_ == partialFraction),
-                    hashMap(transformedPartialFraction)
-                  )
-                expressionTheory.mappedTheories.map { mapTheory =>
-                  val IUPFROpt = SageWrapper.divide(mapTheory.initialPartialFraction, mapTheory.unifiedPartialFraction)
-                  println(IUPFROpt)
-                  IUPFROpt.map { IUPFR =>
-                    val substitution = Add(List(SeqReference(expressionTheory.theoryId), Neg(Add(expressionTheory.restOfPartialFractions))))
+              val unifiedTransformedPartialFraction = removeXMultiplications(removeConstants(transformedPartialFraction))
+              SageWrapper.simplifyFull(unifiedTransformedPartialFraction).foreach { simplifiedUnifiedTransformedPartialFraction =>
+                  SageWrapper.divide(transformedPartialFraction, simplifiedUnifiedTransformedPartialFraction)
+                    .foreach { transformedDivisionFactor =>
 
-                    val relation = Equation(
-                      "=",
-                      SeqReference(mapTheory.theory.theory),
-                      Add(
-                        Mul(IUPFR :: Func(expressionTheory.transformation.toString, ArgList(List(substitution))) :: Nil) :: mapTheory.restOfPartialFractions
+                  if (hashMap.contains(simplifiedUnifiedTransformedPartialFraction) && hashMap(simplifiedUnifiedTransformedPartialFraction).filter(_
+                    .theory.theory != theories(i).theory) != Nil) {
+                    val expressionTheory =
+                      ExpressingTheory(
+                        theoryId = theories(i).theory,
+                        partialFraction = partialFraction,
+                        transformedPartialFunction = simplifiedUnifiedTransformedPartialFraction,
+                        transformation = transformation,
+                        restOfPartialFractions = partialFractions.filterNot(_ == partialFraction),
+                        mappedTheories = hashMap(simplifiedUnifiedTransformedPartialFraction)
                       )
-                    )
+                    expressionTheory.mappedTheories.foreach { mapTheory =>
+                      val IUPFROpt = SageWrapper.divide(mapTheory.initialPartialFraction, mapTheory.unifiedPartialFraction)
+                      println(IUPFROpt)
+                      IUPFROpt.foreach { IUPFR =>
+                        val negRestofPartials = expressionTheory.restOfPartialFractions match {
+                          case Nil => Nil
+                          case r => List(Neg(Add(r)))
+                        }
+                        val substitution = Add(SeqReference(expressionTheory.theoryId) :: negRestofPartials)
 
-                    RelationDao.insert(RelationRep(3, RelationRep.generatingFunction, relation))
-                    relation
+                        SageWrapper.simplifyFull(Div(IUPFR :: transformedDivisionFactor :: Nil)).foreach {
+                          simplifiedConstant =>
+
+                            val relation = Equation(
+                              "=",
+                              SeqReference(mapTheory.theory.theory),
+                              Add(
+                                Mul(simplifiedConstant :: Func(expressionTheory.transformation
+                                  .toString, ArgList(List
+                                (substitution))) :: Nil) :: mapTheory.restOfPartialFractions
+                              )
+                            )
+
+                            RelationDao.insert(RelationRep(3, RelationRep.generatingFunction, relation))
+                            relation
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -634,7 +652,7 @@ object GeneratingFunctionSearch {
 
     println(SageWrapper.partialFraction(expression).get)
     println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
-//    secondMethod()
+    thirdMethod()
 
     logger.debug(getRepresentingFunction(Integral, FormulaParserInst.parse("-((1/10/x))").get, "").get.toSage)
   }
