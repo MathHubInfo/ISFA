@@ -652,8 +652,11 @@ object GeneratingFunctionSearch {
 
   def saveRelationsToFile(method: Int) = {
     import tools.nsc.io._
-    val ioFile = s"relations-$method"
-    File(ioFile).writeAll("")
+
+    val ioFileName = s"relations-$method"
+    val file = File(ioFileName)
+    file.writeAll("")
+    val bufferedFile = file.bufferedWriter(true)
     val relationTransformation =
     if(method == 2) {
       relation: Expression => relation match {
@@ -664,12 +667,13 @@ object GeneratingFunctionSearch {
       relation: Expression => relation
     }
 
-    val relations = RelationDao.find(MongoDBObject("method" -> method)).toList
-    println(relations.length)
+    val relations = RelationDao.find(MongoDBObject("method" -> method))
 
     relations.foreach { relation =>
-      File(ioFile).appendAll(relationTransformation(relation.expression).toSage + "\n")
+      bufferedFile.write(relationTransformation(relation.expression).toSage + "\n")
     }
+    bufferedFile.flush()
+    bufferedFile.close()
   }
 
 
