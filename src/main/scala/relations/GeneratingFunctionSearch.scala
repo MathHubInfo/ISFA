@@ -655,7 +655,7 @@ object GeneratingFunctionSearch {
     val ioFileName = s"relations-$method"
     val file = new FileWriter(ioFileName)
     file.write("")
-    val bufferedFile = new BufferedWriter(file, 1024*500)
+    val bufferedFile = new BufferedWriter(file, 1024*1024*500)
     val relationTransformation =
     if(method == 2) {
       relation: Expression => relation match {
