@@ -36,7 +36,8 @@ object SageRequest extends ModelCompanion[SageRequest, ObjectId] {
 }
 
 object SageWrapper {
-  val session = "_ga=GA1.1.1714581731.1463532018; ajs_anonymous_id=%221d80e25a-36a9-4ed6-8dec-d73e9f57670d%22; ajs_group_id=null; ajs_user_id=null; mp_455c026defefc920eae5a5a3a74a9008_mixpanel=%7B%22distinct_id%22%3A%20%22154c14e5b2f4a-0427c3e9dba975-36677f03-13c680-154c14e5b3066e%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; optimizelyBuckets=%7B%7D; optimizelyEndUserId=oeu1463532355302r0.7610385580606998; optimizelySegments=%7B%223013750511%22%3A%22direct%22%2C%223029780148%22%3A%22false%22%2C%223031480132%22%3A%22gc%22%7D; mjx.menu=renderer%3ACommonHTML; cookie_test_8080=cookie_test; session=\"TNRBhPSnhWMp8g0CDBAewVo36zg=?username=VmFkbWluCnAwCi4=\""
+  val session = "nb_session_8080=; session=\"1qb/9Auy7FvJOif55F+uodnt+Bw=?username=UydhZG1pbicKcDAKLg==\""
+
   private var counter = 0
 
   def integrate(expression: Expression, variables: List[String] = List("x")): Option[Expression] = {
@@ -63,7 +64,7 @@ object SageWrapper {
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val payload = Map("newcell" -> "0", "id" -> "20", "input" -> input).toSeq
+        val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
         val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
@@ -85,7 +86,7 @@ object SageWrapper {
         var parsed = "\" \""
         var count = 0
         while (parsed == "\" \"" && count < 500) {
-          val x = headerSecond.postForm(Map("id" -> "20").toSeq)
+          val x = headerSecond.postForm(Map("id" -> "31").toSeq)
           parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
           if ((count % 20) == 1) logger.debug(s"sleeping ... ")
           Thread.sleep(50)
@@ -150,7 +151,7 @@ object SageWrapper {
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val payload = Map("newcell" -> "0", "id" -> "20", "input" -> input).toSeq
+        val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
         val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
@@ -173,7 +174,7 @@ object SageWrapper {
         var parsed = "\" \""
         var count = 0
         while (parsed == "\" \"" && count < 500) {
-          val x = headerSecond.postForm(Map("id" -> "20").toSeq)
+          val x = headerSecond.postForm(Map("id" -> "31").toSeq)
           parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
           if ((count % 20) == 1) logger.debug(s"sleeping ... ")
           Thread.sleep(50)
@@ -220,7 +221,7 @@ object SageWrapper {
           "Cookie" -> session
           , "Accept" -> "text/plain")
 
-      val payload = Map("newcell" -> "0", "id" -> "20", "input" -> s" ").toSeq
+      val payload = Map("newcell" -> "0", "id" -> "31", "input" -> s" ").toSeq
       headerFirst.postForm(payload).asString.body
       val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
@@ -243,7 +244,7 @@ object SageWrapper {
       var parsed = "\" \""
       var count = 0
       while (parsed == "\" \"" && count < 1) {
-        val x = headerSecond.postForm(Map("id" -> "20").toSeq)
+        val x = headerSecond.postForm(Map("id" -> "31").toSeq)
         parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
         Thread.sleep(50)
         count += 1
@@ -283,7 +284,7 @@ object SageWrapper {
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val payload = Map("newcell" -> "0", "id" -> "20", "input" -> input).toSeq
+        val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
         val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
@@ -306,7 +307,7 @@ object SageWrapper {
         var parsed = "\" \""
         var count = 0
         while (parsed == "\" \"" && count < 500) {
-          val x = headerSecond.postForm(Map("id" -> "20").toSeq)
+          val x = headerSecond.postForm(Map("id" -> "31").toSeq)
           parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
           if ((count % 20) == 1) logger.debug(s"sleeping ... ")
           Thread.sleep(50)
@@ -367,7 +368,7 @@ object SageWrapper {
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val payload = Map("newcell" -> "0", "id" -> "20", "input" -> input).toSeq
+        val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
         val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
@@ -389,7 +390,7 @@ object SageWrapper {
         var parsed = "\" \""
         var count = 0
         while (parsed == "\" \"" && count < 500) {
-          val x = headerSecond.postForm(Map("id" -> "20").toSeq)
+          val x = headerSecond.postForm(Map("id" -> "31").toSeq)
           parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
           if ((count % 20) == 1) logger.debug(s"sleeping ... ")
           Thread.sleep(50)

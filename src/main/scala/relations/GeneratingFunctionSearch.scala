@@ -424,7 +424,7 @@ object GeneratingFunctionSearch {
           if(partialExpressingTheories.forall(_.nonEmpty)) {
             val fullExpressionTheory = FullExpressingTheory(theories(i).theory, partialExpressingTheories, partialFractions)
             val total = fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution)).length).product
-            if(total > 300000) { // for optimization purposes
+            if(total > 400000) { // for optimization purposes
 //              combine(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution))), { partialFractionsAsRelations =>
 //                val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations))
 //                val rel = RelationRep(2, RelationRep.generatingFunction, relation)
@@ -526,9 +526,9 @@ object GeneratingFunctionSearch {
                   restOfPartialFractions = partialFractions.filterNot(_ == partialFraction)
                 )
                 // TODO: SEE ABOVE, SAME STORY
-                //            if (hashMap.contains(unifiedPartialFraction)) {
-                //              hashMap.put(unifiedPartialFraction, mappedTheory :: hashMap(unifiedPartialFraction))
-                //            } else
+//                if (hashMap.contains(unifiedPartialFraction)) {
+//                  hashMap.put(unifiedPartialFraction, mappedTheory :: hashMap(unifiedPartialFraction))
+//                } else
                 hashMap.put(unifiedPartialFraction, List(mappedTheory))
               }
             }
@@ -557,49 +557,48 @@ object GeneratingFunctionSearch {
         partialFractionsOpt.foreach { partialFractions =>
           partialFractions.foreach { partialFraction =>
             doTransformations(partialFraction).foreach { case (transformedPartialFraction, transformation) =>
-              SageWrapper.simplifyFull(transformedPartialFraction).foreach { unifiedTransformedPartialFraction =>
-                val unifiedTransformedPartialFraction = removeXMultiplications(removeConstants(unifiedTransformedPartialFraction))
-                SageWrapper.simplifyFull(unifiedTransformedPartialFraction).foreach { simplifiedUnifiedTransformedPartialFraction =>
-                  SageWrapper.divide(transformedPartialFraction, simplifiedUnifiedTransformedPartialFraction)
-                    .foreach { transformedDivisionFactor =>
+              SageWrapper.simplifyFull(transformedPartialFraction).foreach { simplifiedTransformedPartialFraction =>
+              val unifiedTransformedPartialFraction = removeXMultiplications(removeConstants(simplifiedTransformedPartialFraction))
+              SageWrapper.simplifyFull(unifiedTransformedPartialFraction).foreach { simplifiedUnifiedTransformedPartialFraction =>
+                SageWrapper.divide(transformedPartialFraction, simplifiedUnifiedTransformedPartialFraction)
+                  .foreach { transformedDivisionFactor =>
 
-                      if (hashMap.contains(simplifiedUnifiedTransformedPartialFraction) && hashMap(simplifiedUnifiedTransformedPartialFraction).filter(_
-                        .theory.theory != theories(i).theory) != Nil) {
-                        val expressionTheory =
-                          ExpressingTheory(
-                            theoryId = theories(i).theory,
-                            partialFraction = partialFraction,
-                            transformedPartialFunction = simplifiedUnifiedTransformedPartialFraction,
-                            transformation = transformation,
-                            restOfPartialFractions = partialFractions.filterNot(_ == partialFraction),
-                            mappedTheories = hashMap(simplifiedUnifiedTransformedPartialFraction)
-                          )
-                        expressionTheory.mappedTheories.foreach { mapTheory =>
-                          val IUPFROpt = SageWrapper.divide(mapTheory.initialPartialFraction, mapTheory.unifiedPartialFraction)
-                          println(IUPFROpt)
-                          IUPFROpt.foreach { IUPFR =>
-                            val negRestofPartials = expressionTheory.restOfPartialFractions match {
-                              case Nil => Nil
-                              case r => List(Neg(Add(r)))
-                            }
-                            val substitution = Add(SeqReference(expressionTheory.theoryId) :: negRestofPartials)
+                    if (hashMap.contains(simplifiedUnifiedTransformedPartialFraction) && hashMap(simplifiedUnifiedTransformedPartialFraction).filter(_
+                      .theory.theory != theories(i).theory) != Nil) {
+                      val expressionTheory =
+                        ExpressingTheory(
+                          theoryId = theories(i).theory,
+                          partialFraction = partialFraction,
+                          transformedPartialFunction = simplifiedUnifiedTransformedPartialFraction,
+                          transformation = transformation,
+                          restOfPartialFractions = partialFractions.filterNot(_ == partialFraction),
+                          mappedTheories = hashMap(simplifiedUnifiedTransformedPartialFraction)
+                        )
+                      expressionTheory.mappedTheories.foreach { mapTheory =>
+                        val IUPFROpt = SageWrapper.divide(mapTheory.initialPartialFraction, mapTheory.unifiedPartialFraction)
+                        println(IUPFROpt)
+                        IUPFROpt.foreach { IUPFR =>
+                          val negRestofPartials = expressionTheory.restOfPartialFractions match {
+                            case Nil => Nil
+                            case r => List(Neg(Add(r)))
+                          }
+                          val substitution = Add(SeqReference(expressionTheory.theoryId) :: negRestofPartials)
 
-                            SageWrapper.simplifyFull(Div(IUPFR :: transformedDivisionFactor :: Nil)).foreach {
-                              simplifiedConstant =>
+                          SageWrapper.simplifyFull(Div(IUPFR :: transformedDivisionFactor :: Nil)).foreach {
+                            simplifiedConstant =>
 
-                                val relation = Equation(
-                                  "=",
-                                  SeqReference(mapTheory.theory.theory),
-                                  Add(
-                                    Mul(simplifiedConstant :: Func(expressionTheory.transformation
-                                      .toString, ArgList(List
-                                    (substitution))) :: Nil) :: mapTheory.restOfPartialFractions
-                                  )
+                              val relation = Equation(
+                                "=",
+                                SeqReference(mapTheory.theory.theory),
+                                Add(
+                                  Mul(simplifiedConstant :: Func(expressionTheory.transformation
+                                    .toString, ArgList(List
+                                  (substitution))) :: Nil) :: mapTheory.restOfPartialFractions
                                 )
+                              )
 
-                                RelationDao.insert(RelationRep(3, RelationRep.generatingFunction, relation))
-                                relation
-                            }
+                              RelationDao.insert(RelationRep(3, RelationRep.generatingFunction, relation))
+                              relation
                           }
                         }
                       }
@@ -652,7 +651,7 @@ object GeneratingFunctionSearch {
 
 
   def main(args: Array[String]): Unit = {
-    val expression = Div(List(Var("x"), Power(Sub(List(Num(20), Mul(List(Num(2), Var("x"))))), Num(2))))
+    val expression = Div(List(Var("x"), Power(Sub(List(Num(20), Mul(List(Num(13), Var("x"))))), Num(5))))
 
     println(SageWrapper.partialFraction(expression).get)
     println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
