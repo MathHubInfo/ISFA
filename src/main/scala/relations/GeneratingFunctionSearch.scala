@@ -2,6 +2,7 @@ package relations
 
 import scala.concurrent.Future
 
+import java.io.{FileWriter, File, BufferedWriter, PrintWriter}
 import java.util.concurrent.ConcurrentHashMap
 
 import com.mongodb.casbah.Imports
@@ -651,12 +652,10 @@ object GeneratingFunctionSearch {
 //  }
 
   def saveRelationsToFile(method: Int) = {
-    import tools.nsc.io._
-
     val ioFileName = s"relations-$method"
-    val file = File(ioFileName)
-    file.writeAll("")
-    val bufferedFile = file.bufferedWriter(true)
+    val file = new FileWriter(ioFileName)
+    file.write("")
+    val bufferedFile = new BufferedWriter(file, 1024*500)
     val relationTransformation =
     if(method == 2) {
       relation: Expression => relation match {
@@ -670,7 +669,7 @@ object GeneratingFunctionSearch {
     val relations = RelationDao.find(MongoDBObject("method" -> method))
 
     relations.foreach { relation =>
-      bufferedFile.write(relationTransformation(relation.expression).toSage + "\n")
+      bufferedFile.append(relationTransformation(relation.expression).toSage + "\n")
     }
     bufferedFile.flush()
     bufferedFile.close()
