@@ -69,9 +69,9 @@ object RelationDao extends ModelCompanion[RelationRepString, ObjectId] {
     dao.insert(relation.map(x => RelationRepString(x.method, x.level, x.expression.toSage)), WriteConcern.Normal)
   }
 
-  def find(f: DBObject) = {
-    dao.find(f).map(x => RelationRep(x.method, x.level, FormulaParserInst.parse(x.expression).get))
-  }
+//  def find(f: DBObject) = {
+//    dao.find(f).map(x => RelationRep(x.method, x.level, FormulaParserInst.parse(x.expression).get))
+//  }
 }
 
 

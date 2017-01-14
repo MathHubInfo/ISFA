@@ -479,18 +479,18 @@ object GeneratingFunctionSearch {
     logger.debug(s"Count: ${gen_count}   ${rep_count}")
   }
 
-  def countRelations() = {
-    val relations = RelationDao.find(MongoDBObject("method" -> 2))
-
-    val counting = relations.toList.groupBy { _.expression match { case Equation (_, SeqReference(id), _) => id }}
-      .map(x => x._1 -> x._2.length)
-    logger.debug(s"Relations")
-    val groupedRelations = relations.toList.groupBy { _.expression match {case Equation(_, SeqReference(id), _) => id }}
-      .values.toList.flatten.filter(_.level == RelationRep.representingFunction)
-    logger.debug(s"Length ${groupedRelations.size}")
-    groupedRelations.foreach(x => logger.debug(s"\n${x.expression.toSage} \n"))
-    counting.foreach(x => logger.debug(x.toString()))
-  }
+//  def countRelations() = {
+//    val relations = RelationDao.find(MongoDBObject("method" -> 2))
+//
+//    val counting = relations.toList.groupBy { _.expression match { case Equation (_, SeqReference(id), _) => id }}
+//      .map(x => x._1 -> x._2.length)
+//    logger.debug(s"Relations")
+//    val groupedRelations = relations.toList.groupBy { _.expression match {case Equation(_, SeqReference(id), _) => id }}
+//      .values.toList.flatten.filter(_.level == RelationRep.representingFunction)
+//    logger.debug(s"Length ${groupedRelations.size}")
+//    groupedRelations.foreach(x => logger.debug(s"\n${x.expression.toSage} \n"))
+//    counting.foreach(x => logger.debug(x.toString()))
+//  }
 
   /**
    * This method tries to find one partial fraction intersection.
@@ -666,10 +666,15 @@ object GeneratingFunctionSearch {
       relation: Expression => relation
     }
 
-    val relations = RelationDao.find(MongoDBObject("method" -> method))
+    val relationQuery = RelationDao.find(MongoDBObject("method" -> method)).batchSize(400000)
+    val relations = new Iterator[RelationRepString] {
+      override def hasNext: Boolean = relationQuery.hasNext
+
+      override def next(): RelationRepString = relationQuery.next()
+    }
 
     relations.foreach { relation =>
-      bufferedFile.append(relationTransformation(relation.expression).toSage + "\n")
+      bufferedFile.append(relationTransformation(FormulaParserInst.parse(relation.expression).get).toSage + "\n")
     }
     bufferedFile.flush()
     bufferedFile.close()
