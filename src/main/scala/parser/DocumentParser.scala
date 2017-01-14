@@ -55,10 +55,6 @@ case class RelationRepString(
 )
 
 object RelationDao extends ModelCompanion[RelationRepString, ObjectId] {
-  // Sending stuff to cloud, not enough space in my drive
-//  val server = new ServerAddress("104.155.127.42", 27017)
-//  val credentials = MongoCredential.createCredential("oeis-report", "OEIS", "oeis-report".toCharArray)
-//  val mongoClient = MongoClient(server, List(credentials))
   val mongoClient = MongoClient("localhost", 27017)
   val db = mongoClient("OEIS")
   def collection = db("relations")
