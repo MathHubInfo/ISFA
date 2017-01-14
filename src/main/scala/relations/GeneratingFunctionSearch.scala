@@ -603,6 +603,7 @@ object GeneratingFunctionSearch {
                         }
                       }
                     }
+                  }
                 }
               }
             }
