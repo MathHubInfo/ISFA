@@ -8,6 +8,7 @@ import com.mongodb.casbah.Imports
 import com.mongodb.casbah.commons.MongoDBObject
 import org.json4s.native.Serialization._
 import org.slf4j.LoggerFactory
+import library.Library
 import parser.DocumentParser.GeneratingFunctionDefinition
 import parser.Expression.format
 import parser._
@@ -649,14 +650,35 @@ object GeneratingFunctionSearch {
 //    logger.debug("Number of connections " + graph.count { case (k,v) => v.length > 1})
 //  }
 
+  def saveRelationsToFile(method: Int) = {
+    import tools.nsc.io._
+    val ioFile = s"relations-$method"
+    File(ioFile).writeAll("")
+    val relationTransformation =
+    if(method == 2) {
+      relation: Expression => relation match {
+        case Equation("=", SeqReference(seq), rest) =>
+          Equation("=", FuncR(SeqReference(seq), ArgList(List(Var("n")))), rest)
+      }
+    } else {
+      relation: Expression => relation
+    }
+
+    val relations = RelationDao.find(MongoDBObject("method" -> method)).toList
+    println(relations.length)
+
+    relations.foreach { relation =>
+      File(ioFile).appendAll(relationTransformation(relation.expression).toSage + "\n")
+    }
+  }
 
 
   def main(args: Array[String]): Unit = {
     val expression = Div(List(Var("x"), Power(Sub(List(Num(20), Mul(List(Num(13), Var("x"))))), Num(5))))
 
-    println(SageWrapper.partialFraction(expression).get)
-    println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
-    thirdMethod()
+//    println(SageWrapper.partialFraction(expression).get)
+//    println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
+    saveRelationsToFile(3)
 
 //    logger.debug(getRepresentingFunction(Integral, FormulaParserInst.parse("-((1/10/x))").get, "").get.toSage)
   }
