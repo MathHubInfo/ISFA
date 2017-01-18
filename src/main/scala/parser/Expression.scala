@@ -17,6 +17,7 @@ sealed trait Expression{
   //  override def toString = present
   def toNode(implicit theory : String) : Elem
   def toSage: String
+  def toSagePython: String = toSage
   def toCML: Elem
 }
 
@@ -116,6 +117,7 @@ case class Power(base : Expression, exp : Expression) extends Expression{
       {exp.toNode}
     </OMA>
   def toSage = s"${base.toSage}^${exp.toSage}"
+  override def toSagePython = s"${base.toSagePython}**${exp.toSagePython}"
   def toCML =
   <apply>
     <power/>
@@ -132,6 +134,7 @@ case class Add(expr : List[Expression]) extends Expression{
       {expr.map(_.toNode)}
     </OMA>
   def toSage = s"(${expr.map(_.toSage).mkString("+")})"
+  override def toSagePython = s"(${expr.map(_.toSagePython).mkString("+")})"
   def toCML =
   <apply>
     <plus/>
@@ -149,6 +152,7 @@ case class Sub(expr : List[Expression]) extends Expression{
       {expr.map(_.toNode)}
     </OMA>
   def toSage = s"(${expr.map(_.toSage).mkString("-")})"
+  override def toSagePython = s"(${expr.map(_.toSagePython).mkString("-")})"
   def toCML =
     <apply>
       <minus/>
@@ -162,6 +166,7 @@ case class Mul(expr : List[Expression]) extends Expression{
   def present : String = expr.mkString("*")
   def toNode(implicit theory : String) : Elem = <OMA><OMS name="times"/>{expr.map(_.toNode)}</OMA>
   def toSage = s"(${expr.map(_.toSage).mkString("*")})"
+  override def toSagePython = s"(${expr.map(_.toSagePython).mkString("*")})"
   def toCML =
     <apply>
       <times/>
@@ -179,6 +184,7 @@ case class Div(expr : List[Expression]) extends Expression{
       {expr.map(_.toNode)}
     </OMA>
   def toSage = s"(${expr.map(_.toSage).mkString("/")})"
+  override def toSagePython = s"(${expr.map(_.toSagePython).mkString("/")})"
   def toCML =
     <apply>
       <times/>
@@ -196,6 +202,7 @@ case class Neg(expr : Expression) extends Expression{
       {expr.toNode}
     </OMA>
   def toSage = s"(-${expr.toSage})"
+  override def toSagePython = s"(-${expr.toSagePython})"
   def toCML =
     <apply>
       <minus/>
@@ -213,6 +220,7 @@ case class Func(name : String, args : ArgList) extends Expression{
       <OMS name={name} cd="arithmetic"/>
     } //TODO : the last one is "function()" like phi(), fix it
   def toSage = s"$name${args.toSage}"
+  override def toSagePython = s"$name${args.toSagePython}"
   def toCML =
   <apply>
     <csymbol>{name}</csymbol>
@@ -231,6 +239,7 @@ case class FuncR(seq : SeqReference, args : ArgList) extends Expression{
       {args.args.map(_.toNode)}
     </OMA>
   def toSage = s"${seq.toSage}(${args.toSage})"
+  override def toSagePython = s"${seq.toSagePython}(${args.toSagePython})"
   def toCML =
     <apply>
       {seq.toCML}
@@ -259,6 +268,7 @@ case class ArgList(args : List[Expression]) extends Expression{
       </OMS>
     </OMA>
   def toSage = s"(${args.map(_.toSage).mkString(",")})"
+  override def toSagePython = s"(${args.map(_.toSagePython).mkString(",")})"
   def toCML =
     <apply>
       <csymbol>set</csymbol>
@@ -367,6 +377,7 @@ case class Equation(comparison : String, left : Expression, right : Expression) 
       {right.toNode}
     </OMA>
   def toSage = s"${left.toSage} $comparison ${right.toSage}"
+  override def toSagePython = s"${left.toSagePython} $comparison ${right.toSagePython}"
   def toCML =
     <apply>
       <csymbol>{comparison}</csymbol>

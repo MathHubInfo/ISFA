@@ -112,7 +112,8 @@ object Library {
         if (theory.formulas.nonEmpty) {
           val formulas = theory.formulas
           val generatingFunctions = formulas.flatMap(DocumentParser.getGeneratingFunction)
-          theory.generatingFunctions = generatingFunctions.map(GeneratingFunctionSearch.getGeneratingFunction)
+//          theory.generatingFunctions = generatingFunctions.map(GeneratingFunctionSearch.getGeneratingFunction)
+          theory.generatingFunctions = generatingFunctions.map(_.body)
 
           if (theory.generatingFunctions.nonEmpty) {
             count += theory.generatingFunctions.length

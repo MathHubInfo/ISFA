@@ -682,11 +682,11 @@ object GeneratingFunctionSearch {
 
 
   def main(args: Array[String]): Unit = {
-    val expression = Div(List(Var("x"), Power(Sub(List(Num(20), Mul(List(Num(13), Var("x"))))), Num(5))))
+    val expression = Div(List(Var("x"), Power(Sub(List(Num(30), Mul(List(Num(13), Var("x"))))), Num(5))))
 
-//    println(SageWrapper.partialFraction(expression).get)
-//    println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
-    saveRelationsToFile(3)
+    println(SageWrapper.partialFraction(expression).get)
+    println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
+//    saveRelationsToFile(3)
 
 //    logger.debug(getRepresentingFunction(Integral, FormulaParserInst.parse("-((1/10/x))").get, "").get.toSage)
   }

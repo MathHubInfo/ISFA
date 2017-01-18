@@ -9,6 +9,8 @@ import scala.io.Source
 import scala.util.matching.Regex
 import scala.util.parsing.combinator.{PackratParsers, JavaTokenParsers}
 
+import sage.SageWrapper
+
 class FormulaParser extends JavaTokenParsers with PackratParsers {
   var calls: BigInt = 0
   var succeded: BigInt = 0
@@ -34,7 +36,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   override val skipWhitespace = true
 
   def postProcess(expression: Expression): Expression = expression match {
-    case Func(name, args) if variables.contains(name) && args.args.length == 1 => Mul(Var(name) :: args.args.head :: Nil)
+    case Func(name, args) if variables.contains(name) => Mul(Var(name) :: args.args.map(postProcess))
     case Func(name, args) => Func(name, postProcess(args) match { case a: ArgList => a })
     case FuncR(name, args) => FuncR(name, postProcess(args) match { case a: ArgList => a })
     case ArgList(args) => ArgList(args.map(x => postProcess(x)))
@@ -47,15 +49,20 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       }
     case Sub(args) => Sub(args.map(x => postProcess(x)))
     case Add(args) => Add(args.map(x => postProcess(x)))
-    case Div(args) => Div(args.map(x => postProcess(x)))
+    case Div(args) =>
+      Div(args.map(x => postProcess(x)))
+    case Power(Func(name, args), exp) if variables.contains(name) =>
+      Mul(Power(Var(name), postProcess(exp)) :: args.args.map(postProcess))
     case Power(base, p) => Power(postProcess(base), postProcess(p))
     case Iters(name, from, to, on) => Iters(
-      name, from match { case Some(a) => Some(postProcess(a)); case _ => None },
-      to match { case Some(a) => Some(postProcess(a)); case _ => None }, postProcess(on)
+      name, from.map(postProcess),
+      to.map(postProcess),
+      postProcess(on)
     )
     case Factorial(expr) => Factorial(postProcess(expr))
     case Equation(cmp, left, right) => Equation(cmp, postProcess(left), postProcess(right))
     case Neg(expr) => Neg(postProcess(expr))
+    case GeneratingFunction(exp) => GeneratingFunction(postProcess(exp))
     case x => x
   }
 
@@ -96,11 +103,17 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
 
   def applyFunctionsInOrder(exprs: List[Expression], funcs: List[(Expression, Expression) => Expression]): Expression = {
-    (exprs, funcs) match {
+//    println(exprs, funcs)
+    val res = (exprs, funcs) match {
       case (e1 :: e2 :: rst, f1 :: rf) => applyFunctionsInOrder(f1(e1, e2) :: rst, rf)
       case (expr :: Nil, Nil) => expr
-      case _ => throw new Exception("Number of functions doesn't match!")
+      case _ =>
+//        println("Throwing")
+        throw new Exception("Number of functions doesn't match!")
     }
+
+//    println(s"Apply functions in order: ${res}")
+    res
   }
 
   val dictionary = Source.fromFile(getClass.getResource("/dictionary").getPath).getLines().map(_.trim).toSet
@@ -223,14 +236,16 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
     "tan\\b".r | "tg\\b".r | "ctg\\b".r | "deg\\b".r | "binomial\\b".r | "numerator\\b".r | "exp\\b".r | "phi\\b".r | "If\\b".r | "if\\b".r)
 
   // no mod (for modulo) because it is an infix operator so it shouldn't understand a mod b, as a*(mod(b))
-  lazy val function: PackratParser[String] = no_bracket_function | not(number | infix_ops) ~> "[A-Za-z']+[A-Za-z_0-9']*(?=[\\(\\[\\{])\\b".r
+  lazy val gfvar: PackratParser[String] = "x\\b".r | "y\\b".r | "z\\b".r | "t\\b".r
+  lazy val function: PackratParser[String] = no_bracket_function | not(number | infix_ops | gfvar) ~>
+    "[A-Za-z']+[A-Za-z_0-9']*(?=[\\(\\[\\{])\\b".r
 
   lazy val constant: PackratParser[String] = "Pi\\b".r | "pi\\b".r | "infinity\\b".r | "infty\\b".r | "Infinity\\b".r | "Infty\\b".r |
     "Inf\\b".r | "inf\\b".r
 
   lazy val dots: PackratParser[String] = "..." | ".."
   lazy val reference: Regex = "A\\d{6}".r
-  lazy val variable: PackratParser[String] = not(infix_ops) ~> "\\w+\\d{0,1}\\b".r ^^ { x => x }
+  lazy val variable: PackratParser[String] = not(infix_ops) ~> "\\w+\\d{0,1}\'*\\b".r ^^ { x => x }
   /*| "\\w+\\d+(?=\\()(?=\\))\\b".r*/
   lazy val number: PackratParser[String] =
     """(\d+(\.\d+)?)""".r | """\d+(\.\d+)\b""".r
@@ -282,12 +297,25 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
     "(\\*)|(\\bX\\b)".r ^^ {
       _ => (x: Expression, y: Expression) => (x, y) match {
         case (x: Mul, y: Expression) => Mul(x.expr :+ y)
-        case (x: Expression, y: Expression) => Mul(List(x, y))
+        case (x: Expression, y: Var) =>
+          addVar(y.name)
+          Mul(List(x, y))
+        case (x: Var, y:Expression) =>
+          addVar(x.name)
+          Mul(List(x,y))
+        case (x: Expression, y: Expression) =>
+          Mul(List(x,y))
       }
     } |
       "/" ^^ {
         _ => (x: Expression, y: Expression) => (x, y) match {
           case (x: Div, y: Expression) => Div(x.expr :+ y)
+          case (x: Expression, y: Var) =>
+            addVar(y.name)
+            Div(List(x, y))
+          case (x: Var, y:Expression) =>
+            addVar(x.name)
+            Div(List(x,y))
           case (x: Expression, y: Expression) => Div(List(x, y))
         }
       }
@@ -365,7 +393,9 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       case "+" ~ (fctr: Expression) => fctr
     } |
       term ^^ {
-        case (a: Expression) => a
+        case (a: Expression) =>
+//          println(a)
+          a
       }
 
   lazy val term: PackratParser[Expression] =
@@ -374,7 +404,9 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   //    } |
     term_no_fact /*~opt("!")*/ ^^ {
       //      case exp~Some("!") => Factorial(exp)
-      case exp /*~None*/ => exp
+      case exp /*~None*/ =>
+//        println(exp)
+        exp
     }
 
 
@@ -385,41 +417,49 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       case (no )~(expr : Expression)~None => Mul(Num(no.toDouble)::expr::Nil)
     } |*/
     unsigned_factor ~ rep(multiply | lazy_multiply) ^^ {
+      case (fctr: Num) ~ divs if divs.collect { case a: Var => a}.length == 1 && divs.length == 1 =>
+        addVar(divs.head.asInstanceOf[Var].name)
+        Mul(fctr :: divs.head.asInstanceOf[Var] :: Nil)
       case (fctr: Expression) ~ (divs) if divs.nonEmpty =>
         applyFunctionsInOrder(
           fctr :: divs.collect(
           {
-            case x: Expression => x
-            case x: (Any ~ Expression) => x._2
+            case x: Expression =>
+//              println(fctr)
+//              println("Implicit " + x)
+              x
+            case x: (Any ~ Expression) =>
+//              println(x)
+              x._2
           }
           ), funcs = divs.collect(
           {
             case x: (((Expression, Expression) => Expression) ~ Expression) =>
-              try {
-                x._1.asInstanceOf[(Expression, Expression) => Expression]
-              }
-              catch {
-                case x =>
-                  (x: Expression, y: Expression) => (x, y) match {
-                    case (x: Var, y: ArgList) => y match {
-                      //In case there is var(var) consider the first var to be a function
-                      case ArgList(List(Var(a))) =>
-                        addFunc(x.name)
-                        Func(x.name, y)
-                      case ArgList(List(Num(a))) =>
-                        addFunc(x.name)
-                        Func(x.name, y)
-                      case elsee =>
-                        Func(x.name, y)
-                    }
-                    case (x: Mul, y: Expression) => Mul(x.expr :+ y)
-                    case (x: Expression, y: Expression) => Mul(List(x, y))
-                  }
+//                println(true)
+                x._1
+            case x =>
+//              println(false, x)
+              (x: Expression, y: Expression) => (x, y) match {
+                case (x: Var, y: ArgList) => y match {
+                  //In case there is var(var) consider the first var to be a function
+                  case ArgList(List(Var(a))) =>
+                    addFunc(x.name)
+                    Func(x.name, y)
+                  case ArgList(List(Num(a))) =>
+                    addFunc(x.name)
+                    Func(x.name, y)
+                  case elsee =>
+                    Func(x.name, y)
+                }
+                case (x: Mul, y: Expression) => Mul(x.expr :+ y)
+                case (x: Expression, y: Expression) => Mul(List(x, y))
               }
           }
           )
         )
-      case (fctr: Var) ~ (divs) => addVar(fctr.name); fctr
+      case (fctr: Var) ~ (divs) if divs.isEmpty =>
+        addVar(fctr.name)
+        fctr
       case (fctr: Expression) ~ (divs) => fctr
     }
 
@@ -495,6 +535,9 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
         }
       case (ar: QVar) ~ None => ar
 
+      case (a: Var) ~ Some("^" ~ (signed: Expression) ~ None) =>
+        addVar(a.name)
+        Power(a, signed)
       case (a: Expression) ~ Some("^" ~ (signed: Expression) ~ None) => Power(a, signed)
       case (a: Expression) ~ None => a
     } |
@@ -659,15 +702,14 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
 object FormulaParserInst extends FormulaParser {
   def main(args: Array[String]): Unit = {
-    val test = "\t\nE.g.f.: (1+sin(x))/cos(x) = tan(x) + sec(x).\nE.g.f. for a(n+1) is 1/(cos(x/2)-sin(x/2))^2 = 1/(1-sin(x)) = d/dx(sec(x)+tan(x)).\nE.g.f. A(x)=-log(1-sin(x)), for a(n+1). - Vladimir Kruchinin, Aug 09 2010\nO.g.f.: A(x) = 1+x/(1-x-x^2/(1-2*x-3*x^2/(1-3*x-6*x^2/(1-4*x-10*x^2/(1-... -n*x-(n*(n+1)/2)*x^2/(1- ...)))))) (continued fraction). - Paul D. Hanna, Jan 17 2006\nO.g.f. A(x) = y satisfies 2y' = 1 + y^2. - Michael Somos, Feb 03 2004\na(n) = P_n(0) + Q_n(0) (see A155100 and A104035), defining Q_{-1} = 0. Cf. A156142.\n2*a(n+1) = Sum_{k=0..n} binomial(n, k)*a(k)*a(n-k)."
-    val lines = test.split("\n")
+    val test = "(1/(1-x((1+(4*x)))))"
     println("input : " + test)
-    val parseed = lines.map(TextParserIns.parseLine(_))
-    parseed.foreach(println)
 
-    println("GFS")
-    parseed.map(x => x.map(y => DocumentParser.getGeneratingFunction(y))).foreach(println)
-
+    println(parseAll(expression, test).get.toSage)
+//    println(SageWrapper.simplifyFull(parse(test).get).get.toSage)
+//    println(SageWrapper.simplifyFull(parse(test).get).get.toSagePython)
+//    println(parse(test).get.toSagePython)
+//    TheoryRepDao.findOneByTheory(564).foreach(_.generatingFunctions.foreach(x => println(x.toSage)))
   }
 
 }

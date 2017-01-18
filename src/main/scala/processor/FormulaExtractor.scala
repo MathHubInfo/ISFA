@@ -54,9 +54,9 @@ class TextParser extends FormulaParser {
 object TextParserIns extends TextParser{
 
   def main(args : Array[String]): Unit = {
-    val test = "1   - 1    2 "
+    val test = "G.f.: x*(1+2*x)*(1+x^2)/(1-x^2)^2. - Ralf Stephan, Jun 10 2003"
     println("input : "+ test)
-//    println(parseAll(expression, test))
+    println(parseLine(test).get)
   }
 
 }
