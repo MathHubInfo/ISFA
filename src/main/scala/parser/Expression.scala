@@ -71,6 +71,11 @@ case class Num(double : Double) extends Expression{
   def toNode(implicit theory : String) : Elem = if(double.isValidInt) <OMI>{double.toInt}</OMI> else <OMF dec={double.toString}/>
   def toSage = present
   def toCML = <cn>{double}</cn>
+
+  override def equals(o: Any) = o match {
+    case that: Num => if(double == 0) that.double - double == 0 else Math.abs(1 - that.double / double) < 0.001
+    case _ => false
+  }
 }
 case class Constant(name : String) extends Expression{
   def present : String = name

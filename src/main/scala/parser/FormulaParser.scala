@@ -493,14 +493,14 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
   lazy val factor: PackratParser[Expression] =
     argument_suffix ~ opt("^" ~ signed_factor ~ opt(argument)) ^? {
-      case (a: Var) ~ Some("^" ~ (signed: Expression) ~ Some(arguments: ArgList)) => {
+      case (a: Var) ~ Some("^" ~ (signed: Expression) ~ Some(arguments: ArgList)) =>
         Power(Func(a.name, arguments), signed)
-      }
+
       case (a: ArgList) ~ Some("^" ~ (signed: Expression) ~ Some(arguments: ArgList))
-        if a.args.length == 1 && arguments.args.length == 1 => {
-        // TODO: Can drop the first a.args.length == 1, because we can have [-1,1,0]^2
-        Power(a.args.head, Mul(signed :: arguments.args.head :: Nil))
-      }
+        if a.args.length == 1 && arguments.args.length == 1 =>
+        println("Got here")
+        Mul(Power(a.args.head, signed) :: arguments.args.head :: Nil)
+
       case (a: ArgList) ~ Some("^" ~ (signed: Expression) ~ None) => Power(a.args.head, signed)
       case (a: ArgList) ~ None if a.args.length == 1 => a.args.head
 
@@ -653,7 +653,9 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   lazy val value: PackratParser[Expression] =
     reference ^^ { x => SeqReference(x) } |
       constant ^^ { x => Constant(x) } |
-      number ^^ { case x => Num(x.toDouble) } |
+      number ^? {
+        case x => Num(x.toDouble)
+      } |
       variable ^^ { case v: String =>
         Var(v)
       } |
@@ -702,10 +704,10 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
 object FormulaParserInst extends FormulaParser {
   def main(args: Array[String]): Unit = {
-    val test = "(1/(1-x((1+(4*x)))))"
+    val test = "G.f.: 1/((1-x)^3*(1-x^3))"
     println("input : " + test)
 
-    println(parseAll(expression, test).get.toSage)
+    println(parse(test).get.toSage)
 //    println(SageWrapper.simplifyFull(parse(test).get).get.toSage)
 //    println(SageWrapper.simplifyFull(parse(test).get).get.toSagePython)
 //    println(parse(test).get.toSagePython)

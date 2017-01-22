@@ -38,6 +38,21 @@ object TheoryRepDao extends ModelCompanion[TheoryRep, ObjectId] {
   }
 }
 
+object TheoryRepVerifiedDao extends ModelCompanion[TheoryRep, ObjectId] {
+  val mongoClient = MongoClient("localhost", 27017)
+  val db = mongoClient("OEIS")
+  def collection = db("theory_verified")
+  override def dao: DAO[TheoryRep, ObjectId] = new SalatDAO[TheoryRep, ObjectId](collection) {}
+
+  def findOneByTheory(theoryNumber: Int): Option[TheoryRep] = {
+    val theory = Library.createID(theoryNumber.toString)
+
+    dao.findOne(MongoDBObject("theory" -> theory))
+  }
+}
+
+
+
 case class RelationRep(
   method: Int,
   level: String,

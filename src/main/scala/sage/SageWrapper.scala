@@ -2,9 +2,12 @@ package sage
 
 import play.api.Logger
 import play.api.libs.json.Json
+import play.twirl.api.Html
 
 import scala.util.Try
 import scalaj.http.Http
+
+import javax.swing.text.html.HTMLDocument
 
 import com.mongodb.casbah.MongoClient
 import com.mongodb.casbah.commons.MongoDBObject
@@ -13,7 +16,7 @@ import com.novus.salat.global.ctx
 import org.bson.types.ObjectId
 import org.slf4j.LoggerFactory
 
-import parser.{ArgList, Expression, FormulaParserInst}
+import parser.{Num, ArgList, Expression, FormulaParserInst}
 
 case class SageRequest(
   request: String,
@@ -36,7 +39,7 @@ object SageRequest extends ModelCompanion[SageRequest, ObjectId] {
 }
 
 object SageWrapper {
-  val session = "_ga=GA1.1.1714581731.1463532018; ajs_anonymous_id=%221d80e25a-36a9-4ed6-8dec-d73e9f57670d%22; ajs_group_id=null; ajs_user_id=null; mp_455c026defefc920eae5a5a3a74a9008_mixpanel=%7B%22distinct_id%22%3A%20%22154c14e5b2f4a-0427c3e9dba975-36677f03-13c680-154c14e5b3066e%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; optimizelyBuckets=%7B%7D; optimizelyEndUserId=oeu1463532355302r0.7610385580606998; optimizelySegments=%7B%223013750511%22%3A%22direct%22%2C%223029780148%22%3A%22false%22%2C%223031480132%22%3A%22gc%22%7D; mjx.menu=renderer%3ACommonHTML; cookie_test_8080=cookie_test; session=\"KJYBg0MI1FwDjyUjr6rn419bbqo=?username=VmFkbWluCnAwCi4=\""
+  val session = "_ga=GA1.1.1714581731.1463532018; ajs_anonymous_id=%221d80e25a-36a9-4ed6-8dec-d73e9f57670d%22; ajs_group_id=null; ajs_user_id=null; mp_455c026defefc920eae5a5a3a74a9008_mixpanel=%7B%22distinct_id%22%3A%20%22154c14e5b2f4a-0427c3e9dba975-36677f03-13c680-154c14e5b3066e%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; optimizelyBuckets=%7B%7D; optimizelyEndUserId=oeu1463532355302r0.7610385580606998; optimizelySegments=%7B%223013750511%22%3A%22direct%22%2C%223029780148%22%3A%22false%22%2C%223031480132%22%3A%22gc%22%7D; mjx.menu=renderer%3ACommonHTML; nb_session_8080=; cookie_test_8080=cookie_test; session=\"zcD+KdC6RsqrCDik2Cyb8kYz7pc=?username=VmFkbWluCnAwCi4=\""
 
   private var counter = 0
 
@@ -90,7 +93,7 @@ object SageWrapper {
         var count = 0
         while (parsed == "\" \"" && count < 500) {
           val x = headerSecond.postForm(Map("id" -> "31").toSeq)
-          parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
+          parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString()
           if ((count % 20) == 1) logger.debug(s"sleeping ... ")
           Thread.sleep(50)
           count += 1
@@ -106,29 +109,32 @@ object SageWrapper {
           Thread.sleep(100)
           headerAlive.param("_", System.currentTimeMillis().toString)
           cleanup()
+
+          None
         } else {
           smallCleanup()
           Thread.sleep(20)
-        }
 
-        val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
-        val parsedFormula = FormulaParserInst.parse(formula).orElse {
-          logger.debug(s"Couldn't parse: $formula")
-          cleanup()
-          None
-        }
-        //    logger.debug(parsedFormula)
+          val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
+          println("Parsed: " + formula.drop(1).dropRight(1).split(",").map(_.trim.toDouble).toList)
+          val parsedFormula = FormulaParserInst.parse(formula).orElse {
+            logger.debug(s"Couldn't parse: $formula")
+            cleanup()
+            None
+          }
+          //    logger.debug(parsedFormula)
 
-        Try {
-          SageRequest.save(SageRequest(
-            request = input,
-            result = parsedFormula
-          ))
-        }
+          Try {
+            SageRequest.save(SageRequest(
+              request = input,
+              result = parsedFormula
+            ))
+          }
 
-        parsedFormula.map {
-          case s: ArgList => s
-          case _ => ArgList(Nil)
+          parsedFormula.map {
+            case s: ArgList => s
+            case _ => ArgList(Nil)
+          }
         }
       } catch {
         case e: Exception =>
@@ -209,11 +215,13 @@ object SageWrapper {
         }
         //    logger.debug(parsedFormula)
 
-        Try {
-          SageRequest.save(SageRequest(
-            request = input,
-            result = parsedFormula
-          ))
+        if(count < 500) {
+          Try {
+            SageRequest.save(SageRequest(
+              request = input,
+              result = parsedFormula
+            ))
+          }
         }
 
         parsedFormula
@@ -304,11 +312,13 @@ object SageWrapper {
           None
         }
 
-        Try {
-          SageRequest.save(SageRequest(
-            request = input,
-            result = parsedFormula
-          ))
+        if(count < 500) {
+          Try {
+            SageRequest.save(SageRequest(
+              request = input,
+              result = parsedFormula
+            ))
+          }
         }
 
         parsedFormula
@@ -476,11 +486,13 @@ object SageWrapper {
         }
 
 
-        Try {
-          SageRequest.save(SageRequest(
-            request = input,
-            result = parsedFormula
-          ))
+        if(count < 500) {
+          Try {
+            SageRequest.save(SageRequest(
+              request = input,
+              result = parsedFormula
+            ))
+          }
         }
 
         parsedFormula
@@ -553,7 +565,12 @@ object SageWrapper {
           Thread.sleep(100)
           headerAlive.param("_", System.currentTimeMillis().toString)
           cleanup()
+        } else {
+          smallCleanup()
+          Thread.sleep(20)
+
         }
+
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
         val parsedFormula = FormulaParserInst.parse(formula).orElse {
           logger.debug(s"Couldn't parse: $formula")
@@ -565,11 +582,13 @@ object SageWrapper {
 
         smallCleanup()
 
-        Try {
-          SageRequest.save(SageRequest(
-            request = input,
-            result = parsedFormula
-          ))
+        if(count < 500) {
+          Try {
+            SageRequest.save(SageRequest(
+              request = input,
+              result = parsedFormula
+            ))
+          }
         }
 
         parsedFormula
@@ -584,16 +603,32 @@ object SageWrapper {
 
   def oeisTerms(theory: String): Option[ArgList] = {
     val input = s"oeis('$theory').first_terms()"
-    callMethodWithCall(input)
+    val result = callMethodWithCall(input)
+    result.flatMap(argListToLong)
   }
 
   def generatingFunctionSeriesCoefficients(generatingFunction: Expression, terms: Int): Option[ArgList] = {
-    val input = s"(${generatingFunction.toSagePython}).series(x,$terms).coefficients()"
-    callMethodWithCall(input)
+    val input =
+      s"map(lambda xy: xy[0].simplify_full(), (${generatingFunction.toSagePython}).series(x,$terms).coefficients())"
+    val result = callMethodWithCall(input)
+    result.flatMap(argListToLong)
   }
 
   def oeisOffsets(theory: String): Option[ArgList] = {
     val input = s"oeis('$theory').offsets()"
     callMethodWithCall(input)
+  }
+
+  private def argListToLong(argList: ArgList): Option[ArgList] = {
+    import parser._
+    Try {
+      val args = argList.args.map {
+        case Neg(Add(List(Mul(List(Num(double), Var("e"))), Num(exp)))) => Neg(Num(s"${double}E${exp.toInt}".toDouble))
+        case Add(List(Mul(List(Num(double), Var("e"))), Num(exp))) => Num(s"${double}E${exp.toInt}".toDouble)
+        case x => x
+      }
+      println(" ARGLISTED " + args)
+      ArgList(args)
+    }.toOption
   }
 }
