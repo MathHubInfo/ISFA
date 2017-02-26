@@ -390,10 +390,8 @@ object GeneratingFunctionSearch {
                          val constN = Div(rightUnificationFactor :: leftUnificationFactor :: Nil)
                           SageWrapper.simplifyFull(constN).orElse(SageWrapper.simplify(constN)).map { simplifiedConst =>
 
-                            logger.debug(simplifiedConst.toSage)
                             val relation = Func(transformation.inverse.toString, ArgList(Mul(simplifiedConst :: SeqReference(mappedTheory.theory.theory) :: Nil) :: Nil))
 
-                            logger.debug(relation.toSage)
                             Relation(
                               partialFractionSubstitution = relation,
                               partialFractionSubstitutionRepresentingFunctionLevel = getRepresentingFunction(transformation.inverse, simplifiedConst, mappedTheory.theory.theory).get,
@@ -682,11 +680,13 @@ object GeneratingFunctionSearch {
 
 
   def main(args: Array[String]): Unit = {
-    val expression = Div(List(Var("x"), Power(Sub(List(Num(30), Mul(List(Num(13), Var("x"))))), Num(5))))
+    val expression = Div(List(Var("x"), Power(Sub(List(Num(95), Mul(List(Num(13), Var("x"))))), Num(5))))
 
     println(SageWrapper.partialFraction(expression).get)
     println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
-//    saveRelationsToFile(3)
+    thirdMethod()
+
+    println("Finished")
 
 //    logger.debug(getRepresentingFunction(Integral, FormulaParserInst.parse("-((1/10/x))").get, "").get.toSage)
   }
