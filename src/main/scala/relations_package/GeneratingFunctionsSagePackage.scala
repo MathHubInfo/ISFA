@@ -92,7 +92,7 @@ object GeneratingFunctionsSagePackage {
   def main(args: Array[String]): Unit = {
     //    println(FormulaParserInst.parse("[0, 0, 840, 12477384, 2545607472, 116307115440, 2406303387000, " +
     //      "30037635498360, 262918567435104, 1765904422135392, 9653659287290280, 44745048366882600, 181129909217550480, 654743996230865424, 2149893215016113112]"))
-    generateForAll()
+    countVerifications()
     //    println(DocumentParser.getGeneratingFunction(TextParserIns.parseLine("Conjecture: G.f.: 1 = Sum_{n>=0} a(n+1)" +
     //      "*A000108(n)*x^n*Sum_{k>=0} C" +
     //      "(2*n+k,k)^2*(-x)^k. Compare with the following g.f of the Catalan numbers (A000108): 1 = Sum_{n>=0} A000108(n)" +
@@ -107,6 +107,7 @@ object GeneratingFunctionsSagePackage {
     TheoryRepDao.findAll().toList.foreach { theory =>
       val generatingFunctions = theory.generatingFunctions.map(rename).filter { generatingFunction =>
         val simplified = SageWrapper.simplifyFull(generatingFunction)
+        simplified.getOrElse(logger.debug(s"Syntax: ${theory.theory} ${generatingFunction.toSage}"))
         simplified.exists {
           case Num(constant) => false
           case Mul(Num(_) :: Var(_) :: Nil) => false
@@ -158,6 +159,33 @@ object GeneratingFunctionsSagePackage {
       }
     }
     outputFile.close()
+  }
+
+  def countVerifications() = {
+    var count = 0
+    TheoryRepDao.findAll().toList.foreach { theory =>
+      val generatingFunctions = theory.generatingFunctions.map(rename).filter { generatingFunction =>
+        val simplified = SageWrapper.simplifyFull(generatingFunction)
+        simplified.getOrElse(logger.debug(s"Syntax: ${theory.theory} ${generatingFunction.toSage}"))
+        val isValid = simplified.exists {
+          case Num(constant) => false
+          case Mul(Num(_) :: Var(_) :: Nil) => false
+          case Var(_) => false
+          case _ => true
+        }
+        if (!isValid) {
+          logger.debug(s"${theory.theory}, ${generatingFunction.toSage}")
+        }
+        isValid
+      }
+      if (generatingFunctions.nonEmpty) {
+        count += generatingFunctions.length
+      }
+    }
+    logger.debug(s"Number of syntax verified gfs: $count")
+    logger.debug(
+      s"Number of total generating functions: ${TheoryRepDao.findAll().map(_.generatingFunctions.length).sum}")
+    logger.debug(s"Number of verified gfs: ${TheoryRepVerifiedDao.findAll().map(_.generatingFunctions.length).sum}")
   }
 
   def functionGeneration(generatingFunctions: Seq[Expression], theory: String): String = {
