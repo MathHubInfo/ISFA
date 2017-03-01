@@ -70,6 +70,9 @@ object SageWrapper {
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
+        val savePayload = Map("save_only" -> "1", "id" -> "31", "input" -> input).toSeq
+        headerFirst.postForm(savePayload).asString.body
+
         val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
         val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
@@ -119,7 +122,6 @@ object SageWrapper {
           println("Parsed: " + formula.drop(1).dropRight(1).split(",").map(_.trim.toDouble).toList)
           val parsedFormula = FormulaParserInst.parse(formula).orElse {
             logger.debug(s"Couldn't parse: $formula")
-            smallCleanup()
             None
           }
           //    logger.debug(parsedFormula)
@@ -129,6 +131,7 @@ object SageWrapper {
               request = input,
               result = parsedFormula
             ))
+            cleanup()
           }
 
           parsedFormula.map {
@@ -161,6 +164,8 @@ object SageWrapper {
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
+        val savePayload = Map("save_only" -> "1", "id" -> "31", "input" -> input).toSeq
+        headerFirst.postForm(savePayload).asString.body
 
         val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
@@ -210,7 +215,6 @@ object SageWrapper {
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
         val parsedFormula = FormulaParserInst.parse(formula).orElse {
           logger.debug(s"Couldn't parse: $formula")
-          smallCleanup()
           None
         }
         //    logger.debug(parsedFormula)
@@ -222,6 +226,7 @@ object SageWrapper {
               result = parsedFormula
             ))
           }
+          cleanup()
         }
 
         parsedFormula
@@ -258,6 +263,9 @@ object SageWrapper {
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
+
+        val savePayload = Map("save_only" -> "1", "id" -> "31", "input" -> input).toSeq
+        headerFirst.postForm(savePayload).asString.body
 
         val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
@@ -305,10 +313,9 @@ object SageWrapper {
 
         }
 
-        val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "")else "No formula"
+        val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
         val parsedFormula = FormulaParserInst.parse(formula).orElse {
           logger.debug(s"Couldn't parse: $formula")
-          smallCleanup()
           None
         }
 
@@ -319,6 +326,7 @@ object SageWrapper {
               result = parsedFormula
             ))
           }
+          cleanup()
         }
 
         parsedFormula
@@ -337,6 +345,9 @@ object SageWrapper {
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
+
+      val savePayload = Map("save_only" -> "1", "id" -> "31", "input" -> s"").toSeq
+      headerFirst.postForm(savePayload).asString.body
 
       val payload = Map("newcell" -> "0", "id" -> "31", "input" -> s"").toSeq
       headerFirst.postForm(payload).asString.body
@@ -371,6 +382,9 @@ object SageWrapper {
           "Cookie" -> session
           , "Accept" -> "text/plain")
 
+      val savePayload = Map("save_only" -> "1", "id" -> "31", "input" -> "").toSeq
+      headerFirst.postForm(savePayload).asString.body
+
       val payload = Map("newcell" -> "0", "id" -> "31", "input" -> s"").toSeq
       headerFirst.postForm(payload).asString.body
       val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
@@ -391,14 +405,14 @@ object SageWrapper {
 
       Thread.sleep(20)
 
-//      var parsed = "\" \""
-//      var count = 0
-//      while (parsed == "\" \"" && count < 1) {
-//        val x = headerSecond.postForm(Map("id" -> "31").toSeq)
-//        parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
-//        Thread.sleep(50)
-//        count += 1
-//      }
+      var parsed = "\" \""
+      var count = 0
+      while (parsed == "\" \"" && count < 2) {
+        val x = headerSecond.postForm(Map("id" -> "31").toSeq)
+        parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
+        Thread.sleep(50)
+        count += 1
+      }
       headerFinish.param("_", System.currentTimeMillis().toString).asString
       Thread.sleep(700)
       headerAlive.param("_", System.currentTimeMillis().toString).asString
@@ -485,7 +499,6 @@ object SageWrapper {
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
         val parsedFormula = FormulaParserInst.parse(formula).orElse {
           logger.debug(s"Couldn't parse: $formula")
-          smallCleanup()
           None
         }
 
@@ -497,6 +510,7 @@ object SageWrapper {
               result = parsedFormula
             ))
           }
+          cleanup()
         }
 
         parsedFormula
@@ -579,13 +593,10 @@ object SageWrapper {
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
         val parsedFormula = FormulaParserInst.parse(formula).orElse {
           logger.debug(s"Couldn't parse: $formula")
-          smallCleanup()
           None
         }
         //    logger.debug(parsedFormula)
         Thread.sleep(50)
-
-        smallCleanup()
 
         if(count < 500) {
           Try {
@@ -594,6 +605,7 @@ object SageWrapper {
               result = parsedFormula
             ))
           }
+          cleanup()
         }
 
         parsedFormula
