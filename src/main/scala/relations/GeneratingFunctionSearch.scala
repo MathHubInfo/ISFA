@@ -424,7 +424,7 @@ object GeneratingFunctionSearch {
           if(partialExpressingTheories.forall(_.nonEmpty)) {
             val fullExpressionTheory = FullExpressingTheory(theories(i).theory, partialExpressingTheories, partialFractions)
             val total = fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution)).length).product
-            if(total > 400000) { // for optimization purposes
+            if(total > 300000) { // for optimization purposes
 //              combine(fullExpressionTheory.expressingPartials.map(_.flatMap(_.relations.map(_.partialFractionSubstitution))), { partialFractionsAsRelations =>
 //                val relation = Equation("=", SeqReference(fullExpressionTheory.theoryId), Add(partialFractionsAsRelations))
 //                val rel = RelationRep(2, RelationRep.generatingFunction, relation)
@@ -684,7 +684,8 @@ object GeneratingFunctionSearch {
 
     println(SageWrapper.partialFraction(expression).get)
     println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
-//    thirdMethod()
+
+    secondMethod()
 
 //    println("Finished")
 

@@ -39,7 +39,7 @@ object SageRequest extends ModelCompanion[SageRequest, ObjectId] {
 }
 
 object SageWrapper {
-  val session = "ajs_anonymous_id=%221d80e25a-36a9-4ed6-8dec-d73e9f57670d%22; mp_455c026defefc920eae5a5a3a74a9008_mixpanel=%7B%22distinct_id%22%3A%20%22154c14e5b2f4a-0427c3e9dba975-36677f03-13c680-154c14e5b3066e%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; optimizelyEndUserId=oeu1463532355302r0.7610385580606998; mjx.menu=renderer%3ACommonHTML; optimizelySegments=%7B%223013750511%22%3A%22direct%22%2C%223029780148%22%3A%22false%22%2C%223031480132%22%3A%22gc%22%7D; optimizelyBuckets=%7B%7D; ajs_user_id=null; ajs_group_id=null; _ga=GA1.1.1714581731.1463532018; cookie_test_8080=cookie_test; session=\"26KrtRfQKPdOhm6O2LD4XCBtU3I=?username=VmFkbWluCnAwCi4=\""
+  val session = "nb_session_8080=; session=\"dZMN57/0ShESsTbOvrba9uGuPag=?username=UydhZG1pbicKcDAKLg==\""
 
   private var counter = 0
 
@@ -61,7 +61,7 @@ object SageWrapper {
         case _ => ArgList(Nil)
       }
     } else {
-      logger.debug(s"NOT CACHED")
+      logger.debug(s"NOT CACHED $input")
       try {
         counter += 1
 
@@ -119,7 +119,7 @@ object SageWrapper {
           println("Parsed: " + formula.drop(1).dropRight(1).split(",").map(_.trim.toDouble).toList)
           val parsedFormula = FormulaParserInst.parse(formula).orElse {
             logger.debug(s"Couldn't parse: $formula")
-            cleanup()
+            smallCleanup()
             None
           }
           //    logger.debug(parsedFormula)
@@ -153,7 +153,7 @@ object SageWrapper {
       logger.debug(s"Result cached ${result.map(_.toSage)} for $input")
       result
     } else {
-      logger.debug(s"NOT CACHED")
+      logger.debug(s"NOT CACHED $input")
       try {
         counter += 1
 
@@ -210,7 +210,7 @@ object SageWrapper {
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
         val parsedFormula = FormulaParserInst.parse(formula).orElse {
           logger.debug(s"Couldn't parse: $formula")
-          cleanup()
+          smallCleanup()
           None
         }
         //    logger.debug(parsedFormula)
@@ -251,7 +251,7 @@ object SageWrapper {
       logger.debug(s"Result cached ${result.map(_.toSage)}for $input")
       result
     } else {
-      logger.debug(s"NOT CACHED")
+      logger.debug(s"NOT CACHED $input")
       try {
         counter += 1
         val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
@@ -308,7 +308,7 @@ object SageWrapper {
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "")else "No formula"
         val parsedFormula = FormulaParserInst.parse(formula).orElse {
           logger.debug(s"Couldn't parse: $formula")
-          cleanup()
+          smallCleanup()
           None
         }
 
@@ -349,7 +349,7 @@ object SageWrapper {
 
       var count = 0
       var parsed = "f"
-      while (count < 3 || (parsed != "\" \"" && count < 50)) {
+      while (count < 4 || (parsed != "\" \"" && count < 50)) {
         val x = headerSecond.postForm(Map("id" -> "31").toSeq)
         parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
         Thread.sleep(50)
@@ -391,17 +391,18 @@ object SageWrapper {
 
       Thread.sleep(20)
 
-      var parsed = "\" \""
-      var count = 0
-      while (parsed == "\" \"" && count < 1) {
-        val x = headerSecond.postForm(Map("id" -> "31").toSeq)
-        parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
-        Thread.sleep(50)
-        count += 1
-      }
+//      var parsed = "\" \""
+//      var count = 0
+//      while (parsed == "\" \"" && count < 1) {
+//        val x = headerSecond.postForm(Map("id" -> "31").toSeq)
+//        parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
+//        Thread.sleep(50)
+//        count += 1
+//      }
       headerFinish.param("_", System.currentTimeMillis().toString).asString
-      Thread.sleep(20)
+      Thread.sleep(700)
       headerAlive.param("_", System.currentTimeMillis().toString).asString
+      Thread.sleep(300)
     } catch {
       case e: Exception =>
         Logger.debug(s"Got error $e")
@@ -426,7 +427,7 @@ object SageWrapper {
       logger.debug(s"Result cached ${result.map(_.toSage)}for $input")
       result
     } else {
-      logger.debug(s"NOT CACHED")
+      logger.debug(s"NOT CACHED $input")
       try {
         counter += 1
         val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
@@ -484,7 +485,7 @@ object SageWrapper {
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
         val parsedFormula = FormulaParserInst.parse(formula).orElse {
           logger.debug(s"Couldn't parse: $formula")
-          cleanup()
+          smallCleanup()
           None
         }
 
@@ -521,7 +522,7 @@ object SageWrapper {
       logger.debug(s"Result cached ${result.map(_.toSage)}for $input")
       result
     } else {
-      logger.debug(s"NOT CACHED")
+      logger.debug(s"NOT CACHED $input")
       try {
         counter += 1
         val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
@@ -578,7 +579,7 @@ object SageWrapper {
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
         val parsedFormula = FormulaParserInst.parse(formula).orElse {
           logger.debug(s"Couldn't parse: $formula")
-          cleanup()
+          smallCleanup()
           None
         }
         //    logger.debug(parsedFormula)
