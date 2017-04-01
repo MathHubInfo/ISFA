@@ -10,9 +10,9 @@ The ISFA is currently composed of:
 
 - A parser for math formulas found in the OEIS.
 - A program that finds relations between OEIS sequences. Relations in simple text format (due to space limitations) are available [here](https://kwarc.info/datahost/).
-- A MathWebSearch instance for [OEIS documents](http://oeissearch.mathweb.org) (thanks to Mihnea Iancu)
+- A [MathWebSearch instance](http://oeissearch.mathweb.org) for OEIS documents (thanks to Mihnea Iancu).
 - A parser for an improved formula language for the OEIS.
-- A [SageMath module](https://github.com/eluzhnica/oeis_gf) for OEIS generating functions.
+- A [SageMath module](https://github.com/eluzhnica/oeis_gf) for OEIS' generating functions.
 
 Head to [this](https://github.com/eluzhnica/ISFA/blob/master/docs/Enxhell_Luzhnica_BSC.pdf) thesis to learn more.
 
