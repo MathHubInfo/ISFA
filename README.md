@@ -16,3 +16,8 @@ The ISFA is currently composed of:
 
 Head to [this](https://github.com/eluzhnica/ISFA/blob/master/docs/Enxhell_Luzhnica_BSC.pdf) thesis to learn more.
 
+## Related papers/reports/thesis
+
+- [BSc thesis](https://github.com/eluzhnica/ISFA/blob/master/docs/Enxhell_Luzhnica_BSC.pdf)
+- Enxhell Luzhnica, Michael Kohlhase - [Formula Semantification and Automated Relation Finding in the On-Line Encyclopedia for Integer Sequences. ICMS 2016: 467-475](https://kwarc.info/kohlhase/papers/icms16-oeis.pdf)
+- E. Luzhnica, M. Iancu and M. Kohlhase (2015-10) [Importing the OEIS library into OMDoc. In Proceedings of the LWA 2015 workshops: KDML, FGWM, IR, and FGDB, R. Bergmann, S. Görg and G. Müller (Eds.), pp. 296–303](http://ceur-ws.org/Vol-1458/F13_CRC73_Luzhnica.pdf)
