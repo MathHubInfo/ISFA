@@ -12,6 +12,10 @@ import scalaj.http.Http
 
 import scala.util.Try
 
+import java.net._
+import java.io._
+import scala.io._
+
 case class SageRequest(
                         request: String,
                         result: Option[Expression] // Expression
@@ -85,7 +89,6 @@ object SageWrapper {
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
-
 
 
         val savePayload = Map("save_only" -> "1", "id" -> "31", "input" -> input).toSeq
@@ -451,9 +454,64 @@ object SageWrapper {
   }
 
   def simplifyFull(expression: Expression): Option[Expression] = {
-    callPostfixMethod(expression, "simplify_full", Nil)
+    bluesPostFixMethod(expression, "simplify_full", Nil)
+    //callPostfixMethod(expression, "simplify_full", Nil)
   }
 
+  // the server has to close the connection or this will get stuck
+  private def bluesPostFixMethod(expression: Expression, method: String, variables: List[String]) = {
+    logger.debug(s"\nsagemath server reqest")
+
+    //val input = s"(${expression.toSage}).$method(${variables.mkString(",")})"
+    val input = s"(${expression.toSage})"
+    val responseOpt = SageRequest.findByRequest(input)
+
+    if (responseOpt.isDefined) {
+      val result = responseOpt.flatMap(_.result)
+      logger.debug(s"Result cached ${result.map(_.toSage)}for $input")
+      result
+    } else {
+      logger.debug(s"NOT CACHED $input")
+      try {
+        val s = new Socket(InetAddress.getByName("127.0.0.1"), 65432)
+        lazy val in = new BufferedSource(s.getInputStream()).getLines()
+        val out = new PrintStream(s.getOutputStream())
+
+        out.println(s"$input")
+        out.flush()
+
+        val parsed = in.mkString("\n")
+
+        s.close()
+
+        //Thread.sleep(20)
+
+        logger.debug(s"Parsing $parsed")
+        val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
+        val parsedFormula = FormulaParserInst.parse(formula).orElse {
+          logger.debug(s"Couldn't parse: $formula")
+          None
+        }
+
+        try {
+          SageRequest.save(SageRequest(
+            request = input,
+            result = parsedFormula
+          ))
+        }
+        //cleanup()
+
+
+        parsedFormula
+
+        None
+      } catch {
+        case e: Exception =>
+          logger.debug(s"Got error $e")
+          None
+      }
+    }
+  }
 
   // only one called by GeneratingFunctionsSagePackage.generateForAll()
   private def callPostfixMethod(expression: Expression, method: String, variables: List[String]) = {
@@ -467,6 +525,8 @@ object SageWrapper {
       result
     } else {
       logger.debug(s"NOT CACHED $input")
+
+
       try {
         counter += 1
         val headerFirst = Http(sagemath_server_http + "eval")
