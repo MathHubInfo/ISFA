@@ -4,14 +4,7 @@ package processor
  * Created by enxhi on 4/2/15.
  */
 
-import java.io.Serializable
-
-import com.novus.salat.annotations.raw.Salat
 import parser._
-import play.api.libs.json.Format
-
-import scala.util.parsing.combinator.{JavaTokenParsers, PackratParsers}
-import scala.xml.{Node, Elem}
 
 class TextParser extends FormulaParser {
 

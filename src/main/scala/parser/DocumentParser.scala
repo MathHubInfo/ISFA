@@ -1,16 +1,12 @@
 package parser
 
-import com.mongodb.{DBObject, ServerAddress}
-import com.mongodb.casbah.{WriteConcern, MongoCredential, MongoClientURI, MongoClient}
 import com.mongodb.casbah.commons.MongoDBObject
-import com.novus.salat.annotations._
-import com.novus.salat.dao.{DAO, ModelCompanion, SalatDAO}
-import com.novus.salat.global.ctx
+import com.mongodb.casbah.{MongoClient, WriteConcern}
 import library.Library
 import org.bson.types.ObjectId
-import org.json4s.ShortTypeHints
-import org.json4s.native.Serialization
 import processor.TextParserIns
+import salat.dao.{DAO, ModelCompanion, SalatDAO}
+import salat.global.ctx
 
 import scala.io.{BufferedSource, Source}
 import scala.util.matching.Regex
@@ -91,6 +87,7 @@ object RelationDao extends ModelCompanion[RelationRepString, ObjectId] {
 
 
 object DocumentParser {
+
   val dictionary = Source.fromFile(getClass.getResource("/dictionary").getPath).getLines().toSet
 
   private val IDregex = "A\\d+".r
@@ -194,10 +191,11 @@ object DocumentParser {
     parseLines(source.getLines().toList)
   }
 
+/* Not used and also broken (new libs?)
   def parseDocument(document : String) : String = {
     parseLines(document.lines.toList).toString
   }
-
+*/
   case class GeneratingFunctionDefinition(function: Func, body: Expression)
   def getGeneratingFunction(expression: Expression): List[GeneratingFunctionDefinition] = {
     expression match {

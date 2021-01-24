@@ -1,26 +1,18 @@
 package relations
 
-import scala.concurrent.Future
-
-import java.io.{FileWriter, File, BufferedWriter, PrintWriter}
+import java.io.{BufferedWriter, FileWriter}
 import java.util.concurrent.ConcurrentHashMap
 
-import com.mongodb.casbah.Imports
 import com.mongodb.casbah.commons.MongoDBObject
-import org.json4s.native.Serialization._
 import org.slf4j.LoggerFactory
-import library.Library
 import parser.DocumentParser.GeneratingFunctionDefinition
-import parser.Expression.format
 import parser._
-import play.api.Logger
 import sage.SageWrapper
 
 import scala.collection.JavaConverters._
 import scala.collection.immutable.::
 import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
-import scala.concurrent.ExecutionContext.Implicits.global
 
 object GeneratingFunctionSearch {
   def logger = LoggerFactory.getLogger(this.getClass)
@@ -158,7 +150,7 @@ object GeneratingFunctionSearch {
       transformed.foreach { gf =>
         val renamed = rename(removeXMultiplications(removeConstants(gf._1)))
         if(hashMap.contains(renamed)) {
-          Logger.debug(s"Partial fraction summand transformed already there ${renamed.toSage} with $id from \n ${expression.toSage} \n " +
+          logger.debug(s"Partial fraction summand transformed already there ${renamed.toSage} with $id from \n ${expression.toSage} \n " +
             s"from partial fraction \n ${partialFractions.toSage} \n")
           hashMap.put(renamed, (id, gf._2, expression.toSage, partialFractions.toSage) :: hashMap(renamed))
         }

@@ -3,11 +3,10 @@ package parser
 
 import java.io.Serializable
 
-import com.novus.salat.annotations.Salat
-import org.json4s.{ShortTypeHints, NoTypeHints}
+import org.json4s.ShortTypeHints
 import org.json4s.native.Serialization
 import parser.DocumentParser.GeneratingFunctionDefinition
-import play.api.libs.json.{JsResult, JsValue, Format, Json}
+import salat.annotations.Salat
 
 import scala.xml.Elem
 

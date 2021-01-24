@@ -1,28 +1,37 @@
 package sage
 
-import play.api.Logger
-import play.api.libs.json.Json
-import play.twirl.api.Html
-
-import scala.util.Try
-import scalaj.http.Http
-
-import javax.swing.text.html.HTMLDocument
-
 import com.mongodb.casbah.MongoClient
 import com.mongodb.casbah.commons.MongoDBObject
-import com.novus.salat.dao.{DAO, ModelCompanion, SalatDAO}
-import com.novus.salat.global.ctx
 import org.bson.types.ObjectId
 import org.slf4j.LoggerFactory
+import parser.{ArgList, Expression, FormulaParserInst}
+import play.api.libs.json.Json
+import salat.dao.{DAO, ModelCompanion, SalatDAO}
+import salat.global.ctx
+import scalaj.http.Http
 
-import parser.{Num, ArgList, Expression, FormulaParserInst}
+import scala.util.Try
 
 case class SageRequest(
-  request: String,
-  result: Option[Expression] // Expression
-)
+                        request: String,
+                        result: Option[Expression] // Expression
+                      )
 
+/* Notes on this file:
+*  <SageMath Server Connection>
+*     Http(sagemath_server_http+"eval") looks like it connects to the local SageMath Server Enxhell had
+*     on his machine. Then he has a folder "0" containing various folders. I'm going to try to make that work now.
+*     changed:
+*             val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
+*             val headerFirst = Http(sagemath_server_http + "eval")
+*     while having a SageMath Jupyter open, it at least finds the socket, but fails on the html?
+*     I'm currently trying to get the Sage cmd to host something.
+*
+*
+*
+* */
+
+// MongoDB access to OEIS/sage_cache, port is default
 object SageRequest extends ModelCompanion[SageRequest, ObjectId] {
   val mongoClient = MongoClient("localhost", 27017)
   val db = mongoClient("OEIS")
@@ -38,8 +47,14 @@ object SageRequest extends ModelCompanion[SageRequest, ObjectId] {
   }
 }
 
+// SageMath stuff
 object SageWrapper {
-  val session = "nb_session_8080=; session=\"dZMN57/0ShESsTbOvrba9uGuPag=?username=UydhZG1pbicKcDAKLg==\""
+  // This seems to be a session cookie for SageMath
+  //val session = "nb_session_8080=; session=\"dZMN57/0ShESsTbOvrba9uGuPag=?username=UydhZG1pbicKcDAKLg==\""
+  val session = "session=\"5ec459db53071712c94020d847a93d822dddd34f915e6df1\""
+  // val sagemath_server_http = "http://localhost:8888/?token=f0d0814871607024f779691000052fe6bdeabc18dfbc89f3"
+  // Jupyter notebook path to the desired folder
+  val sagemath_server_http = "http://127.0.0.1:8888/notebooks/Desktop/ISFA_sagemath.ipynb#"
 
   private var counter = 0
 
@@ -50,7 +65,8 @@ object SageWrapper {
   val logger = LoggerFactory.getLogger(this.getClass)
 
   private def callMethodWithCall(input: String): Option[ArgList] = {
-//    val input = s"$methodName($methodName).$postfixArgument(${postfixArgument.mkString(",")})"
+    logger.debug(s"xxx callMethodWithCall")
+    //    val input = s"$methodName($methodName).$postfixArgument(${postfixArgument.mkString(",")})"
     val responseOpt = SageRequest.findByRequest(input)
 
     if (responseOpt.isDefined) {
@@ -65,27 +81,29 @@ object SageWrapper {
       try {
         counter += 1
 
-        val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
+        val headerFirst = Http(sagemath_server_http + "eval")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
+
+
 
         val savePayload = Map("save_only" -> "1", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(savePayload).asString.body
 
         val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
-        val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
+        val headerSecond = Http(sagemath_server_http + "cell_update")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val headerFinish = Http("http://localhost:8080/home/admin/0/discard_and_quit")
+        val headerFinish = Http(sagemath_server_http + "discard_and_quit")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val headerAlive = Http("http://localhost:8080/home/admin/0/alive")
+        val headerAlive = Http(sagemath_server_http + "alive")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
@@ -141,13 +159,14 @@ object SageWrapper {
         }
       } catch {
         case e: Exception =>
-          Logger.debug(s"Got exception $e")
+          logger.debug(s"Got exception $e")
           None
       }
     }
   }
 
   private def callMethod(expression: Expression, method: String, variables: List[String]) = {
+    logger.debug(s"xxx callMethod")
     val input = s"$method(${expression.toSage}, ${variables.mkString(",")})"
     val responseOpt = SageRequest.findByRequest(input)
 
@@ -160,7 +179,7 @@ object SageWrapper {
       try {
         counter += 1
 
-        val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
+        val headerFirst = Http(sagemath_server_http + "eval")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
@@ -169,17 +188,17 @@ object SageWrapper {
 
         val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
-        val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
+        val headerSecond = Http(sagemath_server_http + "cell_update")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val headerFinish = Http("http://localhost:8080/home/admin/0/discard_and_quit")
+        val headerFinish = Http(sagemath_server_http + "discard_and_quit")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val headerAlive = Http("http://localhost:8080/home/admin/0/alive")
+        val headerAlive = Http(sagemath_server_http + "alive")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
@@ -219,7 +238,7 @@ object SageWrapper {
         }
         //    logger.debug(parsedFormula)
 
-        if(count < 500) {
+        if (count < 500) {
           Try {
             SageRequest.save(SageRequest(
               request = input,
@@ -232,7 +251,7 @@ object SageWrapper {
         parsedFormula
       } catch {
         case e: Exception =>
-          Logger.debug(s"Got exception $e")
+          logger.debug(s"Got exception $e")
           None
       }
     }
@@ -247,6 +266,7 @@ object SageWrapper {
   }
 
   private def callInfixMethod(left: Expression, method: String, right: Expression) = {
+    logger.debug(s"xxx callMethodWithCall")
     val input = s"(${left.toSage}) $method (${right.toSage})"
 
     val responseOpt = SageRequest.findByRequest(input)
@@ -259,7 +279,7 @@ object SageWrapper {
       logger.debug(s"NOT CACHED $input")
       try {
         counter += 1
-        val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
+        val headerFirst = Http(sagemath_server_http + "eval")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
@@ -269,18 +289,18 @@ object SageWrapper {
 
         val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
-        val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
+        val headerSecond = Http(sagemath_server_http + "cell_update")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
 
-        val headerFinish = Http("http://localhost:8080/home/admin/0/discard_and_quit")
+        val headerFinish = Http(sagemath_server_http + "discard_and_quit")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val headerAlive = Http("http://localhost:8080/home/admin/0/alive")
+        val headerAlive = Http(sagemath_server_http + "alive")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
@@ -319,7 +339,7 @@ object SageWrapper {
           None
         }
 
-        if(count < 500) {
+        if (count < 500) {
           Try {
             SageRequest.save(SageRequest(
               request = input,
@@ -332,16 +352,17 @@ object SageWrapper {
         parsedFormula
       } catch {
         case e: Exception =>
-          Logger.debug(s"Got error $e")
+          logger.debug(s"Got error $e")
           None
       }
     }
   }
 
   private def smallCleanup() = {
+    logger.debug(s"xxx smallCleanup")
     try {
       counter += 1
-      val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
+      val headerFirst = Http(sagemath_server_http + "eval")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
@@ -351,7 +372,7 @@ object SageWrapper {
 
       val payload = Map("newcell" -> "0", "id" -> "31", "input" -> s"").toSeq
       headerFirst.postForm(payload).asString.body
-      val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
+      val headerSecond = Http(sagemath_server_http + "cell_update")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
@@ -368,16 +389,17 @@ object SageWrapper {
       }
     } catch {
       case e: Exception =>
-        Logger.debug(s"Got error $e")
+        logger.debug(s"Got error $e")
         None
     }
-//    cleanup()
+    //    cleanup()
   }
 
   private def cleanup() = {
+    logger.debug(s"xxx cleanup")
     try {
       counter += 1
-      val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
+      val headerFirst = Http(sagemath_server_http + "eval")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
@@ -387,18 +409,18 @@ object SageWrapper {
 
       val payload = Map("newcell" -> "0", "id" -> "31", "input" -> s"").toSeq
       headerFirst.postForm(payload).asString.body
-      val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
+      val headerSecond = Http(sagemath_server_http + "cell_update")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
 
 
-      val headerFinish = Http("http://localhost:8080/home/admin/0/discard_and_quit")
+      val headerFinish = Http(sagemath_server_http + "discard_and_quit")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
 
-      val headerAlive = Http("http://localhost:8080/home/admin/0/alive")
+      val headerAlive = Http(sagemath_server_http + "alive")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
@@ -419,7 +441,7 @@ object SageWrapper {
       Thread.sleep(300)
     } catch {
       case e: Exception =>
-        Logger.debug(s"Got error $e")
+        logger.debug(s"Got error $e")
         None
     }
   }
@@ -432,7 +454,10 @@ object SageWrapper {
     callPostfixMethod(expression, "simplify_full", Nil)
   }
 
+
+  // only one called by GeneratingFunctionsSagePackage.generateForAll()
   private def callPostfixMethod(expression: Expression, method: String, variables: List[String]) = {
+    logger.debug(s"xxx callPostfixMethod")
     val input = s"(${expression.toSage}).$method(${variables.mkString(",")})"
     val responseOpt = SageRequest.findByRequest(input)
 
@@ -444,25 +469,25 @@ object SageWrapper {
       logger.debug(s"NOT CACHED $input")
       try {
         counter += 1
-        val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
+        val headerFirst = Http(sagemath_server_http + "eval")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
         val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
-        val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
+        val headerSecond = Http(sagemath_server_http + "cell_update")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
 
-        val headerFinish = Http("http://localhost:8080/home/admin/0/discard_and_quit")
+        val headerFinish = Http(sagemath_server_http + "discard_and_quit")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val headerAlive = Http("http://localhost:8080/home/admin/0/alive")
+        val headerAlive = Http(sagemath_server_http + "alive")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
@@ -503,7 +528,7 @@ object SageWrapper {
         }
 
 
-        if(count < 500) {
+        if (count < 500) {
           Try {
             SageRequest.save(SageRequest(
               request = input,
@@ -516,7 +541,7 @@ object SageWrapper {
         parsedFormula
       } catch {
         case e: Exception =>
-          Logger.debug(s"Got error $e")
+          logger.debug(s"Got error $e")
           None
       }
     }
@@ -527,6 +552,7 @@ object SageWrapper {
   }
 
   private def callMethodNoArguments(expression: Expression, method: String) = {
+    logger.debug(s"xxx callMethodNoArguments")
     val input = s"$method(${expression.toSage})"
 
     val responseOpt = SageRequest.findByRequest(input)
@@ -539,24 +565,24 @@ object SageWrapper {
       logger.debug(s"NOT CACHED $input")
       try {
         counter += 1
-        val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
+        val headerFirst = Http(sagemath_server_http + "eval")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
         val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
-        val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
+        val headerSecond = Http(sagemath_server_http + "cell_update")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val headerFinish = Http("http://localhost:8080/home/admin/0/discard_and_quit")
+        val headerFinish = Http(sagemath_server_http + "discard_and_quit")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val headerAlive = Http("http://localhost:8080/home/admin/0/alive")
+        val headerAlive = Http(sagemath_server_http + "alive")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
@@ -598,7 +624,7 @@ object SageWrapper {
         //    logger.debug(parsedFormula)
         Thread.sleep(50)
 
-        if(count < 500) {
+        if (count < 500) {
           Try {
             SageRequest.save(SageRequest(
               request = input,
@@ -611,7 +637,7 @@ object SageWrapper {
         parsedFormula
       } catch {
         case e: Exception =>
-          Logger.debug(s"Got exception $e")
+          logger.debug(s"Got exception $e")
           None
       }
     }

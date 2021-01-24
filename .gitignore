@@ -33,3 +33,8 @@ project/boot/
 .idea
 out/
 all/
+
+
+# ISFA upgrade specific
+all_2015/
+all_2020/
