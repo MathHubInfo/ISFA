@@ -92,8 +92,13 @@ object GeneratingFunctionsSagePackage {
   def main(args: Array[String]): Unit = {
     //    println(FormulaParserInst.parse("[0, 0, 840, 12477384, 2545607472, 116307115440, 2406303387000, " +
     //      "30037635498360, 262918567435104, 1765904422135392, 9653659287290280, 44745048366882600, 181129909217550480, 654743996230865424, 2149893215016113112]"))
-    //countVerifications()
-    generateForAll()
+
+    countVerifications()
+
+    //fills MongoDB OEIS/sage_cache with values
+    //generateForAll()
+
+
     //    println(DocumentParser.getGeneratingFunction(TextParserIns.parseLine("Conjecture: G.f.: 1 = Sum_{n>=0} a(n+1)" +
     //      "*A000108(n)*x^n*Sum_{k>=0} C" +
     //      "(2*n+k,k)^2*(-x)^k. Compare with the following g.f of the Catalan numbers (A000108): 1 = Sum_{n>=0} A000108(n)" +

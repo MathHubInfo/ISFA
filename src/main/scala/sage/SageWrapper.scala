@@ -454,12 +454,12 @@ object SageWrapper {
   }
 
   def simplifyFull(expression: Expression): Option[Expression] = {
-    bluesPostFixMethod(expression, "simplify_full", Nil)
+    PythonSageServerPostFixMethod(expression, "simplify_full", Nil)
     //callPostfixMethod(expression, "simplify_full", Nil)
   }
 
   // the server has to close the connection or this will get stuck
-  private def bluesPostFixMethod(expression: Expression, method: String, variables: List[String]) = {
+  private def PythonSageServerPostFixMethod(expression: Expression, method: String, variables: List[String]) = {
     logger.debug(s"\nsagemath server reqest")
 
     //val input = s"(${expression.toSage}).$method(${variables.mkString(",")})"
