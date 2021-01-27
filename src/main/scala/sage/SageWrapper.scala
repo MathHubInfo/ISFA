@@ -168,6 +168,7 @@ object SageWrapper {
     }
   }
 
+  // almost the same too, except val savePayload
   private def callMethod(expression: Expression, method: String, variables: List[String]) = {
     logger.debug(s"xxx callMethod")
     val input = s"$method(${expression.toSage}, ${variables.mkString(",")})"
@@ -268,6 +269,7 @@ object SageWrapper {
     callInfixMethod(nominator, "/", denominator)
   }
 
+  // ToDo: also almost identical to callMethodNoArguments, except the var "savePayload"
   private def callInfixMethod(left: Expression, method: String, right: Expression) = {
     logger.debug(s"xxx callMethodWithCall")
     val input = s"(${left.toSage}) $method (${right.toSage})"
@@ -361,6 +363,7 @@ object SageWrapper {
     }
   }
 
+  // This cleans the Jupyter notebook ToDo: what else?
   private def smallCleanup() = {
     logger.debug(s"xxx smallCleanup")
     try {
@@ -398,6 +401,7 @@ object SageWrapper {
     //    cleanup()
   }
 
+  // This cleans the Jupyter notebook ToDo: what else?
   private def cleanup() = {
     logger.debug(s"xxx cleanup")
     try {
@@ -450,7 +454,8 @@ object SageWrapper {
   }
 
   def partialFraction(expression: Expression, variables: List[String] = List("x")): Option[Expression] = {
-    callPostfixMethod(expression, "partial_fraction", variables)
+    PythonSageServerPostFixMethod(expression, "partial_fraction", variables)
+    //callPostfixMethod(expression, "partial_fraction", variables)
   }
 
   def simplifyFull(expression: Expression): Option[Expression] = {
@@ -458,12 +463,12 @@ object SageWrapper {
     //callPostfixMethod(expression, "simplify_full", Nil)
   }
 
-  // the server has to close the connection or this will get stuck
+  // ToDo the server has to close the connection or this will get stuck (it still gets stuck?)
   private def PythonSageServerPostFixMethod(expression: Expression, method: String, variables: List[String]) = {
     logger.debug(s"\nsagemath server reqest")
 
-    //val input = s"(${expression.toSage}).$method(${variables.mkString(",")})"
-    val input = s"(${expression.toSage})"
+    // the sage command e.g. "((x/(95-(15*x))^5)).simplify_full()"
+    val input = s"(${expression.toSage}).$method(${variables.mkString(",")})"
     val responseOpt = SageRequest.findByRequest(input)
 
     if (responseOpt.isDefined) {
@@ -611,6 +616,7 @@ object SageWrapper {
     callMethodNoArguments(expression, "simplify")
   }
 
+  //this is almost identical to callPostfixMethod()?
   private def callMethodNoArguments(expression: Expression, method: String) = {
     logger.debug(s"xxx callMethodNoArguments")
     val input = s"$method(${expression.toSage})"

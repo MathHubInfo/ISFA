@@ -672,15 +672,15 @@ object GeneratingFunctionSearch {
 
 
   def main(args: Array[String]): Unit = {
+    /* //This is just a test, right?
     val expression = Div(List(Var("x"), Power(Sub(List(Num(95), Mul(List(Num(15), Var("x"))))), Num(5))))
-
     println(SageWrapper.partialFraction(expression).get)
     println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
-
-    secondMethod()
+*/
+   // secondMethod()
 
 //    println("Finished")
 
-//    logger.debug(getRepresentingFunction(Integral, FormulaParserInst.parse("-((1/10/x))").get, "").get.toSage)
+    logger.debug(getRepresentingFunction(Integral, FormulaParserInst.parse("-((1/10/x))").get, "").get.toSage)
   }
 }
