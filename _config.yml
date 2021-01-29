@@ -6,8 +6,8 @@ permalink:           pretty
 # Setup
 title:               ISFA
 tagline:             'Integer Sequence Formulas and Applications'
-url:                  https://github.com/eluzhnica/ISFA
-baseurl:             'http://eluzhnica.github.io/ISFA/'
+url:                  https://github.com/MathHubInfo/ISFA
+baseurl:             'http://MathHubInfo.github.io/ISFA/'
 paginate:            5
 
 # About/contact

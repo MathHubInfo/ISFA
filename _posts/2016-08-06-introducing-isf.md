@@ -10,10 +10,10 @@ The ISFA project is a database of Integer Sequence Formulas and Applications der
 The ISFA is currently composed of:
 
 * A parser for math formulas found in the OEIS.
-* A program that find relations between OEIS sequences (relations available <a href="https://github.com/eluzhnica/OEIS/tree/master/results/relations">here</a>).
+* A program that find relations between OEIS sequences (relations available <a href="https://github.com/MathHubInfo/OEIS/tree/master/results/relations">here</a>).
 * A MathWebSearch instance for OEIS documents (http://oeissearch.mathweb.org)
 
-[Head to this thesis](https://github.com/eluzhnica/OEIS/blob/master/docs/Enxhell_Luzhnica_BSC.pdf) to learn more.
+[Head to this thesis](https://github.com/MathHubInfo/OEIS/blob/master/docs/Enxhell_Luzhnica_BSC.pdf) to learn more.
 
 ### Some stats and results
 
@@ -39,11 +39,11 @@ This is what happens to the graph after we run the second method of direct relat
   <figcaption>Fig 3. Graph of relations of the third method.</figcaption>
 </figure>
 
-These graphs are available in interactive format but it takes a lot of time to load them since there are millions of relations. The code for interactive ones can be found <a href="https://github.com/eluzhnica/OEIS/graphs">here</a>.
+These graphs are available in interactive format but it takes a lot of time to load them since there are millions of relations. The code for interactive ones can be found <a href="https://github.com/MathHubInfo/OEIS/graphs">here</a>.
 
 
 ### Download
 
-ISF is developed on and hosted with GitHub. Head to the <a href="https://github.com/eluzhnica/OEIS">GitHub repository</a> for downloads, bug reports, and requests.
+ISF is developed on and hosted with GitHub. Head to the <a href="https://github.com/MathHubInfo/OEIS">GitHub repository</a> for downloads, bug reports, and requests.
 
 Thanks!
