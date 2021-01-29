@@ -161,6 +161,7 @@ object GeneratingFunctionSearch {
 
   def equal(left: Expression, right: Expression) = {
 //    println(s"checking equality of $left and $right")
+    logger.debug(s"gfs - checking equality of $left and $right")
 
     rename(left) == rename(right)
   }
@@ -288,7 +289,8 @@ object GeneratingFunctionSearch {
         Some(Mul(finalShifts._1 :: FuncR(SeqReference(theory), ArgList(Add(Var("n") :: { if(shift == Num(0)) Nil else shift  :: Nil }) :: Nil)) :: Nil))
 
       case _ =>
-        println(s"Couldn't simplify ${finalShifts._1.toSage} and ${finalShifts._2.toSage}")
+        //println(s"Couldn't simplify ${finalShifts._1.toSage} and ${finalShifts._2.toSage}")
+        logger.debug(s"gfs - Couldn't simplify ${finalShifts._1.toSage} and ${finalShifts._2.toSage}")
         None
     }
   }
@@ -306,13 +308,15 @@ object GeneratingFunctionSearch {
 
     val hashMap = new ConcurrentHashMap[Expression, List[MappedTheory]]().asScala
     val theories = TheoryRepDao.findAll().toArray
-    println(s"Length is ${theories.length}")
+    //println(s"Length is ${theories.length}")
+    logger.debug(s"gfs - Length is ${theories.length}")
 
     val indices = theories.indices
 
     for (i <- indices) {
       val theoryRep = theories(i)
-      println(i)
+      //println(i)
+      logger.debug(s"gfs - $i")
       theoryRep.generatingFunctions.foreach { generatingFunction =>
         for (
         simplifiedGeneratingFunction <- SageWrapper.simplifyFull(generatingFunction);
@@ -496,12 +500,15 @@ object GeneratingFunctionSearch {
 
     val hashMap = new mutable.HashMap[Expression, List[MappedTheory]]()
     val theories = TheoryRepDao.findAll().toArray
-    println(s"Length is ${theories.length}")
+    //println(s"Length is ${theories.length}")
+    logger.debug(s"gfs - Length is ${theories.length}")
+
 
     val indices = theories.indices
     for (i <- indices) {
       val theoryRep = theories(i)
-      println(i)
+      //println(i)
+      logger.debug(s"gfs - $i")
       theoryRep.generatingFunctions.foreach { generatingFunction =>
         val partialFractionsOpt = SageWrapper.partialFraction(generatingFunction).map(extractPartialFractionSummands)
 
@@ -541,7 +548,8 @@ object GeneratingFunctionSearch {
 
     val map = new mutable.HashMap[String, List[ExpressingTheory]]()
     for (i <- indices) {
-      println(s"Processing theory $i")
+      //println(s"Processing theory $i")
+      logger.debug(s"gfs - Processing theory $i")
       val generatingFunctions = theories(i).generatingFunctions
       generatingFunctions.foreach { generatingFunction =>
         val partialFractionsOpt = SageWrapper.partialFraction(generatingFunction).map(extractPartialFractionSummands)
@@ -568,7 +576,8 @@ object GeneratingFunctionSearch {
                         )
                       expressionTheory.mappedTheories.foreach { mapTheory =>
                         val IUPFROpt = SageWrapper.divide(mapTheory.initialPartialFraction, mapTheory.unifiedPartialFraction)
-                        println(IUPFROpt)
+                        //println(IUPFROpt)
+                        logger.debug(s"gfs - $IUPFROpt")
                         IUPFROpt.foreach { IUPFR =>
                           val negRestofPartials = expressionTheory.restOfPartialFractions match {
                             case Nil => Nil
@@ -677,10 +686,11 @@ object GeneratingFunctionSearch {
     println(SageWrapper.partialFraction(expression).get)
     println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
 */
-   // secondMethod()
+//    secondMethod()
 
+    thirdMethod()
 //    println("Finished")
 
-    logger.debug(getRepresentingFunction(Integral, FormulaParserInst.parse("-((1/10/x))").get, "").get.toSage)
+   // logger.debug(getRepresentingFunction(Integral, FormulaParserInst.parse("-((1/10/x))").get, "").get.toSage)
   }
 }
