@@ -1,5 +1,8 @@
 package sage
 
+import java.io._
+import java.net._
+
 import com.mongodb.casbah.MongoClient
 import com.mongodb.casbah.commons.MongoDBObject
 import org.bson.types.ObjectId
@@ -10,11 +13,8 @@ import salat.dao.{DAO, ModelCompanion, SalatDAO}
 import salat.global.ctx
 import scalaj.http.Http
 
-import scala.util.Try
-
-import java.net._
-import java.io._
 import scala.io._
+import scala.util.Try
 
 case class SageRequest(
                         request: String,
@@ -316,6 +316,7 @@ object SageWrapper {
     } else {
       logger.debug(s"NOT CACHED $input")
       try {
+        //socket init
         val s = new Socket(InetAddress.getByName("127.0.0.1"), 65432)
         lazy val in = new BufferedSource(s.getInputStream()).getLines()
         val out = new PrintStream(s.getOutputStream())
@@ -323,21 +324,27 @@ object SageWrapper {
         out.println(s"$input")
         out.flush()
 
+        // seperator "\n"
         val parsed = in.mkString("\n")
-
+        val parsed_length = parsed.length
+        s.shutdownInput()
+        s.shutdownOutput()
         s.close()
 
         //Thread.sleep(20)
+        // try to parse val parsed
+        logger.debug(s"Parsing $parsed - len: $parsed_length")
+        // ToDo: so any formula with less length then 31 is no formula? huh?
+        //enxhell code: val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
+        val formula = parsed.replaceAllLiterally("\\n", "")
 
-        logger.debug(s"Parsing $parsed")
-        val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
-        // ToDo: check out why so many formulas don't parse
-
+        logger.debug(s"Formula $formula")
         val parsedFormula = FormulaParserInst.parse(formula).orElse {
           logger.debug(s"Couldn't parse: $formula")
           None
         }
-
+        // save parse result to MongoDB
+        // ToDo: this writes None for unsuccesful parses into the DB
         try {
           SageRequest.save(SageRequest(
             request = input,

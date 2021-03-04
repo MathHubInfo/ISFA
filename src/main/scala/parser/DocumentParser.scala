@@ -21,6 +21,7 @@ case class TheoryRep(
   var generatingFunctions: Seq[Expression] = Nil
 )
 
+// ToDo: These two objects are identical?
 object TheoryRepDao extends ModelCompanion[TheoryRep, ObjectId] {
   val mongoClient = MongoClient("localhost", 27017)
   val db = mongoClient("OEIS")

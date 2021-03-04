@@ -2,14 +2,10 @@ package parser
 
 import java.io.{File, PrintWriter}
 
-import processor._
-
 import scala.collection.mutable
 import scala.io.Source
 import scala.util.matching.Regex
-import scala.util.parsing.combinator.{PackratParsers, JavaTokenParsers}
-
-import sage.SageWrapper
+import scala.util.parsing.combinator.{JavaTokenParsers, PackratParsers}
 
 class FormulaParser extends JavaTokenParsers with PackratParsers {
   var calls: BigInt = 0
@@ -674,6 +670,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
       calls += 1
       try {
         val parsed = parseAll(expression, line)
+        println(parsed)
         parsed.successful match {
           case false => failFile.write(theory + "\t" + line + "\n"); None
           case true => succeded += 1; successFile.write(theory + "\t" + line + "\n"); Some(postProcess(parsed.get))
@@ -704,9 +701,11 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
 
 object FormulaParserInst extends FormulaParser {
   def main(args: Array[String]): Unit = {
-    val test = "G.f.: 1/((1-x)^3*(1-x^3))"
+    //val test = "G.f.: 1/((1-x)^3*(1-x^3))"
+    //val test = "1/(x - 1) + 4/(x - 1)^2 + 10/(x - 1)^3 + 6/(x - 1)^4 + 1"
+    val test = "-315/(x^8-8*x^7+28*x^6-56*x^5+70*x^4-56*x^3+28*x^2-8*x+1)"
     println("input : " + test)
-
+    parse(test)
     println(parse(test).get.toSage)
 //    println(SageWrapper.simplifyFull(parse(test).get).get.toSage)
 //    println(SageWrapper.simplifyFull(parse(test).get).get.toSagePython)
