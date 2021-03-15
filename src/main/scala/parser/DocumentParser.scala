@@ -163,11 +163,21 @@ object DocumentParser {
     addHeaders(xml collect {case a : Elem => a}, theory.get)
   }
 
+  /**
+   *
+   * @param documentLines: the A-Number text
+   * @return theory containing theory = "A000001", name = "Some( Number of groups of order n.)", formulas = Array with formulas, generatingFunctions = Nil (for later)
+   */
   def parseLinesTheory(documentLines : List[String] ): TheoryRep = {
+    /** init vars */
+    // Option[x]: return either None or a String
     var theory : Option[String] = None
     var name: Option[String] = None
-
     val formulas: collection.mutable.ListBuffer[Expression] = collection.mutable.ListBuffer.empty
+
+    /** extract the lines
+     * contentIndex: Some(A0000001)
+     * */
     val xml: List[Any] = documentLines.collect({
       case line if line.length > 2 =>
         val contentIndex: Option[Match] = IDregex.findFirstMatchIn(line)
@@ -186,6 +196,7 @@ object DocumentParser {
     })
 
     TheoryRep(theory = theory.get, name = name, formulas = formulas.toSeq)
+
   }
 
   def fromReaderToXML(source : BufferedSource) : Elem = {

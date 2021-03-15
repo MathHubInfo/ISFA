@@ -304,7 +304,7 @@ object SageWrapper {
   }
 
   //function to communicate with the python tcp socket accepting sagemath requests
-  // ToDo the server has to close the connection or this will get stuck (it still gets stuck?)
+  // ToDo the server has to close the connection or this will get stuck (it still gets stuck?) - should work now
   private def sage_tcp_socket_connection(input: String) = {
 
     val responseOpt = SageRequest.findByRequest(input)
@@ -421,7 +421,7 @@ object SageWrapper {
 
 
   private def PythonSageServerPostFixMethod(expression: Expression, method: String, variables: List[String]) = {
-    logger.debug(s"\nsagemath server reqest")
+    logger.debug(s"sagemath server reqest")
 
     // the sage command e.g. "((x/(95-(15*x))^5)).simplify_full()"
     val input = s"(${expression.toSage}).$method(${variables.mkString(",")})"

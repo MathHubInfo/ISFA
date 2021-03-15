@@ -309,6 +309,7 @@ object GeneratingFunctionSearch {
 
   /**
    * This method tries to find relations such that each partial fraction can be expressed through an existing OEIS sequence.
+   * Explained in the B.Sc. Thesis https://github.com/MathHubInfo/ISFA/tree/master/docs
    */
   //ToDo: this does nothing atm, the HashMap is not filled
   def secondMethod() = {
@@ -330,8 +331,7 @@ object GeneratingFunctionSearch {
       val theoryRep = theories(i)
       //println(i)
       logger.debug(s"gfs - $i")
-      theoryRep.generatingFunctions.foreach { generatingFunction =>
-        for (
+      theoryRep.generatingFunctions.foreach { generatingFunction => for (
           simplifiedGeneratingFunction <- SageWrapper.simplifyFull(generatingFunction);
           unifiedGeneratingFunction = removeXMultiplications(removeConstants(simplifiedGeneratingFunction));
           simplifiedUnifiedGeneratingFunction <- SageWrapper.simplifyFull(unifiedGeneratingFunction)
@@ -505,6 +505,7 @@ object GeneratingFunctionSearch {
 
   /**
    * This method tries to find one partial fraction intersection.
+   * Explained in the B.Sc. Thesis https://github.com/MathHubInfo/ISFA/tree/master/docs
    */
   def thirdMethod() = {
     case class MappedTheory(
@@ -707,10 +708,10 @@ object GeneratingFunctionSearch {
     println(SageWrapper.partialFraction(expression).get)
     println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
 */
-    thirdMethod()
-
+    secondMethod()
     //thirdMethod()
-    saveRelationsToFile(3)
+
+    saveRelationsToFile(2)
     //    println("Finished")
 
     // logger.debug(getRepresentingFunction(Integral, FormulaParserInst.parse("-((1/10/x))").get, "").get.toSage)
