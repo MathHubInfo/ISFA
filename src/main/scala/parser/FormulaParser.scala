@@ -8,6 +8,11 @@ import scala.util.matching.Regex
 import scala.util.parsing.combinator.{JavaTokenParsers, PackratParsers}
 
 class FormulaParser extends JavaTokenParsers with PackratParsers {
+  /**
+   * for syntax details, see:
+   * https://www.scala-lang.org/api/2.12.4/scala-parser-combinators/scala/util/parsing/combinator/Parsers.html
+   * https://www.scala-lang.org/api/2.12.4/scala-parser-combinators/scala/util/parsing/combinator/Parsers$Parser.html
+   */
   var calls: BigInt = 0
   var succeded: BigInt = 0
   var exceptions: BigInt = 0
@@ -113,7 +118,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
   }
 
   val dictionary = Source.fromFile(getClass.getResource("/dictionary").getPath).getLines().map(_.trim).toSet
-  // ToDo This makes zero sense to me. Why create a string and use a delimiter on it, that won't even appear?
+  // This creates logic or for e.g. "n-th | x-th"
   val exceptionCases: Regex = List("[A-Za-z]\\-th").mkString("|").r
 
   lazy val word: Regex = "[A-Za-z\\']+(?![\\(\\[\\{\\<\\=\\>])\\b".r
@@ -143,6 +148,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
      * ^^ -> A parser combinator for function application. p ^^ f succeeds if p succeeds; it returns f applied to the result of p
      * flatten -> Converts this collection of traversable collections into a collection formed by the elements of these traversable collections
      */
+    // psudeo-code: Sentence(rep1(sentence_cont).flatten
     rep1(sentence_cont) ^^ { x => Sentence(x.flatten) }
   }
 

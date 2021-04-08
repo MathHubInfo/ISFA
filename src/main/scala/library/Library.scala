@@ -68,7 +68,7 @@ object Library {
   }
 
   /**
-   * unused function - Harvester starter?
+   * Harvester starter
    */
   def crawlXMLLocal(from: Int, to: Int) = {
     if (from < 1) {
@@ -186,12 +186,12 @@ object Library {
     /**
      * Parser -> SageMath
      */
-    //parseLocalTheory(1, 10)
+    parseLocalTheory(1, max)
 
     /**
      * Crawler -> OmDoc
      */
-    crawlXMLLocal(1, max)
+    //crawlXMLLocal(1, max)
 
 
     println("Succeded " + TextParserIns.succeded)

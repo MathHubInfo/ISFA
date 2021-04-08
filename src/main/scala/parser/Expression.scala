@@ -191,7 +191,7 @@ case class Div(expr : List[Expression]) extends Expression{
   override def toSagePython = s"(${expr.map(_.toSagePython).mkString("/")})"
   def toCML =
     <apply>
-      <times/>
+      <divide/>
       {expr.map(x =>
       <ci>{x.toCML}</ci>
     )}
@@ -227,7 +227,7 @@ case class Func(name : String, args : ArgList) extends Expression{
   override def toSagePython = s"$name${args.toSagePython}"
   def toCML =
   <apply>
-    <csymbol>{name}</csymbol>
+    <ci type="function">{name}</ci>
     {
       args.args.map(x =>
         <ci>{x.toCML}</ci>
@@ -260,7 +260,7 @@ case class ExtraSymbol(symbol : String) extends Expression{
   def toNode(implicit theory : String) : Elem = <OMS name={symbol} cd="arithmetics"></OMS>
   def toSage = symbol
   def toCML =
-    <csymbol>{symbol}</csymbol>
+    <mo>{symbol}</mo>
 }
 
 case class ArgList(args : List[Expression]) extends Expression{
@@ -275,17 +275,18 @@ case class ArgList(args : List[Expression]) extends Expression{
   override def toSagePython = s"(${args.map(_.toSagePython).mkString(",")})"
   def toCML =
     <apply>
-      <csymbol>set</csymbol>
+      <set>
       {
         args.map(_.toCML)
       }
+      </set>
     </apply>
 }
 case class SeqReference(seq : String) extends Expression{
   def present : String = seq
   def toNode(implicit theory : String) : Elem = <OMR xref={seq}/>
   def toSage = seq
-  def toCML = <csymbol cd="oeis">{seq}</csymbol>
+  def toCML = <ci>{seq}</ci>
 }
 
 case class Iters(name : String, from : Option[Expression], to : Option[Expression], on : Expression) extends Expression{
@@ -346,16 +347,32 @@ case class Iters(name : String, from : Option[Expression], to : Option[Expressio
   }
 
   def toSage = present
+  // {name} is one of the following: ['Product','product','Sum','sum','Prod','prod','Limit'] - as of the 2020 snapshot
+  //this needs to look like this:
+  /*
+  <apply><sum/>
+  <bvar><ci>x</ci></bvar>
+  <lowlimit><ci>a</ci></lowlimit>
+  <uplimit><ci>b</ci></uplimit>
+  <apply><ci type="function">f</ci>
+    <ci>x</ci>
+  </apply>
+</apply>
+
+where <sum/> is the name?
+   */
   def toCML =
-  <apply>
-    <int/>
-    <bvar><ci>x</ci></bvar>
-    <interval><cn>{from}</cn><cn>{to}</cn></interval>
-    <apply>
-    <csymbol>{name}</csymbol>
-    {on.toCML}
-  </apply>
-  </apply>
+    <apply>{
+      if(name == "Sum" || name == "sum"){<sum/>}
+      else{if(name == "Product" || name == "product" || name == "Prod" || name == "prod"){<product/>}
+           else {if (name == "Limit" || name == "limit" ) {<limit/>}}
+      }
+      }
+      <bvar><ci>x</ci></bvar>
+      <lowlimit><ci>{from}</ci></lowlimit>
+      <uplimit><ci>{to}</ci></uplimit>
+      {on.toCML}
+    </apply>
 }
 case class Factorial(expr : Expression) extends Expression{
   def present : String = expr.toString + "!"
@@ -373,7 +390,7 @@ case class Factorial(expr : Expression) extends Expression{
 }
 
 case class Equation(comparison : String, left : Expression, right : Expression) extends Expression{
-  def present : String = left.toString + " = " + right.toString
+  def present : String = left.toString + " = " + right.toString //wrong? but also unused
   def toNode(implicit theory : String) =
     <OMA>
       <OMS name={comparison} cd="arithmetic"/>
@@ -382,9 +399,29 @@ case class Equation(comparison : String, left : Expression, right : Expression) 
     </OMA>
   def toSage = s"${left.toSage} $comparison ${right.toSage}"
   override def toSagePython = s"${left.toSagePython} $comparison ${right.toSagePython}"
+  /*
+  * case diff and then one of these:
+*           "=" --> 4.4.3.1 Equals <eq/>
+            "!=" --> 4.4.3.2 Not Equals <neq/>
+            ">" --> 4.4.3.3 Greater than <gt/>
+            "<" --> 4.4.3.4 Less Than <lt/>
+            ">=" -->4.4.3.5 Greater Than or Equal <geq/>
+            "<=" --> 4.4.3.6 Less Than or Equal <leq/>
+            4.4.3.7 Equivalent <equivalent/>
+            4.4.3.8 Approximately <approx/>
+            4.4.3.9 Factor Of <factorof/>
+  * */
+
   def toCML =
     <apply>
-      <csymbol>{comparison}</csymbol>
+      {if(comparison == "="){<eq/>}
+       if(comparison == "!="){<neq/>}
+       if(comparison == ">"){<gt/>}
+       if(comparison == "<"){<lt/>}
+       if(comparison == ">="){<geq/>}
+       if(comparison == "<="){<leq/>}
+       if(comparison == "<>"){<neq/>}
+      }
       {left.toCML}
       {right.toCML}
     </apply>
@@ -395,9 +432,10 @@ case class Modulo(base : Expression, modulo : Expression) extends Expression {
   def toNode(implicit theory : String) =
     Func("mod", ArgList(base::modulo::Nil)).toNode
   def toSage = s"${base.toSage} mod ${modulo.toSage}"
+  // Remainder <rem/> -> this is modulo
   def toCML =
     <apply>
-      <csymbol>mod</csymbol>
+      <rem/>
       {base.toCML}
       {modulo.toCML}
     </apply>
@@ -426,15 +464,11 @@ case class GeneratingFunction(expression: Expression) extends Expression{
   override def toNode(implicit theory: String): Elem = <OMA></OMA>
 
   def toSage = s"GF(x) = ${expression.toSage}"
+  //ToDo this returns something of the form: " (of*A014405)" -> we don't want the gf part --> is <ci> the best solution?
   def toCML =
-  <apply>
-    <csymbol>=</csymbol>
-    <apply>
-      <csymbol>GF</csymbol>
-      <ci>x</ci>
-    </apply>
-    {expression.toSage}
-  </apply>
+  <ci>
+  {expression.toSage}
+  </ci>
 }
 
 case class GeneratingFunctionDef(expression: ArgList) extends Expression{

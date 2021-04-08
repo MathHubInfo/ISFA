@@ -305,7 +305,12 @@ object SageWrapper {
 
   //function to communicate with the python tcp socket accepting sagemath requests
   // ToDo the server has to close the connection or this will get stuck (it still gets stuck?) - should work now
+
+  val logfile = new PrintWriter("logfile")
   private def sage_tcp_socket_connection(input: String) = {
+
+    logfile.write("###################################################################\n");
+    logfile.write(input.toString() + "\n");
 
     val responseOpt = SageRequest.findByRequest(input)
 
@@ -352,7 +357,9 @@ object SageWrapper {
           ))
         }
 
+        logfile.write(parsedFormula.toString() + "\n");
         parsedFormula
+
       } catch {
         case e: Exception =>
           logger.debug(s"Got error $e")

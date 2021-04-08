@@ -15,17 +15,20 @@ import scala.xml._
 
 
 case class TheoryRep(
-  theory: String,
-  name: Option[String],
-  formulas: Seq[Expression],
-  var generatingFunctions: Seq[Expression] = Nil
-)
+                      theory: String,
+                      name: Option[String],
+                      formulas: Seq[Expression],
+                      var generatingFunctions: Seq[Expression] = Nil,
+                      var gfToSage: Seq[String]
+                    )
 
 // ToDo: These two objects are identical?
 object TheoryRepDao extends ModelCompanion[TheoryRep, ObjectId] {
   val mongoClient = MongoClient("localhost", 27017)
   val db = mongoClient("OEIS")
+
   def collection = db("theory_verified")
+
   override def dao: DAO[TheoryRep, ObjectId] = new SalatDAO[TheoryRep, ObjectId](collection) {}
 
   def findOneByTheory(theoryNumber: Int): Option[TheoryRep] = {
@@ -38,7 +41,9 @@ object TheoryRepDao extends ModelCompanion[TheoryRep, ObjectId] {
 object TheoryRepVerifiedDao extends ModelCompanion[TheoryRep, ObjectId] {
   val mongoClient = MongoClient("localhost", 27017)
   val db = mongoClient("OEIS")
+
   def collection = db("theory_verified")
+
   override def dao: DAO[TheoryRep, ObjectId] = new SalatDAO[TheoryRep, ObjectId](collection) {}
 
   def findOneByTheory(theoryNumber: Int): Option[TheoryRep] = {
@@ -49,27 +54,29 @@ object TheoryRepVerifiedDao extends ModelCompanion[TheoryRep, ObjectId] {
 }
 
 
-
 case class RelationRep(
-  method: Int,
-  level: String,
-  expression: Expression
-)
+                        method: Int,
+                        level: String,
+                        expression: Expression
+                      )
+
 object RelationRep {
   val representingFunction = "Rep"
   val generatingFunction = "Gen"
 }
 
 case class RelationRepString(
-  method: Int,
-  level: String,
-  expression: String
-)
+                              method: Int,
+                              level: String,
+                              expression: String
+                            )
 
 object RelationDao extends ModelCompanion[RelationRepString, ObjectId] {
   val mongoClient = MongoClient("localhost", 27017)
   val db = mongoClient("OEIS")
+
   def collection = db("relations")
+
   override def dao: DAO[RelationRepString, ObjectId] = new SalatDAO[RelationRepString, ObjectId](collection) {}
 
   def insert(relation: RelationRep) = {
@@ -81,9 +88,9 @@ object RelationDao extends ModelCompanion[RelationRepString, ObjectId] {
     dao.insert(relation.map(x => RelationRepString(x.method, x.level, x.expression.toSage)), WriteConcern.Normal)
   }
 
-//  def find(f: DBObject) = {
-//    dao.find(f).map(x => RelationRep(x.method, x.level, FormulaParserInst.parse(x.expression).get))
-//  }
+  //  def find(f: DBObject) = {
+  //    dao.find(f).map(x => RelationRep(x.method, x.level, FormulaParserInst.parse(x.expression).get))
+  //  }
 }
 
 
@@ -93,28 +100,32 @@ object DocumentParser {
 
   private val IDregex = "A\\d+".r
 
-  private def assertion(xclass : String, cmpval : String) : Elem ={
+  private def assertion(xclass: String, cmpval: String): Elem = {
     <assertion class={xclass}>
       {CMP(cmpval)}
     </assertion>
   }
 
-  private def omtext(xclass : String, cmpval : String) : Elem = {
+  private def omtext(xclass: String, cmpval: String): Elem = {
     <omtext class={xclass}>
       {CMP(cmpval)}
     </omtext>
   }
 
-  private def CMP(value : String) : Elem = <CMP>{value}</CMP>
+  private def CMP(value: String): Elem = <CMP>
+    {value}
+  </CMP>
 
-  private def omdoc(element : Elem) : Elem = <omdoc:p>{element}</omdoc:p>
+  private def omdoc(element: Elem): Elem = <omdoc:p>
+    {element}
+  </omdoc:p>
 
-  private def getTheoryID(line : String) : List[String] ={
-    (IDregex findAllIn  line).toList
+  private def getTheoryID(line: String): List[String] = {
+    (IDregex findAllIn line).toList
   }
 
-  def addHeaders(xml : List[Elem], theory : String) : Elem = {
-    <omdoc xmlns="http://omdoc.org/ns" xmlns:omdoc="http://omdoc.org/ns" xmlns:html="http://www.w3.org/1999/xhtml" xml:id={theory+".omdoc"}>
+  def addHeaders(xml: List[Elem], theory: String): Elem = {
+    <omdoc xmlns="http://omdoc.org/ns" xmlns:omdoc="http://omdoc.org/ns" xmlns:html="http://www.w3.org/1999/xhtml" xml:id={theory + ".omdoc"}>
       <!--This OMDoc file is generated from an OEIS entry, do not edit-->
       <theory name={theory}>
         {xml}
@@ -122,58 +133,61 @@ object DocumentParser {
     </omdoc>
   }
 
-  def omdocWrapperCMP(xclass : String, cmpval : String) = omtext(xclass, cmpval)
-  def omdocWrapperAs(xclass : String, cmpval : String) = assertion(xclass, cmpval)
+  def omdocWrapperCMP(xclass: String, cmpval: String) = omtext(xclass, cmpval)
 
-  def parseLines(documentLines : List[String] ) : Elem = {
-    var theory : Option[String] = None
+  def omdocWrapperAs(xclass: String, cmpval: String) = assertion(xclass, cmpval)
+
+  def parseLines(documentLines: List[String]): Elem = {
+    var theory: Option[String] = None
 
     val xml: List[Any] = documentLines.collect({
       case line if line.length > 2 =>
         val contentIndex: Option[Match] = IDregex.findFirstMatchIn(line)
 
-        if(contentIndex.isDefined && theory.isEmpty){
+        if (contentIndex.isDefined && theory.isEmpty) {
           theory = Some(contentIndex.get.matched)
         }
 
-        line.substring(0,2) match{
-          case "%N" =>  formulaWrap(line.substring(contentIndex.get.end), theory.get, "name")
-          case "%S" =>  omdocWrapperCMP("starts-with", line.substring(contentIndex.get.end))
-          case "%C" =>  omdocWrapperCMP("comment", line.substring(contentIndex.get.end))
-          case "%D" =>  omdocWrapperCMP("reference", line.substring(contentIndex.get.end))
-          case "%H" =>  omdocWrapperCMP("link", line.substring(contentIndex.get.end))
-          case "%F" =>  formulaWrap(line.substring(contentIndex.get.end), theory.get, "formula")
-          case "%Y" =>  omdocWrapperAs("crossref", line.substring(contentIndex.get.end))
-          case "%K" =>  omdocWrapperAs("keywords", line.substring(contentIndex.get.end))
-          case "%A" =>  omdocWrapperAs("author", line.substring(contentIndex.get.end))
-          case "%p" =>  omdocWrapperCMP("maple", line.substring(contentIndex.get.end))
-          case "%t" =>  omdocWrapperCMP("mathematica", line.substring(contentIndex.get.end))
-          case "%o" =>  omdocWrapperCMP("program", line.substring(contentIndex.get.end))
-          case "%O" =>  omdocWrapperAs("offset", line.substring(contentIndex.get.end))
-          case "%E" =>  omdocWrapperAs("extensions", line.substring(contentIndex.get.end))
-          case "%e" =>  omdocWrapperAs("example", line.substring(contentIndex.get.end))
-          case "%T" =>  omdocWrapperAs("***** UUUU *****", line.substring(contentIndex.get.end))
-          case "%U" =>  omdocWrapperAs("***** IIII *****", line.substring(contentIndex.get.end))
-          case "%I" =>  omdocWrapperAs("***** TTTT *****", line.substring(contentIndex.get.end))
-          case a if line.startsWith("%") => omdocWrapperAs("notsupported","Unexpected tag!")
+        line.substring(0, 2) match {
+          case "%N" => formulaWrap(line.substring(contentIndex.get.end), theory.get, "name")
+          case "%S" => omdocWrapperCMP("starts-with", line.substring(contentIndex.get.end))
+          case "%C" => omdocWrapperCMP("comment", line.substring(contentIndex.get.end))
+          case "%D" => omdocWrapperCMP("reference", line.substring(contentIndex.get.end))
+          case "%H" => omdocWrapperCMP("link", line.substring(contentIndex.get.end))
+          case "%F" => formulaWrap(line.substring(contentIndex.get.end), theory.get, "formula")
+          case "%Y" => omdocWrapperAs("crossref", line.substring(contentIndex.get.end))
+          case "%K" => omdocWrapperAs("keywords", line.substring(contentIndex.get.end))
+          case "%A" => omdocWrapperAs("author", line.substring(contentIndex.get.end))
+          case "%p" => omdocWrapperCMP("maple", line.substring(contentIndex.get.end))
+          case "%t" => omdocWrapperCMP("mathematica", line.substring(contentIndex.get.end))
+          case "%o" => omdocWrapperCMP("program", line.substring(contentIndex.get.end))
+          case "%O" => omdocWrapperAs("offset", line.substring(contentIndex.get.end))
+          case "%E" => omdocWrapperAs("extensions", line.substring(contentIndex.get.end))
+          case "%e" => omdocWrapperAs("example", line.substring(contentIndex.get.end))
+          case "%T" => omdocWrapperAs("***** UUUU *****", line.substring(contentIndex.get.end))
+          case "%U" => omdocWrapperAs("***** IIII *****", line.substring(contentIndex.get.end))
+          case "%I" => omdocWrapperAs("***** TTTT *****", line.substring(contentIndex.get.end))
+          case a if line.startsWith("%") => omdocWrapperAs("notsupported", "Unexpected tag!")
           case _ =>
         }
     })
 
-    addHeaders(xml collect {case a : Elem => a}, theory.get)
+    addHeaders(xml collect { case a: Elem => a }, theory.get)
   }
 
   /**
    *
-   * @param documentLines: the A-Number text
+   * @param documentLines : the A-Number text
    * @return theory containing theory = "A000001", name = "Some( Number of groups of order n.)", formulas = Array with formulas, generatingFunctions = Nil (for later)
    */
-  def parseLinesTheory(documentLines : List[String] ): TheoryRep = {
+  def parseLinesTheory(documentLines: List[String]): TheoryRep = {
     /** init vars */
     // Option[x]: return either None or a String
-    var theory : Option[String] = None
+    var theory: Option[String] = None
     var name: Option[String] = None
     val formulas: collection.mutable.ListBuffer[Expression] = collection.mutable.ListBuffer.empty
+    // human readable formula in MongoDB
+    val sage: collection.mutable.ListBuffer[String] = collection.mutable.ListBuffer.empty
 
     /** extract the lines
      * contentIndex: Some(A0000001)
@@ -182,33 +196,42 @@ object DocumentParser {
       case line if line.length > 2 =>
         val contentIndex: Option[Match] = IDregex.findFirstMatchIn(line)
 
-        if(contentIndex.isDefined && theory.isEmpty){
+        if (contentIndex.isDefined && theory.isEmpty) {
           theory = Some(contentIndex.get.matched)
         }
 
-        line.substring(0,2) match {
+        line.substring(0, 2) match {
           case "%N" =>
             name = Some(line.substring(contentIndex.get.end))
-            TextParserIns.parseLine(line.substring(contentIndex.get.end), theory.get).foreach { x => formulas += x}
-          case "%F" => TextParserIns.parseLine(line.substring(contentIndex.get.end), theory.get).foreach { x => formulas += x}
+            TextParserIns.parseLine(line.substring(contentIndex.get.end), theory.get).foreach { x => formulas += x }
+          case "%F" => TextParserIns.parseLine(line.substring(contentIndex.get.end), theory.get).foreach { x => formulas += x }
           case _ =>
         }
     })
 
-    TheoryRep(theory = theory.get, name = name, formulas = formulas.toSeq)
+    formulas.foreach {
+      x =>
+        val input = x.toSage
+        sage.append(input)
+        println(input)
+    }
+    val test = formulas.toSeq
+
+    TheoryRep(theory = theory.get, name = name, formulas = formulas.toSeq, gfToSage = sage)
 
   }
 
-  def fromReaderToXML(source : BufferedSource) : Elem = {
+  def fromReaderToXML(source: BufferedSource): Elem = {
     parseLines(source.getLines().toList)
   }
 
-/* Not used and also broken (new libs?)
-  def parseDocument(document : String) : String = {
-    parseLines(document.lines.toList).toString
-  }
-*/
+  /* Not used and also broken (new libs?)
+    def parseDocument(document : String) : String = {
+      parseLines(document.lines.toList).toString
+    }
+  */
   case class GeneratingFunctionDefinition(function: Func, body: Expression)
+
   def getGeneratingFunction(expression: Expression): List[GeneratingFunctionDefinition] = {
     expression match {
       case Sentence(exps) => exps.flatMap(getGeneratingFunction)
@@ -218,13 +241,13 @@ object DocumentParser {
     }
   }
 
-  def split(s:String, l:List[String]):List[(String,String)] = {
-    if(s == null){
+  def split(s: String, l: List[String]): List[(String, String)] = {
+    if (s == null) {
       return Nil
     }
 
     val delimRegex = l.mkString("|")
-    val r = "("+delimRegex+")?(.*?)(("+delimRegex+").*)?"
+    val r = "(" + delimRegex + ")?(.*?)((" + delimRegex + ").*)?"
     val R = r.r
 
     s match {
@@ -234,13 +257,13 @@ object DocumentParser {
     }
   }
 
-  def extractFormula(line : String): (List[String], List[Int]) = {
+  def extractFormula(line: String): (List[String], List[Int]) = {
     val month = "(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)"
 
     /*Month day year*/
     val date = month + "\\s*\\d{0,4}\\s*\\d{0,4}"
 
-    val delimiters = List(date, " " ,
+    val delimiters = List(date, " ",
       ":",
       "(?<![A-Z]{1})(?<!\\.)[\\.\\;,](?!\\d+)(?!\\.)(?![A-Za-z\\:])"
     )
@@ -251,12 +274,12 @@ object DocumentParser {
     val word: Regex = "([A-Za-z]{2,}\\b(?!(\\(|\\{\\[)))|(([A-Za-z]+\\.+(?!(\\(|\\{\\[)))+)|(_*[A-Z]+[\\sA-Za-z'\\.]+(?!\\()_*)".r
 
     /*words that should not be searched in a dictionary, they are not words by definition*/
-    val funcs : List[String] = List("mod", "pi", "phi", "log", "divide", "divides")
+    val funcs: List[String] = List("mod", "pi", "phi", "log", "divide", "divides")
     var balancedPar = 0
 
-    def isWord(token : String, dropped : Boolean) : Boolean = {
-      if(dropped && token.trim == "-") return true
-      if(funcs.contains(token.trim)) return false
+    def isWord(token: String, dropped: Boolean): Boolean = {
+      if (dropped && token.trim == "-") return true
+      if (funcs.contains(token.trim)) return false
 
       val result = dictionary.contains(token.trim) ||
         delimiters.exists(x => token.matches(x)) ||
@@ -266,12 +289,12 @@ object DocumentParser {
         token.trim == ""
 
       /*Detect words of the form -- (continues here) OR bla (is greater) */
-      if(token.length > 4 && (token(0) == '(' || token(token.length-1) == ')')){
+      if (token.length > 4 && (token(0) == '(' || token(token.length - 1) == ')')) {
         var newToken = token
-        if(newToken(0) == '('){
+        if (newToken(0) == '(') {
           newToken = newToken.substring(1)
         }
-        if(newToken(newToken.length-1) == ')'){
+        if (newToken(newToken.length - 1) == ')') {
           newToken = newToken.dropRight(1)
         }
         return result || isWord(newToken, dropped)
@@ -280,30 +303,30 @@ object DocumentParser {
       result
     }
 
-    def isDelim(token : String) : Boolean = {
+    def isDelim(token: String): Boolean = {
       delimiters.exists(x => token.matches(x.trim)) || delimiters.exists(x => token.matches(x))
     }
 
-    def computeBalancedPar(word : String) : Int = {
+    def computeBalancedPar(word: String): Int = {
       word.count(_ == '(') - word.count(_ == ')') +
         word.count(_ == '{') - word.count(_ == '}') +
         word.count(_ == '[') - word.count(_ == ']')
     }
 
     //contains pairs (word, delimiter) - delimiters will be needed to put the line together again
-    var words: List[(String,String)] = split(line, delimiters )
-    var transformed : List[String] = Nil
-    var formulaPosition : List[Int] = Nil
+    var words: List[(String, String)] = split(line, delimiters)
+    var transformed: List[String] = Nil
+    var formulaPosition: List[Int] = Nil
 
-//    println(words)
-    var temp : List[String] = Nil
-    var delims : List[String] = Nil
+    //    println(words)
+    var temp: List[String] = Nil
+    var delims: List[String] = Nil
 
     //was a "-" dropped in the last formula try
     var dropped = false
 
     //Take the words first, when you can't see words anymore start taking formulas until you spot a word
-    while(words.nonEmpty) {
+    while (words.nonEmpty) {
 
       while (words.nonEmpty && isWord(words.head._1, dropped)) {
         balancedPar += computeBalancedPar(words.head._1)
@@ -313,9 +336,9 @@ object DocumentParser {
         dropped = false
       }
 
-      transformed = transformed :+ temp.zip(delims).map( wordDelim => wordDelim._2 + wordDelim._1).mkString("")
+      transformed = transformed :+ temp.zip(delims).map(wordDelim => wordDelim._2 + wordDelim._1).mkString("")
 
-      if(words.nonEmpty){
+      if (words.nonEmpty) {
         temp = Nil
         delims = Nil
 
@@ -324,19 +347,19 @@ object DocumentParser {
         * */
         var isFormulaUnfinished = false
 
-        while(words.nonEmpty && (!isWord(words.head._1, dropped) || isFormulaUnfinished)){
+        while (words.nonEmpty && (!isWord(words.head._1, dropped) || isFormulaUnfinished)) {
           balancedPar += computeBalancedPar(words.head._1)
           isFormulaUnfinished = false
-          if(temp.isEmpty && words.head._2.trim == ":"){
+          if (temp.isEmpty && words.head._2.trim == ":") {
             delims = delims :+ ""
-          }else {
+          } else {
             delims = delims :+ words.head._2
           }
           temp = temp :+ words.head._1
           words = words.tail
 
           //not checking before while loop because the comma can only be after at least one expr.
-          if(words.nonEmpty) {
+          if (words.nonEmpty) {
             //if there is a comma inside two parans then it is part of the formula
             if ((words.head._2 == "," || words.head._2 == ":") && balancedPar > 0) {
               isFormulaUnfinished = true
@@ -345,16 +368,16 @@ object DocumentParser {
         }
 
         //deal with sentences like x+23+a(x) - Euler
-        if(temp.last == "-"){
-          words = (temp.last, delims.last)::words
+        if (temp.last == "-") {
+          words = (temp.last, delims.last) :: words
           temp = temp.dropRight(1)
           delims = delims.dropRight(1)
           dropped = true
         }
 
 
-        transformed = transformed :+ temp.zip(delims).map( wordDelim => wordDelim._2 + wordDelim._1).mkString("")
-        formulaPosition = formulaPosition :+ (transformed.length -1)
+        transformed = transformed :+ temp.zip(delims).map(wordDelim => wordDelim._2 + wordDelim._1).mkString("")
+        formulaPosition = formulaPosition :+ (transformed.length - 1)
       }
 
       temp = Nil
@@ -365,23 +388,24 @@ object DocumentParser {
   }
 
 
-  private def parsedFormulaWrap(expr :Expression, theory : String) : Elem= {
+  private def parsedFormulaWrap(expr: Expression, theory: String): Elem = {
     <OMOBJ>
       {expr.toNode(theory)}
     </OMOBJ>
   }
 
-  def formulaWrap(line : String, theory : String, nameTag: String) : Elem = {
+  def formulaWrap(line: String, theory: String, nameTag: String): Elem = {
     <omdoc:p class={s"$nameTag"}>
-        {TextParserIns.parseLine(line, theory) match {
-          case Some(a) => a.toNode(theory)
-          case None => <CMP>{line}</CMP>
-          }
-        }
+      {TextParserIns.parseLine(line, theory) match {
+      case Some(a) => a.toNode(theory)
+      case None => <CMP>
+        {line}
+      </CMP>
+    }}
     </omdoc:p>
   }
 
-  def main(args : Array[String]) : Unit = {
+  def main(args: Array[String]): Unit = {
   }
 
 }

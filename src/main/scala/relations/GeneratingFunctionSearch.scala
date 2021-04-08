@@ -5,119 +5,125 @@ import java.util.concurrent.ConcurrentHashMap
 
 import com.mongodb.casbah.commons.MongoDBObject
 import org.slf4j.LoggerFactory
-import parser.DocumentParser.GeneratingFunctionDefinition
 import parser._
 import sage.SageWrapper
 
 import scala.collection.JavaConverters._
 import scala.collection.immutable.::
 import scala.collection.mutable
-import scala.collection.mutable.ListBuffer
+
+import java.io.PrintWriter
+
 
 object GeneratingFunctionSearch {
+
   def logger = LoggerFactory.getLogger(this.getClass)
 
-  private val renameBase = "vari"
-  val hashMap = new ConcurrentHashMap[Expression, (List[(String, String, String, String)])].asScala
-  var validGFS = 0
+  /**
+   * dead code is commented out...
+   */
+  /*
+    private val renameBase = "vari"
+    val hashMap = new ConcurrentHashMap[Expression, (List[(String, String, String, String)])].asScala
+    var validGFS = 0
 
-  def getGeneratingFunction(expression: GeneratingFunctionDefinition): Expression = {
-    getGeneratingFunction(expression.body)
-  }
+    def getGeneratingFunction(expression: GeneratingFunctionDefinition): Expression = {
+      getGeneratingFunction(expression.body)
+    }
 
-  def getGeneratingFunction(expression: Expression): Expression = expression match {
-    case Equation(_, left, right) => getGeneratingFunction(right)
-    case x => x
-  }
-
-  def getSeqReference(e: Expression): List[String] = e match {
-    case Sentence(parts) => parts.flatMap(getSeqReference)
-    case Var(name) => Nil
-    case Abs(expr) => getSeqReference(expr)
-    case Divisible(left, right) => getSeqReference(left) ::: getSeqReference(right)
-    case Power(base, expr) => getSeqReference(base) ::: getSeqReference(expr)
-    case Add(expressions) => expressions.flatMap(getSeqReference)
-    case Sub(expressions) => expressions.flatMap(getSeqReference)
-    case Mul(expressions) => expressions.flatMap(getSeqReference)
-    case Div(expressions) => expressions.flatMap(getSeqReference)
-    case Neg(expressions) => getSeqReference(expressions)
-    case Func(name, args) => getSeqReference(args)
-    case ArgList(args) => args.flatMap(getSeqReference)
-    case Iters(name, from, to, on) =>
-      getSeqReference(on) ::: from.map(getSeqReference).toList.flatten ::: to.map(getSeqReference).toList.flatten
-    case Factorial(expr) => getSeqReference(expr)
-    case Equation(_, left, right) =>
-      getSeqReference(left) ::: getSeqReference(right)
-    case Modulo(base, modulo) => getSeqReference(base) ::: getSeqReference(modulo)
-    case GeneratingFunction(expressions) => getSeqReference(expressions)
-    case GeneratingFunctionDef(expressions) => getSeqReference(expressions)
-    case SeqReference(name) => name :: Nil
-    case x => List()
-  }
-
-  def rename(ex: Expression): Expression = {
-    val currentRenaming = collection.mutable.Map[String, String]()
-    val stack: collection.mutable.ListBuffer[Unit => Expression] = ListBuffer.empty
-
-    def renameVariables(e: Expression): Expression = e match {
-      case Var(name) if currentRenaming.isDefinedAt(name) => Var(currentRenaming(name))
-      case Var(name) =>
-        val newName = renameBase + currentRenaming.size
-        currentRenaming.put(name, newName)
-        Var(newName)
-      case Abs(expr) => Abs(renameVariables(expr))
-      case Divisible(left, right) => Divisible(renameVariables(left), renameVariables(right))
-      case Power(base, expr) => Power(renameVariables(base), renameVariables(expr))
-      case Add(expressions) => Add(expressions.map(renameVariables))
-      case Sub(expressions) => Sub(expressions.map(renameVariables))
-      case Mul(expressions) => Mul(expressions.map(renameVariables))
-      case Div(expressions) => Div(expressions.map(renameVariables))
-      case Neg(expressions) => Neg(renameVariables(expressions))
-      case Func(name, args) => Func(name, renameVariables(args).asInstanceOf[ArgList])
-      case ArgList(args) => ArgList(args.map(renameVariables))
-      case Iters(name, from, to, on) => Iters(name,
-        from.map(renameVariables),
-        to.map(renameVariables),
-        renameVariables(on))
-      case Factorial(expr) => Factorial(renameVariables(expr))
-      case Equation(comparions, left, right) =>
-        Equation(comparions, renameVariables(left), renameVariables(right))
-      case Modulo(base, modulo) => Modulo(renameVariables(base), renameVariables(modulo))
-      case GeneratingFunction(expressions) => GeneratingFunction(renameVariables(expressions))
-      case GeneratingFunctionDef(expressions) => GeneratingFunctionDef(renameVariables(expressions).asInstanceOf[ArgList])
+    def getGeneratingFunction(expression: Expression): Expression = expression match {
+      case Equation(_, left, right) => getGeneratingFunction(right)
       case x => x
     }
 
-    renameVariables(ex)
-  }
-
-  def getVariables(expres: Expression): List[String] = {
-    def getVariablesHelper(e: Expression): List[String] = e match {
-      case Var(name) => name :: Nil
-      case Abs(expr) => getVariablesHelper(expr)
-      case Divisible(left, right) => getVariablesHelper(left) ::: getVariablesHelper(right)
-      case Power(base, expr) => getVariablesHelper(base) ::: getVariablesHelper(expr)
-      case Add(expressions) => expressions.flatMap(getVariablesHelper)
-      case Sub(expressions) => expressions.flatMap(getVariablesHelper)
-      case Mul(expressions) => expressions.flatMap(getVariablesHelper)
-      case Div(expressions) => expressions.flatMap(getVariablesHelper)
-      case Neg(expressions) => getVariablesHelper(expressions)
-      case Func(name, args) => getVariablesHelper(args)
-      case ArgList(args) => args.flatMap(getVariablesHelper)
+    def getSeqReference(e: Expression): List[String] = e match {
+      case Sentence(parts) => parts.flatMap(getSeqReference)
+      case Var(name) => Nil
+      case Abs(expr) => getSeqReference(expr)
+      case Divisible(left, right) => getSeqReference(left) ::: getSeqReference(right)
+      case Power(base, expr) => getSeqReference(base) ::: getSeqReference(expr)
+      case Add(expressions) => expressions.flatMap(getSeqReference)
+      case Sub(expressions) => expressions.flatMap(getSeqReference)
+      case Mul(expressions) => expressions.flatMap(getSeqReference)
+      case Div(expressions) => expressions.flatMap(getSeqReference)
+      case Neg(expressions) => getSeqReference(expressions)
+      case Func(name, args) => getSeqReference(args)
+      case ArgList(args) => args.flatMap(getSeqReference)
       case Iters(name, from, to, on) =>
-        getVariablesHelper(on) ::: from.map(getVariablesHelper).toList.flatten ::: to.map(getVariablesHelper).toList.flatten
-      case Factorial(expr) => getVariablesHelper(expr)
+        getSeqReference(on) ::: from.map(getSeqReference).toList.flatten ::: to.map(getSeqReference).toList.flatten
+      case Factorial(expr) => getSeqReference(expr)
       case Equation(_, left, right) =>
-        getVariablesHelper(left) ::: getVariablesHelper(right)
-      case Modulo(base, modulo) => getVariablesHelper(base) ::: getVariablesHelper(modulo)
-      case GeneratingFunction(expressions) => getVariablesHelper(expressions)
-      case GeneratingFunctionDef(expressions) => getVariablesHelper(expressions)
-      case x => Nil
+        getSeqReference(left) ::: getSeqReference(right)
+      case Modulo(base, modulo) => getSeqReference(base) ::: getSeqReference(modulo)
+      case GeneratingFunction(expressions) => getSeqReference(expressions)
+      case GeneratingFunctionDef(expressions) => getSeqReference(expressions)
+      case SeqReference(name) => name :: Nil
+      case x => List()
     }
 
-    getVariablesHelper(expres)
-  }
+    def rename(ex: Expression): Expression = {
+      val currentRenaming = collection.mutable.Map[String, String]()
+      val stack: collection.mutable.ListBuffer[Unit => Expression] = ListBuffer.empty
 
+      def renameVariables(e: Expression): Expression = e match {
+        case Var(name) if currentRenaming.isDefinedAt(name) => Var(currentRenaming(name))
+        case Var(name) =>
+          val newName = renameBase + currentRenaming.size
+          currentRenaming.put(name, newName)
+          Var(newName)
+        case Abs(expr) => Abs(renameVariables(expr))
+        case Divisible(left, right) => Divisible(renameVariables(left), renameVariables(right))
+        case Power(base, expr) => Power(renameVariables(base), renameVariables(expr))
+        case Add(expressions) => Add(expressions.map(renameVariables))
+        case Sub(expressions) => Sub(expressions.map(renameVariables))
+        case Mul(expressions) => Mul(expressions.map(renameVariables))
+        case Div(expressions) => Div(expressions.map(renameVariables))
+        case Neg(expressions) => Neg(renameVariables(expressions))
+        case Func(name, args) => Func(name, renameVariables(args).asInstanceOf[ArgList])
+        case ArgList(args) => ArgList(args.map(renameVariables))
+        case Iters(name, from, to, on) => Iters(name,
+          from.map(renameVariables),
+          to.map(renameVariables),
+          renameVariables(on))
+        case Factorial(expr) => Factorial(renameVariables(expr))
+        case Equation(comparions, left, right) =>
+          Equation(comparions, renameVariables(left), renameVariables(right))
+        case Modulo(base, modulo) => Modulo(renameVariables(base), renameVariables(modulo))
+        case GeneratingFunction(expressions) => GeneratingFunction(renameVariables(expressions))
+        case GeneratingFunctionDef(expressions) => GeneratingFunctionDef(renameVariables(expressions).asInstanceOf[ArgList])
+        case x => x
+      }
+
+      renameVariables(ex)
+    }
+
+    def getVariables(expres: Expression): List[String] = {
+      def getVariablesHelper(e: Expression): List[String] = e match {
+        case Var(name) => name :: Nil
+        case Abs(expr) => getVariablesHelper(expr)
+        case Divisible(left, right) => getVariablesHelper(left) ::: getVariablesHelper(right)
+        case Power(base, expr) => getVariablesHelper(base) ::: getVariablesHelper(expr)
+        case Add(expressions) => expressions.flatMap(getVariablesHelper)
+        case Sub(expressions) => expressions.flatMap(getVariablesHelper)
+        case Mul(expressions) => expressions.flatMap(getVariablesHelper)
+        case Div(expressions) => expressions.flatMap(getVariablesHelper)
+        case Neg(expressions) => getVariablesHelper(expressions)
+        case Func(name, args) => getVariablesHelper(args)
+        case ArgList(args) => args.flatMap(getVariablesHelper)
+        case Iters(name, from, to, on) =>
+          getVariablesHelper(on) ::: from.map(getVariablesHelper).toList.flatten ::: to.map(getVariablesHelper).toList.flatten
+        case Factorial(expr) => getVariablesHelper(expr)
+        case Equation(_, left, right) =>
+          getVariablesHelper(left) ::: getVariablesHelper(right)
+        case Modulo(base, modulo) => getVariablesHelper(base) ::: getVariablesHelper(modulo)
+        case GeneratingFunction(expressions) => getVariablesHelper(expressions)
+        case GeneratingFunctionDef(expressions) => getVariablesHelper(expressions)
+        case x => Nil
+      }
+
+      getVariablesHelper(expres)
+    }
+*/
   def extractPartialFractionSummands(partialFractions: Expression): List[Expression] = partialFractions match {
     case Add(expr) => expr.flatMap(extractPartialFractionSummands)
     case Sub(expr) =>
@@ -126,14 +132,15 @@ object GeneratingFunctionSearch {
     case x => x :: Nil
   }
 
-  def makeTransformations(expression: Expression): List[(Expression, String)] = {
-    val integrate = SageWrapper.integrate(expression)
-    val differentiate = SageWrapper.derivative(expression)
-    val same = expression
+  /*
+      def makeTransformations(expression: Expression): List[(Expression, String)] = {
+        val integrate = SageWrapper.integrate(expression)
+        val differentiate = SageWrapper.derivative(expression)
+        val same = expression
 
-    (same, "unit") :: integrate.toList.map((_, "integrate")) ::: differentiate.toList.map((_, "differentiate"))
-  }
-
+        (same, "unit") :: integrate.toList.map((_, "integrate")) ::: differentiate.toList.map((_, "differentiate"))
+      }
+  */
   def doTransformations(expression: Expression): List[(Expression, Transformation)] = {
     val integrate = SageWrapper.integrate(expression)
     val differentiate = SageWrapper.derivative(expression)
@@ -142,31 +149,32 @@ object GeneratingFunctionSearch {
     (same, Unit) :: integrate.toList.map((_, Integral)) ::: differentiate.toList.map((_, Differential))
   }
 
-  def checkIfExists(expression: Expression, id: String) = {
-    val partialFractionsOpt = SageWrapper.partialFraction(expression)
-    partialFractionsOpt.foreach { partialFractions =>
-      validGFS += 1
-      val extractedGFs = extractPartialFractionSummands(partialFractions)
-      val transformed = extractedGFs.flatMap(makeTransformations)
-      transformed.foreach { gf =>
-        val renamed = rename(removeXMultiplications(removeConstants(gf._1)))
-        if (hashMap.contains(renamed)) {
-          logger.debug(s"Partial fraction summand transformed already there ${renamed.toSage} with $id from \n ${expression.toSage} \n " +
-            s"from partial fraction \n ${partialFractions.toSage} \n")
-          hashMap.put(renamed, (id, gf._2, expression.toSage, partialFractions.toSage) :: hashMap(renamed))
+  /*
+      def checkIfExists(expression: Expression, id: String) = {
+        val partialFractionsOpt = SageWrapper.partialFraction(expression)
+        partialFractionsOpt.foreach { partialFractions =>
+          validGFS += 1
+          val extractedGFs = extractPartialFractionSummands(partialFractions)
+          val transformed = extractedGFs.flatMap(makeTransformations)
+          transformed.foreach { gf =>
+            val renamed = rename(removeXMultiplications(removeConstants(gf._1)))
+            if (hashMap.contains(renamed)) {
+              logger.debug(s"Partial fraction summand transformed already there ${renamed.toSage} with $id from \n ${expression.toSage} \n " +
+                s"from partial fraction \n ${partialFractions.toSage} \n")
+              hashMap.put(renamed, (id, gf._2, expression.toSage, partialFractions.toSage) :: hashMap(renamed))
+            }
+            else hashMap.put(renamed, (id, gf._2, expression.toSage, partialFractions.toSage) :: Nil)
+          }
         }
-        else hashMap.put(renamed, (id, gf._2, expression.toSage, partialFractions.toSage) :: Nil)
       }
-    }
-  }
 
-  def equal(left: Expression, right: Expression) = {
-    //    println(s"checking equality of $left and $right")
-    logger.debug(s"gfs - checking equality of $left and $right")
+      def equal(left: Expression, right: Expression) = {
+        //    println(s"checking equality of $left and $right")
+        logger.debug(s"gfs - checking equality of $left and $right")
 
-    rename(left) == rename(right)
-  }
-
+        rename(left) == rename(right)
+      }
+  */
   def removeNegation(expression: Expression): Expression = expression match {
     case Neg(a) => removeNegation(a)
     case Mul(list) => Mul(list.map(removeNegation))
@@ -187,41 +195,44 @@ object GeneratingFunctionSearch {
     case x => x
   }
 
-  def removeConstantsWithFeedback(expression: Expression): (Expression, Double) = removeNegation(expression) match {
-    case Mul(Num(a) :: b :: Nil) => (b, a)
-    case Mul(Num(a) :: b) =>
-      val result = removeConstantsWithFeedback(Mul(b))
-      (result._1, result._2 * a)
-    case Mul(Div(Num(a) :: Num(b) :: Nil) :: c :: nil) =>
-      val result = removeConstantsWithFeedback(c)
-      (result._1, result._2 * (a / b))
-    case Div(Num(a) :: Num(b) :: c :: Nil) => (Div(Num(1) :: c :: Nil), a / b)
-    case Div(Num(a) :: c :: Nil) => (Div(Num(1) :: c :: Nil), a)
-    case Div(Mul(Num(a) :: b :: Nil) :: c :: Nil) => (Div(b :: c :: Nil), a)
-    //    case Div(list) if list.length > 3 => throw new Exception(s"Cannot deal with ${list}")
-    case x => (x, 1)
-  }
-
+  /*
+      def removeConstantsWithFeedback(expression: Expression): (Expression, Double) = removeNegation(expression) match {
+        case Mul(Num(a) :: b :: Nil) => (b, a)
+        case Mul(Num(a) :: b) =>
+          val result = removeConstantsWithFeedback(Mul(b))
+          (result._1, result._2 * a)
+        case Mul(Div(Num(a) :: Num(b) :: Nil) :: c :: nil) =>
+          val result = removeConstantsWithFeedback(c)
+          (result._1, result._2 * (a / b))
+        case Div(Num(a) :: Num(b) :: c :: Nil) => (Div(Num(1) :: c :: Nil), a / b)
+        case Div(Num(a) :: c :: Nil) => (Div(Num(1) :: c :: Nil), a)
+        case Div(Mul(Num(a) :: b :: Nil) :: c :: Nil) => (Div(b :: c :: Nil), a)
+        //    case Div(list) if list.length > 3 => throw new Exception(s"Cannot deal with ${list}")
+        case x => (x, 1)
+      }
+      */
   def removeXMultiplications(expression: Expression): Expression = removeNegation(expression) match {
     case Div(Power(Var("x"), exp) :: b :: Nil) => Div(Num(1) :: b :: Nil)
     case Div(Var("x") :: exp :: Nil) => Div(Num(1) :: exp :: Nil)
     case x => x
   }
 
-  def removeXMultiplicationsWithFeedback(expression: Expression): (Expression, Double) = removeNegation(expression) match {
-    case Div(Power(Var("x"), Num(exp)) :: b :: Nil) => Div(Num(1) :: b :: Nil) -> exp
-    case Div(Var("x") :: exp :: Nil) => Div(Num(1) :: exp :: Nil) -> 1
-    case x => x -> 0
-  }
+  /*
+      def removeXMultiplicationsWithFeedback(expression: Expression): (Expression, Double) = removeNegation(expression) match {
+        case Div(Power(Var("x"), Num(exp)) :: b :: Nil) => Div(Num(1) :: b :: Nil) -> exp
+        case Div(Var("x") :: exp :: Nil) => Div(Num(1) :: exp :: Nil) -> 1
+        case x => x -> 0
+      }
 
-  def normalizeFractions(expression: Expression): Expression = expression match {
-    case Div(Num(constant) :: Power(Sub(Num(1) :: Mul(bx) :: Nil), Num(k)) :: Nil) =>
-      Div(Num(1) :: Sub(Num(1) :: removeConstants(Mul(bx)) :: Nil) :: Nil)
-    case Div(Num(constant) :: Sub(Num(1) :: Mul(bx) :: Nil) :: Nil) =>
-      Div(Num(1) :: Sub(Num(1) :: removeConstants(Mul(bx)) :: Nil) :: Nil)
-    case x => x
-  }
+      def normalizeFractions(expression: Expression): Expression = expression match {
+        case Div(Num(constant) :: Power(Sub(Num(1) :: Mul(bx) :: Nil), Num(k)) :: Nil) =>
+          Div(Num(1) :: Sub(Num(1) :: removeConstants(Mul(bx)) :: Nil) :: Nil)
+        case Div(Num(constant) :: Sub(Num(1) :: Mul(bx) :: Nil) :: Nil) =>
+          Div(Num(1) :: Sub(Num(1) :: removeConstants(Mul(bx)) :: Nil) :: Nil)
+        case x => x
+      }
 
+    */
 
   sealed trait Transformation {
     def inverse: Transformation
@@ -311,8 +322,9 @@ object GeneratingFunctionSearch {
    * This method tries to find relations such that each partial fraction can be expressed through an existing OEIS sequence.
    * Explained in the B.Sc. Thesis https://github.com/MathHubInfo/ISFA/tree/master/docs
    */
-  //ToDo: this does nothing atm, the HashMap is not filled
   def secondMethod() = {
+
+
     case class MappedTheory(
                              theory: TheoryRep,
                              initialGeneratingFunction: Expression,
@@ -327,11 +339,15 @@ object GeneratingFunctionSearch {
 
     val indices = theories.indices
 
-    for (i <- indices) {
+    //for (i <- indices) {
+    for (i <- 0 to 1) {
       val theoryRep = theories(i)
       //println(i)
       logger.debug(s"gfs - $i")
-      theoryRep.generatingFunctions.foreach { generatingFunction => for (
+
+
+      theoryRep.generatingFunctions.foreach { generatingFunction =>
+        for (
           simplifiedGeneratingFunction <- SageWrapper.simplifyFull(generatingFunction);
           unifiedGeneratingFunction = removeXMultiplications(removeConstants(simplifiedGeneratingFunction));
           simplifiedUnifiedGeneratingFunction <- SageWrapper.simplifyFull(unifiedGeneratingFunction)
@@ -702,16 +718,52 @@ object GeneratingFunctionSearch {
   }
 
 
+  def export_to_MathML() = {
+
+    val theories = TheoryRepDao.findAll().toArray
+    logger.debug(s"gfs - Length is ${theories.length}")
+
+    val indices = theories.indices
+
+    for (i <- indices) {
+      val theoryRep = theories(i)
+      logger.debug(s"gfs - $i")
+      logger.debug("Working Directory = " + System.getProperty("user.dir"))
+
+      var j = 0
+      val num_gfs = theoryRep.generatingFunctions.size
+
+      theoryRep.generatingFunctions.foreach {generatingFunction =>
+        //logger.debug(s"${theoryRep.name} gfs ${generatingFunction.toSage}")
+        new PrintWriter("./results/gfs/2020/" + theoryRep.theory + "_"+j.toString + ".xml") {
+          write("<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n");
+          logger.debug(s"${theoryRep.name} gfs ${generatingFunction.toCML}")
+          write(generatingFunction.toCML.toString());
+          write("\n</math>")
+          j = j+1
+          close
+        }
+
+
+      }
+      j = 0;
+    }
+  }
+
+
   def main(args: Array[String]): Unit = {
     /* //This is just a test, right?
     val expression = Div(List(Var("x"), Power(Sub(List(Num(95), Mul(List(Num(15), Var("x"))))), Num(5))))
     println(SageWrapper.partialFraction(expression).get)
     println(rename(SageWrapper.partialFraction(removeXMultiplications(removeConstants(expression))).get).toSage)
 */
-    secondMethod()
+    //secondMethod()
     //thirdMethod()
 
-    saveRelationsToFile(2)
+    //debug function to reconstruct the content MathML export
+    export_to_MathML()
+
+    //saveRelationsToFile(2)
     //    println("Finished")
 
     // logger.debug(getRepresentingFunction(Integral, FormulaParserInst.parse("-((1/10/x))").get, "").get.toSage)
