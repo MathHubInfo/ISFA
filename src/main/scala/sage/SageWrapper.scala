@@ -1,28 +1,41 @@
 package sage
 
-import play.api.Logger
-import play.api.libs.json.Json
-import play.twirl.api.Html
-
-import scala.util.Try
-import scalaj.http.Http
-
-import javax.swing.text.html.HTMLDocument
+import java.io._
+import java.net._
 
 import com.mongodb.casbah.MongoClient
 import com.mongodb.casbah.commons.MongoDBObject
-import com.novus.salat.dao.{DAO, ModelCompanion, SalatDAO}
-import com.novus.salat.global.ctx
 import org.bson.types.ObjectId
 import org.slf4j.LoggerFactory
+import parser.{ArgList, Expression, FormulaParserInst}
+import play.api.libs.json.Json
+import salat.dao.{DAO, ModelCompanion, SalatDAO}
+import salat.global.ctx
+import scalaj.http.Http
 
-import parser.{Num, ArgList, Expression, FormulaParserInst}
+import scala.io._
+import scala.util.Try
 
 case class SageRequest(
-  request: String,
-  result: Option[Expression] // Expression
-)
+                        request: String,
+                        result: Option[Expression] // Expression
+                      )
 
+/* Notes on this file:
+*  <SageMath Server Connection>
+*     Http(sagemath_server_http+"eval") looks like it connects to the local SageMath Server Enxhell had
+*     on his machine. Then he has a folder "0" containing various folders. I'm going to try to make that work now.
+*     changed:
+*             val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
+*             val headerFirst = Http(sagemath_server_http + "eval")
+*     while having a SageMath Jupyter open, it at least finds the socket, but fails on the html?
+*     I'm currently trying to get the Sage cmd to host something.
+*
+*
+*
+* */
+
+// MongoDB access to OEIS/sage_cache, port is default
 object SageRequest extends ModelCompanion[SageRequest, ObjectId] {
   val mongoClient = MongoClient("localhost", 27017)
   val db = mongoClient("OEIS")
@@ -38,8 +51,14 @@ object SageRequest extends ModelCompanion[SageRequest, ObjectId] {
   }
 }
 
+// SageMath stuff
 object SageWrapper {
-  val session = "nb_session_8080=; session=\"dZMN57/0ShESsTbOvrba9uGuPag=?username=UydhZG1pbicKcDAKLg==\""
+  // This seems to be a session cookie for SageMath
+  //val session = "nb_session_8080=; session=\"dZMN57/0ShESsTbOvrba9uGuPag=?username=UydhZG1pbicKcDAKLg==\""
+  val session = "session=\"5ec459db53071712c94020d847a93d822dddd34f915e6df1\""
+  // val sagemath_server_http = "http://localhost:8888/?token=f0d0814871607024f779691000052fe6bdeabc18dfbc89f3"
+  // Jupyter notebook path to the desired folder
+  val sagemath_server_http = "http://127.0.0.1:8888/notebooks/Desktop/ISFA_sagemath.ipynb#"
 
   private var counter = 0
 
@@ -49,8 +68,13 @@ object SageWrapper {
 
   val logger = LoggerFactory.getLogger(this.getClass)
 
+  //ToDo: this seems to have major differences
   private def callMethodWithCall(input: String): Option[ArgList] = {
-//    val input = s"$methodName($methodName).$postfixArgument(${postfixArgument.mkString(",")})"
+    logger.debug(s"xxx callMethodWithCall")
+    //    val input = s"$methodName($methodName).$postfixArgument(${postfixArgument.mkString(",")})"
+    // ToDo not quite sure about this one, might be fine, but the original code did extra stuff
+    sage_tcp_socket_connection_with_call(input)
+    /*
     val responseOpt = SageRequest.findByRequest(input)
 
     if (responseOpt.isDefined) {
@@ -65,27 +89,28 @@ object SageWrapper {
       try {
         counter += 1
 
-        val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
+        val headerFirst = Http(sagemath_server_http + "eval")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
+
 
         val savePayload = Map("save_only" -> "1", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(savePayload).asString.body
 
         val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
         headerFirst.postForm(payload).asString.body
-        val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
+        val headerSecond = Http(sagemath_server_http + "cell_update")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val headerFinish = Http("http://localhost:8080/home/admin/0/discard_and_quit")
+        val headerFinish = Http(sagemath_server_http + "discard_and_quit")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
 
-        val headerAlive = Http("http://localhost:8080/home/admin/0/alive")
+        val headerAlive = Http(sagemath_server_http + "alive")
           .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
             "Cookie" -> session
             , "Accept" -> "text/plain")
@@ -141,101 +166,22 @@ object SageWrapper {
         }
       } catch {
         case e: Exception =>
-          Logger.debug(s"Got exception $e")
+          logger.debug(s"Got exception $e")
           None
       }
     }
+    */
   }
 
   private def callMethod(expression: Expression, method: String, variables: List[String]) = {
+    logger.debug(s"xxx callMethod")
     val input = s"$method(${expression.toSage}, ${variables.mkString(",")})"
-    val responseOpt = SageRequest.findByRequest(input)
 
-    if (responseOpt.isDefined) {
-      val result = responseOpt.flatMap(_.result)
-      logger.debug(s"Result cached ${result.map(_.toSage)} for $input")
-      result
-    } else {
-      logger.debug(s"NOT CACHED $input")
-      try {
-        counter += 1
+    //ToDo difference to callPostfixMethod:
+    //val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
+    //headerFirst.postForm(payload).asString.body
+    sage_tcp_socket_connection(input)
 
-        val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-        val savePayload = Map("save_only" -> "1", "id" -> "31", "input" -> input).toSeq
-        headerFirst.postForm(savePayload).asString.body
-
-        val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
-        headerFirst.postForm(payload).asString.body
-        val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-
-        val headerFinish = Http("http://localhost:8080/home/admin/0/discard_and_quit")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-
-        val headerAlive = Http("http://localhost:8080/home/admin/0/alive")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-
-        Thread.sleep(20)
-
-        var parsed = "\" \""
-        var count = 0
-        while (parsed == "\" \"" && count < 500) {
-          val x = headerSecond.postForm(Map("id" -> "31").toSeq)
-          parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
-          if ((count % 20) == 1) logger.debug(s"sleeping ... ")
-          Thread.sleep(50)
-          count += 1
-        }
-        if (count >= 500) {
-          val x = headerFinish.param("_", System.currentTimeMillis().toString)
-          logger.debug("Ditching it")
-          logger.debug(x.asString.toString)
-          logger.debug(x.asString.body)
-          logger.debug("\n")
-          Thread.sleep(1000)
-          headerAlive.param("_", System.currentTimeMillis().toString)
-          Thread.sleep(100)
-          headerAlive.param("_", System.currentTimeMillis().toString)
-          cleanup()
-        } else {
-          smallCleanup()
-          Thread.sleep(20)
-
-        }
-
-        val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
-        val parsedFormula = FormulaParserInst.parse(formula).orElse {
-          logger.debug(s"Couldn't parse: $formula")
-          None
-        }
-        //    logger.debug(parsedFormula)
-
-        if(count < 500) {
-          Try {
-            SageRequest.save(SageRequest(
-              request = input,
-              result = parsedFormula
-            ))
-          }
-          cleanup()
-        }
-
-        parsedFormula
-      } catch {
-        case e: Exception =>
-          Logger.debug(s"Got exception $e")
-          None
-      }
-    }
   }
 
   def derivative(expression: Expression, variables: List[String] = List("x")): Option[Expression] = {
@@ -247,101 +193,22 @@ object SageWrapper {
   }
 
   private def callInfixMethod(left: Expression, method: String, right: Expression) = {
+    logger.debug(s"xxx callMethodWithCall")
     val input = s"(${left.toSage}) $method (${right.toSage})"
 
-    val responseOpt = SageRequest.findByRequest(input)
+    // ToDo: this had two extra lines compared to PythonSageServerPostFixMethod()
+    //val savePayload = Map("save_only" -> "1", "id" -> "31", "input" -> input).toSeq
+    //headerFirst.postForm(savePayload).asString.body
 
-    if (responseOpt.isDefined) {
-      val result = responseOpt.flatMap(_.result)
-      logger.debug(s"Result cached ${result.map(_.toSage)}for $input")
-      result
-    } else {
-      logger.debug(s"NOT CACHED $input")
-      try {
-        counter += 1
-        val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-
-        val savePayload = Map("save_only" -> "1", "id" -> "31", "input" -> input).toSeq
-        headerFirst.postForm(savePayload).asString.body
-
-        val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
-        headerFirst.postForm(payload).asString.body
-        val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-
-
-        val headerFinish = Http("http://localhost:8080/home/admin/0/discard_and_quit")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-
-        val headerAlive = Http("http://localhost:8080/home/admin/0/alive")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-
-        Thread.sleep(20)
-
-        var parsed = "\" \""
-        var count = 0
-        while (parsed == "\" \"" && count < 500) {
-          val x = headerSecond.postForm(Map("id" -> "31").toSeq)
-          parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
-          if ((count % 20) == 1) logger.debug(s"sleeping ... ")
-          Thread.sleep(50)
-          count += 1
-        }
-        if (count >= 500) {
-          val x = headerFinish.param("_", System.currentTimeMillis().toString)
-          logger.debug("Ditching it")
-          logger.debug(x.asString.toString)
-          logger.debug(x.asString.body)
-          logger.debug("\n")
-          Thread.sleep(1000)
-          headerAlive.param("_", System.currentTimeMillis().toString)
-          Thread.sleep(100)
-          headerAlive.param("_", System.currentTimeMillis().toString)
-          cleanup()
-        } else {
-          smallCleanup()
-          Thread.sleep(20)
-
-        }
-
-        val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
-        val parsedFormula = FormulaParserInst.parse(formula).orElse {
-          logger.debug(s"Couldn't parse: $formula")
-          None
-        }
-
-        if(count < 500) {
-          Try {
-            SageRequest.save(SageRequest(
-              request = input,
-              result = parsedFormula
-            ))
-          }
-          cleanup()
-        }
-
-        parsedFormula
-      } catch {
-        case e: Exception =>
-          Logger.debug(s"Got error $e")
-          None
-      }
-    }
+    sage_tcp_socket_connection(input)
   }
 
+  // This cleans the Jupyter notebook ToDo: what else?
   private def smallCleanup() = {
+    logger.debug(s"xxx smallCleanup")
     try {
       counter += 1
-      val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
+      val headerFirst = Http(sagemath_server_http + "eval")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
@@ -351,7 +218,7 @@ object SageWrapper {
 
       val payload = Map("newcell" -> "0", "id" -> "31", "input" -> s"").toSeq
       headerFirst.postForm(payload).asString.body
-      val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
+      val headerSecond = Http(sagemath_server_http + "cell_update")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
@@ -368,16 +235,18 @@ object SageWrapper {
       }
     } catch {
       case e: Exception =>
-        Logger.debug(s"Got error $e")
+        logger.debug(s"Got error $e")
         None
     }
-//    cleanup()
+    //    cleanup()
   }
 
+  // This cleans the Jupyter notebook ToDo: what else?
   private def cleanup() = {
+    logger.debug(s"xxx cleanup")
     try {
       counter += 1
-      val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
+      val headerFirst = Http(sagemath_server_http + "eval")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
@@ -387,18 +256,18 @@ object SageWrapper {
 
       val payload = Map("newcell" -> "0", "id" -> "31", "input" -> s"").toSeq
       headerFirst.postForm(payload).asString.body
-      val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
+      val headerSecond = Http(sagemath_server_http + "cell_update")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
 
 
-      val headerFinish = Http("http://localhost:8080/home/admin/0/discard_and_quit")
+      val headerFinish = Http(sagemath_server_http + "discard_and_quit")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
 
-      val headerAlive = Http("http://localhost:8080/home/admin/0/alive")
+      val headerAlive = Http(sagemath_server_http + "alive")
         .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
           "Cookie" -> session
           , "Accept" -> "text/plain")
@@ -419,107 +288,151 @@ object SageWrapper {
       Thread.sleep(300)
     } catch {
       case e: Exception =>
-        Logger.debug(s"Got error $e")
+        logger.debug(s"Got error $e")
         None
     }
   }
 
   def partialFraction(expression: Expression, variables: List[String] = List("x")): Option[Expression] = {
-    callPostfixMethod(expression, "partial_fraction", variables)
+    PythonSageServerPostFixMethod(expression, "partial_fraction", variables)
+    //callPostfixMethod(expression, "partial_fraction", variables)
   }
 
   def simplifyFull(expression: Expression): Option[Expression] = {
-    callPostfixMethod(expression, "simplify_full", Nil)
+    PythonSageServerPostFixMethod(expression, "simplify_full", Nil)
+    //callPostfixMethod(expression, "simplify_full", Nil)
   }
 
-  private def callPostfixMethod(expression: Expression, method: String, variables: List[String]) = {
-    val input = s"(${expression.toSage}).$method(${variables.mkString(",")})"
+  //function to communicate with the python tcp socket accepting sagemath requests
+  // ToDo the server has to close the connection or this will get stuck (it still gets stuck?) - should work now
+
+  val logfile = new PrintWriter("logfile")
+  private def sage_tcp_socket_connection(input: String) = {
+
+    logfile.write("###################################################################\n");
+    logfile.write(input.toString() + "\n");
+
     val responseOpt = SageRequest.findByRequest(input)
 
     if (responseOpt.isDefined) {
       val result = responseOpt.flatMap(_.result)
-      logger.debug(s"Result cached ${result.map(_.toSage)}for $input")
+      logger.debug(s"Result cached ${result.map(_.toSage)} for $input")
       result
     } else {
       logger.debug(s"NOT CACHED $input")
       try {
-        counter += 1
-        val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
+        //socket init
+        val s = new Socket(InetAddress.getByName("127.0.0.1"), 65432)
+        lazy val in = new BufferedSource(s.getInputStream()).getLines()
+        val out = new PrintStream(s.getOutputStream())
 
-        val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
-        headerFirst.postForm(payload).asString.body
-        val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
+        out.println(s"$input")
+        out.flush()
 
+        // seperator "\n"
+        val parsed = in.mkString("\n")
+        val parsed_length = parsed.length
+        s.shutdownInput()
+        s.shutdownOutput()
+        s.close()
 
-        val headerFinish = Http("http://localhost:8080/home/admin/0/discard_and_quit")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
+        //Thread.sleep(20)
+        // try to parse val parsed
+        logger.debug(s"Parsing $parsed - len: $parsed_length")
+        // ToDo: so any formula with less length then 31 is no formula? huh?
+        //enxhell code: val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
+        val formula = parsed.replaceAllLiterally("\\n", "")
 
-        val headerAlive = Http("http://localhost:8080/home/admin/0/alive")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-
-        Thread.sleep(20)
-
-        var parsed = "\" \""
-        var count = 0
-        while (parsed == "\" \"" && count < 500) {
-          val x = headerSecond.postForm(Map("id" -> "31").toSeq)
-          parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
-          if ((count % 20) == 1) logger.debug(s"sleeping ... ")
-          Thread.sleep(50)
-          count += 1
+        logger.debug(s"Formula $formula")
+        val parsedFormula = FormulaParserInst.parse(formula).orElse {
+          logger.debug(s"Couldn't parse: $formula")
+          None
         }
-        if (count >= 500) {
-          val x = headerFinish.param("_", System.currentTimeMillis().toString)
-          logger.debug("Ditching it")
-          logger.debug(x.asString.toString)
-          logger.debug(x.asString.body)
-          logger.debug("\n")
-          Thread.sleep(1000)
-          headerAlive.param("_", System.currentTimeMillis().toString)
-          Thread.sleep(100)
-          headerAlive.param("_", System.currentTimeMillis().toString)
-          cleanup()
-        } else {
-          smallCleanup()
-          Thread.sleep(20)
-
+        // save parse result to MongoDB
+        // ToDo: this writes None for unsuccesful parses into the DB
+        try {
+          SageRequest.save(SageRequest(
+            request = input,
+            result = parsedFormula
+          ))
         }
+
+        logfile.write(parsedFormula.toString() + "\n");
+        parsedFormula
+
+      } catch {
+        case e: Exception =>
+          logger.debug(s"Got error $e")
+          None
+      }
+    }
+
+  }
+
+  // variation of sage_tcp_socket_connection() in order to support callMethodWithCall()
+  private def sage_tcp_socket_connection_with_call(input: String) = {
+
+    val responseOpt = SageRequest.findByRequest(input)
+
+    if (responseOpt.isDefined) {
+      val result = responseOpt.flatMap(_.result)
+      logger.debug(s"with_call Result cached ${result.map(_.toSage)} for $input")
+      result.map {
+        case s: ArgList => s
+        case _ => ArgList(Nil)
+      }
+    } else {
+      logger.debug(s"NOT CACHED $input")
+      try {
+        val s = new Socket(InetAddress.getByName("127.0.0.1"), 65432)
+        lazy val in = new BufferedSource(s.getInputStream()).getLines()
+        val out = new PrintStream(s.getOutputStream())
+
+        out.println(s"$input")
+        out.flush()
+
+        val parsed = in.mkString("\n")
+
+        s.close()
+
+        //Thread.sleep(20)
 
         logger.debug(s"Parsing $parsed")
         val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
+        println("Parsed: " + formula.drop(1).dropRight(1).split(",").map(_.trim.toDouble).toList)
         val parsedFormula = FormulaParserInst.parse(formula).orElse {
           logger.debug(s"Couldn't parse: $formula")
           None
         }
 
-
-        if(count < 500) {
-          Try {
-            SageRequest.save(SageRequest(
-              request = input,
-              result = parsedFormula
-            ))
-          }
-          cleanup()
+        try {
+          SageRequest.save(SageRequest(
+            request = input,
+            result = parsedFormula
+          ))
         }
 
-        parsedFormula
+        parsedFormula.map {
+          case s: ArgList => s
+          case _ => ArgList(Nil)
+        }
+
       } catch {
         case e: Exception =>
-          Logger.debug(s"Got error $e")
+          logger.debug(s"Got error $e")
           None
       }
     }
+
+  }
+
+
+  private def PythonSageServerPostFixMethod(expression: Expression, method: String, variables: List[String]) = {
+    logger.debug(s"sagemath server reqest")
+
+    // the sage command e.g. "((x/(95-(15*x))^5)).simplify_full()"
+    val input = s"(${expression.toSage}).$method(${variables.mkString(",")})"
+    sage_tcp_socket_connection(input)
   }
 
   def simplify(expression: Expression): Option[Expression] = {
@@ -527,96 +440,10 @@ object SageWrapper {
   }
 
   private def callMethodNoArguments(expression: Expression, method: String) = {
+    logger.debug(s"xxx callMethodNoArguments")
     val input = s"$method(${expression.toSage})"
-
-    val responseOpt = SageRequest.findByRequest(input)
-
-    if (responseOpt.isDefined) {
-      val result = responseOpt.flatMap(_.result)
-      logger.debug(s"Result cached ${result.map(_.toSage)}for $input")
-      result
-    } else {
-      logger.debug(s"NOT CACHED $input")
-      try {
-        counter += 1
-        val headerFirst = Http("http://localhost:8080/home/admin/0/eval")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-
-        val payload = Map("newcell" -> "0", "id" -> "31", "input" -> input).toSeq
-        headerFirst.postForm(payload).asString.body
-        val headerSecond = Http("http://localhost:8080/home/admin/0/cell_update")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-
-        val headerFinish = Http("http://localhost:8080/home/admin/0/discard_and_quit")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-
-        val headerAlive = Http("http://localhost:8080/home/admin/0/alive")
-          .headers("Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
-            "Cookie" -> session
-            , "Accept" -> "text/plain")
-
-        Thread.sleep(20)
-
-        var parsed = "\" \""
-        var count = 0
-        while (parsed == "\" \"" && count < 500) {
-          val x = headerSecond.postForm(Map("id" -> "31").toSeq)
-          parsed = (Json.parse(x.asString.body) \ "output_wrapped").get.toString().trim
-          if ((count % 20) == 1) logger.debug(s"sleeping ... ")
-          Thread.sleep(50)
-          count += 1
-        }
-        if (count >= 500) {
-          val x = headerFinish.param("_", System.currentTimeMillis().toString)
-          logger.debug("Ditching it")
-          logger.debug(x.asString.toString)
-          logger.debug(x.asString.body)
-          logger.debug("\n")
-          Thread.sleep(1000)
-          headerAlive.param("_", System.currentTimeMillis().toString)
-          Thread.sleep(100)
-          headerAlive.param("_", System.currentTimeMillis().toString)
-          cleanup()
-        } else {
-          smallCleanup()
-          Thread.sleep(20)
-
-        }
-
-        logger.debug(s"Parsing $parsed")
-        val formula = if (parsed.length > 31) parsed.substring(23, parsed.length - 8).replaceAllLiterally("\\n", "") else "No formula"
-        val parsedFormula = FormulaParserInst.parse(formula).orElse {
-          logger.debug(s"Couldn't parse: $formula")
-          None
-        }
-        //    logger.debug(parsedFormula)
-        Thread.sleep(50)
-
-        if(count < 500) {
-          Try {
-            SageRequest.save(SageRequest(
-              request = input,
-              result = parsedFormula
-            ))
-          }
-          cleanup()
-        }
-
-        parsedFormula
-      } catch {
-        case e: Exception =>
-          Logger.debug(s"Got exception $e")
-          None
-      }
-    }
+    sage_tcp_socket_connection(input)
   }
-
 
   def oeisTerms(theory: String): Option[ArgList] = {
     val input = s"oeis('$theory').first_terms()"

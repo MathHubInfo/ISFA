@@ -1,4 +1,5 @@
 import org.scalatest.FlatSpec
+import org.scalatest
 import parser._
 
 /**

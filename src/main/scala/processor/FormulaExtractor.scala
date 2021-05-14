@@ -4,17 +4,18 @@ package processor
  * Created by enxhi on 4/2/15.
  */
 
-import java.io.Serializable
-
-import com.novus.salat.annotations.raw.Salat
 import parser._
-import play.api.libs.json.Format
-
-import scala.util.parsing.combinator.{JavaTokenParsers, PackratParsers}
-import scala.xml.{Node, Elem}
 
 class TextParser extends FormulaParser {
-
+  /**
+   * take the OEIS function, parse it e.g.
+   * from "Number of groups of order n."
+   * to "[1.30] parsed: Sentence(List(Name(Number), Word(of), Word(groups), Word(of), Word(order), Var("n"), Delim(.)))"
+   *
+   * @param line line: literally a line from OEIS, either the name or the formula field
+   * @param theory a_num as string e.g. "A000001"
+   * @return the line, but parsed
+   */
   def parseLine(line : String, theory : String = "") : Option[Line] = {
     if(line.isEmpty){
       return None
@@ -23,6 +24,7 @@ class TextParser extends FormulaParser {
     initSet()
     calls += 1
     try {
+      // sentence is a global variable in FormularParser.scala
       val parsed = parseAll(sentence, line)
       parsed.successful match {
         case false =>

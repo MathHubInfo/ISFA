@@ -193,6 +193,7 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
       }
 
 
+
   lazy val infix_ops = mod | element
 
   lazy val no_bracket_function = not(number | infix_ops) ~> ("floor\\b".r | "ceiling\\b".r | "ceil\\b".r | "sqrt\\b".r | "log\\b".r | "sinh\\b".r | "sin\\b".r | "cosh\\b".r | "cos\\b".r |
@@ -219,9 +220,11 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
 
   lazy val divisible: PackratParser[(Expression, Expression) => Expression] =
     "(\\|)|(divides)".r ^^ {
-      _ => (x: Expression, y: Expression) => (x, y) match {
-        case (x: Expression, y: Expression) => Divisible(x, y)
-      }
+      _ =>
+        (x: Expression, y: Expression) =>
+          (x, y) match {
+            case (x: Expression, y: Expression) => Divisible(x, y)
+          }
     }
 
   lazy val unary_plusminus: PackratParser[String] = "+" | "-"
@@ -229,46 +232,58 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
   lazy val mod: PackratParser[String] = "mod\\b".r | "modulo\\b".r
   lazy val modulo: PackratParser[(Expression, Expression) => Expression] =
     mod ^^ {
-      _ => (x: Expression, y: Expression) => (x, y) match {
-        case (x: Expression, y: Expression) => Modulo(x, y)
-      }
+      _ =>
+        (x: Expression, y: Expression) =>
+          (x, y) match {
+            case (x: Expression, y: Expression) => Modulo(x, y)
+          }
     }
 
   lazy val elem: PackratParser[String] = "element\\b".r | "in\\b".r
   lazy val element: PackratParser[(Expression, Expression) => Expression] =
     elem ^^ {
-      _ => (x: Expression, y: Expression) => (x, y) match {
-        case (x: Expression, y: Expression) => InSet(x, y)
-      }
+      _ =>
+        (x: Expression, y: Expression) =>
+          (x, y) match {
+            case (x: Expression, y: Expression) => InSet(x, y)
+          }
     }
 
   lazy val plusminus: PackratParser[(Expression, Expression) => Expression] =
     "+" ^^ {
-      _ => (x: Expression, y: Expression) => (x, y) match {
-        case (x: Add, y: Expression) => Add(x.expr :+ y)
-        case (x: Expression, y: Expression) => Add(List(x, y))
-      }
+      _ =>
+        (x: Expression, y: Expression) =>
+          (x, y) match {
+            case (x: Add, y: Expression) => Add(x.expr :+ y)
+            case (x: Expression, y: Expression) => Add(List(x, y))
+          }
     } |
       "-" ^^ {
-        _ => (x: Expression, y: Expression) => (x, y) match {
-          case (x: Sub, y: Expression) => Sub(x.expr :+ y)
-          case (x: Expression, y: Expression) => Sub(List(x, y))
-        }
+        _ =>
+          (x: Expression, y: Expression) =>
+            (x, y) match {
+              case (x: Sub, y: Expression) => Sub(x.expr :+ y)
+              case (x: Expression, y: Expression) => Sub(List(x, y))
+            }
       }
 
   lazy val multdiv: PackratParser[(Expression, Expression) => Expression] =
     "(\\*)|(\\bX\\b)".r ^^ {
-      _ => (x: Expression, y: Expression) => (x, y) match {
-        case (x: Mul, y: Expression) => Mul(x.expr :+ y)
-        case (x: Expression, y: Expression) => Mul(List(x, y))
+      _ =>
+        (x: Expression, y: Expression) =>
+          (x, y) match {
+            case (x: Mul, y: Expression) => Mul(x.expr :+ y)
+            case (x: Expression, y: Expression) => Mul(List(x, y))
 
-      }
+          }
     } |
       "/" ^^ {
-        _ => (x: Expression, y: Expression) => (x, y) match {
-          case (x: Div, y: Expression) => Div(x.expr :+ y)
-          case (x: Expression, y: Expression) => Div(List(x, y))
-        }
+        _ =>
+          (x: Expression, y: Expression) =>
+            (x, y) match {
+              case (x: Div, y: Expression) => Div(x.expr :+ y)
+              case (x: Expression, y: Expression) => Div(List(x, y))
+            }
       }
 
 
@@ -363,33 +378,34 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
       case (fctr: Expression) ~ (divs) if divs.length != 0 =>
         applyFunctionsInOrder(
           fctr :: divs.collect(
-          {
-            case x: Expression => x
-            case x: (~[_, Expression]) => x._2
-          }
-          ), funcs = divs.collect(
-          {
-            case x: (Any ~ Expression) => try {
-              x._1.asInstanceOf[((Expression, Expression) => Expression)]
-            } catch {
-              case x: Exception =>
-                (x: Expression, y: Expression) => (x, y) match {
-                  case (x: Var, y: ArgList) => y match {
-                    //In case there is var(var) consider the first var to be a function
-                    case ArgList(List(Var(a))) =>
-                      addFunc(x.name)
-                      Func(x.name, y)
-                    case ArgList(List(Num(a))) =>
-                      addFunc(x.name)
-                      Func(x.name, y)
-                    case elsee =>
-                      Func(x.name, y)
-                  }
-                  case (x: Mul, y: Expression) => Mul(x.expr :+ y)
-                  case (x: Expression, y: Expression) => Mul(List(x, y))
-                }
+            {
+              case x: Expression => x
+              case x: (~[_, Expression]) => x._2
             }
-          }
+          ), funcs = divs.collect(
+            {
+              case x: (Any ~ Expression) => try {
+                x._1.asInstanceOf[((Expression, Expression) => Expression)]
+              } catch {
+                case x: Exception =>
+                  (x: Expression, y: Expression) =>
+                    (x, y) match {
+                      case (x: Var, y: ArgList) => y match {
+                        //In case there is var(var) consider the first var to be a function
+                        case ArgList(List(Var(a))) =>
+                          addFunc(x.name)
+                          Func(x.name, y)
+                        case ArgList(List(Num(a))) =>
+                          addFunc(x.name)
+                          Func(x.name, y)
+                        case elsee =>
+                          Func(x.name, y)
+                      }
+                      case (x: Mul, y: Expression) => Mul(x.expr :+ y)
+                      case (x: Expression, y: Expression) => Mul(List(x, y))
+                    }
+              }
+            }
           )
         )
       case (fctr: Var) ~ (divs) => addVar(fctr.name); fctr
@@ -402,7 +418,7 @@ class QueryParser extends JavaTokenParsers with PackratParsers {
   //add HERE what is not to be understood as lazy multiplication
   //TODO : Add context so that once inside the function the words_inbracket is not checked ( or something similar) because of exp(2 Pi t)
   lazy val lazy_multiply: PackratParser[Expression] =
-    (not(dots) ~ not(words_inbracket) ~ not(mod)) ~> unsigned_factor ^^ { x => x }
+  (not(dots) ~ not(words_inbracket) ~ not(mod)) ~> unsigned_factor ^^ { x => x }
 
 
   lazy val signed_factor: PackratParser[Expression] =

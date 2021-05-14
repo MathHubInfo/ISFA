@@ -1,11 +1,11 @@
-# ISFA
+# Continuation of ISFA
 
 The *ISFA* project is a database of *I*nteger *S*equence *F*ormulas and *A*pplications. The integer sequence formulas are parsed from the [OEIS](http://oeis.org).
 
 A more detailed report can be found [here](https://github.com/MathHubInfo/ISFA/blob/master/docs/Enxhell_Luzhnica_BSC.pdf).
 
 ## Parts
-
+git 
 The ISFA is currently composed of:
 
 - A parser for math formulas found in the OEIS.
