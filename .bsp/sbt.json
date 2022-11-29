@@ -1,1 +1,0 @@
-{"name":"sbt","version":"1.4.6","bspVersion":"2.0.0-M5","languages":["scala"],"argv":["C:\\Program Files\\Java\\jdk-15/bin/java","-Xms100m","-Xmx100m","-classpath","C:/Users/micha/AppData/Roaming/JetBrains/IntelliJIdea2020.2/plugins/Scala/launcher/sbt-launch.jar","xsbt.boot.Boot","-bsp"]}
