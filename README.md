@@ -1,11 +1,18 @@
-# ISFA
+# Continuation of ISFA
 
 The *ISFA* project is a database of *I*nteger *S*equence *F*ormulas and *A*pplications. The integer sequence formulas are parsed from the [OEIS](http://oeis.org).
 
 A more detailed report can be found [here](https://github.com/MathHubInfo/ISFA/blob/master/docs/Enxhell_Luzhnica_BSC.pdf).
 
-## Parts
+## Usage
+1. Install sbt: https://www.scala-sbt.org/download.html
+3. Have a running MongoDB 5.x instance - version 6 drops support for the `insert` operation: Get it from Docker-Hub `docker pull mongo:5` and run it `docker run -d -p 27017:27017 --name mongo mongo:5`
+4. Copy all the OEIS files (that is, the `A\d{6}\.txt` files) to `all/`
+5. Run ISFA: `sbt "runMain library.Library"` (Caution: This does *not* remove documents in the database. Running it again will add all documents again, doubling the document count)
+6. Retrieve the documents from the database as a JSON file `oeis.json`: `docker exec -it mongo mongoexport --db OEIS --collection theory_verified --out oeis.json && docker cp mongo:/oeis.json .`
 
+## Parts
+git 
 The ISFA is currently composed of:
 
 - A parser for math formulas found in the OEIS.
