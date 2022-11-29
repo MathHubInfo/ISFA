@@ -5,6 +5,7 @@ version := "0.2"
 
 scalaVersion := "2.12.12"
 
+val http4sVersion = "0.23.16"
 
 // https://mvnrepository.com/artifact/org.scala-lang.modules/scala-xml
 libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "2.0.0-M1"
@@ -38,9 +39,18 @@ libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.10"
 // GeneratingFunctionsSagePackage.scalae was missing the SLF4J lib? now it runs
 libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-api" % "1.7.25",
-  "ch.qos.logback" % "logback-classic" % "1.2.3"
+  "ch.qos.logback" % "logback-classic" % "1.2.3",
+  "org.http4s" %% "http4s-circe" % http4sVersion,
+  "org.http4s" %% "http4s-dsl" % http4sVersion,
+  "org.http4s" %% "http4s-ember-server" % http4sVersion,
+  "io.circe" %% "circe-generic" % "0.14.3",
+  "io.circe" %% "circe-literal" % "0.14.3",
+  "org.typelevel" %% "jawn-parser" % "1.3.2",
+  "org.typelevel" %% "jawn-ast" % "1.3.2"
 )
 excludeDependencies += "org.apache.logging.log4j" % "log4j-slf4j-impl"
+
+// scalacOptions ++= Seq("-Ypartial-unification")
 
 /*'''
 
