@@ -96,7 +96,7 @@ object RelationDao extends ModelCompanion[RelationRepString, ObjectId] {
 
 object DocumentParser {
 
-  val dictionary = Source.fromFile(getClass.getResource("/dictionary").getPath).getLines().toSet
+  val dictionary = Source.fromFile("src/main/resources/dictionary").getLines().toSet
 
   private val IDregex = "A\\d+".r
 

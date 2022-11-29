@@ -117,7 +117,7 @@ class FormulaParser extends JavaTokenParsers with PackratParsers {
     res
   }
 
-  val dictionary = Source.fromFile(getClass.getResource("/dictionary").getPath).getLines().map(_.trim).toSet
+  val dictionary = Source.fromFile("src/main/resources/dictionary").getLines().map(_.trim).toSet
   // This creates logic or for e.g. "n-th | x-th"
   val exceptionCases: Regex = List("[A-Za-z]\\-th").mkString("|").r
 
